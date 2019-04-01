@@ -1,4 +1,5 @@
 const path = require('path')
+const DtsBundleWebpack = require('dts-bundle-webpack')
 
 const env = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 
@@ -9,12 +10,16 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].[hash].js'
+    filename: 'index.js',
+    library: 'hrb-temaki',
+    libraryTarget: 'umd'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
       '~': path.resolve(__dirname, 'src/'),
+      'react': path.resolve(__dirname, './node_modules/react'),
+      'styled-components': path.resolve(__dirname, './node_modules/styled-components')
     }
   },
   module: {
@@ -26,7 +31,6 @@ module.exports = {
           {
             loader: 'tslint-loader',
             options: {
-              typeCheck: true,
               fix: false,
               emitErrors: true
             }
@@ -34,13 +38,36 @@ module.exports = {
         ]
       },
       {
-        test: /\.(j|t)sx?$/,
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader'
+            loader: 'ts-loader'
           }
         ]
       }
     ]
-  }
+  },
+  externals: {
+    react: {
+      commonjs: "react",
+      commonjs2: "react",
+      amd: "React",
+      root: "React"
+    },
+    'styled-components': {
+      commonjs: "styled-components",
+      commonjs2: "styled-components",
+      amd: "StyledComponents",
+      root: "StyledComponents"
+    }
+  },
+  plugins: [
+    new DtsBundleWebpack({
+      name: 'hrb-temaki',
+      main: 'dist/index.d.ts',
+      baseDir: 'dist',
+      out: 'index.d.ts'
+    })
+  ]
 }
