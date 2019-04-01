@@ -1,7 +1,9 @@
 {
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "version": "0.0.1",
   "private": true,
+  "license": "ISC",
   "scripts": {
     "start": "start-storybook -p 6006",
     "docs:build": "build-storybook -c .storybook -o ./storybook-static",
