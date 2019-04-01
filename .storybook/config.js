@@ -1,4 +1,5 @@
-import { configure } from '@storybook/react'
+import { configure, addDecorator } from '@storybook/react'
+import { withKnobs } from '@storybook/addon-knobs'
 
 const req = require.context('../src/components', true, /\.stories\.tsx$/)
 
@@ -8,3 +9,5 @@ function loadStories() {
 }
 
 configure(loadStories, module)
+
+addDecorator(withKnobs)

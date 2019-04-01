@@ -1,9 +1,13 @@
 {
   "scripts": {
-    "start": "start-storybook"
+    "start": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@storybook/react": "^5.0.5",
+    "@storybook/addon-a11y": "^5.0.5",
+    "@storybook/addon-actions": "^5.0.5",
+    "@storybook/addon-knobs": "^5.0.5",
+    "@storybook/addon-storysource": "^5.0.5",
+    "@storybook/react": "^5.1.0-alpha.20",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "styled-components": "^4.1.3"
@@ -15,6 +19,9 @@
     "@babel/preset-typescript": "^7.1.0",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
+    "@types/storybook__addon-a11y": "^5.0.0",
+    "@types/storybook__addon-actions": "^3.4.2",
+    "@types/storybook__addon-knobs": "^4.0.4",
     "@types/storybook__react": "^4.0.1",
     "@types/styled-components": "^4.1.8",
     "babel-loader": "^8.0.5",
@@ -26,8 +33,6 @@
     "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "^4.0.0",
     "typescript": "^3.3.3",
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack": "^4.29.3"
   }
 }
