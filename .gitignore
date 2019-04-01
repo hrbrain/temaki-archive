@@ -3,4 +3,6 @@ node_modules
 *.log
 .idea
 .vscode
-dist
+dist/*
+!dist/index.js
+!dist/index.d.ts
