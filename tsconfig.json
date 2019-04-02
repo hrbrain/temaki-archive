@@ -26,6 +26,7 @@
   "exclude": [
     "**/*.spec.{ts,tsx}",
     "**/__test__/**",
-    "**/*stories.{ts,tsx}"
+    "src/**/*stories.{ts,tsx}",
+    "dist/**/*"
   ]
 }
