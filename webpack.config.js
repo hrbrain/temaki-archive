@@ -1,5 +1,4 @@
 const path = require('path')
-const DtsBundleWebpack = require('dts-bundle-webpack')
 
 const env = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 
@@ -61,13 +60,5 @@ module.exports = {
       amd: "StyledComponents",
       root: "StyledComponents"
     }
-  },
-  plugins: [
-    new DtsBundleWebpack({
-      name: 'hrb-temaki',
-      main: 'dist/index.d.ts',
-      baseDir: 'dist',
-      out: 'index.d.ts'
-    })
-  ]
+  }
 }

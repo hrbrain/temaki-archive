@@ -43,7 +43,6 @@
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/storybook__addon-knobs": "^4.0.4",
     "@types/storybook__react": "^4.0.1",
-    "dts-bundle-webpack": "^1.0.2",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
