@@ -3,7 +3,7 @@ module.exports = {
   transform: {
     "^.+\\.(ts|tsx)?$": "ts-jest",
   },
-  testRegex: "(/__test__/.*|(\\.|/)(test|spec))\\.tsx?$",
+  testRegex: "(\\.|/)(test|spec)\\.tsx?$",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   unmockedModulePathPatterns: [
     "<rootDir>/node_modules/react",

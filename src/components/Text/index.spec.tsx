@@ -1,7 +1,7 @@
 import * as Enzyme from 'enzyme'
 import toJson from 'enzyme-to-json'
 import * as React from 'react'
-import Text from '..'
+import Text from './index'
 
 describe('Text', () => {
   let wrapper: Enzyme.ShallowWrapper
