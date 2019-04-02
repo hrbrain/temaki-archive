@@ -2,6 +2,7 @@
 
 exports[`Button should match previous snapshot 1`] = `
 <styled.button
+  className="primary"
   onClick={[Function]}
 >
   OK
