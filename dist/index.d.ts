@@ -7,7 +7,32 @@ declare module 'hrb-temaki' {
     import { RequiredThemeProps as _RequiredThemeProps } from 'hrb-temaki/modules/theme';
     export const Text: import("react").FunctionComponent<{}>;
     export const colors: {
-        primary: string;
+        primary: {
+            default: string;
+            N10: string;
+            N20: string;
+            N30: string;
+            N40: string;
+            N50: string;
+            N60: string;
+            N70: string;
+            N80: string;
+            N90: string;
+            N95: string;
+            P10: string;
+            P20: string;
+            P30: string;
+            P40: string;
+            P50: string;
+            P60: string;
+            P70: string;
+            P80: string;
+            P90: string;
+        };
+        white: string;
+        utility: {
+            red: string;
+        };
         text: string;
     };
     export const defaultTheme: _RequiredThemeProps;

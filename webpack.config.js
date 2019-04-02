@@ -27,6 +27,7 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.tsx?$/,
+        exclude: [/node_modules/, /\.stories\.tsx?$/, /\.spec\.tsx?$/],
         use: [
           {
             loader: 'tslint-loader',
@@ -39,7 +40,7 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /\.stories\.tsx?$/, /\.spec\.tsx?$/],
         use: [
           {
             loader: 'ts-loader'
@@ -69,5 +70,6 @@ module.exports = {
       amd: "StyledComponents",
       root: "StyledComponents"
     }
-  }
+  },
+  cache: true
 }

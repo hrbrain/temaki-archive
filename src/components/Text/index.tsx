@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { RequiredThemeProps } from '~/index'
 import styled from '~/modules/theme'
 
 // type Props = {
@@ -10,7 +11,7 @@ const Text: React.FC = ({ children }) => {
 }
 
 const StyledText = styled.p`
-  color: ${props => props.theme.text};
+  color: ${(props: { theme: RequiredThemeProps }) => props.theme.text};
 `
 
 export default Text

@@ -24,5 +24,6 @@ export default {
   white: '#FFF',
   utility: {
     red: '#E05548'
-  }
+  },
+  text: '#333'
 }

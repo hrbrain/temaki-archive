@@ -1,6 +1,11 @@
 const path = require('path')
 
 module.exports = ({ config }) => {
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    '~': path.resolve(__dirname, '../src/')
+  }
+
   config.module.rules.push({
     test: /\.stories\.tsx?$/,
     use: [
@@ -15,7 +20,7 @@ module.exports = ({ config }) => {
     test: /\.tsx?$/,
     use: [
       {
-        loader: require.resolve('ts-loader') 
+        loader: require.resolve('ts-loader')
       }
     ]
   })

@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": "src",
     "outDir": "dist",
-    "target": "es5",
-    "module": "commonjs",
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
     "jsx": "react",
     "strict": true,
     "noImplicitAny": true,
@@ -23,10 +24,14 @@
       "~/*": ["*"]
     }
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
-    "**/*.spec.{ts,tsx}",
+    "node_modules",
+    "**/*.spec.tsx",
+    "**/*.stories.tsx",
     "**/__test__/**",
-    "src/**/.*\\.stories.{ts,tsx}",
     "dist/**/*"
   ]
 }
