@@ -39,6 +39,8 @@ $ yarn start
 - actions
 - a11y
 
+Storybook 内では[tailwind](https://tailwindcss.com)を使うことが出来ます   
+
 ### フォルダールール 
 #### Basics
 ```
