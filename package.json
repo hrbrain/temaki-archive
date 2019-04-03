@@ -11,7 +11,8 @@
     "build": "NODE_ENV=production webpack -p",
     "test": "jest",
     "lint": "tslint **/*.{ts,tsx} -e 'node_modules/**' -e 'dist/**'",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "type-check": "tsc --noEmit"
   },
   "husky": {
     "hooks": {
