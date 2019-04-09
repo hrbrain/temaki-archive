@@ -7,7 +7,8 @@
   "license": "ISC",
   "scripts": {
     "start": "start-storybook -p 6006",
-    "docs:build": "build-storybook -c .storybook -o ./storybook-static",
+    "docs:build": "build-storybook -c .storybook -o ./functions/static",
+    "docs:deploy": "firebase deploy",
     "build": "NODE_ENV=production webpack -p",
     "test": "jest",
     "lint": "tslint **/*.{ts,tsx} -e 'node_modules/**' -e 'dist/**'",
@@ -51,6 +52,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
+    "firebase-tools": "^6.6.0",
     "husky": "^1.3.1",
     "jest": "^24.5.0",
     "jest-cli": "^24.5.0",
