@@ -10,14 +10,27 @@ Temaki
 $ yarn add hrbrain/temaki # or use npm
 ```
 
+### Setup the theme
+
+コンポーネント内のスタイル情報は `styled-components` の `ThemeProvider` によって提供されています   
+あなたのプロジェクトのルートコンポーネントに `ThemeProvider` を追加して下さい
+
 ```tsx
 import * as React from 'react'
 import { render } from 'react-dom'
-import { Text } from 'hrb-temaki'
+import { ThemeProvider } from 'styled-components'
+import { ThemeRequiredProps, defaultTheme, Text } from 'hrb-temaki'
+
+const myTheme: ThemeRequiredProps = {
+  ...defaultTheme,
+  text: '#000'
+}
 
 const App = () => {
   return (
-    <Text>Hello Temaki!</Text>
+    <ThemeProvider theme={myTheme}>
+      <Text>Hello</Text>
+    </ThemeProvider>
   )
 }
 
