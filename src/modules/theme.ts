@@ -1,12 +1,13 @@
 import * as React from 'react'
 import * as styledComponents from 'styled-components'
+import colors from '~/lib/colors'
 
 export type RequiredThemeProps = {
   text: string
 }
 
 export const defaultTheme: RequiredThemeProps = {
-  text: '#333'
+  text: colors.text
 }
 
 const casted = styledComponents as styledComponents.ThemedStyledComponentsModule<RequiredThemeProps>

@@ -1,5 +1,5 @@
-import _Text from '~/components/Text/index'
-import _colors from '~/lib/colors'
+import Text from '~/components/Text/index'
+import colors from '~/lib/colors'
+import { defaultTheme, RequiredThemeProps } from '~/modules/theme'
 
-export const Text = _Text
-export const colors = _colors
+export { Text, colors, RequiredThemeProps, defaultTheme }
