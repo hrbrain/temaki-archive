@@ -1,6 +1,6 @@
 import _Text from '~/components/Text/index'
 import _colors from '~/lib/colors'
-import { defaultTheme as _defaultTheme, RequiredThemeProps as _RequiredThemeProps } from '~/modules/theme'
+import { defaultTheme as _defaultTheme, RequiredThemeProps as _RequiredThemeProps } from './modules/theme'
 
 export const Text = _Text
 export const colors = _colors
