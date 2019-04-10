@@ -1,11 +1,16 @@
 import * as React from 'react'
+import styled from '~/modules/theme'
 
 // type Props = {
 //   size?: number
 //   level?: number
 // }
 const Text: React.FC = ({ children }) => {
-  return <p>{children}</p>
+  return <StyledText>{children}</StyledText>
 }
+
+const StyledText = styled.p`
+  color: ${props => props.theme.text};
+`
 
 export default Text
