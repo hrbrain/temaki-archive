@@ -9,6 +9,12 @@ import TextPresentor from './presentors/Text'
  */
 
 export type ColorTypeProp = 'primary'
+// TypeScript 3.4 がまともに使えるようになったら書き換えて下さい
+export const buttonShapeType = {
+  box: 'box' as 'box',
+  circle: 'circle' as 'circle',
+  text: 'text' as 'text'
+}
 
 // 別のコンポーネントで必要なら共通化して下さい
 const useIsLoadingByAsyncClick = (
@@ -41,16 +47,16 @@ type Props = {
   colorType?: ColorTypeProp
 } & (
   | {
-      type: 'box'
+      type: typeof buttonShapeType.box
       height?: string
       width?: string
     }
   | {
-      type: 'circle'
+      type: typeof buttonShapeType.circle
       iconSrc?: string
     }
   | {
-      type: 'text'
+      type: typeof buttonShapeType.text
       iconSrc?: string
     })
 const Button: React.FC<Props> = ({ colorType = 'primary', onClick, children, ...props }) => {
