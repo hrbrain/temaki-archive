@@ -2,6 +2,8 @@ import * as React from 'react'
 
 import Box from './presentors/Box'
 import Circle from './presentors/Circle'
+import TextPresentor from './presentors/Text'
+
 /**
  * Utils
  */
@@ -46,12 +48,19 @@ type Props = {
   | {
       type: 'circle'
       iconSrc?: string
+    }
+  | {
+      type: 'text'
+      iconSrc?: string
     })
 const Button: React.FC<Props> = ({ colorType = 'primary', onClick, children, ...props }) => {
   const [isLoading, handleClick] = useIsLoadingByAsyncClick(onClick)
 
   if (props.type === 'circle') {
     return <Circle colorType={colorType} iconSrc={props.iconSrc} isLoading={isLoading} />
+  }
+  if (props.type === 'text') {
+    return <TextPresentor iconSrc={props.iconSrc} children={children} />
   }
   return (
     <Box height={props.height} width={props.width} colorType={colorType} onClick={handleClick} {...props}>

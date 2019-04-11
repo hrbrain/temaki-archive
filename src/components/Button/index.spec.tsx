@@ -10,7 +10,11 @@ describe('Button', () => {
   beforeEach(() => {
     mockOnClick = jest.fn()
     act(() => {
-      wrapper = Enzyme.shallow(<Button onClick={mockOnClick}>OK</Button>)
+      wrapper = Enzyme.shallow(
+        <Button type="box" onClick={mockOnClick}>
+          OK
+        </Button>
+      )
     })
   })
 
