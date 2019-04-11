@@ -62,17 +62,20 @@ type Props = {
 const Button: React.FC<Props> = ({ colorType = 'primary', onClick, children, ...props }) => {
   const [isLoading, handleClick] = useIsLoadingByAsyncClick(onClick)
 
-  if (props.type === 'circle') {
-    return <Circle onClick={handleClick} colorType={colorType} isLoading={isLoading} {...props} />
+  switch (props.type) {
+    case 'circle':
+      return <Circle onClick={handleClick} colorType={colorType} isLoading={isLoading} {...props} />
+
+    case 'text':
+      return <TextPresentor iconSrc={props.iconSrc} children={children} />
+
+    default:
+      return (
+        <Box height={props.height} width={props.width} colorType={colorType} onClick={handleClick} {...props}>
+          {isLoading ? 'loading...' : children}
+        </Box>
+      )
   }
-  if (props.type === 'text') {
-    return <TextPresentor iconSrc={props.iconSrc} children={children} />
-  }
-  return (
-    <Box height={props.height} width={props.width} colorType={colorType} onClick={handleClick} {...props}>
-      {isLoading ? 'loading...' : children}
-    </Box>
-  )
 }
 
 export default Button
