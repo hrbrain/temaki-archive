@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button should match previous snapshot 1`] = `
-<styled.button
-  className="primary"
+<Presentor
+  colorType="primary"
   onClick={[Function]}
+  type="box"
 >
   OK
-</styled.button>
+</Presentor>
 `;
