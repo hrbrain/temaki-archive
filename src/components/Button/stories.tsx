@@ -4,4 +4,10 @@ import * as React from 'react'
 import { action } from '@storybook/addon-actions'
 import Button from './index'
 
-storiesOf('Components|Button', module).add('all', () => <Button onClick={action('onClick')}>Confirm</Button>)
+storiesOf('Components|Button', module)
+  .add('Box', () => (
+    <Button type="box" onClick={action('onClick')}>
+      Confirm
+    </Button>
+  ))
+  .add('Circle', () => <Button type="circle" iconSrc="" onClick={action('onClick')} />)
