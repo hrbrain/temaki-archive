@@ -57,7 +57,7 @@ const Button: React.FC<Props> = ({ colorType = 'primary', onClick, children, ...
   const [isLoading, handleClick] = useIsLoadingByAsyncClick(onClick)
 
   if (props.type === 'circle') {
-    return <Circle colorType={colorType} iconSrc={props.iconSrc} isLoading={isLoading} />
+    return <Circle onClick={handleClick} colorType={colorType} isLoading={isLoading} {...props} />
   }
   if (props.type === 'text') {
     return <TextPresentor iconSrc={props.iconSrc} children={children} />

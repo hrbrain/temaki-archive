@@ -10,6 +10,7 @@ import { buttonBaseMixin, createCSSFromColorType, rippleEffectMixin } from '../l
  */
 
 type Props = {
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
   iconSrc?: string
   isLoading?: boolean
 } & OuterProps
