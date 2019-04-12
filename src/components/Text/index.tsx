@@ -1,6 +1,5 @@
 import * as React from 'react'
-import { RequiredThemeProps } from '~/index'
-import styled from '~/modules/theme'
+import styled, { RequiredThemeProps } from '~/modules/theme'
 
 // type Props = {
 //   size?: number
@@ -11,7 +10,7 @@ const Text: React.FC = ({ children }) => {
 }
 
 const StyledText = styled.p`
-  color: ${(props: { theme: RequiredThemeProps }) => props.theme.text};
+  color: ${(props: { theme: RequiredThemeProps }) => props.theme.colors.text.default};
 `
 
 export default Text

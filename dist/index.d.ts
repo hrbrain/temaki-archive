@@ -42,8 +42,59 @@ declare module 'hrb-temaki' {
 declare module 'hrb-temaki/modules/theme' {
     import * as React from 'react';
     import * as styledComponents from 'styled-components';
+    export type RequiredThemeColors = {
+        primary: {
+            default: string;
+            N10: string;
+            N20: string;
+            N30: string;
+            N40: string;
+            N50: string;
+            N60: string;
+            N70: string;
+            N80: string;
+            N90: string;
+            P10: string;
+            P20: string;
+            P30: string;
+            P40: string;
+            P50: string;
+            P60: string;
+            P70: string;
+            P80: string;
+            P90: string;
+        };
+        grayScale: {
+            S10: string;
+            S20: string;
+            S30: string;
+            S40: string;
+            S50: string;
+            S60: string;
+            S70: string;
+            S80: string;
+            S90: string;
+        };
+        utilities: {
+            red: string;
+            blue: string;
+            highlightGreen: string;
+            paleRed: string;
+            paleGreen: string;
+            paleBlue: string;
+        };
+        text: {
+            default: string;
+        };
+    };
+    export type RequiredThemeShadows = {
+        L1: string;
+        L2: string;
+        L3: string;
+    };
     export type RequiredThemeProps = {
-        text: string;
+        colors: RequiredThemeColors;
+        shadows: RequiredThemeShadows;
     };
     export const defaultTheme: RequiredThemeProps;
     const styled: styledComponents.ThemedBaseStyledInterface<RequiredThemeProps>, ServerStyleSheet: typeof styledComponents.ServerStyleSheet, StyleSheetManager: typeof styledComponents.StyleSheetManager, createGlobalStyle: <P extends object = {}>(first: styledComponents.CSSObject | TemplateStringsArray | styledComponents.InterpolationFunction<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>, ...interpolations: styledComponents.Interpolation<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>[]) => styledComponents.GlobalStyleComponent<P, RequiredThemeProps>, css: styledComponents.BaseThemedCssFunction<RequiredThemeProps>, isStyledComponent: typeof styledComponents.isStyledComponent, keyframes: (strings: TemplateStringsArray | styledComponents.CSSKeyframes, ...interpolations: styledComponents.SimpleInterpolation[]) => styledComponents.Keyframes, withTheme: styledComponents.BaseWithThemeFnInterface<RequiredThemeProps>;
