@@ -24,6 +24,8 @@ export type RequiredThemeColors = {
     P90: string
   }
   grayScale: {
+    S0: string
+    S5: string
     S10: string
     S20: string
     S30: string
@@ -33,6 +35,7 @@ export type RequiredThemeColors = {
     S70: string
     S80: string
     S90: string
+    S100: string
   }
   utilities: {
     red: string
@@ -51,6 +54,8 @@ export type RequiredThemeShadows = {
   L1: string
   L2: string
   L3: string
+  L4: string
+  L5: string
 }
 
 export type RequiredThemeProps = {
@@ -82,32 +87,37 @@ export const defaultTheme: RequiredThemeProps = {
       P90: ''
     },
     grayScale: {
-      S10: '',
-      S20: '',
-      S30: '',
-      S40: '',
-      S50: '',
-      S60: '',
-      S70: '',
-      S80: '',
-      S90: ''
+      S0: 'rgb(255, 255, 255)',
+      S5: 'rgb(245, 245, 245)',
+      S10: 'rgb(234, 234, 234)',
+      S20: 'rgb(214, 214, 214)',
+      S30: 'rgb(193, 193, 193)',
+      S40: 'rgb(173, 173, 173)',
+      S50: 'rgb(153, 153, 153)',
+      S60: 'rgb(133, 133, 133)',
+      S70: 'rgb(112, 112, 112)',
+      S80: 'rgb(92, 92, 92)',
+      S90: 'rgb(71, 71, 71)',
+      S100: 'rgb(51, 51, 51)'
     },
     utilities: {
-      red: '',
-      blue: '',
-      highlightGreen: '',
-      paleRed: '',
-      paleGreen: '',
-      paleBlue: ''
+      red: 'rgb(224, 85, 72)',
+      blue: 'rgb(48, 120, 191)',
+      highlightGreen: 'rgb(114, 206, 92)',
+      paleRed: 'rgb(253, 246, 246)',
+      paleGreen: 'rgb(248 ,252, 247)',
+      paleBlue: 'rgb(245, 249, 252)'
     },
     text: {
-      default: ''
+      default: '#333'
     }
   },
   shadows: {
-    L1: '',
-    L2: '',
-    L3: ''
+    L1: '0 0 2px 0 rgba(0, 0, 0, 0.16)',
+    L2: '0 1px 3px 0 rgba(0, 0, 0, 0.16)',
+    L3: '0 2px 5px 0 rgba(0, 0, 0, 0.16)',
+    L4: '0 3px 8px 0 rgba(0, 0, 0, 0.16)',
+    L5: '0 5px 11px 0 rgba(0, 0, 0, 0.16)'
   }
 }
 

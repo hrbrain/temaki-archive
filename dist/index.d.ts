@@ -65,6 +65,8 @@ declare module 'hrb-temaki/modules/theme' {
             P90: string;
         };
         grayScale: {
+            S0: string;
+            S5: string;
             S10: string;
             S20: string;
             S30: string;
@@ -74,6 +76,7 @@ declare module 'hrb-temaki/modules/theme' {
             S70: string;
             S80: string;
             S90: string;
+            S100: string;
         };
         utilities: {
             red: string;
@@ -91,6 +94,8 @@ declare module 'hrb-temaki/modules/theme' {
         L1: string;
         L2: string;
         L3: string;
+        L4: string;
+        L5: string;
     };
     export type RequiredThemeProps = {
         colors: RequiredThemeColors;
