@@ -398,8 +398,11 @@ exports[`Button type of text should match previous snapshot 1`] = `
               />
             </StyledComponent>
           </styled.img>
-          <styled.span>
+          <styled.span
+            data-test="text-button-child"
+          >
             <StyledComponent
+              data-test="text-button-child"
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
@@ -432,6 +435,7 @@ exports[`Button type of text should match previous snapshot 1`] = `
             >
               <span
                 className="sc-EHOje bGEpfQ"
+                data-test="text-button-child"
               >
                 OK
               </span>

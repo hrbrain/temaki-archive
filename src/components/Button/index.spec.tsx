@@ -107,4 +107,11 @@ describe('Button type of text', () => {
     expect(imageEl.exists()).toBe(true)
     expect(imageEl.prop('src') === mockIconSrc).toBe(true)
   })
+
+  it('should render children from props children', () => {
+    const textEl = wrapper.find('span[data-test="text-button-child"]')
+    expect(textEl.exists()).toBe(true)
+    const text = textEl.text()
+    expect(text === 'OK').toBe(true)
+  })
 })

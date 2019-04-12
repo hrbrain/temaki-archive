@@ -15,7 +15,7 @@ type Props = {
 const Presentor: React.FC<Props> = ({ iconSrc, children, ...props }) => (
   <Outer {...props}>
     <Icon src={iconSrc} />
-    <Text>{children}</Text>
+    <Text data-test="text-button-child">{children}</Text>
   </Outer>
 )
 
