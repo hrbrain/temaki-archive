@@ -10,6 +10,7 @@ import { buttonBaseMixin, rippleEffectMixin } from '../lib/styles'
 
 type Props = {
   iconSrc?: string
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 const Presentor: React.FC<Props> = ({ iconSrc, children, ...props }) => (
   <Outer {...props}>

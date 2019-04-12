@@ -67,7 +67,7 @@ const Button: React.FC<Props> = ({ colorType = 'primary', onClick, children, ...
       return <Circle onClick={handleClick} colorType={colorType} isLoading={isLoading} {...props} />
 
     case 'text':
-      return <TextPresentor iconSrc={props.iconSrc} children={children} />
+      return <TextPresentor onClick={handleClick} iconSrc={props.iconSrc} children={children} />
 
     default:
       return (
