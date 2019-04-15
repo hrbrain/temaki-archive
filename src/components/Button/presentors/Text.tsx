@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import colors from '~/lib/colors'
 import { buttonBaseMixin, rippleEffectMixin } from '../lib/styles'
 
 /**
@@ -36,7 +35,7 @@ const Icon = styled.img`
 `
 
 const Text = styled.span`
-  color: ${colors.text};
+  color: ${props => props.theme.colors.text};
   font-size: 14px;
   font-weight: normal;
 `

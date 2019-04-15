@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import colors from '~/lib/colors'
 import { ColorTypeProp } from '../index'
 import { buttonBaseMixin, createCSSFromColorType, rippleEffectMixin } from '../lib/styles'
 
@@ -36,9 +35,14 @@ const Outer = styled.button<OuterProps>`
   box-shadow: 0 5px 11px rgba(0, 0, 0, 0.16);
 
   /* colors */
-  ${(props: OuterProps) =>
+  ${props =>
     props.colorType === 'primary'
-      ? createCSSFromColorType(colors.primary.default, colors.primary.N20, colors.primary.N40, colors.white)
+      ? createCSSFromColorType(
+          props.theme.colors.primary.default,
+          props.theme.colors.primary.N20,
+          props.theme.colors.primary.N40,
+          '#FFF'
+        )
       : ''}
 `
 
