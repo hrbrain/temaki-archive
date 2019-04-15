@@ -1,13 +1,14 @@
 import * as Enzyme from 'enzyme'
 import toJson from 'enzyme-to-json'
 import * as React from 'react'
+import { mountWithTheme } from '~/__test__/utils'
 import Text from './index'
 
 describe('Text', () => {
-  let wrapper: Enzyme.ShallowWrapper
+  let wrapper: Enzyme.ReactWrapper
 
   beforeEach(() => {
-    wrapper = Enzyme.shallow(<Text>Hello</Text>)
+    wrapper = mountWithTheme(<Text>Hello</Text>)
   })
 
   it('should be defined', () => {

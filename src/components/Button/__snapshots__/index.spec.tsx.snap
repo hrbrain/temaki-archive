@@ -1,34 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button type of box should match previous snapshot 1`] = `
-<Button
-  onClick={[MockFunction]}
-  type="box"
+<ThemeProvider
+  theme={
+    Object {
+      "text": "#333",
+    }
+  }
 >
-  <Presentor
-    colorType="primary"
-    onClick={[Function]}
+  <Button
+    onClick={[MockFunction]}
     type="box"
   >
-    <styled.button
+    <Presentor
       colorType="primary"
       onClick={[Function]}
       type="box"
     >
-      <StyledComponent
+      <styled.button
         colorType="primary"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
-              "isStatic": false,
-              "lastClassName": "bLIoPN",
-              "rules": Array [
-                "
+        onClick={[Function]}
+        type="box"
+      >
+        <StyledComponent
+          colorType="primary"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bdVaJa",
+                "isStatic": false,
+                "lastClassName": "bLIoPN",
+                "rules": Array [
+                  "
   ",
-                "
+                  "
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -44,8 +51,8 @@ exports[`Button type of box should match previous snapshot 1`] = `
     left: 0;
     pointer-events: none;
     background-image: radial-gradient(circle, ",
-                "#FFF",
-                " 10%, transparent 10.01%);
+                  "#FFF",
+                  " 10%, transparent 10.01%);
     background-repeat: no-repeat;
     background-position: 50%;
     transform: scale(10, 10);
@@ -58,22 +65,22 @@ exports[`Button type of box should match previous snapshot 1`] = `
     transition: 0s;
   }
 ",
-                "
+                  "
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 6px;
   border-style: none;
   padding: 0 ",
-                [Function],
-                ";
+                  [Function],
+                  ";
   cursor: pointer;
   height: ",
-                [Function],
-                ";
+                  [Function],
+                  ";
   width: ",
-                [Function],
-                ";
+                  [Function],
+                  ";
   box-shadow: none;
   outline: none;
   font-size: 14px;
@@ -81,76 +88,84 @@ exports[`Button type of box should match previous snapshot 1`] = `
   /* size */
   &.small {
     height: ",
-                [Function],
-                ";
+                  [Function],
+                  ";
   }
 
   /* color */
   ",
-                [Function],
-                "
+                  [Function],
+                  "
 ",
-              ],
-            },
-            "displayName": "styled.button",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
-            "target": "button",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
+                ],
+              },
+              "displayName": "styled.button",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bdVaJa",
+              "target": "button",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
           }
-        }
-        forwardedRef={null}
-        onClick={[Function]}
-        type="box"
-      >
-        <button
-          className="sc-bdVaJa bLIoPN"
+          forwardedRef={null}
           onClick={[Function]}
           type="box"
         >
-          OK
-        </button>
-      </StyledComponent>
-    </styled.button>
-  </Presentor>
-</Button>
+          <button
+            className="sc-bdVaJa bLIoPN"
+            onClick={[Function]}
+            type="box"
+          >
+            OK
+          </button>
+        </StyledComponent>
+      </styled.button>
+    </Presentor>
+  </Button>
+</ThemeProvider>
 `;
 
 exports[`Button type of circle should match previous snapshot 1`] = `
-<Button
-  iconSrc="http://example.com/example.svg"
-  onClick={[MockFunction]}
-  type="circle"
+<ThemeProvider
+  theme={
+    Object {
+      "text": "#333",
+    }
+  }
 >
-  <Presentor
-    colorType="primary"
+  <Button
     iconSrc="http://example.com/example.svg"
-    isLoading={false}
-    onClick={[Function]}
+    onClick={[MockFunction]}
     type="circle"
   >
-    <styled.button
+    <Presentor
       colorType="primary"
+      iconSrc="http://example.com/example.svg"
+      isLoading={false}
       onClick={[Function]}
       type="circle"
     >
-      <StyledComponent
+      <styled.button
         colorType="primary"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bwzfXH",
-              "isStatic": false,
-              "lastClassName": "jUcgns",
-              "rules": Array [
-                "
+        onClick={[Function]}
+        type="circle"
+      >
+        <StyledComponent
+          colorType="primary"
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bwzfXH",
+                "isStatic": false,
+                "lastClassName": "jUcgns",
+                "rules": Array [
+                  "
   ",
-                "
+                  "
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -166,8 +181,8 @@ exports[`Button type of circle should match previous snapshot 1`] = `
     left: 0;
     pointer-events: none;
     background-image: radial-gradient(circle, ",
-                "#FFF",
-                " 10%, transparent 10.01%);
+                  "#FFF",
+                  " 10%, transparent 10.01%);
     background-repeat: no-repeat;
     background-position: 50%;
     transform: scale(10, 10);
@@ -180,9 +195,9 @@ exports[`Button type of circle should match previous snapshot 1`] = `
     transition: 0s;
   }
 ",
-                "
+                  "
   ",
-                "
+                  "
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,7 +207,7 @@ exports[`Button type of circle should match previous snapshot 1`] = `
   box-shadow: none;
   outline: none;
 ",
-                "
+                  "
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -200,102 +215,110 @@ exports[`Button type of circle should match previous snapshot 1`] = `
 
   /* colors */
   ",
-                [Function],
-                "
+                  [Function],
+                  "
 ",
-              ],
-            },
-            "displayName": "styled.button",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bwzfXH",
-            "target": "button",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
+                ],
+              },
+              "displayName": "styled.button",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bwzfXH",
+              "target": "button",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
           }
-        }
-        forwardedRef={null}
-        onClick={[Function]}
-        type="circle"
-      >
-        <button
-          className="sc-bwzfXH jUcgns"
+          forwardedRef={null}
           onClick={[Function]}
           type="circle"
         >
-          <styled.img
-            src="http://example.com/example.svg"
+          <button
+            className="sc-bwzfXH jUcgns"
+            onClick={[Function]}
+            type="circle"
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
-                    "isStatic": true,
-                    "lastClassName": "Chbfj",
-                    "rules": Array [
-                      "
+            <styled.img
+              src="http://example.com/example.svg"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-htpNat",
+                      "isStatic": true,
+                      "lastClassName": "Chbfj",
+                      "rules": Array [
+                        "
   display: block;
   width: 24px;
   height: 24px;
 ",
-                    ],
-                  },
-                  "displayName": "styled.img",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-htpNat",
-                  "target": "img",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
+                      ],
+                    },
+                    "displayName": "styled.img",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-htpNat",
+                    "target": "img",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
                 }
-              }
-              forwardedRef={null}
-              src="http://example.com/example.svg"
-            >
-              <img
-                className="sc-htpNat Chbfj"
+                forwardedRef={null}
                 src="http://example.com/example.svg"
-              />
-            </StyledComponent>
-          </styled.img>
-        </button>
-      </StyledComponent>
-    </styled.button>
-  </Presentor>
-</Button>
+              >
+                <img
+                  className="sc-htpNat Chbfj"
+                  src="http://example.com/example.svg"
+                />
+              </StyledComponent>
+            </styled.img>
+          </button>
+        </StyledComponent>
+      </styled.button>
+    </Presentor>
+  </Button>
+</ThemeProvider>
 `;
 
 exports[`Button type of text should match previous snapshot 1`] = `
-<Button
-  iconSrc="https://example.com/example.svg"
-  onClick={[MockFunction]}
-  type="text"
+<ThemeProvider
+  theme={
+    Object {
+      "text": "#333",
+    }
+  }
 >
-  <Presentor
+  <Button
     iconSrc="https://example.com/example.svg"
-    onClick={[Function]}
+    onClick={[MockFunction]}
+    type="text"
   >
-    <styled.button
+    <Presentor
+      iconSrc="https://example.com/example.svg"
       onClick={[Function]}
     >
-      <StyledComponent
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-bxivhb",
-              "isStatic": true,
-              "lastClassName": "heYBxy",
-              "rules": Array [
-                "
+      <styled.button
+        onClick={[Function]}
+      >
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bxivhb",
+                "isStatic": true,
+                "lastClassName": "heYBxy",
+                "rules": Array [
+                  "
   ",
-                "
+                  "
   display: flex;
   justify-content: center;
   align-items: center;
@@ -305,9 +328,9 @@ exports[`Button type of text should match previous snapshot 1`] = `
   box-shadow: none;
   outline: none;
 ",
-                "
+                  "
   ",
-                "
+                  "
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -323,8 +346,8 @@ exports[`Button type of text should match previous snapshot 1`] = `
     left: 0;
     pointer-events: none;
     background-image: radial-gradient(circle, ",
-                "#FFF",
-                " 10%, transparent 10.01%);
+                  "#FFF",
+                  " 10%, transparent 10.01%);
     background-repeat: no-repeat;
     background-position: 50%;
     transform: scale(10, 10);
@@ -337,113 +360,114 @@ exports[`Button type of text should match previous snapshot 1`] = `
     transition: 0s;
   }
 ",
-                "
+                  "
   height: 24px;
   width: auto;
 ",
-              ],
-            },
-            "displayName": "styled.button",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bxivhb",
-            "target": "button",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
+                ],
+              },
+              "displayName": "styled.button",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bxivhb",
+              "target": "button",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
           }
-        }
-        forwardedRef={null}
-        onClick={[Function]}
-      >
-        <button
-          className="sc-bxivhb heYBxy"
+          forwardedRef={null}
           onClick={[Function]}
         >
-          <styled.img
-            src="https://example.com/example.svg"
+          <button
+            className="sc-bxivhb heYBxy"
+            onClick={[Function]}
           >
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-ifAKCX",
-                    "isStatic": true,
-                    "lastClassName": "jdbNGJ",
-                    "rules": Array [
-                      "
+            <styled.img
+              src="https://example.com/example.svg"
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-ifAKCX",
+                      "isStatic": true,
+                      "lastClassName": "jdbNGJ",
+                      "rules": Array [
+                        "
   width: 24px;
   height: 24px;
 ",
-                    ],
-                  },
-                  "displayName": "styled.img",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-ifAKCX",
-                  "target": "img",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
+                      ],
+                    },
+                    "displayName": "styled.img",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-ifAKCX",
+                    "target": "img",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
                 }
-              }
-              forwardedRef={null}
-              src="https://example.com/example.svg"
-            >
-              <img
-                className="sc-ifAKCX jdbNGJ"
+                forwardedRef={null}
                 src="https://example.com/example.svg"
-              />
-            </StyledComponent>
-          </styled.img>
-          <styled.span
-            data-test="text-button-child"
-          >
-            <StyledComponent
+              >
+                <img
+                  className="sc-ifAKCX jdbNGJ"
+                  src="https://example.com/example.svg"
+                />
+              </StyledComponent>
+            </styled.img>
+            <styled.span
               data-test="text-button-child"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-EHOje",
-                    "isStatic": true,
-                    "lastClassName": "bGEpfQ",
-                    "rules": Array [
-                      "
+            >
+              <StyledComponent
+                data-test="text-button-child"
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-EHOje",
+                      "isStatic": true,
+                      "lastClassName": "bGEpfQ",
+                      "rules": Array [
+                        "
   color: ",
-                      "#333",
-                      ";
+                        "#333",
+                        ";
   font-size: 14px;
   font-weight: normal;
 ",
-                    ],
-                  },
-                  "displayName": "styled.span",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-EHOje",
-                  "target": "span",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-EHOje",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
                 }
-              }
-              forwardedRef={null}
-            >
-              <span
-                className="sc-EHOje bGEpfQ"
-                data-test="text-button-child"
+                forwardedRef={null}
               >
-                OK
-              </span>
-            </StyledComponent>
-          </styled.span>
-        </button>
-      </StyledComponent>
-    </styled.button>
-  </Presentor>
-</Button>
+                <span
+                  className="sc-EHOje bGEpfQ"
+                  data-test="text-button-child"
+                >
+                  OK
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </button>
+        </StyledComponent>
+      </styled.button>
+    </Presentor>
+  </Button>
+</ThemeProvider>
 `;

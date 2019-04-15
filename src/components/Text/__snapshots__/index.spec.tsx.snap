@@ -1,7 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text should render collectly 1`] = `
-<styled.p>
-  Hello
-</styled.p>
+<ThemeProvider
+  theme={
+    Object {
+      "text": "#333",
+    }
+  }
+>
+  <Text>
+    <styled.p>
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "dsMjwO",
+              "rules": Array [
+                "
+  color: ",
+                [Function],
+                ";
+",
+              ],
+            },
+            "displayName": "styled.p",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "p",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <p
+          className="sc-bdVaJa dsMjwO"
+        >
+          Hello
+        </p>
+      </StyledComponent>
+    </styled.p>
+  </Text>
+</ThemeProvider>
 `;
