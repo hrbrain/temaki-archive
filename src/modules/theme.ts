@@ -4,24 +4,16 @@ import * as styledComponents from 'styled-components'
 export type RequiredThemeColors = {
   primary: {
     default: string
-    N10: string
     N20: string
-    N30: string
     N40: string
-    N50: string
     N60: string
-    N70: string
     N80: string
-    N90: string
-    P10: string
+    N95: string
     P20: string
-    P30: string
     P40: string
-    P50: string
     P60: string
-    P70: string
     P80: string
-    P90: string
+    P95: string
   }
   grayScale: {
     S0: string
@@ -66,25 +58,17 @@ export type RequiredThemeProps = {
 export const defaultTheme: RequiredThemeProps = {
   colors: {
     primary: {
-      default: '',
-      N10: '',
-      N20: '',
-      N30: '',
-      N40: '',
-      N50: '',
-      N60: '',
-      N70: '',
-      N80: '',
-      N90: '',
-      P10: '',
-      P20: '',
-      P30: '',
-      P40: '',
-      P50: '',
-      P60: '',
-      P70: '',
-      P80: '',
-      P90: ''
+      default: 'rgb(51, 51, 51)',
+      N20: 'rgb(92, 92, 92)',
+      N40: 'rgb(133, 133, 133)',
+      N60: 'rgb(173, 173, 173)',
+      N80: 'rgb(214, 214, 214)',
+      N95: 'rgb(245, 245, 245)',
+      P20: 'rgb(41, 41, 41)',
+      P40: 'rgb(31, 31, 31)',
+      P60: 'rgb(20, 20, 20)',
+      P80: 'rgb(10, 10, 10)',
+      P95: 'rgb(0, 0, 0)'
     },
     grayScale: {
       S0: 'rgb(255, 255, 255)',
