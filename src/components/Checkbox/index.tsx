@@ -62,14 +62,14 @@ const NotChecked = styled.div`
 
 const Checked = styled.div`
   ${checkboxBaseMixin};
+  border-color: ${props => props.theme.colors.primary.default};
+  background-color: ${props => props.theme.colors.primary.default};
 `
-// border-color: ${props => props.theme.colors.primary.default};
-// background-color: ${props => props.theme.colors.primary.default};
 
 const Text = styled.span`
   font-size: 14px;
   padding-left: 4px;
+  color: ${props => props.theme.colors.text};
 `
-// color: ${props => props.theme.colors.text};
 
 export default Checkbox
