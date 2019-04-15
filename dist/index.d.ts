@@ -6,6 +6,12 @@
 declare module 'hrb-temaki' {
     import { RequiredThemeProps as _RequiredThemeProps } from 'hrb-temaki/modules/theme';
     export const Text: import("react").FunctionComponent<{}>;
+    export const Checkbox: import("react").NamedExoticComponent<{
+        text?: string | undefined;
+        onClick?: ((e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void) | undefined;
+        checked?: boolean | undefined;
+        indeterminate?: boolean | undefined;
+    }>;
     export const colors: {
         primary: {
             default: string;
