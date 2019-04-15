@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should match previous snapshot 1`] = `
+<ThemeProvider
+  theme={
+    Object {
+      "colors": Object {
+        "grayScale": Object {
+          "S0": "rgb(255, 255, 255)",
+          "S10": "rgb(234, 234, 234)",
+          "S100": "rgb(51, 51, 51)",
+          "S20": "rgb(214, 214, 214)",
+          "S30": "rgb(193, 193, 193)",
+          "S40": "rgb(173, 173, 173)",
+          "S5": "rgb(245, 245, 245)",
+          "S50": "rgb(153, 153, 153)",
+          "S60": "rgb(133, 133, 133)",
+          "S70": "rgb(112, 112, 112)",
+          "S80": "rgb(92, 92, 92)",
+          "S90": "rgb(71, 71, 71)",
+        },
+        "primary": Object {
+          "N10": "",
+          "N20": "",
+          "N30": "",
+          "N40": "",
+          "N50": "",
+          "N60": "",
+          "N70": "",
+          "N80": "",
+          "N90": "",
+          "P10": "",
+          "P20": "",
+          "P30": "",
+          "P40": "",
+          "P50": "",
+          "P60": "",
+          "P70": "",
+          "P80": "",
+          "P90": "",
+          "default": "",
+        },
+        "text": Object {
+          "default": "#333",
+        },
+        "utilities": Object {
+          "blue": "rgb(48, 120, 191)",
+          "highlightGreen": "rgb(114, 206, 92)",
+          "paleBlue": "rgb(245, 249, 252)",
+          "paleGreen": "rgb(248 ,252, 247)",
+          "paleRed": "rgb(253, 246, 246)",
+          "red": "rgb(224, 85, 72)",
+        },
+      },
+      "shadows": Object {
+        "L1": "0 0 2px 0 rgba(0, 0, 0, 0.16)",
+        "L2": "0 1px 3px 0 rgba(0, 0, 0, 0.16)",
+        "L3": "0 2px 5px 0 rgba(0, 0, 0, 0.16)",
+        "L4": "0 3px 8px 0 rgba(0, 0, 0, 0.16)",
+        "L5": "0 5px 11px 0 rgba(0, 0, 0, 0.16)",
+      },
+    }
+  }
+>
+  <Component
+    onClick={[MockFunction]}
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "lastClassName": "hKAetY",
+            "rules": Array [
+              "
+  display: flex;
+  align-items: center;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onClick={[MockFunction]}
+    >
+      <div
+        className="sc-bdVaJa hKAetY"
+        onClick={[MockFunction]}
+      >
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": true,
+                  "lastClassName": "dgUJNO",
+                  "rules": Array [
+                    "
+  ",
+                    "
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: solid 1px;
+  cursor: pointer;
+",
+                    ";
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="sc-bwzfXH dgUJNO"
+            />
+          </StyledComponent>
+        </styled.div>
+        <styled.span>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": false,
+                  "lastClassName": "duliHw",
+                  "rules": Array [
+                    "
+  font-size: 14px;
+  color: ",
+                    [Function],
+                    ";
+  padding-left: 4px;
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <span
+              className="sc-bxivhb duliHw"
+            />
+          </StyledComponent>
+        </styled.span>
+      </div>
+    </StyledComponent>
+  </Component>
+</ThemeProvider>
+`;
