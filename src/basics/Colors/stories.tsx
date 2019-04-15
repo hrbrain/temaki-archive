@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
-import colors from '../../lib/colors'
+import { defaultTheme } from '~/modules/theme'
 
 type SquareProps = {
   color: string
@@ -20,8 +20,8 @@ const renderColorsEachKeys = (obj: { [key: string]: string }) => {
 }
 
 storiesOf('Basics|Colors', module).add('all', () => (
-  <div className="contianer p-4">
+  <div className="container p-4">
     <h1 className="text-xl">Primary</h1>
-    <div className="flex mt-4">{renderColorsEachKeys(colors.primary)}</div>
+    <div className="flex mt-4">{renderColorsEachKeys(defaultTheme.colors.primary)}</div>
   </div>
 ))
