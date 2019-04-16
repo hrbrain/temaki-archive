@@ -6,29 +6,31 @@ module.exports = ({ config }) => {
     '~': path.resolve(__dirname, '../src/')
   }
 
-  config.module.rules.push({
-    test: /\.stories\.tsx?$/,
-    use: [
-      {
-        loader: require.resolve('@storybook/addon-storysource/loader'),
-        options: { parser: 'typescript' }
-      }
-    ],
-    enforce: 'pre'
-  })
-  config.module.rules.push({
-    test: /\.tsx?$/,
-    use: [
-      {
-        loader: require.resolve('ts-loader')
-      }
-    ]
-  })
+  config.module.rules = [
+    {
+      test: /\.stories\.tsx?$/,
+      use: [
+        {
+          loader: require.resolve('@storybook/addon-storysource/loader'),
+          options: { parser: 'typescript' }
+        }
+      ],
+      enforce: 'pre'
+    },
+    {
+      test: /\.tsx?$/,
+      use: [
+        {
+          loader: require.resolve('ts-loader')
+        }
+      ]
+    }
+  ]
   config.resolve.alias = {
     ...config.resolve.alias,
     '~': path.resolve(__dirname, '../src')
   }
-  
+
   config.resolve.extensions.push('.ts', '.tsx')
   return config
 }
