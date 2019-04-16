@@ -57,116 +57,149 @@ exports[`Checkbox should match previous snapshot 1`] = `
   <Component
     onClick={[MockFunction]}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": true,
-            "lastClassName": "hKAetY",
-            "rules": Array [
-              "
-  display: flex;
-  align-items: center;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <styled.div
+      data-test="nocheck-box"
       onClick={[MockFunction]}
+      tabIndex={1}
     >
-      <div
-        className="sc-bdVaJa hKAetY"
-        onClick={[MockFunction]}
-      >
-        <styled.div>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
-                  "isStatic": true,
-                  "lastClassName": "dgUJNO",
-                  "rules": Array [
-                    "
-  ",
-                    "
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
-  border: solid 1px;
+      <StyledComponent
+        data-test="nocheck-box"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": true,
+              "lastClassName": "gkcNzX",
+              "rules": Array [
+                "
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
 ",
-                    ";
-",
-                  ],
-                },
-                "displayName": "styled.div",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
-                "target": "div",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        onClick={[MockFunction]}
+        tabIndex={1}
+      >
+        <div
+          className="sc-bdVaJa gkcNzX"
+          data-test="nocheck-box"
+          onClick={[MockFunction]}
+          tabIndex={1}
+        >
+          <styled.div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
               }
             }
-            forwardedRef={null}
           >
-            <div
-              className="sc-bwzfXH dgUJNO"
-            />
-          </StyledComponent>
-        </styled.div>
-        <styled.span>
-          <StyledComponent
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-bxivhb",
-                  "isStatic": true,
-                  "lastClassName": "kboEII",
-                  "rules": Array [
-                    "
+            <StyledComponent
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cGYhMO",
+                    "rules": Array [
+                      "
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+
+  & .primary {
+    fill: ",
+                      [Function],
+                      ";
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH cGYhMO"
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": undefined,
+                  }
+                }
+              />
+            </StyledComponent>
+          </styled.div>
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": false,
+                    "lastClassName": "lnTVXj",
+                    "rules": Array [
+                      "
+  height: 100%;
   font-size: 14px;
   padding-left: 4px;
+  color: ",
+                      [Function],
+                      ";
 ",
-                  ],
-                },
-                "displayName": "styled.span",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-bxivhb",
-                "target": "span",
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            forwardedRef={null}
-          >
-            <span
-              className="sc-bxivhb kboEII"
-            />
-          </StyledComponent>
-        </styled.span>
-      </div>
-    </StyledComponent>
+              forwardedRef={null}
+            >
+              <span
+                className="sc-htpNat lnTVXj"
+              />
+            </StyledComponent>
+          </styled.span>
+        </div>
+      </StyledComponent>
+    </styled.div>
   </Component>
 </ThemeProvider>
 `;

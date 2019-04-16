@@ -22,4 +22,26 @@ describe('Checkbox', () => {
   it('should match previous snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should call onClick by users click', () => {
+    wrapper.simulate('click')
+    expect(mockOnClick).toHaveBeenCalled()
+  })
+
+  it('should render nocheck icon', () => {
+    const el = wrapper.find('div[data-test="nocheck-box"]')
+    expect(el).toHaveLength(1)
+  })
+
+  it('should render checked icon by checked props', () => {
+    wrapper = mountWithTheme(<Checkbox checked onClick={mockOnClick} />)
+    const checkedEl = wrapper.find('div[data-test="checked-box"]')
+    expect(checkedEl).toHaveLength(1)
+  })
+
+  it('should render indeterminate icon by indeterminate props', () => {
+    wrapper = mountWithTheme(<Checkbox indeterminate onClick={mockOnClick} />)
+    const indeEl = wrapper.find('div[data-test="indeterminate-box"]')
+    expect(indeEl).toHaveLength(1)
+  })
 })
