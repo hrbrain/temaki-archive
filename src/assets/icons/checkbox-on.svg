@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="basics/icon/common/checkBox-on" transform="translate(-2.000000, -2.000000)">
+            <g id="@icon/common/checkBox-on">
+                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+                <g id="outline" transform="translate(2.000000, 2.000000)">
+                    <path d="M17.5,20 L2.5,20 C1.125,20 0,18.875 0,17.5 L0,2.5 C0,1.125 1.125,0 2.5,0 L17.5,0 C18.875,0 20,1.125 20,2.5 L20,17.5 C20,18.875 18.875,20 17.5,20" id="Fill-1" fill-rule="nonzero"></path>
+                    <polyline id="Stroke-3" stroke="#FFFFFF" stroke-width="1.5" points="4 10 8.615 14.5 16 5.5"></polyline>
+                </g>
+                <g id="fill" transform="translate(2.000000, 2.000000)" fill-rule="nonzero">
+                    <path d="M2.5,20 C1.125,20 0,18.875 0,17.5 L0,2.5 C0,1.125 1.125,0 2.5,0 L17.5,0 C18.875,0 20,1.125 20,2.5 L20,17.5 C20,18.875 18.875,20 17.5,20 L2.5,20 Z" id="Fill-1" class="primary"></path>
+                    <polygon id="Stroke-3" fill="#FFFFFF" points="8.5535488 13.3925517 15.4202071 5.02424773 16.5797929 5.97575227 8.6764512 15.6074483 3.47640253 10.5369783 4.52359747 9.46302171"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

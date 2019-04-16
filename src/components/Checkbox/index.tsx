@@ -1,5 +1,9 @@
 import * as React from 'react'
-import styled, { css } from '~/modules/theme'
+import styled from '~/modules/theme'
+
+import checkboxIndeterminate from 'raw-loader!~/assets/icons/checkbox-indeterminate.svg'
+import checkboxOff from 'raw-loader!~/assets/icons/checkbox-off.svg'
+import checkboxOn from 'raw-loader!~/assets/icons/checkbox-on.svg'
 
 /**
  * Component
@@ -12,28 +16,28 @@ type Props = {
   indeterminate?: boolean
 }
 const Checkbox = React.memo<Props>(({ text, indeterminate, checked, ...props }) => {
-  if (indeterminate) {
-    // TODO: 画像追加する
+  // ON の方を優先にする
+  if (checked) {
     return (
-      <Outer {...props}>
-        <Checked />
+      <Outer tabIndex={1} data-test="checked-box" {...props}>
+        <CheckIcon dangerouslySetInnerHTML={{ __html: checkboxOn }} />
         <Text>{text}</Text>
       </Outer>
     )
   }
-  if (checked) {
-    // TODO: 画像追加する
+
+  if (indeterminate) {
     return (
-      <Outer {...props}>
-        <Checked />
+      <Outer tabIndex={1} data-test="indeterminate-box" {...props}>
+        <CheckIcon dangerouslySetInnerHTML={{ __html: checkboxIndeterminate }} />
         <Text>{text}</Text>
       </Outer>
     )
   }
 
   return (
-    <Outer {...props}>
-      <NotChecked />
+    <Outer tabIndex={1} data-test="nocheck-box" {...props}>
+      <CheckIcon dangerouslySetInnerHTML={{ __html: checkboxOff }} />
       <Text>{text}</Text>
     </Outer>
   )
@@ -44,29 +48,25 @@ const Checkbox = React.memo<Props>(({ text, indeterminate, checked, ...props }) 
  */
 
 const Outer = styled.div`
-  display: flex;
+  display: inline-flex;
   align-items: center;
-`
-
-const checkboxBaseMixin = css`
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
-  border: solid 1px;
   cursor: pointer;
 `
 
-const NotChecked = styled.div`
-  ${checkboxBaseMixin};
-`
+const CheckIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
 
-const Checked = styled.div`
-  ${checkboxBaseMixin};
-  border-color: ${props => props.theme.colors.primary.default};
-  background-color: ${props => props.theme.colors.primary.default};
+  & .primary {
+    fill: ${props => props.theme.colors.primary.default};
+  }
 `
 
 const Text = styled.span`
+  height: 100%;
   font-size: 14px;
   padding-left: 4px;
   color: ${props => props.theme.colors.text};
