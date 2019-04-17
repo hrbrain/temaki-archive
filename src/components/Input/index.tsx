@@ -27,12 +27,12 @@ type Props = {
 } & (
   | {
       format: typeof TEXT
-      value?: string
+      value?: StringValue
       onChange?: (value: StringValue) => void
     }
   | {
       format: typeof NUMBER
-      value?: number
+      value?: NumberValue
       onChange?: (value: NumberValue) => void
     })
 const Input = React.memo<Props>(({ children, ...props }) => {
