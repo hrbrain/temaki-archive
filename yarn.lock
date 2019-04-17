@@ -12659,6 +12659,11 @@ utila@^0.4.0, utila@~0.4:
   resolved "https://registry.yarnpkg.com/utila/-/utila-0.4.0.tgz#8a16a05d445657a3aea5eecc5b12a4fa5379772c"
   integrity sha1-ihagXURWV6Oupe7MWxKk+lN5dyw=
 
+utility-types@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/utility-types/-/utility-types-3.5.0.tgz#d80c95b774575d1683f5ba807879c52d8f35db1c"
+  integrity sha512-1XdYkHN+Dcgh1PQEER1CF5BXkGLvf7Owor6tYSyEs+lbHi4obz4ZeJZQVZyinKvFaGwriBKRlEk5hiApfhglQg==
+
 utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
