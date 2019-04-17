@@ -25,7 +25,7 @@ const useChangeNumberValueFromChangeEvent = (
           return
         }
 
-        const num = Number(value)
+        const num = Number(tgtValue)
         if (isNaN(num)) {
           return
         }
