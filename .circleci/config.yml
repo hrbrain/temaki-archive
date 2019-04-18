@@ -43,6 +43,15 @@ jobs:
       - run:
           name: Build storybook
           command: yarn docs:build
+      - restore_cache:
+          key: firebase-dependency-cache-{{ checksum "./functions/package.json" }}
+      - run:
+          name: Install Firebase dependencies
+          command: cd ./functions && yarn install && cd ../
+      - save_cache:
+          key: firebase-dependency-cache-{{ checksum "./functions/package.json" }}
+          paths:
+              - ./functions/node_modules
       - run:
           name: Deploy storybook
           command: yarn docs:deploy --token=$FIREBASE_TOKEN
@@ -63,4 +72,3 @@ workflows:
               ignore: /.*/
             tags:
               only: /v[0-9]+(\.[0-9]+)+/
-              
