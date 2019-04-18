@@ -51,6 +51,40 @@ exports[`Text should render collectly 1`] = `
         "L4": "0 3px 8px 0 rgba(0, 0, 0, 0.16)",
         "L5": "0 5px 11px 0 rgba(0, 0, 0, 0.16)",
       },
+      "typography": Object {
+        "pc": Object {
+          "body": Object {
+            "L": "16px",
+            "S": "12px",
+            "XL": "18px",
+            "default": "14px",
+          },
+          "heading": Object {
+            "H1": "24px",
+            "H2": "22px",
+            "H3": "20px",
+            "H4": "18px",
+            "H5": "16px",
+            "H6": "14px",
+          },
+        },
+        "sp": Object {
+          "body": Object {
+            "L": "16px",
+            "S": "12px",
+            "XL": "18px",
+            "default": "14px",
+          },
+          "heading": Object {
+            "H1": "24px",
+            "H2": "22px",
+            "H3": "20px",
+            "H4": "18px",
+            "H5": "16px",
+            "H6": "14px",
+          },
+        },
+      },
     }
   }
 >
