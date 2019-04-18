@@ -50,9 +50,49 @@ export type RequiredThemeShadows = {
   L5: string
 }
 
+export type RequiredThemeTextSize = {
+  pc: RequiredThemeTextSizePC
+  sp: RequiredThemeTextSizeSP
+}
+
+export type RequiredThemeTextSizePC = {
+  body: {
+    default: string
+    L: string
+    XL: string
+    S: string
+  }
+  heading: {
+    H1: string
+    H2: string
+    H3: string
+    H4: string
+    H5: string
+    H6: string
+  }
+}
+
+export type RequiredThemeTextSizeSP = {
+  body: {
+    default: string
+    L: string
+    XL: string
+    S: string
+  }
+  heading: {
+    H1: string
+    H2: string
+    H3: string
+    H4: string
+    H5: string
+    H6: string
+  }
+}
+
 export type RequiredThemeProps = {
   colors: RequiredThemeColors
   shadows: RequiredThemeShadows
+  typography: RequiredThemeTextSize
 }
 
 export const defaultTheme: RequiredThemeProps = {
@@ -102,6 +142,40 @@ export const defaultTheme: RequiredThemeProps = {
     L3: '0 2px 5px 0 rgba(0, 0, 0, 0.16)',
     L4: '0 3px 8px 0 rgba(0, 0, 0, 0.16)',
     L5: '0 5px 11px 0 rgba(0, 0, 0, 0.16)'
+  },
+  typography: {
+    pc: {
+      body: {
+        XL: '18px',
+        L: '16px',
+        default: '14px',
+        S: '12px'
+      },
+      heading: {
+        H1: '24px',
+        H2: '22px',
+        H3: '20px',
+        H4: '18px',
+        H5: '16px',
+        H6: '14px'
+      }
+    },
+    sp: {
+      body: {
+        XL: '18px',
+        L: '16px',
+        default: '14px',
+        S: '12px'
+      },
+      heading: {
+        H1: '24px',
+        H2: '22px',
+        H3: '20px',
+        H4: '18px',
+        H5: '16px',
+        H6: '14px'
+      }
+    }
   }
 }
 

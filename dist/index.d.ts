@@ -95,9 +95,46 @@ declare module 'hrb-temaki/modules/theme' {
         L4: string;
         L5: string;
     };
+    export type RequiredThemeTextSize = {
+        pc: RequiredThemeTextSizePC;
+        sp: RequiredThemeTextSizeSP;
+    };
+    export type RequiredThemeTextSizePC = {
+        body: {
+            default: string;
+            L: string;
+            XL: string;
+            S: string;
+        };
+        heading: {
+            H1: string;
+            H2: string;
+            H3: string;
+            H4: string;
+            H5: string;
+            H6: string;
+        };
+    };
+    export type RequiredThemeTextSizeSP = {
+        body: {
+            default: string;
+            L: string;
+            XL: string;
+            S: string;
+        };
+        heading: {
+            H1: string;
+            H2: string;
+            H3: string;
+            H4: string;
+            H5: string;
+            H6: string;
+        };
+    };
     export type RequiredThemeProps = {
         colors: RequiredThemeColors;
         shadows: RequiredThemeShadows;
+        typography: RequiredThemeTextSize;
     };
     export const defaultTheme: RequiredThemeProps;
     const styled: styledComponents.ThemedBaseStyledInterface<RequiredThemeProps>, ServerStyleSheet: typeof styledComponents.ServerStyleSheet, StyleSheetManager: typeof styledComponents.StyleSheetManager, createGlobalStyle: <P extends object = {}>(first: styledComponents.CSSObject | TemplateStringsArray | styledComponents.InterpolationFunction<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>, ...interpolations: styledComponents.Interpolation<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>[]) => styledComponents.GlobalStyleComponent<P, RequiredThemeProps>, css: styledComponents.BaseThemedCssFunction<RequiredThemeProps>, isStyledComponent: typeof styledComponents.isStyledComponent, keyframes: (strings: TemplateStringsArray | styledComponents.CSSKeyframes, ...interpolations: styledComponents.SimpleInterpolation[]) => styledComponents.Keyframes, withTheme: styledComponents.BaseWithThemeFnInterface<RequiredThemeProps>;
