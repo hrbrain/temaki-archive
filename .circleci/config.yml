@@ -3,7 +3,7 @@ jobs:
   test:
     working_directory: ~/dir
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:8
     steps:
       - checkout
       - restore_cache:
@@ -28,7 +28,7 @@ jobs:
   deploy-storybook:
     working_directory: ~/dir
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:8
     steps:
       - checkout
       - restore_cache:
