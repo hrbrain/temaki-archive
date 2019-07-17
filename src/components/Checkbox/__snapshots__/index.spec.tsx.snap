@@ -54,7 +54,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
     }
   }
 >
-  <Component
+  <Memo()
     onClick={[MockFunction]}
   >
     <styled.div
@@ -200,6 +200,6 @@ exports[`Checkbox should match previous snapshot 1`] = `
         </div>
       </StyledComponent>
     </styled.div>
-  </Component>
+  </Memo()>
 </ThemeProvider>
 `;
