@@ -75,5 +75,10 @@ module.exports = {
       root: "StyledComponents"
     }
   },
-  cache: true
+  cache: true,
+  // TreeShakingオフ
+  optimization: {
+    usedExports: true,
+    providedExports: true
+  }
 }
