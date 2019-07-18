@@ -6,11 +6,11 @@ import styled from '~/modules/theme'
 //   level?: number
 // }
 const Text: React.FC = ({ children }) => {
-  return <StyledText>{children}</StyledText>
+    return <StyledText>{children}</StyledText>
 }
 
 const StyledText = styled.p`
-  color: ${props => props.theme.colors.text.default};
+    color: ${props => props.theme.colors.text.default};
 `
 
 export default Text

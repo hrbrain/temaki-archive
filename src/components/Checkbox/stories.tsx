@@ -5,12 +5,12 @@ import * as React from 'react'
 import Checkbox from './index'
 
 storiesOf('Components|Checkbox', module).add('all', () => {
-  return (
-    <Checkbox
-      onClick={action('onClick')}
-      checked={boolean('Checked', false)}
-      indeterminate={boolean('Indeterminate', false)}
-      text={text('Text', 'Checkbox')}
-    />
-  )
+    return (
+        <Checkbox
+            onClick={action('onClick')}
+            checked={boolean('Checked', false)}
+            indeterminate={boolean('Indeterminate', false)}
+            text={text('Text', 'Checkbox')}
+        />
+    )
 })

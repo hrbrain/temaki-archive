@@ -6,5 +6,9 @@ import * as IconFiles from '~/basics/Icons/lib/iconFiles'
 import Icon from './index'
 
 Storybook.storiesOf('components|Icon', module).add('Standard', () => (
-  <Icon svg={IconFiles.icons.AddIcon} size={text('Size', '24px')} color={color('Color', '#333')} />
+    <Icon
+        svg={IconFiles.icons.AddIcon}
+        size={text('Size', '24px')}
+        color={color('Color', '#333')}
+    />
 ))

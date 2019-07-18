@@ -2,21 +2,25 @@ import * as React from 'react'
 import styled from '~/modules/theme'
 
 import { ColorTypeProp } from '../index'
-import { buttonBaseMixin, createCSSFromColorType, rippleEffectMixin } from '../lib/styles'
+import {
+    buttonBaseMixin,
+    createCSSFromColorType,
+    rippleEffectMixin
+} from '../lib/styles'
 
 /**
  * Component
  */
 
 type Props = {
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
-  iconSrc?: string
-  isLoading?: boolean
+    onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
+    iconSrc?: string
+    isLoading?: boolean
 } & OuterProps
-const Presentor: React.FC<Props> = ({ iconSrc, isLoading, ...props }) => (
-  <Outer {...props}>
-    <Icon src={iconSrc} />
-  </Outer>
+const Presentor: React.FC<Props> = ({ iconSrc, ...props }) => (
+    <Outer {...props}>
+        <Icon src={iconSrc} />
+    </Outer>
 )
 
 /**
@@ -24,32 +28,32 @@ const Presentor: React.FC<Props> = ({ iconSrc, isLoading, ...props }) => (
  */
 
 type OuterProps = {
-  colorType: ColorTypeProp
+    colorType: ColorTypeProp
 }
 const Outer = styled.button<OuterProps>`
-  ${rippleEffectMixin}
-  ${buttonBaseMixin}
+    ${rippleEffectMixin}
+    ${buttonBaseMixin}
   width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  box-shadow: 0 5px 11px rgba(0, 0, 0, 0.16);
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.16);
 
-  /* colors */
-  ${props =>
-    props.colorType === 'primary'
-      ? createCSSFromColorType(
-          props.theme.colors.primary.default,
-          props.theme.colors.primary.N20,
-          props.theme.colors.primary.N40,
-          '#FFF'
-        )
-      : ''}
+    /* colors */
+    ${props =>
+        props.colorType === 'primary'
+            ? createCSSFromColorType(
+                  props.theme.colors.primary.default,
+                  props.theme.colors.primary.N20,
+                  props.theme.colors.primary.N40,
+                  '#FFF'
+              )
+            : ''}
 `
 
 const Icon = styled.img`
-  display: block;
-  width: 24px;
-  height: 24px;
+    display: block;
+    width: 24px;
+    height: 24px;
 `
 
 export default Presentor

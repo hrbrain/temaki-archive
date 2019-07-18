@@ -6,13 +6,17 @@ import styled from '~/modules/theme'
  */
 
 type Props = {
-  svg: string
-  size: string
-  color?: string
-  className?: string
+    svg: string
+    size: string
+    color?: string
+    className?: string
 }
 const Component = (props: Props) => (
-  <Wrap size={props.size} color={props.color} dangerouslySetInnerHTML={{ __html: props.svg }} />
+    <Wrap
+        size={props.size}
+        color={props.color}
+        dangerouslySetInnerHTML={{ __html: props.svg }}
+    />
 )
 
 /**
@@ -20,15 +24,15 @@ const Component = (props: Props) => (
  */
 
 type WrapProps = {
-  color?: string
-  size: string
+    color?: string
+    size: string
 }
 const Wrap = styled.div<WrapProps>`
-  height: ${props => props.size};
-  width: ${props => props.size};
-  & #fill {
-    fill: ${props => props.color};
-  }
+    height: ${props => props.size};
+    width: ${props => props.size};
+    & #fill {
+        fill: ${props => props.color};
+    }
 `
 
 export default Component
