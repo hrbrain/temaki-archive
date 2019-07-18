@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'stories.tsx.js',
+    filename: 'index.js',
     library: 'hrb-temaki',
     libraryTarget: 'umd'
   },

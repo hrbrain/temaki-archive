@@ -1,7 +1,7 @@
 import _Checkbox from '~/components/Checkbox/index'
 import _Text from '~/components/Text/index'
 import _colors from '~/lib/colors'
-import { icons as _icons } from '~/basics/Icons/lib/iconFiles'
+import { icons as _icons } from '~/lib/iconFiles'
 import {
     defaultTheme as _defaultTheme,
     RequiredThemeProps as _RequiredThemeProps

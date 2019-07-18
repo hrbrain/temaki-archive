@@ -2,7 +2,7 @@ import { color, text } from '@storybook/addon-knobs'
 import * as Storybook from '@storybook/react'
 import * as React from 'react'
 
-import * as IconFiles from '~/basics/Icons/lib/iconFiles'
+import * as IconFiles from '~/lib/iconFiles'
 import Icon from './index'
 
 Storybook.storiesOf('components|Icon', module).add('Standard', () => (

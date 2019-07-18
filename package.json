@@ -13,7 +13,7 @@
     "test": "jest",
     "lint": "run-s lint:*",
     "lint:src": "eslint --ext .ts,.tsx ./src",
-    "lint-fix": "run-s lint:fix:*",
+    "lint-fix": "run-s lint-fix:*",
     "lint-fix:src": "eslint --ext .ts,.tsx --fix ./src",
     "type-check": "tsc --noEmit"
   },

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import * as IconFiles from '~/basics/Icons/lib/iconFiles'
+import * as IconFiles from '~/lib/iconFiles'
 import Icon from '~/components/Icon'
 
 /**

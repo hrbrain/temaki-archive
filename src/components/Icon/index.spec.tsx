@@ -1,7 +1,7 @@
 import * as Enzyme from 'enzyme'
 import * as React from 'react'
 
-import * as IconFiles from '~/basics/Icons/lib/iconFiles'
+import * as IconFiles from '../../lib/iconFiles'
 import { mountWithTheme } from '../../__test__/utils'
 import Icon from './index'
 

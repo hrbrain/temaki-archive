@@ -3,7 +3,7 @@ import * as Storybook from '@storybook/react'
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import * as IconFiles from './lib/iconFiles'
+import * as IconFiles from '../../lib/iconFiles'
 
 Storybook.storiesOf('basics|Icons', module).add('index', () => {
     const iconElements = Object.keys(IconFiles.icons).map(
