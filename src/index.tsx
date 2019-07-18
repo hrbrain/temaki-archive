@@ -10,4 +10,5 @@ export const Text = _Text
 export const Checkbox = _Checkbox
 export const colors = _colors
 export const defaultTheme = _defaultTheme
+export { icons } from '~/basics/Icons/lib/iconFiles'
 export type RequiredThemeProps = _RequiredThemeProps
