@@ -98,10 +98,10 @@ exports[`Text should render collectly 1`] = `
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
-              "lastClassName": "dsMjwO",
+              "lastClassName": "kmGcsi",
               "rules": Array [
                 "
-  color: ",
+    color: ",
                 [Function],
                 ";
 ",
@@ -120,7 +120,7 @@ exports[`Text should render collectly 1`] = `
         forwardedRef={null}
       >
         <p
-          className="sc-bdVaJa dsMjwO"
+          className="sc-bdVaJa kmGcsi"
         >
           Hello
         </p>

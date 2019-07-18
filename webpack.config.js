@@ -27,14 +27,10 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.tsx?$/,
-        exclude: [/node_modules/, /\.stories\.tsx?$/, /\.spec\.tsx?$/],
+        exclude: [/node_modules/],
         use: [
           {
-            loader: 'tslint-loader',
-            options: {
-              fix: false,
-              emitErrors: true
-            }
+            loader: 'eslint-loader'
           }
         ]
       },

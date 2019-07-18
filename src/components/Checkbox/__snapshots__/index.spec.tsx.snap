@@ -105,12 +105,12 @@ exports[`Checkbox should match previous snapshot 1`] = `
             "componentStyle": ComponentStyle {
               "componentId": "sc-bwzfXH",
               "isStatic": true,
-              "lastClassName": "AuuDz",
+              "lastClassName": "kSStyj",
               "rules": Array [
                 "
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
 ",
               ],
             },
@@ -129,7 +129,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
         tabIndex={1}
       >
         <div
-          className="sc-bwzfXH AuuDz"
+          className="sc-bwzfXH kSStyj"
           data-test="nocheck-box"
           onClick={[MockFunction]}
           tabIndex={1}
@@ -145,20 +145,20 @@ exports[`Checkbox should match previous snapshot 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-htpNat",
                     "isStatic": false,
-                    "lastClassName": "fuuYzq",
+                    "lastClassName": "jSEuih",
                     "rules": Array [
                       "
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 24px;
-  width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
 
-  & .primary {
-    fill: ",
+    & .primary {
+        fill: ",
                       [Function],
                       ";
-  }
+    }
 ",
                     ],
                   },
@@ -176,7 +176,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
               size="24px"
             >
               <Component
-                className="sc-htpNat fuuYzq"
+                className="sc-htpNat jSEuih"
                 size="24px"
               >
                 <styled.div
@@ -200,20 +200,20 @@ exports[`Checkbox should match previous snapshot 1`] = `
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bdVaJa",
                           "isStatic": false,
-                          "lastClassName": "bwJxtr",
+                          "lastClassName": "pCxaP",
                           "rules": Array [
                             "
-  height: ",
+    height: ",
                             [Function],
                             ";
-  width: ",
+    width: ",
                             [Function],
                             ";
-  & #fill {
-    fill: ",
+    & #fill {
+        fill: ",
                             [Function],
                             ";
-  }
+    }
 ",
                           ],
                         },
@@ -231,7 +231,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
                     size="24px"
                   >
                     <div
-                      className="sc-bdVaJa bwJxtr"
+                      className="sc-bdVaJa pCxaP"
                       dangerouslySetInnerHTML={
                         Object {
                           "__html": undefined,
@@ -253,13 +253,13 @@ exports[`Checkbox should match previous snapshot 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bxivhb",
                     "isStatic": false,
-                    "lastClassName": "hxWOij",
+                    "lastClassName": "gTLyQc",
                     "rules": Array [
                       "
-  height: 100%;
-  font-size: 14px;
-  padding-left: 4px;
-  color: ",
+    height: 100%;
+    font-size: 14px;
+    padding-left: 4px;
+    color: ",
                       [Function],
                       ";
 ",
@@ -278,7 +278,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
               forwardedRef={null}
             >
               <span
-                className="sc-bxivhb hxWOij"
+                className="sc-bxivhb gTLyQc"
               />
             </StyledComponent>
           </styled.span>

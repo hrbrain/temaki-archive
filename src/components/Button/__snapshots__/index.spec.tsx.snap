@@ -111,69 +111,73 @@ exports[`Button type of box should match previous snapshot 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bdVaJa",
                 "isStatic": false,
-                "lastClassName": "dCkNcT",
+                "lastClassName": "jzBYeh",
                 "rules": Array [
                   "
-  ",
+    ",
                   "
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-  transition: background-color 0.2s, box-shadow 0.2s, border 0.2s;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: background-color 0.2s, box-shadow 0.2s, border 0.2s;
 
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    background-image: radial-gradient(circle, ",
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: radial-gradient(
+            circle,
+            ",
                   "#FFF",
-                  " 10%, transparent 10.01%);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    transform: scale(10, 10);
-    opacity: 0;
-    transition: transform 0.2s, opacity 1s;
-  }
-  &:active:after {
-    transform: scale(0, 0);
-    opacity: 0.3;
-    transition: 0s;
-  }
+                  " 10%,
+            transparent 10.01%
+        );
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transform: scale(10, 10);
+        opacity: 0;
+        transition: transform 0.2s, opacity 1s;
+    }
+    &:active:after {
+        transform: scale(0, 0);
+        opacity: 0.3;
+        transition: 0s;
+    }
 ",
                   ";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  border-style: none;
-  padding: 0 ",
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border-style: none;
+    padding: 0 ",
                   [Function],
                   ";
-  cursor: pointer;
-  height: ",
-                  [Function],
-                  ";
-  width: ",
-                  [Function],
-                  ";
-  box-shadow: none;
-  outline: none;
-  font-size: 14px;
-
-  /* size */
-  &.small {
+    cursor: pointer;
     height: ",
                   [Function],
                   ";
-  }
+    width: ",
+                  [Function],
+                  ";
+    box-shadow: none;
+    outline: none;
+    font-size: 14px;
 
-  /* color */
-  ",
+    /* size */
+    &.small {
+        height: ",
+                  [Function],
+                  ";
+    }
+
+    /* color */
+    ",
                   [Function],
                   "
 ",
@@ -194,7 +198,7 @@ exports[`Button type of box should match previous snapshot 1`] = `
           type="box"
         >
           <button
-            className="sc-bdVaJa dCkNcT"
+            className="sc-bdVaJa jzBYeh"
             onClick={[Function]}
             type="box"
           >
@@ -309,6 +313,7 @@ exports[`Button type of circle should match previous snapshot 1`] = `
     >
       <styled.button
         colorType="primary"
+        isLoading={false}
         onClick={[Function]}
         type="circle"
       >
@@ -321,60 +326,64 @@ exports[`Button type of circle should match previous snapshot 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bwzfXH",
                 "isStatic": false,
-                "lastClassName": "bAxYsG",
+                "lastClassName": "ZBRbD",
                 "rules": Array [
                   "
-  ",
+    ",
                   "
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-  transition: background-color 0.2s, box-shadow 0.2s, border 0.2s;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: background-color 0.2s, box-shadow 0.2s, border 0.2s;
 
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    background-image: radial-gradient(circle, ",
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: radial-gradient(
+            circle,
+            ",
                   "#FFF",
-                  " 10%, transparent 10.01%);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    transform: scale(10, 10);
-    opacity: 0;
-    transition: transform 0.2s, opacity 1s;
-  }
-  &:active:after {
-    transform: scale(0, 0);
-    opacity: 0.3;
-    transition: 0s;
-  }
+                  " 10%,
+            transparent 10.01%
+        );
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transform: scale(10, 10);
+        opacity: 0;
+        transition: transform 0.2s, opacity 1s;
+    }
+    &:active:after {
+        transform: scale(0, 0);
+        opacity: 0.3;
+        transition: 0s;
+    }
 ",
                   "
-  ",
+    ",
                   "
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-style: none;
-  padding: 0;
-  cursor: pointer;
-  box-shadow: none;
-  outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
 ",
                   "
   width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  box-shadow: 0 5px 11px rgba(0, 0, 0, 0.16);
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.16);
 
-  /* colors */
-  ",
+    /* colors */
+    ",
                   [Function],
                   "
 ",
@@ -391,11 +400,12 @@ exports[`Button type of circle should match previous snapshot 1`] = `
             }
           }
           forwardedRef={null}
+          isLoading={false}
           onClick={[Function]}
           type="circle"
         >
           <button
-            className="sc-bwzfXH bAxYsG"
+            className="sc-bwzfXH ZBRbD"
             onClick={[Function]}
             type="circle"
           >
@@ -410,12 +420,12 @@ exports[`Button type of circle should match previous snapshot 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-htpNat",
                       "isStatic": true,
-                      "lastClassName": "Chbfj",
+                      "lastClassName": "hfJHnL",
                       "rules": Array [
                         "
-  display: block;
-  width: 24px;
-  height: 24px;
+    display: block;
+    width: 24px;
+    height: 24px;
 ",
                       ],
                     },
@@ -433,7 +443,7 @@ exports[`Button type of circle should match previous snapshot 1`] = `
                 src="http://example.com/example.svg"
               >
                 <img
-                  className="sc-htpNat Chbfj"
+                  className="sc-htpNat hfJHnL"
                   src="http://example.com/example.svg"
                 />
               </StyledComponent>
@@ -554,55 +564,59 @@ exports[`Button type of text should match previous snapshot 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bxivhb",
                 "isStatic": true,
-                "lastClassName": "heYBxy",
+                "lastClassName": "bKzZcy",
                 "rules": Array [
                   "
-  ",
+    ",
                   "
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-style: none;
-  padding: 0;
-  cursor: pointer;
-  box-shadow: none;
-  outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
 ",
                   "
-  ",
+    ",
                   "
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-  transition: background-color 0.2s, box-shadow 0.2s, border 0.2s;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: background-color 0.2s, box-shadow 0.2s, border 0.2s;
 
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    background-image: radial-gradient(circle, ",
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: radial-gradient(
+            circle,
+            ",
                   "#FFF",
-                  " 10%, transparent 10.01%);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    transform: scale(10, 10);
-    opacity: 0;
-    transition: transform 0.2s, opacity 1s;
-  }
-  &:active:after {
-    transform: scale(0, 0);
-    opacity: 0.3;
-    transition: 0s;
-  }
+                  " 10%,
+            transparent 10.01%
+        );
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transform: scale(10, 10);
+        opacity: 0;
+        transition: transform 0.2s, opacity 1s;
+    }
+    &:active:after {
+        transform: scale(0, 0);
+        opacity: 0.3;
+        transition: 0s;
+    }
 ",
                   "
   height: 24px;
-  width: auto;
+    width: auto;
 ",
                 ],
               },
@@ -620,7 +634,7 @@ exports[`Button type of text should match previous snapshot 1`] = `
           onClick={[Function]}
         >
           <button
-            className="sc-bxivhb heYBxy"
+            className="sc-bxivhb bKzZcy"
             onClick={[Function]}
           >
             <styled.img
@@ -634,11 +648,11 @@ exports[`Button type of text should match previous snapshot 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-ifAKCX",
                       "isStatic": true,
-                      "lastClassName": "jdbNGJ",
+                      "lastClassName": "bukhvq",
                       "rules": Array [
                         "
-  width: 24px;
-  height: 24px;
+    width: 24px;
+    height: 24px;
 ",
                       ],
                     },
@@ -656,7 +670,7 @@ exports[`Button type of text should match previous snapshot 1`] = `
                 src="https://example.com/example.svg"
               >
                 <img
-                  className="sc-ifAKCX jdbNGJ"
+                  className="sc-ifAKCX bukhvq"
                   src="https://example.com/example.svg"
                 />
               </StyledComponent>
@@ -673,14 +687,14 @@ exports[`Button type of text should match previous snapshot 1`] = `
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-EHOje",
                       "isStatic": false,
-                      "lastClassName": "efjoHv",
+                      "lastClassName": "fCosAy",
                       "rules": Array [
                         "
-  color: ",
+    color: ",
                         [Function],
                         ";
-  font-size: 14px;
-  font-weight: normal;
+    font-size: 14px;
+    font-weight: normal;
 ",
                       ],
                     },
@@ -697,7 +711,7 @@ exports[`Button type of text should match previous snapshot 1`] = `
                 forwardedRef={null}
               >
                 <span
-                  className="sc-EHOje efjoHv"
+                  className="sc-EHOje fCosAy"
                   data-test="text-button-child"
                 >
                   OK
