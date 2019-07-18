@@ -1,6 +1,7 @@
 import _Checkbox from '~/components/Checkbox/index'
 import _Text from '~/components/Text/index'
 import _colors from '~/lib/colors'
+import { icons as _icons } from '~/basics/Icons/lib/iconFiles'
 import {
     defaultTheme as _defaultTheme,
     RequiredThemeProps as _RequiredThemeProps
@@ -9,6 +10,6 @@ import {
 export const Text = _Text
 export const Checkbox = _Checkbox
 export const colors = _colors
+export const icons = _icons
 export const defaultTheme = _defaultTheme
-export { icons } from '~/basics/Icons/lib/iconFiles'
 export type RequiredThemeProps = _RequiredThemeProps
