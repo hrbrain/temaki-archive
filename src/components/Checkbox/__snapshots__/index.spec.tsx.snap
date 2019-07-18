@@ -103,9 +103,9 @@ exports[`Checkbox should match previous snapshot 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "sc-bwzfXH",
               "isStatic": true,
-              "lastClassName": "gkcNzX",
+              "lastClassName": "AuuDz",
               "rules": Array [
                 "
   display: inline-flex;
@@ -117,7 +117,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "sc-bwzfXH",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -129,32 +129,23 @@ exports[`Checkbox should match previous snapshot 1`] = `
         tabIndex={1}
       >
         <div
-          className="sc-bdVaJa gkcNzX"
+          className="sc-bwzfXH AuuDz"
           data-test="nocheck-box"
           onClick={[MockFunction]}
           tabIndex={1}
         >
-          <styled.div
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
-            }
+          <Styled(Component)
+            size="24px"
           >
             <StyledComponent
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": undefined,
-                }
-              }
               forwardedComponent={
                 Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-bwzfXH",
+                    "componentId": "sc-htpNat",
                     "isStatic": false,
-                    "lastClassName": "cGYhMO",
+                    "lastClassName": "fuuYzq",
                     "rules": Array [
                       "
   display: flex;
@@ -171,28 +162,88 @@ exports[`Checkbox should match previous snapshot 1`] = `
 ",
                     ],
                   },
-                  "displayName": "styled.div",
+                  "displayName": "Styled(Component)",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-bwzfXH",
-                  "target": "div",
+                  "styledComponentId": "sc-htpNat",
+                  "target": [Function],
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
                   "withComponent": [Function],
                 }
               }
               forwardedRef={null}
+              size="24px"
             >
-              <div
-                className="sc-bwzfXH cGYhMO"
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": undefined,
+              <Component
+                className="sc-htpNat fuuYzq"
+                size="24px"
+              >
+                <styled.div
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
                   }
-                }
-              />
+                  size="24px"
+                >
+                  <StyledComponent
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": undefined,
+                      }
+                    }
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bdVaJa",
+                          "isStatic": false,
+                          "lastClassName": "bwJxtr",
+                          "rules": Array [
+                            "
+  height: ",
+                            [Function],
+                            ";
+  width: ",
+                            [Function],
+                            ";
+  & #fill {
+    fill: ",
+                            [Function],
+                            ";
+  }
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bdVaJa",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    size="24px"
+                  >
+                    <div
+                      className="sc-bdVaJa bwJxtr"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": undefined,
+                        }
+                      }
+                      size="24px"
+                    />
+                  </StyledComponent>
+                </styled.div>
+              </Component>
             </StyledComponent>
-          </styled.div>
+          </Styled(Component)>
           <styled.span>
             <StyledComponent
               forwardedComponent={
@@ -200,9 +251,9 @@ exports[`Checkbox should match previous snapshot 1`] = `
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
+                    "componentId": "sc-bxivhb",
                     "isStatic": false,
-                    "lastClassName": "lnTVXj",
+                    "lastClassName": "hxWOij",
                     "rules": Array [
                       "
   height: 100%;
@@ -217,7 +268,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-htpNat",
+                  "styledComponentId": "sc-bxivhb",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -227,7 +278,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
               forwardedRef={null}
             >
               <span
-                className="sc-htpNat lnTVXj"
+                className="sc-bxivhb hxWOij"
               />
             </StyledComponent>
           </styled.span>

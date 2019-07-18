@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import checkboxOff from 'raw-loader!~/assets/icons/checkBox-off.svg'
-import checkboxOn from 'raw-loader!~/assets/icons/checkBox-on.svg'
+import * as IconFiles from '~/basics/Icons/lib/iconFiles'
+import Icon from '~/components/Icon'
 
 /**
  * Component
@@ -19,7 +19,7 @@ const Checkbox = React.memo<Props>(({ text, indeterminate, checked, ...props }) 
   if (checked) {
     return (
       <Outer tabIndex={1} data-test="checked-box" {...props}>
-        <CheckIcon dangerouslySetInnerHTML={{ __html: checkboxOn }} />
+        <CheckIcon svg={IconFiles.icons.CheckBoxOn} size="24px" />
         <Text>{text}</Text>
       </Outer>
     )
@@ -28,7 +28,7 @@ const Checkbox = React.memo<Props>(({ text, indeterminate, checked, ...props }) 
   if (indeterminate) {
     return (
       <Outer tabIndex={1} data-test="indeterminate-box" {...props}>
-        {/*<CheckIcon dangerouslySetInnerHTML={{ __html: checkboxIndeterminate }} />*/}
+        <CheckIcon svg={IconFiles.icons.CheckBoxAll} size="24px" />
         <Text>{text}</Text>
       </Outer>
     )
@@ -36,7 +36,7 @@ const Checkbox = React.memo<Props>(({ text, indeterminate, checked, ...props }) 
 
   return (
     <Outer tabIndex={1} data-test="nocheck-box" {...props}>
-      <CheckIcon dangerouslySetInnerHTML={{ __html: checkboxOff }} />
+      <CheckIcon svg={IconFiles.icons.CheckBoxOff} size="24px" />
       <Text>{text}</Text>
     </Outer>
   )
@@ -52,7 +52,7 @@ const Outer = styled.div`
   cursor: pointer;
 `
 
-const CheckIcon = styled.div`
+const CheckIcon = styled(Icon)`
   display: flex;
   align-items: center;
   justify-content: center;
