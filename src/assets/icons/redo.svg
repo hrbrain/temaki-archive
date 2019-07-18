@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/redo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/redo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/redo">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(4.000000, 4.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M13.4943273,10.4834 L10.9082404,7.89800058 L11.9687596,6.83719942 L16.2612307,11.1285295 L11.9688301,15.4209301 L10.9081699,14.3602699 L13.2850398,11.9834 L6.6801,11.9834 C3.47106401,11.9834 0.8691,9.38179111 0.8691,6.1734 C0.8691,2.96100889 3.47106401,0.3594 6.6801,0.3594 L11.6191,0.3594 L11.6191,1.8594 L6.6801,1.8594 C4.2994453,1.8594 2.3691,3.78948185 2.3691,6.1694 C2.3691,8.55331815 4.2994453,10.4834 6.6801,10.4834 L13.4943273,10.4834 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

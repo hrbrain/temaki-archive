@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/chevron-right</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/chevron-right" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="outline" transform="translate(12.000000, 12.000000) rotate(90.000000) translate(-12.000000, -12.000000) translate(4.000000, 8.000000)" stroke="#333333" stroke-width="1.5">
+                <polyline id="Stroke-1" points="0 8 8 0 16 8"></polyline>
+            </g>
+            <g id="fill" transform="translate(12.500000, 12.000000) rotate(90.000000) translate(-12.500000, -12.000000) translate(3.500000, 6.500000)" fill="#333333" fill-rule="nonzero">
+                <polygon id="Stroke-1" points="9 3.06066017 1.53033009 10.5303301 0.469669914 9.46966991 9 0.939339828 17.5303301 9.46966991 16.4696699 10.5303301"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

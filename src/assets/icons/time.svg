@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/time</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/time" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/time">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(1.875000, 2.250000)" fill="#333333" fill-rule="nonzero">
+                <path d="M9.375,8.16838746 L9.375,3.25 L10.875,3.25 L10.875,8.16838746 C11.238978,8.34129173 11.5337159,8.63613064 11.7065732,9 L15.625,9 L15.625,10.5 L11.7065732,10.5 C11.4257803,11.0910768 10.8233761,11.5 10.125,11.5 C9.158,11.5 8.375,10.716 8.375,9.75 C8.375,9.05217517 8.78360186,8.44932549 9.375,8.16838746 Z M18.375,9.75 C18.375,5.19437076 14.6820872,1.5 10.125,1.5 C5.56791284,1.5 1.875,5.19437076 1.875,9.75 C1.875,14.3056292 5.56791284,18 10.125,18 C14.6820872,18 18.375,14.3056292 18.375,9.75 Z M19.875,9.75 C19.875,15.1339239 15.5106469,19.5 10.125,19.5 C4.73935315,19.5 0.375,15.1339239 0.375,9.75 C0.375,4.36607614 4.73935315,0 10.125,0 C15.5106469,0 19.875,4.36607614 19.875,9.75 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

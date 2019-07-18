@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/refresh</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/refresh" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/refresh">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(2.000000, 2.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M16.25,2.51612815 L16.25,0.5 L17.75,0.5 L17.75,5.25 L13,5.25 L13,3.75 L15.3856568,3.75 C13.9037739,2.47102918 12.0097952,1.75 10,1.75 C5.44321356,1.75 1.75,5.44321356 1.75,10 C1.75,14.5567864 5.44321356,18.25 10,18.25 C14.5567864,18.25 18.25,14.5567864 18.25,10 C18.25,9.58578644 18.5857864,9.25 19,9.25 C19.4142136,9.25 19.75,9.58578644 19.75,10 C19.75,15.3852136 15.3852136,19.75 10,19.75 C4.61478644,19.75 0.25,15.3852136 0.25,10 C0.25,4.61478644 4.61478644,0.25 10,0.25 C12.3221851,0.25 14.5165378,1.06625971 16.25,2.51612815 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

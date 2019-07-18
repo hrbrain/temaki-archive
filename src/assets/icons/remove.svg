@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/remove</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/remove" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/remove">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(4.000000, 4.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M8,6.93940999 L4.74999501,3.68983484 L3.68940499,4.75056516 L6.93926968,8.00000003 L3.68900499,11.2498348 L4.74959501,12.3105652 L8,9.06059006 L11.250405,12.3105652 L12.310995,11.2498348 L9.06073032,8.00000003 L12.310595,4.75056516 L11.250005,3.68983484 L8,6.93940999 Z M16,8 C16,12.418 12.418,16 8,16 C3.582,16 0,12.418 0,8 C0,3.582 3.582,0 8,0 C12.418,0 16,3.582 16,8 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

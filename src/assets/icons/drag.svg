@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/drag</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/drag" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/dragdrop">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(6.000000, 4.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M2,4 C0.8954305,4 0,3.1045695 0,2 C0,0.8954305 0.8954305,0 2,0 C3.1045695,0 4,0.8954305 4,2 C4,3.1045695 3.1045695,4 2,4 Z M2,10 C0.8954305,10 0,9.1045695 0,8 C0,6.8954305 0.8954305,6 2,6 C3.1045695,6 4,6.8954305 4,8 C4,9.1045695 3.1045695,10 2,10 Z M10,4 C8.8954305,4 8,3.1045695 8,2 C8,0.8954305 8.8954305,0 10,0 C11.1045695,0 12,0.8954305 12,2 C12,3.1045695 11.1045695,4 10,4 Z M10,10 C8.8954305,10 8,9.1045695 8,8 C8,6.8954305 8.8954305,6 10,6 C11.1045695,6 12,6.8954305 12,8 C12,9.1045695 11.1045695,10 10,10 Z M2,16 C0.8954305,16 0,15.1045695 0,14 C0,12.8954305 0.8954305,12 2,12 C3.1045695,12 4,12.8954305 4,14 C4,15.1045695 3.1045695,16 2,16 Z M10,16 C8.8954305,16 8,15.1045695 8,14 C8,12.8954305 8.8954305,12 10,12 C11.1045695,12 12,12.8954305 12,14 C12,15.1045695 11.1045695,16 10,16 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,9 +1,8 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import checkboxIndeterminate from 'raw-loader!~/assets/icons/checkbox-indeterminate.svg'
-import checkboxOff from 'raw-loader!~/assets/icons/checkbox-off.svg'
-import checkboxOn from 'raw-loader!~/assets/icons/checkbox-on.svg'
+import checkboxOff from 'raw-loader!~/assets/icons/checkBox-off.svg'
+import checkboxOn from 'raw-loader!~/assets/icons/checkBox-on.svg'
 
 /**
  * Component
@@ -29,7 +28,7 @@ const Checkbox = React.memo<Props>(({ text, indeterminate, checked, ...props }) 
   if (indeterminate) {
     return (
       <Outer tabIndex={1} data-test="indeterminate-box" {...props}>
-        <CheckIcon dangerouslySetInnerHTML={{ __html: checkboxIndeterminate }} />
+        {/*<CheckIcon dangerouslySetInnerHTML={{ __html: checkboxIndeterminate }} />*/}
         <Text>{text}</Text>
       </Outer>
     )

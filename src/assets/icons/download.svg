@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/download</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/download" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/download">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(2.250000, 3.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M9,11.1893398 L9,0 L10.5,0 L10.5,11.1893398 L13.2196699,8.46966991 L14.2803301,9.53033009 L9.75,14.0606602 L5.21966991,9.53033009 L6.28033009,8.46966991 L9,11.1893398 Z M18,16.25 L18,11 L19.5,11 L19.5,17.75 L0,17.75 L0,11 L1.5,11 L1.5,16.25 L18,16.25 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

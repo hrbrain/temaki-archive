@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/close">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(5.000000, 5.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M7,5.93933983 L13.4696699,-0.530330086 L14.5303301,0.530330086 L8.06066017,7 L14.5303301,13.4696699 L13.4696699,14.5303301 L7,8.06066017 L0.530330086,14.5303301 L-0.530330086,13.4696699 L5.93933983,7 L-0.530330086,0.530330086 L0.530330086,-0.530330086 L7,5.93933983 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
