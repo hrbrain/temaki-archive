@@ -136,6 +136,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
         >
           <Styled(Component)
             size="24px"
+            svg={Object {}}
           >
             <StyledComponent
               forwardedComponent={
@@ -174,15 +175,17 @@ exports[`Checkbox should match previous snapshot 1`] = `
               }
               forwardedRef={null}
               size="24px"
+              svg={Object {}}
             >
               <Component
                 className="sc-htpNat jSEuih"
                 size="24px"
+                svg={Object {}}
               >
                 <styled.div
                   dangerouslySetInnerHTML={
                     Object {
-                      "__html": undefined,
+                      "__html": Object {},
                     }
                   }
                   size="24px"
@@ -190,7 +193,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
                   <StyledComponent
                     dangerouslySetInnerHTML={
                       Object {
-                        "__html": undefined,
+                        "__html": Object {},
                       }
                     }
                     forwardedComponent={
@@ -234,7 +237,7 @@ exports[`Checkbox should match previous snapshot 1`] = `
                       className="sc-bdVaJa pCxaP"
                       dangerouslySetInnerHTML={
                         Object {
-                          "__html": undefined,
+                          "__html": Object {},
                         }
                       }
                       size="24px"
