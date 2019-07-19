@@ -30,6 +30,10 @@ type WrapProps = {
 const Wrap = styled.div<WrapProps>`
     height: ${props => props.size};
     width: ${props => props.size};
+    & svg {
+        height: ${props => props.size};
+        width: ${props => props.size};
+    }
     & #fill {
         fill: ${props => props.color};
     }
