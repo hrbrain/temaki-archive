@@ -24,6 +24,10 @@ module.exports = ({ config }) => {
           loader: require.resolve('ts-loader')
         }
       ]
+    },
+    {
+      test: /\.svg$/,
+      loader: 'raw-loader'
     }
   ]
   config.resolve.alias = {
