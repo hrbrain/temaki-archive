@@ -115,7 +115,7 @@ exports[`Icon should match before snapshot 1`] = `
             "componentStyle": ComponentStyle {
               "componentId": "sc-bdVaJa",
               "isStatic": false,
-              "lastClassName": "hsEXcc",
+              "lastClassName": "jxVDXv",
               "rules": Array [
                 "
     height: ",
@@ -124,6 +124,14 @@ exports[`Icon should match before snapshot 1`] = `
     width: ",
                 [Function],
                 ";
+    & svg {
+        height: ",
+                [Function],
+                ";
+        width: ",
+                [Function],
+                ";
+    }
     & #fill {
         fill: ",
                 [Function],
@@ -146,7 +154,7 @@ exports[`Icon should match before snapshot 1`] = `
         size="24px"
       >
         <div
-          className="sc-bdVaJa hsEXcc"
+          className="sc-bdVaJa jxVDXv"
           color="#aaa"
           dangerouslySetInnerHTML={
             Object {
