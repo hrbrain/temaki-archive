@@ -1,4 +1,3 @@
-import colors from '~/lib/colors'
 import { css } from '~/modules/theme'
 
 export const createCSSFromColorType = (
@@ -55,7 +54,7 @@ export const rippleEffectMixin = css`
         pointer-events: none;
         background-image: radial-gradient(
             circle,
-            ${colors.white} 10%,
+            ${props => props.theme.colors.grayScale.S0} 10%,
             transparent 10.01%
         );
         background-repeat: no-repeat;
