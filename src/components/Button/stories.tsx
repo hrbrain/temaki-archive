@@ -11,7 +11,11 @@ storiesOf('Components|Button', module)
         </Button.Component>
     ))
     .add('Circle', () => (
-        <Button.Component type="circle" iconSrc="" onClick={action('onClick')} />
+        <Button.Component
+            type="circle"
+            iconSrc=""
+            onClick={action('onClick')}
+        />
     ))
     .add('Component', () => (
         <Button.Component type="text" iconSrc="" onClick={action('onClick')}>

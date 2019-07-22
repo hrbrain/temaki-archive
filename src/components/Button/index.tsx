@@ -82,7 +82,10 @@ export const Component: React.FC<Props> = ({
 
         case 'text':
             return (
-                <TextPresentor.Component onClick={handleClick} iconSrc={props.iconSrc}>
+                <TextPresentor.Component
+                    onClick={handleClick}
+                    iconSrc={props.iconSrc}
+                >
                     {children}
                 </TextPresentor.Component>
             )
