@@ -21,8 +21,4 @@ describe('Icon', () => {
     it('should be defined', () => {
         expect(wrapper.exists()).toBeTruthy()
     })
-
-    it('should match before snapshot', () => {
-        expect(wrapper).toMatchSnapshot()
-    })
 })

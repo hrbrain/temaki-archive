@@ -62,10 +62,6 @@ describe('Button type of circle', () => {
         expect(wrapper).toBeDefined()
     })
 
-    it('should match previous snapshot', () => {
-        expect(wrapper).toMatchSnapshot()
-    })
-
     it('should call onClick method by users click', () => {
         act(() => {
             wrapper.simulate('click')

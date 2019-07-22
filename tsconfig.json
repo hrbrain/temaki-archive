@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": "src",
     "outDir": "dist",
-    "target": "es6",
-    "module": "esnext",
+    "target": "es5",
+    "module": "commonjs",
     "moduleResolution": "node",
     "jsx": "react",
     "strict": true,

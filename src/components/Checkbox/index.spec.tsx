@@ -21,10 +21,6 @@ describe('Checkbox', () => {
         expect(wrapper.exists()).toBe(true)
     })
 
-    it('should match previous snapshot', () => {
-        expect(wrapper).toMatchSnapshot()
-    })
-
     it('should call onClick by users click', () => {
         wrapper.simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
