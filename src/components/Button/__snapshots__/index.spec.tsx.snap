@@ -88,11 +88,11 @@ exports[`Button type of box should match previous snapshot 1`] = `
     }
   }
 >
-  <Button
+  <Component
     onClick={[MockFunction]}
     type="box"
   >
-    <Presentor
+    <Component
       colorType="primary"
       onClick={[Function]}
       type="box"
@@ -206,8 +206,8 @@ exports[`Button type of box should match previous snapshot 1`] = `
           </button>
         </StyledComponent>
       </styled.button>
-    </Presentor>
-  </Button>
+    </Component>
+  </Component>
 </ThemeProvider>
 `;
 
@@ -299,12 +299,12 @@ exports[`Button type of circle should match previous snapshot 1`] = `
     }
   }
 >
-  <Button
+  <Component
     iconSrc="http://example.com/example.svg"
     onClick={[MockFunction]}
     type="circle"
   >
-    <Presentor
+    <Component
       colorType="primary"
       iconSrc="http://example.com/example.svg"
       isLoading={false}
@@ -451,8 +451,8 @@ exports[`Button type of circle should match previous snapshot 1`] = `
           </button>
         </StyledComponent>
       </styled.button>
-    </Presentor>
-  </Button>
+    </Component>
+  </Component>
 </ThemeProvider>
 `;
 
@@ -544,12 +544,12 @@ exports[`Button type of text should match previous snapshot 1`] = `
     }
   }
 >
-  <Button
+  <Component
     iconSrc="https://example.com/example.svg"
     onClick={[MockFunction]}
     type="text"
   >
-    <Presentor
+    <Component
       iconSrc="https://example.com/example.svg"
       onClick={[Function]}
     >
@@ -721,7 +721,7 @@ exports[`Button type of text should match previous snapshot 1`] = `
           </button>
         </StyledComponent>
       </styled.button>
-    </Presentor>
-  </Button>
+    </Component>
+  </Component>
 </ThemeProvider>
 `;

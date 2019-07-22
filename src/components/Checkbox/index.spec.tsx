@@ -2,7 +2,7 @@ import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
-import Checkbox from './index'
+import * as Checkbox from './index'
 
 describe('Checkbox', () => {
     let wrapper: Enzyme.ReactWrapper
@@ -11,7 +11,9 @@ describe('Checkbox', () => {
     beforeEach(() => {
         mockOnClick = jest.fn()
         act(() => {
-            wrapper = mountWithTheme(<Checkbox onClick={mockOnClick} />)
+            wrapper = mountWithTheme(
+                <Checkbox.Component onClick={mockOnClick} />
+            )
         })
     })
 
@@ -34,14 +36,14 @@ describe('Checkbox', () => {
     })
 
     it('should render checked icon by checked props', () => {
-        wrapper = mountWithTheme(<Checkbox checked onClick={mockOnClick} />)
+        wrapper = mountWithTheme(<Checkbox.Component checked onClick={mockOnClick} />)
         const checkedEl = wrapper.find('div[data-test="checked-box"]')
         expect(checkedEl).toHaveLength(1)
     })
 
     it('should render indeterminate icon by indeterminate props', () => {
         wrapper = mountWithTheme(
-            <Checkbox indeterminate onClick={mockOnClick} />
+            <Checkbox.Component indeterminate onClick={mockOnClick} />
         )
         const indeEl = wrapper.find('div[data-test="indeterminate-box"]')
         expect(indeEl).toHaveLength(1)

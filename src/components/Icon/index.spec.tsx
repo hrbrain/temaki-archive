@@ -3,14 +3,18 @@ import * as React from 'react'
 
 import * as IconFiles from '../../lib/iconFiles'
 import { mountWithTheme } from '../../__test__/utils'
-import Icon from './index'
+import * as Icon from './index'
 
 describe('Icon', () => {
     let wrapper: Enzyme.ReactWrapper
 
     beforeEach(() => {
         wrapper = mountWithTheme(
-            <Icon svg={IconFiles.icons.CheckBoxAll} size="24px" color="#aaa" />
+            <Icon.Component
+                svg={IconFiles.icons.CheckBoxAll}
+                size="24px"
+                color="#aaa"
+            />
         )
     })
 

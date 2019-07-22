@@ -2,7 +2,7 @@ import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
-import Button from './index'
+import * as Button from './index'
 
 describe('Button type of box', () => {
     let wrapper: Enzyme.ReactWrapper
@@ -12,9 +12,9 @@ describe('Button type of box', () => {
         mockOnClick = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
-                <Button type="box" onClick={mockOnClick}>
+                <Button.Component type="box" onClick={mockOnClick}>
                     OK
-                </Button>
+                </Button.Component>
             )
         })
     })
@@ -49,7 +49,7 @@ describe('Button type of circle', () => {
         mockOnClick = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
-                <Button
+                <Button.Component
                     type="circle"
                     onClick={mockOnClick}
                     iconSrc={mockIconSrc}
@@ -89,9 +89,9 @@ describe('Button type of text', () => {
         mockOnClick = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
-                <Button type="text" iconSrc={mockIconSrc} onClick={mockOnClick}>
+                <Button.Component type="text" iconSrc={mockIconSrc} onClick={mockOnClick}>
                     OK
-                </Button>
+                </Button.Component>
             )
         })
     })

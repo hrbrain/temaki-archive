@@ -88,7 +88,7 @@ exports[`Text should render collectly 1`] = `
     }
   }
 >
-  <Text>
+  <Component>
     <styled.p>
       <StyledComponent
         forwardedComponent={
@@ -126,6 +126,6 @@ exports[`Text should render collectly 1`] = `
         </p>
       </StyledComponent>
     </styled.p>
-  </Text>
+  </Component>
 </ThemeProvider>
 `;
