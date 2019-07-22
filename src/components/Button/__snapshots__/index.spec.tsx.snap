@@ -111,7 +111,7 @@ exports[`Button type of box should match previous snapshot 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bdVaJa",
                 "isStatic": false,
-                "lastClassName": "jzBYeh",
+                "lastClassName": "gFWwbj",
                 "rules": Array [
                   "
     ",
@@ -133,7 +133,7 @@ exports[`Button type of box should match previous snapshot 1`] = `
         background-image: radial-gradient(
             circle,
             ",
-                  "#FFF",
+                  [Function],
                   " 10%,
             transparent 10.01%
         );
@@ -198,7 +198,7 @@ exports[`Button type of box should match previous snapshot 1`] = `
           type="box"
         >
           <button
-            className="sc-bdVaJa jzBYeh"
+            className="sc-bdVaJa gFWwbj"
             onClick={[Function]}
             type="box"
           >
@@ -326,7 +326,7 @@ exports[`Button type of circle should match previous snapshot 1`] = `
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bwzfXH",
                 "isStatic": false,
-                "lastClassName": "ZBRbD",
+                "lastClassName": "juqAfD",
                 "rules": Array [
                   "
     ",
@@ -348,7 +348,7 @@ exports[`Button type of circle should match previous snapshot 1`] = `
         background-image: radial-gradient(
             circle,
             ",
-                  "#FFF",
+                  [Function],
                   " 10%,
             transparent 10.01%
         );
@@ -405,7 +405,7 @@ exports[`Button type of circle should match previous snapshot 1`] = `
           type="circle"
         >
           <button
-            className="sc-bwzfXH ZBRbD"
+            className="sc-bwzfXH juqAfD"
             onClick={[Function]}
             type="circle"
           >
@@ -563,8 +563,8 @@ exports[`Button type of text should match previous snapshot 1`] = `
               "attrs": Array [],
               "componentStyle": ComponentStyle {
                 "componentId": "sc-bxivhb",
-                "isStatic": true,
-                "lastClassName": "bKzZcy",
+                "isStatic": false,
+                "lastClassName": "kZhsfQ",
                 "rules": Array [
                   "
     ",
@@ -598,7 +598,7 @@ exports[`Button type of text should match previous snapshot 1`] = `
         background-image: radial-gradient(
             circle,
             ",
-                  "#FFF",
+                  [Function],
                   " 10%,
             transparent 10.01%
         );
@@ -634,7 +634,7 @@ exports[`Button type of text should match previous snapshot 1`] = `
           onClick={[Function]}
         >
           <button
-            className="sc-bxivhb bKzZcy"
+            className="sc-bxivhb kZhsfQ"
             onClick={[Function]}
           >
             <styled.img
