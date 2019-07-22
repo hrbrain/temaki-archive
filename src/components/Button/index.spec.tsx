@@ -89,7 +89,11 @@ describe('Button type of text', () => {
         mockOnClick = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
-                <Button.Component type="text" iconSrc={mockIconSrc} onClick={mockOnClick}>
+                <Button.Component
+                    type="text"
+                    iconSrc={mockIconSrc}
+                    onClick={mockOnClick}
+                >
                     OK
                 </Button.Component>
             )

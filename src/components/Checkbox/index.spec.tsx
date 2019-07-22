@@ -36,7 +36,9 @@ describe('Checkbox', () => {
     })
 
     it('should render checked icon by checked props', () => {
-        wrapper = mountWithTheme(<Checkbox.Component checked onClick={mockOnClick} />)
+        wrapper = mountWithTheme(
+            <Checkbox.Component checked onClick={mockOnClick} />
+        )
         const checkedEl = wrapper.find('div[data-test="checked-box"]')
         expect(checkedEl).toHaveLength(1)
     })
