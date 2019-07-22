@@ -5,12 +5,10 @@ import styled from '~/modules/theme'
 //   size?: number
 //   level?: number
 // }
-const Text: React.FC = ({ children }) => {
+export const Component: React.FC = ({ children }) => {
     return <StyledText>{children}</StyledText>
 }
 
 const StyledText = styled.p`
     color: ${props => props.theme.colors.text.default};
 `
-
-export default Text

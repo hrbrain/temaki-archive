@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
-import Icon from '~/components/Icon'
+import * as Icon from '~/components/Icon'
 
 /**
  * Component
@@ -14,7 +14,7 @@ type Props = {
     checked?: boolean
     indeterminate?: boolean
 }
-const Checkbox = React.memo<Props>(
+export const Component = React.memo<Props>(
     ({ text, indeterminate, checked, ...props }) => {
         // ON の方を優先にする
         if (checked) {
@@ -54,7 +54,7 @@ const Outer = styled.div`
     cursor: pointer;
 `
 
-const CheckIcon = styled(Icon)`
+const CheckIcon = styled(Icon.Component)`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,5 +72,3 @@ const Text = styled.span`
     padding-left: 4px;
     color: ${props => props.theme.colors.text};
 `
-
-export default Checkbox

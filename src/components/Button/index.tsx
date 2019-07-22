@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import Box from './presentors/Box'
-import Circle from './presentors/Circle'
-import TextPresentor from './presentors/Text'
+import * as Box from './presentors/Box'
+import * as Circle from './presentors/Circle'
+import * as TextPresentor from './presentors/Text'
 
 /**
  * Utils
@@ -61,7 +61,7 @@ type Props = {
           type: typeof buttonShapeType.text
           iconSrc?: string
       })
-const Button: React.FC<Props> = ({
+export const Component: React.FC<Props> = ({
     colorType = 'primary',
     onClick,
     children,
@@ -72,7 +72,7 @@ const Button: React.FC<Props> = ({
     switch (props.type) {
         case 'circle':
             return (
-                <Circle
+                <Circle.Component
                     onClick={handleClick}
                     colorType={colorType}
                     isLoading={isLoading}
@@ -82,14 +82,14 @@ const Button: React.FC<Props> = ({
 
         case 'text':
             return (
-                <TextPresentor onClick={handleClick} iconSrc={props.iconSrc}>
+                <TextPresentor.Component onClick={handleClick} iconSrc={props.iconSrc}>
                     {children}
-                </TextPresentor>
+                </TextPresentor.Component>
             )
 
         default:
             return (
-                <Box
+                <Box.Component
                     height={props.height}
                     width={props.width}
                     colorType={colorType}
@@ -97,9 +97,7 @@ const Button: React.FC<Props> = ({
                     {...props}
                 >
                     {isLoading ? 'loading...' : children}
-                </Box>
+                </Box.Component>
             )
     }
 }
-
-export default Button

@@ -3,6 +3,7 @@ module.exports = {
   plugins: [
     "eslint-plugin-prettier",
     "@typescript-eslint",
+    "eslint-plugin-import",
     "jest"
   ],
   parserOptions: {
@@ -19,7 +20,10 @@ module.exports = {
     "eslint:recommended",
     "plugin:react/recommended",
     "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
   ],
   env: {
     "jest/globals": true,
@@ -87,6 +91,9 @@ module.exports = {
     "react/display-name": "off",
     "react/prop-types": "off",
     "no-console": ["error", { allow: ["warn", "error", "info"] }],
-    "react/jsx-no-bind": "error"
+    "react/jsx-no-bind": "error",
+    "import/no-default-export": "error",
+    "import/default": "off",
+    "import/no-unresolved": "off"
   }
 }

@@ -17,7 +17,7 @@ type Props = {
     iconSrc?: string
     isLoading?: boolean
 } & OuterProps
-const Presentor: React.FC<Props> = ({ iconSrc, ...props }) => (
+export const Component: React.FC<Props> = ({ iconSrc, ...props }) => (
     <Outer {...props}>
         <Icon src={iconSrc} />
     </Outer>
@@ -55,5 +55,3 @@ const Icon = styled.img`
     width: 24px;
     height: 24px;
 `
-
-export default Presentor

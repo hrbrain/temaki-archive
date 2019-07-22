@@ -11,7 +11,7 @@ type Props = {
     color?: string
     className?: string
 }
-const Component = (props: Props) => (
+export const Component = (props: Props) => (
     <Wrap
         size={props.size}
         color={props.color}
@@ -38,5 +38,3 @@ const Wrap = styled.div<WrapProps>`
         fill: ${props => props.color};
     }
 `
-
-export default Component

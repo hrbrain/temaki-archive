@@ -11,7 +11,7 @@ import { createCSSFromColorType, rippleEffectMixin } from '../lib/styles'
 type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 } & OuterProps
-const Presentor: React.FC<Props> = ({ children, ...props }) => {
+export const Component: React.FC<Props> = ({ children, ...props }) => {
     return <Outer {...props}>{children}</Outer>
 }
 
@@ -55,5 +55,3 @@ const Outer = styled.button<OuterProps>`
               )
             : ''}
 `
-
-export default Presentor

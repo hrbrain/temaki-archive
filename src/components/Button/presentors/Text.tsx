@@ -11,7 +11,7 @@ type Props = {
     iconSrc?: string
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
-const Presentor: React.FC<Props> = ({ iconSrc, children, ...props }) => (
+export const Component: React.FC<Props> = ({ iconSrc, children, ...props }) => (
     <Outer {...props}>
         <Icon src={iconSrc} />
         <Text data-test="text-button-child">{children}</Text>
@@ -39,5 +39,3 @@ const Text = styled.span`
     font-size: 14px;
     font-weight: normal;
 `
-
-export default Presentor

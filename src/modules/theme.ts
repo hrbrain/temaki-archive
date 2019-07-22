@@ -203,7 +203,9 @@ const ThemeProvider: React.ComponentClass<
     any
 > = casted.ThemeProvider
 
+/* eslint-disable import/no-default-export */
 export default styled
+/* eslint-enable import/no-default-export */
 export {
     ServerStyleSheet,
     StyleSheetManager,

@@ -2,19 +2,19 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 
 import { action } from '@storybook/addon-actions'
-import Button from './index'
+import * as Button from './index'
 
 storiesOf('Components|Button', module)
     .add('Box', () => (
-        <Button type="box" onClick={action('onClick')}>
+        <Button.Component type="box" onClick={action('onClick')}>
             Confirm
-        </Button>
+        </Button.Component>
     ))
     .add('Circle', () => (
-        <Button type="circle" iconSrc="" onClick={action('onClick')} />
+        <Button.Component type="circle" iconSrc="" onClick={action('onClick')} />
     ))
-    .add('Text', () => (
-        <Button type="text" iconSrc="" onClick={action('onClick')}>
+    .add('Component', () => (
+        <Button.Component type="text" iconSrc="" onClick={action('onClick')}>
             Show filters
-        </Button>
+        </Button.Component>
     ))
