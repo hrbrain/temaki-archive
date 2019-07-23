@@ -55,11 +55,11 @@ type Props = {
       }
     | {
           type: typeof buttonShapeType.circle
-          iconSrc?: string
+          svg?: string
       }
     | {
           type: typeof buttonShapeType.text
-          iconSrc?: string
+          svg?: string
       })
 export const Component: React.FC<Props> = ({
     colorType = 'primary',
@@ -82,10 +82,7 @@ export const Component: React.FC<Props> = ({
 
         case 'text':
             return (
-                <TextPresentor.Component
-                    onClick={handleClick}
-                    iconSrc={props.iconSrc}
-                >
+                <TextPresentor.Component onClick={handleClick} svg={props.svg}>
                     {children}
                 </TextPresentor.Component>
             )

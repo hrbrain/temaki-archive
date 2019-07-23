@@ -4,6 +4,8 @@ import * as React from 'react'
 import { action } from '@storybook/addon-actions'
 import * as Button from './index'
 
+import * as IconFiles from '~/lib/iconFiles'
+
 storiesOf('Components|Button', module)
     .add('Box', () => (
         <Button.Component type="box" onClick={action('onClick')}>
@@ -13,12 +15,16 @@ storiesOf('Components|Button', module)
     .add('Circle', () => (
         <Button.Component
             type="circle"
-            iconSrc=""
+            svg={IconFiles.icons.ArrowDown}
             onClick={action('onClick')}
         />
     ))
     .add('Component', () => (
-        <Button.Component type="text" iconSrc="" onClick={action('onClick')}>
+        <Button.Component
+            type="text"
+            svg={IconFiles.icons.ArrowDown}
+            onClick={action('onClick')}
+        >
             Show filters
         </Button.Component>
     ))

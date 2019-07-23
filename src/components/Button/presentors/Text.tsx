@@ -3,20 +3,29 @@ import styled from '~/modules/theme'
 
 import * as Styles from '../lib/styles'
 
+import * as Icon from '~/components/Icon'
+
 /**
  * Component
  */
 
 type Props = {
-    iconSrc?: string
+    svg?: string
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
-export const Component: React.FC<Props> = ({ iconSrc, children, ...props }) => (
+export const Component: React.FC<Props> = ({ svg, children, ...props }) => (
     <Outer {...props}>
-        <Icon src={iconSrc} />
+        {renderIcon(svg)}
         <Text data-test="text-button-child">{children}</Text>
     </Outer>
 )
+
+function renderIcon(svg?: string): React.ReactElement | null {
+    if (!svg) {
+        return null
+    }
+    return <Icon.Component svg={svg} size="24px" />
+}
 
 /**
  * Styles
@@ -27,11 +36,6 @@ const Outer = styled.button`
     ${Styles.rippleEffectMixin}
   height: 24px;
     width: auto;
-`
-
-const Icon = styled.img`
-    width: 24px;
-    height: 24px;
 `
 
 const Text = styled.span`

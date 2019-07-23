@@ -1,23 +1,31 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import * as Theme from '~/modules/theme'
 
 import * as Index from '../index'
 import * as Styles from '../lib/styles'
+
+import * as Icon from '~/components/Icon'
 
 /**
  * Component
  */
 
-type Props = {
+type Props<T = Theme.RequiredThemeProps> = {
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
-    iconSrc?: string
+    svg?: string
     isLoading?: boolean
+    theme: T
 } & OuterProps
-export const Component: React.FC<Props> = ({ iconSrc, ...props }) => (
-    <Outer {...props}>
-        <Icon src={iconSrc} />
-    </Outer>
-)
+export const Component = Theme.withTheme(({ svg, theme, ...props }: Props) => (
+    <Outer {...props}>{renderIcon(svg, theme.colors.grayScale.S0)}</Outer>
+))
+
+function renderIcon(svg?: string, color?: string): React.ReactElement | null {
+    if (!svg) {
+        return null
+    }
+    return <Icon.Component svg={svg} size="24px" color={color} />
+}
 
 /**
  * Styles
@@ -26,7 +34,7 @@ export const Component: React.FC<Props> = ({ iconSrc, ...props }) => (
 type OuterProps = {
     colorType: Index.ColorTypeProp
 }
-const Outer = styled.button<OuterProps>`
+const Outer = Theme.default.button<OuterProps>`
     ${Styles.rippleEffectMixin}
     ${Styles.buttonBaseMixin}
   width: 48px;
@@ -44,10 +52,4 @@ const Outer = styled.button<OuterProps>`
                   '#FFF'
               )
             : ''}
-`
-
-const Icon = styled.img`
-    display: block;
-    width: 24px;
-    height: 24px;
 `
