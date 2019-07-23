@@ -19,29 +19,29 @@ const NUMBER = 'number' as 'number'
  */
 
 type Props = {
-  type?: string
-  onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
-  placeholder?: string
-  errored?: boolean
+    type?: string
+    onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    placeholder?: string
+    errored?: boolean
 } & (
-  | {
-      format: typeof TEXT
-      value?: StringValue
-      onChange?: (value: StringValue) => void
-    }
-  | {
-      format: typeof NUMBER
-      value?: NumberValue
-      onChange?: (value: NumberValue) => void
-    })
+    | {
+          format: typeof TEXT
+          value?: StringValue
+          onChange?: (value: StringValue) => void
+      }
+    | {
+          format: typeof NUMBER
+          value?: NumberValue
+          onChange?: (value: NumberValue) => void
+      })
 const Input = React.memo<Props>(({ children, ...props }) => {
-  switch (props.format) {
-    case NUMBER:
-      return <NumberContainer Presenter={Default} {...props} />
-    case TEXT:
-      return <TextContainer Presenter={Default} {...props} />
-  }
+    switch (props.format) {
+        case NUMBER:
+            return <NumberContainer Presenter={Default} {...props} />
+        case TEXT:
+            return <TextContainer Presenter={Default} {...props} />
+    }
 })
 
 export default Input
