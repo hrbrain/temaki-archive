@@ -7,7 +7,7 @@ type Props = {
     onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 } & OuterProps
-const Default: React.FC<Props> = ({ children, ...props }) => {
+export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     return <Outer {...props} />
 }
 
@@ -30,5 +30,3 @@ const Outer = styled.input<OuterProps>`
         outline: none;
     }
 `
-
-export default Default

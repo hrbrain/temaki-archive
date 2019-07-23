@@ -3,11 +3,11 @@ import { boolean, number, text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 
-import Input from './index'
+import * as Input from './index'
 
 storiesOf('Components|Input', module)
-    .add('Text', () => (
-        <Input
+    .add('Container', () => (
+        <Input.Component
             format="text"
             value={text('Value', '')}
             placeholder={text('Placeholder', 'Enter your name')}
@@ -17,7 +17,7 @@ storiesOf('Components|Input', module)
         />
     ))
     .add('Number', () => (
-        <Input
+        <Input.Component
             format="number"
             value={number('Value', 0)}
             placeholder={text('Placeholder', 'Enter your age')}

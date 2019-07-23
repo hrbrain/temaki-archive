@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import NumberContainer from './containers/Number'
-import TextContainer from './containers/Text'
-import Default from './presenters/Default'
+import * as NumberContainer from './containers/Number'
+import * as TextContainer from './containers/Text'
+import * as Presenter from './presenters/Default'
 
 /**
  * Utils
@@ -10,9 +10,8 @@ import Default from './presenters/Default'
 export type NumberValue = number | undefined | null
 export type StringValue = string | undefined | null
 
-// TypeScript v3.4 が使い物になったら変えて下さい
-const TEXT = 'text' as 'text'
-const NUMBER = 'number' as 'number'
+const TEXT = 'text' as const
+const NUMBER = 'number' as const
 
 /**
  * Component
@@ -35,13 +34,21 @@ type Props = {
           value?: NumberValue
           onChange?: (value: NumberValue) => void
       })
-const Input = React.memo<Props>(({ children, ...props }) => {
+export const Component = React.memo<Props>(({ children: _, ...props }) => {
     switch (props.format) {
         case NUMBER:
-            return <NumberContainer Presenter={Default} {...props} />
+            return (
+                <NumberContainer.Container
+                    Presenter={Presenter.Presenter}
+                    {...props}
+                />
+            )
         case TEXT:
-            return <TextContainer Presenter={Default} {...props} />
+            return (
+                <TextContainer.Container
+                    Presenter={Presenter.Presenter}
+                    {...props}
+                />
+            )
     }
 })
-
-export default Input

@@ -41,7 +41,7 @@ module.exports = {
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/await-thenable": "error",
-    "@typescript-eslint/ban-ts-ignore": "error",
+    "@typescript-eslint/ban-ts-ignore": "off",
     "@typescript-eslint/class-name-casing": "error",
     "@typescript-eslint/func-call-spacing": "error",
     "@typescript-eslint/member-delimiter-style": [
@@ -78,6 +78,7 @@ module.exports = {
     ],
     "@typescript-eslint/no-triple-slash-reference": "error",
     "@typescript-eslint/no-unnecessary-qualifier": "error",
+    "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",
       { varsIgnorePattern: "_", argsIgnorePattern: "_" }

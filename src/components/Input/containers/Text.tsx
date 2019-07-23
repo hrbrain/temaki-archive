@@ -40,7 +40,7 @@ type InjectProps = {
     value?: Input.StringValue
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
-const Text: ContainerType<Props, InjectProps> = ({
+export const Container: ContainerType<Props, InjectProps> = ({
     Presenter,
     value,
     onChange,
@@ -52,8 +52,6 @@ const Text: ContainerType<Props, InjectProps> = ({
         onChangeNative
     )
 
-    // @ts-ignore
+    // @ts-ignore Propsの型推論がうまくいかない
     return <Presenter value={value} onChange={changeValue} {...props} />
 }
-
-export default Text
