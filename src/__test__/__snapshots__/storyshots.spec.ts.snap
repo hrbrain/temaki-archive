@@ -599,17 +599,6 @@ exports[`Storyshots Components|Component Standard 1`] = `
 </p>
 `;
 
-exports[`Storyshots Components|Input Container 1`] = `
-<input
-  className="sc-gZMcBi kJZDYZ"
-  format="text"
-  onBlur={[Function]}
-  onChange={[Function]}
-  placeholder="Enter your name"
-  value=""
-/>
-`;
-
 exports[`Storyshots Components|Input Number 1`] = `
 <input
   className="sc-gZMcBi kJZDYZ"
@@ -618,6 +607,17 @@ exports[`Storyshots Components|Input Number 1`] = `
   onChange={[Function]}
   placeholder="Enter your age"
   value="0"
+/>
+`;
+
+exports[`Storyshots Components|Input Text 1`] = `
+<input
+  className="sc-gZMcBi kJZDYZ"
+  format="text"
+  onBlur={[Function]}
+  onChange={[Function]}
+  placeholder="Enter your name"
+  value=""
 />
 `;
 
