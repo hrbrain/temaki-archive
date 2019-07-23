@@ -6,7 +6,7 @@ import * as React from 'react'
 import * as Input from './index'
 
 storiesOf('Components|Input', module)
-    .add('Container', () => (
+    .add('Text', () => (
         <Input.Component
             format="text"
             value={text('Value', '')}
