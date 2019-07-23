@@ -593,10 +593,32 @@ exports[`Storyshots Components|Checkbox all 1`] = `
 
 exports[`Storyshots Components|Component Standard 1`] = `
 <p
-  className="sc-gZMcBi hXbMxz"
+  className="sc-gqjmRU gdfLRW"
 >
   Hello
 </p>
+`;
+
+exports[`Storyshots Components|Input Container 1`] = `
+<input
+  className="sc-gZMcBi kJZDYZ"
+  format="text"
+  onBlur={[Function]}
+  onChange={[Function]}
+  placeholder="Enter your name"
+  value=""
+/>
+`;
+
+exports[`Storyshots Components|Input Number 1`] = `
+<input
+  className="sc-gZMcBi kJZDYZ"
+  format="number"
+  onBlur={[Function]}
+  onChange={[Function]}
+  placeholder="Enter your age"
+  value="0"
+/>
 `;
 
 exports[`Storyshots basics|Icons index 1`] = `

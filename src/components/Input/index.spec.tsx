@@ -4,7 +4,7 @@ import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '../../__test__/utils'
 // import { defaultTheme } from '../../modules/theme'
 
-import Input from './index'
+import * as Input from './index'
 
 describe('Input format of text', () => {
     let wrapper: Enzyme.ReactWrapper
@@ -20,7 +20,7 @@ describe('Input format of text', () => {
         mockValue = 'Testing Value'
         act(() => {
             wrapper = mountWithTheme(
-                <Input
+                <Input.Component
                     format="text"
                     value={mockValue}
                     onChange={mockOnChange}
@@ -64,7 +64,7 @@ describe('Input format of text', () => {
     })
 
     it('should match previous snapshot when provided errored prop', () => {
-        wrapper = mountWithTheme(<Input format="text" errored />)
+        wrapper = mountWithTheme(<Input.Component format="text" errored />)
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
     })
@@ -85,7 +85,7 @@ describe('Input format of number', () => {
 
         act(() => {
             wrapper = mountWithTheme(
-                <Input
+                <Input.Component
                     format="number"
                     value={mockValue}
                     onChange={mockOnChange}
@@ -147,7 +147,7 @@ describe('Input format of number', () => {
     })
 
     it('should match previous snapshot when provided errored prop', () => {
-        wrapper = mountWithTheme(<Input format="text" errored />)
+        wrapper = mountWithTheme(<Input.Component format="text" errored />)
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
     })
