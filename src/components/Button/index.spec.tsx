@@ -3,6 +3,7 @@ import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
 import * as Button from './index'
+import * as IconFiles from '~/lib/iconFiles'
 
 describe('Button type of box', () => {
     let wrapper: Enzyme.ReactWrapper
@@ -23,10 +24,6 @@ describe('Button type of box', () => {
         expect(wrapper).toBeDefined()
     })
 
-    it('should match previous snapshot', () => {
-        expect(wrapper).toMatchSnapshot()
-    })
-
     it('should call onClick method by users click', () => {
         act(() => {
             wrapper.simulate('click')
@@ -43,7 +40,6 @@ describe('Button type of box', () => {
 describe('Button type of circle', () => {
     let wrapper: Enzyme.ReactWrapper
     let mockOnClick: jest.Mock
-    const mockIconSrc = 'http://example.com/example.svg'
 
     beforeEach(() => {
         mockOnClick = jest.fn()
@@ -52,7 +48,7 @@ describe('Button type of circle', () => {
                 <Button.Component
                     type="circle"
                     onClick={mockOnClick}
-                    iconSrc={mockIconSrc}
+                    svg={IconFiles.icons.CheckBoxAll}
                 />
             )
         })
@@ -68,18 +64,11 @@ describe('Button type of circle', () => {
         })
         expect(mockOnClick).toHaveBeenCalled()
     })
-
-    it('should render image from iconSrc', () => {
-        const imageEl = wrapper.find('img')
-        expect(imageEl.exists()).toBe(true)
-        expect(imageEl.prop('src') === mockIconSrc).toBe(true)
-    })
 })
 
 describe('Button type of text', () => {
     let wrapper: Enzyme.ReactWrapper
     let mockOnClick: jest.Mock
-    const mockIconSrc = 'https://example.com/example.svg'
 
     beforeEach(() => {
         mockOnClick = jest.fn()
@@ -87,7 +76,7 @@ describe('Button type of text', () => {
             wrapper = mountWithTheme(
                 <Button.Component
                     type="text"
-                    iconSrc={mockIconSrc}
+                    svg={IconFiles.icons.CheckBoxAll}
                     onClick={mockOnClick}
                 >
                     OK
@@ -100,19 +89,9 @@ describe('Button type of text', () => {
         expect(wrapper.exists()).toBe(true)
     })
 
-    it('should match previous snapshot', () => {
-        expect(wrapper).toMatchSnapshot()
-    })
-
     it('should call onClick by users click', () => {
         wrapper.simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
-    })
-
-    it('should render image from iconSrc', () => {
-        const imageEl = wrapper.find('img')
-        expect(imageEl.exists()).toBe(true)
-        expect(imageEl.prop('src') === mockIconSrc).toBe(true)
     })
 
     it('should render children from props children', () => {

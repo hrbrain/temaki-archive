@@ -538,15 +538,10 @@ exports[`Storyshots Components|Button Box 1`] = `
 
 exports[`Storyshots Components|Button Circle 1`] = `
 <button
-  className="sc-htpNat jhjPnO"
+  className="sc-bxivhb dTZHoP"
   onClick={[Function]}
   type="circle"
->
-  <img
-    className="sc-bxivhb eCirls"
-    src=""
-  />
-</button>
+/>
 `;
 
 exports[`Storyshots Components|Button Component 1`] = `
@@ -554,12 +549,8 @@ exports[`Storyshots Components|Button Component 1`] = `
   className="sc-ifAKCX kMIbCi"
   onClick={[Function]}
 >
-  <img
-    className="sc-EHOje kAqDZp"
-    src=""
-  />
   <span
-    className="sc-bZQynM hzvjZm"
+    className="sc-EHOje fCosAy"
     data-test="text-button-child"
   >
     Show filters
@@ -569,13 +560,13 @@ exports[`Storyshots Components|Button Component 1`] = `
 
 exports[`Storyshots Components|Checkbox all 1`] = `
 <div
-  className="sc-htoDjs havrdp"
+  className="sc-bZQynM gvqFDV"
   data-test="nocheck-box"
   onClick={[Function]}
   tabIndex={1}
 >
   <div
-    className="sc-gzVnrw jtCNOk"
+    className="sc-htpNat ckCquo"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -584,7 +575,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
     size="24px"
   />
   <span
-    className="sc-iwsKbI ikMAPW"
+    className="sc-htoDjs cZZVxc"
   >
     Checkbox
   </span>
@@ -593,7 +584,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
 
 exports[`Storyshots Components|Component Standard 1`] = `
 <p
-  className="sc-gqjmRU gdfLRW"
+  className="sc-iwsKbI bTxcHS"
 >
   Hello
 </p>
@@ -601,7 +592,7 @@ exports[`Storyshots Components|Component Standard 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <input
-  className="sc-gZMcBi kJZDYZ"
+  className="sc-dnqmqq bjFssL"
   format="number"
   onBlur={[Function]}
   onChange={[Function]}
@@ -612,7 +603,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <input
-  className="sc-gZMcBi kJZDYZ"
+  className="sc-dnqmqq bjFssL"
   format="text"
   onBlur={[Function]}
   onChange={[Function]}
@@ -1215,7 +1206,7 @@ exports[`Storyshots basics|Icons index 1`] = `
 
 exports[`Storyshots components|Icon Standard 1`] = `
 <div
-  className="sc-gzVnrw ktWLKd"
+  className="sc-htpNat jIIpOP"
   color="#333"
   dangerouslySetInnerHTML={
     Object {
