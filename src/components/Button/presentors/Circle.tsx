@@ -1,12 +1,8 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import { ColorTypeProp } from '../index'
-import {
-    buttonBaseMixin,
-    createCSSFromColorType,
-    rippleEffectMixin
-} from '../lib/styles'
+import * as Index from '../index'
+import * as Styles from '../lib/styles'
 
 /**
  * Component
@@ -28,11 +24,11 @@ export const Component: React.FC<Props> = ({ iconSrc, ...props }) => (
  */
 
 type OuterProps = {
-    colorType: ColorTypeProp
+    colorType: Index.ColorTypeProp
 }
 const Outer = styled.button<OuterProps>`
-    ${rippleEffectMixin}
-    ${buttonBaseMixin}
+    ${Styles.rippleEffectMixin}
+    ${Styles.buttonBaseMixin}
   width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -41,7 +37,7 @@ const Outer = styled.button<OuterProps>`
     /* colors */
     ${props =>
         props.colorType === 'primary'
-            ? createCSSFromColorType(
+            ? Styles.createCSSFromColorType(
                   props.theme.colors.primary.default,
                   props.theme.colors.primary.N20,
                   props.theme.colors.primary.N40,

@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import { ColorTypeProp } from '../index'
-import { createCSSFromColorType, rippleEffectMixin } from '../lib/styles'
+import * as Index from '../index'
+import * as Styles from '../lib/styles'
 
 /**
  * Component
@@ -22,10 +22,10 @@ export const Component: React.FC<Props> = ({ children, ...props }) => {
 type OuterProps = {
     height?: string
     width?: string
-    colorType: ColorTypeProp
+    colorType: Index.ColorTypeProp
 }
 const Outer = styled.button<OuterProps>`
-    ${rippleEffectMixin};
+    ${Styles.rippleEffectMixin};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@ const Outer = styled.button<OuterProps>`
     /* color */
     ${props =>
         props.colorType === 'primary'
-            ? createCSSFromColorType(
+            ? Styles.createCSSFromColorType(
                   props.theme.colors.primary.default,
                   props.theme.colors.primary.P20,
                   props.theme.colors.primary.P40,
