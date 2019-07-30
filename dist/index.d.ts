@@ -41,6 +41,31 @@ declare module 'hrb-temaki' {
         value?: _Input.NumberValue;
         onChange?: ((value: _Input.NumberValue) => void) | undefined;
     })>;
+    export const Button: import("react").FunctionComponent<({
+        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
+        colorType?: "primary" | undefined;
+    } & {
+        type: "box";
+        height?: string | undefined;
+        width?: string | undefined;
+    }) | ({
+        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
+        colorType?: "primary" | undefined;
+    } & {
+        type: "circle";
+        svg?: string | undefined;
+    }) | ({
+        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
+        colorType?: "primary" | undefined;
+    } & {
+        type: "text";
+        svg?: string | undefined;
+    })>;
+    export const buttonShapeType: {
+        box: "box";
+        circle: "circle";
+        text: "text";
+    };
     export const icons: {
         AddIcon: string;
         AnalyzeIcon: string;
