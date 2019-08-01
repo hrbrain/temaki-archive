@@ -8,33 +8,31 @@ import * as Icon from '~/components/Icon'
  * Component
  */
 
- type Props = {
-     text: string
-     onClick: (e: React.MouseEvent<HTMLDivElement>) => void
-     checked: boolean
- }
+type Props = {
+    text: string
+    onClick: (e: React.MouseEvent<HTMLDivElement>) => void
+    checked: boolean
+}
 
- export const Component = React.memo<Props>(
-     ({text, checked, ...props}) => {
-        if (checked) {
-            return (
-                <Outer tabIndex={1} data-test="radio-button" {...props}>
-                    <RadioButton svg={IconFiles.icons.RadioOn} size="24px" />
-                    <Label>{ text }</Label>
-                </Outer>
-            )
-        }
-
-         return (
-            <Outer tabIndex={1} data-test="noradio-box" {...props}>
-                <RadioButton svg={IconFiles.icons.RadioOff} size="24px" />
+export const Component = React.memo<Props>(({ text, checked, ...props }) => {
+    if (checked) {
+        return (
+            <Outer tabIndex={1} data-test="radio-button" {...props}>
+                <RadioButton svg={IconFiles.icons.RadioOn} size="24px" />
                 <Label>{text}</Label>
             </Outer>
-         )
-     }
- )
+        )
+    }
 
- /**
+    return (
+        <Outer tabIndex={1} data-test="noradio-box" {...props}>
+            <RadioButton svg={IconFiles.icons.RadioOff} size="24px" />
+            <Label>{text}</Label>
+        </Outer>
+    )
+})
+
+/**
  * Styles
  */
 
