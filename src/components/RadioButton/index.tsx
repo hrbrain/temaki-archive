@@ -11,13 +11,13 @@ import * as Icon from '~/components/Icon'
 type Props = {
     text: string
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void
-    checked: boolean
+    checked?: boolean
 }
 
-export const Component = React.memo<Props>(({ text, checked, ...props }) => {
+export const Component = React.memo<Props>(({ text, checked, onClick }) => {
     if (checked) {
         return (
-            <Outer {...props}>
+            <Outer data-test="radio-on" onClick={onClick}>
                 <RadioButton svg={IconFiles.icons.RadioOn} size="24px" />
                 <Label>{text}</Label>
             </Outer>
@@ -25,7 +25,7 @@ export const Component = React.memo<Props>(({ text, checked, ...props }) => {
     }
 
     return (
-        <Outer {...props}>
+        <Outer data-test="radio-off" onClick={onClick}>
             <RadioButton svg={IconFiles.icons.RadioOff} size="24px" />
             <Label>{text}</Label>
         </Outer>
