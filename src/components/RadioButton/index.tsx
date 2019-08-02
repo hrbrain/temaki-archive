@@ -17,7 +17,7 @@ type Props = {
 export const Component = React.memo<Props>(({ text, checked, ...props }) => {
     if (checked) {
         return (
-            <Outer tabIndex={1} data-test="radio-button" {...props}>
+            <Outer {...props}>
                 <RadioButton svg={IconFiles.icons.RadioOn} size="24px" />
                 <Label>{text}</Label>
             </Outer>
@@ -25,7 +25,7 @@ export const Component = React.memo<Props>(({ text, checked, ...props }) => {
     }
 
     return (
-        <Outer tabIndex={1} data-test="noradio-box" {...props}>
+        <Outer {...props}>
             <RadioButton svg={IconFiles.icons.RadioOff} size="24px" />
             <Label>{text}</Label>
         </Outer>
@@ -48,13 +48,9 @@ const RadioButton = styled(Icon.Component)`
     justify-content: center;
     height: 24px;
     width: 24px;
-
-    & .primary {
-        fill: ${props => props.theme.colors.primary.default};
-    }
 `
 const Label = styled.span`
-    // width: 20em;
+    max-width: 280px;
     word-break: break-all;
     font-size: 14px;
     padding-left: 4px;
