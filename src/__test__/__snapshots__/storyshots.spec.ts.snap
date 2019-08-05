@@ -635,9 +635,45 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components|Tab atom 1`] = `
+<div
+  className="sc-jTzLTM gVzOHT"
+  onClick={[Function]}
+  selected={true}
+>
+  テキスト要素
+</div>
+`;
+
+exports[`Storyshots Components|Tab molecule 1`] = `
+Array [
+  <div
+    className="sc-jTzLTM gVzOHT"
+    onClick={[Function]}
+    selected={true}
+  >
+    最初のタブ
+  </div>,
+  <div
+    className="sc-jTzLTM buvHnR"
+    onClick={[Function]}
+    selected={false}
+  >
+    真ん中のタブ
+  </div>,
+  <div
+    className="sc-jTzLTM buvHnR"
+    onClick={[Function]}
+    selected={false}
+  >
+    最後のタブ
+  </div>,
+]
+`;
+
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-jTzLTM ghBcBb"
+  className="sc-fjdhpX kOgMIS"
 >
   Hello
 </p>
@@ -648,11 +684,11 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fjdhpX dwPHjM"
+    className="sc-jzJRlG dhAnmq"
     data-test="info-toast"
   >
     <div
-      className="sc-cSHVUG jCopoF sc-bxivhb dUTGrc"
+      className="sc-kAzzGY dmubin sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -663,12 +699,12 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-kAzzGY dljvOH"
+        className="sc-chPdSV hmzkpk"
       >
         ラベル
       </div>
       <div
-        className="sc-chPdSV bqfimQ"
+        className="sc-kgoBCf dxDMFA"
       >
         ここにテキスト。
       </div>
