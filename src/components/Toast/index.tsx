@@ -23,7 +23,7 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
                     svg={IconFiles.icons.ChevronDown}
                     size="24px"
                     color={'white'}
-                    />
+                />
                 <div>
                     <Label>{label}</Label>
                     <Text>{text}</Text>
@@ -39,7 +39,7 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
                     svg={IconFiles.icons.Warning}
                     size="24px"
                     color={'white'}
-                    />
+                />
                 <div>
                     <Label>{label}</Label>
                     <Text>{text}</Text>
