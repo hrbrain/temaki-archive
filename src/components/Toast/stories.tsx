@@ -13,7 +13,7 @@ storiesOf(`Components|Toast`, module).add('all', () => (
                 info: 'info',
                 warning: 'warning'
             },
-            'warning'
+            'info'
         )}
     />
 ))

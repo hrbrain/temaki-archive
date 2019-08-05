@@ -19,11 +19,15 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
         return (
             <InfoOuter>
                 <Icons
+                    // TODO:正しいアイコンに直す
                     svg={IconFiles.icons.ChevronDown}
                     size="24px"
                     color={'white'}
-                />
-                <Label>{label}</Label>
+                    />
+                <div>
+                    <Label>{label}</Label>
+                    <Text>{text}</Text>
+                </div>
             </InfoOuter>
         )
     }
@@ -35,7 +39,7 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
                     svg={IconFiles.icons.Warning}
                     size="24px"
                     color={'white'}
-                />
+                    />
                 <div>
                     <Label>{label}</Label>
                     <Text>{text}</Text>
@@ -54,23 +58,21 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
 
 const InfoOuter = styled.div`
     display: inline-flex;
-    align-items: center;
+    align-items: start;
     background-color: ${props => props.theme.colors.utilities.highlightGreen};
     padding: 12px;
     border-radius: 6px;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.16);
 `
 const WarningOuter = styled.div`
-    position: relative;
     display: inline-flex;
-    align-items: center;
+    align-items: start;
     background-color: ${props => props.theme.colors.utilities.red};
     padding: 12px;
-    border-radius: 5px;
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    box-shadow: ${props => props.theme.shadows.L5};
 `
 const Icons = styled(Icon.Component)`
-    position: absolute;
     top: 0;
 `
 const Label = styled.div`
