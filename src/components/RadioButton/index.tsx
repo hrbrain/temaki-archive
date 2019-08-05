@@ -56,5 +56,5 @@ const Label = styled.span`
     padding-left: 4px;
     height: 24px;
     line-height: 24px;
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.primary.P95};
 `
