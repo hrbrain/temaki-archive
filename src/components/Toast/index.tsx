@@ -15,41 +15,37 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(({ label, text, type }) => {
-    if (type === 'info') {
-        return (
-            <InfoOuter>
-                <Icons
-                    // TODO:正しいアイコンに直す
-                    svg={IconFiles.icons.ChevronDown}
-                    size="24px"
-                    color={'white'}
-                />
-                <div>
-                    <Label>{label}</Label>
-                    <Text>{text}</Text>
-                </div>
-            </InfoOuter>
-        )
+    switch (type) {
+        case 'info':
+            return (
+                <InfoOuter data-test="info-toast">
+                    <Icons
+                        // TODO:正しいアイコンに直す
+                        svg={IconFiles.icons.ChevronDown}
+                        size="24px"
+                        color={'white'}
+                    />
+                    <div>
+                        <Label>{label}</Label>
+                        <Text>{text}</Text>
+                    </div>
+                </InfoOuter>
+            )
+        case 'warning':
+            return (
+                <WarningOuter data-test="warning-toast">
+                    <Icons
+                        svg={IconFiles.icons.Warning}
+                        size="24px"
+                        color={'white'}
+                    />
+                    <div>
+                        <Label>{label}</Label>
+                        <Text>{text}</Text>
+                    </div>
+                </WarningOuter>
+            )
     }
-
-    if (type === 'warning') {
-        return (
-            <WarningOuter>
-                <Icons
-                    svg={IconFiles.icons.Warning}
-                    size="24px"
-                    color={'white'}
-                />
-                <div>
-                    <Label>{label}</Label>
-                    <Text>{text}</Text>
-                </div>
-            </WarningOuter>
-        )
-    }
-
-    // ここには入らないよss
-    return null
 })
 
 /**
