@@ -25,7 +25,7 @@ export { Component }
  * Styles
  */
 
-const Outer = styled.div`
+const Outer: any = styled.div`
     margin-top: 30px;
     margin-left: 30px;
     display: inline-flex;
@@ -55,7 +55,7 @@ const Outer = styled.div`
             }
         `};
 
-    ${(props: { direction: Props['direction'] }) =>
+    ${(props: any) =>
         props.direction === 'right' &&
         `
             &::before {
@@ -63,11 +63,12 @@ const Outer = styled.div`
                 position: absolute;
                 bottom: 20px;
                 top: 20px;
+                right: 0;
                 width: 0;
                 height: 0;
                 margin-right: -6px;
         
-                border-left: 5px solid pink;
+                border-left: 6px solid ${props.theme.colors.grayScale.S5};
                 border-top: 6px solid transparent;
                 border-bottom: 6px solid transparent;
             }
