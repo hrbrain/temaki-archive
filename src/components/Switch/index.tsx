@@ -85,12 +85,22 @@ const SwitchItem = styled.span`
     }
 `
 const LeftText = styled.span`
-    padding-right: 8px;
-    display: flex;
+    margin-right: 8px;
+    line-height: 24px;
+    max-width: 8em;
+    white-space: nowrap;
+    overflow: hidden;
+    word-break: break-all;
+    display: inline-block;
     font-size: 14px;
 `
 const RightText = styled.span`
-    padding-left: 8px;
-    display: flex;
+    margin-left: 8px;
+    line-height: 24px;
+    max-width: 8em;
+    white-space: nowrap;
+    overflow: hidden;
+    word-break: break-all;
+    display: inline-block;
     font-size: 14px;
 `
