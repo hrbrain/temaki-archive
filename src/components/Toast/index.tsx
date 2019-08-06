@@ -25,10 +25,14 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
                         size="24px"
                         color={'white'}
                     />
-                    <div>
+                    {text ? (
+                        <div>
+                            <Label>{label}</Label>
+                            <Text>{text}</Text>
+                        </div>
+                    ) : (
                         <Label>{label}</Label>
-                        <Text>{text}</Text>
-                    </div>
+                    )}
                 </InfoOuter>
             )
         case 'warning':
@@ -39,10 +43,14 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
                         size="24px"
                         color={'white'}
                     />
-                    <div>
+                    {text ? (
+                        <div>
+                            <Label>{label}</Label>
+                            <Text>{text}</Text>
+                        </div>
+                    ) : (
                         <Label>{label}</Label>
-                        <Text>{text}</Text>
-                    </div>
+                    )}
                 </WarningOuter>
             )
     }
@@ -72,15 +80,16 @@ const Icons = styled(Icon.Component)`
     top: 0;
 `
 const Label = styled.div`
+    line-height: 24px;
     font-size: 14px;
     padding-left: 4px;
     font-weight: bold;
-    color: white;
+    color: ${props => props.theme.colors.grayScale.S0};
     width: 100%;
 `
 const Text = styled.div`
     white-space: pre-wrap;
     font-size: 14px;
     padding: 4px 0 0 4px;
-    color: white;
+    color: ${props => props.theme.colors.grayScale.S0};
 `
