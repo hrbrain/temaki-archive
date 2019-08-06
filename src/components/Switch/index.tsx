@@ -19,8 +19,8 @@ export const Component = React.memo<Props>(
                 return (
                     <Outer>
                         <LeftText>{leftText}</LeftText>
-                        <SwitchOuter>
-                            <SwitchOff onClick={onClick} />
+                        <SwitchOuter className="activeOuter" onClick={onClick}>
+                            <Switch className="activeSwitch" />
                         </SwitchOuter>
                         <RightText>{rightText}</RightText>
                     </Outer>
@@ -29,8 +29,8 @@ export const Component = React.memo<Props>(
                 return (
                     <Outer>
                         <LeftText>{leftText}</LeftText>
-                        <SwitchOuter>
-                            <SwitchOn onClick={onClick} />
+                        <SwitchOuter onClick={onClick}>
+                            <Switch />
                         </SwitchOuter>
                         <RightText>{rightText}</RightText>
                     </Outer>
@@ -47,29 +47,55 @@ const Outer = styled.div`
     display: inline-fix;
 `
 const SwitchOuter = styled.div`
-    position: rerative;
+    position: relative;
     width: 46px;
     height: 24px;
     border-radius: 12px;
-    background: ${props => props.theme.colors.primary.P20};
+    background: ${props => props.theme.colors.primary.default};
+    transition: 1.5s;
+    &.activeOuter {
+        position: relative;
+        width: 46px;
+        height: 24px;
+        border-radius: 12px;
+        background: ${props => props.theme.colors.primary.N60};
+    }
 `
-const SwitchOff = styled.span`
+const Switch = styled.span`
     position: absolute;
+    left: 0;
     margin: 4px;
     width: 16px;
     height: 16px;
     border-radius: 8px;
-    background: ${props => props.theme.colors.primary.N95};
+    background: ${props => props.theme.colors.grayScale.S0};
+    transition: 1.5s;
+    &.activeSwitch {
+        position: absolute;
+        left: 22px;
+        margin: 4px;
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        background: ${props => props.theme.colors.grayScale.S0};
+    }
 `
-// TODO: switchの位置を整える
-const SwitchOn = styled.span`
-    position: absolute;
-    margin: 4px;
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
-    background: ${props => props.theme.colors.primary.N95};
-`
+// const SwitchOuter = styled.div`
+//     position: relative;
+//     width: 46px;
+//     height: 24px;
+//     border-radius: 12px;
+//     background: ${props => props.theme.colors.primary.default};
+// `
+// const SwitchOn = styled.span`
+//     position: absolute;
+//     right: 0;
+//     margin: 4px;
+//     width: 16px;
+//     height: 16px;
+//     border-radius: 8px;
+//     background: ${props => props.theme.colors.grayScale.S0};
+// `
 const LeftText = styled.span`
     padding-right: 8px;
     display: flex;
