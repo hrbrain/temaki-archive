@@ -22,7 +22,8 @@ declare module 'hrb-temaki' {
     }>;
     export const Input: import("react").NamedExoticComponent<({
         type?: string | undefined;
-        onBlur?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
+        name?: string | undefined;
+        onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
         onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
         placeholder?: string | undefined;
         errored?: boolean | undefined;
@@ -32,7 +33,8 @@ declare module 'hrb-temaki' {
         onChange?: ((value: _Input.StringValue) => void) | undefined;
     }) | ({
         type?: string | undefined;
-        onBlur?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
+        name?: string | undefined;
+        onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
         onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
         placeholder?: string | undefined;
         errored?: boolean | undefined;

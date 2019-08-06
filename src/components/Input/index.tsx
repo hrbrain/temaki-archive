@@ -19,7 +19,8 @@ const NUMBER = 'number' as const
 
 type Props = {
     type?: string
-    onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    name?: string
+    onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
     placeholder?: string
     errored?: boolean

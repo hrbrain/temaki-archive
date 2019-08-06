@@ -4,7 +4,8 @@ import styled, { css } from '~/modules/theme'
 type Props = {
     type?: string
     value?: string
-    onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    name?: string
+    onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
 } & OuterProps
 export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {

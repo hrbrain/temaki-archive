@@ -33,6 +33,7 @@ const useChangeStringValueFromChangeEvent = (
 
 type Props = {
     value?: Input.StringValue
+    name?: string
     onChange?: (value: Input.StringValue) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
