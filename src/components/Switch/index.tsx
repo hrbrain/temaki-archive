@@ -17,7 +17,7 @@ export const Component = React.memo<Props>(
         switch (switching) {
             case false:
                 return (
-                    <Outer>
+                    <Outer data-test="switch-off">
                         <LeftText>{leftText}</LeftText>
                         <SwitchOuter className="activeOuter" onClick={onClick}>
                             <Switch className="activeSwitch" />
@@ -27,7 +27,7 @@ export const Component = React.memo<Props>(
                 )
             case true:
                 return (
-                    <Outer>
+                    <Outer data-test="switch-on">
                         <LeftText>{leftText}</LeftText>
                         <SwitchOuter onClick={onClick}>
                             <Switch />
@@ -52,7 +52,7 @@ const SwitchOuter = styled.div`
     height: 24px;
     border-radius: 12px;
     background: ${props => props.theme.colors.primary.default};
-    transition: 1.5s;
+    transition: 0.2s;
     &.activeOuter {
         position: relative;
         width: 46px;
@@ -69,7 +69,7 @@ const Switch = styled.span`
     height: 16px;
     border-radius: 8px;
     background: ${props => props.theme.colors.grayScale.S0};
-    transition: 1.5s;
+    transition: 0.2s;
     &.activeSwitch {
         position: absolute;
         left: 22px;
@@ -80,22 +80,6 @@ const Switch = styled.span`
         background: ${props => props.theme.colors.grayScale.S0};
     }
 `
-// const SwitchOuter = styled.div`
-//     position: relative;
-//     width: 46px;
-//     height: 24px;
-//     border-radius: 12px;
-//     background: ${props => props.theme.colors.primary.default};
-// `
-// const SwitchOn = styled.span`
-//     position: absolute;
-//     right: 0;
-//     margin: 4px;
-//     width: 16px;
-//     height: 16px;
-//     border-radius: 8px;
-//     background: ${props => props.theme.colors.grayScale.S0};
-// `
 const LeftText = styled.span`
     padding-right: 8px;
     display: flex;
