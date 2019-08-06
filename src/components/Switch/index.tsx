@@ -19,9 +19,13 @@ export const Component = React.memo<Props>(
                 return (
                     <Outer data-test="switch-off">
                         <LeftText>{leftText}</LeftText>
-                        <SwitchOuter className="activeOuter" onClick={onClick}>
-                            <Switch className="activeSwitch" />
-                        </SwitchOuter>
+                        <Switch
+                            className="activeOuter"
+                            data-test="switch"
+                            onClick={onClick}
+                        >
+                            <SwitchItem className="activeSwitch" />
+                        </Switch>
                         <RightText>{rightText}</RightText>
                     </Outer>
                 )
@@ -29,9 +33,9 @@ export const Component = React.memo<Props>(
                 return (
                     <Outer data-test="switch-on">
                         <LeftText>{leftText}</LeftText>
-                        <SwitchOuter onClick={onClick}>
-                            <Switch />
-                        </SwitchOuter>
+                        <Switch data-test="switch" onClick={onClick}>
+                            <SwitchItem />
+                        </Switch>
                         <RightText>{rightText}</RightText>
                     </Outer>
                 )
@@ -46,7 +50,7 @@ export const Component = React.memo<Props>(
 const Outer = styled.div`
     display: inline-fix;
 `
-const SwitchOuter = styled.div`
+const Switch = styled.div`
     position: relative;
     width: 46px;
     height: 24px;
@@ -61,7 +65,7 @@ const SwitchOuter = styled.div`
         background: ${props => props.theme.colors.primary.N60};
     }
 `
-const Switch = styled.span`
+const SwitchItem = styled.span`
     position: absolute;
     left: 0;
     margin: 4px;
