@@ -614,29 +614,33 @@ exports[`Storyshots Components|Input Text 1`] = `
 
 exports[`Storyshots Components|Toast all 1`] = `
 <div
-  className="sc-gZMcBi bcDAkS"
-  data-test="info-toast"
+  className="m-10"
 >
   <div
-    className="sc-htpNat ccfQmG"
-    color="white"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
+    className="sc-gZMcBi bcDAkS"
+    data-test="info-toast"
+  >
+    <div
+      className="sc-htpNat ccfQmG"
+      color="white"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
       }
-    }
-    size="24px"
-  />
-  <div>
-    <div
-      className="sc-jTzLTM hrTseo"
-    >
-      ラベル
-    </div>
-    <div
-      className="sc-fjdhpX gjTTYk"
-    >
-      ここにテキスト。
+      size="24px"
+    />
+    <div>
+      <div
+        className="sc-jTzLTM hyGksq"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-fjdhpX jsAqzQ"
+      >
+        ここにテキスト。
+      </div>
     </div>
   </div>
 </div>
