@@ -32,6 +32,7 @@ const Outer: any = styled.div`
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.L5};
     position: relative;
+    ${(props: any) => props.direction}: 6px;
 
     ${(props: any) =>
         props.direction === 'top' &&
