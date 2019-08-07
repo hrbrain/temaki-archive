@@ -9,9 +9,9 @@ storiesOf('Components|Switch', module).add('all', () => {
         <div className="m-10">
             <Switch.Component
                 onClick={action('onClick')}
-                isClicked={boolean('Switch', false)}
-                leftText={text('Text(Left)', '左のテキスト')}
-                rightText={text('Text(Right)', '右のテキスト')}
+                isChecked={boolean('Switch', false)}
+                onText={text('Text(ON)', 'ON')}
+                offText={text('Text(OFF)', 'OFF')}
             />
         </div>
     )

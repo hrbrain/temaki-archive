@@ -12,7 +12,12 @@ describe('Switch', () => {
         mockOnClick = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
-                <Switch.Component onClick={mockOnClick} switching={false} />
+                <Switch.Component
+                    onClick={mockOnClick}
+                    isChecked={false}
+                    onText={'text'}
+                    offText={'text'}
+                />
             )
         })
     })
@@ -28,7 +33,12 @@ describe('Switch', () => {
 
     it('SwitchがOFFの状態', () => {
         wrapper = mountWithTheme(
-            <Switch.Component onClick={mockOnClick} switching={false} />
+            <Switch.Component
+                onClick={mockOnClick}
+                isChecked={false}
+                onText={'text'}
+                offText={'text'}
+            />
         )
         const off = wrapper.find('div[data-test="switch-off"]')
         expect(off).toHaveLength(1)
@@ -36,7 +46,12 @@ describe('Switch', () => {
 
     it('SwitchがONの状態', () => {
         wrapper = mountWithTheme(
-            <Switch.Component onClick={mockOnClick} switching={true} />
+            <Switch.Component
+                onClick={mockOnClick}
+                isChecked={true}
+                onText={'text'}
+                offText={'text'}
+            />
         )
         const on = wrapper.find('div[data-test="switch-on"]')
         expect(on).toHaveLength(1)

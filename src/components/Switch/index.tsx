@@ -7,27 +7,27 @@ import styled from '~/modules/theme'
 
 type Props = {
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void
-    isClicked: boolean
-    leftText: string
-    rightText: string
+    isChecked: boolean
+    onText: string
+    offText: string
 }
 
 export const Component = React.memo<Props>(
-    ({ onClick, isClicked, leftText, rightText }) => {
-        if (isClicked) {
+    ({ onClick, isChecked, onText, offText }) => {
+        if (isChecked) {
             return (
                 <Outer data-test="switch-on">
-                    <LeftText>{leftText}</LeftText>
+                    <Text>{onText}</Text>
                     <Switch data-test="switch" onClick={onClick}>
                         <SwitchItem />
                     </Switch>
-                    <RightText>{rightText}</RightText>
+                    <Text>{offText}</Text>
                 </Outer>
             )
         }
         return (
             <Outer data-test="switch-off">
-                <LeftText>{leftText}</LeftText>
+                <Text>{onText}</Text>
                 <Switch
                     className="activeOuter"
                     data-test="switch"
@@ -35,7 +35,7 @@ export const Component = React.memo<Props>(
                 >
                     <SwitchItem className="activeSwitch" />
                 </Switch>
-                <RightText>{rightText}</RightText>
+                <Text>{offText}</Text>
             </Outer>
         )
     }
@@ -49,6 +49,7 @@ const Outer = styled.div`
     display: inline-fix;
 `
 const Switch = styled.div`
+    margin: 0 8px;
     position: relative;
     width: 46px;
     height: 24px;
@@ -73,20 +74,9 @@ const SwitchItem = styled.span`
         left: 22px;
     }
 `
-const LeftText = styled.span`
-    margin-right: 8px;
+const Text = styled.span`
     line-height: 24px;
-    max-width: 8em;
-    white-space: nowrap;
-    overflow: hidden;
-    word-break: break-all;
-    display: inline-block;
-    font-size: 14px;
-`
-const RightText = styled.span`
-    margin-left: 8px;
-    line-height: 24px;
-    max-width: 8em;
+    max-width: 112px;
     white-space: nowrap;
     overflow: hidden;
     word-break: break-all;
