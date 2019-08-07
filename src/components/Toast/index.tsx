@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
+import { css } from 'styled-components'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
@@ -60,21 +61,21 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
  * Styles
  */
 
-const InfoOuter = styled.div`
+const Outer = css`
     display: inline-flex;
     align-items: start;
-    background-color: ${props => props.theme.colors.utilities.highlightGreen};
     padding: 12px;
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.L5};
 `
+
+const InfoOuter = styled.div`
+    background-color: ${props => props.theme.colors.utilities.highlightGreen};
+    ${Outer}
+`
 const WarningOuter = styled.div`
-    display: inline-flex;
-    align-items: start;
     background-color: ${props => props.theme.colors.utilities.red};
-    padding: 12px;
-    border-radius: 6px;
-    box-shadow: ${props => props.theme.shadows.L5};
+    ${Outer}
 `
 const Icons = styled(Icon.Component)`
     top: 0;
