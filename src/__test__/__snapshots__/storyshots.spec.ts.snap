@@ -637,7 +637,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 
 exports[`Storyshots Components|Tab atom 1`] = `
 <div
-  className="sc-jTzLTM gVzOHT"
+  className="sc-jTzLTM bhhQsy"
   onClick={[Function]}
   selected={true}
 >
@@ -648,21 +648,21 @@ exports[`Storyshots Components|Tab atom 1`] = `
 exports[`Storyshots Components|Tab molecule 1`] = `
 Array [
   <div
-    className="sc-jTzLTM gVzOHT"
+    className="sc-jTzLTM bhhQsy"
     onClick={[Function]}
     selected={true}
   >
     最初のタブ
   </div>,
   <div
-    className="sc-jTzLTM buvHnR"
+    className="sc-jTzLTM caquHq"
     onClick={[Function]}
     selected={false}
   >
     真ん中のタブ
   </div>,
   <div
-    className="sc-jTzLTM buvHnR"
+    className="sc-jTzLTM caquHq"
     onClick={[Function]}
     selected={false}
   >

@@ -27,7 +27,7 @@ const Component = React.memo<Props>(({ tabItems, selectedIndex }) => {
                 text={tabItem.text}
                 onClick={tabItem.onClick}
                 key={index}
-            ></TabItem>
+            />
         )
     }
 
