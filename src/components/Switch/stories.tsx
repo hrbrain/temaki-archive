@@ -9,7 +9,7 @@ storiesOf('Components|Switch', module).add('all', () => {
         <div className="m-10">
             <Switch.Component
                 onClick={action('onClick')}
-                switching={boolean('Switch', false)}
+                isClicked={boolean('Switch', false)}
                 leftText={text('Text(Left)', '左のテキスト')}
                 rightText={text('Text(Right)', '右のテキスト')}
             />
