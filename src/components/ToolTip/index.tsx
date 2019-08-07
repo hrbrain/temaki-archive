@@ -26,8 +26,6 @@ export { Component }
  */
 
 const Outer: any = styled.div`
-    margin-top: 30px;
-    margin-left: 30px;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
