@@ -83,6 +83,6 @@ const Box = styled.div<{ selected?: boolean }>`
     &:last-child {
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
-        border-right: 1px solid black;
+        border-right: 1px solid ${props => props.theme.colors.primary.default};
     }
 `
