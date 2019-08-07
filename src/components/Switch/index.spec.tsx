@@ -14,7 +14,7 @@ describe('Switch', () => {
             wrapper = mountWithTheme(
                 <Switch.Component
                     onClick={mockOnClick}
-                    isChecked={false}
+                    checked={false}
                     onText={'text'}
                     offText={'text'}
                 />
@@ -35,7 +35,7 @@ describe('Switch', () => {
         wrapper = mountWithTheme(
             <Switch.Component
                 onClick={mockOnClick}
-                isChecked={false}
+                checked={false}
                 onText={'text'}
                 offText={'text'}
             />
@@ -48,7 +48,7 @@ describe('Switch', () => {
         wrapper = mountWithTheme(
             <Switch.Component
                 onClick={mockOnClick}
-                isChecked={true}
+                checked={true}
                 onText={'text'}
                 offText={'text'}
             />

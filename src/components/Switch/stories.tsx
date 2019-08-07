@@ -9,7 +9,7 @@ storiesOf('Components|Switch', module).add('all', () => {
         <div className="m-10">
             <Switch.Component
                 onClick={action('onClick')}
-                isChecked={boolean('Switch', false)}
+                checked={boolean('Switch', false)}
                 onText={text('Text(ON)', 'ON')}
                 offText={text('Text(OFF)', 'OFF')}
             />

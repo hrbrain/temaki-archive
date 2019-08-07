@@ -7,14 +7,14 @@ import styled from '~/modules/theme'
 
 type Props = {
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void
-    isChecked: boolean
+    checked: boolean
     onText: string
     offText: string
 }
 
 export const Component = React.memo<Props>(
-    ({ onClick, isChecked, onText, offText }) => {
-        if (isChecked) {
+    ({ onClick, checked, onText, offText }) => {
+        if (checked) {
             return (
                 <Outer data-test="switch-on">
                     <Text>{onText}</Text>
