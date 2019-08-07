@@ -28,7 +28,6 @@ export { Component }
 const Outer: any = styled.div`
     display: inline-flex;
     align-items: center;
-    cursor: pointer;
     background: ${props => props.theme.colors.grayScale.S5};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.L5};
