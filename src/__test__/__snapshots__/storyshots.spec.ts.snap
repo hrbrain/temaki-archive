@@ -617,7 +617,7 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-gZMcBi bcDAkS"
+    className="sc-gZMcBi jIMfQy"
     data-test="info-toast"
   >
     <div
@@ -632,12 +632,12 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-jTzLTM hyGksq"
+        className="sc-jTzLTM FsjQP"
       >
         ラベル
       </div>
       <div
-        className="sc-fjdhpX jsAqzQ"
+        className="sc-fjdhpX kQLVjO"
       >
         ここにテキスト。
       </div>

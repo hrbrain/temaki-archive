@@ -62,6 +62,7 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
  */
 
 const Outer = css`
+    margin: 0 0 24px 24px;
     display: inline-flex;
     align-items: start;
     padding: 12px;
@@ -81,14 +82,17 @@ const Icons = styled(Icon.Component)`
     top: 0;
 `
 const Label = styled.div`
+    max-width: 280px;
+    word-break: break-all;
     line-height: 24px;
     font-size: 14px;
     padding-left: 4px;
     font-weight: bold;
     color: ${props => props.theme.colors.grayScale.S0};
-    width: 100%;
 `
 const Text = styled.div`
+    max-width: 280px;
+    word-break: break-all;
     white-space: pre-wrap;
     font-size: 14px;
     padding: 4px 0 0 4px;
