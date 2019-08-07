@@ -58,8 +58,6 @@ const Outer: any = styled.div`
             &::before {
                 content: '';
                 position: absolute;
-                bottom: 20px;
-                top: 20px;
                 right: 0;
                 width: 0;
                 height: 0;
@@ -96,8 +94,6 @@ const Outer: any = styled.div`
             &::before {
                 content: '';
                 position: absolute;
-                bottom: 20px;
-                top: 20px;
                 width: 0;
                 height: 0;
                 margin-left: -6px;
