@@ -55,6 +55,7 @@ const Switch = styled.div`
     width: 46px;
     height: 24px;
     border-radius: 12px;
+    cursor: pointer;
     background: ${props => props.theme.colors.primary.default};
     transition: 0.2s;
     &.activeOuter {
@@ -62,6 +63,7 @@ const Switch = styled.div`
         width: 46px;
         height: 24px;
         border-radius: 12px;
+        cursor: pointer;
         background: ${props => props.theme.colors.primary.N60};
     }
 `
