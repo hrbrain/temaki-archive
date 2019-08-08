@@ -9,38 +9,49 @@ import * as Icon from '~/components/Icon'
  */
 
 type Props = {
-    onClick: (e: React.MouseEvent<HTMLDivElement>) => void
-    isShow: boolean
-    listItem: string
+    listItems: string[]
 }
 
-// ・・・
-export const Component = React.memo<Props>(({ onClick, listItem }) => {
+export const Component = React.memo<Props>(({ listItems }) => {
+    const [isShow, setIsShow] = React.useState<boolean>(false)
+    const handleClick = () => setIsShow(!isShow)
+
     return (
-        <Outer>
-            <Meatball
-                onClick={onClick}
-                // onClick={e => isShow(e.currentTarget.getBoundingClientRect(true))}
-            >
-                {/** TODO: IconをMenuHに変える */}
+        <div>
+            <Meatball onClick={handleClick}>
+                {/* アイコンをミートボールに変える */}
                 <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
             </Meatball>
-            <List>
-                <ListItem onClick={onClick}>{listItem}</ListItem>
-            </List>
-        </Outer>
+
+            {isShow && (
+                <List>
+                    <ListItem>{listItems.map(renderListItem)}</ListItem>
+                </List>
+            )}
+        </div>
     )
 })
+
+function renderListItem(item: string): React.ReactElement {
+    return <li>{item}</li>
+}
 
 /**
  * style
  */
-const Outer = styled.div``
 const Meatball = styled.div`
     cursor: pointer;
 `
 const MeatballItem = styled(Icon.Component)``
-const List = styled.div``
+const List = styled.div`
+    max-width: 140px;
+    background: ${props => props.theme.colors.grayScale.S0};
+    border-radius: 6px;
+    box-shadow: ${props => props.theme.shadows.L5};
+    padding: 12px 12px 4px 12px;
+`
 const ListItem = styled.div`
+    padding-bottom: 8px;
     cursor: pointer;
+    list-style: none;
 `
