@@ -18,6 +18,7 @@ export const Component = React.memo<Props>(({ listItems }) => {
 
     return (
         <div>
+            {/* eslint-disable-next-line */}
             <Meatball onClick={handleClick}>
                 {/* アイコンをミートボールに変える */}
                 <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
