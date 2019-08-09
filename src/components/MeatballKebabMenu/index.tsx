@@ -3,17 +3,14 @@ import styled from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
-import * as ClickOutside from '../../modules/ClickOutside'
 
 /**
  * Component
  */
 
 type Props = {
-    iconSrc: string
-    position: 'top' | 'bottom'
+    type: 'm-top' | 'm-bottom' | 'k-top' | 'k-bottom'
     listItems: Item[]
-    onClick: (e: React.MouseEvent) => void
 }
 
 type Item = {
@@ -21,140 +18,125 @@ type Item = {
     onClick: (e: React.MouseEvent) => void
 }
 
-type MeatballMenuProps = {
-    position: 'top' | 'bottom'
-    listItems: Item[]
-    onClick: (e: React.MouseEvent) => void
-}
+export const Component = React.memo<Props>(({ type, listItems }) => {
+    const [isShow, setIsShow] = React.useState<boolean>(false)
+    const handleClick = React.useCallback(
+        (_: React.MouseEvent<HTMLDivElement>) => {
+            setIsShow(!isShow)
+        },
+        [isShow]
+    )
+    const renderListItem = (listItem: Item) => (
+        <ListItem onClick={listItem.onClick} key={listItem.item}>
+            {listItem.item}
+        </ListItem>
+    )
 
-export const MeatballMenu = ({
-    position,
-    listItems,
-    onClick
-}: MeatballMenuProps) => (
-    <Component
-        position={position}
-        listItems={listItems}
-        // TODO: アイコンをミートボールに変える
-        iconSrc={IconFiles.icons.MenuV}
-        onClick={onClick}
-    />
-)
-
-type KebabMenuProps = {
-    position: 'top' | 'bottom'
-    listItems: Item[]
-    onClick: (e: React.MouseEvent) => void
-}
-
-export const KebabMenu = ({ position, listItems, onClick }: KebabMenuProps) => (
-    <Component
-        position={position}
-        listItems={listItems}
-        iconSrc={IconFiles.icons.MenuV}
-        onClick={onClick}
-    />
-)
-
-export const Component = React.memo<Props>(
-    ({ iconSrc, position, listItems, onClick }) => {
-        const [isShow, setIsShow] = React.useState<boolean>(false)
-        const handleClick = React.useCallback(
-            (e: React.MouseEvent) => {
-                setIsShow(!isShow)
-                onClick(e)
-            },
-            [isShow]
-        )
-        const renderListItem = (listItem: Item, index: number) => {
-            const listClick = React.useCallback(
-                (e: React.MouseEvent) => {
-                    listItem.onClick(e)
-                    setIsShow(!isShow)
-                },
-                [isShow]
-            )
+    switch (type) {
+        case 'm-top':
             return (
-                <ListItem
-                    data-test={`list-item${index}`}
-                    onClick={listClick}
-                    key={listItem.item}
-                >
-                    {listItem.item}
-                </ListItem>
+                <Outer>
+                    <Meatball className="top" onClick={handleClick}>
+                        {/* TODO: アイコンをミートボールに変える */}
+                        <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
+                    </Meatball>
+
+                    {isShow && (
+                        <List className="{[!isShow ? 'hidden' : null].join(' ')}, top">
+                            {listItems.map(renderListItem)}
+                        </List>
+                    )}
+                </Outer>
             )
-        }
+        case 'm-bottom':
+            return (
+                <Outer>
+                    {isShow && (
+                        <List className="{[!isShow ? 'hidden' : null].join(' ')}, bottom">
+                            {listItems.map(renderListItem)}
+                        </List>
+                    )}
 
-        const clickOutside = React.useCallback(() => {
-            setIsShow(false)
-        }, [isShow])
+                    <Meatball className="bottom" onClick={handleClick}>
+                        {/* TODO: アイコンをミートボールに変える */}
+                        <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
+                    </Meatball>
+                </Outer>
+            )
+        case 'k-top':
+            return (
+                <Outer>
+                    <Meatball className="top" onClick={handleClick}>
+                        <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
+                    </Meatball>
 
-        return (
-            <Wrap>
-                <ClickOutside.Component onClickOutside={clickOutside}>
-                    <Menu
-                        data-test="menu-component"
-                        className={position}
-                        onClick={handleClick}
-                    >
-                        <MenuItem svg={iconSrc} size="24px" />
-                    </Menu>
-                    <List
-                        data-test="list-component"
-                        className={`${position} ${!isShow ? 'hidden' : ''}`}
-                    >
-                        {listItems.map(renderListItem)}
-                    </List>
-                </ClickOutside.Component>
-            </Wrap>
-        )
+                    {isShow && (
+                        <List className="{[!isShow ? 'hidden' : null].join(' ')}, top">
+                            {listItems.map(renderListItem)}
+                        </List>
+                    )}
+                </Outer>
+            )
+        case 'k-bottom':
+            return (
+                <Outer>
+                    {isShow && (
+                        <List className="{[!isShow ? 'hidden' : null].join(' ')}, bottom">
+                            {listItems.map(renderListItem)}
+                        </List>
+                    )}
+
+                    <Meatball className="bottom" onClick={handleClick}>
+                        <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
+                    </Meatball>
+                </Outer>
+            )
     }
-)
+})
 
 /**
  * style
  */
-const Wrap = styled.div`
-    position: relative;
-    height: 80vh;
-`
-const Menu = styled.div`
+const Outer = styled.div``
+const Meatball = styled.div`
     cursor: pointer;
-    position: absolute;
-    right: 0;
+    position: relative;
     &.top {
+        position: absolute;
         top: 0;
+        right: 0;
     }
     &.bottom {
+        position: absolute;
         bottom: 0;
+        right: 0;
     }
 `
-const MenuItem = styled(Icon.Component)``
-
+const MeatballItem = styled(Icon.Component)``
 const List = styled.ul`
-    position: absolute;
-    display: block;
-    right: 0;
     max-width: 140px;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
-    box-shadow: ${props => props.theme.shadows.boxShadow.L5};
+    box-shadow: ${props => props.theme.shadows.L5};
     padding: 12px;
-    transition: 0.2s;
     visibility: visible;
-    transform: scaleY(1);
-    position: top;
+    transform: scale(1);
+    opacity: 1;
+    transition: 0.2s;
     &.top {
-        transform-origin: top;
+        position: absolute;
         top: 24px;
+        right: 0;
     }
     &.bottom {
-        transform-origin: bottom;
+        position: absolute;
         bottom: 24px;
+        right: 0;
     }
     &.hidden {
+        opacity: 0;
+        transform: scale(0);
         visibility: hidden;
-        transform: scaleY(0);
     }
 `
 const ListItem = styled.li`
