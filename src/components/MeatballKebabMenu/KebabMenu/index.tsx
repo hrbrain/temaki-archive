@@ -36,10 +36,9 @@ export const Component = React.memo<Props>(({ place, listItems }) => {
         case 'top':
             return (
                 <Outer>
-                    <Meatball className="top" onClick={handleClick}>
-                        {/* TODO: アイコンをミートボールに変える */}
-                        <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
-                    </Meatball>
+                    <Kebab className="top" onClick={handleClick}>
+                        <KebabItem svg={IconFiles.icons.MenuV} size="24px" />
+                    </Kebab>
 
                     {isShow && (
                         <List className="{[!isShow ? 'hidden' : null].join(' ')}, top">
@@ -57,10 +56,9 @@ export const Component = React.memo<Props>(({ place, listItems }) => {
                         </List>
                     )}
 
-                    <Meatball className="bottom" onClick={handleClick}>
-                        {/* TODO: アイコンをミートボールに変える */}
-                        <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
-                    </Meatball>
+                    <Kebab className="bottom" onClick={handleClick}>
+                        <KebabItem svg={IconFiles.icons.MenuV} size="24px" />
+                    </Kebab>
                 </Outer>
             )
     }
@@ -70,7 +68,7 @@ export const Component = React.memo<Props>(({ place, listItems }) => {
  * style
  */
 const Outer = styled.div``
-const Meatball = styled.div`
+const Kebab = styled.div`
     cursor: pointer;
     position: relative;
     &.top {
@@ -84,7 +82,7 @@ const Meatball = styled.div`
         right: 0;
     }
 `
-const MeatballItem = styled(Icon.Component)``
+const KebabItem = styled(Icon.Component)``
 const List = styled.ul`
     max-width: 140px;
     background: ${props => props.theme.colors.grayScale.S0};
