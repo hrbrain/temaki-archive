@@ -2,12 +2,12 @@ import * as Enzyme from 'enzyme'
 import * as React from 'react'
 // import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
-import * as Tab from './index'
+import * as SegmentedControl from './index'
 
-describe('Tab', () => {
+describe('SegmentedControl', () => {
     let wrapper: Enzyme.ReactWrapper
     let mockOnClick: jest.Mock
-    let data: Tab.TabItemType[]
+    let data: SegmentedControl.SegmentedControlItemType[]
 
     beforeEach(() => {
         mockOnClick = jest.fn()
@@ -26,7 +26,10 @@ describe('Tab', () => {
             }
         ]
         wrapper = mountWithTheme(
-            <Tab.Component selectedIndex={0} tabItems={data} />
+            <SegmentedControl.Component
+                selectedIndex={0}
+                segmentedControlItems={data}
+            />
         )
     })
 

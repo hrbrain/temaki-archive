@@ -2,12 +2,12 @@ import { action } from '@storybook/addon-actions'
 import { text, number, boolean } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
-import * as Tab from './index'
+import * as SegmentedControl from './index'
 
-storiesOf('Components|Tab', module)
+storiesOf('Components|SegmentedControl', module)
     .add('atom', () => {
         return (
-            <Tab.TabItem
+            <SegmentedControl.SegmentedControlItem
                 text={text('text', 'テキスト要素')}
                 selected={boolean('selected', true)}
                 onClick={action('click')}
@@ -15,7 +15,7 @@ storiesOf('Components|Tab', module)
         )
     })
     .add('molecule', () => {
-        const data: Tab.TabItemType[] = [
+        const data: SegmentedControl.SegmentedControlItemType[] = [
             {
                 text: text('text1', '最初のタブ'),
                 onClick: action('click1')
@@ -30,9 +30,9 @@ storiesOf('Components|Tab', module)
             }
         ]
         return (
-            <Tab.Component
+            <SegmentedControl.Component
                 selectedIndex={number('index', 0, {})}
-                tabItems={data}
+                segmentedControlItems={data}
             />
         )
     })

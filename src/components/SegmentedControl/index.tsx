@@ -5,36 +5,41 @@ import styled from '~/modules/theme'
  * Component
  */
 
-export type TabItemType = {
+export type SegmentedControlItemType = {
     text: string
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void
 }
 
-type TabItemProps = {
+type SegmentedControlItemProps = {
     selected: boolean
-} & TabItemType
+} & SegmentedControlItemType
 
 export type Props = {
     selectedIndex: number
-    tabItems: TabItemType[]
+    segmentedControlItems: SegmentedControlItemType[]
 }
 
-const Component = React.memo<Props>(({ tabItems, selectedIndex }) => {
-    const renderTabItem = (tabItem: TabItemType, index: number) => {
-        return (
-            <TabItem
-                selected={selectedIndex === index}
-                text={tabItem.text}
-                onClick={tabItem.onClick}
-                key={index}
-            />
-        )
+const Component = React.memo<Props>(
+    ({ segmentedControlItems, selectedIndex }) => {
+        const renderSegmentedControlItem = (
+            segmentedControlItem: SegmentedControlItemType,
+            index: number
+        ) => {
+            return (
+                <SegmentedControlItem
+                    selected={selectedIndex === index}
+                    text={segmentedControlItem.text}
+                    onClick={segmentedControlItem.onClick}
+                    key={index}
+                />
+            )
+        }
+
+        return <>{segmentedControlItems.map(renderSegmentedControlItem)}</>
     }
+)
 
-    return <>{tabItems.map(renderTabItem)}</>
-})
-
-export const TabItem = React.memo<TabItemProps>(
+export const SegmentedControlItem = React.memo<SegmentedControlItemProps>(
     ({ text, selected, ...props }) => {
         return (
             <Box selected={selected} {...props}>
@@ -44,7 +49,7 @@ export const TabItem = React.memo<TabItemProps>(
     }
 )
 
-Component.displayName = 'Tab'
+Component.displayName = 'SegmentedControl'
 
 export { Component }
 

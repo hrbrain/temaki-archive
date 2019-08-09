@@ -635,7 +635,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Tab atom 1`] = `
+exports[`Storyshots Components|SegmentedControl atom 1`] = `
 <div
   className="sc-jTzLTM bhhQsy"
   onClick={[Function]}
@@ -645,7 +645,7 @@ exports[`Storyshots Components|Tab atom 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Tab molecule 1`] = `
+exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 Array [
   <div
     className="sc-jTzLTM bhhQsy"
