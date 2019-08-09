@@ -9,7 +9,7 @@ import * as Icon from '~/components/Icon'
  */
 
 type Props = {
-    place: 'top' | 'bottom'
+    type: 'm-top' | 'm-bottom' | 'k-top' | 'k-bottom'
     listItems: Item[]
 }
 
@@ -18,7 +18,7 @@ type Item = {
     onClick: (e: React.MouseEvent) => void
 }
 
-export const Component = React.memo<Props>(({ place, listItems }) => {
+export const Component = React.memo<Props>(({ type, listItems }) => {
     const [isShow, setIsShow] = React.useState<boolean>(false)
     const handleClick = React.useCallback(
         (_: React.MouseEvent<HTMLDivElement>) => {
@@ -32,8 +32,8 @@ export const Component = React.memo<Props>(({ place, listItems }) => {
         </ListItem>
     )
 
-    switch (place) {
-        case 'top':
+    switch (type) {
+        case 'm-top':
             return (
                 <Outer>
                     <Meatball className="top" onClick={handleClick}>
@@ -48,7 +48,7 @@ export const Component = React.memo<Props>(({ place, listItems }) => {
                     )}
                 </Outer>
             )
-        case 'bottom':
+        case 'm-bottom':
             return (
                 <Outer>
                     {isShow && (
@@ -59,6 +59,34 @@ export const Component = React.memo<Props>(({ place, listItems }) => {
 
                     <Meatball className="bottom" onClick={handleClick}>
                         {/* TODO: アイコンをミートボールに変える */}
+                        <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
+                    </Meatball>
+                </Outer>
+            )
+        case 'k-top':
+            return (
+                <Outer>
+                    <Meatball className="top" onClick={handleClick}>
+                        <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
+                    </Meatball>
+
+                    {isShow && (
+                        <List className="{[!isShow ? 'hidden' : null].join(' ')}, top">
+                            {listItems.map(renderListItem)}
+                        </List>
+                    )}
+                </Outer>
+            )
+        case 'k-bottom':
+            return (
+                <Outer>
+                    {isShow && (
+                        <List className="{[!isShow ? 'hidden' : null].join(' ')}, bottom">
+                            {listItems.map(renderListItem)}
+                        </List>
+                    )}
+
+                    <Meatball className="bottom" onClick={handleClick}>
                         <MeatballItem svg={IconFiles.icons.MenuV} size="24px" />
                     </Meatball>
                 </Outer>
