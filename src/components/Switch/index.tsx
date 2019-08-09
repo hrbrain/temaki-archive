@@ -17,25 +17,25 @@ export const Component = React.memo<Props>(
         if (checked) {
             return (
                 <Outer data-test="switch-on">
-                    <Text>{onText}</Text>
-                    <Switch data-test="switch" onClick={onClick}>
-                        <SwitchItem />
-                    </Switch>
                     <Text>{offText}</Text>
+                    <Switch
+                        className="activeOuter"
+                        data-test="switch"
+                        onClick={onClick}
+                    >
+                        <SwitchItem className="activeSwitch" />
+                    </Switch>
+                    <Text>{onText}</Text>
                 </Outer>
             )
         }
         return (
             <Outer data-test="switch-off">
-                <Text>{onText}</Text>
-                <Switch
-                    className="activeOuter"
-                    data-test="switch"
-                    onClick={onClick}
-                >
-                    <SwitchItem className="activeSwitch" />
-                </Switch>
                 <Text>{offText}</Text>
+                <Switch data-test="switch" onClick={onClick}>
+                    <SwitchItem />
+                </Switch>
+                <Text>{onText}</Text>
             </Outer>
         )
     }
@@ -55,10 +55,10 @@ const Switch = styled.div`
     height: 24px;
     border-radius: 12px;
     cursor: pointer;
-    background: ${props => props.theme.colors.primary.default};
+    background: ${props => props.theme.colors.primary.N60};
     transition: 0.2s;
     &.activeOuter {
-        background: ${props => props.theme.colors.primary.N60};
+        background: ${props => props.theme.colors.primary.default};
     }
 `
 const SwitchItem = styled.span`
