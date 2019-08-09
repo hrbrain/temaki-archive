@@ -119,6 +119,6 @@ const ListItem = styled.li`
     }
     &:hover {
         transition: 0.2s;
-        background: ${props => props.theme.colors.grayScale.S10};
+        color: ${props => props.theme.colors.utilities.highlightGreen};
     }
 `
