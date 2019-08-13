@@ -43,11 +43,20 @@ export type RequiredThemeColors = {
 }
 
 export type RequiredThemeShadows = {
-    L1: string
-    L2: string
-    L3: string
-    L4: string
-    L5: string
+    boxShadow: {
+        L1: string
+        L2: string
+        L3: string
+        L4: string
+        L5: string
+    }
+    dropShadow: {
+        L1: string
+        L2: string
+        L3: string
+        L4: string
+        L5: string
+    }
 }
 
 export type RequiredThemeTextSize = {
@@ -137,11 +146,20 @@ export const defaultTheme: RequiredThemeProps = {
         }
     },
     shadows: {
-        L1: '0 0 2px 0 rgba(0, 0, 0, 0.16)',
-        L2: '0 1px 3px 0 rgba(0, 0, 0, 0.16)',
-        L3: '0 2px 5px 0 rgba(0, 0, 0, 0.16)',
-        L4: '0 3px 8px 0 rgba(0, 0, 0, 0.16)',
-        L5: '0 5px 11px 0 rgba(0, 0, 0, 0.16)'
+        boxShadow: {
+            L1: '0 0 2px 0 rgba(0, 0, 0, 0.16)',
+            L2: '0 1px 3px 0 rgba(0, 0, 0, 0.16)',
+            L3: '0 2px 5px 0 rgba(0, 0, 0, 0.16)',
+            L4: '0 3px 8px 0 rgba(0, 0, 0, 0.16)',
+            L5: '0 5px 11px 0 rgba(0, 0, 0, 0.16)'
+        },
+        dropShadow: {
+            L1: '0 0 2px rgba(0, 0, 0, 0.16)',
+            L2: '0 1px 3px rgba(0, 0, 0, 0.16)',
+            L3: '0 2px 5px rgba(0, 0, 0, 0.16)',
+            L4: '0 3px 8px rgba(0, 0, 0, 0.16)',
+            L5: '0 5px 11px rgba(0, 0, 0, 0.16)'
+        }
     },
     typography: {
         pc: {

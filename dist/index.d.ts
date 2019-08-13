@@ -183,11 +183,20 @@ declare module 'hrb-temaki/modules/theme' {
         };
     };
     export type RequiredThemeShadows = {
-        L1: string;
-        L2: string;
-        L3: string;
-        L4: string;
-        L5: string;
+        boxShadow: {
+            L1: string;
+            L2: string;
+            L3: string;
+            L4: string;
+            L5: string;
+        };
+        dropShadow: {
+            L1: string;
+            L2: string;
+            L3: string;
+            L4: string;
+            L5: string;
+        };
     };
     export type RequiredThemeTextSize = {
         pc: RequiredThemeTextSizePC;
