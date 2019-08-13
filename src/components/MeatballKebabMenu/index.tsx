@@ -66,7 +66,10 @@ export const Component = React.memo<Props>(
                 <Meatball className={position} onClick={handleClick}>
                     <MeatballItem svg={iconSrc} size="24px" />
                 </Meatball>
-                <List className={`${[!isShow ? 'hidden' : position]}`}>
+                <List
+                    id={position}
+                    className={`${!isShow ? 'hidden' : position}`}
+                >
                     {listItems.map(renderListItem)}
                 </List>
             </Outer>
@@ -94,22 +97,39 @@ const Meatball = styled.div`
     }
 `
 const MeatballItem = styled(Icon.Component)``
+
 const List = styled.ul`
     position: absolute;
+    display: block;
+    right: 0;
     max-width: 140px;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.L5};
     padding: 12px;
+    transition: 0.2s;
+    visibility: visible;
+    transform: scaleY(1);
+    $position = top;
     &.top {
+        transform-origin: top;
         top: 24px;
-        right: 0;
     }
     &.bottom {
+        transform-origin: bottom;
         bottom: 24px;
-        right: 0;
     }
-    &.hidden {
+    &#top.hidden {
+        visibility: hidden;
+        transform-origin: top;
+        transform: scaleY(0);
+        top: 24px;
+    }
+    &#bottom.hidden {
+        visibility: hidden;
+        transform-origin: bottom;
+        transform: scaleY(0);
+        bottom: 24px;
     }
 `
 const ListItem = styled.li`
