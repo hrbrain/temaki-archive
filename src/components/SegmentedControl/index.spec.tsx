@@ -38,7 +38,7 @@ describe('SegmentedControl', () => {
     })
 
     it('should call onClick by users click', () => {
-        wrapper.simulate('click')
+        wrapper.find('div[data-test="item0"]').simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
     })
 })

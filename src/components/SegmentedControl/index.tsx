@@ -37,6 +37,7 @@ const renderSegmentedControlItem = (selectedIndex: number) => (
 ) => {
     return (
         <SegmentedControlItem
+            data-test={`item${index}`}
             selected={selectedIndex === index}
             text={segmentedControlItem.text}
             onClick={segmentedControlItem.onClick}

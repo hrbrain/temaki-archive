@@ -649,6 +649,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div
     className="sc-jTzLTM bhhQsy"
+    data-test="item0"
     onClick={[Function]}
     selected={true}
   >
@@ -656,6 +657,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
   </div>
   <div
     className="sc-jTzLTM caquHq"
+    data-test="item1"
     onClick={[Function]}
     selected={false}
   >
@@ -663,6 +665,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
   </div>
   <div
     className="sc-jTzLTM caquHq"
+    data-test="item2"
     onClick={[Function]}
     selected={false}
   >
