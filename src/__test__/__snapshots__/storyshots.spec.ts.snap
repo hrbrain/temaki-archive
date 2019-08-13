@@ -646,29 +646,29 @@ exports[`Storyshots Components|SegmentedControl atom 1`] = `
 `;
 
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
-Array [
+<div>
   <div
     className="sc-jTzLTM bhhQsy"
     onClick={[Function]}
     selected={true}
   >
     最初のタブ
-  </div>,
+  </div>
   <div
     className="sc-jTzLTM caquHq"
     onClick={[Function]}
     selected={false}
   >
     真ん中のタブ
-  </div>,
+  </div>
   <div
     className="sc-jTzLTM caquHq"
     onClick={[Function]}
     selected={false}
   >
     最後のタブ
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Storyshots Components|Text Standard 1`] = `

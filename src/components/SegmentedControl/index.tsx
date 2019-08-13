@@ -22,11 +22,11 @@ export type Props = {
 const Component = React.memo<Props>(
     ({ segmentedControlItems, selectedIndex }) => {
         return (
-            <>
+            <div>
                 {segmentedControlItems.map(
                     renderSegmentedControlItem(selectedIndex)
                 )}
-            </>
+            </div>
         )
     }
 )
