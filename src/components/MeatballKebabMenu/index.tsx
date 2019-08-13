@@ -12,11 +12,12 @@ type Props = {
     iconSrc: string
     position: 'top' | 'bottom'
     listItems: Item[]
+    // onClick: (e: React.MouseEvent<HTMLDivElement>) => void
 }
 
 type Item = {
     item: string
-    onClick: (e: React.MouseEvent<HTMLElement>) => void
+    onClick: (e: React.MouseEvent) => void
 }
 
 type MeatballMenuProps = {
@@ -50,16 +51,27 @@ export const Component = React.memo<Props>(
     ({ iconSrc, position, listItems }) => {
         const [isShow, setIsShow] = React.useState<boolean>(false)
         const handleClick = React.useCallback(
-            (_: React.MouseEvent<HTMLElement>) => {
+            (_: React.MouseEvent) => {
                 setIsShow(!isShow)
             },
             [isShow]
         )
-        const renderListItem = (listItem: Item) => (
-            <ListItem onClick={handleClick} key={listItem.item}>
-                {listItem.item}
-            </ListItem>
-        )
+        const renderListItem = (listItem: Item) => {
+            const listClick = React.useCallback((e: React.MouseEvent) => {
+                listItem.onClick(e)
+                handleClick(e)
+            }, [])
+
+            return (
+                <ListItem onClick={listClick} key={listItem.item}>
+                    {listItem.item}
+                </ListItem>
+            )
+        }
+        // const listClick = React.useCallback((listItem: Item) => {
+        //     listItem.onClick
+        //     handleClick
+        // }, [])
 
         return (
             <Outer>
@@ -82,7 +94,7 @@ export const Component = React.memo<Props>(
  */
 const Outer = styled.div`
     position: relative;
-    height: 300px;
+    height: 80vh;
 `
 const Meatball = styled.div`
     cursor: pointer;
