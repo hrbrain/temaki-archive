@@ -30,7 +30,7 @@ const Outer: any = styled.div`
     align-items: center;
     background: ${props => props.theme.colors.grayScale.S5};
     border-radius: 6px;
-    box-shadow: ${props => props.theme.shadows.L5};
+    filter: drop-shadow(${props => props.theme.shadows.dropShadow.L5});
     position: relative;
     ${(props: any) => props.direction}: 6px;
 
