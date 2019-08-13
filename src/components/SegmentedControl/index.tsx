@@ -21,23 +21,29 @@ export type Props = {
 
 const Component = React.memo<Props>(
     ({ segmentedControlItems, selectedIndex }) => {
-        const renderSegmentedControlItem = (
-            segmentedControlItem: SegmentedControlItemType,
-            index: number
-        ) => {
-            return (
-                <SegmentedControlItem
-                    selected={selectedIndex === index}
-                    text={segmentedControlItem.text}
-                    onClick={segmentedControlItem.onClick}
-                    key={index}
-                />
-            )
-        }
-
-        return <>{segmentedControlItems.map(renderSegmentedControlItem)}</>
+        return (
+            <>
+                {segmentedControlItems.map(
+                    renderSegmentedControlItem(selectedIndex)
+                )}
+            </>
+        )
     }
 )
+
+const renderSegmentedControlItem = (selectedIndex: number) => (
+    segmentedControlItem: SegmentedControlItemType,
+    index: number
+) => {
+    return (
+        <SegmentedControlItem
+            selected={selectedIndex === index}
+            text={segmentedControlItem.text}
+            onClick={segmentedControlItem.onClick}
+            key={index}
+        />
+    )
+}
 
 export const SegmentedControlItem = React.memo<SegmentedControlItemProps>(
     ({ text, selected, ...props }) => {
