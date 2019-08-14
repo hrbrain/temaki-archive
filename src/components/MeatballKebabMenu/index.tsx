@@ -56,7 +56,7 @@ export const Component = React.memo<Props>(
             },
             [isShow]
         )
-        const renderListItem = (listItem: Item) => {
+        const renderListItem = (listItem: Item, index: number) => {
             const listClick = React.useCallback(
                 (e: React.MouseEvent) => {
                     listItem.onClick(e)
@@ -65,7 +65,11 @@ export const Component = React.memo<Props>(
                 [isShow]
             )
             return (
-                <ListItem onClick={listClick} key={listItem.item}>
+                <ListItem
+                    data-test={`listItem${index}`}
+                    onClick={listClick}
+                    key={listItem.item}
+                >
                     {listItem.item}
                 </ListItem>
             )
