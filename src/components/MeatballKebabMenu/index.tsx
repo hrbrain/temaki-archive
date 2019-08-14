@@ -47,47 +47,38 @@ export const KebabMenu = ({ position, listItems }: KebabMenuProps) => (
     />
 )
 
-export const Component = React.memo<Props>(
-    ({ iconSrc, position, listItems }) => {
-        const [isShow, setIsShow] = React.useState<boolean>(false)
-        const handleClick = React.useCallback(
-            (_: React.MouseEvent) => {
-                setIsShow(!isShow)
-            },
-            [isShow]
-        )
-        const renderListItem = (listItem: Item) => {
-            const listClick = React.useCallback((e: React.MouseEvent) => {
-                listItem.onClick(e)
-                handleClick(e)
-            }, [])
-
-            return (
-                <ListItem onClick={listClick} key={listItem.item}>
-                    {listItem.item}
-                </ListItem>
-            )
-        }
-        // const listClick = React.useCallback((listItem: Item) => {
-        //     listItem.onClick
-        //     handleClick
-        // }, [])
+const Component = React.memo<Props>(({ iconSrc, position, listItems }) => {
+    const [isShow, setIsShow] = React.useState<boolean>(false)
+    const handleClick = React.useCallback(
+        (_: React.MouseEvent) => {
+            setIsShow(!isShow)
+        },
+        [isShow]
+    )
+    const renderListItem = (listItem: Item) => {
+        const listClick = React.useCallback((e: React.MouseEvent) => {
+            listItem.onClick(e)
+            handleClick(e)
+        }, [])
 
         return (
-            <Outer>
-                <Meatball className={position} onClick={handleClick}>
-                    <MeatballItem svg={iconSrc} size="24px" />
-                </Meatball>
-                <List
-                    id={position}
-                    className={`${!isShow ? 'hidden' : position}`}
-                >
-                    {listItems.map(renderListItem)}
-                </List>
-            </Outer>
+            <ListItem onClick={listClick} key={listItem.item}>
+                {listItem.item}
+            </ListItem>
         )
     }
-)
+
+    return (
+        <Outer>
+            <Menu className={position} onClick={handleClick}>
+                <MenuItem svg={iconSrc} size="24px" />
+            </Menu>
+            <List id={position} className={`${!isShow ? 'hidden' : position}`}>
+                {listItems.map(renderListItem)}
+            </List>
+        </Outer>
+    )
+})
 
 /**
  * style
@@ -96,7 +87,7 @@ const Outer = styled.div`
     position: relative;
     height: 80vh;
 `
-const Meatball = styled.div`
+const Menu = styled.div`
     cursor: pointer;
     position: absolute;
     &.top {
@@ -108,7 +99,7 @@ const Meatball = styled.div`
         right: 0;
     }
 `
-const MeatballItem = styled(Icon.Component)``
+const MenuItem = styled(Icon.Component)``
 
 const List = styled.ul`
     position: absolute;
