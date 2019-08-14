@@ -526,9 +526,17 @@ Array [
 ]
 `;
 
+exports[`Storyshots Components|Badge all 1`] = `
+<div
+  className="sc-bwzfXH GIbIi"
+>
+  10
+</div>
+`;
+
 exports[`Storyshots Components|Button Box 1`] = `
 <button
-  className="sc-bwzfXH hbwYjg"
+  className="sc-htpNat fRwifO"
   onClick={[Function]}
   type="box"
 >
@@ -538,7 +546,7 @@ exports[`Storyshots Components|Button Box 1`] = `
 
 exports[`Storyshots Components|Button Circle 1`] = `
 <button
-  className="sc-bxivhb dTZHoP"
+  className="sc-ifAKCX cvHGqt"
   onClick={[Function]}
   type="circle"
 />
@@ -546,11 +554,11 @@ exports[`Storyshots Components|Button Circle 1`] = `
 
 exports[`Storyshots Components|Button Component 1`] = `
 <button
-  className="sc-ifAKCX kMIbCi"
+  className="sc-EHOje dOmtJl"
   onClick={[Function]}
 >
   <span
-    className="sc-EHOje fCosAy"
+    className="sc-bZQynM hzvjZm"
     data-test="text-button-child"
   >
     Show filters
@@ -560,13 +568,13 @@ exports[`Storyshots Components|Button Component 1`] = `
 
 exports[`Storyshots Components|Checkbox all 1`] = `
 <div
-  className="sc-bZQynM gvqFDV"
+  className="sc-gzVnrw iyQuzR"
   data-test="nocheck-box"
   onClick={[Function]}
   tabIndex={1}
 >
   <div
-    className="sc-htpNat ckCquo"
+    className="sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -575,24 +583,16 @@ exports[`Storyshots Components|Checkbox all 1`] = `
     size="24px"
   />
   <span
-    className="sc-htoDjs cZZVxc"
+    className="sc-dnqmqq gZhRLK"
   >
     Checkbox
   </span>
 </div>
 `;
 
-exports[`Storyshots Components|Component Standard 1`] = `
-<p
-  className="sc-VigVT fCbSLo"
->
-  Hello
-</p>
-`;
-
 exports[`Storyshots Components|Input Number 1`] = `
 <input
-  className="sc-dnqmqq bjFssL"
+  className="sc-iwsKbI cjzQxz"
   format="number"
   onBlur={[Function]}
   onChange={[Function]}
@@ -603,7 +603,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <input
-  className="sc-dnqmqq bjFssL"
+  className="sc-iwsKbI cjzQxz"
   format="text"
   onBlur={[Function]}
   onChange={[Function]}
@@ -614,12 +614,12 @@ exports[`Storyshots Components|Input Text 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
-  className="sc-iwsKbI jTULwn"
+  className="sc-gZMcBi bsSoar"
   data-test="radio-on"
   onClick={[Function]}
 >
   <div
-    className="sc-htpNat ckCquo"
+    className="sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -628,11 +628,19 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-gqjmRU bvYAYV"
+    className="sc-VigVT hHXyfI"
   >
     RadioButton
   </span>
 </div>
+`;
+
+exports[`Storyshots Components|Text Standard 1`] = `
+<p
+  className="sc-jTzLTM ghBcBb"
+>
+  Hello
+</p>
 `;
 
 exports[`Storyshots basics|Icons index 1`] = `
@@ -1229,7 +1237,7 @@ exports[`Storyshots basics|Icons index 1`] = `
 
 exports[`Storyshots components|Icon Standard 1`] = `
 <div
-  className="sc-htpNat jIIpOP"
+  className="sc-bxivhb edXnbt"
   color="#333"
   dangerouslySetInnerHTML={
     Object {
