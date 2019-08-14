@@ -75,7 +75,7 @@ const Component = React.memo<Props>(({ iconSrc, position, listItems }) => {
             <Menu className={position} onClick={handleClick}>
                 <MenuItem svg={iconSrc} size="24px" />
             </Menu>
-            <List className={`${position} ${!isShow ? 'hidden' : position}`}>
+            <List className={`${position} ${!isShow ? 'hidden' : ''}`}>
                 {listItems.map(renderListItem)}
             </List>
         </Outer>
