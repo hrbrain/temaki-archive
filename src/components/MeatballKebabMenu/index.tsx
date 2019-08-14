@@ -47,40 +47,42 @@ export const KebabMenu = ({ position, listItems }: KebabMenuProps) => (
     />
 )
 
-const Component = React.memo<Props>(({ iconSrc, position, listItems }) => {
-    const [isShow, setIsShow] = React.useState<boolean>(false)
-    const handleClick = React.useCallback(
-        (_: React.MouseEvent) => {
-            setIsShow(!isShow)
-        },
-        [isShow]
-    )
-    const renderListItem = (listItem: Item) => {
-        const listClick = React.useCallback(
-            (e: React.MouseEvent) => {
-                listItem.onClick(e)
-                handleClick(e)
+export const Component = React.memo<Props>(
+    ({ iconSrc, position, listItems }) => {
+        const [isShow, setIsShow] = React.useState<boolean>(false)
+        const handleClick = React.useCallback(
+            (_: React.MouseEvent) => {
+                setIsShow(!isShow)
             },
             [isShow]
         )
+        const renderListItem = (listItem: Item) => {
+            const listClick = React.useCallback(
+                (e: React.MouseEvent) => {
+                    listItem.onClick(e)
+                    handleClick(e)
+                },
+                [isShow]
+            )
+            return (
+                <ListItem onClick={listClick} key={listItem.item}>
+                    {listItem.item}
+                </ListItem>
+            )
+        }
+
         return (
-            <ListItem onClick={listClick} key={listItem.item}>
-                {listItem.item}
-            </ListItem>
+            <Outer>
+                <Menu className={position} onClick={handleClick}>
+                    <MenuItem svg={iconSrc} size="24px" />
+                </Menu>
+                <List className={`${position} ${!isShow ? 'hidden' : ''}`}>
+                    {listItems.map(renderListItem)}
+                </List>
+            </Outer>
         )
     }
-
-    return (
-        <Outer>
-            <Menu className={position} onClick={handleClick}>
-                <MenuItem svg={iconSrc} size="24px" />
-            </Menu>
-            <List className={`${position} ${!isShow ? 'hidden' : ''}`}>
-                {listItems.map(renderListItem)}
-            </List>
-        </Outer>
-    )
-})
+)
 
 /**
  * style
