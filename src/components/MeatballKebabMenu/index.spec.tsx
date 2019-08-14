@@ -2,7 +2,9 @@ import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
-import * as MeatballKebabMenu from './index'
+import * as MeatballMenu from './index'
+import * as KebabMenu from './index'
+import * as IconFiles from '~/lib/iconFiles'
 
 describe('MeatballKebabMenu', () => {
     let wrapper: Enzyme.ReactWrapper
@@ -10,20 +12,38 @@ describe('MeatballKebabMenu', () => {
 
     beforeEach(() => {
         mockOnClick = jest.fn()
-        // item = [
-        //     {
-        //         text: 'リスト１',
-        //         onClick: mockOnClick
-        //     },
-        //     {
-        //         text: 'リスト２',
-        //         onClick: mockOnClick
-        //     },
-        //     {
-        //         text: 'リスト３',
-        //         onClick: mockOnClick
-        //     }
-        // ]
+        const item = [
+            {
+                item: 'リスト１',
+                onClick: mockOnClick
+            },
+            {
+                item: 'リスト２',
+                onClick: mockOnClick
+            },
+            {
+                item: 'リスト３',
+                onClick: mockOnClick
+            }
+        ]
+        act(() => {
+            wrapper = mountWithTheme(
+                <MeatballMenu.Component
+                    position={'top'}
+                    listItems={item}
+                    iconSrc={IconFiles.icons.MenuV}
+                />
+            )
+        })
+        act(() => {
+            wrapper = mountWithTheme(
+                <KebabMenu.Component
+                    position={'top'}
+                    listItems={item}
+                    iconSrc={IconFiles.icons.MenuV}
+                />
+            )
+        })
     })
 
     it('コンポーネントが定義されている', () => {
@@ -33,7 +53,7 @@ describe('MeatballKebabMenu', () => {
     //TODO: MenuのonClickが呼ばれる
 
     it('ListItemのonClickが呼ばれる', () => {
-        wrapper.simulate('click')
+        wrapper.find('li[data-test="listItem0"]').simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
     })
 
