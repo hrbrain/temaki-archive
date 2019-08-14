@@ -8,38 +8,35 @@ import styled from '~/modules/theme'
 type Props = {
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void
     checked: boolean
-    onText: string
-    offText: string
+    text: { on: string; off: string }
 }
 
-export const Component = React.memo<Props>(
-    ({ onClick, checked, onText, offText }) => {
-        if (checked) {
-            return (
-                <Outer data-test="switch-on">
-                    <Text>{offText}</Text>
-                    <Switch
-                        className="activeOuter"
-                        data-test="switch"
-                        onClick={onClick}
-                    >
-                        <SwitchItem className="activeSwitch" />
-                    </Switch>
-                    <Text>{onText}</Text>
-                </Outer>
-            )
-        }
+export const Component = React.memo<Props>(({ onClick, checked, text }) => {
+    if (checked) {
         return (
-            <Outer data-test="switch-off">
-                <Text>{offText}</Text>
-                <Switch data-test="switch" onClick={onClick}>
-                    <SwitchItem />
+            <Outer data-test="switch-on">
+                <Text>{text.off}</Text>
+                <Switch
+                    className="activeOuter"
+                    data-test="switch"
+                    onClick={onClick}
+                >
+                    <SwitchItem className="activeSwitch" />
                 </Switch>
-                <Text>{onText}</Text>
+                <Text>{text.on}</Text>
             </Outer>
         )
     }
-)
+    return (
+        <Outer data-test="switch-off">
+            <Text>{text.off}</Text>
+            <Switch data-test="switch" onClick={onClick}>
+                <SwitchItem />
+            </Switch>
+            <Text>{text.on}</Text>
+        </Outer>
+    )
+})
 
 /**
  * Styles

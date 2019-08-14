@@ -15,8 +15,7 @@ describe('Switch', () => {
                 <Switch.Component
                     onClick={mockOnClick}
                     checked={false}
-                    onText={'text'}
-                    offText={'text'}
+                    text={{ on: 'text', off: 'text' }}
                 />
             )
         })
@@ -36,8 +35,7 @@ describe('Switch', () => {
             <Switch.Component
                 onClick={mockOnClick}
                 checked={false}
-                onText={'text'}
-                offText={'text'}
+                text={{ on: 'text', off: 'text' }}
             />
         )
         const off = wrapper.find('div[data-test="switch-off"]')
@@ -49,8 +47,7 @@ describe('Switch', () => {
             <Switch.Component
                 onClick={mockOnClick}
                 checked={true}
-                onText={'text'}
-                offText={'text'}
+                text={{ on: 'text', off: 'text' }}
             />
         )
         const on = wrapper.find('div[data-test="switch-on"]')
