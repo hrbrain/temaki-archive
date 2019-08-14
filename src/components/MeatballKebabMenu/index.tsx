@@ -56,11 +56,13 @@ const Component = React.memo<Props>(({ iconSrc, position, listItems }) => {
         [isShow]
     )
     const renderListItem = (listItem: Item) => {
-        const listClick = React.useCallback((e: React.MouseEvent) => {
-            listItem.onClick(e)
-            handleClick(e)
-        }, [])
-
+        const listClick = React.useCallback(
+            (e: React.MouseEvent) => {
+                listItem.onClick(e)
+                handleClick(e)
+            },
+            [isShow]
+        )
         return (
             <ListItem onClick={listClick} key={listItem.item}>
                 {listItem.item}
@@ -73,7 +75,7 @@ const Component = React.memo<Props>(({ iconSrc, position, listItems }) => {
             <Menu className={position} onClick={handleClick}>
                 <MenuItem svg={iconSrc} size="24px" />
             </Menu>
-            <List id={position} className={`${!isShow ? 'hidden' : position}`}>
+            <List className={`${position} ${!isShow ? 'hidden' : position}`}>
                 {listItems.map(renderListItem)}
             </List>
         </Outer>
@@ -122,13 +124,13 @@ const List = styled.ul`
         transform-origin: bottom;
         bottom: 24px;
     }
-    &#top.hidden {
+    &.top.hidden {
         visibility: hidden;
         transform-origin: top;
         transform: scaleY(0);
         top: 24px;
     }
-    &#bottom.hidden {
+    &.bottom.hidden {
         visibility: hidden;
         transform-origin: bottom;
         transform: scaleY(0);
