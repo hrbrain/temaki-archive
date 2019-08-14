@@ -124,17 +124,9 @@ const List = styled.ul`
         transform-origin: bottom;
         bottom: 24px;
     }
-    &.top.hidden {
+    &.hidden {
         visibility: hidden;
-        transform-origin: top;
         transform: scaleY(0);
-        top: 24px;
-    }
-    &.bottom.hidden {
-        visibility: hidden;
-        transform-origin: bottom;
-        transform: scaleY(0);
-        bottom: 24px;
     }
 `
 const ListItem = styled.li`
