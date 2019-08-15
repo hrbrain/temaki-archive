@@ -110,9 +110,6 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
     value="Testing Value"
   >
     <p>
-      <label />
-    </p>
-    <p>
       <Styled(TextareaAutosize)
         onBlur={[MockFunction]}
         onChange={[MockFunction]}
