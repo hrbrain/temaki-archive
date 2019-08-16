@@ -7,7 +7,6 @@ import * as DropdownSingle from './index'
 storiesOf('Components|Dropdown', module).add('Single', () => (
     <div className="ml-20 mt-10">
         <DropdownSingle.Component
-            label={text('label', '好きな果物は？')}
             placeholder={text('placeholder', '選択してください')}
             items={[
                 { text: 'りんご', onClick: action('onClick') },

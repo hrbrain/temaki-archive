@@ -5,7 +5,6 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
 type Props = {
-    label?: string
     placeholder?: string
     items: Item[]
     selected: string
@@ -21,7 +20,6 @@ const Component = React.memo<Props>(props => {
 
     return (
         <div>
-            <Label>{props.label}</Label>
             <Outer width={props.width}>
                 <P isVisible={isVisible} onClick={handleClick}>
                     {props.selected !== '' ? (
@@ -78,11 +76,6 @@ const Item = React.memo<Item>(props => {
 Component.displayName = 'DropdownSingle'
 
 export { Component }
-
-const Label = styled.label`
-    font-size: 14px;
-    display: block;
-`
 
 const Outer = styled.div<{ width: number }>`
     display: inline-block;
