@@ -9,6 +9,7 @@ type Props = {
     items: Item[]
     selected: string
     width: number
+    onClickItem: (text: string) => void
 }
 
 const Component = React.memo<Props>(props => {
@@ -39,7 +40,7 @@ const Component = React.memo<Props>(props => {
                                 text={item.text}
                                 key={index}
                                 selected={props.selected}
-                                onClick={item.onClick}
+                                onClickItem={props.onClickItem}
                             />
                         )
                     })}
@@ -51,13 +52,20 @@ const Component = React.memo<Props>(props => {
 
 type Item = {
     text: string
-    selected?: string // 型には宣言しない方が良さげ
-    onClick: (e: React.MouseEvent<HTMLLIElement>) => void
+    selected?: string // 型には宣言しない方が良さげ?
 }
 
-const Item = React.memo<Item>(props => {
+type ItemProps = {
+    onClickItem: (text: string) => void
+} & Item
+
+const Item = React.memo<ItemProps>(props => {
+    const handleClick = React.useCallback(() => {
+        props.onClickItem(props.text)
+    }, [])
+
     return (
-        <Li onClick={props.onClick}>
+        <Li onClick={handleClick}>
             <SingleCheckIcon
                 // TODO: svgをSingleCheckIconに変える
                 svg={IconFiles.icons.ChevronDown}

@@ -9,12 +9,12 @@ storiesOf('Components|Dropdown', module).add('Single', () => (
         <DropdownSingle.Component
             placeholder={text('placeholder', '選択してください')}
             items={[
-                { text: 'りんご', onClick: action('onClick') },
-                { text: 'いちご', onClick: action('onClick') },
-                { text: 'バナナ', onClick: action('onClick') },
-                { text: 'メロン', onClick: action('onClick') },
-                { text: 'さくらんぼ', onClick: action('onClick') },
-                { text: 'ぶどう', onClick: action('onClick') }
+                { text: 'りんご' },
+                { text: 'いちご' },
+                { text: 'バナナ' },
+                { text: 'メロン' },
+                { text: 'さくらんぼ' },
+                { text: 'ぶどう' }
             ]}
             selected={select(
                 'selected',
@@ -30,6 +30,7 @@ storiesOf('Components|Dropdown', module).add('Single', () => (
                 ''
             )}
             width={number('width', 200)}
+            onClickItem={action('text')}
         />
     </div>
 ))
