@@ -21,7 +21,6 @@ describe('ClickOutside', () => {
     it('コンポーネントが定義されている', () => {
         expect(wrapper.exists()).toBe(true)
     })
-
     it('範囲外を押した時にonClickが呼ばれる', () => {
         mockOnClickOutside = jest.fn()
         wrapper = mountWithTheme(
