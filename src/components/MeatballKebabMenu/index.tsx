@@ -3,6 +3,7 @@ import styled from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
+import * as ClickOutside from '../../modules/ClickOutside'
 
 /**
  * Component
@@ -12,7 +13,7 @@ type Props = {
     iconSrc: string
     position: 'top' | 'bottom'
     listItems: Item[]
-    // onClick: (e: React.MouseEvent<HTMLDivElement>) => void
+    onClick: (e: React.MouseEvent) => void
 }
 
 type Item = {
@@ -23,36 +24,45 @@ type Item = {
 type MeatballMenuProps = {
     position: 'top' | 'bottom'
     listItems: Item[]
+    onClick: (e: React.MouseEvent) => void
 }
 
-export const MeatballMenu = ({ position, listItems }: MeatballMenuProps) => (
+export const MeatballMenu = ({
+    position,
+    listItems,
+    onClick
+}: MeatballMenuProps) => (
     <Component
         position={position}
         listItems={listItems}
         // TODO: アイコンをミートボールに変える
         iconSrc={IconFiles.icons.MenuV}
+        onClick={onClick}
     />
 )
 
 type KebabMenuProps = {
     position: 'top' | 'bottom'
     listItems: Item[]
+    onClick: (e: React.MouseEvent) => void
 }
 
-export const KebabMenu = ({ position, listItems }: KebabMenuProps) => (
+export const KebabMenu = ({ position, listItems, onClick }: KebabMenuProps) => (
     <Component
         position={position}
         listItems={listItems}
         iconSrc={IconFiles.icons.MenuV}
+        onClick={onClick}
     />
 )
 
 export const Component = React.memo<Props>(
-    ({ iconSrc, position, listItems }) => {
+    ({ iconSrc, position, listItems, onClick }) => {
         const [isShow, setIsShow] = React.useState<boolean>(false)
         const handleClick = React.useCallback(
-            (_: React.MouseEvent) => {
+            (e: React.MouseEvent) => {
                 setIsShow(!isShow)
+                onClick(e)
             },
             [isShow]
         )
@@ -60,7 +70,7 @@ export const Component = React.memo<Props>(
             const listClick = React.useCallback(
                 (e: React.MouseEvent) => {
                     listItem.onClick(e)
-                    handleClick(e)
+                    setIsShow(!isShow)
                 },
                 [isShow]
             )
@@ -76,14 +86,24 @@ export const Component = React.memo<Props>(
         }
 
         return (
-            <Outer>
-                <Menu className={position} onClick={handleClick}>
-                    <MenuItem svg={iconSrc} size="24px" />
-                </Menu>
-                <List className={`${position} ${!isShow ? 'hidden' : ''}`}>
-                    {listItems.map(renderListItem)}
-                </List>
-            </Outer>
+            <Wrap>
+                {/* eslint-disable-next-line react/jsx-no-bind */}
+                <ClickOutside.Component onClickOutside={() => setIsShow(false)}>
+                    <Menu
+                        data-test="menu"
+                        className={position}
+                        onClick={handleClick}
+                    >
+                        <MenuItem svg={iconSrc} size="24px" />
+                    </Menu>
+                    <List
+                        data-test="list"
+                        className={`${position} ${!isShow ? 'hidden' : ''}`}
+                    >
+                        {listItems.map(renderListItem)}
+                    </List>
+                </ClickOutside.Component>
+            </Wrap>
         )
     }
 )
@@ -91,9 +111,8 @@ export const Component = React.memo<Props>(
 /**
  * style
  */
-const Outer = styled.div`
+const Wrap = styled.div`
     position: relative;
-    height: 80vh;
 `
 const Menu = styled.div`
     cursor: pointer;

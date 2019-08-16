@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
-import * as MeatballKebabMenu from './index'
+import * as MeatballKebabMenu from './'
 import { text, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
@@ -18,6 +18,7 @@ storiesOf('Components|MeatballKebabMenu', module)
                         'top'
                     )}
                     listItems={menuItems}
+                    onClick={action('onClick')}
                 />
             </div>
         )
@@ -35,6 +36,7 @@ storiesOf('Components|MeatballKebabMenu', module)
                         'top'
                     )}
                     listItems={menuItems}
+                    onClick={action('onClick')}
                 />
             </div>
         )
