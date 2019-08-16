@@ -52,10 +52,10 @@ const Component = React.memo<Props>(props => {
 
 type Item = {
     text: string
-    selected?: string // 型には宣言しない方が良さげ?
 }
 
 type ItemProps = {
+    selected: string
     onClickItem: (text: string) => void
 } & Item
 
