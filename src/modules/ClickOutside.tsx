@@ -7,15 +7,9 @@ const eventListenerOption = {
 }
 
 type Props = {
-    onClickOutside?: (e: React.MouseEvent<unknown>) => void
-    inactive?: boolean
-    className?: string
+    onClickOutside: (e: React.MouseEvent<unknown>) => void
 }
-export const Component: React.FC<Props> = ({
-    onClickOutside,
-    className,
-    children
-}) => {
+export const Component: React.FC<Props> = ({ onClickOutside, children }) => {
     const divRef = React.useRef<HTMLDivElement>(null)
 
     const handle = (evt: React.MouseEvent<unknown>) => {
@@ -34,9 +28,5 @@ export const Component: React.FC<Props> = ({
         }
     }, [])
 
-    return (
-        <div className={className} ref={divRef}>
-            {children}
-        </div>
-    )
+    return <div ref={divRef}>{children}</div>
 }

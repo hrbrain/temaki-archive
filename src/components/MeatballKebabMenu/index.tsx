@@ -85,10 +85,13 @@ export const Component = React.memo<Props>(
             )
         }
 
+        const clickOutside = React.useCallback(() => {
+            setIsShow(false)
+        }, [isShow])
+
         return (
             <Wrap>
-                {/* eslint-disable-next-line react/jsx-no-bind */}
-                <ClickOutside.Component onClickOutside={() => setIsShow(false)}>
+                <ClickOutside.Component onClickOutside={clickOutside}>
                     <Menu
                         data-test="menu"
                         className={position}
@@ -113,6 +116,7 @@ export const Component = React.memo<Props>(
  */
 const Wrap = styled.div`
     position: relative;
+    height: 80vh;
 `
 const Menu = styled.div`
     cursor: pointer;
