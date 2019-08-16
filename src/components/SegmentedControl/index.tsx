@@ -5,56 +5,36 @@ import styled from '~/modules/theme'
  * Component
  */
 
-export type SegmentedControlItemType = {
-    text: string
-    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void
-}
-
-type SegmentedControlItemProps = {
-    selected: boolean
-} & SegmentedControlItemType
-
 export type Props = {
+    items: Item[]
     selectedIndex: number
-    segmentedControlItems: SegmentedControlItemType[]
+    onClickTab: (index: number) => void
 }
 
-const Component = React.memo<Props>(
-    ({ segmentedControlItems, selectedIndex }) => {
-        return (
-            <div>
-                {segmentedControlItems.map(
-                    renderSegmentedControlItem(selectedIndex)
-                )}
-            </div>
-        )
-    }
-)
+const Component = React.memo<Props>(({ items, selectedIndex, onClickTab }) => {
+    return <div>{items.map(renderItem(selectedIndex, onClickTab))}</div>
+})
 
-const renderSegmentedControlItem = (selectedIndex: number) => (
-    segmentedControlItem: SegmentedControlItemType,
-    index: number
-) => {
+export type Item = {
+    text: string
+}
+
+const renderItem = (
+    selectedIndex: number,
+    onClickTab: (index: number) => void
+) => (item: Item, key: number) => {
+    const handleClick = React.useCallback(() => onClickTab(key), [])
     return (
-        <SegmentedControlItem
-            data-test={`item${index}`}
-            selected={selectedIndex === index}
-            text={segmentedControlItem.text}
-            onClick={segmentedControlItem.onClick}
-            key={index}
-        />
+        <Box
+            data-test={`item${key}`}
+            selected={selectedIndex === key}
+            onClick={handleClick}
+            key={key}
+        >
+            {item.text}
+        </Box>
     )
 }
-
-export const SegmentedControlItem = React.memo<SegmentedControlItemProps>(
-    ({ text, selected, ...props }) => {
-        return (
-            <Box selected={selected} {...props}>
-                {text}
-            </Box>
-        )
-    }
-)
 
 Component.displayName = 'SegmentedControl'
 

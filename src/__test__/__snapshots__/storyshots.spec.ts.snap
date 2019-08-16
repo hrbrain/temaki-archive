@@ -635,16 +635,6 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|SegmentedControl atom 1`] = `
-<div
-  className="sc-jTzLTM bhhQsy"
-  onClick={[Function]}
-  selected={true}
->
-  テキスト要素
-</div>
-`;
-
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div

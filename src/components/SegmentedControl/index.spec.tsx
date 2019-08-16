@@ -1,34 +1,31 @@
 import * as Enzyme from 'enzyme'
 import * as React from 'react'
-// import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
 import * as SegmentedControl from './index'
 
 describe('SegmentedControl', () => {
     let wrapper: Enzyme.ReactWrapper
-    let mockOnClick: jest.Mock
-    let data: SegmentedControl.SegmentedControlItemType[]
+    let mockOnClickTab: jest.Mock
+    let data: SegmentedControl.Item[]
 
     beforeEach(() => {
-        mockOnClick = jest.fn()
+        mockOnClickTab = jest.fn()
         data = [
             {
-                text: '最初のタブ',
-                onClick: mockOnClick
+                text: '最初のタブ'
             },
             {
-                text: '真ん中のタブ',
-                onClick: mockOnClick
+                text: '真ん中のタブ'
             },
             {
-                text: '最後のタブ',
-                onClick: mockOnClick
+                text: '最後のタブ'
             }
         ]
         wrapper = mountWithTheme(
             <SegmentedControl.Component
                 selectedIndex={0}
-                segmentedControlItems={data}
+                items={data}
+                onClickTab={mockOnClickTab}
             />
         )
     })
@@ -39,6 +36,6 @@ describe('SegmentedControl', () => {
 
     it('should call onClick by users click', () => {
         wrapper.find('div[data-test="item0"]').simulate('click')
-        expect(mockOnClick).toHaveBeenCalled()
+        expect(mockOnClickTab).toHaveBeenCalled()
     })
 })
