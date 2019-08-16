@@ -19,20 +19,16 @@ type Props = {
 
 const Component = React.memo<Props>(props => {
     return (
-        <>
-            <p>
-                <Textarea
-                    value={props.value}
-                    placeholder={props.placeholder}
-                    minRows={props.minRows}
-                    maxRows={props.maxRows}
-                    errored={props.errored}
-                    onChange={props.onChange}
-                    onFocus={props.onFocus}
-                    onBlur={props.onBlur}
-                ></Textarea>
-            </p>
-        </>
+        <Textarea
+            value={props.value}
+            placeholder={props.placeholder}
+            minRows={props.minRows}
+            maxRows={props.maxRows}
+            errored={props.errored}
+            onChange={props.onChange}
+            onFocus={props.onFocus}
+            onBlur={props.onBlur}
+        />
     )
 })
 

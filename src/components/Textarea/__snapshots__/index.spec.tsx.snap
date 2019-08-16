@@ -109,27 +109,26 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
     onFocus={[MockFunction]}
     value="Testing Value"
   >
-    <p>
-      <Styled(TextareaAutosize)
-        onBlur={[MockFunction]}
-        onChange={[MockFunction]}
-        onFocus={[MockFunction]}
-        value="Testing Value"
-      >
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-bdVaJa",
-                "isStatic": false,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "
+    <Styled(TextareaAutosize)
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      onFocus={[MockFunction]}
+      value="Testing Value"
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
     border: 1px solid ",
-                  [Function],
-                  ";
+                [Function],
+                ";
     border-radius: 6px;
     width: 280px;
     padding: 8px;
@@ -140,58 +139,57 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
 
     &:focus {
         border-color: ",
-                  [Function],
-                  ";
+                [Function],
+                ";
     }
 
     border-color: ",
-                  [Function],
-                  ";
+                [Function],
+                ";
 ",
-                ],
-              },
-              "displayName": "Styled(TextareaAutosize)",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-bdVaJa",
-              "target": [Function],
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
+              ],
+            },
+            "displayName": "Styled(TextareaAutosize)",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": [Function],
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
           }
-          forwardedRef={null}
+        }
+        forwardedRef={null}
+        onBlur={[MockFunction]}
+        onChange={[MockFunction]}
+        onFocus={[MockFunction]}
+        value="Testing Value"
+      >
+        <TextareaAutosize
+          className="c0"
+          inputRef={[Function]}
           onBlur={[MockFunction]}
           onChange={[MockFunction]}
           onFocus={[MockFunction]}
+          onHeightChange={[Function]}
+          useCacheForDOMMeasurements={false}
           value="Testing Value"
         >
-          <TextareaAutosize
+          <textarea
             className="c0"
-            inputRef={[Function]}
             onBlur={[MockFunction]}
-            onChange={[MockFunction]}
+            onChange={[Function]}
             onFocus={[MockFunction]}
-            onHeightChange={[Function]}
-            useCacheForDOMMeasurements={false}
-            value="Testing Value"
-          >
-            <textarea
-              className="c0"
-              onBlur={[MockFunction]}
-              onChange={[Function]}
-              onFocus={[MockFunction]}
-              style={
-                Object {
-                  "height": 0,
-                }
+            style={
+              Object {
+                "height": 0,
               }
-              value="Testing Value"
-            />
-          </TextareaAutosize>
-        </StyledComponent>
-      </Styled(TextareaAutosize)>
-    </p>
+            }
+            value="Testing Value"
+          />
+        </TextareaAutosize>
+      </StyledComponent>
+    </Styled(TextareaAutosize)>
   </Textarea>
 </ThemeProvider>
 `;
