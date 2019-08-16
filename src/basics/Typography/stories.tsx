@@ -52,7 +52,7 @@ const TypoList: React.FC<{
 }
 
 const typoListItem = (sizes: { [key: string]: string }) => (key: string) => (
-    <li className="mt-2" style={{ fontSize: sizes[key] }}>
+    <li className="mt-2" style={{ fontSize: sizes[key] }} key={key}>
         {key} - {sizes[key]}
     </li>
 )

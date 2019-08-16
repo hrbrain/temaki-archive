@@ -574,7 +574,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
   tabIndex={1}
 >
   <div
-    className="sc-bxivhb hBuNrQ"
+    className="sc-htoDjs irgUaa sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -619,7 +619,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
   onClick={[Function]}
 >
   <div
-    className="sc-bxivhb hBuNrQ"
+    className="sc-gqjmRU cMbETE sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -648,11 +648,11 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fjdhpX CirgF"
+    className="sc-fjdhpX dwPHjM"
     data-test="info-toast"
   >
     <div
-      className="sc-bxivhb dUTGrc"
+      className="sc-cSHVUG jCopoF sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
