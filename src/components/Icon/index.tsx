@@ -16,6 +16,7 @@ export const Component = (props: Props) => (
         size={props.size}
         color={props.color}
         dangerouslySetInnerHTML={{ __html: props.svg }}
+        className={props.className}
     />
 )
 
