@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as MeatballKebabMenu from './'
+import * as ClickOutside from '../../modules/ClickOutside'
 import { text, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
@@ -20,6 +21,9 @@ storiesOf('Components|MeatballKebabMenu', module)
                     listItems={menuItems}
                     onClick={action('onClick')}
                 />
+                <ClickOutside.Component
+                    onClickOutside={action('onClickOutside')}
+                />
             </div>
         )
     })
@@ -37,6 +41,9 @@ storiesOf('Components|MeatballKebabMenu', module)
                     )}
                     listItems={menuItems}
                     onClick={action('onClick')}
+                />
+                <ClickOutside.Component
+                    onClickOutside={action('onClickOutside')}
                 />
             </div>
         )

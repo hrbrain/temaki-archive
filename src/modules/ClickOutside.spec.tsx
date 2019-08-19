@@ -6,13 +6,13 @@ import * as ClickOutside from './ClickOutside'
 
 describe('ClickOutside', () => {
     let wrapper: Enzyme.ReactWrapper
-    let mockOnClick: jest.Mock
+    let mockOnClickOutside: jest.Mock
 
     beforeEach(() => {
-        mockOnClick = jest.fn()
+        mockOnClickOutside = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
-                <ClickOutside.Component onClickOutside={mockOnClick} />
+                <ClickOutside.Component onClickOutside={mockOnClickOutside} />
             )
         })
     })
@@ -21,8 +21,10 @@ describe('ClickOutside', () => {
         expect(wrapper.exists()).toBe(true)
     })
 
+    //TODO: onClickOutsideが呼ばれているかのテスト
     // it('範囲外を押した時にonClickOutsideが呼ばれる', () => {
-    //     wrapper.simulate('click')
-    //     expect(mockOnClick).toHaveBeenCalled()
+    //     const clickOutside = wrapper.find('[data-test="click-outside"]')
+    //     clickOutside.simulate('click')
+    //     expect(mockOnClickOutside).toHaveBeenCalled()
     // })
 })
