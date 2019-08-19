@@ -2,9 +2,11 @@ import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
+import * as IconFiles from '~/lib/iconFiles'
+import 'jest-styled-components'
+
 import * as MeatballMenu from './index'
 import * as KebabMenu from './index'
-import * as IconFiles from '~/lib/iconFiles'
 
 describe('MeatballKebabMenu', () => {
     let wrapper: Enzyme.ReactWrapper
@@ -53,30 +55,18 @@ describe('MeatballKebabMenu', () => {
     })
 
     it('MenuのonClickが呼ばれる', () => {
-        wrapper.find('div[data-test="menu"]').simulate('click')
+        wrapper.find('div[data-test="menu-component"]').simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
     })
 
     it('ListItemのonClickが呼ばれる', () => {
-        wrapper.find('li[data-test="listItem0"]').simulate('click')
+        wrapper.find('li[data-test="list-item0"]').simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
     })
 
-    //TODO: MeatballMenuアイコンが表示されている
-    //TODO: KebabMenuアイコンが表示される
-
-    //TODO: 以下、CSSをテストするようにする
     it('Menuアイコンがtopに表示される', () => {
-        wrapper = mountWithTheme(
-            <MeatballMenu.Component
-                listItems={[{ item: 'dummy', onClick: mockOnClick }]}
-                iconSrc={IconFiles.icons.MenuV}
-                position={'top'}
-                onClick={mockOnClick}
-            />
-        )
-        const checkEl = wrapper.find('div[data-test="menu"]')
-        expect(checkEl).toHaveLength(1)
+        const checkEl = wrapper.find('div[data-test="menu-component"]')
+        expect(checkEl).toHaveStyleRule('top', '0', { modifier: '&.top' })
     })
     it('Menuアイコンがbottomに表示される', () => {
         wrapper = mountWithTheme(
@@ -87,24 +77,23 @@ describe('MeatballKebabMenu', () => {
                 onClick={mockOnClick}
             />
         )
-        const checkEl = wrapper.find('div[data-test="menu"]')
-        expect(checkEl).toHaveLength(1)
+        const checkEl = wrapper.find('div[data-test="menu-component"]')
+        expect(checkEl).toHaveStyleRule('bottom', '0', {
+            modifier: '&.bottom'
+        })
     })
 
-    it('リストがMenuアイコンの下に表示される', () => {
-        wrapper = mountWithTheme(
-            <MeatballMenu.Component
-                listItems={[{ item: 'dummy', onClick: mockOnClick }]}
-                iconSrc={IconFiles.icons.MenuV}
-                position={'top'}
-                onClick={mockOnClick}
-            />
-        )
-        const checkEl = wrapper.find('ul[data-test="list"]')
-        expect(checkEl).toHaveLength(1)
+    it('top時のリストが正常に表示される', () => {
+        const checkEl = wrapper.find('ul[data-test="list-component"]')
+        expect(checkEl).toHaveStyleRule('transform-origin', 'top', {
+            modifier: '&.top'
+        })
+        expect(checkEl).toHaveStyleRule('top', '24px', {
+            modifier: '&.top'
+        })
     })
 
-    it('リストがMenuアイコンの上に表示される', () => {
+    it('bottom時のリストが正常に表示される', () => {
         wrapper = mountWithTheme(
             <MeatballMenu.Component
                 listItems={[{ item: 'dummy', onClick: mockOnClick }]}
@@ -113,7 +102,12 @@ describe('MeatballKebabMenu', () => {
                 onClick={mockOnClick}
             />
         )
-        const checkEl = wrapper.find('ul[data-test="list"]')
-        expect(checkEl).toHaveLength(1)
+        const checkEl = wrapper.find('ul[data-test="list-component"]')
+        expect(checkEl).toHaveStyleRule('transform-origin', 'bottom', {
+            modifier: '&.bottom'
+        })
+        expect(checkEl).toHaveStyleRule('bottom', '24px', {
+            modifier: '&.bottom'
+        })
     })
 })

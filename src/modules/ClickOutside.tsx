@@ -1,11 +1,5 @@
 import * as React from 'react'
 
-const eventListenerOption = {
-    once: false,
-    passive: true,
-    capture: true
-}
-
 type Props = {
     onClickOutside: (e: React.MouseEvent<unknown>) => void
 }
@@ -21,7 +15,7 @@ export const Component: React.FC<Props> = ({ onClickOutside, children }) => {
 
     React.useEffect(() => {
         // eslint-disable-next-line no-undef
-        document.addEventListener('click', handle as any, eventListenerOption)
+        document.addEventListener('click', handle as any, true)
         return () => {
             // eslint-disable-next-line no-undef
             document.removeEventListener('click', handle as any, true)

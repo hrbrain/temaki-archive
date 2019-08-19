@@ -21,7 +21,7 @@ describe('ClickOutside', () => {
         expect(wrapper.exists()).toBe(true)
     })
 
-    // it('onClickOutsideが呼ばれる', () => {
+    // it('範囲外を押した時にonClickOutsideが呼ばれる', () => {
     //     wrapper.simulate('click')
     //     expect(mockOnClick).toHaveBeenCalled()
     // })

@@ -76,7 +76,7 @@ export const Component = React.memo<Props>(
             )
             return (
                 <ListItem
-                    data-test={`listItem${index}`}
+                    data-test={`list-item${index}`}
                     onClick={listClick}
                     key={listItem.item}
                 >
@@ -91,16 +91,19 @@ export const Component = React.memo<Props>(
 
         return (
             <Wrap>
-                <ClickOutside.Component onClickOutside={clickOutside}>
+                <ClickOutside.Component
+                    data-test="click-outside"
+                    onClickOutside={clickOutside}
+                >
                     <Menu
-                        data-test="menu"
+                        data-test="menu-component"
                         className={position}
                         onClick={handleClick}
                     >
                         <MenuItem svg={iconSrc} size="24px" />
                     </Menu>
                     <List
-                        data-test="list"
+                        data-test="list-component"
                         className={`${position} ${!isShow ? 'hidden' : ''}`}
                     >
                         {listItems.map(renderListItem)}
@@ -121,13 +124,12 @@ const Wrap = styled.div`
 const Menu = styled.div`
     cursor: pointer;
     position: absolute;
+    right: 0;
     &.top {
         top: 0;
-        right: 0;
     }
     &.bottom {
         bottom: 0;
-        right: 0;
     }
 `
 const MenuItem = styled(Icon.Component)``
@@ -144,7 +146,7 @@ const List = styled.ul`
     transition: 0.2s;
     visibility: visible;
     transform: scaleY(1);
-    $position = top;
+    position: top;
     &.top {
         transform-origin: top;
         top: 24px;
