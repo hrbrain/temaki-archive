@@ -10,10 +10,10 @@ describe('ClickOutside', () => {
     let mockOnClickOutside: jest.Mock
 
     beforeEach(() => {
-        mockOnClick = jest.fn()
+        mockOnClickOutside = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
-                <ClickOutside.Component onClickOutside={mockOnClick} />
+                <ClickOutside.Component onClickOutside={mockOnClickOutside} />
             )
         })
     })
