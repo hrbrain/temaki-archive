@@ -8,6 +8,7 @@ type Props = {
     placeholder?: string
     items: Item[]
     selected: string
+    isError: boolean
     width: number
     onClickItem: (text: string) => void
 }
@@ -22,7 +23,11 @@ const Component = React.memo<Props>(props => {
     return (
         <div>
             <Outer width={props.width}>
-                <P isVisible={isVisible} onClick={handleClick}>
+                <P
+                    isVisible={isVisible}
+                    isError={props.isError}
+                    onClick={handleClick}
+                >
                     {props.selected !== '' ? (
                         <Text width={props.width}>{props.selected}</Text>
                     ) : (
@@ -95,15 +100,25 @@ const DropDownIcon = styled(Icon.Component)`
     float: right;
 `
 
-const P = styled.p<{ isVisible: boolean }>`
+type PType = {
+    isVisible: boolean
+    isError: boolean
+}
+
+const P = styled.p<PType>`
     position: relative;
     display: flex;
     padding: 12px;
     border: 1px solid
-        ${props =>
-            props.isVisible
-                ? props.theme.colors.utilities.highlightGreen
-                : props.theme.colors.grayScale.S10};
+        ${props => {
+            if (props.isError) {
+                return props.theme.colors.utilities.red
+            } else if (props.isVisible) {
+                return props.theme.colors.utilities.highlightGreen
+            } else {
+                return props.theme.colors.grayScale.S10
+            }
+        }};
     border-radius: 6px;
     user-select: none;
     font-size: 14px;

@@ -1,4 +1,4 @@
-import { text, number, select } from '@storybook/addon-knobs'
+import { text, number, select, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
@@ -29,6 +29,7 @@ storiesOf('Components|Dropdown', module).add('Single', () => (
                 },
                 ''
             )}
+            isError={boolean('isError', false)}
             width={number('width', 200)}
             onClickItem={action('text')}
         />
