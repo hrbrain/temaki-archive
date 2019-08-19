@@ -23,22 +23,31 @@ const Component = React.memo<Props>(props => {
     return (
         <div>
             <Outer width={props.width}>
-                <P
+                <Div
+                    data-test="body"
                     isVisible={isVisible}
                     isError={props.isError}
                     onClick={handleClick}
                 >
                     {props.selected !== '' ? (
-                        <Text width={props.width}>{props.selected}</Text>
+                        <Text data-test="selected" width={props.width}>
+                            {props.selected}
+                        </Text>
                     ) : (
-                        <Text width={props.width}>{props.placeholder}</Text>
+                        <Text data-test="placeholder" width={props.width}>
+                            {props.placeholder}
+                        </Text>
                     )}
                     <DropDownIcon
                         svg={IconFiles.icons.DropdownOff}
                         size="24px"
                     ></DropDownIcon>
-                </P>
-                <Ul width={props.width} className={!isVisible ? 'hide' : ''}>
+                </Div>
+                <Ul
+                    data-test="ul"
+                    width={props.width}
+                    className={!isVisible ? 'hide' : ''}
+                >
                     {props.items.map((item, index) => {
                         return (
                             <Item
@@ -55,7 +64,7 @@ const Component = React.memo<Props>(props => {
     )
 })
 
-type Item = {
+export type Item = {
     text: string
 }
 
@@ -105,7 +114,7 @@ type PType = {
     isError: boolean
 }
 
-const P = styled.p<PType>`
+const Div = styled.div<PType>`
     position: relative;
     display: flex;
     padding: 12px;

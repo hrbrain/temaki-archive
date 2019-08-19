@@ -599,12 +599,14 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
       className="sc-dnqmqq kXhBFz"
       width={200}
     >
-      <p
+      <div
         className="sc-gZMcBi ivqYrB"
+        data-test="body"
         onClick={[Function]}
       >
         <div
           className="sc-gqjmRU jBAKkK"
+          data-test="placeholder"
           width={200}
         >
           選択してください
@@ -618,9 +620,10 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
           }
           size="24px"
         />
-      </p>
+      </div>
       <ul
         className="hide sc-VigVT ccPisT"
+        data-test="ul"
         width={200}
       >
         <li
