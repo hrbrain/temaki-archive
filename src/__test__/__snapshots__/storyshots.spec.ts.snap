@@ -622,7 +622,7 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
         />
       </div>
       <ul
-        className="hide sc-VigVT ccPisT"
+        className="hide sc-VigVT dFTYcy"
         data-test="ul"
         width={200}
       >

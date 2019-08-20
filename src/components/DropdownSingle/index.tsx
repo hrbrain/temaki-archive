@@ -147,6 +147,7 @@ const Ul = styled.ul<{ width: number }>`
     margin-top: 4px;
     box-shadow: ${props => props.theme.shadows.L5};
     width: ${props => props.width}px;
+    max-width: 262px;
     max-height: 204px;
     overflow: auto;
     visibility: visible;
