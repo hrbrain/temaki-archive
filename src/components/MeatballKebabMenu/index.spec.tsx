@@ -110,4 +110,14 @@ describe('MeatballKebabMenu', () => {
             modifier: '&.bottom'
         })
     })
+
+    it('Listのhiddenが正常に作動する', () => {
+        const checkEl = wrapper.find('ul[data-test="list-component"]')
+        expect(checkEl).toHaveStyleRule('visibility', 'hidden', {
+            modifier: '&.hidden'
+        })
+        expect(checkEl).toHaveStyleRule('transform', 'scaleY(0)', {
+            modifier: '&.hidden'
+        })
+    })
 })
