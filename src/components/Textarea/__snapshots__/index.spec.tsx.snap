@@ -60,11 +60,20 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
         },
       },
       "shadows": Object {
-        "L1": "0 0 2px 0 rgba(0, 0, 0, 0.16)",
-        "L2": "0 1px 3px 0 rgba(0, 0, 0, 0.16)",
-        "L3": "0 2px 5px 0 rgba(0, 0, 0, 0.16)",
-        "L4": "0 3px 8px 0 rgba(0, 0, 0, 0.16)",
-        "L5": "0 5px 11px 0 rgba(0, 0, 0, 0.16)",
+        "boxShadow": Object {
+          "L1": "0 0 2px 0 rgba(0, 0, 0, 0.16)",
+          "L2": "0 1px 3px 0 rgba(0, 0, 0, 0.16)",
+          "L3": "0 2px 5px 0 rgba(0, 0, 0, 0.16)",
+          "L4": "0 3px 8px 0 rgba(0, 0, 0, 0.16)",
+          "L5": "0 5px 11px 0 rgba(0, 0, 0, 0.16)",
+        },
+        "dropShadow": Object {
+          "L1": "0 0 2px rgba(0, 0, 0, 0.16)",
+          "L2": "0 1px 3px rgba(0, 0, 0, 0.16)",
+          "L3": "0 2px 5px rgba(0, 0, 0, 0.16)",
+          "L4": "0 3px 8px rgba(0, 0, 0, 0.16)",
+          "L5": "0 5px 11px rgba(0, 0, 0, 0.16)",
+        },
       },
       "typography": Object {
         "pc": Object {
