@@ -91,10 +91,7 @@ export const Component = React.memo<Props>(
 
         return (
             <Wrap>
-                <ClickOutside.Component
-                    data-test="click-outside"
-                    onClickOutside={clickOutside}
-                >
+                <ClickOutside.Component onClickOutside={clickOutside}>
                     <Menu
                         data-test="menu-component"
                         className={position}
