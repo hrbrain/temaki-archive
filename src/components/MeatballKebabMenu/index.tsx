@@ -54,6 +54,27 @@ export const KebabMenu = ({ position, listItems, onClick }: KebabMenuProps) => (
         onClick={onClick}
     />
 )
+const renderListItem = (
+    isShow: boolean,
+    setIsShow: (value: boolean) => void
+) => (listItem: Item, index: number) => {
+    const listClick = React.useCallback(
+        (e: React.MouseEvent) => {
+            listItem.onClick(e)
+            setIsShow(!isShow)
+        },
+        [isShow]
+    )
+    return (
+        <ListItem
+            data-test={`list-item${index}`}
+            onClick={listClick}
+            key={listItem.item}
+        >
+            {listItem.item}
+        </ListItem>
+    )
+}
 
 export const Component = React.memo<Props>(
     ({ iconSrc, position, listItems, onClick }) => {
@@ -65,25 +86,6 @@ export const Component = React.memo<Props>(
             },
             [isShow]
         )
-        const renderListItem = (listItem: Item, index: number) => {
-            const listClick = React.useCallback(
-                (e: React.MouseEvent) => {
-                    listItem.onClick(e)
-                    setIsShow(!isShow)
-                },
-                [isShow]
-            )
-            return (
-                <ListItem
-                    data-test={`list-item${index}`}
-                    onClick={listClick}
-                    key={listItem.item}
-                >
-                    {listItem.item}
-                </ListItem>
-            )
-        }
-
         const clickOutside = React.useCallback(() => {
             setIsShow(false)
         }, [isShow])
@@ -105,7 +107,7 @@ export const Component = React.memo<Props>(
                         data-test="list-component"
                         className={`${position} ${!isShow ? 'hidden' : ''}`}
                     >
-                        {listItems.map(renderListItem)}
+                        {listItems.map(renderListItem(isShow, setIsShow))}
                     </List>
                 </ClickOutside.Component>
             </Wrap>
