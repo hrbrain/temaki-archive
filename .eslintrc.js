@@ -3,6 +3,7 @@ module.exports = {
   plugins: [
     "eslint-plugin-prettier",
     "@typescript-eslint",
+    'react',
     "eslint-plugin-import",
     "jest"
   ],
