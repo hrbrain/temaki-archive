@@ -21,47 +21,45 @@ const Component = React.memo<Props>(props => {
     }, [isVisible])
 
     return (
-        <div>
-            <Outer width={props.width}>
-                <Div
-                    data-test="body"
-                    isVisible={isVisible}
-                    isError={props.isError}
-                    onClick={handleClick}
-                >
-                    {props.selected !== '' ? (
-                        <Text data-test="selected" width={props.width}>
-                            {props.selected}
-                        </Text>
-                    ) : (
-                        <Text data-test="placeholder" width={props.width}>
-                            {props.placeholder}
-                        </Text>
-                    )}
-                    <DropDownIcon
-                        className={isVisible ? 'visible' : ''}
-                        svg={IconFiles.icons.DropdownOff}
-                        size="24px"
-                    ></DropDownIcon>
-                </Div>
-                <Ul
-                    data-test="ul"
-                    width={props.width}
-                    className={!isVisible ? 'hide' : ''}
-                >
-                    {props.items.map((item, index) => {
-                        return (
-                            <Item
-                                text={item.text}
-                                key={index}
-                                selected={props.selected}
-                                onClickItem={props.onClickItem}
-                            />
-                        )
-                    })}
-                </Ul>
-            </Outer>
-        </div>
+        <Outer width={props.width}>
+            <Div
+                data-test="body"
+                isVisible={isVisible}
+                isError={props.isError}
+                onClick={handleClick}
+            >
+                {props.selected !== '' ? (
+                    <Text data-test="selected" width={props.width}>
+                        {props.selected}
+                    </Text>
+                ) : (
+                    <Text data-test="placeholder" width={props.width}>
+                        {props.placeholder}
+                    </Text>
+                )}
+                <DropDownIcon
+                    className={isVisible ? 'visible' : ''}
+                    svg={IconFiles.icons.DropdownOff}
+                    size="24px"
+                ></DropDownIcon>
+            </Div>
+            <Ul
+                data-test="ul"
+                width={props.width}
+                className={!isVisible ? 'hide' : ''}
+            >
+                {props.items.map((item, index) => {
+                    return (
+                        <Item
+                            text={item.text}
+                            key={index}
+                            selected={props.selected}
+                            onClickItem={props.onClickItem}
+                        />
+                    )
+                })}
+            </Ul>
+        </Outer>
     )
 })
 

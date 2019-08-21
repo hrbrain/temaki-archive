@@ -526,9 +526,17 @@ Array [
 ]
 `;
 
+exports[`Storyshots Components|Badge all 1`] = `
+<div
+  className="sc-bwzfXH GIbIi"
+>
+  10
+</div>
+`;
+
 exports[`Storyshots Components|Button Box 1`] = `
 <button
-  className="sc-bwzfXH hbwYjg"
+  className="sc-htpNat fRwifO"
   onClick={[Function]}
   type="box"
 >
@@ -538,7 +546,7 @@ exports[`Storyshots Components|Button Box 1`] = `
 
 exports[`Storyshots Components|Button Circle 1`] = `
 <button
-  className="sc-bxivhb dTZHoP"
+  className="sc-ifAKCX cvHGqt"
   onClick={[Function]}
   type="circle"
 />
@@ -546,11 +554,11 @@ exports[`Storyshots Components|Button Circle 1`] = `
 
 exports[`Storyshots Components|Button Component 1`] = `
 <button
-  className="sc-ifAKCX kMIbCi"
+  className="sc-EHOje dOmtJl"
   onClick={[Function]}
 >
   <span
-    className="sc-EHOje fCosAy"
+    className="sc-bZQynM hzvjZm"
     data-test="text-button-child"
   >
     Show filters
@@ -560,13 +568,13 @@ exports[`Storyshots Components|Button Component 1`] = `
 
 exports[`Storyshots Components|Checkbox all 1`] = `
 <div
-  className="sc-bZQynM gvqFDV"
+  className="sc-gzVnrw iyQuzR"
   data-test="nocheck-box"
   onClick={[Function]}
   tabIndex={1}
 >
   <div
-    className="sc-gzVnrw kKjfhJ sc-htpNat ckCquo"
+    className="sc-htoDjs irgUaa sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -575,44 +583,55 @@ exports[`Storyshots Components|Checkbox all 1`] = `
     size="24px"
   />
   <span
-    className="sc-htoDjs cZZVxc"
+    className="sc-dnqmqq gZhRLK"
   >
     Checkbox
   </span>
 </div>
 `;
 
-exports[`Storyshots Components|Component Standard 1`] = `
-<p
-  className="sc-cSHVUG jyVBEU"
->
-  Hello
-</p>
-`;
-
 exports[`Storyshots Components|DropdownSingle Single 1`] = `
 <div
   className="ml-20 mt-10"
 >
-  <div>
+  <div
+    className="sc-iwsKbI jVtRuE"
+    width={200}
+  >
     <div
-      className="sc-dnqmqq kXhBFz"
-      width={200}
+      className="sc-gqjmRU lhfkjG"
+      data-test="body"
+      onClick={[Function]}
     >
       <div
-        className="sc-gZMcBi ivqYrB"
-        data-test="body"
+        className="sc-VigVT laYLmt"
+        data-test="placeholder"
+        width={200}
+      >
+        選択してください
+      </div>
+      <div
+        className="sc-gZMcBi cxFcLK sc-bxivhb hBuNrQ"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+        size="24px"
+      />
+    </div>
+    <ul
+      className="hide sc-jTzLTM kRVgsA"
+      data-test="ul"
+      width={200}
+    >
+      <li
+        className="sc-fjdhpX LflDN"
         onClick={[Function]}
       >
         <div
-          className="sc-gqjmRU jBAKkK"
-          data-test="placeholder"
-          width={200}
-        >
-          選択してください
-        </div>
-        <div
-          className="sc-iwsKbI iadtKx sc-htpNat ckCquo"
+          className="sc-bxivhb eaqBKs"
+          color="rgb(234, 234, 234)"
           dangerouslySetInnerHTML={
             Object {
               "__html": undefined,
@@ -620,141 +639,120 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
           }
           size="24px"
         />
-      </div>
-      <ul
-        className="hide sc-VigVT dFTYcy"
-        data-test="ul"
-        width={200}
+        <div
+          className="sc-jzJRlG jlBakv"
+        >
+          りんご
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX LflDN"
+        onClick={[Function]}
       >
-        <li
-          className="sc-jTzLTM hwGAqf"
-          onClick={[Function]}
-        >
-          <div
-            className="sc-htpNat PgUyq"
-            color="rgb(234, 234, 234)"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
+        <div
+          className="sc-bxivhb eaqBKs"
+          color="rgb(234, 234, 234)"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
             }
-            size="24px"
-          />
-          <div
-            className="sc-fjdhpX hOpsjo"
-          >
-            りんご
-          </div>
-        </li>
-        <li
-          className="sc-jTzLTM hwGAqf"
-          onClick={[Function]}
+          }
+          size="24px"
+        />
+        <div
+          className="sc-jzJRlG jlBakv"
         >
-          <div
-            className="sc-htpNat PgUyq"
-            color="rgb(234, 234, 234)"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
+          いちご
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX LflDN"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-bxivhb eaqBKs"
+          color="rgb(234, 234, 234)"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
             }
-            size="24px"
-          />
-          <div
-            className="sc-fjdhpX hOpsjo"
-          >
-            いちご
-          </div>
-        </li>
-        <li
-          className="sc-jTzLTM hwGAqf"
-          onClick={[Function]}
+          }
+          size="24px"
+        />
+        <div
+          className="sc-jzJRlG jlBakv"
         >
-          <div
-            className="sc-htpNat PgUyq"
-            color="rgb(234, 234, 234)"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
+          バナナ
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX LflDN"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-bxivhb eaqBKs"
+          color="rgb(234, 234, 234)"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
             }
-            size="24px"
-          />
-          <div
-            className="sc-fjdhpX hOpsjo"
-          >
-            バナナ
-          </div>
-        </li>
-        <li
-          className="sc-jTzLTM hwGAqf"
-          onClick={[Function]}
+          }
+          size="24px"
+        />
+        <div
+          className="sc-jzJRlG jlBakv"
         >
-          <div
-            className="sc-htpNat PgUyq"
-            color="rgb(234, 234, 234)"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
+          メロン
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX LflDN"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-bxivhb eaqBKs"
+          color="rgb(234, 234, 234)"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
             }
-            size="24px"
-          />
-          <div
-            className="sc-fjdhpX hOpsjo"
-          >
-            メロン
-          </div>
-        </li>
-        <li
-          className="sc-jTzLTM hwGAqf"
-          onClick={[Function]}
+          }
+          size="24px"
+        />
+        <div
+          className="sc-jzJRlG jlBakv"
         >
-          <div
-            className="sc-htpNat PgUyq"
-            color="rgb(234, 234, 234)"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
+          さくらんぼ
+        </div>
+      </li>
+      <li
+        className="sc-fjdhpX LflDN"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-bxivhb eaqBKs"
+          color="rgb(234, 234, 234)"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
             }
-            size="24px"
-          />
-          <div
-            className="sc-fjdhpX hOpsjo"
-          >
-            さくらんぼ
-          </div>
-        </li>
-        <li
-          className="sc-jTzLTM hwGAqf"
-          onClick={[Function]}
+          }
+          size="24px"
+        />
+        <div
+          className="sc-jzJRlG jlBakv"
         >
-          <div
-            className="sc-htpNat PgUyq"
-            color="rgb(234, 234, 234)"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
-            }
-            size="24px"
-          />
-          <div
-            className="sc-fjdhpX hOpsjo"
-          >
-            ぶどう
-          </div>
-        </li>
-      </ul>
-    </div>
+          ぶどう
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 `;
 
 exports[`Storyshots Components|Input Number 1`] = `
 <input
-  className="sc-jzJRlG udjuM"
+  className="sc-cSHVUG eTeYvX"
   format="number"
   onBlur={[Function]}
   onChange={[Function]}
@@ -765,13 +763,121 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <input
-  className="sc-jzJRlG udjuM"
+  className="sc-cSHVUG eTeYvX"
   format="text"
   onBlur={[Function]}
   onChange={[Function]}
   placeholder="Enter your name"
   value=""
 />
+`;
+
+exports[`Storyshots Components|RadioButton all 1`] = `
+<div
+  className="sc-kAzzGY iawJTd"
+  data-test="radio-on"
+  onClick={[Function]}
+>
+  <div
+    className="sc-chPdSV jJdnqc sc-bxivhb hBuNrQ"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    size="24px"
+  />
+  <span
+    className="sc-kgoBCf dejYLC"
+  >
+    RadioButton
+  </span>
+</div>
+`;
+
+exports[`Storyshots Components|SegmentedControl molecule 1`] = `
+<div>
+  <div
+    className="sc-kGXeez bMvyhv"
+    data-test="item0"
+    onClick={[Function]}
+    selected={true}
+  >
+    最初のタブ
+  </div>
+  <div
+    className="sc-kGXeez ljXGZW"
+    data-test="item1"
+    onClick={[Function]}
+    selected={false}
+  >
+    真ん中のタブ
+  </div>
+  <div
+    className="sc-kGXeez ljXGZW"
+    data-test="item2"
+    onClick={[Function]}
+    selected={false}
+  >
+    最後のタブ
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|Text Standard 1`] = `
+<p
+  className="sc-kpOJdX bEypAF"
+>
+  Hello
+</p>
+`;
+
+exports[`Storyshots Components|Toast all 1`] = `
+<div
+  className="m-10"
+>
+  <div
+    className="sc-dxgOiQ hYbPAT"
+    data-test="info-toast"
+  >
+    <div
+      className="sc-jKJlTe hbmdhF sc-bxivhb dUTGrc"
+      color="white"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      size="24px"
+    />
+    <div>
+      <div
+        className="sc-eNQAEJ cqkHHO"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-hMqMXs fqiZEV"
+      >
+        ここにテキスト。
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|ToolTip all 1`] = `
+<div
+  className="sc-kEYyzF fvSgiQ"
+  data-test="tool-tip"
+  direction="top"
+>
+  <span
+    className="sc-kkGfuU ebVbbA"
+  >
+    テキスト要素
+  </span>
+</div>
 `;
 
 exports[`Storyshots basics|Icons index 1`] = `
@@ -1368,7 +1474,7 @@ exports[`Storyshots basics|Icons index 1`] = `
 
 exports[`Storyshots components|Icon Standard 1`] = `
 <div
-  className="sc-htpNat jIIpOP"
+  className="sc-bxivhb edXnbt"
   color="#333"
   dangerouslySetInnerHTML={
     Object {
