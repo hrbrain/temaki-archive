@@ -39,6 +39,7 @@ const Component = React.memo<Props>(props => {
                         </Text>
                     )}
                     <DropDownIcon
+                        className={isVisible ? 'visible' : ''}
                         svg={IconFiles.icons.DropdownOff}
                         size="24px"
                     ></DropDownIcon>
@@ -106,7 +107,14 @@ const Outer = styled.div<{ width: number }>`
 `
 
 const DropDownIcon = styled(Icon.Component)`
-    float: right;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s;
+    &.visible {
+        transform: translateY(-50%) rotate(180deg);
+    }
 `
 
 type PType = {
@@ -145,7 +153,7 @@ const Ul = styled.ul<{ width: number }>`
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     margin-top: 4px;
-    box-shadow: ${props => props.theme.shadows.L5};
+    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
     width: ${props => props.width}px;
     max-width: 262px;
     max-height: 204px;
