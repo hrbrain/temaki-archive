@@ -708,12 +708,12 @@ exports[`Storyshots Components|Toast all 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-kgoBCf bRenPA"
+  className="sc-kGXeez fWApiZ"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-kGXeez bkbGaT"
+    className="sc-kpOJdX hMuMW"
   >
     テキスト要素
   </span>
