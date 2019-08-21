@@ -35,8 +35,7 @@ export const MeatballMenu = ({
     <Component
         position={position}
         listItems={listItems}
-        // TODO: アイコンをミートボールに変える
-        iconSrc={IconFiles.icons.MenuV}
+        iconSrc={IconFiles.icons.MenuH}
         onClick={onClick}
     />
 )

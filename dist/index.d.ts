@@ -126,6 +126,7 @@ declare module 'hrb-temaki' {
         Link: string;
         List: string;
         Lock: string;
+        MenuH: string;
         MenuV: string;
         MoveDown: string;
         MoveUp: string;

@@ -37,6 +37,7 @@ import Like from '~/../icons/like.svg'
 import Link from '~/../icons/link.svg'
 import List from '~/../icons/list.svg'
 import Lock from '~/../icons/lock.svg'
+import MenuH from '~/../icons/menu-h.svg'
 import MenuV from '~/../icons/menu-v.svg'
 import MoveDown from '~/../icons/move-down.svg'
 import MoveUp from '~/../icons/move-up.svg'
@@ -105,6 +106,7 @@ export const icons = {
     Link,
     List,
     Lock,
+    MenuH,
     MenuV,
     MoveDown,
     MoveUp,
