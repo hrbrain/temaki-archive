@@ -635,9 +635,38 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components|SegmentedControl molecule 1`] = `
+<div>
+  <div
+    className="sc-jTzLTM bhhQsy"
+    data-test="item0"
+    onClick={[Function]}
+    selected={true}
+  >
+    最初のタブ
+  </div>
+  <div
+    className="sc-jTzLTM caquHq"
+    data-test="item1"
+    onClick={[Function]}
+    selected={false}
+  >
+    真ん中のタブ
+  </div>
+  <div
+    className="sc-jTzLTM caquHq"
+    data-test="item2"
+    onClick={[Function]}
+    selected={false}
+  >
+    最後のタブ
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-jTzLTM ghBcBb"
+  className="sc-fjdhpX kOgMIS"
 >
   Hello
 </p>
@@ -645,7 +674,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
-  className="sc-fjdhpX fGSgQU"
+  className="sc-jzJRlG khCkYP"
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -665,11 +694,11 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-jzJRlG dhAnmq"
+    className="sc-cSHVUG iULjLe"
     data-test="info-toast"
   >
     <div
-      className="sc-kAzzGY dmubin sc-bxivhb dUTGrc"
+      className="sc-chPdSV bqoDlL sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -680,17 +709,31 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-chPdSV hmzkpk"
+        className="sc-kgoBCf dCLCQg"
       >
         ラベル
       </div>
       <div
-        className="sc-kgoBCf dxDMFA"
+        className="sc-kGXeez hltfbw"
       >
         ここにテキスト。
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots Components|ToolTip all 1`] = `
+<div
+  className="sc-kpOJdX fdukvD"
+  data-test="tool-tip"
+  direction="top"
+>
+  <span
+    className="sc-dxgOiQ jsQVTx"
+  >
+    テキスト要素
+  </span>
 </div>
 `;
 
