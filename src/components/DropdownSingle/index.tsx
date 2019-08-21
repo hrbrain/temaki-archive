@@ -81,7 +81,7 @@ const Item = React.memo<ItemProps>(props => {
 
     return (
         <Li onClick={handleClick}>
-            <SingleCheckIcon
+            <Icon.Component
                 // TODO: svgをSingleCheckIconに変える
                 svg={IconFiles.icons.ChevronDown}
                 size="24px"
@@ -90,7 +90,7 @@ const Item = React.memo<ItemProps>(props => {
                         ? defaultTheme.colors.primary.default
                         : defaultTheme.colors.grayScale.S10
                 }
-            ></SingleCheckIcon>
+            />
             <LiText>{props.text}</LiText>
         </Li>
     )
@@ -169,10 +169,6 @@ const Ul = styled.ul<{ width: number }>`
         visibility: hidden;
         transform: scaley(0);
     }
-`
-const SingleCheckIcon = styled(Icon.Component)`
-    position: absolute;
-    right: 12px;
 `
 
 const Li = styled.li`

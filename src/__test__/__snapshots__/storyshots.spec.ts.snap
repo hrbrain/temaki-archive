@@ -566,7 +566,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
   tabIndex={1}
 >
   <div
-    className="sc-htpNat ckCquo"
+    className="sc-gzVnrw kKjfhJ sc-htpNat ckCquo"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -584,13 +584,13 @@ exports[`Storyshots Components|Checkbox all 1`] = `
 
 exports[`Storyshots Components|Component Standard 1`] = `
 <p
-  className="sc-kAzzGY gZREFR"
+  className="sc-cSHVUG jyVBEU"
 >
   Hello
 </p>
 `;
 
-exports[`Storyshots Components|Dropdown Single 1`] = `
+exports[`Storyshots Components|DropdownSingle Single 1`] = `
 <div
   className="ml-20 mt-10"
 >
@@ -612,7 +612,7 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
           選択してください
         </div>
         <div
-          className="sc-htpNat ckCquo"
+          className="sc-iwsKbI iadtKx sc-htpNat ckCquo"
           dangerouslySetInnerHTML={
             Object {
               "__html": undefined,
@@ -627,7 +627,7 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
         width={200}
       >
         <li
-          className="sc-fjdhpX LflDN"
+          className="sc-jTzLTM hwGAqf"
           onClick={[Function]}
         >
           <div
@@ -641,13 +641,13 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
             size="24px"
           />
           <div
-            className="sc-jzJRlG jlBakv"
+            className="sc-fjdhpX hOpsjo"
           >
             りんご
           </div>
         </li>
         <li
-          className="sc-fjdhpX LflDN"
+          className="sc-jTzLTM hwGAqf"
           onClick={[Function]}
         >
           <div
@@ -661,13 +661,13 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
             size="24px"
           />
           <div
-            className="sc-jzJRlG jlBakv"
+            className="sc-fjdhpX hOpsjo"
           >
             いちご
           </div>
         </li>
         <li
-          className="sc-fjdhpX LflDN"
+          className="sc-jTzLTM hwGAqf"
           onClick={[Function]}
         >
           <div
@@ -681,13 +681,13 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
             size="24px"
           />
           <div
-            className="sc-jzJRlG jlBakv"
+            className="sc-fjdhpX hOpsjo"
           >
             バナナ
           </div>
         </li>
         <li
-          className="sc-fjdhpX LflDN"
+          className="sc-jTzLTM hwGAqf"
           onClick={[Function]}
         >
           <div
@@ -701,13 +701,13 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
             size="24px"
           />
           <div
-            className="sc-jzJRlG jlBakv"
+            className="sc-fjdhpX hOpsjo"
           >
             メロン
           </div>
         </li>
         <li
-          className="sc-fjdhpX LflDN"
+          className="sc-jTzLTM hwGAqf"
           onClick={[Function]}
         >
           <div
@@ -721,13 +721,13 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
             size="24px"
           />
           <div
-            className="sc-jzJRlG jlBakv"
+            className="sc-fjdhpX hOpsjo"
           >
             さくらんぼ
           </div>
         </li>
         <li
-          className="sc-fjdhpX LflDN"
+          className="sc-jTzLTM hwGAqf"
           onClick={[Function]}
         >
           <div
@@ -741,7 +741,7 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
             size="24px"
           />
           <div
-            className="sc-jzJRlG jlBakv"
+            className="sc-fjdhpX hOpsjo"
           >
             ぶどう
           </div>
@@ -754,7 +754,7 @@ exports[`Storyshots Components|Dropdown Single 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <input
-  className="sc-cSHVUG eTeYvX"
+  className="sc-jzJRlG udjuM"
   format="number"
   onBlur={[Function]}
   onChange={[Function]}
@@ -765,7 +765,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <input
-  className="sc-cSHVUG eTeYvX"
+  className="sc-jzJRlG udjuM"
   format="text"
   onBlur={[Function]}
   onChange={[Function]}
