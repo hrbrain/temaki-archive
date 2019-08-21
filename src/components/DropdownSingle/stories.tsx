@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as DropdownSingle from './index'
 
-storiesOf('Components|Dropdown', module).add('Single', () => (
+storiesOf('Components|DropdownSingle', module).add('Single', () => (
     <div className="ml-20 mt-10">
         <DropdownSingle.Component
             placeholder={text('placeholder', '選択してください')}
