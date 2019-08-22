@@ -48,20 +48,25 @@ const Component = React.memo<Props>(props => {
                 width={props.width}
                 className={!isVisible ? 'hide' : ''}
             >
-                {props.items.map((item, index) => {
-                    return (
-                        <Item
-                            text={item.text}
-                            key={index}
-                            selected={props.selected}
-                            onClickItem={props.onClickItem}
-                        />
-                    )
-                })}
+                {props.items.map(renderItem(props.selected, props.onClickItem))}
             </ItemList>
         </Outer>
     )
 })
+
+const renderItem = (selected: string, onClickItem: (text: string) => void) => (
+    item: Item,
+    index: number
+) => {
+    return (
+        <Item
+            text={item.text}
+            key={index}
+            selected={selected}
+            onClickItem={onClickItem}
+        />
+    )
+}
 
 export type Item = {
     text: string
