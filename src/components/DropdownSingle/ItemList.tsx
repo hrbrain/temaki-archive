@@ -4,7 +4,7 @@ import styled, { defaultTheme } from '~/modules/theme'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
-type ItemListProps = {
+type Props = {
     items: Item[]
     selected: string
     onClickItem: (text: string) => void
@@ -12,7 +12,7 @@ type ItemListProps = {
     isVisible: boolean
 }
 
-const ItemListComponent = React.memo<ItemListProps>(
+export const Component = React.memo<Props>(
     ({ items, selected, onClickItem, className, isVisible }) => {
         return (
             <ul
@@ -76,29 +76,6 @@ const Item = React.memo<ItemProps>(props => {
 /**
  * Styles
  */
-
-export const ItemList = styled(ItemListComponent)<{ width: number }>`
-    position: absolute;
-    background: ${props => props.theme.colors.grayScale.S0};
-    border-radius: 6px;
-    margin-top: 4px;
-    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
-    width: ${props => props.width}px;
-    max-width: 262px;
-    max-height: 204px;
-    overflow: auto;
-    visibility: visible;
-    transform: scaley(1);
-    transform-origin: top;
-    transition: 0.2s;
-    &:last-child {
-        padding-bottom: 12px;
-    }
-    &.hide {
-        visibility: hidden;
-        transform: scaley(0);
-    }
-`
 
 const Li = styled.li`
     list-style-type: none;

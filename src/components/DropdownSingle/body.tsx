@@ -4,16 +4,16 @@ import styled from '~/modules/theme'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
-type BodyProps = {
+type Props = {
     placeholder: string
     selected: string
     isError: boolean
     width: number
     isVisible: boolean
-    handleClick: () => void
+    handleClick?: () => void
 }
 
-export const Component = React.memo<BodyProps>(
+export const Component = React.memo<Props>(
     ({ placeholder, selected, isError, width, isVisible, handleClick }) => {
         return (
             <Body

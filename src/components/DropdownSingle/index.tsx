@@ -31,7 +31,7 @@ const Component = React.memo<Props>(props => {
                 isVisible={isVisible}
                 handleClick={handleClick}
             />
-            <ItemList.ItemList {...props} isVisible={isVisible} />
+            <StyledItemList {...props} isVisible={isVisible} />
         </Outer>
     )
 })
@@ -48,4 +48,26 @@ const Outer = styled.div<{ width: number }>`
     display: inline-block;
     width: ${props => props.width}px;
     max-width: 262px;
+`
+export const StyledItemList = styled(ItemList.Component)<{ width: number }>`
+    position: absolute;
+    background: ${props => props.theme.colors.grayScale.S0};
+    border-radius: 6px;
+    margin-top: 4px;
+    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
+    width: ${props => props.width}px;
+    max-width: 262px;
+    max-height: 204px;
+    overflow: auto;
+    visibility: visible;
+    transform: scaley(1);
+    transform-origin: top;
+    transition: 0.2s;
+    &:last-child {
+        padding-bottom: 12px;
+    }
+    &.hide {
+        visibility: hidden;
+        transform: scaley(0);
+    }
 `
