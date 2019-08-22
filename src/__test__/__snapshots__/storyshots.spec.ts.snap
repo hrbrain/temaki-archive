@@ -605,7 +605,7 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
     >
       <div
         className="sc-VigVT laYLmt"
-        data-test="placeholder"
+        data-test="text"
         width={200}
       >
         選択してください

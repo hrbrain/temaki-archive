@@ -86,8 +86,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
                 onClickItem={mockOnClickItem}
             />
         )
-        expect(wrapper.find('div[data-test="placeholder"]')).toHaveLength(1)
-        expect(wrapper.find('div[data-test="selected"]')).toHaveLength(0)
+        expect(wrapper.find('div[data-test="text"]').text()).toBe('placeholder')
     })
 
     it('選択されたリストがある時に、本体に表示されている', () => {
@@ -101,8 +100,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
                 onClickItem={mockOnClickItem}
             />
         )
-        expect(wrapper.find('div[data-test="placeholder"]')).toHaveLength(0)
-        expect(wrapper.find('div[data-test="selected"]')).toHaveLength(1)
+        expect(wrapper.find('div[data-test="text"]').text()).toBe('りんご')
     })
 
     it('選択されたリストがある時に、チェックが入っている', () => {

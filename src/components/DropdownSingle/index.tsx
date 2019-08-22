@@ -28,15 +28,9 @@ const Component = React.memo<Props>(props => {
                 isError={props.isError}
                 onClick={handleClick}
             >
-                {props.selected !== '' ? (
-                    <Text data-test="selected" width={props.width}>
-                        {props.selected}
-                    </Text>
-                ) : (
-                    <Text data-test="placeholder" width={props.width}>
-                        {props.placeholder}
-                    </Text>
-                )}
+                <Text data-test="text" width={props.width}>
+                    {props.selected !== '' ? props.selected : props.placeholder}
+                </Text>
                 <DropDownIcon
                     className={isVisible ? 'visible' : ''}
                     svg={IconFiles.icons.DropdownOff}
