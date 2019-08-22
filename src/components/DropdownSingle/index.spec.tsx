@@ -39,13 +39,13 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
     })
 
     it('StateのisVisibleによってul要素が見え隠れする', () => {
-        expect(wrapper.find('ul[data-test="ul"].hide')).toHaveLength(1)
+        expect(wrapper.find('ul[data-test="itemList"].hide')).toHaveLength(1)
         wrapper.find('div[data-test="body"]').simulate('click')
-        expect(wrapper.find('ul[data-test="ul"].hide')).toHaveLength(0)
+        expect(wrapper.find('ul[data-test="itemList"].hide')).toHaveLength(0)
 
-        const ulEl = wrapper.find('ul[data-test="ul"]')
-        expect(ulEl).toHaveStyleRule('visibility', 'visible')
-        expect(ulEl).toHaveStyleRule('visibility', 'hidden', {
+        const itemListEl = wrapper.find('ul[data-test="itemList"]')
+        expect(itemListEl).toHaveStyleRule('visibility', 'visible')
+        expect(itemListEl).toHaveStyleRule('visibility', 'hidden', {
             modifier: '&.hide'
         })
     })
@@ -118,7 +118,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
         )
         expect(
             wrapper
-                .find('ul[data-test="ul"]')
+                .find('ul[data-test="itemList"]')
                 .children()
                 .first()
                 .find('div')

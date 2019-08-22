@@ -22,7 +22,7 @@ const Component = React.memo<Props>(props => {
 
     return (
         <Outer width={props.width}>
-            <Div
+            <Body
                 data-test="body"
                 isVisible={isVisible}
                 isError={props.isError}
@@ -41,10 +41,10 @@ const Component = React.memo<Props>(props => {
                     className={isVisible ? 'visible' : ''}
                     svg={IconFiles.icons.DropdownOff}
                     size="24px"
-                ></DropDownIcon>
-            </Div>
-            <Ul
-                data-test="ul"
+                />
+            </Body>
+            <ItemList
+                data-test="itemList"
                 width={props.width}
                 className={!isVisible ? 'hide' : ''}
             >
@@ -58,7 +58,7 @@ const Component = React.memo<Props>(props => {
                         />
                     )
                 })}
-            </Ul>
+            </ItemList>
         </Outer>
     )
 })
@@ -120,7 +120,7 @@ type PType = {
     isError: boolean
 }
 
-const Div = styled.div<PType>`
+const Body = styled.div<PType>`
     position: relative;
     display: flex;
     padding: 12px;
@@ -146,7 +146,7 @@ const Text = styled.div<{ width: number }>`
     max-width: 210px;
 `
 
-const Ul = styled.ul<{ width: number }>`
+const ItemList = styled.ul<{ width: number }>`
     position: absolute;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
