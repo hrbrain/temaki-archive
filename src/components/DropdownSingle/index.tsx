@@ -37,16 +37,31 @@ const Component = React.memo<Props>(props => {
                     size="24px"
                 />
             </Body>
-            <ItemList
-                data-test="itemList"
-                width={props.width}
-                className={!isVisible ? 'hide' : ''}
-            >
-                {props.items.map(renderItem(props.selected, props.onClickItem))}
-            </ItemList>
+            <ItemList {...props} isVisible={isVisible} />
         </Outer>
     )
 })
+
+type ItemListProps = {
+    items: Item[]
+    selected: string
+    onClickItem: (text: string) => void
+    className?: string
+    isVisible: boolean
+}
+
+const ItemListComponent = React.memo<ItemListProps>(
+    ({ items, selected, onClickItem, className, isVisible }) => {
+        return (
+            <ul
+                data-test="itemList"
+                className={`${className} ${isVisible ? '' : 'hide'}`}
+            >
+                {items.map(renderItem(selected, onClickItem))}
+            </ul>
+        )
+    }
+)
 
 const renderItem = (selected: string, onClickItem: (text: string) => void) => (
     item: Item,
@@ -144,7 +159,7 @@ const Text = styled.div<{ width: number }>`
     max-width: 210px;
 `
 
-const ItemList = styled.ul<{ width: number }>`
+const ItemList = styled(ItemListComponent)<{ width: number }>`
     position: absolute;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
