@@ -5,7 +5,7 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
 type Props = {
-    placeholder?: string
+    placeholder: string
     items: Item[]
     selected: string
     isError: boolean
@@ -22,14 +22,36 @@ const Component = React.memo<Props>(props => {
 
     return (
         <Outer width={props.width}>
+            <BodyComponent
+                {...props}
+                isVisible={isVisible}
+                handleClick={handleClick}
+            />
+            <ItemList {...props} isVisible={isVisible} />
+        </Outer>
+    )
+})
+
+type BodyProps = {
+    placeholder: string
+    selected: string
+    isError: boolean
+    width: number
+    isVisible: boolean
+    handleClick: () => void
+}
+
+const BodyComponent = React.memo<BodyProps>(
+    ({ placeholder, selected, isError, width, isVisible, handleClick }) => {
+        return (
             <Body
                 data-test="body"
                 isVisible={isVisible}
-                isError={props.isError}
+                isError={isError}
                 onClick={handleClick}
             >
-                <Text data-test="text" width={props.width}>
-                    {props.selected !== '' ? props.selected : props.placeholder}
+                <Text data-test="text" width={width}>
+                    {showTextBySelected(selected, placeholder)}
                 </Text>
                 <DropDownIcon
                     className={isVisible ? 'visible' : ''}
@@ -37,10 +59,16 @@ const Component = React.memo<Props>(props => {
                     size="24px"
                 />
             </Body>
-            <ItemList {...props} isVisible={isVisible} />
-        </Outer>
-    )
-})
+        )
+    }
+)
+
+const showTextBySelected = (selected: string, placeholder: string): string => {
+    if (selected === '') {
+        return placeholder
+    }
+    return selected
+}
 
 type ItemListProps = {
     items: Item[]
