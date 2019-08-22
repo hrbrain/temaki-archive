@@ -51,14 +51,7 @@ const Outer = styled.div<{ width: number }>`
 `
 export const StyledItemList = styled(ItemList.Component)<{ width: number }>`
     position: absolute;
-    background: ${props => props.theme.colors.grayScale.S0};
-    border-radius: 6px;
     margin-top: 4px;
-    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
-    width: ${props => props.width}px;
-    max-width: 262px;
-    max-height: 204px;
-    overflow: auto;
     visibility: visible;
     transform: scaley(1);
     transform-origin: top;

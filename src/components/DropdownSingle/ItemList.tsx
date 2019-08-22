@@ -10,17 +10,19 @@ type Props = {
     onClickItem: (text: string) => void
     className?: string
     isVisible: boolean
+    width: number
 }
 
 export const Component = React.memo<Props>(
-    ({ items, selected, onClickItem, className, isVisible }) => {
+    ({ items, selected, onClickItem, className, isVisible, width }) => {
         return (
-            <ul
+            <Ul
                 data-test="itemList"
                 className={`${className} ${isVisible ? '' : 'hide'}`}
+                width={width}
             >
                 {items.map(renderItem(selected, onClickItem))}
-            </ul>
+            </Ul>
         )
     }
 )
@@ -76,6 +78,16 @@ const Item = React.memo<ItemProps>(props => {
 /**
  * Styles
  */
+
+const Ul = styled.ul<{ width: number }>`
+    background: ${props => props.theme.colors.grayScale.S0};
+    border-radius: 6px;
+    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
+    width: ${props => props.width}px;
+    max-width: 262px;
+    max-height: 204px;
+    overflow: auto;
+`
 
 const Li = styled.li`
     list-style-type: none;
