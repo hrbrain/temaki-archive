@@ -142,7 +142,7 @@ const List = styled.ul`
     max-width: 140px;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
-    box-shadow: ${props => props.theme.shadows.L5};
+    box-shadow: ${props => props.theme.shadows.boxShadow.L5};
     padding: 12px;
     transition: 0.2s;
     visibility: visible;
