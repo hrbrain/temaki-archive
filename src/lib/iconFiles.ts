@@ -50,6 +50,7 @@ import Refresh from '~/../icons/refresh.svg'
 import Remove from '~/../icons/remove.svg'
 import Search from '~/../icons/search.svg'
 import Settings from '~/../icons/settings.svg'
+import SingleCheck from '~/../icons/single-check.svg'
 import SortList from '~/../icons/sort-list.svg'
 import SortUpDown from '~/../icons/sort-updown.svg'
 import Sort from '~/../icons/sort.svg'
@@ -117,6 +118,7 @@ export const icons = {
     Remove,
     Search,
     Settings,
+    SingleCheck,
     Sort,
     SortList,
     SortUpDown,

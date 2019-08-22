@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>basics/icon/common/single-check</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/single-check" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="outline" transform="translate(4.500000, 6.500000)" stroke="#333333" stroke-width="1.5">
+                <polyline id="Stroke-1" points="0.6 5.4 6.139 10.8 15 0"></polyline>
+            </g>
+            <g id="fill" transform="translate(4.500000, 5.500000)" fill="#333333" fill-rule="nonzero">
+                <polygon id="Stroke-1" points="6.07746936 10.6925773 14.4201808 0.524279818 15.5798192 1.47572018 6.20053064 12.9074227 0.076450993 6.93702555 1.12354901 5.86297445"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

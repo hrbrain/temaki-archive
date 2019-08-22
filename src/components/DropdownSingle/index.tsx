@@ -79,8 +79,7 @@ const Item = React.memo<ItemProps>(props => {
     return (
         <Li onClick={handleClick}>
             <Icon.Component
-                // TODO: svgをSingleCheckIconに変える
-                svg={IconFiles.icons.ChevronDown}
+                svg={IconFiles.icons.SingleCheck}
                 size="24px"
                 color={
                     props.text === props.selected

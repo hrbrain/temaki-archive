@@ -139,6 +139,7 @@ declare module 'hrb-temaki' {
         Remove: string;
         Search: string;
         Settings: string;
+        SingleCheck: string;
         Sort: string;
         SortList: string;
         SortUpDown: string;
