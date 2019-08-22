@@ -21,6 +21,7 @@ export const Component = React.memo<Props>(
                 isVisible={isVisible}
                 isError={isError}
                 onClick={handleClick}
+                width={width}
             >
                 <Text data-test="text" width={width}>
                     {showTextBySelected(selected, placeholder)}
@@ -57,13 +58,16 @@ const DropDownIcon = styled(Icon.Component)`
     }
 `
 
-type PType = {
+type BodyType = {
     isVisible: boolean
     isError: boolean
+    width: number
 }
 
-const Body = styled.div<PType>`
+const Body = styled.div<BodyType>`
     position: relative;
+    width: ${props => props.width}px;
+    max-width: 262px;
     display: flex;
     padding: 12px;
     border: 1px solid

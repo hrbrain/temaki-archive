@@ -25,14 +25,14 @@ const Component = React.memo<Props>(props => {
     }, [isVisible])
 
     return (
-        <Outer width={props.width}>
+        <div>
             <Body.Component
                 {...props}
                 isVisible={isVisible}
                 handleClick={handleClick}
             />
             <StyledItemList {...props} isVisible={isVisible} />
-        </Outer>
+        </div>
     )
 })
 
@@ -44,12 +44,7 @@ export { Component }
  * Styles
  */
 
-const Outer = styled.div<{ width: number }>`
-    display: inline-block;
-    width: ${props => props.width}px;
-    max-width: 262px;
-`
-export const StyledItemList = styled(ItemList.Component)<{ width: number }>`
+const StyledItemList = styled(ItemList.Component)<{ width: number }>`
     position: absolute;
     margin-top: 4px;
     visibility: visible;

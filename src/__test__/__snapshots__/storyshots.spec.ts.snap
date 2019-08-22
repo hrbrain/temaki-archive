@@ -595,8 +595,9 @@ exports[`Storyshots Components|DropdownSingle Body 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-gZMcBi ivqYrB"
+    className="sc-gZMcBi RAKFt"
     data-test="body"
+    width={200}
   >
     <div
       className="sc-gqjmRU jBAKkK"
@@ -755,14 +756,12 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
 <div
   className="ml-20 mt-10"
 >
-  <div
-    className="sc-jzJRlG cRRsPt"
-    width={200}
-  >
+  <div>
     <div
-      className="sc-gZMcBi ivqYrB"
+      className="sc-gZMcBi RAKFt"
       data-test="body"
       onClick={[Function]}
+      width={200}
     >
       <div
         className="sc-gqjmRU jBAKkK"
@@ -782,7 +781,7 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
       />
     </div>
     <ul
-      className="sc-cSHVUG dzcdEx hide sc-VigVT hqILKA"
+      className="sc-jzJRlG hjQZkV hide sc-VigVT hqILKA"
       data-test="itemList"
       width={200}
     >
@@ -913,7 +912,7 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <input
-  className="sc-kAzzGY hdvUeL"
+  className="sc-cSHVUG eTeYvX"
   format="number"
   onBlur={[Function]}
   onChange={[Function]}
@@ -924,7 +923,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <input
-  className="sc-kAzzGY hdvUeL"
+  className="sc-cSHVUG eTeYvX"
   format="text"
   onBlur={[Function]}
   onChange={[Function]}
@@ -935,12 +934,12 @@ exports[`Storyshots Components|Input Text 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
-  className="sc-chPdSV fBDjIa"
+  className="sc-kAzzGY iawJTd"
   data-test="radio-on"
   onClick={[Function]}
 >
   <div
-    className="sc-kgoBCf ffZWUc sc-bxivhb hBuNrQ"
+    className="sc-chPdSV jJdnqc sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -949,7 +948,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-kGXeez eIVbjQ"
+    className="sc-kgoBCf dejYLC"
   >
     RadioButton
   </span>
@@ -959,7 +958,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div
-    className="sc-kpOJdX ZbSyl"
+    className="sc-kGXeez bMvyhv"
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -967,7 +966,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
-    className="sc-kpOJdX iALtrH"
+    className="sc-kGXeez ljXGZW"
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -975,7 +974,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
-    className="sc-kpOJdX iALtrH"
+    className="sc-kGXeez ljXGZW"
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -987,7 +986,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-dxgOiQ fTiTEf"
+  className="sc-kpOJdX bEypAF"
 >
   Hello
 </p>
@@ -998,11 +997,11 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-ckVGcZ eCGcLH"
+    className="sc-dxgOiQ hYbPAT"
     data-test="info-toast"
   >
     <div
-      className="sc-eNQAEJ geBvMq sc-bxivhb dUTGrc"
+      className="sc-jKJlTe hbmdhF sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1013,12 +1012,12 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-hMqMXs ddPctq"
+        className="sc-eNQAEJ cqkHHO"
       >
         ラベル
       </div>
       <div
-        className="sc-kEYyzF jZObfQ"
+        className="sc-hMqMXs fqiZEV"
       >
         ここにテキスト。
       </div>
@@ -1029,12 +1028,12 @@ exports[`Storyshots Components|Toast all 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-kkGfuU evUrmp"
+  className="sc-kEYyzF fvSgiQ"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-iAyFgw hgfNQS"
+    className="sc-kkGfuU ebVbbA"
   >
     テキスト要素
   </span>
