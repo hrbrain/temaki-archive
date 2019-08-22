@@ -574,7 +574,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
   tabIndex={1}
 >
   <div
-    className="sc-bxivhb hBuNrQ"
+    className="sc-htoDjs irgUaa sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -619,7 +619,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
   onClick={[Function]}
 >
   <div
-    className="sc-bxivhb hBuNrQ"
+    className="sc-gqjmRU cMbETE sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -635,30 +635,59 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components|SegmentedControl molecule 1`] = `
+<div>
+  <div
+    className="sc-jTzLTM bhhQsy"
+    data-test="item0"
+    onClick={[Function]}
+    selected={true}
+  >
+    最初のタブ
+  </div>
+  <div
+    className="sc-jTzLTM caquHq"
+    data-test="item1"
+    onClick={[Function]}
+    selected={false}
+  >
+    真ん中のタブ
+  </div>
+  <div
+    className="sc-jTzLTM caquHq"
+    data-test="item2"
+    onClick={[Function]}
+    selected={false}
+  >
+    最後のタブ
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components|Switch all 1`] = `
 <div
   className="m-10"
 >
   <div
-    className="sc-jTzLTM deYMuB"
+    className="sc-fjdhpX zvvjh"
     data-test="switch-off"
   >
     <span
-      className="sc-cSHVUG jvnFaQ"
+      className="sc-kAzzGY lguzrf"
     >
       OFF
     </span>
     <div
-      className="sc-fjdhpX fxFJfa"
+      className="sc-jzJRlG iasHUC"
       data-test="switch"
       onClick={[Function]}
     >
       <span
-        className="sc-jzJRlG fHPVoP"
+        className="sc-cSHVUG bZcjIH"
       />
     </div>
     <span
-      className="sc-cSHVUG jvnFaQ"
+      className="sc-kAzzGY lguzrf"
     >
       ON
     </span>
@@ -668,10 +697,75 @@ exports[`Storyshots Components|Switch all 1`] = `
 
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-kAzzGY gZREFR"
+  className="sc-chPdSV jsBeIl"
 >
   Hello
 </p>
+`;
+
+exports[`Storyshots Components|Textarea all 1`] = `
+<textarea
+  className="sc-kgoBCf gKhlsk"
+  errored={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  placeholder="文字を入力してください。"
+  style={
+    Object {
+      "height": 0,
+    }
+  }
+  value=""
+/>
+`;
+
+exports[`Storyshots Components|Toast all 1`] = `
+<div
+  className="m-10"
+>
+  <div
+    className="sc-kGXeez gmLjOY"
+    data-test="info-toast"
+  >
+    <div
+      className="sc-dxgOiQ kysTPe sc-bxivhb dUTGrc"
+      color="white"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      size="24px"
+    />
+    <div>
+      <div
+        className="sc-ckVGcZ fsTPzX"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-jKJlTe iawdKt"
+      >
+        ここにテキスト。
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|ToolTip all 1`] = `
+<div
+  className="sc-eNQAEJ jMyCpS"
+  data-test="tool-tip"
+  direction="top"
+>
+  <span
+    className="sc-hMqMXs ceaEKY"
+  >
+    テキスト要素
+  </span>
+</div>
 `;
 
 exports[`Storyshots basics|Icons index 1`] = `
