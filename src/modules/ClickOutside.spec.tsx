@@ -1,7 +1,7 @@
 import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
-import { mountWithTheme } from '~/__test__/utils'
+import { mountWithTheme } from '../__test__/utils'
 import * as ClickOutside from './ClickOutside'
 
 describe('ClickOutside', () => {

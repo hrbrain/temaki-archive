@@ -1,8 +1,9 @@
+/* eslint-disable import/no-duplicates */
 import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
-import { mountWithTheme } from '~/__test__/utils'
-import * as IconFiles from '~/lib/iconFiles'
+import { mountWithTheme } from '../../__test__/utils'
+import * as IconFiles from '../../lib/iconFiles'
 import 'jest-styled-components'
 
 import * as MeatballMenu from './index'
