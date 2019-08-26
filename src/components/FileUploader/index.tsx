@@ -3,7 +3,7 @@ import styled from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
-
+import { file } from '@babel/types'
 /**
  * Utils
  */
@@ -16,6 +16,7 @@ const iconSize = '24px'
 type Props = {
     FileUpload: (file: File) => void
     onClick: (e: React.MouseEvent) => void
+    accept?: string
 }
 
 interface DangerFileList extends FileList {
@@ -26,41 +27,69 @@ function hasFile(files: FileList | null): files is DangerFileList {
     return !!files && files.length > 0
 }
 hasFile
+export const Component = React.memo<Props>(
+    ({ FileUpload, onClick, accept }) => {
+        const [src, setSrc] = React.useState<File | null>(null)
+        const ref = React.useRef<HTMLInputElement>(null)
 
-export const Component = React.memo<Props>(({ FileUpload, onClick }) => {
-    const [src, setSrc] = React.useState<File | null>()
-    const handleChange = () => (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files && e.target.files.item(0)) {
-            setSrc(e.target.files.item(0))
+        const handleChange = () => (e: React.ChangeEvent<HTMLInputElement>) => {
+            if (e.target.files && e.target.files.item(0)) {
+                setSrc(e.target.files.item(0))
+                console.error(file.name)
+            } else {
+                setSrc(null)
+            }
             FileUpload
-        } else {
-            setSrc(null)
         }
-    }
 
-    if (src) {
+        if (src) {
+            return (
+                <label htmlFor="file">
+                    <FileBox className="attach">
+                        <Input
+                            onChange={handleChange()}
+                            type="file"
+                            id="file"
+                            ref={ref}
+                            accept={accept}
+                            onClick={onClick}
+                        />
+                        <FileItems>
+                            <FileIcon
+                                svg={IconFiles.icons.Attachment}
+                                size={iconSize}
+                            />
+                            <FileLabel>{file.name}</FileLabel>
+                        </FileItems>
+                    </FileBox>
+                </label>
+            )
+        }
         return (
-            <FileBox className={'attach'}>
-                <FileItems>
-                    <FileIcon
-                        svg={IconFiles.icons.Attachment}
-                        size={iconSize}
+            <label htmlFor="file">
+                <FileBox>
+                    <Input
+                        onChange={handleChange()}
+                        type="file"
+                        id="file"
+                        ref={ref}
+                        accept={accept}
+                        onClick={onClick}
                     />
-                    <FileLabel>ファイル名</FileLabel>
-                </FileItems>
-            </FileBox>
+                    <FileItems>
+                        <FileIcon
+                            svg={IconFiles.icons.Dragdrop}
+                            size={iconSize}
+                        />
+                        <FileLabel>
+                            ファイルを選択またはドラッグ&amp;ドロップ
+                        </FileLabel>
+                    </FileItems>
+                </FileBox>
+            </label>
         )
     }
-    return (
-        <FileBox>
-            <FileItems onClick={onClick}>
-                <FileIcon svg={IconFiles.icons.Dragdrop} size={iconSize} />
-                <FileLabel>ファイルを選択またはドラッグ&amp;ドロップ</FileLabel>
-                <Input onChange={handleChange} type="file" />
-            </FileItems>
-        </FileBox>
-    )
-})
+)
 
 /**
  * Styles
@@ -79,6 +108,7 @@ const FileBox = styled.div`
     }
 `
 const FileItems = styled.div`
+    cursor: pointer;
     display: inline-flex;
     line-height: 40px;
 `
