@@ -3,12 +3,13 @@ import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
 import * as DropdownMultiple from './index'
+import * as ItemList from './itemList'
 import 'jest-styled-components'
 
 describe('Dropdown(Multi)コンポーネントのテスト', () => {
     let wrapper: Enzyme.ReactWrapper
     let mockOnClickItem: jest.Mock
-    let items: DropdownMultiple.Item[]
+    let items: ItemList.Item[]
 
     beforeEach(() => {
         mockOnClickItem = jest.fn()
