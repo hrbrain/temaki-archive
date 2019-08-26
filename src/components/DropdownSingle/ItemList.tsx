@@ -4,6 +4,10 @@ import styled, { defaultTheme } from '~/modules/theme'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
+/**
+ * Component
+ */
+
 type Props = {
     items: Item[]
     selected: string
@@ -16,13 +20,13 @@ type Props = {
 export const Component = React.memo<Props>(
     ({ items, selected, onClickItem, className, isVisible, width }) => {
         return (
-            <Ul
+            <ItemList
                 data-test="itemList"
                 className={`${className} ${isVisible ? '' : 'hide'}`}
                 width={width}
             >
                 {items.map(renderItem(selected, onClickItem))}
-            </Ul>
+            </ItemList>
         )
     }
 )
@@ -32,7 +36,7 @@ const renderItem = (selected: string, onClickItem: (text: string) => void) => (
     index: number
 ) => {
     return (
-        <Item
+        <ItemComponent
             text={item.text}
             key={index}
             selected={selected}
@@ -54,13 +58,13 @@ type ItemProps = {
     onClickItem: (text: string) => void
 } & Item
 
-const Item = React.memo<ItemProps>(props => {
+const ItemComponent = React.memo<ItemProps>(props => {
     const handleClick = React.useCallback(() => {
         props.onClickItem(props.text)
     }, [])
 
     return (
-        <Li onClick={handleClick}>
+        <Item onClick={handleClick}>
             <Icon.Component
                 svg={IconFiles.icons.SingleCheck}
                 size="24px"
@@ -70,8 +74,8 @@ const Item = React.memo<ItemProps>(props => {
                         : defaultTheme.colors.grayScale.S10
                 }
             />
-            <LiText>{props.text}</LiText>
-        </Li>
+            <Text>{props.text}</Text>
+        </Item>
     )
 })
 
@@ -79,7 +83,7 @@ const Item = React.memo<ItemProps>(props => {
  * Styles
  */
 
-const Ul = styled.ul<{ width: number }>`
+const ItemList = styled.ul<{ width: number }>`
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
@@ -89,7 +93,7 @@ const Ul = styled.ul<{ width: number }>`
     overflow: auto;
 `
 
-const Li = styled.li`
+const Item = styled.li`
     list-style-type: none;
     padding: 12px 12px 0 12px;
     user-select: none;
@@ -98,6 +102,6 @@ const Li = styled.li`
     cursor: pointer;
 `
 
-const LiText = styled.div`
+const Text = styled.div`
     padding-left: 4px;
 `
