@@ -8,7 +8,8 @@ storiesOf('components|FileUploader', module).add('all', () => {
     return (
         <div className="m-10">
             <FileUploader.Component
-                FileUpload={action('file')}
+                onChange={action('onChange')}
+                onDrop={action('onDrop')}
                 onClick={action('onClick')}
             />
         </div>
