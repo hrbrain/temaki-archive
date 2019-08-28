@@ -82,7 +82,11 @@ export const Component: React.FC<Props> = ({
 
         case 'text':
             return (
-                <TextPresentor.Component onClick={handleClick} svg={props.svg}>
+                <TextPresentor.Component
+                    onClick={handleClick}
+                    svg={props.svg}
+                    {...props}
+                >
                     {children}
                 </TextPresentor.Component>
             )
