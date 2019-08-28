@@ -3,11 +3,9 @@ import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '../../__test__/utils'
-import * as IconFiles from '../../lib/iconFiles'
 import 'jest-styled-components'
 
-import * as MeatballMenu from './index'
-import * as KebabMenu from './index'
+import * as MeatballKebabMenu from './index'
 
 describe('MeatballKebabMenu', () => {
     let wrapper: Enzyme.ReactWrapper
@@ -31,20 +29,10 @@ describe('MeatballKebabMenu', () => {
         ]
         act(() => {
             wrapper = mountWithTheme(
-                <MeatballMenu.Component
+                <MeatballKebabMenu.Component
+                    type={'meatball'}
                     position={'top'}
                     listItems={item}
-                    iconSrc={IconFiles.icons.MenuV}
-                    onClick={mockOnClick}
-                />
-            )
-        })
-        act(() => {
-            wrapper = mountWithTheme(
-                <KebabMenu.Component
-                    position={'top'}
-                    listItems={item}
-                    iconSrc={IconFiles.icons.MenuV}
                     onClick={mockOnClick}
                 />
             )
@@ -71,9 +59,9 @@ describe('MeatballKebabMenu', () => {
     })
     it('Menuアイコンがbottomに表示される', () => {
         wrapper = mountWithTheme(
-            <MeatballMenu.Component
+            <MeatballKebabMenu.Component
+                type={'meatball'}
                 listItems={[{ item: 'dummy', onClick: mockOnClick }]}
-                iconSrc={IconFiles.icons.MenuV}
                 position={'bottom'}
                 onClick={mockOnClick}
             />
@@ -96,9 +84,9 @@ describe('MeatballKebabMenu', () => {
 
     it('bottom時のリストが正常に表示される', () => {
         wrapper = mountWithTheme(
-            <MeatballMenu.Component
+            <MeatballKebabMenu.Component
+                type={'meatball'}
                 listItems={[{ item: 'dummy', onClick: mockOnClick }]}
-                iconSrc={IconFiles.icons.MenuV}
                 position={'bottom'}
                 onClick={mockOnClick}
             />

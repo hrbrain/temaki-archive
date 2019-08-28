@@ -10,7 +10,7 @@ import * as ClickOutside from '../../modules/ClickOutside'
  */
 
 type Props = {
-    iconSrc: string
+    type: 'meatball' | 'kebab'
     position: 'top' | 'bottom'
     listItems: Item[]
     onClick: (e: React.MouseEvent) => void
@@ -21,39 +21,6 @@ type Item = {
     onClick: (e: React.MouseEvent) => void
 }
 
-type MeatballMenuProps = {
-    position: 'top' | 'bottom'
-    listItems: Item[]
-    onClick: (e: React.MouseEvent) => void
-}
-
-export const MeatballMenu = ({
-    position,
-    listItems,
-    onClick
-}: MeatballMenuProps) => (
-    <Component
-        position={position}
-        listItems={listItems}
-        iconSrc={IconFiles.icons.MenuH}
-        onClick={onClick}
-    />
-)
-
-type KebabMenuProps = {
-    position: 'top' | 'bottom'
-    listItems: Item[]
-    onClick: (e: React.MouseEvent) => void
-}
-
-export const KebabMenu = ({ position, listItems, onClick }: KebabMenuProps) => (
-    <Component
-        position={position}
-        listItems={listItems}
-        iconSrc={IconFiles.icons.MenuV}
-        onClick={onClick}
-    />
-)
 const renderListItem = (
     isShow: boolean,
     setIsShow: (value: boolean) => void
@@ -77,7 +44,7 @@ const renderListItem = (
 }
 
 export const Component = React.memo<Props>(
-    ({ iconSrc, position, listItems, onClick }) => {
+    ({ type, position, listItems, onClick }) => {
         const [isShow, setIsShow] = React.useState<boolean>(false)
         const handleClick = React.useCallback(
             (e: React.MouseEvent) => {
@@ -101,7 +68,11 @@ export const Component = React.memo<Props>(
                         className={position}
                         onClick={handleClick}
                     >
-                        <MenuItem svg={iconSrc} size="24px" />
+                        <MenuItem
+                            data-test="icon-src"
+                            svg={selectMeatOrKebab(type)}
+                            size="24px"
+                        />
                     </Menu>
                     <List
                         data-test="list-component"
@@ -114,6 +85,14 @@ export const Component = React.memo<Props>(
         )
     }
 )
+
+const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
+    if (type == 'meatball') {
+        return IconFiles.icons.MenuH
+    } else {
+        return IconFiles.icons.MenuV
+    }
+}
 
 /**
  * style

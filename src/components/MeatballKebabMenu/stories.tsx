@@ -5,49 +5,30 @@ import * as ClickOutside from '../../modules/ClickOutside'
 import { text, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
-storiesOf('Components|MeatballKebabMenu', module)
-    .add('MeatballMenu', () => {
-        return (
-            <div className="m-10">
-                <MeatballKebabMenu.MeatballMenu
-                    position={select(
-                        'Position',
-                        {
-                            top: 'top',
-                            bottom: 'bottom'
-                        },
-                        'top'
-                    )}
-                    listItems={menuItems}
-                    onClick={action('onClick')}
-                />
-                <ClickOutside.Component
-                    onClickOutside={action('onClickOutside')}
-                />
-            </div>
-        )
-    })
-    .add('KebabMenu', () => {
-        return (
-            <div className="m-10">
-                <MeatballKebabMenu.KebabMenu
-                    position={select(
-                        'Position',
-                        {
-                            top: 'top',
-                            bottom: 'bottom'
-                        },
-                        'top'
-                    )}
-                    listItems={menuItems}
-                    onClick={action('onClick')}
-                />
-                <ClickOutside.Component
-                    onClickOutside={action('onClickOutside')}
-                />
-            </div>
-        )
-    })
+storiesOf('Components|MeatballKebabMenu', module).add('all', () => {
+    return (
+        <div className="m-10">
+            <MeatballKebabMenu.Component
+                type={select(
+                    'Type',
+                    { meatball: 'meatball', kebab: 'kebab' },
+                    'meatball'
+                )}
+                position={select(
+                    'Position',
+                    {
+                        top: 'top',
+                        bottom: 'bottom'
+                    },
+                    'top'
+                )}
+                listItems={menuItems}
+                onClick={action('onClick')}
+            />
+            <ClickOutside.Component onClickOutside={action('onClickOutside')} />
+        </div>
+    )
+})
 const menuItems = [
     { item: text('text1', 'リスト1'), onClick: action('onClick1') },
     { item: text('text2', 'リスト2'), onClick: action('onClick2') },

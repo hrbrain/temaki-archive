@@ -612,62 +612,7 @@ exports[`Storyshots Components|Input Text 1`] = `
 />
 `;
 
-exports[`Storyshots Components|MeatballKebabMenu KebabMenu 1`] = `
-<div
-  className="m-10"
->
-  <div
-    className="sc-gZMcBi fIdvSk"
-  >
-    <div>
-      <div
-        className="top sc-gqjmRU ihjbqC"
-        data-test="menu-component"
-        onClick={[Function]}
-      >
-        <div
-          className="sc-VigVT fIhGog sc-bxivhb hBuNrQ"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
-      </div>
-      <ul
-        className="top hidden sc-jTzLTM fBqmEj"
-        data-test="list-component"
-      >
-        <li
-          className="sc-fjdhpX kKJgDX"
-          data-test="list-item0"
-          onClick={[Function]}
-        >
-          リスト1
-        </li>
-        <li
-          className="sc-fjdhpX kKJgDX"
-          data-test="list-item1"
-          onClick={[Function]}
-        >
-          リスト2
-        </li>
-        <li
-          className="sc-fjdhpX kKJgDX"
-          data-test="list-item2"
-          onClick={[Function]}
-        >
-          リスト3
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div />
-</div>
-`;
-
-exports[`Storyshots Components|MeatballKebabMenu MeatballMenu 1`] = `
+exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 <div
   className="m-10"
 >
