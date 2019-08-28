@@ -57,22 +57,57 @@ export const Component = React.memo<Props>(({ onChange, onClick, accept }) => {
     }
 
     React.useEffect(() => {
+        if (ref.current) {
+            // eslint-disable-next-line no-undef
+            ref.current.addEventListener('dragover', function(e) {
+                e.preventDefault()
+                onDragOver()(e as any)
+            })
+            // eslint-disable-next-line no-undef
+            ref.current.addEventListener('drop', function(e) {
+                e.preventDefault()
+                onFileDrop()(e as any)
+            })
+        }
         // eslint-disable-next-line no-undef
         document.addEventListener('dragover', function(e) {
             e.preventDefault()
-            onDragOver()(e as any)
         })
         // eslint-disable-next-line no-undef
         document.addEventListener('drop', function(e) {
             e.preventDefault()
-            onFileDrop()(e as any)
         })
     }, [])
 
     if (src) {
         return (
-            <label htmlFor="file">
-                <FileBox className="attach">
+            <div ref={ref}>
+                <Label htmlFor="file">
+                    <FileBox className="attach">
+                        <Input
+                            onChange={handleChange()}
+                            type="file"
+                            id="file"
+                            ref={ref}
+                            accept={accept}
+                            onClick={onClick}
+                        />
+                        <FileItems>
+                            <FileIcon
+                                svg={IconFiles.icons.Attachment}
+                                size={iconSize}
+                            />
+                            <FileLabel>{file.name}</FileLabel>
+                        </FileItems>
+                    </FileBox>
+                </Label>
+            </div>
+        )
+    }
+    return (
+        <div ref={ref}>
+            <Label id="drop-zone" htmlFor="file">
+                <FileBox>
                     <Input
                         onChange={handleChange()}
                         type="file"
@@ -83,40 +118,23 @@ export const Component = React.memo<Props>(({ onChange, onClick, accept }) => {
                     />
                     <FileItems>
                         <FileIcon
-                            svg={IconFiles.icons.Attachment}
+                            svg={IconFiles.icons.Dragdrop}
                             size={iconSize}
                         />
-                        <FileLabel>{file.name}</FileLabel>
+                        <FileLabel>
+                            ファイルを選択またはドラッグ&amp;ドロップ
+                        </FileLabel>
                     </FileItems>
                 </FileBox>
-            </label>
-        )
-    }
-    return (
-        <label htmlFor="file">
-            <FileBox>
-                <Input
-                    onChange={handleChange()}
-                    type="file"
-                    id="file"
-                    ref={ref}
-                    accept={accept}
-                    onClick={onClick}
-                />
-                <FileItems>
-                    <FileIcon svg={IconFiles.icons.Dragdrop} size={iconSize} />
-                    <FileLabel>
-                        ファイルを選択またはドラッグ&amp;ドロップ
-                    </FileLabel>
-                </FileItems>
-            </FileBox>
-        </label>
+            </Label>
+        </div>
     )
 })
 
 /**
  * Styles
  */
+const Label = styled.label``
 const FileBox = styled.div`
     cursor: pointer;
     text-align: center;
