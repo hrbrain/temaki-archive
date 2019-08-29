@@ -3,7 +3,6 @@ import styled from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
-import { file } from '@babel/types'
 
 /**
  * Utils
@@ -35,7 +34,7 @@ export const Component = React.memo<Props>(({ onChange, onClick, accept }) => {
 
     const handleChange = () => (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files.item(0)) {
-            setSrc(e.target.files.item(0))
+            setSrc(src)
             onChange
         }
     }
@@ -81,35 +80,10 @@ export const Component = React.memo<Props>(({ onChange, onClick, accept }) => {
 
     if (src) {
         return (
-            <div ref={ref}>
-                <Label htmlFor="file">
-                    <FileBox className="attach">
-                        <Input
-                            onChange={handleChange()}
-                            type="file"
-                            id="file"
-                            ref={ref}
-                            accept={accept}
-                            onClick={onClick}
-                        />
-                        <FileItems>
-                            <FileIcon
-                                svg={IconFiles.icons.Attachment}
-                                size={iconSize}
-                            />
-                            <FileLabel>{file.name}</FileLabel>
-                        </FileItems>
-                    </FileBox>
-                </Label>
-            </div>
-        )
-    }
-    return (
-        <div ref={ref}>
-            <Label id="drop-zone" htmlFor="file">
-                <FileBox>
+            <Label htmlFor="file">
+                <FileBox ref={ref} className="attach">
                     <Input
-                        onChange={handleChange()}
+                        onChange={handleChange}
                         type="file"
                         id="file"
                         ref={ref}
@@ -118,16 +92,34 @@ export const Component = React.memo<Props>(({ onChange, onClick, accept }) => {
                     />
                     <FileItems>
                         <FileIcon
-                            svg={IconFiles.icons.Dragdrop}
+                            svg={IconFiles.icons.Attachment}
                             size={iconSize}
                         />
-                        <FileLabel>
-                            ファイルを選択またはドラッグ&amp;ドロップ
-                        </FileLabel>
+                        <FileLabel>{src.name}</FileLabel>
                     </FileItems>
                 </FileBox>
             </Label>
-        </div>
+        )
+    }
+    return (
+        <Label id="drop-zone" htmlFor="file">
+            <FileBox ref={ref}>
+                <Input
+                    onChange={handleChange}
+                    type="file"
+                    id="file"
+                    ref={ref}
+                    accept={accept}
+                    onClick={onClick}
+                />
+                <FileItems>
+                    <FileIcon svg={IconFiles.icons.Dragdrop} size={iconSize} />
+                    <FileLabel>
+                        ファイルを選択またはドラッグ&amp;ドロップ
+                    </FileLabel>
+                </FileItems>
+            </FileBox>
+        </Label>
     )
 })
 
@@ -157,6 +149,10 @@ const FileIcon = styled(Icon.Component)`
     margin-top: 7px;
 `
 const FileLabel = styled.span`
+    max-width: 248px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: 13px;
     margin-left: 4px;
 `
