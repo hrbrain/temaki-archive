@@ -34,7 +34,7 @@ const useIsLoadingByAsyncClick = (
                 res.then(() => setIsLoading(false))
             }
         },
-        [isLoading]
+        [isLoading, fn]
     )
 
     return [isLoading, handleClick]
