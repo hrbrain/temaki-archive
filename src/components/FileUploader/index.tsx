@@ -15,7 +15,8 @@ const iconSize = '24px'
 
 type Props = {
     onChange: (file: File) => void
-    onDrop: (file: File) => void
+    onDragOver: (e: React.DragEvent) => void
+    onDrop: (e: React.DragEvent) => void
     onClick: (e: React.MouseEvent) => void
     accept?: string
 }
@@ -28,100 +29,109 @@ function hasFile(files: FileList | null): files is DangerFileList {
     return !!files && files.length > 0
 }
 hasFile
-export const Component = React.memo<Props>(({ onChange, onClick, accept }) => {
-    const [src, setSrc] = React.useState<File | null>(null)
-    const ref = React.useRef<HTMLInputElement>(null)
+export const Component = React.memo<Props>(
+    ({ onChange, onClick, onDragOver, onDrop, accept }) => {
+        const [src, setSrc] = React.useState<File | null>(null)
+        const ref = React.useRef<HTMLInputElement>(null)
 
-    const handleChange = () => (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files && e.target.files.item(0)) {
-            setSrc(src)
-            onChange
+        const handleChange = () => (e: React.ChangeEvent<HTMLInputElement>) => {
+            if (e.target.files && e.target.files.item(0)) {
+                setSrc(e.target.files.item(0))
+                onChange
+            }
         }
-    }
 
-    /**
-     *  D&D
-     */
-
-    const onDragOver = () => (e: React.DragEvent<HTMLInputElement>) => {
-        if (e.dataTransfer.files.item(0)) {
-            setSrc(e.dataTransfer.files.item(0))
-        }
-    }
-
-    const onFileDrop = () => (e: React.DragEvent<HTMLInputElement>) => {
-        if (e.dataTransfer.files.item(0)) {
-            setSrc(e.dataTransfer.files.item(0))
-        }
-    }
-
-    React.useEffect(() => {
-        if (ref.current) {
-            // eslint-disable-next-line no-undef
-            ref.current.addEventListener('dragover', function(e) {
-                e.preventDefault()
-                onDragOver()(e as any)
-            })
-            // eslint-disable-next-line no-undef
-            ref.current.addEventListener('drop', function(e) {
-                e.preventDefault()
-                onFileDrop()(e as any)
-            })
-        }
-        // eslint-disable-next-line no-undef
-        document.addEventListener('dragover', function(e) {
-            e.preventDefault()
-        })
-        // eslint-disable-next-line no-undef
-        document.addEventListener('drop', function(e) {
-            e.preventDefault()
-        })
-    }, [])
-
-    if (src) {
-        return (
-            <Label htmlFor="file">
-                <FileBox ref={ref} className="attach">
-                    <Input
-                        onChange={handleChange}
-                        type="file"
-                        id="file"
-                        ref={ref}
-                        accept={accept}
-                        onClick={onClick}
-                    />
-                    <FileItems>
-                        <FileIcon
-                            svg={IconFiles.icons.Attachment}
-                            size={iconSize}
-                        />
-                        <FileLabel>{src.name}</FileLabel>
-                    </FileItems>
-                </FileBox>
-            </Label>
-        )
-    }
-    return (
-        <Label id="drop-zone" htmlFor="file">
-            <FileBox ref={ref}>
+        const fileInput = () => {
+            return (
                 <Input
-                    onChange={handleChange}
+                    data-test="input"
+                    onChange={handleChange()}
                     type="file"
                     id="file"
                     ref={ref}
                     accept={accept}
                     onClick={onClick}
+                    onDragOver={onDragOver}
+                    onDrop={onDrop}
                 />
-                <FileItems>
-                    <FileIcon svg={IconFiles.icons.Dragdrop} size={iconSize} />
-                    <FileLabel>
-                        ファイルを選択またはドラッグ&amp;ドロップ
-                    </FileLabel>
-                </FileItems>
-            </FileBox>
-        </Label>
-    )
-})
+            )
+        }
+
+        /**
+         *  D&D
+         */
+
+        const onFileDragOver = () => (e: React.DragEvent<HTMLInputElement>) => {
+            if (e.dataTransfer.files && e.dataTransfer.files.item(0)) {
+                setSrc(e.dataTransfer.files.item(0))
+                onDragOver
+            }
+        }
+
+        const onFileDrop = () => (e: React.DragEvent<HTMLInputElement>) => {
+            if (e.dataTransfer.files && e.dataTransfer.files.item(0)) {
+                setSrc(e.dataTransfer.files.item(0))
+                onDrop
+            }
+        }
+
+        React.useEffect(() => {
+            if (ref.current) {
+                ref.current.addEventListener('dragover', function(e) {
+                    onFileDragOver()(e as any)
+                })
+                ref.current.addEventListener('drop', function(e) {
+                    onFileDrop()(e as any)
+                })
+            }
+            // eslint-disable-next-line no-undef
+            document.addEventListener('dragover', function(e) {
+                e.preventDefault()
+            })
+            // eslint-disable-next-line no-undef
+            document.addEventListener('drop', function(e) {
+                e.preventDefault()
+            })
+        }, [])
+
+        if (src) {
+            return (
+                <Label htmlFor="file">
+                    <FileBox
+                        ref={ref}
+                        data-test="attach-file"
+                        className="attach"
+                    >
+                        {fileInput()}
+                        <FileItems>
+                            <FileIcon
+                                svg={IconFiles.icons.Attachment}
+                                size={iconSize}
+                            />
+                            <FileLabel>{src.name}</FileLabel>
+                        </FileItems>
+                    </FileBox>
+                </Label>
+            )
+        }
+        return (
+            <Label htmlFor="file">
+                <FileBox ref={ref}>
+                    {fileInput()}
+                    <FileItems>
+                        <FileIcon
+                            svg={IconFiles.icons.Dragdrop}
+                            size={iconSize}
+                        />
+                        <FileLabel>
+                            ファイルを選択またはドラッグ&amp;ドロップ
+                        </FileLabel>
+                    </FileItems>
+                </FileBox>
+            </Label>
+        )
+    }
+)
 
 /**
  * Styles
