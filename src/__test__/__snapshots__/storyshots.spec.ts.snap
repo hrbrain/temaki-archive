@@ -556,6 +556,7 @@ exports[`Storyshots Components|Button Component 1`] = `
 <button
   className="sc-EHOje dOmtJl"
   onClick={[Function]}
+  type="text"
 >
   <span
     className="sc-bZQynM hzvjZm"
@@ -992,16 +993,33 @@ exports[`Storyshots Components|Text Standard 1`] = `
 </p>
 `;
 
+exports[`Storyshots Components|Textarea all 1`] = `
+<textarea
+  className="sc-dxgOiQ fURrfA"
+  errored={false}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  placeholder="文字を入力してください。"
+  style={
+    Object {
+      "height": 0,
+    }
+  }
+  value=""
+/>
+`;
+
 exports[`Storyshots Components|Toast all 1`] = `
 <div
   className="m-10"
 >
   <div
-    className="sc-dxgOiQ hYbPAT"
+    className="sc-ckVGcZ eCGcLH"
     data-test="info-toast"
   >
     <div
-      className="sc-jKJlTe hbmdhF sc-bxivhb dUTGrc"
+      className="sc-eNQAEJ geBvMq sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1012,12 +1030,12 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-eNQAEJ cqkHHO"
+        className="sc-hMqMXs ddPctq"
       >
         ラベル
       </div>
       <div
-        className="sc-hMqMXs fqiZEV"
+        className="sc-kEYyzF jZObfQ"
       >
         ここにテキスト。
       </div>
@@ -1028,12 +1046,12 @@ exports[`Storyshots Components|Toast all 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-kEYyzF fvSgiQ"
+  className="sc-kkGfuU evUrmp"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-kkGfuU ebVbbA"
+    className="sc-iAyFgw hgfNQS"
   >
     テキスト要素
   </span>
