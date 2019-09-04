@@ -556,6 +556,7 @@ exports[`Storyshots Components|Button Component 1`] = `
 <button
   className="sc-EHOje dOmtJl"
   onClick={[Function]}
+  type="text"
 >
   <span
     className="sc-bZQynM hzvjZm"
@@ -749,7 +750,7 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-kpOJdX hTbAVA"
+    className="sc-kpOJdX klVfdy"
     data-test="info-toast"
   >
     <div
