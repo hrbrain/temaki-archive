@@ -32,12 +32,7 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": [
-      "error",
-      {
-        semi: false,
-        singleQuote: true,
-        tabWidth: 4
-      }
+      "error"
     ],
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": "error",
