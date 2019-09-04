@@ -5,6 +5,15 @@ import { mountWithTheme } from '../../__test__/utils'
 import * as FileUploader from './index'
 import 'jest-styled-components'
 
+declare var File: {
+    prototype: File
+    new (
+        fileBits: BlobPart[],
+        fileName: string,
+        options?: FilePropertyBag
+    ): File
+}
+
 describe('FileUploader', () => {
     let wrapper: Enzyme.ReactWrapper
     let mockOnClick: jest.Mock
@@ -35,7 +44,8 @@ describe('FileUploader', () => {
     })
 
     it('onClickが呼ばれる', () => {
-        wrapper.find('input').simulate('click')
+        const el = wrapper.find('input')
+        el.simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
     })
 
@@ -43,30 +53,29 @@ describe('FileUploader', () => {
 
     it('ファイルアップロード時にhandleChange()が呼ばれる', () => {
         const changeEl = wrapper.find('input')
-        act(() => {
-            changeEl.simulate('change')
-            // expect(mockOnChange).toHaveBeenCalled()
+        changeEl.simulate('change', {
+            target: { files: { item: () => new File([], 'file') } }
         })
+        expect(mockOnChange).toHaveBeenCalled()
     })
 
     it('dragover時にonDragOver()が呼ばれる', () => {
         const dragEl = wrapper.find('input')
         act(() => {
-            dragEl.simulate('dragover', { dataTransfer: { item: 'dummy' } })
-            // expect(mockOnDragOver).toHaveBeenCalled()
+            dragEl.simulate('dragover', {
+                dataTransfer: { files: { item: () => new File([], 'files') } }
+            })
+            expect(mockOnDragOver).toHaveBeenCalled()
         })
     })
 
     it('drop時にonFileDrop()が呼ばれる', () => {
         const dropEl = wrapper.find('input')
         act(() => {
-            dropEl.simulate('drop', { dataTransfer: { item: 'dummy' } })
-            // expect(mockOnDrop).toHaveBeenCalled()
+            dropEl.simulate('drop', {
+                dataTransfer: { files: { item: () => new File([], 'files') } }
+            })
+            expect(mockOnDrop).toHaveBeenCalled()
         })
-    })
-
-    it('ファイルがアップロードされたらattachのスタイルが呼ばれる', () => {
-        wrapper.instance().setState({ src: 'File' })
-        // expect(wrapper.find('div[data-test="attach"]').length).toHaveLength(1)
     })
 })

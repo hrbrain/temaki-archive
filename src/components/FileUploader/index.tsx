@@ -10,16 +10,20 @@ import * as Icon from '~/components/Icon'
 const iconSize = '24px'
 
 /**
- * Component
+ * Props
  */
 
 type Props = {
     onChange: (file: File) => void
-    onDragOver: (e: React.DragEvent) => void
-    onDrop: (e: React.DragEvent) => void
     onClick: (e: React.MouseEvent) => void
+    onDragOver: (file: File) => void
+    onDrop: (file: File) => void
     accept?: string
 }
+
+/**
+ * Component
+ */
 
 interface DangerFileList extends FileList {
     item: (index: number) => File
@@ -30,24 +34,56 @@ function hasFile(files: FileList | null): files is DangerFileList {
 }
 hasFile
 
+const onFileDragOver = (
+    setSrc: (value: File | null) => void,
+    onDragOver: (file: File) => void
+) => (e: React.DragEvent<HTMLInputElement>) => {
+    if (e.dataTransfer.files && e.dataTransfer.files.item(0)) {
+        const file = e.dataTransfer.files.item(0)
+        setSrc(file)
+        if (file) {
+            onDragOver(file)
+        }
+    }
+}
+
+const onFileDrop = (
+    setSrc: (value: File | null) => void,
+    onDrop: (file: File) => void
+) => (e: React.DragEvent<HTMLInputElement>) => {
+    if (e.dataTransfer.files && e.dataTransfer.files.item(0)) {
+        const file = e.dataTransfer.files.item(0)
+        setSrc(file)
+        if (file) {
+            onDrop(file)
+        }
+    }
+}
+const handleChange = (
+    setSrc: (value: File | null) => void,
+    onChange: (file: File) => void
+) => (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+        const file = e.target.files.item(0)
+        setSrc(file)
+        if (file) {
+            onChange(file)
+        }
+    }
+}
+
 export const Component = React.memo<Props>(
-    ({ onChange, onClick, onDragOver, onDrop, accept }) => {
+    ({ onChange, onDragOver, onDrop, accept, onClick }) => {
         const [src, setSrc] = React.useState<File | null>(null)
         const ref = React.useRef<HTMLInputElement>(null)
-
-        const handleChange = () => (e: React.ChangeEvent<HTMLInputElement>) => {
-            if (e.target.files && e.target.files.item(0)) {
-                setSrc(e.target.files.item(0))
-                onChange
-            }
-        }
+        src
 
         const fileInput = () => {
             return (
                 <Input
-                    onChange={handleChange()}
-                    onDragOver={onFileDragOver()}
-                    onDrop={onFileDrop()}
+                    onChange={handleChange(setSrc, onChange)}
+                    onDragOver={onFileDragOver(setSrc, onDragOver)}
+                    onDrop={onFileDrop(setSrc, onDrop)}
                     type="file"
                     id="file"
                     ref={ref}
@@ -57,29 +93,15 @@ export const Component = React.memo<Props>(
             )
         }
 
-        const onFileDragOver = () => (e: React.DragEvent<HTMLInputElement>) => {
-            if (e.dataTransfer.files && e.dataTransfer.files.item(0)) {
-                setSrc(e.dataTransfer.files.item(0))
-                onDragOver
-            }
-        }
-
-        const onFileDrop = () => (e: React.DragEvent<HTMLInputElement>) => {
-            if (e.dataTransfer.files && e.dataTransfer.files.item(0)) {
-                setSrc(e.dataTransfer.files.item(0))
-                onDrop
-            }
-        }
-
-        /* coverageで引っかかるため除外 */
+        /* テストは通っているがcoverageで引っかかるため除外 */
         /* istanbul ignore next */
         React.useEffect(() => {
             if (ref.current) {
                 ref.current.addEventListener('dragover', function(e) {
-                    onFileDragOver()(e as any)
+                    onFileDragOver(setSrc, onDragOver)(e as any)
                 })
                 ref.current.addEventListener('drop', function(e) {
-                    onFileDrop()(e as any)
+                    onFileDrop(setSrc, onDrop)(e as any)
                 })
             }
             // eslint-disable-next-line no-undef
@@ -92,7 +114,7 @@ export const Component = React.memo<Props>(
             })
         }, [])
 
-        if (src && (src as File)) {
+        if (src) {
             return (
                 <Label htmlFor="file">
                     <FileBox ref={ref} className="attach" data-test="attach">
