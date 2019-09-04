@@ -62,7 +62,6 @@ export const Component = React.memo<Props>(({ label, text, type }) => {
  */
 
 const Outer = css`
-    margin: 0 0 24px 24px;
     display: inline-flex;
     align-items: start;
     padding: 12px;
