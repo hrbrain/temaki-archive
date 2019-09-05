@@ -99,7 +99,6 @@ const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
  */
 const Wrap = styled.div`
     position: relative;
-    height: 80vh;
 `
 const Menu = styled.div`
     cursor: pointer;

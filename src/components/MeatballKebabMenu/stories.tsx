@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions'
 
 storiesOf('Components|MeatballKebabMenu', module).add('all', () => {
     return (
-        <div className="m-10">
+        <div className="mr-10 mt-56">
             <MeatballKebabMenu.Component
                 type={select(
                     'Type',
