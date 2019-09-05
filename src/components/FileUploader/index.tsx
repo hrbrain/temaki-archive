@@ -25,15 +25,6 @@ type Props = {
  * Component
  */
 
-interface DangerFileList extends FileList {
-    item: (index: number) => File
-}
-
-function hasFile(files: FileList | null): files is DangerFileList {
-    return !!files && files.length > 0
-}
-hasFile
-
 const onFileDragOver = (
     setSrc: (value: File | null) => void,
     onDragOver: (file: File) => void
@@ -76,7 +67,6 @@ export const Component = React.memo<Props>(
     ({ onChange, onDragOver, onDrop, accept, onClick }) => {
         const [src, setSrc] = React.useState<File | null>(null)
         const ref = React.useRef<HTMLInputElement>(null)
-        src
 
         const fileInput = () => {
             return (
@@ -93,8 +83,6 @@ export const Component = React.memo<Props>(
             )
         }
 
-        /* テストは通っているがcoverageで引っかかるため除外 */
-        /* istanbul ignore next */
         React.useEffect(() => {
             if (ref.current) {
                 ref.current.addEventListener('dragover', function(e) {

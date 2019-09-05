@@ -49,8 +49,6 @@ describe('FileUploader', () => {
         expect(mockOnClick).toHaveBeenCalled()
     })
 
-    // "onChange他イベント"と"stateによっての分岐"テストが通らないので一時コメントアウト
-
     it('ファイルアップロード時にhandleChange()が呼ばれる', () => {
         const changeEl = wrapper.find('input')
         changeEl.simulate('change', {
