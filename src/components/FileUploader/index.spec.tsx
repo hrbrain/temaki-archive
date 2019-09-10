@@ -56,24 +56,4 @@ describe('FileUploader', () => {
         })
         expect(mockOnChange).toHaveBeenCalled()
     })
-
-    it('dragover時にonDragOver()が呼ばれる', () => {
-        const dragEl = wrapper.find('input')
-        act(() => {
-            dragEl.simulate('dragover', {
-                dataTransfer: { files: { item: () => new File([], 'files') } }
-            })
-            expect(mockOnDragOver).toHaveBeenCalled()
-        })
-    })
-
-    it('drop時にonFileDrop()が呼ばれる', () => {
-        const dropEl = wrapper.find('input')
-        act(() => {
-            dropEl.simulate('drop', {
-                dataTransfer: { files: { item: () => new File([], 'files') } }
-            })
-            expect(mockOnDrop).toHaveBeenCalled()
-        })
-    })
 })

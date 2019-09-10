@@ -1675,8 +1675,6 @@ exports[`Storyshots components|FileUploader all 1`] = `
         id="file"
         onChange={[Function]}
         onClick={[Function]}
-        onDragOver={[Function]}
-        onDrop={[Function]}
         type="file"
       />
       <div

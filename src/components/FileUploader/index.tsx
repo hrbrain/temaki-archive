@@ -28,28 +28,25 @@ type Props = {
 const onFileDragOver = (
     setSrc: (value: File | null) => void,
     onDragOver: (file: File) => void
-) => (e: React.DragEvent<HTMLInputElement>) => {
-    if (e.dataTransfer.files && e.dataTransfer.files.item(0)) {
-        const file = e.dataTransfer.files.item(0)
-        setSrc(file)
-        if (file) {
-            onDragOver(file)
-        }
+) => (e: React.DragEvent) => {
+    const file = e.dataTransfer.files.item(0)
+    setSrc(file)
+    if (file) {
+        onDragOver(file)
     }
 }
 
 const onFileDrop = (
     setSrc: (value: File | null) => void,
     onDrop: (file: File) => void
-) => (e: React.DragEvent<HTMLInputElement>) => {
-    if (e.dataTransfer.files && e.dataTransfer.files.item(0)) {
-        const file = e.dataTransfer.files.item(0)
-        setSrc(file)
-        if (file) {
-            onDrop(file)
-        }
+) => (e: React.DragEvent) => {
+    const file = e.dataTransfer.files.item(0)
+    setSrc(file)
+    if (file) {
+        onDrop(file)
     }
 }
+
 const handleChange = (
     setSrc: (value: File | null) => void,
     onChange: (file: File) => void
@@ -72,8 +69,6 @@ export const Component = React.memo<Props>(
             return (
                 <Input
                     onChange={handleChange(setSrc, onChange)}
-                    onDragOver={onFileDragOver(setSrc, onDragOver)}
-                    onDrop={onFileDrop(setSrc, onDrop)}
                     type="file"
                     id="file"
                     ref={ref}
@@ -83,24 +78,35 @@ export const Component = React.memo<Props>(
             )
         }
 
+        /* istanbul ignore next */
         React.useEffect(() => {
             if (ref.current) {
                 ref.current.addEventListener('dragover', function(e) {
+                    e.preventDefault()
+                    e.stopPropagation()
                     onFileDragOver(setSrc, onDragOver)(e as any)
                 })
                 ref.current.addEventListener('drop', function(e) {
+                    e.preventDefault()
+                    e.stopPropagation()
                     onFileDrop(setSrc, onDrop)(e as any)
                 })
             }
-            // eslint-disable-next-line no-undef
-            document.addEventListener('dragover', function(e) {
-                e.preventDefault()
-            })
-            // eslint-disable-next-line no-undef
-            document.addEventListener('drop', function(e) {
-                e.preventDefault()
-            })
-        }, [])
+            return () => {
+                if (ref.current) {
+                    ref.current.removeEventListener('dragover', function(e) {
+                        e.preventDefault()
+                        e.stopPropagation()
+                        onFileDragOver(setSrc, onDragOver)(e as any)
+                    })
+                    ref.current.removeEventListener('drop', function(e) {
+                        e.preventDefault()
+                        e.stopPropagation()
+                        onFileDrop(setSrc, onDrop)(e as any)
+                    })
+                }
+            }
+        }, [setSrc])
 
         if (src) {
             return (
