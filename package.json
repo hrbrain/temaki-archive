@@ -8,7 +8,6 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "docs:build": "build-storybook -c .storybook -o ./functions/static",
-    "docs:deploy": "firebase deploy",
     "build": "NODE_ENV=production webpack -p",
     "test": "jest",
     "lint": "run-s lint:*",
@@ -68,7 +67,6 @@
     "eslint-plugin-jest": "^22.10.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
-    "firebase-tools": "^7.1.0",
     "husky": "^3.0.0",
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0",
