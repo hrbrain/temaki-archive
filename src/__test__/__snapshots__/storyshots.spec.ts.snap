@@ -913,7 +913,7 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <input
-  className="sc-cSHVUG eTeYvX"
+  className="sc-dxgOiQ iOUqBG"
   format="number"
   onBlur={[Function]}
   onChange={[Function]}
@@ -924,7 +924,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <input
-  className="sc-cSHVUG eTeYvX"
+  className="sc-dxgOiQ iOUqBG"
   format="text"
   onBlur={[Function]}
   onChange={[Function]}
@@ -935,12 +935,12 @@ exports[`Storyshots Components|Input Text 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
-  className="sc-kAzzGY iawJTd"
+  className="sc-ckVGcZ jbNzWe"
   data-test="radio-on"
   onClick={[Function]}
 >
   <div
-    className="sc-chPdSV jJdnqc sc-bxivhb hBuNrQ"
+    className="sc-jKJlTe PwHOL sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -949,7 +949,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-kgoBCf dejYLC"
+    className="sc-eNQAEJ keQOtz"
   >
     RadioButton
   </span>
@@ -959,7 +959,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div
-    className="sc-kGXeez bMvyhv"
+    className="sc-hMqMXs owcPo"
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -967,7 +967,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
-    className="sc-kGXeez ljXGZW"
+    className="sc-hMqMXs RJmIa"
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -975,7 +975,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
-    className="sc-kGXeez ljXGZW"
+    className="sc-hMqMXs RJmIa"
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -990,25 +990,25 @@ exports[`Storyshots Components|Switch all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-kpOJdX cBYrgD"
+    className="sc-kEYyzF eGnVbw"
     data-test="switch-off"
   >
     <span
-      className="sc-jKJlTe cnqwe"
+      className="sc-hSdWYo bUCmQy"
     >
       OFF
     </span>
     <div
-      className="sc-dxgOiQ dqdOFG"
+      className="sc-kkGfuU iDzlTs"
       data-test="switch"
       onClick={[Function]}
     >
       <span
-        className="sc-ckVGcZ jXZzZi"
+        className="sc-iAyFgw fDfxdE"
       />
     </div>
     <span
-      className="sc-jKJlTe cnqwe"
+      className="sc-hSdWYo bUCmQy"
     >
       ON
     </span>
@@ -1018,7 +1018,7 @@ exports[`Storyshots Components|Switch all 1`] = `
 
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-eNQAEJ tUYXl"
+  className="sc-eHgmQL drxIjN"
 >
   Hello
 </p>
@@ -1026,7 +1026,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
-  className="sc-hMqMXs jakQus"
+  className="sc-cvbbAY jbEqPk"
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -1046,11 +1046,11 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-kEYyzF kfOpTP"
+    className="sc-jWBwVP aoWCW"
     data-test="info-toast"
   >
     <div
-      className="sc-iAyFgw hmvlUh sc-bxivhb dUTGrc"
+      className="sc-cMljjf itjlen sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1061,12 +1061,12 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-hSdWYo dGFqND"
+        className="sc-jAaTju bHTsKc"
       >
         ラベル
       </div>
       <div
-        className="sc-eHgmQL dCEdru"
+        className="sc-jDwBTQ cvMWWV"
       >
         ここにテキスト。
       </div>
@@ -1077,12 +1077,12 @@ exports[`Storyshots Components|Toast all 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-cvbbAY bUIGBE"
+  className="sc-gPEVay gpIgvz"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-jWBwVP qNSeW"
+    className="sc-iRbamj dHlsNx"
   >
     テキスト要素
   </span>
@@ -1687,6 +1687,47 @@ exports[`Storyshots basics|Icons index 1`] = `
     }
     fill="#888"
   />
+</div>
+`;
+
+exports[`Storyshots components|FileUploader all 1`] = `
+<div
+  className="m-10"
+>
+  <label
+    className="sc-cSHVUG CAuLq"
+    htmlFor="file"
+  >
+    <div
+      className="sc-kAzzGY dZSfvU"
+    >
+      <input
+        className="sc-kpOJdX beOifN"
+        id="file"
+        onChange={[Function]}
+        onClick={[Function]}
+        type="file"
+      />
+      <div
+        className="sc-chPdSV cNhqlg"
+      >
+        <div
+          className="sc-kgoBCf lnNXAs sc-bxivhb hBuNrQ"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          size="24px"
+        />
+        <span
+          className="sc-kGXeez TJnRo"
+        >
+          ファイルを選択またはドラッグ&ドロップ
+        </span>
+      </div>
+    </div>
+  </label>
 </div>
 `;
 
