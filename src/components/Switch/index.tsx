@@ -43,7 +43,7 @@ export const Component = React.memo<Props>(({ onClick, checked, text }) => {
  */
 
 const Outer = styled.div`
-    display: inline-fix;
+    display: inline-flex;
 `
 const Switch = styled.div`
     margin: 0 8px;
@@ -76,7 +76,5 @@ const Text = styled.span`
     max-width: 112px;
     white-space: nowrap;
     overflow: hidden;
-    word-break: break-all;
-    display: inline-block;
     font-size: 14px;
 `

@@ -990,11 +990,11 @@ exports[`Storyshots Components|Switch all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-kEYyzF eGnVbw"
+    className="sc-kEYyzF dwEAUZ"
     data-test="switch-off"
   >
     <span
-      className="sc-hSdWYo bUCmQy"
+      className="sc-hSdWYo ivNnqR"
     >
       OFF
     </span>
@@ -1008,7 +1008,7 @@ exports[`Storyshots Components|Switch all 1`] = `
       />
     </div>
     <span
-      className="sc-hSdWYo bUCmQy"
+      className="sc-hSdWYo ivNnqR"
     >
       ON
     </span>
