@@ -7,6 +7,10 @@ import * as _Toast from '~/components/Toast/index'
 import * as _SegmentedControl from '~/components/SegmentedControl/index'
 import * as _ToolTip from '~/components/ToolTip/index'
 import * as _RadioButton from '~/components/RadioButton/index'
+import * as _Switch from '~/components/Switch/index'
+import * as _Textarea from '~/components/Textarea/index'
+import * as _DropdownSingle from '~/components/DropdownSingle/index'
+import * as _FileUploader from '~/components/FileUploader/index'
 import { icons as _icons } from '~/lib/iconFiles'
 import {
     defaultTheme as _defaultTheme,
@@ -27,3 +31,7 @@ export const RadioButton = _RadioButton.Component
 export const icons = _icons
 export const defaultTheme = _defaultTheme
 export type RequiredThemeProps = _RequiredThemeProps
+export const Switch = _Switch.Component
+export const Textarea = _Textarea.Component
+export const DropdownSingle = _DropdownSingle.Component
+export const FileUploader = _FileUploader.Component

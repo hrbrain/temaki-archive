@@ -156,6 +156,39 @@ declare module 'hrb-temaki' {
     };
     export const defaultTheme: _RequiredThemeProps;
     export type RequiredThemeProps = _RequiredThemeProps;
+    export const Switch: import("react").NamedExoticComponent<{
+        onClick: (e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void;
+        checked: boolean;
+        text: {
+            on: string;
+            off: string;
+        };
+    }>;
+    export const Textarea: import("react").NamedExoticComponent<{
+        value?: string | undefined;
+        placeholder?: string | undefined;
+        minRows?: number | undefined;
+        maxRows?: number | undefined;
+        errored?: boolean | undefined;
+        onChange?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
+        onFocus?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
+        onBlur?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
+    }>;
+    export const DropdownSingle: import("react").NamedExoticComponent<{
+        placeholder: string;
+        items: import("./components/DropdownSingle/ItemList").Item[];
+        selected: string;
+        isError: boolean;
+        width: number;
+        onClickItem: (text: string) => void;
+    }>;
+    export const FileUploader: import("react").NamedExoticComponent<{
+        onChange: (file: File) => void;
+        onClick: (e: import("react").MouseEvent<Element, MouseEvent>) => void;
+        onDragOver: (file: File) => void;
+        onDrop: (file: File) => void;
+        accept?: string | undefined;
+    }>;
 }
 
 declare module 'hrb-temaki/modules/theme' {
