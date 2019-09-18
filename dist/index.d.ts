@@ -182,6 +182,14 @@ declare module 'hrb-temaki' {
         width: number;
         onClickItem: (text: string) => void;
     }>;
+    export const DropdownMultiple: import("react").NamedExoticComponent<{
+        placeholder: string;
+        items: import("./components/DropdownMultiple/itemList").Item[];
+        selected: string[];
+        isError: boolean;
+        width: number;
+        onClickItem: (text: string) => void;
+    }>;
     export const FileUploader: import("react").NamedExoticComponent<{
         onChange: (file: File) => void;
         onClick: (e: import("react").MouseEvent<Element, MouseEvent>) => void;

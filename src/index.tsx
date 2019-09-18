@@ -10,6 +10,7 @@ import * as _RadioButton from '~/components/RadioButton/index'
 import * as _Switch from '~/components/Switch/index'
 import * as _Textarea from '~/components/Textarea/index'
 import * as _DropdownSingle from '~/components/DropdownSingle/index'
+import * as _DropdownMultiple from '~/components/DropdownMultiple/index'
 import * as _FileUploader from '~/components/FileUploader/index'
 import { icons as _icons } from '~/lib/iconFiles'
 import {
@@ -34,4 +35,5 @@ export type RequiredThemeProps = _RequiredThemeProps
 export const Switch = _Switch.Component
 export const Textarea = _Textarea.Component
 export const DropdownSingle = _DropdownSingle.Component
+export const DropdownMultiple = _DropdownMultiple.Component
 export const FileUploader = _FileUploader.Component
