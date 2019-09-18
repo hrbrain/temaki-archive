@@ -35,7 +35,7 @@ const useChangeNumberValueFromChangeEvent = (
                 onChange(num)
             }
         },
-        [onChange, value]
+        [onChange, onChangeNative, value]
     )
 
 const useStringValue = (value: Input.NumberValue) =>

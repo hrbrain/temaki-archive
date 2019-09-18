@@ -24,7 +24,7 @@ const useChangeStringValueFromChangeEvent = (
                 onChange(e.target.value)
             }
         },
-        [onChange]
+        [onChange, onChangeNative]
     )
 
 /**
