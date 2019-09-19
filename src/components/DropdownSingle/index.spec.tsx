@@ -14,12 +14,13 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
     beforeEach(() => {
         mockOnClickItem = jest.fn()
         items = [
-            { text: 'りんご' },
-            { text: 'いちご' },
-            { text: 'バナナ' },
-            { text: 'メロン' },
-            { text: 'さくらんぼ' },
-            { text: 'ぶどう' }
+            { value: '', text: '' },
+            { value: '1', text: 'りんご' },
+            { value: '2', text: 'いちご' },
+            { value: '3', text: 'バナナ' },
+            { value: '4', text: 'メロン' },
+            { value: '5', text: 'さくらんぼ' },
+            { value: '6', text: 'ぶどう' }
         ]
         act(() => {
             wrapper = mountWithTheme(
@@ -95,7 +96,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
             <DropdownSingle.Component
                 placeholder="placeholder"
                 items={items}
-                selected="りんご"
+                selected="1"
                 isError={true}
                 width={200}
                 onClickItem={mockOnClickItem}
@@ -109,7 +110,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
             <DropdownSingle.Component
                 placeholder="placeholder"
                 items={items}
-                selected="りんご"
+                selected=""
                 isError={true}
                 width={200}
                 onClickItem={mockOnClickItem}

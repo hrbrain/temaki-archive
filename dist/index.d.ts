@@ -181,7 +181,7 @@ declare module 'hrb-temaki' {
         selected: string;
         isError: boolean;
         width: number;
-        onClickItem: (text: string) => void;
+        onClickItem: (value: string) => void;
     }>;
     export const DropdownMultiple: import("react").NamedExoticComponent<{
         placeholder: string;

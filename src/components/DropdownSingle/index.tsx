@@ -11,10 +11,10 @@ import * as ItemList from './ItemList'
 type Props = {
     placeholder: string
     items: ItemList.Item[]
-    selected: string
+    selected: ItemList.Value
     isError: boolean
     width: number
-    onClickItem: (text: string) => void
+    onClickItem: (value: ItemList.Value) => void
 }
 
 const Component = React.memo<Props>(props => {
@@ -27,11 +27,21 @@ const Component = React.memo<Props>(props => {
     return (
         <div>
             <Body.Component
-                {...props}
+                placeholder={props.placeholder}
+                items={props.items}
+                selected={props.selected}
+                isError={props.isError}
+                width={props.width}
                 isVisible={isVisible}
                 handleClick={handleClick}
             />
-            <StyledItemList {...props} isVisible={isVisible} />
+            <StyledItemList
+                items={props.items}
+                selected={props.selected}
+                onClickItem={props.onClickItem}
+                width={props.width}
+                isVisible={isVisible}
+            />
         </div>
     )
 })

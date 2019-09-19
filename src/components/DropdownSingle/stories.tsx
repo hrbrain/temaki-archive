@@ -12,23 +12,24 @@ storiesOf('Components|DropdownSingle', module)
             <DropdownSingle.Component
                 placeholder={text('placeholder', '選択してください')}
                 items={[
-                    { text: 'りんご' },
-                    { text: 'いちご' },
-                    { text: 'バナナ' },
-                    { text: 'メロン' },
-                    { text: 'さくらんぼ' },
-                    { text: 'ぶどう' }
+                    { value: '', text: '' },
+                    { value: '1', text: 'りんご' },
+                    { value: '2', text: 'いちご' },
+                    { value: '3', text: 'バナナ' },
+                    { value: '4', text: 'メロン' },
+                    { value: '5', text: 'さくらんぼ' },
+                    { value: '6', text: 'ぶどう' }
                 ]}
                 selected={select(
                     'selected',
                     {
                         未選択時: '',
-                        りんご: 'りんご',
-                        いちご: 'いちご',
-                        バナナ: 'バナナ',
-                        メロン: 'メロン',
-                        さくらんぼ: 'さくらんぼ',
-                        ぶどう: 'ぶどう'
+                        りんご: '1',
+                        いちご: '2',
+                        バナナ: '3',
+                        メロン: '4',
+                        さくらんぼ: '5',
+                        ぶどう: '6'
                     },
                     ''
                 )}
@@ -43,16 +44,25 @@ storiesOf('Components|DropdownSingle', module)
             <div className="ml-20 mt-10">
                 <Body.Component
                     placeholder={text('placeholder', '選択してください')}
+                    items={[
+                        { value: '', text: '' },
+                        { value: '1', text: 'りんご' },
+                        { value: '2', text: 'いちご' },
+                        { value: '3', text: 'バナナ' },
+                        { value: '4', text: 'メロン' },
+                        { value: '5', text: 'さくらんぼ' },
+                        { value: '6', text: 'ぶどう' }
+                    ]}
                     selected={select(
                         'selected',
                         {
                             未選択時: '',
-                            りんご: 'りんご',
-                            いちご: 'いちご',
-                            バナナ: 'バナナ',
-                            メロン: 'メロン',
-                            さくらんぼ: 'さくらんぼ',
-                            ぶどう: 'ぶどう'
+                            りんご: '1',
+                            いちご: '2',
+                            バナナ: '3',
+                            メロン: '4',
+                            さくらんぼ: '5',
+                            ぶどう: '6'
                         },
                         ''
                     )}
@@ -68,23 +78,24 @@ storiesOf('Components|DropdownSingle', module)
             <div className="ml-20 mt-10">
                 <ItemList.Component
                     items={[
-                        { text: 'りんご' },
-                        { text: 'いちご' },
-                        { text: 'バナナ' },
-                        { text: 'メロン' },
-                        { text: 'さくらんぼ' },
-                        { text: 'ぶどう' }
+                        { value: '', text: '' },
+                        { value: '1', text: 'りんご' },
+                        { value: '2', text: 'いちご' },
+                        { value: '3', text: 'バナナ' },
+                        { value: '4', text: 'メロン' },
+                        { value: '5', text: 'さくらんぼ' },
+                        { value: '6', text: 'ぶどう' }
                     ]}
                     selected={select(
                         'selected',
                         {
                             未選択時: '',
-                            りんご: 'りんご',
-                            いちご: 'いちご',
-                            バナナ: 'バナナ',
-                            メロン: 'メロン',
-                            さくらんぼ: 'さくらんぼ',
-                            ぶどう: 'ぶどう'
+                            りんご: '1',
+                            いちご: '2',
+                            バナナ: '3',
+                            メロン: '4',
+                            さくらんぼ: '5',
+                            ぶどう: '6'
                         },
                         ''
                     )}

@@ -10,8 +10,8 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     items: Item[]
-    selected: string
-    onClickItem: (text: string) => void
+    selected: Value
+    onClickItem: (value: Value) => void
     className?: string
     isVisible: boolean
     width: number
@@ -31,13 +31,13 @@ export const Component = React.memo<Props>(
     }
 )
 
-const renderItem = (selected: string, onClickItem: (text: string) => void) => (
+const renderItem = (selected: Value, onClickItem: (value: Value) => void) => (
     item: Item,
     index: number
 ) => {
     return (
         <ItemComponent
-            text={item.text}
+            item={item}
             key={index}
             selected={selected}
             onClickItem={onClickItem}
@@ -50,18 +50,21 @@ const renderItem = (selected: string, onClickItem: (text: string) => void) => (
  */
 
 export type Item = {
+    value: Value
     text: string
 }
+export type Value = string
 
 type ItemProps = {
-    selected: string
-    onClickItem: (text: string) => void
-} & Item
+    item: Item
+    selected: Value
+    onClickItem: (value: Value) => void
+}
 
 const ItemComponent = React.memo<ItemProps>(props => {
     const handleClick = React.useCallback(() => {
-        props.onClickItem(props.text)
-    }, [])
+        props.onClickItem(props.item.value)
+    }, [props.onClickItem, props.item])
 
     return (
         <Item onClick={handleClick}>
@@ -69,12 +72,12 @@ const ItemComponent = React.memo<ItemProps>(props => {
                 svg={IconFiles.icons.SingleCheck}
                 size="24px"
                 color={
-                    props.text === props.selected
+                    props.item.value === props.selected
                         ? defaultTheme.colors.primary.default
                         : defaultTheme.colors.grayScale.S10
                 }
             />
-            <Text>{props.text}</Text>
+            <Text>{props.item.text}</Text>
         </Item>
     )
 })
