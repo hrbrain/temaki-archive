@@ -8,3 +8,4 @@ dist/*
 !dist/index.d.ts
 .firebase
 coverage/*
+storybook-static/

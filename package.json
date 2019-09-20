@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "start": "start-storybook -p 6006",
-    "docs:build": "build-storybook -c .storybook -o ./functions/static",
+    "docs:build": "build-storybook -c .storybook",
     "build": "NODE_ENV=production webpack -p",
     "test": "jest",
     "lint": "run-s lint:*",
