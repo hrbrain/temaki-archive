@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/menu-v</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/menu-v" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/menu-v">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(10.000000, 4.000000)" fill="#222222">
+                <path d="M4,2 C4,3.104 3.104,4 2,4 C0.896,4 0,3.104 0,2 C0,0.896 0.896,0 2,0 C3.104,0 4,0.896 4,2" id="Fill-1"></path>
+                <path d="M4,8 C4,9.104 3.104,10 2,10 C0.896,10 0,9.104 0,8 C0,6.896 0.896,6 2,6 C3.104,6 4,6.896 4,8" id="Fill-3"></path>
+                <path d="M4,14 C4,15.104 3.104,16 2,16 C0.896,16 0,15.104 0,14 C0,12.896 0.896,12 2,12 C3.104,12 4,12.896 4,14" id="Fill-5"></path>
+            </g>
+        </g>
+    </g>
+</svg>

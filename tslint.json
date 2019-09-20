@@ -1,0 +1,29 @@
+{
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
+  "extends": [
+    "tslint-config-prettier",
+    "tslint:recommended",
+    "tslint-react"
+  ],
+  "rules": {
+    "prettier": [
+      true,
+      {
+        "singleQuote": true,
+        "semi": false,
+        "printWidth": 120
+      }
+    ],
+    "no-any": true,
+    "semicolon": [true, "never"],
+    "quotemark": [true, "single", "jsx-double"],
+    "only-arrow-functions": true,
+    "jsx-boolean-value": false,
+    "interface-over-type-literal": false,
+    "trailing-comma": false,
+    "arrow-parens": false,
+    "object-literal-sort-keys": false
+  }
+}

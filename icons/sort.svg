@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/sort</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/sort" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/sort">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(7.000000, 4.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M4.2109,1.041 L0.6549,5.215 C0.1449,5.815 0.6119,6.688 1.4439,6.688 L8.5559,6.688 C9.3879,6.688 9.8559,5.815 9.3449,5.215 L5.7889,1.041 C5.3889,0.571 4.6109,0.571 4.2109,1.041" id="sort/up"></path>
+                <path d="M4.2109,14.459 L0.6549,10.285 C0.1449,9.685 0.6119,8.812 1.4439,8.812 L8.5559,8.812 C9.3879,8.812 9.8559,9.685 9.3449,10.285 L5.7889,14.459 C5.3889,14.929 4.6109,14.929 4.2109,14.459" id="sort/down"></path>
+            </g>
+        </g>
+    </g>
+</svg>

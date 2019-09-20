@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/copy">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(3.000000, 1.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M4.25,4 L4.25,1.75 C4.25,1.05978644 4.80978644,0.5 5.5,0.5 L12.793,0.5 C13.124578,0.5 13.4424408,0.631780632 13.6763301,0.865669914 L17.3843301,4.57366991 C17.6180998,4.80743966 17.75,5.12625363 17.75,5.457 L17.75,16.75 C17.75,17.4402136 17.1902136,18 16.5,18 L13.75,18 L13.75,20.25 C13.75,20.9402136 13.1902136,21.5 12.5,21.5 L1.5,21.5 C0.809786438,21.5 0.25,20.9402136 0.25,20.25 L0.25,5.25 C0.25,4.55978644 0.809786438,4 1.5,4 L4.25,4 Z M5.75,4 L8.793,4 C9.12457797,4 9.4424408,4.13178063 9.67633009,4.36566991 L13.3843301,8.07366991 C13.6180998,8.30743966 13.75,8.62625363 13.75,8.957 L13.75,16.5 L16.25,16.5 L16.25,5.56066017 L12.6893398,2 L5.75,2 L5.75,4 Z M1.75,20 L12.25,20 L12.25,9.06066017 L8.68933983,5.5 L1.75,5.5 L1.75,20 Z M3,11.5 L3,10 L9,10 L9,11.5 L3,11.5 Z M3,14.5 L3,13 L11,13 L11,14.5 L3,14.5 Z M3,17.5 L3,16 L11,16 L11,17.5 L3,17.5 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

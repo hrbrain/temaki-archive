@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/information</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/information" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/sortSelect" transform="translate(-45.000000, -50.000000)">
+            <rect id="Rectangle" x="45" y="50" width="24" height="24"></rect>
+            <g id="outline">
+                <rect id="Rectangle-Copy" stroke="#333333" stroke-width="1.5" x="48" y="53" width="18" height="18" rx="9"></rect>
+                <rect id="Rectangle" fill="#333333" x="55.75" y="60.5" width="2.5" height="7" rx="1"></rect>
+                <circle id="Oval" fill="#333333" cx="57" cy="57.75" r="1.25"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

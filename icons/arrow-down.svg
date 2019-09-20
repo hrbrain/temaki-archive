@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/arrow-down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/arrow-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/arrow-down">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(12.000000, 11.500000) scale(1, -1) translate(-12.000000, -11.500000) translate(6.000000, 4.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M6.75,2.81066017 L6.75,15 L5.25,15 L5.25,2.81066017 L1.53033009,6.53033009 L0.469669914,5.46966991 L5.46966991,0.469669914 C5.76256313,0.176776695 6.23743687,0.176776695 6.53033009,0.469669914 L11.5303301,5.46966991 L10.4696699,6.53033009 L6.75,2.81066017 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

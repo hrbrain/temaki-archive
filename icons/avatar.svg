@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/avatar</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/avatar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/avatar">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="Group-7" transform="translate(2.000000, 2.000000)" fill-rule="nonzero">
+                <path d="M20,10 C20,15.523 15.523,20 10,20 C4.477,20 0,15.523 0,10 C0,4.477 4.477,0 10,0 C15.523,0 20,4.477 20,10" id="Fill-1" fill="#EAEAEA"></path>
+                <path d="M14,7 C14,9.209 12.209,11 10,11 C7.791,11 6,9.209 6,7 C6,4.791 7.791,3 10,3 C12.209,3 14,4.791 14,7" id="Fill-3" fill="#999999"></path>
+                <path d="M10.0553796,10.5 C7.21040639,10.5 4.7654674,12.2168 3.602386,14.7026667 C3.40751074,15.1197333 3.49697854,15.6221333 3.81834276,15.9442667 C5.39071362,17.5229333 7.52714297,18.5 9.88312835,18.5 C12.3712587,18.5 14.6166948,17.4141333 16.209633,15.6776 C16.5176284,15.3410667 16.5911566,14.8354667 16.3793133,14.4269333 C15.1663562,12.0898667 12.7944311,10.5 10.0553796,10.5" id="Fill-5" fill="#999999"></path>
+            </g>
+        </g>
+    </g>
+</svg>

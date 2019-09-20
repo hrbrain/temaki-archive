@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/transition</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/transition" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/transition">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(4.000000, 3.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M15.25,2.81066017 L10.5303301,7.53033009 L9.46966991,6.46966991 L14.1893398,1.75 L12,1.75 L12,0.25 L16.75,0.25 L16.75,5 L15.25,5 L15.25,2.81066017 Z M14.5,7.1875 L16,7.1875 L16,14.4375 C16,15.8487756 14.8491518,17.0005 13.438,17.0005 L2.562,17.0005 C1.15084823,17.0005 0,15.8487756 0,14.4375 L0,3.5625 C0,2.15128644 1.15078644,1.0005 2.562,1.0005 L9.813,1.0005 L9.813,2.5005 L2.562,2.5005 C1.97921356,2.5005 1.5,2.97971356 1.5,3.5625 L1.5,14.4375 C1.5,15.0206039 1.979531,15.5005 2.562,15.5005 L13.438,15.5005 C14.020469,15.5005 14.5,15.0206039 14.5,14.4375 L14.5,7.1875 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

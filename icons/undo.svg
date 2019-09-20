@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/undo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/undo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/undo">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(4.000000, 5.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M2.53436017,10.9834 L4.91123009,13.3602699 L3.85056991,14.4209301 L-0.441830671,10.1285295 L3.85064041,5.83719942 L4.91115959,6.89800058 L2.32507274,9.4834 L9.1402,9.4834 C11.5199864,9.4834 13.4502,7.55318644 13.4502,5.1734 C13.4502,2.78961356 11.5199864,0.8594 9.1402,0.8594 L4.2002,0.8594 L4.2002,-0.6406 L9.1402,-0.6406 C12.3484136,-0.6406 14.9502,1.96118644 14.9502,5.1694 C14.9502,8.38161356 12.3484136,10.9834 9.1402,10.9834 L2.53436017,10.9834 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

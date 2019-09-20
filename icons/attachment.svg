@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/attachment</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/attachment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/attachment">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(1.000000, 1.000000)" fill="#222222" fill-rule="nonzero">
+                <path d="M6.25,3 C6.25,2.58578644 6.58578644,2.25 7,2.25 C7.41421356,2.25 7.75,2.58578644 7.75,3 L7.75,16 C7.75,18.3382038 8.94487264,20.25 11,20.25 C13.0551274,20.25 14.25,18.3382038 14.25,16 L14.25,4 C14.25,2.36527564 13.8398162,1.75 13,1.75 C12.1601838,1.75 11.75,2.36527564 11.75,4 L11.75,17 C11.75,17.4142136 11.4142136,17.75 11,17.75 C10.5857864,17.75 10.25,17.4142136 10.25,17 L10.25,4 C10.25,1.63472436 11.1731496,0.25 13,0.25 C14.8268504,0.25 15.75,1.63472436 15.75,4 L15.75,16 C15.75,19.0617962 14.0698726,21.75 11,21.75 C7.93012736,21.75 6.25,19.0617962 6.25,16 L6.25,3 Z" id="Path-6" transform="translate(11.000000, 11.000000) rotate(-225.000000) translate(-11.000000, -11.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

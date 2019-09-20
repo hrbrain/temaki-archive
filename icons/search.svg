@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/search">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(4.000000, 3.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M12.096675,11.7860149 L16.0303301,15.7196699 C16.3232233,16.0125631 16.3232233,16.4874369 16.0303301,16.7803301 C15.7374369,17.0732233 15.2625631,17.0732233 14.9696699,16.7803301 L10.9696699,12.7803301 C10.9651052,12.7757653 10.9606115,12.7711564 10.9561891,12.7665046 C9.82884282,13.5438288 8.4651071,14 7,14 C3.15,14 0,10.85 0,7 C0,3.15 3.15,0 7,0 C10.85,0 14,3.15 14,7 C14,8.84643172 13.2754713,10.5318571 12.096675,11.7860149 Z M1.5,7 C1.5,10.025 3.975,12.5 7,12.5 C10.025,12.5 12.5,10.025 12.5,7 C12.5,3.975 10.025,1.5 7,1.5 C3.975,1.5 1.5,3.975 1.5,7 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

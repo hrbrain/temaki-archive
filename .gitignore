@@ -1,0 +1,10 @@
+node_modules
+.git
+*.log
+.idea
+.vscode
+dist/*
+!dist/index.js
+!dist/index.d.ts
+.firebase
+coverage/*

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/menu-h</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/menu-h" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/menu-h">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(4.000000, 10.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M2,0 C3.104,0 4,0.896 4,2 C4,3.104 3.104,4 2,4 C0.896,4 0,3.104 0,2 C0,0.896 0.896,0 2,0 Z M8,0 C9.104,0 10,0.896 10,2 C10,3.104 9.104,4 8,4 C6.896,4 6,3.104 6,2 C6,0.896 6.896,0 8,0 Z M14,0 C15.104,0 16,0.896 16,2 C16,3.104 15.104,4 14,4 C12.896,4 12,3.104 12,2 C12,0.896 12.896,0 14,0 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

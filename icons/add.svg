@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/add</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/add" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/add">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(4.000000, 4.000000)" fill-rule="nonzero">
+                <path d="M7.25,7.25 L7.25,0 L8.75,0 L8.75,7.25 L16,7.25 L16,8.75 L8.75,8.75 L8.75,16 L7.25,16 L7.25,8.75 L0,8.75 L0,7.25 L7.25,7.25 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>basics/icon/common/group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/filters">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="outline" transform="translate(11.000000, 8.000000)" stroke="#333333" stroke-width="1.5">
+                <path d="M9,3.5 C9,5.43277778 7.43277778,7 5.5,7 C3.56722222,7 2,5.43277778 2,3.5 C2,1.56722222 3.56722222,0 5.5,0 C7.43277778,0 9,1.56722222 9,3.5 Z" id="Stroke-1"></path>
+                <path d="M10.6273444,13 C10.8368021,13 11.0131876,12.808 10.9992238,12.5808 C10.8007901,9.4632 8.4144415,7 5.49967139,7 C2.58563622,7 0.199287618,9.4632 0.000853949403,12.5808 C-0.0138448409,12.808 0.163275582,13 0.372733343,13 L10.6273444,13 Z" id="Stroke-3"></path>
+            </g>
+            <g id="outline-copy" transform="translate(2.000000, 6.000000)" stroke="#333333" stroke-width="1.5">
+                <path d="M9,3.5 C9,5.43277778 7.43277778,7 5.5,7 C3.56722222,7 2,5.43277778 2,3.5 C2,1.56722222 3.56722222,0 5.5,0 C7.43277778,0 9,1.56722222 9,3.5 Z" id="Stroke-1"></path>
+                <path d="M7.60143674,7.45166807 C7.38810838,7.3558017 7.16804627,7.27408913 6.94223739,7.20760611 C6.48243252,7.07222959 5.99879953,7 5.49967139,7 C2.58563622,7 0.199287618,9.4632 0.000853949403,12.5808 C-0.0138448409,12.808 0.163275582,13 0.372733343,13 C2.87374075,13 4.7494963,13 6,13" id="Shape" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
