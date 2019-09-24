@@ -42,4 +42,5 @@ const Text = styled.span`
     color: ${props => props.theme.colors.text};
     font-size: 14px;
     font-weight: normal;
+    white-space: nowrap;
 `
