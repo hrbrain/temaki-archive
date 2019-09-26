@@ -121,6 +121,7 @@ declare module 'hrb-temaki' {
         Home: string;
         Index: string;
         Information: string;
+        Help: string;
         Key: string;
         Like: string;
         Link: string;

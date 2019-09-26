@@ -32,6 +32,7 @@ import Hamburger from '~/../icons/hamburger.svg'
 import Home from '~/../icons/home.svg'
 import Index from '~/../icons/index.svg'
 import Information from '~/../icons/information.svg'
+import Help from '~/../icons/help.svg'
 import Key from '~/../icons/key.svg'
 import Like from '~/../icons/like.svg'
 import Link from '~/../icons/link.svg'
@@ -101,6 +102,7 @@ export const icons = {
     Home,
     Index,
     Information,
+    Help,
     Key,
     Like,
     Link,
