@@ -93,7 +93,3 @@ $ yarn lint-:fix
 # ビルド
 $ yarn build
 ```
-
-### リリース
-
-`package.json` のバーションを編集し、 `Github Releases` から新しいリリースを作成してください
