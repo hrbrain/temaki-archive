@@ -133,7 +133,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bdVaJa",
                   "isStatic": false,
-                  "lastClassName": "ccSHka",
+                  "lastClassName": "fHAhPc",
                   "rules": Array [
                     "
     padding: 10px 12px;
@@ -149,6 +149,9 @@ exports[`Input format of number should match previous snapshot 1`] = `
 
     &:focus {
         outline: none;
+        border-color: ",
+                    [Function],
+                    ";
     }
 ",
                   ],
@@ -169,7 +172,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
             value="145"
           >
             <input
-              className="sc-bdVaJa ccSHka"
+              className="sc-bdVaJa fHAhPc"
               format="number"
               onBlur={[MockFunction]}
               onChange={[Function]}
@@ -185,7 +188,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
 
 exports[`Input format of number should match previous snapshot when provided errored prop 1`] = `
 <input
-  className="sc-bdVaJa coBQrS"
+  className="sc-bdVaJa dgLgqz"
   format="text"
   onChange={[Function]}
 />
@@ -324,7 +327,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bdVaJa",
                   "isStatic": false,
-                  "lastClassName": "ccSHka",
+                  "lastClassName": "fHAhPc",
                   "rules": Array [
                     "
     padding: 10px 12px;
@@ -340,6 +343,9 @@ exports[`Input format of text should match previous snapshot 1`] = `
 
     &:focus {
         outline: none;
+        border-color: ",
+                    [Function],
+                    ";
     }
 ",
                   ],
@@ -360,7 +366,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
             value="Testing Value"
           >
             <input
-              className="sc-bdVaJa ccSHka"
+              className="sc-bdVaJa fHAhPc"
               format="text"
               onBlur={[MockFunction]}
               onChange={[Function]}
@@ -376,7 +382,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
 
 exports[`Input format of text should match previous snapshot when provided errored prop 1`] = `
 <input
-  className="sc-bdVaJa coBQrS"
+  className="sc-bdVaJa dgLgqz"
   format="text"
   onChange={[Function]}
 />
