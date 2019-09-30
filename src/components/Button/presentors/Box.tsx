@@ -88,15 +88,15 @@ const Outer = styled.button<OuterProps>`
             case 'destructive':
                 return Styles.createCSSFromColorType(
                     props.theme.colors.utilities.red,
-                    props.theme.colors.utilities.red,
-                    props.theme.colors.utilities.red,
+                    'rgb(179, 68, 58)',
+                    'rgb(133, 51, 43)',
                     props.theme.colors.grayScale.S0
                 )
             case 'destructive ghost':
                 return Styles.createCSSFromColorType(
                     'inherit',
-                    'inherit',
-                    props.theme.colors.utilities.red,
+                    'rgb(250, 221, 218)',
+                    'rgb(244, 187, 182)',
                     props.theme.colors.utilities.red,
                     props.theme.colors.utilities.red
                 )

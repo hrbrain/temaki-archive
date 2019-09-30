@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 
 import { action } from '@storybook/addon-actions'
-import { select } from '@storybook/addon-knobs'
+import { select, text } from '@storybook/addon-knobs'
 import * as Button from './index'
 
 import * as IconFiles from '~/lib/iconFiles'
@@ -56,6 +56,6 @@ storiesOf('Components|Button', module)
             svg={IconFiles.icons.ArrowDown}
             onClick={action('onClick')}
         >
-            Show filters
+            {text('text', 'Show filters')}
         </Button.Component>
     ))
