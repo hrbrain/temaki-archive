@@ -8,12 +8,19 @@ import * as TextPresentor from './presentors/Text'
  * Utils
  */
 
-export type ColorTypeProp = 'primary'
-// TypeScript 3.4 がまともに使えるようになったら書き換えて下さい
+export type ColorTypeProp =
+    | 'primary'
+    | 'primary ghost'
+    | 'secondary'
+    | 'secondary ghost'
+    | 'destructive'
+    | 'destructive ghost'
+    | 'disabled'
+
 export const buttonShapeType = {
-    box: 'box' as 'box',
-    circle: 'circle' as 'circle',
-    text: 'text' as 'text'
+    box: 'box' as const,
+    circle: 'circle' as const,
+    text: 'text' as const
 }
 
 // 別のコンポーネントで必要なら共通化して下さい
@@ -84,6 +91,7 @@ export const Component: React.FC<Props> = ({
             return (
                 <TextPresentor.Component
                     onClick={handleClick}
+                    colorType={colorType}
                     svg={props.svg}
                     {...props}
                 >

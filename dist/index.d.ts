@@ -51,20 +51,20 @@ declare module 'hrb-temaki' {
     })>;
     export const Button: import("react").FunctionComponent<({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        colorType?: "primary" | undefined;
+        colorType?: "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "disabled" | undefined;
     } & {
         type: "box";
         height?: string | undefined;
         width?: string | undefined;
     }) | ({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        colorType?: "primary" | undefined;
+        colorType?: "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "disabled" | undefined;
     } & {
         type: "circle";
         svg?: string | undefined;
     }) | ({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        colorType?: "primary" | undefined;
+        colorType?: "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "disabled" | undefined;
     } & {
         type: "text";
         svg?: string | undefined;
