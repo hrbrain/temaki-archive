@@ -12,6 +12,13 @@ type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 } & OuterProps
 export const Component: React.FC<Props> = ({ children, ...props }) => {
+    if (props.colorType === 'disabled') {
+        return (
+            <Outer {...props} disabled>
+                {children}
+            </Outer>
+        )
+    }
     return <Outer {...props}>{children}</Outer>
 }
 
@@ -45,13 +52,63 @@ const Outer = styled.button<OuterProps>`
     }
 
     /* color */
-    ${props =>
-        props.colorType === 'primary'
-            ? Styles.createCSSFromColorType(
-                  props.theme.colors.primary.default,
-                  props.theme.colors.primary.P20,
-                  props.theme.colors.primary.P40,
-                  '#FFF'
-              )
-            : ''}
+    ${props => {
+        switch (props.colorType) {
+            case 'primary':
+                return Styles.createCSSFromColorType(
+                    props.theme.colors.primary.default,
+                    props.theme.colors.primary.N20,
+                    props.theme.colors.primary.N40,
+                    props.theme.colors.grayScale.S0
+                )
+            case 'primary ghost':
+                return Styles.createCSSFromColorType(
+                    'inherit',
+                    props.theme.colors.primary.N80,
+                    props.theme.colors.primary.N60,
+                    props.theme.colors.primary.default,
+                    props.theme.colors.primary.default
+                )
+            case 'secondary':
+                return Styles.createCSSFromColorType(
+                    props.theme.colors.grayScale.S5,
+                    props.theme.colors.grayScale.S20,
+                    props.theme.colors.grayScale.S40,
+                    props.theme.colors.grayScale.S100,
+                    props.theme.colors.grayScale.S50
+                )
+            case 'secondary ghost':
+                return Styles.createCSSFromColorType(
+                    'inherit',
+                    props.theme.colors.grayScale.S20,
+                    props.theme.colors.grayScale.S40,
+                    props.theme.colors.grayScale.S100,
+                    props.theme.colors.grayScale.S50
+                )
+            case 'destructive':
+                return Styles.createCSSFromColorType(
+                    props.theme.colors.utilities.red,
+                    props.theme.colors.utilities.red,
+                    props.theme.colors.utilities.red,
+                    props.theme.colors.grayScale.S0
+                )
+            case 'destructive ghost':
+                return Styles.createCSSFromColorType(
+                    'inherit',
+                    'inherit',
+                    props.theme.colors.utilities.red,
+                    props.theme.colors.utilities.red,
+                    props.theme.colors.utilities.red
+                )
+            case 'disabled':
+                return Styles.createCSSFromColorType(
+                    props.theme.colors.grayScale.S20,
+                    props.theme.colors.grayScale.S20,
+                    props.theme.colors.grayScale.S20,
+                    props.theme.colors.grayScale.S0
+                )
+            default:
+                return ''
+        }
+    }}
 `

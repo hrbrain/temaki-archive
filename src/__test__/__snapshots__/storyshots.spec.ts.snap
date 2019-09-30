@@ -536,7 +536,7 @@ exports[`Storyshots Components|Badge all 1`] = `
 
 exports[`Storyshots Components|Button Box 1`] = `
 <button
-  className="sc-htpNat fRwifO"
+  className="sc-htpNat jeSCcm"
   onClick={[Function]}
   type="box"
 >
@@ -546,15 +546,15 @@ exports[`Storyshots Components|Button Box 1`] = `
 
 exports[`Storyshots Components|Button Circle 1`] = `
 <button
-  className="sc-ifAKCX cvHGqt"
+  className="sc-ifAKCX jYTyKI"
   onClick={[Function]}
   type="circle"
 />
 `;
 
-exports[`Storyshots Components|Button Component 1`] = `
+exports[`Storyshots Components|Button Text 1`] = `
 <button
-  className="sc-EHOje dOmtJl"
+  className="sc-EHOje hFCfGq"
   onClick={[Function]}
   type="text"
 >
