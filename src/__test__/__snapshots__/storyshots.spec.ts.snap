@@ -1106,7 +1106,7 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <input
-  className="sc-hSdWYo dpqrNk"
+  className="sc-hSdWYo bViDij"
   format="number"
   onBlur={[Function]}
   onChange={[Function]}
@@ -1117,7 +1117,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <input
-  className="sc-hSdWYo dpqrNk"
+  className="sc-hSdWYo bViDij"
   format="text"
   onBlur={[Function]}
   onChange={[Function]}

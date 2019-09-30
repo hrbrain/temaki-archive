@@ -31,4 +31,8 @@ const Outer = styled.input<OuterProps>`
         outline: none;
         border-color: ${props => props.theme.colors.utilities.highlightGreen};
     }
+
+    &::placeholder {
+        color: ${props => props.theme.colors.grayScale.S20};
+    }
 `
