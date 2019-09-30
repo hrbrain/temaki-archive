@@ -559,7 +559,7 @@ exports[`Storyshots Components|Button Text 1`] = `
   type="text"
 >
   <span
-    className="sc-bZQynM kVcEtF"
+    className="sc-bZQynM rlUyS"
     data-test="text-button-child"
   >
     Show filters

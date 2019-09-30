@@ -22,9 +22,7 @@ export const Component: React.FC<Props> = ({
 }) => (
     <Outer {...props}>
         {renderIcon(svg, colorType)}
-        <Text colorType={colorType} data-test="text-button-child">
-            {children}
-        </Text>
+        {renderText(svg, colorType, children)}
     </Outer>
 )
 
@@ -48,6 +46,21 @@ function renderIcon(
     )
 }
 
+function renderText(
+    svg?: string,
+    colorType?: string,
+    children?: React.ReactNode
+): React.ReactElement | null {
+    if (!children) {
+        return null
+    }
+    return (
+        <Text colorType={colorType} svg={svg} data-test="text-button-child">
+            {children}
+        </Text>
+    )
+}
+
 function selectIconColor(theme: RequiredThemeProps, colorType?: string) {
     switch (colorType) {
         case 'destructive':
@@ -68,7 +81,12 @@ const Outer = styled.button`
     width: auto;
 `
 
-const Text = styled.span<{ colorType?: string }>`
+type TextType = {
+    colorType?: string
+    svg?: string
+}
+
+const Text = styled.span<TextType>`
     color: ${props => {
         switch (props.colorType) {
             case 'destructive':
@@ -77,6 +95,7 @@ const Text = styled.span<{ colorType?: string }>`
                 return props.theme.colors.text
         }
     }};
+    padding-left: ${props => (props.svg ? '4px' : '0')};
     font-size: 14px;
     font-weight: normal;
     white-space: nowrap;
