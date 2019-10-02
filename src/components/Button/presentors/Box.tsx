@@ -29,7 +29,7 @@ export const Component: React.FC<Props> = ({ children, ...props }) => {
 type OuterProps = {
     height?: string
     width?: string
-    colorType: Index.ColorTypeProp
+    colorType: Index.BoxColorTypeProp
 }
 const Outer = styled.button<OuterProps>`
     ${Styles.rippleEffectMixin};

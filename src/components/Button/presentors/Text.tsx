@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled, { ThemeConsumer, RequiredThemeProps } from '~/modules/theme'
 
+import * as Index from '../index'
 import * as Styles from '../lib/styles'
 
 import * as Icon from '~/components/Icon'
@@ -11,7 +12,7 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     svg?: string
-    colorType?: string
+    colorType?: Index.TextColorTypeProp
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
 }
 export const Component: React.FC<Props> = ({

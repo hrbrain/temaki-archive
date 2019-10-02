@@ -9,13 +9,24 @@ import * as TextPresentor from './presentors/Text'
  */
 
 export type ColorTypeProp =
-    | 'primary'
+    | BoxColorTypeProp
+    | CircleColorTypeProp
+    | TextColorTypeProp
+
+type PrimaryColor = 'primary'
+
+export type BoxColorTypeProp =
+    | PrimaryColor
     | 'primary ghost'
     | 'secondary'
     | 'secondary ghost'
     | 'destructive'
     | 'destructive ghost'
     | 'disabled'
+
+export type CircleColorTypeProp = PrimaryColor | 'secondary'
+
+export type TextColorTypeProp = PrimaryColor | 'destructive'
 
 export const buttonShapeType = {
     box: 'box' as const,
@@ -53,35 +64,32 @@ const useIsLoadingByAsyncClick = (
 
 type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>
-    colorType?: ColorTypeProp
 } & (
     | {
           type: typeof buttonShapeType.box
+          colorType?: BoxColorTypeProp
           height?: string
           width?: string
       }
     | {
           type: typeof buttonShapeType.circle
+          colorType?: CircleColorTypeProp
           svg?: string
       }
     | {
           type: typeof buttonShapeType.text
+          colorType?: TextColorTypeProp
           svg?: string
       })
-export const Component: React.FC<Props> = ({
-    colorType = 'primary',
-    onClick,
-    children,
-    ...props
-}) => {
-    const [isLoading, handleClick] = useIsLoadingByAsyncClick(onClick)
+export const Component: React.FC<Props> = props => {
+    const [isLoading, handleClick] = useIsLoadingByAsyncClick(props.onClick)
 
     switch (props.type) {
         case 'circle':
             return (
                 <Circle.Component
                     onClick={handleClick}
-                    colorType={colorType}
+                    colorType={props.colorType || 'primary'}
                     isLoading={isLoading}
                     {...props}
                 />
@@ -91,11 +99,11 @@ export const Component: React.FC<Props> = ({
             return (
                 <TextPresentor.Component
                     onClick={handleClick}
-                    colorType={colorType}
+                    colorType={props.colorType || 'primary'}
                     svg={props.svg}
                     {...props}
                 >
-                    {children}
+                    {props.children}
                 </TextPresentor.Component>
             )
 
@@ -104,11 +112,11 @@ export const Component: React.FC<Props> = ({
                 <Box.Component
                     height={props.height}
                     width={props.width}
-                    colorType={colorType}
+                    colorType={props.colorType || 'primary'}
                     onClick={handleClick}
                     {...props}
                 >
-                    {isLoading ? 'loading...' : children}
+                    {isLoading ? 'loading...' : props.children}
                 </Box.Component>
             )
     }
