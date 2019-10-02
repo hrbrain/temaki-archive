@@ -52,7 +52,7 @@ function renderIcon(
  */
 
 type OuterProps = {
-    colorType: Index.ColorTypeProp
+    colorType: Index.CircleColorTypeProp
 }
 const Outer = Theme.default.button<OuterProps>`
     ${Styles.rippleEffectMixin}
