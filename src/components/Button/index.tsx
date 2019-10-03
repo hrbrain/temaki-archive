@@ -9,14 +9,7 @@ import * as TextPresentor from './presentors/Text'
  */
 
 export type ColorTypeProp =
-    | BoxColorTypeProp
-    | CircleColorTypeProp
-    | TextColorTypeProp
-
-type PrimaryColor = 'primary'
-
-export type BoxColorTypeProp =
-    | PrimaryColor
+    | 'primary'
     | 'primary ghost'
     | 'secondary'
     | 'secondary ghost'
@@ -24,9 +17,17 @@ export type BoxColorTypeProp =
     | 'destructive ghost'
     | 'disabled'
 
-export type CircleColorTypeProp = PrimaryColor | 'secondary'
+export type BoxColorTypeProp = ColorTypeProp
 
-export type TextColorTypeProp = PrimaryColor | 'destructive'
+export type CircleColorTypeProp = Extract<
+    ColorTypeProp,
+    'primary' | 'secondary'
+>
+
+export type TextColorTypeProp = Extract<
+    ColorTypeProp,
+    'primary' | 'destructive'
+>
 
 export const buttonShapeType = {
     box: 'box' as const,
