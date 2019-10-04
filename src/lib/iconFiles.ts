@@ -16,6 +16,7 @@ import Close from '~/../icons/close.svg'
 import Company from '~/../icons/company.svg'
 import Copy from '~/../icons/copy.svg'
 import Delete from '~/../icons/delete.svg'
+import Display from '~/../icons/display.svg'
 import Download from '~/../icons/download.svg'
 import Drag from '~/../icons/drag.svg'
 import Dragdrop from '~/../icons/dragdrop.svg'
@@ -86,6 +87,7 @@ export const icons = {
     Company,
     Copy,
     Delete,
+    Display,
     Download,
     Drag,
     Dragdrop,
