@@ -105,6 +105,7 @@ declare module 'hrb-temaki' {
         Company: string;
         Copy: string;
         Delete: string;
+        Display: string;
         Download: string;
         Drag: string;
         Dragdrop: string;
