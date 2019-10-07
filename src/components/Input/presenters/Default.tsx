@@ -7,10 +7,25 @@ type Props = {
     name?: string
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    errorMessage?: string
 } & OuterProps
 export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
-    return <Outer {...props} />
+    return (
+        <Wrapper>
+            <Outer {...props} />
+            {renderErrorMessage(props.errored, props.errorMessage)}
+        </Wrapper>
+    )
 }
+
+function renderErrorMessage(errored?: boolean, errorMessage?: string) {
+    if (errored && errorMessage) {
+        return <ErrorMessage>{errorMessage}</ErrorMessage>
+    }
+    return null
+}
+
+const Wrapper = styled.div``
 
 type OuterProps = {
     errored?: boolean
@@ -35,4 +50,9 @@ const Outer = styled.input<OuterProps>`
     &::placeholder {
         color: ${props => props.theme.colors.grayScale.S20};
     }
+`
+
+const ErrorMessage = styled.p`
+    color: ${props => props.theme.colors.utilities.red};
+    padding-top: 4px;
 `
