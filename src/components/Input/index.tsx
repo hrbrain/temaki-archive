@@ -24,6 +24,7 @@ type Props = {
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
     placeholder?: string
     errored?: boolean
+    errorMessage?: string
 } & (
     | {
           format: typeof TEXT
