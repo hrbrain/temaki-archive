@@ -29,6 +29,7 @@ declare module 'hrb-temaki' {
         onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
         placeholder?: string | undefined;
         errored?: boolean | undefined;
+        errorMessage?: string | undefined;
     } & {
         format: "text";
         value?: _Input.StringValue;
@@ -40,6 +41,7 @@ declare module 'hrb-temaki' {
         onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
         placeholder?: string | undefined;
         errored?: boolean | undefined;
+        errorMessage?: string | undefined;
     } & {
         format: "number";
         value?: _Input.NumberValue;

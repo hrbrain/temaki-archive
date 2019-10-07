@@ -118,74 +118,104 @@ exports[`Input format of number should match previous snapshot 1`] = `
         onChange={[Function]}
         value="145"
       >
-        <styled.input
-          format="number"
-          onBlur={[MockFunction]}
-          onChange={[Function]}
-          value="145"
-        >
+        <styled.div>
           <StyledComponent
-            format="number"
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bdVaJa",
-                  "isStatic": false,
-                  "lastClassName": "llTzYI",
-                  "rules": Array [
-                    "
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: solid 1px ",
-                    [Function],
-                    ";
-    transition: 0.15s border-color;
-
-    ",
-                    [Function],
-                    "
-
-    &:focus {
-        outline: none;
-        border-color: ",
-                    [Function],
-                    ";
-    }
-
-    &::placeholder {
-        color: ",
-                    [Function],
-                    ";
-    }
-",
-                  ],
+                  "isStatic": true,
+                  "lastClassName": "bDWFJH",
+                  "rules": Array [],
                 },
-                "displayName": "styled.input",
+                "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
                 "styledComponentId": "sc-bdVaJa",
-                "target": "input",
+                "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
             }
             forwardedRef={null}
-            onBlur={[MockFunction]}
-            onChange={[Function]}
-            value="145"
           >
-            <input
-              className="sc-bdVaJa llTzYI"
-              format="number"
-              onBlur={[MockFunction]}
-              onChange={[Function]}
-              value="145"
-            />
+            <div
+              className="sc-bdVaJa bDWFJH"
+            >
+              <styled.input
+                format="number"
+                onBlur={[MockFunction]}
+                onChange={[Function]}
+                value="145"
+              >
+                <StyledComponent
+                  format="number"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "EQNil",
+                        "rules": Array [
+                          "
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: solid 1px ",
+                          [Function],
+                          ";
+    transition: 0.15s border-color;
+
+    ",
+                          [Function],
+                          "
+
+    &:focus {
+        outline: none;
+        border-color: ",
+                          [Function],
+                          ";
+    }
+
+    &::placeholder {
+        color: ",
+                          [Function],
+                          ";
+    }
+",
+                        ],
+                      },
+                      "displayName": "styled.input",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "input",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  onBlur={[MockFunction]}
+                  onChange={[Function]}
+                  value="145"
+                >
+                  <input
+                    className="sc-bwzfXH EQNil"
+                    format="number"
+                    onBlur={[MockFunction]}
+                    onChange={[Function]}
+                    value="145"
+                  />
+                </StyledComponent>
+              </styled.input>
+            </div>
           </StyledComponent>
-        </styled.input>
+        </styled.div>
       </Component>
     </Component>
   </Memo()>
@@ -194,7 +224,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
 
 exports[`Input format of number should match previous snapshot when provided errored prop 1`] = `
 <input
-  className="sc-bdVaJa eaGTus"
+  className="sc-bwzfXH iVwEor"
   format="text"
   onChange={[Function]}
 />
@@ -318,74 +348,104 @@ exports[`Input format of text should match previous snapshot 1`] = `
         onChange={[Function]}
         value="Testing Value"
       >
-        <styled.input
-          format="text"
-          onBlur={[MockFunction]}
-          onChange={[Function]}
-          value="Testing Value"
-        >
+        <styled.div>
           <StyledComponent
-            format="text"
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bdVaJa",
-                  "isStatic": false,
-                  "lastClassName": "llTzYI",
-                  "rules": Array [
-                    "
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: solid 1px ",
-                    [Function],
-                    ";
-    transition: 0.15s border-color;
-
-    ",
-                    [Function],
-                    "
-
-    &:focus {
-        outline: none;
-        border-color: ",
-                    [Function],
-                    ";
-    }
-
-    &::placeholder {
-        color: ",
-                    [Function],
-                    ";
-    }
-",
-                  ],
+                  "isStatic": true,
+                  "lastClassName": "bDWFJH",
+                  "rules": Array [],
                 },
-                "displayName": "styled.input",
+                "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
                 "styledComponentId": "sc-bdVaJa",
-                "target": "input",
+                "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
             }
             forwardedRef={null}
-            onBlur={[MockFunction]}
-            onChange={[Function]}
-            value="Testing Value"
           >
-            <input
-              className="sc-bdVaJa llTzYI"
-              format="text"
-              onBlur={[MockFunction]}
-              onChange={[Function]}
-              value="Testing Value"
-            />
+            <div
+              className="sc-bdVaJa bDWFJH"
+            >
+              <styled.input
+                format="text"
+                onBlur={[MockFunction]}
+                onChange={[Function]}
+                value="Testing Value"
+              >
+                <StyledComponent
+                  format="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bwzfXH",
+                        "isStatic": false,
+                        "lastClassName": "EQNil",
+                        "rules": Array [
+                          "
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: solid 1px ",
+                          [Function],
+                          ";
+    transition: 0.15s border-color;
+
+    ",
+                          [Function],
+                          "
+
+    &:focus {
+        outline: none;
+        border-color: ",
+                          [Function],
+                          ";
+    }
+
+    &::placeholder {
+        color: ",
+                          [Function],
+                          ";
+    }
+",
+                        ],
+                      },
+                      "displayName": "styled.input",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bwzfXH",
+                      "target": "input",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  onBlur={[MockFunction]}
+                  onChange={[Function]}
+                  value="Testing Value"
+                >
+                  <input
+                    className="sc-bwzfXH EQNil"
+                    format="text"
+                    onBlur={[MockFunction]}
+                    onChange={[Function]}
+                    value="Testing Value"
+                  />
+                </StyledComponent>
+              </styled.input>
+            </div>
           </StyledComponent>
-        </styled.input>
+        </styled.div>
       </Component>
     </Component>
   </Memo()>
@@ -394,7 +454,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
 
 exports[`Input format of text should match previous snapshot when provided errored prop 1`] = `
 <input
-  className="sc-bdVaJa eaGTus"
+  className="sc-bwzfXH iVwEor"
   format="text"
   onChange={[Function]}
 />

@@ -1105,25 +1105,33 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
 `;
 
 exports[`Storyshots Components|Input Number 1`] = `
-<input
-  className="sc-hSdWYo bViDij"
-  format="number"
-  onBlur={[Function]}
-  onChange={[Function]}
-  placeholder="Enter your age"
-  value="0"
-/>
+<div
+  className="sc-hSdWYo bIQQAp"
+>
+  <input
+    className="sc-eHgmQL kILwDb"
+    format="number"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="Enter your age"
+    value="0"
+  />
+</div>
 `;
 
 exports[`Storyshots Components|Input Text 1`] = `
-<input
-  className="sc-hSdWYo bViDij"
-  format="text"
-  onBlur={[Function]}
-  onChange={[Function]}
-  placeholder="Enter your name"
-  value=""
-/>
+<div
+  className="sc-hSdWYo bIQQAp"
+>
+  <input
+    className="sc-eHgmQL kILwDb"
+    format="text"
+    onBlur={[Function]}
+    onChange={[Function]}
+    placeholder="Enter your name"
+    value=""
+  />
+</div>
 `;
 
 exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
@@ -1131,16 +1139,16 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   className="mr-10 mt-56"
 >
   <div
-    className="sc-eHgmQL jvQohW"
+    className="sc-jWBwVP dCooxY"
   >
     <div>
       <div
-        className="top sc-cvbbAY bInLHo"
+        className="top sc-brqgnP dKnoCn"
         data-test="menu-component"
         onClick={[Function]}
       >
         <div
-          className="sc-jWBwVP fDrbnp sc-bxivhb hBuNrQ"
+          className="sc-cMljjf eTbdzc sc-bxivhb hBuNrQ"
           dangerouslySetInnerHTML={
             Object {
               "__html": undefined,
@@ -1150,25 +1158,25 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
         />
       </div>
       <ul
-        className="top hidden sc-brqgnP cYakXM"
+        className="top hidden sc-jAaTju fbvPNC"
         data-test="list-component"
       >
         <li
-          className="sc-cMljjf panfR"
+          className="sc-jDwBTQ jhZLDW"
           data-test="list-item0"
           onClick={[Function]}
         >
           リスト1
         </li>
         <li
-          className="sc-cMljjf panfR"
+          className="sc-jDwBTQ jhZLDW"
           data-test="list-item1"
           onClick={[Function]}
         >
           リスト2
         </li>
         <li
-          className="sc-cMljjf panfR"
+          className="sc-jDwBTQ jhZLDW"
           data-test="list-item2"
           onClick={[Function]}
         >
@@ -1183,12 +1191,12 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
-  className="sc-jAaTju hQhIFT"
+  className="sc-gPEVay ghLINC"
   data-test="radio-on"
   onClick={[Function]}
 >
   <div
-    className="sc-jDwBTQ koddAM sc-bxivhb hBuNrQ"
+    className="sc-iRbamj duDxRN sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1197,7 +1205,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-gPEVay kIVeXd"
+    className="sc-jlyJG jGNKze"
   >
     RadioButton
   </span>
@@ -1207,7 +1215,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div
-    className="sc-iRbamj iynKY"
+    className="sc-gipzik griDbZ"
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -1215,7 +1223,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
-    className="sc-iRbamj ctDUmi"
+    className="sc-gipzik jalvnT"
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -1223,7 +1231,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
-    className="sc-iRbamj ctDUmi"
+    className="sc-gipzik jalvnT"
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -1238,25 +1246,25 @@ exports[`Storyshots Components|Switch all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-jlyJG cFFhQQ"
+    className="sc-csuQGl izmaIN"
     data-test="switch-off"
   >
     <span
-      className="sc-Rmtcm bzhmFx"
+      className="sc-hzDkRC hqeTrc"
     >
       OFF
     </span>
     <div
-      className="sc-gipzik fIPszB"
+      className="sc-Rmtcm bpIyeA"
       data-test="switch"
       onClick={[Function]}
     >
       <span
-        className="sc-csuQGl gZhtRh"
+        className="sc-bRBYWo iWPfGb"
       />
     </div>
     <span
-      className="sc-Rmtcm bzhmFx"
+      className="sc-hzDkRC hqeTrc"
     >
       ON
     </span>
@@ -1266,7 +1274,7 @@ exports[`Storyshots Components|Switch all 1`] = `
 
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-bRBYWo fqBHfb"
+  className="sc-jhAzac kSQQeN"
 >
   Hello
 </p>
@@ -1274,7 +1282,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
-  className="sc-hzDkRC hFHwAH"
+  className="sc-fBuWsC eXwqoX"
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -1294,11 +1302,11 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-jhAzac dYYaRO"
+    className="sc-fMiknA fTTPfU"
     data-test="info-toast"
   >
     <div
-      className="sc-fMiknA qwhKU sc-bxivhb dUTGrc"
+      className="sc-eqIVtm kEMiyY sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1309,12 +1317,12 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-dVhcbM cRFDEX"
+        className="sc-fAjcbJ fJbXpv"
       >
         ラベル
       </div>
       <div
-        className="sc-eqIVtm cROgWm"
+        className="sc-caSCKo fqxeRC"
       >
         ここにテキスト。
       </div>
@@ -1325,12 +1333,12 @@ exports[`Storyshots Components|Toast all 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-fAjcbJ kCcMQj"
+  className="sc-gisBJw hghZUt"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-caSCKo hcdcQv"
+    className="sc-kjoXOD bhbDXw"
   >
     テキスト要素
   </span>
