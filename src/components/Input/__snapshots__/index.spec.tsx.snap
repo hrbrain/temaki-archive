@@ -1,6 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input format of number should match previous snapshot 1`] = `
+.c0 {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: solid 1px rgb(234,234,234);
+  -webkit-transition: 0.15s border-color;
+  transition: 0.15s border-color;
+}
+
+.c0:focus {
+  outline: none;
+  border-color: rgb(114,206,92);
+}
+
+.c0::-webkit-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::-moz-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0:-ms-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::placeholder {
+  color: rgb(214,214,214);
+}
+
 <ThemeProvider
   theme={
     Object {
@@ -41,6 +70,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
           "paleBlue": "rgb(245, 249, 252)",
           "paleGreen": "rgb(248 ,252, 247)",
           "paleRed": "rgb(253, 246, 246)",
+          "paleYellow": "rgb(255, 255, 233)",
           "red": "rgb(224, 85, 72)",
         },
       },
@@ -143,7 +173,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
             forwardedRef={null}
           >
             <div
-              className="sc-bdVaJa bDWFJH"
+              className=""
             >
               <styled.input
                 format="number"
@@ -160,7 +190,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "EQNil",
+                        "lastClassName": "c0",
                         "rules": Array [
                           "
     padding: 10px 12px;
@@ -169,6 +199,10 @@ exports[`Input format of number should match previous snapshot 1`] = `
                           [Function],
                           ";
     transition: 0.15s border-color;
+
+    ",
+                          [Function],
+                          "
 
     ",
                           [Function],
@@ -205,7 +239,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                   value="145"
                 >
                   <input
-                    className="sc-bwzfXH EQNil"
+                    className="c0"
                     format="number"
                     onBlur={[MockFunction]}
                     onChange={[Function]}
@@ -223,14 +257,73 @@ exports[`Input format of number should match previous snapshot 1`] = `
 `;
 
 exports[`Input format of number should match previous snapshot when provided errored prop 1`] = `
+.c0 {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: solid 1px rgb(234,234,234);
+  -webkit-transition: 0.15s border-color;
+  transition: 0.15s border-color;
+  border-color: rgb(224,85,72);
+}
+
+.c0:focus {
+  outline: none;
+  border-color: rgb(114,206,92);
+}
+
+.c0::-webkit-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::-moz-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0:-ms-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::placeholder {
+  color: rgb(214,214,214);
+}
+
 <input
-  className="sc-bwzfXH iVwEor"
+  className="c0"
   format="text"
   onChange={[Function]}
 />
 `;
 
 exports[`Input format of text should match previous snapshot 1`] = `
+.c0 {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: solid 1px rgb(234,234,234);
+  -webkit-transition: 0.15s border-color;
+  transition: 0.15s border-color;
+}
+
+.c0:focus {
+  outline: none;
+  border-color: rgb(114,206,92);
+}
+
+.c0::-webkit-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::-moz-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0:-ms-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::placeholder {
+  color: rgb(214,214,214);
+}
+
 <ThemeProvider
   theme={
     Object {
@@ -271,6 +364,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
           "paleBlue": "rgb(245, 249, 252)",
           "paleGreen": "rgb(248 ,252, 247)",
           "paleRed": "rgb(253, 246, 246)",
+          "paleYellow": "rgb(255, 255, 233)",
           "red": "rgb(224, 85, 72)",
         },
       },
@@ -373,7 +467,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
             forwardedRef={null}
           >
             <div
-              className="sc-bdVaJa bDWFJH"
+              className=""
             >
               <styled.input
                 format="text"
@@ -390,7 +484,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "EQNil",
+                        "lastClassName": "c0",
                         "rules": Array [
                           "
     padding: 10px 12px;
@@ -399,6 +493,10 @@ exports[`Input format of text should match previous snapshot 1`] = `
                           [Function],
                           ";
     transition: 0.15s border-color;
+
+    ",
+                          [Function],
+                          "
 
     ",
                           [Function],
@@ -435,7 +533,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                   value="Testing Value"
                 >
                   <input
-                    className="sc-bwzfXH EQNil"
+                    className="c0"
                     format="text"
                     onBlur={[MockFunction]}
                     onChange={[Function]}
@@ -453,8 +551,38 @@ exports[`Input format of text should match previous snapshot 1`] = `
 `;
 
 exports[`Input format of text should match previous snapshot when provided errored prop 1`] = `
+.c0 {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: solid 1px rgb(234,234,234);
+  -webkit-transition: 0.15s border-color;
+  transition: 0.15s border-color;
+  border-color: rgb(224,85,72);
+}
+
+.c0:focus {
+  outline: none;
+  border-color: rgb(114,206,92);
+}
+
+.c0::-webkit-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::-moz-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0:-ms-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::placeholder {
+  color: rgb(214,214,214);
+}
+
 <input
-  className="sc-bwzfXH iVwEor"
+  className="c0"
   format="text"
   onChange={[Function]}
 />

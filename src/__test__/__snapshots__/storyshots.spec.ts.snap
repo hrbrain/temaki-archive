@@ -1109,7 +1109,7 @@ exports[`Storyshots Components|Input Number 1`] = `
   className="sc-hSdWYo bIQQAp"
 >
   <input
-    className="sc-eHgmQL kILwDb"
+    className="sc-eHgmQL fCHQOR"
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1124,7 +1124,7 @@ exports[`Storyshots Components|Input Text 1`] = `
   className="sc-hSdWYo bIQQAp"
 >
   <input
-    className="sc-eHgmQL kILwDb"
+    className="sc-eHgmQL fCHQOR"
     format="text"
     onBlur={[Function]}
     onChange={[Function]}

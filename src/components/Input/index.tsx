@@ -25,6 +25,7 @@ type Props = {
     placeholder?: string
     errored?: boolean
     errorMessage?: string
+    edited?: boolean
 } & (
     | {
           format: typeof TEXT

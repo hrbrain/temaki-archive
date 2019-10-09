@@ -29,6 +29,7 @@ const Wrapper = styled.div``
 
 type OuterProps = {
     errored?: boolean
+    edited?: boolean
 }
 const Outer = styled.input<OuterProps>`
     padding: 10px 12px;
@@ -40,6 +41,12 @@ const Outer = styled.input<OuterProps>`
         props.errored &&
         css`
             border-color: ${props.theme.colors.utilities.red};
+        `}
+
+    ${props =>
+        props.edited &&
+        css`
+            background: ${props.theme.colors.utilities.paleYellow};
         `}
 
     &:focus {
