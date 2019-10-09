@@ -36,6 +36,7 @@ export type RequiredThemeColors = {
         paleRed: string
         paleGreen: string
         paleBlue: string
+        paleYellow: string
     }
     text: {
         default: string
@@ -139,7 +140,8 @@ export const defaultTheme: RequiredThemeProps = {
             highlightGreen: 'rgb(114, 206, 92)',
             paleRed: 'rgb(253, 246, 246)',
             paleGreen: 'rgb(248 ,252, 247)',
-            paleBlue: 'rgb(245, 249, 252)'
+            paleBlue: 'rgb(245, 249, 252)',
+            paleYellow: 'rgb(255, 255, 233)'
         },
         text: {
             default: '#333'

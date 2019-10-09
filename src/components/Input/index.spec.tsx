@@ -3,6 +3,7 @@ import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '../../__test__/utils'
 // import { defaultTheme } from '../../modules/theme'
+import 'jest-styled-components'
 
 import * as Input from './index'
 
@@ -67,6 +68,12 @@ describe('Input format of text', () => {
         wrapper = mountWithTheme(<Input.Component format="text" errored />)
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
+    })
+
+    it('should change background-color when provided edited prop', () => {
+        wrapper = mountWithTheme(<Input.Component format="text" edited />)
+        const inputEl = wrapper.find('input')
+        expect(inputEl).toHaveStyleRule('background', 'rgb(255,255,233)')
     })
 })
 
@@ -150,5 +157,11 @@ describe('Input format of number', () => {
         wrapper = mountWithTheme(<Input.Component format="text" errored />)
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
+    })
+
+    it('should change background-color when provided edited prop', () => {
+        wrapper = mountWithTheme(<Input.Component format="text" edited />)
+        const inputEl = wrapper.find('input')
+        expect(inputEl).toHaveStyleRule('background', 'rgb(255,255,233)')
     })
 })

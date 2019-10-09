@@ -56,6 +56,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
           "paleBlue": "rgb(245, 249, 252)",
           "paleGreen": "rgb(248 ,252, 247)",
           "paleRed": "rgb(253, 246, 246)",
+          "paleYellow": "rgb(255, 255, 233)",
           "red": "rgb(224, 85, 72)",
         },
       },

@@ -30,6 +30,7 @@ declare module 'hrb-temaki' {
         placeholder?: string | undefined;
         errored?: boolean | undefined;
         errorMessage?: string | undefined;
+        edited?: boolean | undefined;
     } & {
         format: "text";
         value?: _Input.StringValue;
@@ -42,6 +43,7 @@ declare module 'hrb-temaki' {
         placeholder?: string | undefined;
         errored?: boolean | undefined;
         errorMessage?: string | undefined;
+        edited?: boolean | undefined;
     } & {
         format: "number";
         value?: _Input.NumberValue;
@@ -242,6 +244,7 @@ declare module 'hrb-temaki/modules/theme' {
             paleRed: string;
             paleGreen: string;
             paleBlue: string;
+            paleYellow: string;
         };
         text: {
             default: string;
