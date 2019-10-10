@@ -289,8 +289,9 @@ exports[`Input format of number should match previous snapshot when provided err
 
 <input
   className="c0"
-  format="text"
+  format="number"
   onChange={[Function]}
+  value={null}
 />
 `;
 

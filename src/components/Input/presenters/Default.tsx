@@ -4,11 +4,14 @@ import styled, { css } from '~/modules/theme'
 type Props = {
     type?: string
     value?: string
+    prevValue?: string
     name?: string
+    placeholder?: string
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    errored?: boolean
     errorMessage?: string
-} & OuterProps
+}
 export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     return (
         <Wrapper>
@@ -28,8 +31,9 @@ function renderErrorMessage(errored?: boolean, errorMessage?: string) {
 const Wrapper = styled.div``
 
 type OuterProps = {
+    value?: string
+    prevValue?: string
     errored?: boolean
-    edited?: boolean
 }
 const Outer = styled.input<OuterProps>`
     padding: 10px 12px;
@@ -44,7 +48,8 @@ const Outer = styled.input<OuterProps>`
         `}
 
     ${props =>
-        props.edited &&
+        props.prevValue !== undefined &&
+        props.value !== props.prevValue &&
         css`
             background: ${props.theme.colors.utilities.paleYellow};
         `}

@@ -30,10 +30,10 @@ declare module 'hrb-temaki' {
         placeholder?: string | undefined;
         errored?: boolean | undefined;
         errorMessage?: string | undefined;
-        edited?: boolean | undefined;
     } & {
         format: "text";
         value?: _Input.StringValue;
+        prevValue?: _Input.StringValue;
         onChange?: ((value: _Input.StringValue) => void) | undefined;
     }) | ({
         type?: string | undefined;
@@ -43,10 +43,10 @@ declare module 'hrb-temaki' {
         placeholder?: string | undefined;
         errored?: boolean | undefined;
         errorMessage?: string | undefined;
-        edited?: boolean | undefined;
     } & {
         format: "number";
         value?: _Input.NumberValue;
+        prevValue?: _Input.NumberValue;
         onChange?: ((value: _Input.NumberValue) => void) | undefined;
     })>;
     export const Button: import("react").FunctionComponent<({

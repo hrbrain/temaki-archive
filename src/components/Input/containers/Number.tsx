@@ -58,6 +58,7 @@ type Props = {
 type InjectProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
     value?: Input.StringValue
+    prevValue?: Input.StringValue
 }
 export const Container: ContainerType<Props, InjectProps> = ({
     Presenter,
