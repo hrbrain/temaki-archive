@@ -70,8 +70,14 @@ describe('Input format of text', () => {
         expect(inputEl).toMatchSnapshot()
     })
 
-    it('should change background-color when provided edited prop', () => {
-        wrapper = mountWithTheme(<Input.Component format="text" edited />)
+    it('should change background-color when value and prevValue are equal', () => {
+        wrapper = mountWithTheme(
+            <Input.Component
+                format="text"
+                value="value"
+                prevValue="prevValue"
+            />
+        )
         const inputEl = wrapper.find('input')
         expect(inputEl).toHaveStyleRule('background', 'rgb(255,255,233)')
     })
@@ -154,13 +160,15 @@ describe('Input format of number', () => {
     })
 
     it('should match previous snapshot when provided errored prop', () => {
-        wrapper = mountWithTheme(<Input.Component format="text" errored />)
+        wrapper = mountWithTheme(<Input.Component format="number" errored />)
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
     })
 
-    it('should change background-color when provided edited prop', () => {
-        wrapper = mountWithTheme(<Input.Component format="text" edited />)
+    it('should change background-color when value and prevValue are equal', () => {
+        wrapper = mountWithTheme(
+            <Input.Component format="number" value={0} prevValue={1} />
+        )
         const inputEl = wrapper.find('input')
         expect(inputEl).toHaveStyleRule('background', 'rgb(255,255,233)')
     })

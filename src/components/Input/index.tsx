@@ -25,16 +25,17 @@ type Props = {
     placeholder?: string
     errored?: boolean
     errorMessage?: string
-    edited?: boolean
 } & (
     | {
           format: typeof TEXT
           value?: StringValue
+          prevValue?: StringValue
           onChange?: (value: StringValue) => void
       }
     | {
           format: typeof NUMBER
           value?: NumberValue
+          prevValue?: NumberValue
           onChange?: (value: NumberValue) => void
       })
 export const Component = React.memo<Props>(({ children: _, ...props }) => {
