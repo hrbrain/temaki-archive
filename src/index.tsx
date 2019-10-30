@@ -3,6 +3,7 @@ import * as _Text from '~/components/Text/index'
 import * as _Icon from '~/components/Icon/index'
 import * as _Input from '~/components/Input/index'
 import * as _Button from '~/components/Button/index'
+import { createCSSFromColorType as _createCSSFromColorType } from '~/components/Button/lib/styles'
 import * as _Toast from '~/components/Toast/index'
 import * as _SegmentedControl from '~/components/SegmentedControl/index'
 import * as _ToolTip from '~/components/ToolTip/index'
@@ -23,6 +24,7 @@ export const Icon = _Icon.Component
 export const Checkbox = _Checkbox.Component
 export const Input = _Input.Component
 export const Button = _Button.Component
+export const createButtonCSSFromColorType = _createCSSFromColorType
 export const buttonShapeType = _Button.buttonShapeType
 export const Toast = _Toast.Component
 export const SegmentedControl = _SegmentedControl.Component

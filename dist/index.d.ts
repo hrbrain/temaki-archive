@@ -69,6 +69,7 @@ declare module 'hrb-temaki' {
         type: "text";
         svg?: string | undefined;
     })>;
+    export const createButtonCSSFromColorType: (base: string, hovered: string, activated: string, text: string, border?: string | null) => import("styled-components").FlattenSimpleInterpolation;
     export const buttonShapeType: {
         box: "box";
         circle: "circle";
@@ -308,7 +309,7 @@ declare module 'hrb-temaki/modules/theme' {
         typography: RequiredThemeTextSize;
     };
     export const defaultTheme: RequiredThemeProps;
-    const styled: styledComponents.ThemedBaseStyledInterface<RequiredThemeProps>, ServerStyleSheet: typeof styledComponents.ServerStyleSheet, StyleSheetManager: typeof styledComponents.StyleSheetManager, createGlobalStyle: <P extends object = {}>(first: styledComponents.CSSObject | TemplateStringsArray | styledComponents.InterpolationFunction<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>, ...interpolations: styledComponents.Interpolation<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>[]) => styledComponents.GlobalStyleComponent<P, RequiredThemeProps>, css: styledComponents.BaseThemedCssFunction<RequiredThemeProps>, isStyledComponent: typeof styledComponents.isStyledComponent, keyframes: (strings: TemplateStringsArray | styledComponents.CSSKeyframes, ...interpolations: styledComponents.SimpleInterpolation[]) => styledComponents.Keyframes, withTheme: styledComponents.BaseWithThemeFnInterface<RequiredThemeProps>;
+    const styled: styledComponents.ThemedBaseStyledInterface<RequiredThemeProps>, ServerStyleSheet: typeof styledComponents.ServerStyleSheet, StyleSheetManager: typeof styledComponents.StyleSheetManager, createGlobalStyle: <P extends object = {}>(first: TemplateStringsArray | styledComponents.CSSObject | styledComponents.InterpolationFunction<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>, ...interpolations: styledComponents.Interpolation<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>[]) => styledComponents.GlobalStyleComponent<P, RequiredThemeProps>, css: styledComponents.BaseThemedCssFunction<RequiredThemeProps>, isStyledComponent: typeof styledComponents.isStyledComponent, keyframes: (strings: TemplateStringsArray | styledComponents.CSSKeyframes, ...interpolations: styledComponents.SimpleInterpolation[]) => styledComponents.Keyframes, withTheme: styledComponents.BaseWithThemeFnInterface<RequiredThemeProps>;
     const ThemeConsumer: React.ExoticComponent<React.ConsumerProps<RequiredThemeProps>>;
     const ThemeContext: React.Context<RequiredThemeProps>;
     const ThemeProvider: React.ComponentClass<styledComponents.ThemeProviderProps<RequiredThemeProps, RequiredThemeProps>, any>;
