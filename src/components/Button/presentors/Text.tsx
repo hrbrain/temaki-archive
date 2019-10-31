@@ -65,7 +65,7 @@ function renderText(
 function selectIconColor(theme: RequiredThemeProps, colorType?: string) {
     switch (colorType) {
         case 'destructive':
-            return theme.colors.utilities.red
+            return theme.colors.utilities.red.default
         default:
             return undefined
     }

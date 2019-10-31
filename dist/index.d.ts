@@ -238,9 +238,31 @@ declare module 'hrb-temaki/modules/theme' {
             S100: string;
         };
         utilities: {
-            red: string;
+            red: {
+                default: string;
+                N20: string;
+                N40: string;
+                N60: string;
+                N80: string;
+                N90: string;
+                N95: string;
+                P20: string;
+                P40: string;
+                P60: string;
+            };
             blue: string;
-            highlightGreen: string;
+            highlightGreen: {
+                default: string;
+                N20: string;
+                N40: string;
+                N60: string;
+                N80: string;
+                N90: string;
+                N95: string;
+                P20: string;
+                P40: string;
+                P60: string;
+            };
             paleRed: string;
             paleGreen: string;
             paleBlue: string;
