@@ -11,7 +11,16 @@ exports[`Input format of number should match previous snapshot 1`] = `
 
 .c0:focus {
   outline: none;
-  border-color: rgb(114,206,92);
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
 }
 
 .c0::-webkit-input-placeholder {
@@ -66,12 +75,34 @@ exports[`Input format of number should match previous snapshot 1`] = `
         },
         "utilities": Object {
           "blue": "rgb(48, 120, 191)",
-          "highlightGreen": "rgb(114, 206, 92)",
+          "highlightGreen": Object {
+            "N20": "rgb(142, 216, 125)",
+            "N40": "rgb(170, 226, 157)",
+            "N60": "rgb(199, 235, 190)",
+            "N80": "rgb(227, 245, 222)",
+            "N90": "rgb(240, 250, 238)",
+            "N95": "rgb(248, 252, 247)",
+            "P20": "rgb(68, 123, 55)",
+            "P40": "rgb(91, 164, 73)",
+            "P60": "rgb(114, 206, 92)",
+            "default": "rgb(114, 206, 92)",
+          },
           "paleBlue": "rgb(245, 249, 252)",
           "paleGreen": "rgb(248 ,252, 247)",
           "paleRed": "rgb(253, 246, 246)",
           "paleYellow": "rgb(255, 255, 233)",
-          "red": "rgb(224, 85, 72)",
+          "red": Object {
+            "N20": "rgb(230, 119, 109)",
+            "N40": "rgb(236, 153, 145)",
+            "N60": "rgb(243, 187, 182)",
+            "N80": "rgb(249, 221, 218)",
+            "N90": "rgb(251, 238, 236)",
+            "N95": "rgb(253, 246, 246)",
+            "P20": "rgb(179, 68, 57)",
+            "P40": "rgb(134, 51, 43)",
+            "P60": "rgb(89, 34, 28)",
+            "default": "rgb(224, 85, 72)",
+          },
         },
       },
       "shadows": Object {
@@ -263,12 +294,30 @@ exports[`Input format of number should match previous snapshot when provided err
   border: solid 1px rgb(234,234,234);
   -webkit-transition: 0.15s border-color;
   transition: 0.15s border-color;
-  border-color: rgb(224,85,72);
+  border-color: default:rgb(224,85,72);
+  -n20: rgb(230,119,109);
+  -n40: rgb(236,153,145);
+  -n60: rgb(243,187,182);
+  -n80: rgb(249,221,218);
+  -n90: rgb(251,238,236);
+  -n95: rgb(253,246,246);
+  -p20: rgb(179,68,57);
+  -p40: rgb(134,51,43);
+  -p60: rgb(89,34,28);
 }
 
 .c0:focus {
   outline: none;
-  border-color: rgb(114,206,92);
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
 }
 
 .c0::-webkit-input-placeholder {
@@ -306,7 +355,16 @@ exports[`Input format of text should match previous snapshot 1`] = `
 
 .c0:focus {
   outline: none;
-  border-color: rgb(114,206,92);
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
 }
 
 .c0::-webkit-input-placeholder {
@@ -361,12 +419,34 @@ exports[`Input format of text should match previous snapshot 1`] = `
         },
         "utilities": Object {
           "blue": "rgb(48, 120, 191)",
-          "highlightGreen": "rgb(114, 206, 92)",
+          "highlightGreen": Object {
+            "N20": "rgb(142, 216, 125)",
+            "N40": "rgb(170, 226, 157)",
+            "N60": "rgb(199, 235, 190)",
+            "N80": "rgb(227, 245, 222)",
+            "N90": "rgb(240, 250, 238)",
+            "N95": "rgb(248, 252, 247)",
+            "P20": "rgb(68, 123, 55)",
+            "P40": "rgb(91, 164, 73)",
+            "P60": "rgb(114, 206, 92)",
+            "default": "rgb(114, 206, 92)",
+          },
           "paleBlue": "rgb(245, 249, 252)",
           "paleGreen": "rgb(248 ,252, 247)",
           "paleRed": "rgb(253, 246, 246)",
           "paleYellow": "rgb(255, 255, 233)",
-          "red": "rgb(224, 85, 72)",
+          "red": Object {
+            "N20": "rgb(230, 119, 109)",
+            "N40": "rgb(236, 153, 145)",
+            "N60": "rgb(243, 187, 182)",
+            "N80": "rgb(249, 221, 218)",
+            "N90": "rgb(251, 238, 236)",
+            "N95": "rgb(253, 246, 246)",
+            "P20": "rgb(179, 68, 57)",
+            "P40": "rgb(134, 51, 43)",
+            "P60": "rgb(89, 34, 28)",
+            "default": "rgb(224, 85, 72)",
+          },
         },
       },
       "shadows": Object {
@@ -558,12 +638,30 @@ exports[`Input format of text should match previous snapshot when provided error
   border: solid 1px rgb(234,234,234);
   -webkit-transition: 0.15s border-color;
   transition: 0.15s border-color;
-  border-color: rgb(224,85,72);
+  border-color: default:rgb(224,85,72);
+  -n20: rgb(230,119,109);
+  -n40: rgb(236,153,145);
+  -n60: rgb(243,187,182);
+  -n80: rgb(249,221,218);
+  -n90: rgb(251,238,236);
+  -n95: rgb(253,246,246);
+  -p20: rgb(179,68,57);
+  -p40: rgb(134,51,43);
+  -p60: rgb(89,34,28);
 }
 
 .c0:focus {
   outline: none;
-  border-color: rgb(114,206,92);
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
 }
 
 .c0::-webkit-input-placeholder {
