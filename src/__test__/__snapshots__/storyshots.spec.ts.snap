@@ -200,6 +200,369 @@ exports[`Storyshots Basics|Colors all 1`] = `
       </p>
     </div>
   </div>
+  <h1
+    className="text-xl mt-8"
+  >
+    Utility
+  </h1>
+  <h2
+    className="text-l mt-4"
+  >
+    Red
+  </h2>
+  <div
+    className="flex mt-4"
+  >
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(224, 85, 72)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        default
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(89, 34, 28)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        P60
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(134, 51, 43)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        P40
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(179, 68, 57)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        P20
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(253, 246, 246)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N95
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(251, 238, 236)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N90
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(249, 221, 218)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N80
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(243, 187, 182)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N60
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(236, 153, 145)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N40
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(230, 119, 109)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N20
+      </p>
+    </div>
+  </div>
+  <h2
+    className="text-l mt-4"
+  >
+    Highlight Green
+  </h2>
+  <div
+    className="flex mt-4"
+  >
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(114, 206, 92)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        default
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(114, 206, 92)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        P60
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(91, 164, 73)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        P40
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(68, 123, 55)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        P20
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(248, 252, 247)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N95
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(240, 250, 238)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N90
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(227, 245, 222)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N80
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(199, 235, 190)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N60
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(170, 226, 157)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N40
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(142, 216, 125)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        N20
+      </p>
+    </div>
+  </div>
 </div>
 `;
 
@@ -528,7 +891,7 @@ Array [
 
 exports[`Storyshots Components|Badge all 1`] = `
 <div
-  className="sc-bwzfXH GIbIi"
+  className="sc-bwzfXH iPehHr"
 >
   10
 </div>
@@ -1109,7 +1472,7 @@ exports[`Storyshots Components|Input Number 1`] = `
   className="sc-hSdWYo bIQQAp"
 >
   <input
-    className="sc-eHgmQL fdLLsc"
+    className="sc-eHgmQL lXgGy"
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1124,7 +1487,7 @@ exports[`Storyshots Components|Input Text 1`] = `
   className="sc-hSdWYo bIQQAp"
 >
   <input
-    className="sc-eHgmQL fCHQOR"
+    className="sc-eHgmQL koDLyf"
     format="text"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1162,21 +1525,21 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
         data-test="list-component"
       >
         <li
-          className="sc-jDwBTQ jhZLDW"
+          className="sc-jDwBTQ jEEvEY"
           data-test="list-item0"
           onClick={[Function]}
         >
           リスト1
         </li>
         <li
-          className="sc-jDwBTQ jhZLDW"
+          className="sc-jDwBTQ jEEvEY"
           data-test="list-item1"
           onClick={[Function]}
         >
           リスト2
         </li>
         <li
-          className="sc-jDwBTQ jhZLDW"
+          className="sc-jDwBTQ jEEvEY"
           data-test="list-item2"
           onClick={[Function]}
         >
@@ -1282,7 +1645,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
-  className="sc-fBuWsC eXwqoX"
+  className="sc-fBuWsC keofwi"
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -1302,7 +1665,7 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fMiknA fTTPfU"
+    className="sc-fMiknA kwSAnf"
     data-test="info-toast"
   >
     <div
