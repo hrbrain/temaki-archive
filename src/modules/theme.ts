@@ -178,8 +178,8 @@ export const defaultTheme: RequiredThemeProps = {
                 N80: 'rgb(227, 245, 222)',
                 N90: 'rgb(240, 250, 238)',
                 N95: 'rgb(248, 252, 247)',
-                P20: 'rgb(91, 164, 73)',
-                P40: 'rgb(68, 123, 55)',
+                P20: 'rgb(68, 123, 55)',
+                P40: 'rgb(91, 164, 73)',
                 P60: 'rgb(114, 206, 92)'
             },
             paleRed: 'rgb(253, 246, 246)',
