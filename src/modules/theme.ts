@@ -30,9 +30,31 @@ export type RequiredThemeColors = {
         S100: string
     }
     utilities: {
-        red: string
+        red: {
+            default: string
+            N20: string
+            N40: string
+            N60: string
+            N80: string
+            N90: string
+            N95: string
+            P20: string
+            P40: string
+            P60: string
+        }
         blue: string
-        highlightGreen: string
+        highlightGreen: {
+            default: string
+            N20: string
+            N40: string
+            N60: string
+            N80: string
+            N90: string
+            N95: string
+            P20: string
+            P40: string
+            P60: string
+        }
         paleRed: string
         paleGreen: string
         paleBlue: string
@@ -135,9 +157,31 @@ export const defaultTheme: RequiredThemeProps = {
             S100: 'rgb(51, 51, 51)'
         },
         utilities: {
-            red: 'rgb(224, 85, 72)',
+            red: {
+                default: 'rgb(224, 85, 72)',
+                N20: 'rgb(230, 119, 109)',
+                N40: 'rgb(236, 153, 145)',
+                N60: 'rgb(243, 187, 182)',
+                N80: 'rgb(249, 221, 218)',
+                N90: 'rgb(251, 238, 236)',
+                N95: 'rgb(253, 246, 246)',
+                P20: 'rgb(179, 68, 57)',
+                P40: 'rgb(134, 51, 43)',
+                P60: 'rgb(89, 34, 28)'
+            },
             blue: 'rgb(48, 120, 191)',
-            highlightGreen: 'rgb(114, 206, 92)',
+            highlightGreen: {
+                default: 'rgb(114, 206, 92)',
+                N20: 'rgb(142, 216, 125)',
+                N40: 'rgb(170, 226, 157)',
+                N60: 'rgb(199, 235, 190)',
+                N80: 'rgb(227, 245, 222)',
+                N90: 'rgb(240, 250, 238)',
+                N95: 'rgb(248, 252, 247)',
+                P20: 'rgb(91, 164, 73)',
+                P40: 'rgb(68, 123, 55)',
+                P60: 'rgb(114, 206, 92)'
+            },
             paleRed: 'rgb(253, 246, 246)',
             paleGreen: 'rgb(248 ,252, 247)',
             paleBlue: 'rgb(245, 249, 252)',

@@ -25,5 +25,14 @@ storiesOf('Basics|Colors', module).add('all', () => (
         <div className="flex mt-4">
             {renderColorsEachKeys(defaultTheme.colors.primary)}
         </div>
+        <h1 className="text-xl mt-8">Utility</h1>
+        <h2 className="text-l mt-4">Red</h2>
+        <div className="flex mt-4">
+            {renderColorsEachKeys(defaultTheme.colors.utilities.red)}
+        </div>
+        <h2 className="text-l mt-4">Highlight Green</h2>
+        <div className="flex mt-4">
+            {renderColorsEachKeys(defaultTheme.colors.utilities.highlightGreen)}
+        </div>
     </div>
 ))
