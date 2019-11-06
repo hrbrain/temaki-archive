@@ -2,8 +2,8 @@ import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '../../__test__/utils'
-// import { defaultTheme } from '../../modules/theme'
 import 'jest-styled-components'
+import { defaultTheme } from '../../modules/theme'
 
 import * as Input from './index'
 
@@ -68,6 +68,10 @@ describe('Input format of text', () => {
         wrapper = mountWithTheme(<Input.Component format="text" errored />)
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
+        expect(inputEl).toHaveStyleRule(
+            'border-color',
+            defaultTheme.colors.utilities.red.default.replace(/ /g, '')
+        )
     })
 
     it('should change background-color when value and prevValue are equal', () => {
@@ -163,6 +167,10 @@ describe('Input format of number', () => {
         wrapper = mountWithTheme(<Input.Component format="number" errored />)
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
+        expect(inputEl).toHaveStyleRule(
+            'border-color',
+            defaultTheme.colors.utilities.red.default.replace(/ /g, '')
+        )
     })
 
     it('should change background-color when value and prevValue are equal', () => {
