@@ -92,9 +92,9 @@ const Body = styled.div<BodyType>`
     border: 1px solid
         ${props => {
             if (props.isError) {
-                return props.theme.colors.utilities.red
+                return props.theme.colors.utilities.red.default
             } else if (props.isVisible) {
-                return props.theme.colors.utilities.highlightGreen
+                return props.theme.colors.utilities.highlightGreen.default
             } else {
                 return props.theme.colors.grayScale.S10
             }

@@ -23,7 +23,7 @@ const Outer = styled.div`
     border-radius: 50%;
 
     color: ${props => props.theme.colors.grayScale.S0};
-    background: ${props => props.theme.colors.utilities.red};
+    background: ${props => props.theme.colors.utilities.red.default};
     font-size: 12px;
     font-weight: bold;
     text-align: center;

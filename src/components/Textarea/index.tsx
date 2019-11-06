@@ -53,9 +53,10 @@ const Textarea = styled(TextareaAutosize)<{ errored?: boolean }>`
     &:focus {
         border-color: ${props =>
             props.errored
-                ? props.theme.colors.utilities.red
-                : props.theme.colors.utilities.highlightGreen};
+                ? props.theme.colors.utilities.red.default
+                : props.theme.colors.utilities.highlightGreen.default};
     }
 
-    border-color: ${props => props.errored && props.theme.colors.utilities.red};
+    border-color: ${props =>
+        props.errored && props.theme.colors.utilities.red.default};
 `

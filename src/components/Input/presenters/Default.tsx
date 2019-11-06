@@ -44,7 +44,7 @@ const Outer = styled.input<OuterProps>`
     ${props =>
         props.errored &&
         css`
-            border-color: ${props.theme.colors.utilities.red};
+            border-color: ${props.theme.colors.utilities.red.default};
         `}
 
     ${props =>

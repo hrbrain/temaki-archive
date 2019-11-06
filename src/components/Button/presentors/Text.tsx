@@ -91,7 +91,7 @@ const Text = styled.span<TextType>`
     color: ${props => {
         switch (props.colorType) {
             case 'destructive':
-                return props.theme.colors.utilities.red
+                return props.theme.colors.utilities.red.default
             default:
                 return props.theme.colors.text
         }

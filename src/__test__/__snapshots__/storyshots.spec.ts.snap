@@ -891,7 +891,7 @@ Array [
 
 exports[`Storyshots Components|Badge all 1`] = `
 <div
-  className="sc-bwzfXH iPehHr"
+  className="sc-bwzfXH GIbIi"
 >
   10
 </div>
@@ -1525,21 +1525,21 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
         data-test="list-component"
       >
         <li
-          className="sc-jDwBTQ jEEvEY"
+          className="sc-jDwBTQ jhZLDW"
           data-test="list-item0"
           onClick={[Function]}
         >
           リスト1
         </li>
         <li
-          className="sc-jDwBTQ jEEvEY"
+          className="sc-jDwBTQ jhZLDW"
           data-test="list-item1"
           onClick={[Function]}
         >
           リスト2
         </li>
         <li
-          className="sc-jDwBTQ jEEvEY"
+          className="sc-jDwBTQ jhZLDW"
           data-test="list-item2"
           onClick={[Function]}
         >
@@ -1645,7 +1645,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
-  className="sc-fBuWsC keofwi"
+  className="sc-fBuWsC eXwqoX"
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -1665,7 +1665,7 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fMiknA kwSAnf"
+    className="sc-fMiknA fTTPfU"
     data-test="info-toast"
   >
     <div

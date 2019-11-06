@@ -294,16 +294,7 @@ exports[`Input format of number should match previous snapshot when provided err
   border: solid 1px rgb(234,234,234);
   -webkit-transition: 0.15s border-color;
   transition: 0.15s border-color;
-  border-color: default:rgb(224,85,72);
-  -n20: rgb(230,119,109);
-  -n40: rgb(236,153,145);
-  -n60: rgb(243,187,182);
-  -n80: rgb(249,221,218);
-  -n90: rgb(251,238,236);
-  -n95: rgb(253,246,246);
-  -p20: rgb(179,68,57);
-  -p40: rgb(134,51,43);
-  -p60: rgb(89,34,28);
+  border-color: rgb(224,85,72);
 }
 
 .c0:focus {
@@ -638,16 +629,7 @@ exports[`Input format of text should match previous snapshot when provided error
   border: solid 1px rgb(234,234,234);
   -webkit-transition: 0.15s border-color;
   transition: 0.15s border-color;
-  border-color: default:rgb(224,85,72);
-  -n20: rgb(230,119,109);
-  -n40: rgb(236,153,145);
-  -n60: rgb(243,187,182);
-  -n80: rgb(249,221,218);
-  -n90: rgb(251,238,236);
-  -n95: rgb(253,246,246);
-  -p20: rgb(179,68,57);
-  -p40: rgb(134,51,43);
-  -p60: rgb(89,34,28);
+  border-color: rgb(224,85,72);
 }
 
 .c0:focus {
