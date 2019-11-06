@@ -147,6 +147,6 @@ const ListItem = styled.li`
     }
     &:hover {
         transition: 0.2s;
-        color: ${props => props.theme.colors.utilities.highlightGreen};
+        color: ${props => props.theme.colors.utilities.highlightGreen.default};
     }
 `

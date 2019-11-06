@@ -70,11 +70,12 @@ const Outer = css`
 `
 
 const InfoOuter = styled.div`
-    background-color: ${props => props.theme.colors.utilities.highlightGreen};
+    background-color: ${props =>
+        props.theme.colors.utilities.highlightGreen.default};
     ${Outer}
 `
 const WarningOuter = styled.div`
-    background-color: ${props => props.theme.colors.utilities.red};
+    background-color: ${props => props.theme.colors.utilities.red.default};
     ${Outer}
 `
 const Icons = styled(Icon.Component)`
