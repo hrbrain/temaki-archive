@@ -1,5 +1,8 @@
 /// <reference types="react" />
+import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
+import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
+export declare const Text: import("react").FunctionComponent<{}>;
 export declare const Icon: (props: {
     svg: string;
     size: string;
@@ -178,6 +181,7 @@ export declare const DropdownSingle: import("react").NamedExoticComponent<{
     width: number;
     onClickItem: (value: string) => void;
 }>;
+export declare type DropdownSingleItem = _DropdownSingleItem;
 export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     placeholder: string;
     items: import("./components/DropdownMultiple/itemList").Item[];
@@ -186,6 +190,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     width: number;
     onClickItem: (value: string) => void;
 }>;
+export declare type DropdownMultipleItem = _DropdownMultipleItem;
 export declare const FileUploader: import("react").NamedExoticComponent<{
     onChange: (file: File) => void;
     onClick: (e: import("react").MouseEvent<Element, MouseEvent>) => void;

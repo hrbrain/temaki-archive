@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as Theme from '~/modules/theme'
+import styled, { ThemeConsumer, RequiredThemeProps } from '~/modules/theme'
 
 import * as Index from '../index'
 import * as Styles from '../lib/styles'
@@ -10,22 +10,21 @@ import * as Icon from '~/components/Icon'
  * Component
  */
 
-type Props<T = Theme.RequiredThemeProps> = {
+type Props = {
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
     svg?: string
     colorType?: string
     isLoading?: boolean
-    theme: T
 } & OuterProps
-export const Component = Theme.withTheme(({ svg, theme, ...props }: Props) => (
-    <Outer {...props}>{renderIcon(theme, svg, props.colorType)}</Outer>
-))
+export const Component = ({ svg, ...props }: Props) => (
+    <Outer {...props}>
+        <ThemeConsumer>{renderIcon(svg, props.colorType)}</ThemeConsumer>
+    </Outer>
+)
 
-function renderIcon(
-    theme: Theme.RequiredThemeProps,
-    svg?: string,
-    colorType?: string
-): React.ReactElement | null {
+const renderIcon = (svg?: string, colorType?: string) => (
+    theme: RequiredThemeProps
+): React.ReactElement | null => {
     if (!svg) {
         return null
     }
@@ -54,7 +53,7 @@ function renderIcon(
 type OuterProps = {
     colorType: Index.CircleColorTypeProp
 }
-const Outer = Theme.default.button<OuterProps>`
+const Outer = styled.button<OuterProps>`
     ${Styles.rippleEffectMixin}
     ${Styles.buttonBaseMixin}
   width: 48px;

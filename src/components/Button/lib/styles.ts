@@ -1,4 +1,4 @@
-import { css } from '~/modules/theme'
+import { RequiredThemeProps } from '~/modules/theme'
 
 export const createCSSFromColorType = (
     base: string,
@@ -7,7 +7,7 @@ export const createCSSFromColorType = (
     text: string,
     border: string | null = null
 ) => {
-    return css`
+    return `
         color: ${text};
         border: 1px solid ${border || base};
         background-color: ${base};
@@ -29,7 +29,7 @@ export const createCSSFromColorType = (
     `
 }
 
-export const buttonBaseMixin = css`
+export const buttonBaseMixin = `
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@ export const buttonBaseMixin = css`
     outline: none;
 `
 
-export const rippleEffectMixin = css`
+export const rippleEffectMixin = ({ theme }: { theme: RequiredThemeProps }) => `
     position: relative;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
@@ -57,7 +57,7 @@ export const rippleEffectMixin = css`
         pointer-events: none;
         background-image: radial-gradient(
             circle,
-            ${props => props.theme.colors.grayScale.S0} 10%,
+            ${theme.colors.grayScale.S0} 10%,
             transparent 10.01%
         );
         background-repeat: no-repeat;

@@ -8,6 +8,8 @@ import * as ItemList from './ItemList'
  * Component
  */
 
+export type Item = ItemList.Item
+
 type Props = {
     placeholder: string
     items: ItemList.Item[]
