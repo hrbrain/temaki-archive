@@ -1,6 +1,7 @@
 /// <reference types="react" />
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
+import * as _MeatballMenu from './components/MeatballKebabMenu';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
 export declare const Text: import("react").FunctionComponent<{}>;
 export declare const Icon: (props: {
@@ -191,6 +192,13 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     onClickItem: (value: string) => void;
 }>;
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
+export declare const MeatballMenu: import("react").NamedExoticComponent<{
+    type: "meatball" | "kebab";
+    position: "top" | "bottom";
+    listItems: _MeatballMenu.Item[];
+    onClick: (e: import("react").MouseEvent<Element, MouseEvent>) => void;
+}>;
+export declare type MeatballMenuItem = _MeatballMenu.Item;
 export declare const FileUploader: import("react").NamedExoticComponent<{
     onChange: (file: File) => void;
     onClick: (e: import("react").MouseEvent<Element, MouseEvent>) => void;

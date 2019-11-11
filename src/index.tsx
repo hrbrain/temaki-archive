@@ -19,6 +19,7 @@ import {
 } from './components/DropdownMultiple/index'
 import * as _FileUploader from './components/FileUploader/index'
 import { icons as _icons } from './lib/iconFiles'
+import * as _MeatballMenu from './components/MeatballKebabMenu'
 import {
     defaultTheme as _defaultTheme,
     RequiredThemeProps as _RequiredThemeProps
@@ -43,4 +44,6 @@ export const DropdownSingle = _DropdownSingle
 export type DropdownSingleItem = _DropdownSingleItem
 export const DropdownMultiple = _DropdownMultiple
 export type DropdownMultipleItem = _DropdownMultipleItem
+export const MeatballMenu = _MeatballMenu.Component
+export type MeatballMenuItem = _MeatballMenu.Item
 export const FileUploader = _FileUploader.Component
