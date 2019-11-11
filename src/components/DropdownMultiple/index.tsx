@@ -8,6 +8,8 @@ import * as ItemList from './itemList'
  * Component
  */
 
+export type Item = ItemList.Item
+
 type Props = {
     placeholder: string
     items: ItemList.Item[]
@@ -17,7 +19,7 @@ type Props = {
     onClickItem: (value: ItemList.Value) => void
 }
 
-const Component = React.memo<Props>(props => {
+export const Component = React.memo<Props>(props => {
     const [isVisible, setIsVisible] = React.useState(false)
 
     const handleClick = React.useCallback(() => {
@@ -37,8 +39,6 @@ const Component = React.memo<Props>(props => {
 })
 
 Component.displayName = 'DropdownSingle'
-
-export { Component }
 
 /**
  * Styles

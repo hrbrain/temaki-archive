@@ -1,5 +1,4 @@
 const path = require('path')
-const DtsBundlePlugin = require('dts-bundle-webpack')
 
 const env = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 
@@ -53,14 +52,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new DtsBundlePlugin({
-      name: 'hrb-temaki',
-      main: 'dist/index.d.ts',
-      baseDir: 'dist',
-      out: 'index.d.ts'
-    })
-  ],
   externals: {
     react: {
       commonjs: "react",

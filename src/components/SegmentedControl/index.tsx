@@ -11,9 +11,11 @@ export type Props = {
     onClickTab: (index: number) => void
 }
 
-const Component = React.memo<Props>(({ items, selectedIndex, onClickTab }) => {
-    return <div>{items.map(renderItem(selectedIndex, onClickTab))}</div>
-})
+export const Component = React.memo<Props>(
+    ({ items, selectedIndex, onClickTab }) => {
+        return <div>{items.map(renderItem(selectedIndex, onClickTab))}</div>
+    }
+)
 
 export type Item = {
     text: string
@@ -37,8 +39,6 @@ const renderItem = (
 }
 
 Component.displayName = 'SegmentedControl'
-
-export { Component }
 
 /**
  * Styles
