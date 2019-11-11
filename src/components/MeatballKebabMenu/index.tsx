@@ -16,7 +16,7 @@ type Props = {
     onClick: (e: React.MouseEvent) => void
 }
 
-type Item = {
+export type Item = {
     item: string
     onClick: (e: React.MouseEvent) => void
 }

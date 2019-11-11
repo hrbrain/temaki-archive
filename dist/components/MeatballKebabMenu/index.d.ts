@@ -8,7 +8,7 @@ declare type Props = {
     listItems: Item[];
     onClick: (e: React.MouseEvent) => void;
 };
-declare type Item = {
+export declare type Item = {
     item: string;
     onClick: (e: React.MouseEvent) => void;
 };
