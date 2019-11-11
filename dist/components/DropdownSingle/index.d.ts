@@ -3,6 +3,7 @@ import * as ItemList from './ItemList';
 /**
  * Component
  */
+export declare type Item = ItemList.Item;
 declare type Props = {
     placeholder: string;
     items: ItemList.Item[];
