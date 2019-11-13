@@ -29,7 +29,9 @@
   "dependencies": {
     "@types/react": "^16.8.23",
     "@types/styled-components": "4.1.18",
+    "global": "^4.4.0",
     "react": "^16.8.6",
+    "react-dates": "^21.4.0",
     "react-dropzone": "^10.2.1",
     "styled-components": "^4.3.2"
   },
@@ -44,6 +46,7 @@
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.15",
+    "@types/react-dates": "^17.1.5",
     "@types/react-dom": "^16.8.3",
     "@types/react-test-renderer": "^16.8.2",
     "@types/react-textarea-autosize": "^4.3.4",
