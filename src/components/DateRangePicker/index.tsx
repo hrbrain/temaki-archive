@@ -22,6 +22,8 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(props => {
+    const [startDate, setStartDate] = React.useState<moment.Moment>(moment())
+    const [endDate, setEndDate] = React.useState<moment.Moment>(moment())
     const [focusedInput, setFocusedInput] = React.useState<
         ReactDates.FocusedInputShape
     >('startDate')
@@ -31,6 +33,14 @@ export const Component = React.memo<Props>(props => {
             setFocusedInput(focusedInput)
         },
         [focusedInput]
+    )
+
+    const handleOnDatesChange = React.useCallback(
+        ({ startDate, endDate }) => {
+            setStartDate(startDate)
+            setEndDate(endDate)
+        },
+        [startDate, endDate]
     )
 
     const calendarIconRender = React.useMemo(() => {
@@ -48,13 +58,13 @@ export const Component = React.memo<Props>(props => {
     return (
         <Outer>
             <ReactDates.DateRangePicker
-                startDate={moment()}
+                startDate={startDate}
                 startDateId={'startDate'}
-                endDate={moment()}
+                endDate={endDate}
                 endDateId={'endDate'}
                 focusedInput={focusedInput}
                 onFocusChange={handleOnFocusChange}
-                onDatesChange={props.onDatesChange}
+                onDatesChange={handleOnDatesChange}
                 customInputIcon={calendarIconRender}
                 displayFormat={props.displayFormat}
                 numberOfMonths={props.numberOfMonths}
@@ -101,13 +111,11 @@ const Outer = styled.div`
         background: #00a699;
     }
     .SingleDatePickerInput {
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        border-radius: 6px;
-        border: solid 1px rgb(234, 234, 234);
-        -webkit-transition: 0.15s border-color;
-        transition: 0.15s border-color;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
     }
     .SingleDatePickerInput__withBorder {
     }
@@ -326,6 +334,11 @@ const Outer = styled.div`
     .DayPickerKeyboardShortcuts_closeSvg:hover {
         fill: #82888a;
     }
+    td.CalendarDay {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 6px 6px;
+    }
     td.CalendarDay__default {
         width: 44px;
         height: 44px;
@@ -388,34 +401,32 @@ const Outer = styled.div`
         color: #484848;
     }
     .CalendarDay__selected_span {
-        background: #66e2da;
-        border: 1px double #33dacd;
-        color: #fff;
+        background: rgb(244,244,244);
+        border-right: rgb(244,244,244);
+        border-left: rgb(244,244,244);
     }
     .CalendarDay__selected_span:active,
     .CalendarDay__selected_span:hover {
-        background: #33dacd;
-        border: 1px double #33dacd;
-        color: #fff;
+        background: rgb(244,244,244);
     }
     .CalendarDay__selected,
     .CalendarDay__selected:active,
     .CalendarDay__selected:hover {
         background: RGB(34,34,34);
         // border: 0px double #00a699;
-        color: #fff;
         border-radius: 70px;
+        color: #fff
     }
     .CalendarDay__hovered_span,
     .CalendarDay__hovered_span:hover {
-        background: #b2f1ec;
-        border: 1px double #80e8e0;
-        color: #007a87;
+        background: rgb(244,244,244);
+        border-right: rgb(244,244,244);
+        border-left: rgb(244,244,244);
+        //color: #007a87;
     }
     .CalendarDay__hovered_span:active {
-        background: #80e8e0;
-        border: 1px double #80e8e0;
-        color: #007a87;
+        background: rgb(244,244,244);
+        color: #fff;
     }
     .CalendarDay__blocked_calendar,
     .CalendarDay__blocked_calendar:active,
@@ -440,6 +451,7 @@ const Outer = styled.div`
         border: 1px double #e4e7e7;
     }
     .CalendarMonth {
+        padding: 0px 0px !important;
         background: #fff;
         text-align: center;
         vertical-align: top;
@@ -501,6 +513,12 @@ const Outer = styled.div`
     .CalendarMonthGrid_month__hidden {
         visibility: hidden;
     }
+    div.DayPickerNavigation div:first-of-type {
+        padding-left: 7px;
+    }
+    div.DayPickerNavigation div:last-of-type {
+        padding-right: 22px;
+    }
     .DayPickerNavigation {
         justify-content: space-between;
         display: flex;
@@ -535,9 +553,9 @@ const Outer = styled.div`
         justify-content: space-between;
     }
     .DayPickerNavigation_button {
-        padding-right: 12px;
         padding-top: 8px;
-        padding-left: 12px;
+        // padding-right: 47px;
+        // padding-left: 47px;
         cursor: pointer;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -620,9 +638,13 @@ const Outer = styled.div`
         background: #fff;
         position: relative;
         text-align: left;
+        width: 245px !important;
     }
     .DayPicker__horizontal {
         background: #fff;
+    }
+    .DayPicker__horizontal > div > div:first-child{
+        width: 258px !important;
     }
     .DayPicker__verticalScrollable {
         height: 100%;
@@ -645,6 +667,8 @@ const Outer = styled.div`
     }
     .DayPicker_focusRegion {
         outline: 0;
+        border-radius: 6px;
+        width: 252px;
     }
     .DayPicker_calendarInfo__horizontal,
     .DayPicker_wrapper__horizontal {
@@ -654,7 +678,6 @@ const Outer = styled.div`
     .DayPicker_weekHeaders {
         position: relative;
         left: -9px !important;
-        padding: 0px 22px !important;
     }
     .DayPicker_weekHeaders__horizontal {
         margin-left: 9px;
@@ -666,6 +689,8 @@ const Outer = styled.div`
         top: 39px;
         z-index: 2;
         text-align: left;
+        padding: 0px 11px 0px 10px !important
+
     }
     .DayPicker_weekHeader__vertical {
         left: 50%;
@@ -691,6 +716,8 @@ const Outer = styled.div`
         text-align: center;
         margin-top: 8px;
         margin-bottom: 8px;
+        width: 32px !important;
+        
     }
     .DayPicker_weekHeader_li > small {
         font-size:100%
@@ -698,8 +725,8 @@ const Outer = styled.div`
     .DayPicker_transitionContainer {
         position: relative;
         overflow: hidden;
-        border-radius: 3px;
-        height: 280px !important;
+        border-radius: 6px;
+        width: 245px !important;
     }
     .DayPicker_transitionContainer__horizontal {
         -webkit-transition: height 0.2s ease-in-out;
@@ -743,7 +770,7 @@ const Outer = styled.div`
         line-height: 24px;
         color: #484848;
         height: 100%;
-        width: 100%;
+        width: 50%;
     }
     .DateInput_input__small {
         font-size: 14px;
@@ -805,6 +832,7 @@ const Outer = styled.div`
         background-color: #fff;
         display: inline-block; 
         width: 278px;
+        height: 40px;
     }
     .DateRangePickerInput__disabled {
         background: #f2f2f2;
@@ -880,8 +908,7 @@ const Outer = styled.div`
         cursor: pointer;
         display: inline-block;
         vertical-align: middle;
-        padding: 10px;
-        margin: 0 5px 0 10px;
+        padding: 0px 12px 0px 12px;
     }
     .DateRangePickerInput_calendarIcon_svg {
         fill: #82888a;
