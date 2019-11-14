@@ -25,6 +25,9 @@ import {
     RequiredThemeProps as _RequiredThemeProps
 } from './modules/theme'
 
+import * as _DatePicker from './components/Datepicker/index'
+import * as _DateRangePicker from './components/DateRangePicker/index'
+
 export const Text = _Text.Component
 export const Icon = _Icon.Component
 export const Checkbox = _Checkbox.Component
@@ -47,3 +50,5 @@ export type DropdownMultipleItem = _DropdownMultipleItem
 export const MeatballMenu = _MeatballMenu.Component
 export type MeatballMenuItem = _MeatballMenu.Item
 export const FileUploader = _FileUploader.Component
+export const DatePicker = _DatePicker.Component
+export const DateRangePicker = _DateRangePicker.Component
