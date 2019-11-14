@@ -23,7 +23,7 @@ const useChangeNumberValueFromChangeEvent = (
             if (onChange) {
                 const tgtValue = e.target.value
                 if (tgtValue === '') {
-                    onChange(null)
+                    onChange(0)
                     return
                 }
 
@@ -38,27 +38,18 @@ const useChangeNumberValueFromChangeEvent = (
         [onChange, onChangeNative, value]
     )
 
-const useStringValue = (value: Input.NumberValue) =>
-    React.useMemo(() => {
-        if (value === undefined || value === null) {
-            return null
-        }
-        return value.toString()
-    }, [value])
-
 /**
  * Component
  */
 
 type Props = {
-    value?: number | null
+    value: number
     onChange?: (value: Input.NumberValue) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 type InjectProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
     value?: Input.StringValue
-    prevValue?: Input.StringValue
 }
 export const Container: ContainerType<Props, InjectProps> = ({
     Presenter,
@@ -67,13 +58,14 @@ export const Container: ContainerType<Props, InjectProps> = ({
     onChangeNative,
     ...props
 }) => {
-    const valueStr = useStringValue(value)
     const changeValue = useChangeNumberValueFromChangeEvent(
         onChange,
         onChangeNative,
         value
     )
 
-    // @ts-ignore Propsの型推論がうまくいかない
-    return <Presenter value={valueStr} onChange={changeValue} {...props} />
+    return (
+        // @ts-ignore 型推論がうまくいってない
+        <Presenter value={value.toString()} onChange={changeValue} {...props} />
+    )
 }

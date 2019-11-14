@@ -331,7 +331,7 @@ exports[`Input format of number should match previous snapshot when provided err
   className="c0"
   format="number"
   onChange={[Function]}
-  value={null}
+  value="0"
 />
 `;
 
@@ -666,5 +666,6 @@ exports[`Input format of text should match previous snapshot when provided error
   className="c0"
   format="text"
   onChange={[Function]}
+  value=""
 />
 `;

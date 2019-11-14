@@ -10,7 +10,6 @@ storiesOf('Components|Input', module)
         <Input.Component
             format="text"
             value={text('Value', '')}
-            prevValue={text('PrevValue', '')}
             placeholder={text('Placeholder', 'Enter your name')}
             onChange={action('onChange')}
             onBlur={action('onBlur')}
@@ -22,7 +21,6 @@ storiesOf('Components|Input', module)
         <Input.Component
             format="number"
             value={number('Value', 0)}
-            prevValue={number('PrevValue', 0)}
             placeholder={text('Placeholder', 'Enter your age')}
             onChange={action('onChange')}
             onBlur={action('onBlur')}

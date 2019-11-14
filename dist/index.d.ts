@@ -21,27 +21,27 @@ export declare const Input: import("react").NamedExoticComponent<({
     name?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
+    diff?: boolean | undefined;
     placeholder?: string | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
 } & {
     format: "text";
-    value?: import("./components/Input").StringValue;
-    prevValue?: import("./components/Input").StringValue;
-    onChange?: ((value: import("./components/Input").StringValue) => void) | undefined;
+    value: string;
+    onChange: (value: string) => void;
 }) | ({
     type?: string | undefined;
     name?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
+    diff?: boolean | undefined;
     placeholder?: string | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
 } & {
     format: "number";
-    value?: import("./components/Input").NumberValue;
-    prevValue?: import("./components/Input").NumberValue;
-    onChange?: ((value: import("./components/Input").NumberValue) => void) | undefined;
+    value: number;
+    onChange: (value: number) => void;
 })>;
 export declare const Button: import("react").FunctionComponent<({
     onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
