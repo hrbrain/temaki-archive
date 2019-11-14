@@ -65,7 +65,14 @@ describe('Input format of text', () => {
     })
 
     it('should match previous snapshot when provided errored prop', () => {
-        wrapper = mountWithTheme(<Input.Component format="text" errored />)
+        wrapper = mountWithTheme(
+            <Input.Component
+                format="text"
+                value=""
+                onChange={jest.fn()}
+                errored
+            />
+        )
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
         expect(inputEl).toHaveStyleRule(
@@ -79,7 +86,8 @@ describe('Input format of text', () => {
             <Input.Component
                 format="text"
                 value="value"
-                prevValue="prevValue"
+                onChange={jest.fn()}
+                diff
             />
         )
         const inputEl = wrapper.find('input')
@@ -141,7 +149,7 @@ describe('Input format of number', () => {
         const inputEl = wrapper.find('input')
         act(() => {
             inputEl.simulate('change', { target: { value: '' } })
-            expect(mockOnChange).toHaveBeenCalledWith(null)
+            expect(mockOnChange).toHaveBeenCalledWith(0)
         })
     })
 
@@ -164,7 +172,14 @@ describe('Input format of number', () => {
     })
 
     it('should match previous snapshot when provided errored prop', () => {
-        wrapper = mountWithTheme(<Input.Component format="number" errored />)
+        wrapper = mountWithTheme(
+            <Input.Component
+                format="number"
+                value={0}
+                onChange={jest.fn()}
+                errored
+            />
+        )
         const inputEl = wrapper.find('input')
         expect(inputEl).toMatchSnapshot()
         expect(inputEl).toHaveStyleRule(
@@ -175,7 +190,12 @@ describe('Input format of number', () => {
 
     it('should change background-color when value and prevValue are equal', () => {
         wrapper = mountWithTheme(
-            <Input.Component format="number" value={0} prevValue={1} />
+            <Input.Component
+                format="number"
+                value={0}
+                onChange={jest.fn()}
+                diff
+            />
         )
         const inputEl = wrapper.find('input')
         expect(inputEl).toHaveStyleRule('background', 'rgb(255,255,233)')

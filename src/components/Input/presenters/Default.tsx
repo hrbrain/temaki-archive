@@ -4,7 +4,7 @@ import styled, { css } from '~/modules/theme'
 type Props = {
     type?: string
     value?: string
-    prevValue?: string
+    diff?: boolean
     name?: string
     placeholder?: string
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
@@ -32,7 +32,7 @@ const Wrapper = styled.div``
 
 type OuterProps = {
     value?: string
-    prevValue?: string
+    diff?: boolean
     errored?: boolean
 }
 const Outer = styled.input<OuterProps>`
@@ -48,11 +48,11 @@ const Outer = styled.input<OuterProps>`
         `}
 
     ${props =>
-        props.prevValue !== undefined &&
-        props.value !== props.prevValue &&
-        css`
-            background: ${props.theme.colors.utilities.paleYellow};
-        `}
+        props.diff
+            ? css`
+                  background: ${props.theme.colors.utilities.paleYellow};
+              `
+            : ''}
 
     &:focus {
         outline: none;

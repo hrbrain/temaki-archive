@@ -2,7 +2,7 @@ import * as React from 'react';
 declare type Props = {
     type?: string;
     value?: string;
-    prevValue?: string;
+    diff?: boolean;
     name?: string;
     placeholder?: string;
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
