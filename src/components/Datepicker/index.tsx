@@ -18,16 +18,24 @@ type Props = {
     displayFormat: string
     numberOfMonths: number
     monthFormat: string
-    onDateChange: () => void
-    onFocusChange: () => void
+    onChange: (date: moment.Moment | null) => void
 }
 
 export const Component = React.memo<Props>(props => {
+    const [date, setDate] = React.useState<moment.Moment | null>(moment())
     const [focused, setFocused] = React.useState<boolean>(false)
 
     const toggleFocus = React.useCallback(() => {
         setFocused(!focused)
     }, [focused])
+
+    const handleOnDateChange = React.useCallback(
+        date => {
+            setDate(date)
+            props.onChange(date)
+        },
+        [date]
+    )
 
     const calendarIconRender = React.useMemo(() => {
         return <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
@@ -41,21 +49,26 @@ export const Component = React.memo<Props>(props => {
         return <Icon.Component svg={IconFiles.icons.ChevronRight} size="24px" />
     }, [])
 
+    const allowAllDays = React.useCallback(() => {
+        return false
+    }, [])
+
     return (
         <Outer>
             <ReactDates.SingleDatePicker
                 id={'date'}
-                date={moment()}
+                date={date}
                 focused={focused}
                 customInputIcon={calendarIconRender}
                 displayFormat={props.displayFormat}
                 numberOfMonths={props.numberOfMonths}
                 monthFormat={props.monthFormat}
-                onDateChange={props.onDateChange}
+                onDateChange={handleOnDateChange}
                 onFocusChange={toggleFocus}
                 navPrev={ChevronLeftIconRender}
                 navNext={ChevronRightIconRender}
                 enableOutsideDays={true}
+                isOutsideRange={allowAllDays}
             />
         </Outer>
     )
@@ -103,7 +116,7 @@ const Outer = styled.div`
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: center;
-        width: 78%;
+        width: 100%;
     }
     .SingleDatePickerInput__withBorder {
     }

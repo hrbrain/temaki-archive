@@ -7,10 +7,6 @@ import 'moment/locale/ja'
 import * as Icon from '~/components/Icon'
 import * as IconFiles from '~/lib/iconFiles'
 /**
- * Utils
- */
-
-/**
  * Component
  */
 
@@ -18,18 +14,19 @@ type Props = {
     displayFormat: string
     numberOfMonths: number
     monthFormat: string
-    onDatesChange: () => void
+    onChange: (startDate: moment.Moment, endDate: moment.Moment) => void
 }
 
 export const Component = React.memo<Props>(props => {
     const [startDate, setStartDate] = React.useState<moment.Moment>(moment())
     const [endDate, setEndDate] = React.useState<moment.Moment>(moment())
-    const [focusedInput, setFocusedInput] = React.useState<
-        ReactDates.FocusedInputShape
-    >('startDate')
+    const [
+        focusedInput,
+        setFocusedInput
+    ] = React.useState<ReactDates.FocusedInputShape | null>('startDate')
 
     const handleOnFocusChange = React.useCallback(
-        (focusedInput: any) => {
+        (focusedInput: ReactDates.FocusedInputShape | null) => {
             setFocusedInput(focusedInput)
         },
         [focusedInput]
@@ -39,6 +36,7 @@ export const Component = React.memo<Props>(props => {
         ({ startDate, endDate }) => {
             setStartDate(startDate)
             setEndDate(endDate)
+            props.onChange(startDate, endDate)
         },
         [startDate, endDate]
     )
@@ -53,6 +51,10 @@ export const Component = React.memo<Props>(props => {
 
     const ChevronRightIconRender = React.useMemo(() => {
         return <Icon.Component svg={IconFiles.icons.ChevronRight} size="24px" />
+    }, [])
+
+    const allowAllDays = React.useCallback(() => {
+        return false
     }, [])
 
     return (
@@ -72,6 +74,7 @@ export const Component = React.memo<Props>(props => {
                 navPrev={ChevronLeftIconRender}
                 navNext={ChevronRightIconRender}
                 customArrowIcon={'~'}
+                isOutsideRange={allowAllDays}
             />
         </Outer>
     )
@@ -211,16 +214,6 @@ const Outer = styled.div`
     }
     .DayPickerKeyboardShortcuts_buttonReset {
         display:none
-        // background: 0 0;
-        // border: 0;
-        // border-radius: 0;
-        // color: inherit;
-        // font: inherit;
-        // line-height: normal;
-        // overflow: visible;
-        // padding: 0;
-        // cursor: pointer;
-        // font-size: 14px;
     }
     .DayPickerKeyboardShortcuts_buttonReset:active {
         outline: 0;
@@ -366,7 +359,6 @@ const Outer = styled.div`
     }
     .CalendarDay__default:hover {
         background: #e4e7e7;
-        // border: 1px solid #e4e7e7;
         color: inherit;
     }
     .CalendarDay__hovered_offset {
@@ -413,7 +405,6 @@ const Outer = styled.div`
     .CalendarDay__selected:active,
     .CalendarDay__selected:hover {
         background: RGB(34,34,34);
-        // border: 0px double #00a699;
         border-radius: 70px;
         color: #fff
     }
@@ -422,7 +413,6 @@ const Outer = styled.div`
         background: rgb(244,244,244);
         border-right: rgb(244,244,244);
         border-left: rgb(244,244,244);
-        //color: #007a87;
     }
     .CalendarDay__hovered_span:active {
         background: rgb(244,244,244);
@@ -439,7 +429,6 @@ const Outer = styled.div`
     .CalendarDay__blocked_out_of_range:active,
     .CalendarDay__blocked_out_of_range:hover {
         background: #fff;
-        // border: 1px solid #e4e7e7;
         color: #cacccd;
     }
     .CalendarDay__hovered_start_first_possible_end {
@@ -554,8 +543,6 @@ const Outer = styled.div`
     }
     .DayPickerNavigation_button {
         padding-top: 8px;
-        // padding-right: 47px;
-        // padding-left: 47px;
         cursor: pointer;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -831,7 +818,7 @@ const Outer = styled.div`
     .DateRangePickerInput {
         background-color: #fff;
         display: inline-block; 
-        width: 278px;
+        width: 338px;
         height: 40px;
     }
     .DateRangePickerInput__disabled {
