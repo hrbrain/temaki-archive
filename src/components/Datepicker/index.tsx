@@ -364,7 +364,7 @@ const Outer = styled.div`
     .CalendarDay__outside {
         border: 0;
         background: #fff;
-        color: #484848;
+        color: #D6D6D6;
     }
     .CalendarDay__outside:hover {
         border: 0;
