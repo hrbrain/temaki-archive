@@ -15,6 +15,7 @@ type Props = {
     numberOfMonths: number
     monthFormat: string
     onChange: (startDate: moment.Moment, endDate: moment.Moment) => void
+    fullWidth?: boolean
 }
 
 export const Component = React.memo<Props>(props => {
@@ -58,7 +59,7 @@ export const Component = React.memo<Props>(props => {
     }, [])
 
     return (
-        <Outer>
+        <Outer fullWidth={props.fullWidth}>
             <ReactDates.DateRangePicker
                 startDate={startDate}
                 startDateId={'startDate'}
@@ -86,7 +87,11 @@ export const Component = React.memo<Props>(props => {
  * Styles
  */
 
-const Outer = styled.div`
+type OuterProps = {
+    fullWidth?: boolean
+}
+
+const Outer = styled.div<OuterProps>`
     
     .PresetDateRangePicker_panel {
         padding: 0 22px 11px;
@@ -760,6 +765,7 @@ const Outer = styled.div`
         color: #484848;
         height: 100%;
         width: 50%;
+        font-size: 14px;
     }
     .DateInput_input__small {
         font-size: 14px;
@@ -820,8 +826,8 @@ const Outer = styled.div`
     .DateRangePickerInput {
         background-color: #fff;
         display: inline-block; 
-        width: 338px;
         height: 40px;
+        width: ${props => (props.fullWidth ? 'max-content' : '288px')};
     }
     .DateRangePickerInput__disabled {
         background: #f2f2f2;
@@ -843,6 +849,8 @@ const Outer = styled.div`
         display: inline-block;
         vertical-align: middle;
         color: #484848;
+        width: 12px;
+        text-align: center;
     }
     .DateRangePickerInput_arrow_svg {
         vertical-align: middle;
@@ -897,7 +905,7 @@ const Outer = styled.div`
         cursor: pointer;
         display: inline-block;
         vertical-align: middle;
-        padding: 0px 12px 0px 12px;
+        padding: 0px 4px 0px 12px;
     }
     .DateRangePickerInput_calendarIcon_svg {
         fill: #82888a;
