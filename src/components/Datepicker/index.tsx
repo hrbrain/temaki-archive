@@ -705,7 +705,7 @@ const Outer = styled.div`
         width: 32px !important;
     }
     .DayPicker_weekHeader_li > small {
-        font-size:100%
+        font-size:14px;
     }
     .DayPicker_transitionContainer {
         position: relative;
@@ -769,8 +769,8 @@ const Outer = styled.div`
         line-height: 24px;
         color: #484848;
         height: 100%;
-        width: 50%;
-        
+        width: 112px;
+        font-size: 14px;
     }
     .DateInput_input__small {
         font-size: 14px;
@@ -845,6 +845,7 @@ const Outer = styled.div`
         display: inline-block;
         vertical-align: middle;
         color: #484848;
+        width: 12px;
     }
     .DateRangePickerInput_arrow_svg {
         vertical-align: middle;
