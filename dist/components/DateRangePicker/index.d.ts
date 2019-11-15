@@ -10,6 +10,7 @@ declare type Props = {
     numberOfMonths: number;
     monthFormat: string;
     onChange: (startDate: moment.Moment, endDate: moment.Moment) => void;
+    fullWidth?: boolean;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

@@ -221,4 +221,5 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     numberOfMonths: number;
     monthFormat: string;
     onChange: (startDate: import("moment").Moment, endDate: import("moment").Moment) => void;
+    fullWidth?: boolean | undefined;
 }>;
