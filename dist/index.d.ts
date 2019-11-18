@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="moment" />
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
@@ -214,12 +213,13 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     displayFormat: string;
     numberOfMonths: number;
     monthFormat: string;
-    onChange: (date: import("moment").Moment | null) => void;
+    onChange: (date: Date | null) => void;
+    width: string;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat: string;
     numberOfMonths: number;
     monthFormat: string;
-    onChange: (startDate: import("moment").Moment, endDate: import("moment").Moment) => void;
-    fullWidth?: boolean | undefined;
+    onChange: (startDate: Date, endDate: Date) => void;
+    width: string;
 }>;

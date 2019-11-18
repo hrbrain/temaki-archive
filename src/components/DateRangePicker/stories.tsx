@@ -10,6 +10,6 @@ storiesOf('Components|DateRangePicker', module).add('Standard', () => (
         numberOfMonths={Knobs.number('numberOfMonths', 1)}
         monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
         onChange={Actions.action('onChange')}
-        fullWidth={Knobs.boolean('fullWidth', false)}
+        width={Knobs.text('width', '100%')}
     />
 ))

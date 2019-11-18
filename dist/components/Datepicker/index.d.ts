@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as moment from 'moment';
 import 'react-dates/initialize';
 import 'moment/locale/ja';
 /**
@@ -12,7 +11,8 @@ declare type Props = {
     displayFormat: string;
     numberOfMonths: number;
     monthFormat: string;
-    onChange: (date: moment.Moment | null) => void;
+    onChange: (date: Date | null) => void;
+    width: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
