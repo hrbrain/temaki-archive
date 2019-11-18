@@ -18,7 +18,8 @@ type Props = {
     displayFormat: string
     numberOfMonths: number
     monthFormat: string
-    onChange: (date: moment.Moment | null) => void
+    onChange: (date: Date | null) => void
+    width: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -32,7 +33,7 @@ export const Component = React.memo<Props>(props => {
     const handleOnDateChange = React.useCallback(
         date => {
             setDate(date)
-            props.onChange(date)
+            props.onChange(date.toDate())
         },
         [date]
     )
@@ -54,7 +55,7 @@ export const Component = React.memo<Props>(props => {
     }, [])
 
     return (
-        <Outer>
+        <Outer width={props.width}>
             <ReactDates.SingleDatePicker
                 id={'date'}
                 date={date}
@@ -77,9 +78,11 @@ export const Component = React.memo<Props>(props => {
 /**
  * Styles
  */
-
-const Outer = styled.div`
-    
+type OuterProps = {
+    width: string
+}
+const Outer = styled.div<OuterProps>`
+& {
     .PresetDateRangePicker_panel {
         padding: 0 22px 11px;
     }
@@ -116,7 +119,7 @@ const Outer = styled.div`
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: center;
-        width: 100%;
+        width: ${props => props.width};
     }
     .SingleDatePickerInput__withBorder {
     }
@@ -965,4 +968,5 @@ const Outer = styled.div`
         width: 15px;
         fill: #cacccd;
     }
+}
 `

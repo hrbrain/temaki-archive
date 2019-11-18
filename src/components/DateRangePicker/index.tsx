@@ -14,8 +14,8 @@ type Props = {
     displayFormat: string
     numberOfMonths: number
     monthFormat: string
-    onChange: (startDate: moment.Moment, endDate: moment.Moment) => void
-    fullWidth?: boolean
+    onChange: (startDate: Date, endDate: Date) => void
+    width: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -37,7 +37,7 @@ export const Component = React.memo<Props>(props => {
         ({ startDate, endDate }) => {
             setStartDate(startDate)
             setEndDate(endDate)
-            props.onChange(startDate, endDate)
+            props.onChange(startDate.toDate(), endDate.toDate())
         },
         [startDate, endDate]
     )
@@ -59,7 +59,7 @@ export const Component = React.memo<Props>(props => {
     }, [])
 
     return (
-        <Outer fullWidth={props.fullWidth}>
+        <Outer width={props.width}>
             <ReactDates.DateRangePicker
                 startDate={startDate}
                 startDateId={'startDate'}
@@ -88,11 +88,11 @@ export const Component = React.memo<Props>(props => {
  */
 
 type OuterProps = {
-    fullWidth?: boolean
+    width: string
 }
 
 const Outer = styled.div<OuterProps>`
-    
+    & {
     .PresetDateRangePicker_panel {
         padding: 0 22px 11px;
     }
@@ -827,7 +827,7 @@ const Outer = styled.div<OuterProps>`
         background-color: #fff;
         display: inline-block; 
         height: 40px;
-        width: ${props => (props.fullWidth ? 'max-content' : '288px')};
+        width: ${props => props.width};
     }
     .DateRangePickerInput__disabled {
         background: #f2f2f2;
@@ -969,4 +969,5 @@ const Outer = styled.div<OuterProps>`
         width: 15px;
         fill: #cacccd;
     }
+}
 `
