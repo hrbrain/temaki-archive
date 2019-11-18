@@ -18,6 +18,7 @@ type Props = {
     width: number
     onClickItem: (value: ItemList.Value) => void
     className?: string
+    type?: DesignType
 }
 
 export const Component = React.memo<Props>(props => {
@@ -30,6 +31,7 @@ export const Component = React.memo<Props>(props => {
     return (
         <div className={props.className}>
             <Body.Component
+                type={type}
                 placeholder={props.placeholder}
                 items={props.items}
                 selected={props.selected}

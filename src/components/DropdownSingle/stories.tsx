@@ -39,10 +39,38 @@ storiesOf('Components|DropdownSingle', module)
             />
         </div>
     ))
+    .add('Borderless', () => {
+        return (
+            <div className="ml-20 mt-10">
+                <DropdownSingle.Component
+                    type={'borderless'}
+                    placeholder={text('placeholder', '')}
+                    items={[
+                        { value: '20', text: '20' },
+                        { value: '50', text: '50' },
+                        { value: '100', text: '100' }
+                    ]}
+                    selected={select(
+                        'selected',
+                        {
+                            '20': '20',
+                            '50': '50',
+                            '100': '100'
+                        },
+                        '20'
+                    )}
+                    isError={boolean('isError', false)}
+                    width={number('width', 76)}
+                    onClickItem={action('text')}
+                />
+            </div>
+        )
+    })
     .add('Body', () => {
         return (
             <div className="ml-20 mt-10">
                 <Body.Component
+                    type={'default'}
                     placeholder={text('placeholder', '選択してください')}
                     items={[
                         { value: '', text: '' },
