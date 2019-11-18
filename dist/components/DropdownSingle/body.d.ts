@@ -11,6 +11,7 @@ declare type Props = {
     width: number;
     isVisible: boolean;
     handleClick?: () => void;
+    type: 'borderless' | 'default';
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

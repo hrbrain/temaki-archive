@@ -1112,8 +1112,9 @@ exports[`Storyshots Components|DropdownSingle Body 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-chPdSV gKyyYH"
+    className="sc-chPdSV iIpVcm"
     data-test="body"
+    type="default"
     width={200}
   >
     <div
@@ -1132,6 +1133,105 @@ exports[`Storyshots Components|DropdownSingle Body 1`] = `
       }
       size="24px"
     />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
+<div
+  className="ml-20 mt-10"
+>
+  <div>
+    <div
+      className="sc-chPdSV gJCoGe"
+      data-test="body"
+      onClick={[Function]}
+      type="borderless"
+      width={76}
+    >
+      <div
+        className="sc-kgoBCf eATVyK"
+        data-test="text"
+        width={76}
+      >
+        20
+      </div>
+      <div
+        className="sc-kAzzGY cFmvJn sc-bxivhb hBuNrQ"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+        size="24px"
+      />
+    </div>
+    <ul
+      className="sc-ckVGcZ iINwpW hide sc-kGXeez jyNYdx"
+      data-test="itemList"
+      width={76}
+    >
+      <li
+        className="sc-kpOJdX fqiEGF"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-bxivhb iLtEre"
+          color="rgb(51, 51, 51)"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          size="24px"
+        />
+        <div
+          className="sc-dxgOiQ ddGaJS"
+        >
+          20
+        </div>
+      </li>
+      <li
+        className="sc-kpOJdX fqiEGF"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-bxivhb eaqBKs"
+          color="rgb(234, 234, 234)"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          size="24px"
+        />
+        <div
+          className="sc-dxgOiQ ddGaJS"
+        >
+          50
+        </div>
+      </li>
+      <li
+        className="sc-kpOJdX fqiEGF"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-bxivhb eaqBKs"
+          color="rgb(234, 234, 234)"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          size="24px"
+        />
+        <div
+          className="sc-dxgOiQ ddGaJS"
+        >
+          100
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -1295,9 +1395,10 @@ exports[`Storyshots Components|DropdownSingle Single 1`] = `
 >
   <div>
     <div
-      className="sc-chPdSV gKyyYH"
+      className="sc-chPdSV iIpVcm"
       data-test="body"
       onClick={[Function]}
+      type="default"
       width={200}
     >
       <div

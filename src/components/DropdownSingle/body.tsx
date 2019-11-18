@@ -17,6 +17,7 @@ type Props = {
     width: number
     isVisible: boolean
     handleClick?: () => void
+    type: 'borderless' | 'default'
 }
 
 export const Component = React.memo<Props>(
@@ -27,7 +28,8 @@ export const Component = React.memo<Props>(
         isError,
         width,
         isVisible,
-        handleClick
+        handleClick,
+        type
     }) => {
         return (
             <Body
@@ -36,6 +38,7 @@ export const Component = React.memo<Props>(
                 isError={isError}
                 onClick={handleClick}
                 width={width}
+                type={type}
             >
                 <Text data-test="text" width={width}>
                     {showTextBySelected(items, selected, placeholder)}
@@ -81,6 +84,7 @@ type BodyType = {
     isVisible: boolean
     isError: boolean
     width: number
+    type: 'borderless' | 'default'
 }
 
 const Body = styled.div<BodyType>`
@@ -88,8 +92,20 @@ const Body = styled.div<BodyType>`
     width: ${props => props.width}px;
     max-width: 262px;
     display: flex;
-    padding: 12px;
-    border: 1px solid
+    padding: ${props => {
+        if (props.type == 'default') {
+            return '12px;'
+        }
+        return null
+    }};
+    border: 1px
+        ${props => {
+            if (props.type === 'default') {
+                return 'solid'
+            } else {
+                return 'none'
+            }
+        }}
         ${props => {
             if (props.isError) {
                 return props.theme.colors.utilities.red.default
