@@ -103,6 +103,9 @@ const Item = styled.li`
     font-size: 14px;
     display: flex;
     cursor: pointer;
+    &:hover {
+        color: ${props => props.theme.colors.primary.default};
+    }
 `
 
 const Text = styled.div`
