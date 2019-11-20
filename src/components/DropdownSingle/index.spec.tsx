@@ -25,6 +25,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
         act(() => {
             wrapper = mountWithTheme(
                 <DropdownSingle.Component
+                    type={'default'}
                     placeholder="placeholder"
                     items={items}
                     selected=""
@@ -63,6 +64,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
     it('エラー時にborderが赤になっている', () => {
         wrapper = mountWithTheme(
             <DropdownSingle.Component
+                type={'default'}
                 placeholder="placeholder"
                 items={items}
                 selected=""
@@ -80,6 +82,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
     it('リストが選択されていない時に、placeholderが本体に表示されている', () => {
         wrapper = mountWithTheme(
             <DropdownSingle.Component
+                type={'default'}
                 placeholder="placeholder"
                 items={items}
                 selected=""
@@ -94,6 +97,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
     it('選択されたリストがある時に、本体に表示されている', () => {
         wrapper = mountWithTheme(
             <DropdownSingle.Component
+                type={'default'}
                 placeholder="placeholder"
                 items={items}
                 selected="1"
@@ -108,6 +112,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
     it('選択されたリストがある時に、チェックが入っている', () => {
         wrapper = mountWithTheme(
             <DropdownSingle.Component
+                type={'default'}
                 placeholder="placeholder"
                 items={items}
                 selected=""
