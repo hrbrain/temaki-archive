@@ -3,45 +3,42 @@ import styled from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
-import * as ItemList from './ItemList'
+import * as ItemList from '../ItemList'
 
 /**
  * Component
  */
-
 type Props = {
     placeholder: string
     items: ItemList.Item[]
     selected: ItemList.Value
     isError: boolean
     width: number
-    isVisible: boolean
-    handleClick?: () => void
-    type: 'borderless' | 'default'
+    onClickItem: (value: ItemList.Value) => void
 }
 
-export const Component = React.memo<Props>(
-    ({
-        placeholder,
-        items,
-        selected,
-        isError,
-        width,
-        isVisible,
-        handleClick,
-        type
-    }) => {
-        return (
+export const Component = React.memo<Props>(props => {
+    const [isVisible, setIsVisible] = React.useState(false)
+
+    const handleClick = React.useCallback(() => {
+        setIsVisible(!isVisible)
+    }, [isVisible])
+
+    return (
+        <div>
             <Body
                 data-test="body"
                 isVisible={isVisible}
-                isError={isError}
+                isError={props.isError}
                 onClick={handleClick}
-                width={width}
-                type={type}
+                width={props.width}
             >
-                <Text data-test="text" width={width}>
-                    {showTextBySelected(items, selected, placeholder)}
+                <Text data-test="text" width={props.width}>
+                    {showTextBySelected(
+                        props.items,
+                        props.selected,
+                        props.placeholder
+                    )}
                 </Text>
                 <DropDownIcon
                     className={isVisible ? 'visible' : ''}
@@ -49,9 +46,16 @@ export const Component = React.memo<Props>(
                     size="24px"
                 />
             </Body>
-        )
-    }
-)
+            <StyledItemList
+                items={props.items}
+                selected={props.selected}
+                onClickItem={props.onClickItem}
+                width={props.width}
+                isVisible={isVisible}
+            />
+        </div>
+    )
+})
 
 const showTextBySelected = (
     items: ItemList.Item[],
@@ -69,6 +73,22 @@ const showTextBySelected = (
  * Styles
  */
 
+const StyledItemList = styled(ItemList.Component)<{ width: number }>`
+    position: absolute;
+    margin-top: 4px;
+    visibility: visible;
+    transform: scaley(1);
+    transform-origin: top;
+    transition: 0.2s;
+    &:last-child {
+        padding-bottom: 12px;
+    }
+    &.hide {
+        visibility: hidden;
+        transform: scaley(0);
+    }
+`
+
 const DropDownIcon = styled(Icon.Component)`
     position: absolute;
     right: 12px;
@@ -84,7 +104,6 @@ type BodyType = {
     isVisible: boolean
     isError: boolean
     width: number
-    type: 'borderless' | 'default'
 }
 
 const Body = styled.div<BodyType>`
@@ -92,29 +111,6 @@ const Body = styled.div<BodyType>`
     width: ${props => props.width}px;
     max-width: 262px;
     display: flex;
-    padding: ${props => {
-        if (props.type == 'default') {
-            return '12px;'
-        }
-        return null
-    }};
-    border: 1px
-        ${props => {
-            if (props.type === 'default') {
-                return 'solid'
-            } else {
-                return 'none'
-            }
-        }}
-        ${props => {
-            if (props.isError) {
-                return props.theme.colors.utilities.red.default
-            } else if (props.isVisible) {
-                return props.theme.colors.utilities.highlightGreen.default
-            } else {
-                return props.theme.colors.grayScale.S10
-            }
-        }};
     border-radius: 6px;
     user-select: none;
     font-size: 14px;
