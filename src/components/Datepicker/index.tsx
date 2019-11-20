@@ -33,7 +33,11 @@ export const Component = React.memo<Props>(props => {
     const handleOnDateChange = React.useCallback(
         date => {
             setDate(date)
-            props.onChange(date.toDate())
+            let rtnDate: Date = new Date()
+            if (date != null) {
+                rtnDate = date.toDate()
+            }
+            props.onChange(rtnDate)
         },
         [date]
     )
@@ -768,7 +772,7 @@ const Outer = styled.div<OuterProps>`
         color: #dbdbdb;
     }
     .DateInput_input {
-        text-align: center;
+        text-align: left;
         background-color: transparent;
         font-weight: 200;
         line-height: 24px;
