@@ -36,17 +36,7 @@ export const Component = React.memo<Props>(props => {
         ({ startDate, endDate }) => {
             setStartDate(startDate)
             setEndDate(endDate)
-            console.warn(startDate, endDate)
-            let rtnStartDate: Date = new Date()
-            let rtnEndDate: Date = new Date()
-
-            if (startDate != null) {
-                rtnStartDate = startDate.toDate()
-            }
-            if (endDate != null) {
-                rtnEndDate = endDate.toDate()
-            }
-            props.onChange(rtnStartDate, rtnEndDate)
+            props.onChange(startDate.toDate(), endDate.toDate())
         },
         [startDate, endDate]
     )
@@ -78,9 +68,9 @@ export const Component = React.memo<Props>(props => {
                 onFocusChange={handleOnFocusChange}
                 onDatesChange={handleOnDatesChange}
                 customInputIcon={calendarIconRender}
-                displayFormat={props.displayFormat || 'YYYY年M月D日'}
-                numberOfMonths={1}
-                monthFormat={props.monthFormat || 'YYYY[年]M[月]'}
+                displayFormat={props.displayFormat}
+                numberOfMonths={props.numberOfMonths}
+                monthFormat={props.monthFormat}
                 navPrev={ChevronLeftIconRender}
                 navNext={ChevronRightIconRender}
                 customArrowIcon={'~'}
@@ -101,7 +91,6 @@ type OuterProps = {
 }
 
 const Outer = styled.div<OuterProps>`
-    display:flex;
     & {
     .PresetDateRangePicker_panel {
         padding: 0 22px 11px;
@@ -184,7 +173,6 @@ const Outer = styled.div<OuterProps>`
         z-index: 1;
         background-color: #fff;
         position: absolute;
-        top:48px !important;
     }
     .SingleDatePicker_picker__rtl {
         direction: rtl;
@@ -757,7 +745,6 @@ const Outer = styled.div<OuterProps>`
         margin: 0;
         position: relative;
         vertical-align: middle;
-        width: 106px;
     }
     .DateInput__small {
         width: 97px;
@@ -776,9 +763,8 @@ const Outer = styled.div<OuterProps>`
         line-height: 24px;
         color: #484848;
         height: 100%;
+        width: 50%;
         font-size: 14px;
-        text-align: left;
-        width: 112px;
     }
     .DateInput_input__small {
         font-size: 14px;
@@ -830,15 +816,17 @@ const Outer = styled.div<OuterProps>`
         fill: transparent;
     }
     div.DateRangePickerInput > div.DateInput{
+        width: 170px;
         display: inline;
+    }
+    div.DateRangePickerInput > div > input.DateInput_input{
+        width: 36%;
     }
     .DateRangePickerInput {
         background-color: #fff;
         display: inline-block; 
         height: 40px;
         width: ${props => props.width};
-        padding: 0 12px;
-        position:absolute;
     }
     .DateRangePickerInput__disabled {
         background: #f2f2f2;
@@ -916,7 +904,7 @@ const Outer = styled.div<OuterProps>`
         cursor: pointer;
         display: inline-block;
         vertical-align: middle;
-        padding: 0px 4px 0px 0px;
+        padding: 0px 4px 0px 12px;
     }
     .DateRangePickerInput_calendarIcon_svg {
         fill: #82888a;
@@ -925,8 +913,8 @@ const Outer = styled.div<OuterProps>`
         vertical-align: middle;
     }
     .DateRangePicker {
-        // position: relative;
-        // display: inline-block;
+        position: relative;
+        display: inline-block;
     }
     .DateRangePicker__block {
         display: block;
@@ -935,8 +923,6 @@ const Outer = styled.div<OuterProps>`
         z-index: 1;
         background-color: #fff;
         position: absolute;
-        top:48px !important;
-
     }
     .DateRangePicker_picker__rtl {
         direction: rtl;
