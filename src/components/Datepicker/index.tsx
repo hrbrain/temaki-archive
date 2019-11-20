@@ -120,6 +120,7 @@ const Outer = styled.div<OuterProps>`
         justify-content: flex-start;
         align-items: center;
         width: ${props => props.width};
+        padding: 0 12px;
     }
     .SingleDatePickerInput__withBorder {
     }
@@ -145,8 +146,7 @@ const Outer = styled.div<OuterProps>`
     .SingleDatePickerInput_clearDate_svg__small {
     }
     .SingleDatePickerInput_calendarIcon {
-        padding-left: 12px;
-        padding-right: 12px;
+        padding: 0 4px 0 0;
     }
     .SingleDatePickerInput_calendarIcon_svg {
     }
@@ -165,6 +165,7 @@ const Outer = styled.div<OuterProps>`
         z-index: 1;
         background-color: #fff;
         position: absolute;
+        top:48px !important;
     }
     .SingleDatePicker_picker__rtl {
         direction: rtl;
@@ -754,6 +755,7 @@ const Outer = styled.div<OuterProps>`
         position: relative;
         vertical-align: middle;
         display: contents;
+        text-align: left;
     }
     .DateInput__small {
         width: 97px;
