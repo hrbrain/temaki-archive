@@ -220,6 +220,6 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat: string;
     numberOfMonths: number;
     monthFormat: string;
-    onChange: (startDate: Date, endDate: Date) => void;
+    onChange: (startDate: Date | null, endDate: Date | null) => void;
     width: string;
 }>;

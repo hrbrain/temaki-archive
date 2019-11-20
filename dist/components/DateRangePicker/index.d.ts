@@ -8,7 +8,7 @@ declare type Props = {
     displayFormat: string;
     numberOfMonths: number;
     monthFormat: string;
-    onChange: (startDate: Date, endDate: Date) => void;
+    onChange: (startDate: Date | null, endDate: Date | null) => void;
     width: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
