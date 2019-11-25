@@ -10,6 +10,9 @@ declare type Props = {
     isError: boolean;
     width: number;
     onClickItem: (value: ItemList.Value) => void;
+    isVisible: boolean;
+    handleClick: () => void;
+    showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value, placeholder: string) => string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
