@@ -181,6 +181,7 @@ export declare const DropdownSingle: import("react").NamedExoticComponent<{
     isError: boolean;
     width: number;
     onClickItem: (value: string) => void;
+    className?: string | undefined;
 }>;
 export declare type DropdownSingleItem = _DropdownSingleItem;
 export declare const DropdownMultiple: import("react").NamedExoticComponent<{
@@ -190,6 +191,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     isError: boolean;
     width: number;
     onClickItem: (value: string) => void;
+    className?: string | undefined;
 }>;
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
 export declare const MeatballMenu: import("react").NamedExoticComponent<{

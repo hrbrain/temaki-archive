@@ -17,6 +17,7 @@ type Props = {
     isError: boolean
     width: number
     onClickItem: (value: ItemList.Value) => void
+    className?: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -27,7 +28,7 @@ export const Component = React.memo<Props>(props => {
     }, [isVisible])
 
     return (
-        <div>
+        <div className={props.className}>
             <Body.Component
                 placeholder={props.placeholder}
                 items={props.items}
