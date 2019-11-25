@@ -15,33 +15,34 @@ type Props = {
     isError: boolean
     width: number
     onClickItem: (value: ItemList.Value) => void
+    isVisible: boolean
+    handleClick: () => void
+    showTextBySelected: (
+        items: ItemList.Item[],
+        selected: ItemList.Value,
+        placeholder: string
+    ) => string
 }
 
 export const Component = React.memo<Props>(props => {
-    const [isVisible, setIsVisible] = React.useState(false)
-
-    const handleClick = React.useCallback(() => {
-        setIsVisible(!isVisible)
-    }, [isVisible])
-
     return (
         <div>
             <Body
                 data-test="body"
-                isVisible={isVisible}
+                isVisible={props.isVisible}
                 isError={props.isError}
-                onClick={handleClick}
+                onClick={props.handleClick}
                 width={props.width}
             >
                 <Text data-test="text" width={props.width}>
-                    {showTextBySelected(
+                    {props.showTextBySelected(
                         props.items,
                         props.selected,
                         props.placeholder
                     )}
                 </Text>
                 <DropDownIcon
-                    className={isVisible ? 'visible' : ''}
+                    className={props.isVisible ? 'visible' : ''}
                     svg={IconFiles.icons.DropdownOff}
                     size="24px"
                 />
@@ -51,23 +52,11 @@ export const Component = React.memo<Props>(props => {
                 selected={props.selected}
                 onClickItem={props.onClickItem}
                 width={props.width}
-                isVisible={isVisible}
+                isVisible={props.isVisible}
             />
         </div>
     )
 })
-
-const showTextBySelected = (
-    items: ItemList.Item[],
-    selected: ItemList.Value,
-    placeholder: string
-): string => {
-    const text = items.find(item => item.value === selected)
-    if (text && text.text) {
-        return text.text
-    }
-    return placeholder
-}
 
 /**
  * Styles
