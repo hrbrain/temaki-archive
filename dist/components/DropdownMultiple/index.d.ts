@@ -11,6 +11,7 @@ declare type Props = {
     isError: boolean;
     width: number;
     onClickItem: (value: ItemList.Value) => void;
+    className?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
