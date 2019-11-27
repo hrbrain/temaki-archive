@@ -10,62 +10,55 @@ import * as Borderless from './presentors/Borderless'
 
 export type Item = ItemList.Item
 
-export const designType = {
-    default: 'default' as const,
-    borderless: 'borderless' as const
-}
-
 type Props = {
-    placeholder: string
     items: ItemList.Item[]
-    selected: ItemList.Value
-    isError: boolean
-    width: number
-    onClickItem: (value: ItemList.Value) => void
-    type: typeof designType.default | typeof designType.borderless
+    value: ItemList.Value
+    type: 'default' | 'borderless'
+    onChange: (value: ItemList.Value) => void
+    placeholder?: string
+    isError?: boolean
+    width?: string
     className?: string
+    defaultExpanded?: boolean
 }
 
 export const Component = React.memo<Props>(props => {
-    const [isVisible, setIsVisible] = React.useState(false)
+    const [isMenuVisible, setIsMenuVisible] = React.useState<boolean>(
+        props.defaultExpanded || false
+    )
 
-    const handleClick = React.useCallback(() => {
-        setIsVisible(!isVisible)
-    }, [isVisible])
+    const clickBody = React.useCallback(() => {
+        setIsMenuVisible(!isMenuVisible)
+    }, [isMenuVisible])
 
     switch (props.type) {
-        case designType.borderless:
+        case 'borderless':
             return (
                 <Borderless.Component
-                    placeholder={props.placeholder}
                     items={props.items}
-                    selected={props.selected}
+                    value={props.value}
                     isError={props.isError}
-                    width={props.width}
-                    onClickItem={props.onClickItem}
-                    isVisible={isVisible}
-                    handleClick={handleClick}
+                    onClick={clickBody}
+                    onClickMenuItem={props.onChange}
+                    isMenuVisible={isMenuVisible}
                     showTextBySelected={showTextBySelected}
                     className={props.className}
-                ></Borderless.Component>
+                />
             )
-        case designType.default:
+        case 'default':
             return (
                 <Default.Component
-                    placeholder={props.placeholder}
                     items={props.items}
-                    selected={props.selected}
+                    value={props.value}
                     isError={props.isError}
-                    width={props.width}
-                    onClickItem={props.onClickItem}
-                    isVisible={isVisible}
-                    handleClick={handleClick}
+                    onClick={clickBody}
+                    onClickMenuItem={props.onChange}
+                    isMenuVisible={isMenuVisible}
                     showTextBySelected={showTextBySelected}
+                    width={props.width}
                     className={props.className}
-                ></Default.Component>
+                />
             )
-        default:
-            throw new Error()
     }
 })
 
@@ -73,12 +66,11 @@ Component.displayName = 'DropdownSingle'
 
 const showTextBySelected = (
     items: ItemList.Item[],
-    selected: ItemList.Value,
-    placeholder: string
+    selected: ItemList.Value
 ): string => {
     const text = items.find(item => item.value === selected)
     if (text && text.text) {
         return text.text
     }
-    return placeholder
+    return ''
 }

@@ -9,18 +9,15 @@ import * as ItemList from '../ItemList'
  * Component
  */
 type Props = {
-    placeholder: string
     items: ItemList.Item[]
-    selected: ItemList.Value
-    isError: boolean
-    width: number
-    onClickItem: (value: ItemList.Value) => void
-    isVisible: boolean
-    handleClick: () => void
+    value: ItemList.Value
+    onClick: () => void
+    onClickMenuItem: (index: string) => void
+    isError?: boolean
+    isMenuVisible?: boolean
     showTextBySelected: (
         items: ItemList.Item[],
-        selected: ItemList.Value,
-        placeholder: string
+        selected: ItemList.Value
     ) => string
     className?: string
 }
@@ -28,32 +25,21 @@ type Props = {
 export const Component = React.memo<Props>(props => {
     return (
         <div className={props.className}>
-            <Body
-                data-test="body"
-                isVisible={props.isVisible}
-                isError={props.isError}
-                onClick={props.handleClick}
-                width={props.width}
-            >
-                <Text data-test="text" width={props.width}>
-                    {props.showTextBySelected(
-                        props.items,
-                        props.selected,
-                        props.placeholder
-                    )}
+            <Body data-test="body" onClick={props.onClick}>
+                <Text data-test="text">
+                    {props.showTextBySelected(props.items, props.value)}
                 </Text>
                 <DropDownIcon
-                    className={props.isVisible ? 'visible' : ''}
+                    className={props.isMenuVisible ? 'visible' : ''}
                     svg={IconFiles.icons.DropdownOff}
                     size="24px"
                 />
             </Body>
             <StyledItemList
                 items={props.items}
-                selected={props.selected}
-                onClickItem={props.onClickItem}
-                width={props.width}
-                isVisible={props.isVisible}
+                value={props.value}
+                onClickItem={props.onClickMenuItem}
+                isVisible={props.isMenuVisible}
             />
         </div>
     )
@@ -63,20 +49,21 @@ export const Component = React.memo<Props>(props => {
  * Styles
  */
 
-const StyledItemList = styled(ItemList.Component)<{ width: number }>`
+const StyledItemList = styled(ItemList.Component)<{ isVisible?: boolean }>`
     position: absolute;
     margin-top: 4px;
-    visibility: visible;
-    transform: scaley(1);
     transform-origin: top;
     transition: 0.2s;
-    &:last-child {
-        padding-bottom: 12px;
-    }
-    &.hide {
+    ${props =>
+        props.isVisible
+            ? `
+        visibility: visible;
+        transform: scaleY(1);
+    `
+            : `
         visibility: hidden;
-        transform: scaley(0);
-    }
+        transform: scaleY(0);
+    `}
 `
 
 const DropDownIcon = styled(Icon.Component)`
@@ -90,15 +77,9 @@ const DropDownIcon = styled(Icon.Component)`
     }
 `
 
-type BodyType = {
-    isVisible: boolean
-    isError: boolean
-    width: number
-}
-
-const Body = styled.div<BodyType>`
+const Body = styled.div<{ width?: string }>`
     position: relative;
-    width: ${props => props.width}px;
+    width: ${props => props.width || '100%'};
     max-width: 262px;
     display: flex;
     border-radius: 6px;
@@ -107,8 +88,8 @@ const Body = styled.div<BodyType>`
     cursor: pointer;
 `
 
-const Text = styled.div<{ width: number }>`
+const Text = styled.div`
     padding-right: 4px;
-    width: ${props => props.width - 52}px;
+    width: 100%;
     max-width: 210px;
 `

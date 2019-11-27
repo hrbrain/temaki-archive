@@ -10,26 +10,19 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     items: Item[]
-    selected: Value
+    value: Value
     onClickItem: (value: Value) => void
     className?: string
-    isVisible: boolean
-    width: number
+    isVisible?: boolean
 }
 
-export const Component = React.memo<Props>(
-    ({ items, selected, onClickItem, className, isVisible, width }) => {
-        return (
-            <ItemList
-                data-test="itemList"
-                className={`${className} ${isVisible ? '' : 'hide'}`}
-                width={width}
-            >
-                {items.map(renderItem(selected, onClickItem))}
-            </ItemList>
-        )
-    }
-)
+export const Component = React.memo<Props>(props => {
+    return (
+        <ItemList data-test="itemList" className={props.className}>
+            {props.items.map(renderItem(props.value, props.onClickItem))}
+        </ItemList>
+    )
+})
 
 const renderItem = (selected: Value, onClickItem: (value: Value) => void) => (
     item: Item,
@@ -86,25 +79,27 @@ const ItemComponent = React.memo<ItemProps>(props => {
  * Styles
  */
 
-const ItemList = styled.ul<{ width: number }>`
+const ItemList = styled.ul`
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
-    width: ${props => props.width}px;
     max-width: 262px;
     max-height: 204px;
-    overflow: auto;
+    overflow-y: auto;
+    padding: 12px;
 `
 
 const Item = styled.li`
     list-style-type: none;
-    padding: 12px 12px 0 12px;
     user-select: none;
     font-size: 14px;
     display: flex;
     cursor: pointer;
     &:hover {
         color: ${props => props.theme.colors.primary.N60};
+    }
+    & + & {
+        margin-top: 12px;
     }
 `
 

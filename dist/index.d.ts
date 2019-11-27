@@ -175,14 +175,15 @@ export declare const Textarea: import("react").NamedExoticComponent<{
     onBlur?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
 }>;
 export declare const DropdownSingle: import("react").NamedExoticComponent<{
-    placeholder: string;
     items: import("./components/DropdownSingle/ItemList").Item[];
-    selected: string;
-    isError: boolean;
-    width: number;
-    onClickItem: (value: string) => void;
+    value: string;
     type: "default" | "borderless";
+    onChange: (value: string) => void;
+    placeholder?: string | undefined;
+    isError?: boolean | undefined;
+    width?: string | undefined;
     className?: string | undefined;
+    defaultExpanded?: boolean | undefined;
 }>;
 export declare type DropdownSingleItem = _DropdownSingleItem;
 export declare const DropdownMultiple: import("react").NamedExoticComponent<{
