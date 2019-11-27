@@ -4,6 +4,8 @@ import styled from '~/modules/theme'
 import * as Body from './body'
 import * as ItemList from './itemList'
 
+import * as ClickOutside from '~/modules/ClickOutside'
+
 /**
  * Component
  */
@@ -11,31 +13,73 @@ import * as ItemList from './itemList'
 export type Item = ItemList.Item
 
 type Props = {
-    placeholder: string
     items: ItemList.Item[]
-    selected: ItemList.Value[]
-    isError: boolean
-    width: number
-    onClickItem: (value: ItemList.Value) => void
+    values: ItemList.Value[]
+    onChange: (value: ItemList.Value[]) => void
+    width?: string
+    placeholder?: string
+    isError?: boolean
+    defaultExpanded?: boolean
     className?: string
 }
 
 export const Component = React.memo<Props>(props => {
-    const [isVisible, setIsVisible] = React.useState(false)
+    const [isMenuVisible, setIsMenuVisible] = React.useState(
+        props.defaultExpanded
+    )
+    const [valuesCache, setValuesCache] = React.useState<ItemList.Value[]>(
+        props.values
+    )
 
-    const handleClick = React.useCallback(() => {
-        setIsVisible(!isVisible)
-    }, [isVisible])
+    React.useLayoutEffect(() => {
+        setValuesCache(props.values)
+    }, [props.values])
+
+    const clickBody = React.useCallback(() => {
+        setIsMenuVisible(!isMenuVisible)
+    }, [isMenuVisible])
+
+    const clickOutside = React.useCallback(() => {
+        setIsMenuVisible(false)
+    }, [isMenuVisible])
+
+    const changeValue = React.useCallback(
+        (value: ItemList.Value) => {
+            if (valuesCache.includes(value)) {
+                const newValues = valuesCache.filter(x => x !== value)
+                setValuesCache(newValues)
+                props.onChange(newValues)
+            } else {
+                const newValues = [...valuesCache, value]
+                setValuesCache(newValues)
+                props.onChange(newValues)
+            }
+        },
+        [valuesCache, props.onChange]
+    )
 
     return (
-        <div className={props.className}>
-            <Body.Component
-                {...props}
-                isVisible={isVisible}
-                handleClick={handleClick}
-            />
-            <StyledItemList {...props} isVisible={isVisible} />
-        </div>
+        <Wrap className={props.className} width={props.width}>
+            <ClickOutside.Component
+                onClickOutside={clickOutside}
+                inactive={!isMenuVisible}
+            >
+                <Body.Component
+                    onClick={clickBody}
+                    items={props.items}
+                    values={props.values}
+                    placeholder={props.placeholder}
+                    isMenuVisible={isMenuVisible}
+                    isError={props.isError}
+                />
+                <StyledItemList
+                    isVisible={isMenuVisible}
+                    items={props.items}
+                    onClickItem={changeValue}
+                    values={props.values}
+                />
+            </ClickOutside.Component>
+        </Wrap>
     )
 })
 
@@ -45,18 +89,27 @@ Component.displayName = 'DropdownSingle'
  * Styles
  */
 
-const StyledItemList = styled(ItemList.Component)<{ width: number }>`
+const Wrap = styled.div<{ width?: string }>`
+    position: relative;
+    ${props => props.width && `width: ${props.width};`}
+`
+
+const StyledItemList = styled(ItemList.Component)<{ isVisible?: boolean }>`
+    width: 100%;
     position: absolute;
+    left: 0;
     margin-top: 4px;
-    visibility: visible;
-    transform: scaley(1);
     transform-origin: top;
     transition: 0.2s;
-    &:last-child {
-        padding-bottom: 12px;
-    }
-    &.hide {
+
+    ${props =>
+        props.isVisible
+            ? `
+        visibility: visible;
+        transform: scaleY(1);
+    `
+            : `
         visibility: hidden;
-        transform: scaley(0);
-    }
+        transform: scaleY(0);
+    `}
 `

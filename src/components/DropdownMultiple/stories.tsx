@@ -1,4 +1,4 @@
-import { text, number, boolean, optionsKnob } from '@storybook/addon-knobs'
+import { text, boolean, optionsKnob } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
@@ -16,7 +16,7 @@ storiesOf('Components|DropdownMultiple', module).add('Multi', () => (
                 { value: '5', text: 'さくらんぼ' },
                 { value: '6', text: 'ぶどう' }
             ]}
-            selected={optionsKnob(
+            values={optionsKnob(
                 'selected',
                 {
                     りんご: '1',
@@ -30,8 +30,8 @@ storiesOf('Components|DropdownMultiple', module).add('Multi', () => (
                 { display: 'check' }
             )}
             isError={boolean('isError', false)}
-            width={number('width', 200)}
-            onClickItem={action('text')}
+            width={text('width', '250px')}
+            onChange={action('onChange')}
         />
     </div>
 ))

@@ -8,11 +8,11 @@ import 'jest-styled-components'
 
 describe('Dropdown(Multi)コンポーネントのテスト', () => {
     let wrapper: Enzyme.ReactWrapper
-    let mockOnClickItem: jest.Mock
+    let mockOnChange: jest.Mock
     let items: ItemList.Item[]
 
     beforeEach(() => {
-        mockOnClickItem = jest.fn()
+        mockOnChange = jest.fn()
         items = [
             { value: '1', text: 'りんご' },
             { value: '2', text: 'いちご' },
@@ -26,10 +26,10 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
                 <DropdownMultiple.Component
                     placeholder="placeholder"
                     items={items}
-                    selected={[]}
+                    values={[]}
                     isError={false}
-                    width={200}
-                    onClickItem={mockOnClickItem}
+                    width="250px"
+                    onChange={mockOnChange}
                 />
             )
         })
@@ -40,15 +40,15 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
     })
 
     it('StateのisVisibleによってul要素が見え隠れする', () => {
-        expect(wrapper.find('ul[data-test="itemList"].hide')).toHaveLength(1)
+        expect(wrapper.find('ul[data-test="itemList"]')).toHaveStyleRule(
+            'visibility',
+            'hidden'
+        )
         wrapper.find('div[data-test="body"]').simulate('click')
-        expect(wrapper.find('ul[data-test="itemList"].hide')).toHaveLength(0)
-
-        const itemListEl = wrapper.find('ul[data-test="itemList"]')
-        expect(itemListEl).toHaveStyleRule('visibility', 'visible')
-        expect(itemListEl).toHaveStyleRule('visibility', 'hidden', {
-            modifier: '&.hide'
-        })
+        expect(wrapper.find('ul[data-test="itemList"]')).toHaveStyleRule(
+            'visibility',
+            'visible'
+        )
     })
 
     it('StateのisVisibleがtrueの時、borderが緑になっている', () => {
@@ -64,10 +64,10 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
             <DropdownMultiple.Component
                 placeholder="placeholder"
                 items={items}
-                selected={[]}
+                values={[]}
                 isError={true}
-                width={200}
-                onClickItem={mockOnClickItem}
+                width="250px"
+                onChange={mockOnChange}
             />
         )
         expect(wrapper.find('div[data-test="body"]')).toHaveStyleRule(
@@ -81,10 +81,10 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
             <DropdownMultiple.Component
                 placeholder="placeholder"
                 items={items}
-                selected={[]}
+                values={[]}
                 isError={true}
-                width={200}
-                onClickItem={mockOnClickItem}
+                width="250px"
+                onChange={mockOnChange}
             />
         )
         expect(wrapper.find('div[data-test="text"]').text()).toBe('placeholder')
@@ -95,10 +95,10 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
             <DropdownMultiple.Component
                 placeholder="placeholder"
                 items={items}
-                selected={['1', '2']}
+                values={['1', '2']}
                 isError={true}
-                width={200}
-                onClickItem={mockOnClickItem}
+                width="250px"
+                onChange={mockOnChange}
             />
         )
         expect(wrapper.find('div[data-test="text"]').text()).toBe(
@@ -113,7 +113,7 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
                 .find('li')
                 .first()
                 .simulate('click')
-            expect(mockOnClickItem).toHaveBeenCalled()
+            expect(mockOnChange).toHaveBeenCalled()
         })
     })
 })

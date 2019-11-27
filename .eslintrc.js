@@ -7,6 +7,10 @@ module.exports = {
     "eslint-plugin-import",
     "jest"
   ],
+  globals: {
+    document: true,
+    window: true
+  },
   parserOptions: {
     ecmaVersion: 2017,
     eecmaFeatures: {
