@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
+import * as ReactDropzone from 'react-dropzone'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
@@ -14,148 +15,77 @@ const iconSize = '24px'
  */
 
 type Props = {
-    onChange: (file: File) => void
-    onClick: (e: React.MouseEvent) => void
-    onDragOver: (file: File) => void
-    onDrop: (file: File) => void
+    onChange?: (file: File) => void
+    fileName: string | null
     accept?: string
+    width?: string
+    className?: string
 }
 
 /**
  * Component
  */
 
-const onFileDragOver = (
-    setSrc: (value: File | null) => void,
-    onDragOver: (file: File) => void
-) => (e: React.DragEvent) => {
-    const file = e.dataTransfer.files.item(0)
-    setSrc(file)
-    if (file) {
-        onDragOver(file)
-    }
-}
+export const Component = React.memo<Props>(props => {
+    const onDrop = React.useCallback(
+        (files: File[]) => {
+            const file = files[0]
+            if (!file) return
 
-const onFileDrop = (
-    setSrc: (value: File | null) => void,
-    onDrop: (file: File) => void
-) => (e: React.DragEvent) => {
-    const file = e.dataTransfer.files.item(0)
-    setSrc(file)
-    if (file) {
-        onDrop(file)
-    }
-}
+            props.onChange && props.onChange(file)
+        },
+        [props.onChange]
+    )
+    const dropzone = ReactDropzone.useDropzone({ onDrop, accept: props.accept })
 
-const handleChange = (
-    setSrc: (value: File | null) => void,
-    onChange: (file: File) => void
-) => (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-        const file = e.target.files.item(0)
-        setSrc(file)
-        if (file) {
-            onChange(file)
-        }
-    }
-}
-
-export const Component = React.memo<Props>(
-    ({ onChange, onDragOver, onDrop, accept, onClick }) => {
-        const [src, setSrc] = React.useState<File | null>(null)
-        const ref = React.useRef<HTMLInputElement>(null)
-
-        const fileInput = () => {
-            return (
-                <Input
-                    onChange={handleChange(setSrc, onChange)}
-                    type="file"
-                    id="file"
-                    ref={ref}
-                    accept={accept}
-                    onClick={onClick}
-                />
-            )
-        }
-
-        /* istanbul ignore next */
-        React.useEffect(() => {
-            if (ref.current) {
-                ref.current.addEventListener('dragover', function(e) {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    onFileDragOver(setSrc, onDragOver)(e as any)
-                })
-                ref.current.addEventListener('drop', function(e) {
-                    e.preventDefault()
-                    e.stopPropagation()
-                    onFileDrop(setSrc, onDrop)(e as any)
-                })
-            }
-            return () => {
-                if (ref.current) {
-                    ref.current.removeEventListener('dragover', function(e) {
-                        e.preventDefault()
-                        e.stopPropagation()
-                        onFileDragOver(setSrc, onDragOver)(e as any)
-                    })
-                    ref.current.removeEventListener('drop', function(e) {
-                        e.preventDefault()
-                        e.stopPropagation()
-                        onFileDrop(setSrc, onDrop)(e as any)
-                    })
-                }
-            }
-        }, [setSrc])
-
-        if (src) {
-            return (
-                <Label htmlFor="file">
-                    <FileBox ref={ref} className="attach" data-test="attach">
-                        {fileInput()}
-                        <FileItems>
+    return (
+        <Wrap
+            {...dropzone.getRootProps({
+                width: props.width,
+                className: props.className
+            })}
+        >
+            <FileBox>
+                <Input {...dropzone.getInputProps()} />
+                <FileItems>
+                    {props.fileName ? (
+                        <>
                             <FileIcon
                                 svg={IconFiles.icons.Attachment}
                                 size={iconSize}
                             />
-                            <FileLabel>{src.name}</FileLabel>
-                        </FileItems>
-                    </FileBox>
-                </Label>
-            )
-        }
-        return (
-            <Label htmlFor="file">
-                <FileBox ref={ref}>
-                    {fileInput()}
-                    <FileItems>
-                        <FileIcon
-                            svg={IconFiles.icons.Dragdrop}
-                            size={iconSize}
-                        />
-                        <FileLabel>
-                            ファイルを選択またはドラッグ&amp;ドロップ
-                        </FileLabel>
-                    </FileItems>
-                </FileBox>
-            </Label>
-        )
-    }
-)
+                            <FileLabel>{props.fileName}</FileLabel>
+                        </>
+                    ) : (
+                        <>
+                            <FileIcon
+                                svg={IconFiles.icons.Dragdrop}
+                                size={iconSize}
+                            />
+                            <FileLabel>
+                                ファイルを選択またはドラッグ&ドロップ
+                            </FileLabel>
+                        </>
+                    )}
+                </FileItems>
+            </FileBox>
+        </Wrap>
+    )
+})
 
 /**
  * Styles
  */
-const Label = styled.label``
+const Wrap = styled.div<{ width?: string }>`
+    width: ${props => (props.width ? props.width : '100%')};
+`
 const FileBox = styled.div`
     cursor: pointer;
     text-align: center;
-    width: 324px;
     height: 40px;
     padding: 0 24px;
     border-radius: 6px;
     border: 1px dashed ${props => props.theme.colors.primary.default};
-    border-width: bold;
     &.attach {
         border: 1px solid ${props => props.theme.colors.primary.default};
     }

@@ -29,8 +29,8 @@
   "dependencies": {
     "@types/react": "^16.8.23",
     "@types/styled-components": "4.1.18",
-    "global": "^4.4.0",
     "react": "^16.8.6",
+    "react-dropzone": "^10.2.1",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {

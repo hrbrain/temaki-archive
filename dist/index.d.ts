@@ -202,9 +202,9 @@ export declare const MeatballMenu: import("react").NamedExoticComponent<{
 }>;
 export declare type MeatballMenuItem = _MeatballMenu.Item;
 export declare const FileUploader: import("react").NamedExoticComponent<{
-    onChange: (file: File) => void;
-    onClick: (e: import("react").MouseEvent<Element, MouseEvent>) => void;
-    onDragOver: (file: File) => void;
-    onDrop: (file: File) => void;
+    onChange?: ((file: File) => void) | undefined;
+    fileName: string | null;
     accept?: string | undefined;
+    width?: string | undefined;
+    className?: string | undefined;
 }>;
