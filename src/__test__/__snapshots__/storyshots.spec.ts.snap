@@ -2338,42 +2338,113 @@ exports[`Storyshots basics|Icons index 1`] = `
 
 exports[`Storyshots components|FileUploader all 1`] = `
 <div
-  className="m-10"
+  className="m-16"
 >
-  <label
-    className="sc-jKJlTe loXQau"
-    htmlFor="file"
-  >
+  <div>
     <div
-      className="sc-eNQAEJ lnouVj"
+      className="sc-jKJlTe gbMivN"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={0}
+      width="400px"
     >
-      <input
-        className="sc-iAyFgw ebsiN"
-        id="file"
-        onChange={[Function]}
-        onClick={[Function]}
-        type="file"
-      />
       <div
-        className="sc-hMqMXs iCTOLy"
+        className="sc-eNQAEJ dOdrGD"
       >
-        <div
-          className="sc-kEYyzF bHkOHB sc-bxivhb hBuNrQ"
-          dangerouslySetInnerHTML={
+        <input
+          autoComplete="off"
+          className="sc-iAyFgw ebsiN"
+          multiple={true}
+          onChange={[Function]}
+          onClick={[Function]}
+          style={
             Object {
-              "__html": undefined,
+              "display": "none",
             }
           }
-          size="24px"
+          tabIndex={-1}
+          type="file"
         />
-        <span
-          className="sc-kkGfuU gXGKTJ"
+        <div
+          className="sc-hMqMXs iCTOLy"
         >
-          ファイルを選択またはドラッグ&ドロップ
-        </span>
+          <div
+            className="sc-kEYyzF bHkOHB sc-bxivhb hBuNrQ"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+          <span
+            className="sc-kkGfuU gXGKTJ"
+          >
+            ファイルを選択またはドラッグ&ドロップ
+          </span>
+        </div>
       </div>
     </div>
-  </label>
+  </div>
+  <div
+    className="mt-8"
+  >
+    <div
+      className="sc-jKJlTe dbRGaQ"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={0}
+    >
+      <div
+        className="sc-eNQAEJ dOdrGD"
+      >
+        <input
+          autoComplete="off"
+          className="sc-iAyFgw ebsiN"
+          multiple={true}
+          onChange={[Function]}
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          tabIndex={-1}
+          type="file"
+        />
+        <div
+          className="sc-hMqMXs iCTOLy"
+        >
+          <div
+            className="sc-kEYyzF bHkOHB sc-bxivhb hBuNrQ"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+          <span
+            className="sc-kkGfuU gXGKTJ"
+          >
+            hoge.png
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
