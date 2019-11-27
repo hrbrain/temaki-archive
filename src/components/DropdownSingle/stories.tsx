@@ -1,4 +1,4 @@
-import { text, number, select, boolean } from '@storybook/addon-knobs'
+import { text, select, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
@@ -20,7 +20,7 @@ storiesOf('Components|DropdownSingle', module)
                     { value: '5', text: 'さくらんぼ' },
                     { value: '6', text: 'ぶどう' }
                 ]}
-                selected={select(
+                value={select(
                     'selected',
                     {
                         未選択時: '',
@@ -34,8 +34,8 @@ storiesOf('Components|DropdownSingle', module)
                     ''
                 )}
                 isError={boolean('isError', false)}
-                width={number('width', 200)}
-                onClickItem={action('text')}
+                width={text('width', '200px')}
+                onChange={action('onChange')}
             />
         </div>
     ))
@@ -50,7 +50,7 @@ storiesOf('Components|DropdownSingle', module)
                         { value: '50', text: '50' },
                         { value: '100', text: '100' }
                     ]}
-                    selected={select(
+                    value={select(
                         'selected',
                         {
                             '20': '20',
@@ -60,8 +60,8 @@ storiesOf('Components|DropdownSingle', module)
                         '20'
                     )}
                     isError={boolean('isError', false)}
-                    width={number('width', 76)}
-                    onClickItem={action('text')}
+                    width={text('width', '250px')}
+                    onChange={action('text')}
                 />
             </div>
         )
@@ -79,7 +79,7 @@ storiesOf('Components|DropdownSingle', module)
                         { value: '5', text: 'さくらんぼ' },
                         { value: '6', text: 'ぶどう' }
                     ]}
-                    selected={select(
+                    value={select(
                         'selected',
                         {
                             未選択時: '',
@@ -94,7 +94,6 @@ storiesOf('Components|DropdownSingle', module)
                     )}
                     onClickItem={action('text')}
                     isVisible={boolean('isVisible', false)}
-                    width={number('width', 200)}
                 />
             </div>
         )

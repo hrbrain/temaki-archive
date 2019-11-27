@@ -4,19 +4,16 @@ import * as ItemList from './ItemList';
  * Component
  */
 export declare type Item = ItemList.Item;
-export declare const designType: {
-    default: "default";
-    borderless: "borderless";
-};
 declare type Props = {
-    placeholder: string;
     items: ItemList.Item[];
-    selected: ItemList.Value;
-    isError: boolean;
-    width: number;
-    onClickItem: (value: ItemList.Value) => void;
-    type: typeof designType.default | typeof designType.borderless;
+    value: ItemList.Value;
+    type: 'default' | 'borderless';
+    onChange: (value: ItemList.Value) => void;
+    placeholder?: string;
+    isError?: boolean;
+    width?: string;
     className?: string;
+    defaultExpanded?: boolean;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

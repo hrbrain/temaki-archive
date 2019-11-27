@@ -4,15 +4,13 @@ import * as ItemList from '../ItemList';
  * Component
  */
 declare type Props = {
-    placeholder: string;
     items: ItemList.Item[];
-    selected: ItemList.Value;
-    isError: boolean;
-    width: number;
-    onClickItem: (value: ItemList.Value) => void;
-    isVisible: boolean;
-    handleClick: () => void;
-    showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value, placeholder: string) => string;
+    value: ItemList.Value;
+    onClick: () => void;
+    onClickMenuItem: (index: string) => void;
+    isError?: boolean;
+    isMenuVisible?: boolean;
+    showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value) => string;
     className?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;

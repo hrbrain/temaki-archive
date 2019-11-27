@@ -93,7 +93,6 @@ type BodyType = {
 const Body = styled.div<BodyType>`
     position: relative;
     ${props => (props.width ? `width: ${props.width};` : '')}
-    max-width: 262px;
     display: flex;
     padding: 12px;
     border: 1px solid

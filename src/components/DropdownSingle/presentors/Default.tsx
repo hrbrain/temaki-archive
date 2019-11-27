@@ -5,57 +5,48 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ItemList from '../ItemList'
 
-/**
+/*
  * Component
  */
 type Props = {
-    placeholder: string
     items: ItemList.Item[]
-    selected: ItemList.Value
-    isError: boolean
-    width: number
-    onClickItem: (value: ItemList.Value) => void
-    isVisible: boolean
-    handleClick: () => void
+    value: ItemList.Value
+    onClick: () => void
+    onClickMenuItem: (value: ItemList.Value) => void
+    isError?: boolean
+    isMenuVisible: boolean
     showTextBySelected: (
         items: ItemList.Item[],
-        selected: ItemList.Value,
-        placeholder: string
+        selected: ItemList.Value
     ) => string
+    width?: string
     className?: string
 }
-
 export const Component = React.memo<Props>(props => {
     return (
-        <div className={props.className}>
+        <Wrap width={props.width} className={props.className}>
             <Body
                 data-test="body"
-                isVisible={props.isVisible}
+                isMenuVisible={props.isMenuVisible}
                 isError={props.isError}
-                onClick={props.handleClick}
-                width={props.width}
+                onClick={props.onClick}
             >
-                <Text data-test="text" width={props.width}>
-                    {props.showTextBySelected(
-                        props.items,
-                        props.selected,
-                        props.placeholder
-                    )}
+                <Text data-test="text">
+                    {props.showTextBySelected(props.items, props.value)}
                 </Text>
                 <DropDownIcon
-                    className={props.isVisible ? 'visible' : ''}
+                    className={props.isMenuVisible ? 'visible' : ''}
                     svg={IconFiles.icons.DropdownOff}
                     size="24px"
                 />
             </Body>
             <StyledItemList
+                value={props.value}
+                onClickItem={props.onClickMenuItem}
                 items={props.items}
-                selected={props.selected}
-                onClickItem={props.onClickItem}
-                width={props.width}
-                isVisible={props.isVisible}
+                isVisible={props.isMenuVisible}
             />
-        </div>
+        </Wrap>
     )
 })
 
@@ -63,20 +54,9 @@ export const Component = React.memo<Props>(props => {
  * Styles
  */
 
-const StyledItemList = styled(ItemList.Component)<{ width: number }>`
-    position: absolute;
-    margin-top: 4px;
-    visibility: visible;
-    transform: scaley(1);
-    transform-origin: top;
-    transition: 0.2s;
-    &:last-child {
-        padding-bottom: 12px;
-    }
-    &.hide {
-        visibility: hidden;
-        transform: scaley(0);
-    }
+const Wrap = styled.div<{ width?: string }>`
+    position: relative;
+    width: ${props => props.width || '100%'};
 `
 
 const DropDownIcon = styled(Icon.Component)`
@@ -91,26 +71,23 @@ const DropDownIcon = styled(Icon.Component)`
 `
 
 type BodyType = {
-    isVisible: boolean
-    isError: boolean
-    width: number
+    isMenuVisible?: boolean
+    isError?: boolean
 }
 
 const Body = styled.div<BodyType>`
-    position: relative;
-    width: ${props => props.width}px;
-    max-width: 262px;
+    min-height: 40px;
     display: flex;
-    padding: 12px;
+    padding: 8px 12px;
     border: 1px solid
         ${props => {
             if (props.isError) {
                 return props.theme.colors.utilities.red.default
-            } else if (props.isVisible) {
-                return props.theme.colors.utilities.highlightGreen.default
-            } else {
-                return props.theme.colors.grayScale.S10
             }
+            if (props.isMenuVisible) {
+                return props.theme.colors.utilities.highlightGreen.default
+            }
+            return props.theme.colors.grayScale.S10
         }};
     border-radius: 6px;
     user-select: none;
@@ -118,8 +95,20 @@ const Body = styled.div<BodyType>`
     cursor: pointer;
 `
 
-const Text = styled.div<{ width: number }>`
+const Text = styled.div`
     padding-right: 4px;
-    width: ${props => props.width - 52}px;
-    max-width: 210px;
+`
+
+const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`
+    transform-origin: top;
+    ${props =>
+        props.isVisible
+            ? `
+        visibility: visible;
+        transform: scaleY(1);
+    `
+            : `
+        visibility: hidden;
+        transform: scaleY(0);
+    `}
 `

@@ -91,13 +91,13 @@ Component.displayName = 'DropdownSingle'
 
 const Wrap = styled.div<{ width?: string }>`
     position: relative;
-    ${props => props.width && `width: ${props.width};`}
+    width: ${props => props.width || '100%'};
 `
 
 const StyledItemList = styled(ItemList.Component)<{ isVisible?: boolean }>`
     width: 100%;
     position: absolute;
-    left: 0;
+    right: 0;
     margin-top: 4px;
     transform-origin: top;
     transition: 0.2s;
