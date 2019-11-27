@@ -37,7 +37,12 @@ export const Component = React.memo<Props>(props => {
         case designType.borderless:
             return (
                 <Borderless.Component
-                    {...props}
+                    placeholder={props.placeholder}
+                    items={props.items}
+                    selected={props.selected}
+                    isError={props.isError}
+                    width={props.width}
+                    onClickItem={props.onClickItem}
                     isVisible={isVisible}
                     handleClick={handleClick}
                     showTextBySelected={showTextBySelected}
@@ -46,7 +51,12 @@ export const Component = React.memo<Props>(props => {
         case designType.default:
             return (
                 <Default.Component
-                    {...props}
+                    placeholder={props.placeholder}
+                    items={props.items}
+                    selected={props.selected}
+                    isError={props.isError}
+                    width={props.width}
+                    onClickItem={props.onClickItem}
                     isVisible={isVisible}
                     handleClick={handleClick}
                     showTextBySelected={showTextBySelected}
