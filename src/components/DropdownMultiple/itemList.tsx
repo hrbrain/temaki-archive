@@ -10,26 +10,25 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     items: Item[]
-    selected: Value[]
+    values: Value[]
     onClickItem: (value: Value) => void
     className?: string
-    isVisible: boolean
-    width: number
+    isVisible?: boolean
 }
 
-export const Component = React.memo<Props>(
-    ({ items, selected, onClickItem, className, isVisible, width }) => {
-        return (
-            <ItemList
-                data-test="itemList"
-                className={`${className} ${isVisible ? '' : 'hide'}`}
-                width={width}
-            >
-                {items.map(renderItem(selected, onClickItem))}
-            </ItemList>
-        )
-    }
-)
+export const Component = React.memo<Props>(props => {
+    return (
+        <ItemList
+            data-test="itemList"
+            className={props.className}
+            isVisible={props.isVisible}
+        >
+            <ListInner>
+                {props.items.map(renderItem(props.values, props.onClickItem))}
+            </ListInner>
+        </ItemList>
+    )
+})
 
 const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
     item: Item,
@@ -67,7 +66,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
     }, [props.onClickItem, props.item])
 
     return (
-        <Item onClick={handleClick}>
+        <ListItem onClick={handleClick}>
             <Icon.Component
                 svg={
                     props.selected.indexOf(props.item.value) >= 0
@@ -77,7 +76,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
                 size="24px"
             />
             <Text>{props.item.text}</Text>
-        </Item>
+        </ListItem>
     )
 })
 
@@ -85,25 +84,31 @@ const ItemComponent = React.memo<ItemProps>(props => {
  * Styles
  */
 
-const ItemList = styled.ul<{ width: number }>`
+const ItemList = styled.ul<{ isVisible?: boolean }>`
+    display: block;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
-    width: ${props => props.width}px;
     max-width: 262px;
     max-height: 204px;
     overflow: auto;
 `
 
-const Item = styled.li`
+const ListInner = styled.div`
+    padding: 12px;
+`
+
+const ListItem = styled.li`
     list-style-type: none;
-    padding: 12px 12px 0 12px;
     user-select: none;
     font-size: 14px;
     display: flex;
     cursor: pointer;
     &:hover {
         color: ${props => props.theme.colors.primary.N60};
+    }
+    & + & {
+        margin-top: 12px;
     }
 `
 

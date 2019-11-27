@@ -186,12 +186,13 @@ export declare const DropdownSingle: import("react").NamedExoticComponent<{
 }>;
 export declare type DropdownSingleItem = _DropdownSingleItem;
 export declare const DropdownMultiple: import("react").NamedExoticComponent<{
-    placeholder: string;
     items: import("./components/DropdownMultiple/itemList").Item[];
-    selected: string[];
-    isError: boolean;
-    width: number;
-    onClickItem: (value: string) => void;
+    values: string[];
+    onChange: (value: string[]) => void;
+    width?: string | undefined;
+    placeholder?: string | undefined;
+    isError?: boolean | undefined;
+    defaultExpanded?: boolean | undefined;
     className?: string | undefined;
 }>;
 export declare type DropdownMultipleItem = _DropdownMultipleItem;

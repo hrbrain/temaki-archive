@@ -10,68 +10,64 @@ import * as ItemList from './itemList'
  */
 
 type Props = {
-    placeholder: string
     items: ItemList.Item[]
-    selected: ItemList.Value[]
-    isError: boolean
-    width: number
-    isVisible: boolean
-    handleClick?: () => void
+    values: ItemList.Value[]
+    onClick: () => void
+    placeholder?: string
+    isError?: boolean
+    width?: string
+    isMenuVisible?: boolean
 }
 
-export const Component = React.memo<Props>(
-    ({
-        placeholder,
-        items,
-        selected,
-        isError,
-        width,
-        isVisible,
-        handleClick
-    }) => {
-        return (
-            <Body
-                data-test="body"
-                isVisible={isVisible}
-                isError={isError}
-                onClick={handleClick}
-                width={width}
-                selected={selected}
-            >
-                <Text data-test="text" width={width}>
-                    {showTextBySelected(items, selected, placeholder)}
-                </Text>
-                <DropDownIcon
-                    className={isVisible ? 'visible' : ''}
-                    svg={IconFiles.icons.DropdownOff}
-                    size="24px"
-                />
-            </Body>
-        )
-    }
-)
+export const Component = React.memo<Props>(props => {
+    return (
+        <Body
+            data-test="body"
+            onClick={props.onClick}
+            isMenuVisible={props.isMenuVisible}
+            isError={props.isError}
+            width={props.width}
+        >
+            <Text data-test="text">
+                {showTextBySelected(
+                    props.items,
+                    props.values,
+                    props.placeholder
+                )}
+            </Text>
+            <DropDownIcon
+                className={props.isMenuVisible ? 'visible' : ''}
+                svg={IconFiles.icons.DropdownOff}
+                size="24px"
+            />
+        </Body>
+    )
+})
 
 const showTextBySelected = (
     items: ItemList.Item[],
-    selected: ItemList.Value[],
-    placeholder: string
-): JSX.Element[] | string => {
-    if (selected.length <= 0) {
-        return placeholder
+    values: ItemList.Value[],
+    placeholder?: string
+): React.ReactElement | string => {
+    if (values.length <= 0) {
+        return placeholder || ''
     }
-    return selected.map((value, index) => {
-        return renderText(value, index, items)
-    })
+    return (
+        <>
+            {values.map((value, index) => {
+                return renderText(value, index, items)
+            })}
+        </>
+    )
 }
 
 const renderText = (value: string, key: number, items: ItemList.Item[]) => {
     const item = items.find(item => item.value === value)
-    if (item) {
-        return <InnerText key={key}>{item.text}</InnerText>
+
+    if (!item) {
+        return ''
     }
-    throw new Error(
-        `Invalid value. Could not find an item with the value ${value}`
-    )
+    return <InnerText key={key}>{item.text}</InnerText>
 }
 
 /**
@@ -90,28 +86,25 @@ const DropDownIcon = styled(Icon.Component)`
 `
 
 type BodyType = {
-    isVisible: boolean
-    isError: boolean
-    width: number
-    selected: ItemList.Value[]
+    isMenuVisible?: boolean
+    isError?: boolean
+    width?: string
 }
-
 const Body = styled.div<BodyType>`
     position: relative;
-    width: ${props => props.width}px;
+    ${props => (props.width ? `width: ${props.width};` : '')}
     max-width: 262px;
     display: flex;
     padding: 12px;
-    padding-bottom: ${props => (props.selected.length > 0 ? 8 : 12)}px;
     border: 1px solid
         ${props => {
             if (props.isError) {
                 return props.theme.colors.utilities.red.default
-            } else if (props.isVisible) {
-                return props.theme.colors.utilities.highlightGreen.default
-            } else {
-                return props.theme.colors.grayScale.S10
             }
+            if (props.isMenuVisible) {
+                return props.theme.colors.utilities.highlightGreen.default
+            }
+            return props.theme.colors.grayScale.S10
         }};
     border-radius: 6px;
     user-select: none;
@@ -119,10 +112,8 @@ const Body = styled.div<BodyType>`
     cursor: pointer;
 `
 
-const Text = styled.div<{ width: number }>`
+const Text = styled.div`
     padding-right: 4px;
-    width: ${props => props.width - 52}px;
-    max-width: 210px;
 `
 
 const InnerText = styled.div`

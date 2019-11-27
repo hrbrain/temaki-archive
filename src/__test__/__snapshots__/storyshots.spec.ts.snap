@@ -954,155 +954,221 @@ exports[`Storyshots Components|Checkbox all 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components|Datepicker Standard 1`] = `
+<div
+  className="sc-gZMcBi bjbYLz"
+  width="100%"
+>
+  <div
+    className="SingleDatePicker SingleDatePicker_1"
+  >
+    <div>
+      <div
+        className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2"
+      >
+        <button
+          className="SingleDatePickerInput_calendarIcon SingleDatePickerInput_calendarIcon_1"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <div
+            className="sc-bxivhb hBuNrQ"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+        </button>
+        <div
+          className="DateInput DateInput_1"
+        >
+          <input
+            aria-describedby="DateInput__screen-reader-message-date"
+            aria-label="Date"
+            autoComplete="off"
+            className="DateInput_input DateInput_input_1"
+            disabled={false}
+            id="date"
+            name="date"
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Date"
+            readOnly={false}
+            required={false}
+            type="text"
+            value="2019年12月2日"
+          />
+          <p
+            className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+            id="DateInput__screen-reader-message-date"
+          >
+            Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
 <div
   className="ml-20 mt-10"
 >
-  <div>
-    <div
-      className="sc-gZMcBi bQuQoO"
-      data-test="body"
-      onClick={[Function]}
-      selected={Array []}
-      width={200}
-    >
+  <div
+    className="sc-kgoBCf fnTZvO"
+    width="250px"
+  >
+    <div>
       <div
-        className="sc-gqjmRU jBAKkK"
-        data-test="text"
-        width={200}
+        className="sc-VigVT lalAZS"
+        data-test="body"
+        onClick={[Function]}
       >
-        選択してください
+        <div
+          className="sc-jTzLTM tXdjR"
+          data-test="text"
+        >
+          選択してください
+        </div>
+        <div
+          className="sc-gqjmRU iwwarc sc-bxivhb hBuNrQ"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          size="24px"
+        />
       </div>
-      <div
-        className="sc-iwsKbI iadtKx sc-bxivhb hBuNrQ"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
-        }
-        size="24px"
-      />
+      <ul
+        className="sc-kGXeez ldMDdW sc-jzJRlG kPtnnj"
+        data-test="itemList"
+      >
+        <div
+          className="sc-cSHVUG bNhYux"
+        >
+          <li
+            className="sc-kAzzGY cqHdAW"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb hBuNrQ"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24px"
+            />
+            <div
+              className="sc-chPdSV hiFYXY"
+            >
+              りんご
+            </div>
+          </li>
+          <li
+            className="sc-kAzzGY cqHdAW"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb hBuNrQ"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24px"
+            />
+            <div
+              className="sc-chPdSV hiFYXY"
+            >
+              いちご
+            </div>
+          </li>
+          <li
+            className="sc-kAzzGY cqHdAW"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb hBuNrQ"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24px"
+            />
+            <div
+              className="sc-chPdSV hiFYXY"
+            >
+              バナナ
+            </div>
+          </li>
+          <li
+            className="sc-kAzzGY cqHdAW"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb hBuNrQ"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24px"
+            />
+            <div
+              className="sc-chPdSV hiFYXY"
+            >
+              メロン
+            </div>
+          </li>
+          <li
+            className="sc-kAzzGY cqHdAW"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb hBuNrQ"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24px"
+            />
+            <div
+              className="sc-chPdSV hiFYXY"
+            >
+              さくらんぼ
+            </div>
+          </li>
+          <li
+            className="sc-kAzzGY cqHdAW"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb hBuNrQ"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24px"
+            />
+            <div
+              className="sc-chPdSV hiFYXY"
+            >
+              ぶどう
+            </div>
+          </li>
+        </div>
+      </ul>
     </div>
-    <ul
-      className="sc-cSHVUG bKhTjk hide sc-jTzLTM dhmccs"
-      data-test="itemList"
-      width={200}
-    >
-      <li
-        className="sc-fjdhpX ghSumG"
-        onClick={[Function]}
-      >
-        <div
-          className="sc-bxivhb hBuNrQ"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
-        <div
-          className="sc-jzJRlG jlBakv"
-        >
-          りんご
-        </div>
-      </li>
-      <li
-        className="sc-fjdhpX ghSumG"
-        onClick={[Function]}
-      >
-        <div
-          className="sc-bxivhb hBuNrQ"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
-        <div
-          className="sc-jzJRlG jlBakv"
-        >
-          いちご
-        </div>
-      </li>
-      <li
-        className="sc-fjdhpX ghSumG"
-        onClick={[Function]}
-      >
-        <div
-          className="sc-bxivhb hBuNrQ"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
-        <div
-          className="sc-jzJRlG jlBakv"
-        >
-          バナナ
-        </div>
-      </li>
-      <li
-        className="sc-fjdhpX ghSumG"
-        onClick={[Function]}
-      >
-        <div
-          className="sc-bxivhb hBuNrQ"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
-        <div
-          className="sc-jzJRlG jlBakv"
-        >
-          メロン
-        </div>
-      </li>
-      <li
-        className="sc-fjdhpX ghSumG"
-        onClick={[Function]}
-      >
-        <div
-          className="sc-bxivhb hBuNrQ"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
-        <div
-          className="sc-jzJRlG jlBakv"
-        >
-          さくらんぼ
-        </div>
-      </li>
-      <li
-        className="sc-fjdhpX ghSumG"
-        onClick={[Function]}
-      >
-        <div
-          className="sc-bxivhb hBuNrQ"
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
-        <div
-          className="sc-jzJRlG jlBakv"
-        >
-          ぶどう
-        </div>
-      </li>
-    </ul>
   </div>
 </div>
 `;
@@ -1113,20 +1179,20 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
 >
   <div>
     <div
-      className="sc-hMqMXs jkGnZg"
+      className="sc-hSdWYo bQsCvY"
       data-test="body"
       onClick={[Function]}
       width={76}
     >
       <div
-        className="sc-kEYyzF hkAVwD"
+        className="sc-eHgmQL eeGwbk"
         data-test="text"
         width={76}
       >
         20
       </div>
       <div
-        className="sc-eNQAEJ iyxjRs sc-bxivhb hBuNrQ"
+        className="sc-iAyFgw dXnAgJ sc-bxivhb hBuNrQ"
         dangerouslySetInnerHTML={
           Object {
             "__html": undefined,
@@ -1136,12 +1202,12 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
       />
     </div>
     <ul
-      className="sc-jKJlTe bRNcAf hide sc-kAzzGY srheI"
+      className="sc-kkGfuU fWNAPx hide sc-kpOJdX fjOgYe"
       data-test="itemList"
       width={76}
     >
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1155,13 +1221,13 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           20
         </div>
       </li>
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1175,13 +1241,13 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           50
         </div>
       </li>
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1195,7 +1261,7 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           100
         </div>
@@ -1211,20 +1277,20 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
 >
   <div>
     <div
-      className="sc-dxgOiQ fSkOkY"
+      className="sc-hMqMXs jmQXHC"
       data-test="body"
       onClick={[Function]}
       width={200}
     >
       <div
-        className="sc-ckVGcZ ciWCBT"
+        className="sc-kEYyzF dqtUsb"
         data-test="text"
         width={200}
       >
         選択してください
       </div>
       <div
-        className="sc-kpOJdX fXodhL sc-bxivhb hBuNrQ"
+        className="sc-eNQAEJ iyxjRs sc-bxivhb hBuNrQ"
         dangerouslySetInnerHTML={
           Object {
             "__html": undefined,
@@ -1234,12 +1300,12 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
       />
     </div>
     <ul
-      className="sc-kGXeez cyOnNn hide sc-kAzzGY frJuer"
+      className="sc-jKJlTe bRNcAf hide sc-kpOJdX cSCaXr"
       data-test="itemList"
       width={200}
     >
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1253,13 +1319,13 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           
         </div>
       </li>
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1273,13 +1339,13 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           りんご
         </div>
       </li>
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1293,13 +1359,13 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           いちご
         </div>
       </li>
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1313,13 +1379,13 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           バナナ
         </div>
       </li>
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1333,13 +1399,13 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           メロン
         </div>
       </li>
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1353,13 +1419,13 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           さくらんぼ
         </div>
       </li>
       <li
-        className="sc-chPdSV cBcGdu"
+        className="sc-dxgOiQ iyQinw"
         onClick={[Function]}
       >
         <div
@@ -1373,7 +1439,7 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           size="24px"
         />
         <div
-          className="sc-kgoBCf cSfjXi"
+          className="sc-ckVGcZ dgtuws"
         >
           ぶどう
         </div>
@@ -1388,12 +1454,12 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
   className="ml-20 mt-10"
 >
   <ul
-    className="undefined hide sc-kAzzGY frJuer"
+    className="undefined hide sc-kpOJdX cSCaXr"
     data-test="itemList"
     width={200}
   >
     <li
-      className="sc-chPdSV cBcGdu"
+      className="sc-dxgOiQ iyQinw"
       onClick={[Function]}
     >
       <div
@@ -1407,13 +1473,13 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
         size="24px"
       />
       <div
-        className="sc-kgoBCf cSfjXi"
+        className="sc-ckVGcZ dgtuws"
       >
         
       </div>
     </li>
     <li
-      className="sc-chPdSV cBcGdu"
+      className="sc-dxgOiQ iyQinw"
       onClick={[Function]}
     >
       <div
@@ -1427,13 +1493,13 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
         size="24px"
       />
       <div
-        className="sc-kgoBCf cSfjXi"
+        className="sc-ckVGcZ dgtuws"
       >
         りんご
       </div>
     </li>
     <li
-      className="sc-chPdSV cBcGdu"
+      className="sc-dxgOiQ iyQinw"
       onClick={[Function]}
     >
       <div
@@ -1447,13 +1513,13 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
         size="24px"
       />
       <div
-        className="sc-kgoBCf cSfjXi"
+        className="sc-ckVGcZ dgtuws"
       >
         いちご
       </div>
     </li>
     <li
-      className="sc-chPdSV cBcGdu"
+      className="sc-dxgOiQ iyQinw"
       onClick={[Function]}
     >
       <div
@@ -1467,13 +1533,13 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
         size="24px"
       />
       <div
-        className="sc-kgoBCf cSfjXi"
+        className="sc-ckVGcZ dgtuws"
       >
         バナナ
       </div>
     </li>
     <li
-      className="sc-chPdSV cBcGdu"
+      className="sc-dxgOiQ iyQinw"
       onClick={[Function]}
     >
       <div
@@ -1487,13 +1553,13 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
         size="24px"
       />
       <div
-        className="sc-kgoBCf cSfjXi"
+        className="sc-ckVGcZ dgtuws"
       >
         メロン
       </div>
     </li>
     <li
-      className="sc-chPdSV cBcGdu"
+      className="sc-dxgOiQ iyQinw"
       onClick={[Function]}
     >
       <div
@@ -1507,13 +1573,13 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
         size="24px"
       />
       <div
-        className="sc-kgoBCf cSfjXi"
+        className="sc-ckVGcZ dgtuws"
       >
         さくらんぼ
       </div>
     </li>
     <li
-      className="sc-chPdSV cBcGdu"
+      className="sc-dxgOiQ iyQinw"
       onClick={[Function]}
     >
       <div
@@ -1527,7 +1593,7 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
         size="24px"
       />
       <div
-        className="sc-kgoBCf cSfjXi"
+        className="sc-ckVGcZ dgtuws"
       >
         ぶどう
       </div>
@@ -1538,10 +1604,10 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <div
-  className="sc-brqgnP SqPLV"
+  className="sc-gPEVay eQYmiW"
 >
   <input
-    className="sc-cMljjf AMxZd"
+    className="sc-iRbamj jnIsHG"
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1553,10 +1619,10 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <div
-  className="sc-brqgnP SqPLV"
+  className="sc-gPEVay eQYmiW"
 >
   <input
-    className="sc-cMljjf AMxZd"
+    className="sc-iRbamj jnIsHG"
     format="text"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1571,16 +1637,16 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   className="mr-10 mt-56"
 >
   <div
-    className="sc-jDwBTQ ktEnXV"
+    className="sc-gipzik iwGAGG"
   >
     <div>
       <div
-        className="top sc-gPEVay hLzFjS"
+        className="top sc-csuQGl edfuWJ"
         data-test="menu-component"
         onClick={[Function]}
       >
         <div
-          className="sc-iRbamj blSEcj sc-bxivhb hBuNrQ"
+          className="sc-Rmtcm gwGgYM sc-bxivhb hBuNrQ"
           dangerouslySetInnerHTML={
             Object {
               "__html": undefined,
@@ -1590,25 +1656,25 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
         />
       </div>
       <ul
-        className="top hidden sc-jlyJG dJNuoi"
+        className="top hidden sc-bRBYWo fjUoYz"
         data-test="list-component"
       >
         <li
-          className="sc-gipzik cytBb"
+          className="sc-hzDkRC dhJiKx"
           data-test="list-item0"
           onClick={[Function]}
         >
           リスト1
         </li>
         <li
-          className="sc-gipzik cytBb"
+          className="sc-hzDkRC dhJiKx"
           data-test="list-item1"
           onClick={[Function]}
         >
           リスト2
         </li>
         <li
-          className="sc-gipzik cytBb"
+          className="sc-hzDkRC dhJiKx"
           data-test="list-item2"
           onClick={[Function]}
         >
@@ -1623,12 +1689,12 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
-  className="sc-csuQGl hpLysS"
+  className="sc-jhAzac hPxccm"
   data-test="radio-on"
   onClick={[Function]}
 >
   <div
-    className="sc-Rmtcm eSYqLF sc-bxivhb hBuNrQ"
+    className="sc-fBuWsC gKaPXn sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1637,7 +1703,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-bRBYWo lfLjFj"
+    className="sc-fMiknA jjTtpu"
   >
     RadioButton
   </span>
@@ -1647,7 +1713,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div
-    className="sc-hzDkRC jkpExv"
+    className="sc-dVhcbM jZSepA"
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -1655,7 +1721,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
-    className="sc-hzDkRC hvsEpk"
+    className="sc-dVhcbM cwEphU"
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -1663,7 +1729,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
-    className="sc-hzDkRC hvsEpk"
+    className="sc-dVhcbM cwEphU"
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -1678,25 +1744,25 @@ exports[`Storyshots Components|Switch all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-jhAzac hZrOiF"
+    className="sc-eqIVtm pyvrD"
     data-test="switch-off"
   >
     <span
-      className="sc-dVhcbM brDywy"
+      className="sc-gisBJw lamecO"
     >
       OFF
     </span>
     <div
-      className="sc-fBuWsC CaWNl"
+      className="sc-fAjcbJ hOxAbQ"
       data-test="switch"
       onClick={[Function]}
     >
       <span
-        className="sc-fMiknA iJVxZF"
+        className="sc-caSCKo viuTe"
       />
     </div>
     <span
-      className="sc-dVhcbM brDywy"
+      className="sc-gisBJw lamecO"
     >
       ON
     </span>
@@ -1706,7 +1772,7 @@ exports[`Storyshots Components|Switch all 1`] = `
 
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-eqIVtm kqsMOR"
+  className="sc-kjoXOD byjLFR"
 >
   Hello
 </p>
@@ -1714,7 +1780,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
-  className="sc-fAjcbJ hcbcFf"
+  className="sc-cHGsZl dSGVCo"
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -1734,11 +1800,11 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-caSCKo kKXPsh"
+    className="sc-TOsTZ jvmFcq"
     data-test="info-toast"
   >
     <div
-      className="sc-kjoXOD iGtuYP sc-bxivhb dUTGrc"
+      className="sc-cJSrbW fHdgxk sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1749,12 +1815,12 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-cHGsZl dUKxpn"
+        className="sc-ksYbfQ kJBFxS"
       >
         ラベル
       </div>
       <div
-        className="sc-TOsTZ kvlFel"
+        className="sc-hmzhuo llJlbL"
       >
         ここにテキスト。
       </div>
@@ -1765,12 +1831,12 @@ exports[`Storyshots Components|Toast all 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-kgAjT exdHDE"
+  className="sc-frDJqD fPelqf"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-cJSrbW dhgyjM"
+    className="sc-kvZOFW krWgkH"
   >
     テキスト要素
   </span>
@@ -2411,7 +2477,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
 >
   <div>
     <div
-      className="sc-kkGfuU iXgUWi"
+      className="sc-cvbbAY ebkrpq"
       onBlur={[Function]}
       onClick={[Function]}
       onDragEnter={[Function]}
@@ -2424,11 +2490,11 @@ exports[`Storyshots components|FileUploader all 1`] = `
       width="400px"
     >
       <div
-        className="sc-iAyFgw kXKIiG"
+        className="sc-jWBwVP iRHJRN"
       >
         <input
           autoComplete="off"
-          className="sc-jWBwVP iKHGiI"
+          className="sc-jDwBTQ cfbsBL"
           multiple={true}
           onChange={[Function]}
           onClick={[Function]}
@@ -2441,10 +2507,10 @@ exports[`Storyshots components|FileUploader all 1`] = `
           type="file"
         />
         <div
-          className="sc-hSdWYo jbDmaG"
+          className="sc-brqgnP boPrLJ"
         >
           <div
-            className="sc-eHgmQL isVdEg sc-bxivhb hBuNrQ"
+            className="sc-cMljjf eQxXcM sc-bxivhb hBuNrQ"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -2453,7 +2519,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-            className="sc-cvbbAY efFO"
+            className="sc-jAaTju gIcWXh"
           >
             ファイルを選択またはドラッグ&ドロップ
           </span>
@@ -2465,7 +2531,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
     className="mt-8"
   >
     <div
-      className="sc-kkGfuU jFtbdp"
+      className="sc-cvbbAY emlktJ"
       onBlur={[Function]}
       onClick={[Function]}
       onDragEnter={[Function]}
@@ -2477,11 +2543,11 @@ exports[`Storyshots components|FileUploader all 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-iAyFgw kXKIiG"
+        className="sc-jWBwVP iRHJRN"
       >
         <input
           autoComplete="off"
-          className="sc-jWBwVP iKHGiI"
+          className="sc-jDwBTQ cfbsBL"
           multiple={true}
           onChange={[Function]}
           onClick={[Function]}
@@ -2494,10 +2560,10 @@ exports[`Storyshots components|FileUploader all 1`] = `
           type="file"
         />
         <div
-          className="sc-hSdWYo jbDmaG"
+          className="sc-brqgnP boPrLJ"
         >
           <div
-            className="sc-eHgmQL isVdEg sc-bxivhb hBuNrQ"
+            className="sc-cMljjf eQxXcM sc-bxivhb hBuNrQ"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -2506,7 +2572,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-            className="sc-cvbbAY efFO"
+            className="sc-jAaTju gIcWXh"
           >
             hoge.png
           </span>

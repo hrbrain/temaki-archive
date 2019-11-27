@@ -5,12 +5,13 @@ import * as ItemList from './itemList';
  */
 export declare type Item = ItemList.Item;
 declare type Props = {
-    placeholder: string;
     items: ItemList.Item[];
-    selected: ItemList.Value[];
-    isError: boolean;
-    width: number;
-    onClickItem: (value: ItemList.Value) => void;
+    values: ItemList.Value[];
+    onChange: (value: ItemList.Value[]) => void;
+    width?: string;
+    placeholder?: string;
+    isError?: boolean;
+    defaultExpanded?: boolean;
     className?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
