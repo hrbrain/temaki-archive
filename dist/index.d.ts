@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="moment" />
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
@@ -211,15 +210,14 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     className?: string | undefined;
 }>;
 export declare const DatePicker: import("react").NamedExoticComponent<{
-    displayFormat: string;
-    numberOfMonths: number;
-    monthFormat: string;
-    onChange: (date: import("moment").Moment | null) => void;
+    displayFormat?: string | undefined;
+    monthFormat?: string | undefined;
+    onChange: (date: Date | null) => void;
+    width: string;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
-    displayFormat: string;
-    numberOfMonths: number;
-    monthFormat: string;
-    onChange: (startDate: import("moment").Moment, endDate: import("moment").Moment) => void;
-    fullWidth?: boolean | undefined;
+    displayFormat?: string | undefined;
+    monthFormat?: string | undefined;
+    onChange: (startDate: Date | null, endDate: Date | null) => void;
+    width: string;
 }>;
