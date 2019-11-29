@@ -4,6 +4,10 @@ import * as ItemList from './ItemList';
  * Component
  */
 export declare type Item = ItemList.Item;
+export declare const designType: {
+    default: "default";
+    borderless: "borderless";
+};
 declare type Props = {
     placeholder: string;
     items: ItemList.Item[];
@@ -11,6 +15,7 @@ declare type Props = {
     isError: boolean;
     width: number;
     onClickItem: (value: ItemList.Value) => void;
+    type: typeof designType.default | typeof designType.borderless;
     className?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;

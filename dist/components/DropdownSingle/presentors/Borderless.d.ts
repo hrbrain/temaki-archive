@@ -13,6 +13,7 @@ declare type Props = {
     isVisible: boolean;
     handleClick: () => void;
     showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value, placeholder: string) => string;
+    className?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
