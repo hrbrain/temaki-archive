@@ -46,6 +46,7 @@ export const Component = React.memo<Props>(props => {
                     isVisible={isVisible}
                     handleClick={handleClick}
                     showTextBySelected={showTextBySelected}
+                    className={props.className}
                 ></Borderless.Component>
             )
         case designType.default:
@@ -60,6 +61,7 @@ export const Component = React.memo<Props>(props => {
                     isVisible={isVisible}
                     handleClick={handleClick}
                     showTextBySelected={showTextBySelected}
+                    className={props.className}
                 ></Default.Component>
             )
         default:
