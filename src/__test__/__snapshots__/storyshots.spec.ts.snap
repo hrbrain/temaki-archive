@@ -1753,12 +1753,20 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
+<<<<<<< HEAD
   className="sc-fMiknA icpYbZ"
+=======
+  className="sc-bRBYWo fpeVtf"
+>>>>>>> chore: ignore modal storyshot test
   data-test="radio-on"
   onClick={[Function]}
 >
   <div
+<<<<<<< HEAD
     className="sc-dVhcbM kvNqNA sc-bxivhb hBuNrQ"
+=======
+    className="sc-hzDkRC dUKKqa sc-bxivhb hBuNrQ"
+>>>>>>> chore: ignore modal storyshot test
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1767,7 +1775,11 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
+<<<<<<< HEAD
     className="sc-eqIVtm kUYoMV"
+=======
+    className="sc-jhAzac lgjwhY"
+>>>>>>> chore: ignore modal storyshot test
   >
     RadioButton
   </span>
@@ -1777,7 +1789,11 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div
+<<<<<<< HEAD
     className="sc-fAjcbJ kfFTej"
+=======
+    className="sc-fBuWsC fhBHLX"
+>>>>>>> chore: ignore modal storyshot test
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -1785,7 +1801,11 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
+<<<<<<< HEAD
     className="sc-fAjcbJ dzjBYa"
+=======
+    className="sc-fBuWsC gPpQHJ"
+>>>>>>> chore: ignore modal storyshot test
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -1793,7 +1813,11 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
+<<<<<<< HEAD
     className="sc-fAjcbJ dzjBYa"
+=======
+    className="sc-fBuWsC gPpQHJ"
+>>>>>>> chore: ignore modal storyshot test
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -1808,25 +1832,45 @@ exports[`Storyshots Components|Switch all 1`] = `
   className="m-10"
 >
   <div
+<<<<<<< HEAD
     className="sc-caSCKo kWQqjb"
     data-test="switch-off"
   >
     <span
       className="sc-cHGsZl drtZMz"
+=======
+    className="sc-fMiknA lgHuNe"
+    data-test="switch-off"
+  >
+    <span
+      className="sc-fAjcbJ fiustL"
+>>>>>>> chore: ignore modal storyshot test
     >
       OFF
     </span>
     <div
+<<<<<<< HEAD
       className="sc-gisBJw fAEJah"
+=======
+      className="sc-dVhcbM jwNYCm"
+>>>>>>> chore: ignore modal storyshot test
       data-test="switch"
       onClick={[Function]}
     >
       <span
+<<<<<<< HEAD
         className="sc-kjoXOD iWnFJD"
       />
     </div>
     <span
       className="sc-cHGsZl drtZMz"
+=======
+        className="sc-eqIVtm zukEA"
+      />
+    </div>
+    <span
+      className="sc-fAjcbJ fiustL"
+>>>>>>> chore: ignore modal storyshot test
     >
       ON
     </span>
@@ -1836,7 +1880,11 @@ exports[`Storyshots Components|Switch all 1`] = `
 
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
+<<<<<<< HEAD
   className="sc-TOsTZ enxdML"
+=======
+  className="sc-caSCKo hWqqCP"
+>>>>>>> chore: ignore modal storyshot test
 >
   Hello
 </p>
@@ -1844,7 +1892,11 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
+<<<<<<< HEAD
   className="sc-kgAjT cHsuko"
+=======
+  className="sc-gisBJw lhdlfD"
+>>>>>>> chore: ignore modal storyshot test
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -1864,11 +1916,19 @@ exports[`Storyshots Components|Toast all 1`] = `
   className="m-10"
 >
   <div
+<<<<<<< HEAD
     className="sc-cJSrbW fNvIaZ"
     data-test="info-toast"
   >
     <div
       className="sc-hmzhuo hyGGVK sc-bxivhb dUTGrc"
+=======
+    className="sc-kjoXOD gFzCTK"
+    data-test="info-toast"
+  >
+    <div
+      className="sc-TOsTZ kJusbt sc-bxivhb dUTGrc"
+>>>>>>> chore: ignore modal storyshot test
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1879,12 +1939,20 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
+<<<<<<< HEAD
         className="sc-frDJqD bmdJnr"
+=======
+        className="sc-kgAjT dTYLQy"
+>>>>>>> chore: ignore modal storyshot test
       >
         ラベル
       </div>
       <div
+<<<<<<< HEAD
         className="sc-kvZOFW kIxgt"
+=======
+        className="sc-cJSrbW fGZEop"
+>>>>>>> chore: ignore modal storyshot test
       >
         ここにテキスト。
       </div>
@@ -1895,12 +1963,20 @@ exports[`Storyshots Components|Toast all 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
+<<<<<<< HEAD
   className="sc-hqyNC kgZSqH"
+=======
+  className="sc-ksYbfQ idbpWX"
+>>>>>>> chore: ignore modal storyshot test
   data-test="tool-tip"
   direction="top"
 >
   <span
+<<<<<<< HEAD
     className="sc-jbKcbu dghxHH"
+=======
+    className="sc-hmzhuo keKHMu"
+>>>>>>> chore: ignore modal storyshot test
   >
     テキスト要素
   </span>
