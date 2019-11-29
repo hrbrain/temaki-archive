@@ -1,4 +1,5 @@
 /// <reference types="react" />
+import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
@@ -43,26 +44,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     value: number;
     onChange: (value: number) => void;
 })>;
-export declare const Button: import("react").FunctionComponent<({
-    onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-} & {
-    type: "box";
-    colorType?: "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "disabled" | undefined;
-    height?: string | undefined;
-    width?: string | undefined;
-}) | ({
-    onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-} & {
-    type: "circle";
-    colorType?: "primary" | "secondary" | undefined;
-    svg?: string | undefined;
-}) | ({
-    onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-} & {
-    type: "text";
-    colorType?: "primary" | "destructive" | undefined;
-    svg?: string | undefined;
-})>;
+export declare const Button: import("react").FunctionComponent<_Button.Props>;
 export declare const buttonShapeType: {
     box: "box";
     circle: "circle";
