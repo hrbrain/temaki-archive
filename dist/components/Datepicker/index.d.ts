@@ -8,9 +8,8 @@ import 'moment/locale/ja';
  * Component
  */
 declare type Props = {
-    displayFormat: string;
-    numberOfMonths: number;
-    monthFormat: string;
+    displayFormat?: string;
+    monthFormat?: string;
     onChange: (date: Date | null) => void;
     width: string;
 };

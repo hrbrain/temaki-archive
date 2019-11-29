@@ -15,9 +15,8 @@ import * as Icon from '~/components/Icon'
  */
 
 type Props = {
-    displayFormat: string
-    numberOfMonths: number
-    monthFormat: string
+    displayFormat?: string
+    monthFormat?: string
     onChange: (date: Date | null) => void
     width: string
 }
@@ -65,9 +64,9 @@ export const Component = React.memo<Props>(props => {
                 date={date}
                 focused={focused}
                 customInputIcon={calendarIconRender}
-                displayFormat={props.displayFormat}
-                numberOfMonths={props.numberOfMonths}
-                monthFormat={props.monthFormat}
+                displayFormat={props.displayFormat || 'YYYY年M月D日'}
+                numberOfMonths={1}
+                monthFormat={props.monthFormat || 'YYYY[年]M[月]'}
                 onDateChange={handleOnDateChange}
                 onFocusChange={toggleFocus}
                 navPrev={ChevronLeftIconRender}
