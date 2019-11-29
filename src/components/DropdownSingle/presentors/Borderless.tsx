@@ -22,11 +22,12 @@ type Props = {
         selected: ItemList.Value,
         placeholder: string
     ) => string
+    className?: string
 }
 
 export const Component = React.memo<Props>(props => {
     return (
-        <div>
+        <div className={props.className}>
             <Body
                 data-test="body"
                 isVisible={props.isVisible}

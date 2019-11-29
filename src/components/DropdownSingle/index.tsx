@@ -22,7 +22,7 @@ type Props = {
     isError: boolean
     width: number
     onClickItem: (value: ItemList.Value) => void
-    type: typeof designType.default | typeof designType.border_less
+    type: typeof designType.default | typeof designType.borderless
     className?: string
 }
 

@@ -181,6 +181,7 @@ export declare const DropdownSingle: import("react").NamedExoticComponent<{
     isError: boolean;
     width: number;
     onClickItem: (value: string) => void;
+    type: "default" | "borderless";
     className?: string | undefined;
 }>;
 export declare type DropdownSingleItem = _DropdownSingleItem;
