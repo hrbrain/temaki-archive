@@ -14,7 +14,7 @@ export declare const buttonShapeType: {
 /**
  * Component
  */
-declare type Props = {
+export declare type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>;
 } & ({
     type: typeof buttonShapeType.box;
@@ -31,4 +31,3 @@ declare type Props = {
     svg?: string;
 });
 export declare const Component: React.FC<Props>;
-export {};
