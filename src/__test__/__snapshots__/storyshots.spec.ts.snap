@@ -1178,11 +1178,12 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-iAyFgw iyqUdH"
+    className="sc-iAyFgw drQwbp"
+    width="250px"
   >
     <div>
       <div
-        className="sc-cvbbAY kocUXr"
+        className="sc-cvbbAY goyLnE"
         data-test="body"
         onClick={[Function]}
       >
