@@ -1,6 +1,8 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
+import * as ClickOutside from '~/modules/ClickOutside'
+
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ItemList from '../ItemList'
@@ -12,6 +14,7 @@ type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
     onClick: () => void
+    onClickOutside: () => void
     onClickMenuItem: (index: string) => void
     isError?: boolean
     isMenuVisible?: boolean
@@ -19,35 +22,46 @@ type Props = {
         items: ItemList.Item[],
         selected: ItemList.Value
     ) => string
+    width?: string
     className?: string
 }
 
 export const Component = React.memo<Props>(props => {
     return (
-        <div className={props.className}>
-            <Body data-test="body" onClick={props.onClick}>
-                <Text data-test="text">
-                    {props.showTextBySelected(props.items, props.value)}
-                </Text>
-                <DropDownIcon
-                    className={props.isMenuVisible ? 'visible' : ''}
-                    svg={IconFiles.icons.DropdownOff}
-                    size="24px"
+        <Wrap width={props.width}>
+            <ClickOutside.Component
+                onClickOutside={props.onClickOutside}
+                inactive={!props.isMenuVisible}
+            >
+                <Body data-test="body" onClick={props.onClick}>
+                    <Text data-test="text">
+                        {props.showTextBySelected(props.items, props.value)}
+                    </Text>
+                    <DropDownIcon
+                        className={props.isMenuVisible ? 'visible' : ''}
+                        svg={IconFiles.icons.DropdownOff}
+                        size="24px"
+                    />
+                </Body>
+                <StyledItemList
+                    items={props.items}
+                    value={props.value}
+                    onClickItem={props.onClickMenuItem}
+                    isVisible={props.isMenuVisible}
                 />
-            </Body>
-            <StyledItemList
-                items={props.items}
-                value={props.value}
-                onClickItem={props.onClickMenuItem}
-                isVisible={props.isMenuVisible}
-            />
-        </div>
+            </ClickOutside.Component>
+        </Wrap>
     )
 })
 
 /**
  * Styles
  */
+
+const Wrap = styled.div<{ width?: string }>`
+    position: relative;
+    width: ${props => props.width || '100%'};
+`
 
 const StyledItemList = styled(ItemList.Component)<{ isVisible?: boolean }>`
     position: absolute;
@@ -78,7 +92,6 @@ const DropDownIcon = styled(Icon.Component)`
 `
 
 const Body = styled.div<{ width?: string }>`
-    position: relative;
     width: ${props => props.width || '100%'};
     max-width: 262px;
     display: flex;
