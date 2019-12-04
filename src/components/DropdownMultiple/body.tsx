@@ -65,7 +65,7 @@ const renderText = (value: string, key: number, items: ItemList.Item[]) => {
     const item = items.find(item => item.value === value)
 
     if (!item) {
-        return ''
+        throw new Error(`Items don't have the value`)
     }
     return <InnerText key={key}>{item.text}</InnerText>
 }
