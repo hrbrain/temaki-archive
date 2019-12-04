@@ -23,14 +23,17 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(props => {
-    const [date, setDate] = React.useState<moment.Moment | null>(moment())
     const [focused, setFocused] = React.useState<boolean>(false)
 
-    React.useEffect(() => {
-        if (props.date) {
-            setDate(moment(props.date))
-        }
-    }, [props.date])
+    const conversionToMomentType = React.useCallback(
+        (date: Date | null) => {
+            if (date) {
+                return moment(date)
+            }
+            return null
+        },
+        [props.date]
+    )
 
     const toggleFocus = React.useCallback(() => {
         setFocused(!focused)
@@ -38,14 +41,13 @@ export const Component = React.memo<Props>(props => {
 
     const handleOnDateChange = React.useCallback(
         date => {
-            setDate(date)
             let rtnDate: Date = new Date()
             if (date != null) {
                 rtnDate = date.toDate()
             }
             props.onChange(rtnDate)
         },
-        [date]
+        [props.date]
     )
 
     const calendarIconRender = React.useMemo(() => {
@@ -68,7 +70,7 @@ export const Component = React.memo<Props>(props => {
         <Outer width={props.width}>
             <ReactDates.SingleDatePicker
                 id={'date'}
-                date={date}
+                date={conversionToMomentType(props.date)}
                 focused={focused}
                 customInputIcon={calendarIconRender}
                 displayFormat={props.displayFormat || 'YYYY年M月D日'}

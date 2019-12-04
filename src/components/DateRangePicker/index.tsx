@@ -20,21 +20,20 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(props => {
-    const [startDate, setStartDate] = React.useState<moment.Moment>(moment())
-    const [endDate, setEndDate] = React.useState<moment.Moment>(moment())
     const [
         focusedInput,
         setFocusedInput
     ] = React.useState<ReactDates.FocusedInputShape | null>('startDate')
 
-    React.useEffect(() => {
-        if (props.startDate) {
-            setStartDate(moment(props.startDate))
-        }
-        if (props.endDate) {
-            setEndDate(moment(props.endDate))
-        }
-    }, [props.startDate, props.endDate])
+    const conversionToMomentType = React.useCallback(
+        (date: Date | null) => {
+            if (date) {
+                return moment(date)
+            }
+            return null
+        },
+        [props.startDate, props.endDate]
+    )
 
     const handleOnFocusChange = React.useCallback(
         (focusedInput: ReactDates.FocusedInputShape | null) => {
@@ -45,8 +44,6 @@ export const Component = React.memo<Props>(props => {
 
     const handleOnDatesChange = React.useCallback(
         ({ startDate, endDate }) => {
-            setStartDate(startDate)
-            setEndDate(endDate)
             let rtnStartDate: Date = new Date()
             let rtnEndDate: Date = new Date()
 
@@ -58,7 +55,7 @@ export const Component = React.memo<Props>(props => {
             }
             props.onChange(rtnStartDate, rtnEndDate)
         },
-        [startDate, endDate]
+        [props.startDate, props.endDate]
     )
 
     const calendarIconRender = React.useMemo(() => {
@@ -80,9 +77,9 @@ export const Component = React.memo<Props>(props => {
     return (
         <Outer width={props.width}>
             <ReactDates.DateRangePicker
-                startDate={startDate}
+                startDate={conversionToMomentType(props.startDate)}
                 startDateId={'startDate'}
-                endDate={endDate}
+                endDate={conversionToMomentType(props.endDate)}
                 endDateId={'endDate'}
                 focusedInput={focusedInput}
                 onFocusChange={handleOnFocusChange}
