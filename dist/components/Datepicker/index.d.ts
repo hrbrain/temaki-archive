@@ -10,6 +10,7 @@ import 'moment/locale/ja';
 declare type Props = {
     displayFormat?: string;
     monthFormat?: string;
+    date?: Date;
     onChange: (date: Date | null) => void;
     width: string;
 };

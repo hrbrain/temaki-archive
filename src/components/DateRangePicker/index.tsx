@@ -13,6 +13,8 @@ import * as IconFiles from '~/lib/iconFiles'
 type Props = {
     displayFormat?: string
     monthFormat?: string
+    startDate?: Date
+    endDate?: Date
     onChange: (startDate: Date | null, endDate: Date | null) => void
     width: string
 }
@@ -25,6 +27,11 @@ export const Component = React.memo<Props>(props => {
         setFocusedInput
     ] = React.useState<ReactDates.FocusedInputShape | null>('startDate')
 
+    React.useMemo(() => {
+        setStartDate(moment(props.startDate))
+        setEndDate(moment(props.endDate))
+    }, [props.startDate, props.endDate])
+
     const handleOnFocusChange = React.useCallback(
         (focusedInput: ReactDates.FocusedInputShape | null) => {
             setFocusedInput(focusedInput)
@@ -36,7 +43,6 @@ export const Component = React.memo<Props>(props => {
         ({ startDate, endDate }) => {
             setStartDate(startDate)
             setEndDate(endDate)
-            console.warn(startDate, endDate)
             let rtnStartDate: Date = new Date()
             let rtnEndDate: Date = new Date()
 
