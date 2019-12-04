@@ -26,7 +26,7 @@ export const Component = React.memo<Props>(props => {
     const [date, setDate] = React.useState<moment.Moment | null>(moment())
     const [focused, setFocused] = React.useState<boolean>(false)
 
-    React.useMemo(() => {
+    React.useEffect(() => {
         if (props.date) {
             setDate(moment(props.date))
         }
