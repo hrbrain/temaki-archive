@@ -214,15 +214,15 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
 export declare const DatePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;
-    date?: Date | undefined;
+    date: Date | null;
     onChange: (date: Date | null) => void;
     width: string;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;
-    startDate?: Date | undefined;
-    endDate?: Date | undefined;
+    startDate: Date | null;
+    endDate: Date | null;
     onChange: (startDate: Date | null, endDate: Date | null) => void;
     width: string;
 }>;
