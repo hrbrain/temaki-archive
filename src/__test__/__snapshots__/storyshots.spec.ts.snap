@@ -954,6 +954,67 @@ exports[`Storyshots Components|Checkbox all 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components|Datepicker Null 1`] = `
+<div
+  className="sc-gZMcBi bjbYLz"
+  width="100%"
+>
+  <div
+    className="SingleDatePicker SingleDatePicker_1"
+  >
+    <div>
+      <div
+        className="SingleDatePickerInput SingleDatePickerInput_1 SingleDatePickerInput__withBorder SingleDatePickerInput__withBorder_2"
+      >
+        <button
+          className="SingleDatePickerInput_calendarIcon SingleDatePickerInput_calendarIcon_1"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <div
+            className="sc-bxivhb hBuNrQ"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+        </button>
+        <div
+          className="DateInput DateInput_1"
+        >
+          <input
+            aria-describedby="DateInput__screen-reader-message-date"
+            aria-label="Date"
+            autoComplete="off"
+            className="DateInput_input DateInput_input_1"
+            disabled={false}
+            id="date"
+            name="date"
+            onChange={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Date"
+            readOnly={false}
+            required={false}
+            type="text"
+            value="2019年12月4日"
+          />
+          <p
+            className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
+            id="DateInput__screen-reader-message-date"
+          >
+            Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components|Datepicker Standard 1`] = `
 <div
   className="sc-gZMcBi bjbYLz"
