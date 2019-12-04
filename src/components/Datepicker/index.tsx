@@ -17,6 +17,7 @@ import * as Icon from '~/components/Icon'
 type Props = {
     displayFormat?: string
     monthFormat?: string
+    date?: Date
     onChange: (date: Date | null) => void
     width: string
 }
@@ -24,6 +25,10 @@ type Props = {
 export const Component = React.memo<Props>(props => {
     const [date, setDate] = React.useState<moment.Moment | null>(moment())
     const [focused, setFocused] = React.useState<boolean>(false)
+
+    React.useMemo(() => {
+        setDate(moment(props.date))
+    }, [props.date])
 
     const toggleFocus = React.useCallback(() => {
         setFocused(!focused)
