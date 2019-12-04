@@ -27,10 +27,7 @@ export const Component = React.memo<Props>(props => {
 
     const conversionToMomentType = React.useCallback(
         (date: Date | null) => {
-            if (date) {
-                return moment(date)
-            }
-            return null
+            return date ? moment(date) : null
         },
         [props.date]
     )
