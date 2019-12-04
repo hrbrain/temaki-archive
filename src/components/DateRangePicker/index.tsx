@@ -27,7 +27,7 @@ export const Component = React.memo<Props>(props => {
         setFocusedInput
     ] = React.useState<ReactDates.FocusedInputShape | null>('startDate')
 
-    React.useMemo(() => {
+    React.useEffect(() => {
         if (props.startDate) {
             setStartDate(moment(props.startDate))
         }
