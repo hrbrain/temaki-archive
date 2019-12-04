@@ -1000,7 +1000,7 @@ exports[`Storyshots Components|Datepicker Standard 1`] = `
             readOnly={false}
             required={false}
             type="text"
-            value="2019年12月2日"
+            value="2019年12月4日"
           />
           <p
             className="DateInput_screenReaderMessage DateInput_screenReaderMessage_1"
