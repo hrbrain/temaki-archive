@@ -193,6 +193,7 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     width?: string | undefined;
     className?: string | undefined;
 }>;
+<<<<<<< HEAD
 export declare const DatePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;
@@ -207,4 +208,35 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     endDate: Date | null;
     onChange: (startDate: Date | null, endDate: Date | null) => void;
     width: string;
+=======
+export declare const Modal: import("react").FunctionComponent<{
+    title: string;
+    buttons?: (({
+        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
+    } & {
+        type: "box";
+        colorType?: "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "disabled" | undefined;
+        height?: string | undefined;
+        width?: string | undefined;
+    } & {
+        text: string;
+    }) | ({
+        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
+    } & {
+        type: "circle";
+        colorType?: "primary" | "secondary" | undefined;
+        svg?: string | undefined;
+    } & {
+        text: string;
+    }) | ({
+        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
+    } & {
+        type: "text";
+        colorType?: "primary" | "destructive" | undefined;
+        svg?: string | undefined;
+    } & {
+        text: string;
+    }))[] | undefined;
+    onClose: () => void;
+>>>>>>> test: snapshots
 }>;
