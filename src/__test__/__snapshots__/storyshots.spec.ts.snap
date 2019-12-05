@@ -1671,7 +1671,7 @@ exports[`Storyshots Components|Input Number 1`] = `
   className="sc-jlyJG bbyJzT"
 >
   <input
-    className="sc-gipzik yZdbj"
+    className="sc-gipzik dHIzZY"
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1686,7 +1686,7 @@ exports[`Storyshots Components|Input Text 1`] = `
   className="sc-jlyJG bbyJzT"
 >
   <input
-    className="sc-gipzik yZdbj"
+    className="sc-gipzik dHIzZY"
     format="text"
     onBlur={[Function]}
     onChange={[Function]}
