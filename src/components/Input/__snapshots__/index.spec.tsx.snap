@@ -2,7 +2,7 @@
 
 exports[`Input format of number should match previous snapshot 1`] = `
 .c0 {
-  padding: 10px 12px;
+  height: 40px;
   border-radius: 6px;
   border: solid 1px rgb(234,234,234);
   -webkit-transition: 0.15s border-color;
@@ -224,7 +224,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                         "lastClassName": "c0",
                         "rules": Array [
                           "
-    padding: 10px 12px;
+    height: 40px;
     border-radius: 6px;
     border: solid 1px ",
                           [Function],
@@ -289,7 +289,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
 
 exports[`Input format of number should match previous snapshot when provided errored prop 1`] = `
 .c0 {
-  padding: 10px 12px;
+  height: 40px;
   border-radius: 6px;
   border: solid 1px rgb(234,234,234);
   -webkit-transition: 0.15s border-color;
@@ -337,7 +337,7 @@ exports[`Input format of number should match previous snapshot when provided err
 
 exports[`Input format of text should match previous snapshot 1`] = `
 .c0 {
-  padding: 10px 12px;
+  height: 40px;
   border-radius: 6px;
   border: solid 1px rgb(234,234,234);
   -webkit-transition: 0.15s border-color;
@@ -559,7 +559,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                         "lastClassName": "c0",
                         "rules": Array [
                           "
-    padding: 10px 12px;
+    height: 40px;
     border-radius: 6px;
     border: solid 1px ",
                           [Function],
@@ -624,7 +624,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
 
 exports[`Input format of text should match previous snapshot when provided errored prop 1`] = `
 .c0 {
-  padding: 10px 12px;
+  height: 40px;
   border-radius: 6px;
   border: solid 1px rgb(234,234,234);
   -webkit-transition: 0.15s border-color;
