@@ -35,8 +35,9 @@ type OuterProps = {
     diff?: boolean
     errored?: boolean
 }
+
 const Outer = styled.input<OuterProps>`
-    padding: 10px 12px;
+    height: 40px;
     border-radius: 6px;
     border: solid 1px ${props => props.theme.colors.grayScale.S10};
     transition: 0.15s border-color;
