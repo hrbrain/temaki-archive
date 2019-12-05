@@ -15,7 +15,7 @@ export type Item = ItemList.Item
 type Props = {
     items: ItemList.Item[]
     values: ItemList.Value[]
-    onChange: (value: ItemList.Value) => void
+    onChange: (value: ItemList.Value[]) => void
     width?: string
     placeholder?: string
     isError?: boolean
@@ -36,6 +36,19 @@ export const Component = React.memo<Props>(props => {
         setIsMenuVisible(false)
     }, [isMenuVisible])
 
+    const changeValue = React.useCallback(
+        (value: ItemList.Value) => {
+            if (props.values.includes(value)) {
+                const newValues = props.values.filter(x => x !== value)
+                props.onChange(newValues)
+            } else {
+                const newValues = [...props.values, value]
+                props.onChange(newValues)
+            }
+        },
+        [props.values, props.onChange]
+    )
+
     return (
         <Wrap className={props.className} width={props.width}>
             <ClickOutside.Component
@@ -53,7 +66,7 @@ export const Component = React.memo<Props>(props => {
                 <StyledItemList
                     isVisible={isMenuVisible}
                     items={props.items}
-                    onClickItem={props.onChange}
+                    onClickItem={changeValue}
                     values={props.values}
                 />
             </ClickOutside.Component>

@@ -7,7 +7,7 @@ export declare type Item = ItemList.Item;
 declare type Props = {
     items: ItemList.Item[];
     values: ItemList.Value[];
-    onChange: (value: ItemList.Value) => void;
+    onChange: (value: ItemList.Value[]) => void;
     width?: string;
     placeholder?: string;
     isError?: boolean;
