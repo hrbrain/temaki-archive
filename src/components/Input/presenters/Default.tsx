@@ -38,6 +38,7 @@ type OuterProps = {
 
 const Outer = styled.input<OuterProps>`
     height: 40px;
+    padding: 0 12px;
     border-radius: 6px;
     border: solid 1px ${props => props.theme.colors.grayScale.S10};
     transition: 0.15s border-color;
