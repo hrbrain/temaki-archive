@@ -193,7 +193,6 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     width?: string | undefined;
     className?: string | undefined;
 }>;
-<<<<<<< HEAD
 export declare const DatePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;
@@ -208,7 +207,7 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     endDate: Date | null;
     onChange: (startDate: Date | null, endDate: Date | null) => void;
     width: string;
-=======
+}>;
 export declare const Modal: import("react").FunctionComponent<{
     title: string;
     buttons?: (({
@@ -238,5 +237,4 @@ export declare const Modal: import("react").FunctionComponent<{
         text: string;
     }))[] | undefined;
     onClose: () => void;
->>>>>>> test: snapshots
 }>;

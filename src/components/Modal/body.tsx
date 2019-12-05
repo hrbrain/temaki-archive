@@ -71,6 +71,7 @@ const Head = styled.div`
 `
 
 const Title = styled.div`
+    font-size: 18px;
     font-weight: bold;
 `
 

@@ -1,42 +1,11 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
-  plugins: [
-    "eslint-plugin-prettier",
-    "@typescript-eslint",
-    'react',
-    "eslint-plugin-import",
-    "jest"
-  ],
-  globals: {
-    document: true,
-    window: true
-  },
-  parserOptions: {
-    ecmaVersion: 2017,
-    eecmaFeatures: {
-      jsx: true
-    },
-    sourceType: "module",
-    useJSXTextNode: false,
-    warnOnUnsupportedTypeScriptVersion: true,
-    project: './tsconfig.json'
-  },
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript"
-  ],
-  env: {
-    "jest/globals": true,
-    "node": true
-  },
-  rules: {
-    "prettier/prettier": [
-      "error"
+    parser: '@typescript-eslint/parser',
+    plugins: [
+        'eslint-plugin-prettier',
+        '@typescript-eslint',
+        'react',
+        'eslint-plugin-import',
+        'jest'
     ],
     parserOptions: {
         ecmaVersion: 2017,
