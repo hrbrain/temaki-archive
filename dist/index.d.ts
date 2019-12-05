@@ -171,7 +171,7 @@ export declare type DropdownSingleItem = _DropdownSingleItem;
 export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     items: import("./components/DropdownMultiple/itemList").Item[];
     values: string[];
-    onChange: (value: string[]) => void;
+    onChange: (value: string) => void;
     width?: string | undefined;
     placeholder?: string | undefined;
     isError?: boolean | undefined;

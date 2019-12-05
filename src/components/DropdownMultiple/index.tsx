@@ -15,7 +15,7 @@ export type Item = ItemList.Item
 type Props = {
     items: ItemList.Item[]
     values: ItemList.Value[]
-    onChange: (value: ItemList.Value[]) => void
+    onChange: (value: ItemList.Value) => void
     width?: string
     placeholder?: string
     isError?: boolean
@@ -27,13 +27,6 @@ export const Component = React.memo<Props>(props => {
     const [isMenuVisible, setIsMenuVisible] = React.useState(
         props.defaultExpanded
     )
-    const [valuesCache, setValuesCache] = React.useState<ItemList.Value[]>(
-        props.values
-    )
-
-    React.useLayoutEffect(() => {
-        setValuesCache(props.values)
-    }, [props.values])
 
     const clickBody = React.useCallback(() => {
         setIsMenuVisible(!isMenuVisible)
@@ -42,21 +35,6 @@ export const Component = React.memo<Props>(props => {
     const clickOutside = React.useCallback(() => {
         setIsMenuVisible(false)
     }, [isMenuVisible])
-
-    const changeValue = React.useCallback(
-        (value: ItemList.Value) => {
-            if (valuesCache.includes(value)) {
-                const newValues = valuesCache.filter(x => x !== value)
-                setValuesCache(newValues)
-                props.onChange(newValues)
-            } else {
-                const newValues = [...valuesCache, value]
-                setValuesCache(newValues)
-                props.onChange(newValues)
-            }
-        },
-        [valuesCache, props.onChange]
-    )
 
     return (
         <Wrap className={props.className} width={props.width}>
@@ -75,7 +53,7 @@ export const Component = React.memo<Props>(props => {
                 <StyledItemList
                     isVisible={isMenuVisible}
                     items={props.items}
-                    onClickItem={changeValue}
+                    onClickItem={props.onChange}
                     values={props.values}
                 />
             </ClickOutside.Component>
