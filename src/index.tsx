@@ -20,6 +20,7 @@ import {
 import * as _FileUploader from './components/FileUploader/index'
 import { icons as _icons } from './lib/iconFiles'
 import * as _MeatballMenu from './components/MeatballKebabMenu'
+import * as _Modal from './components/Modal'
 import {
     defaultTheme as _defaultTheme,
     RequiredThemeProps as _RequiredThemeProps
@@ -52,3 +53,4 @@ export type MeatballMenuItem = _MeatballMenu.Item
 export const FileUploader = _FileUploader.Component
 export const DatePicker = _DatePicker.Component
 export const DateRangePicker = _DateRangePicker.Component
+export const Modal = _Modal.Component

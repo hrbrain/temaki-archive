@@ -1754,19 +1754,27 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="sc-fMiknA icpYbZ"
 =======
   className="sc-bRBYWo fpeVtf"
 >>>>>>> chore: ignore modal storyshot test
+=======
+  className="sc-jhAzac hPxccm"
+>>>>>>> test: snapshots
   data-test="radio-on"
   onClick={[Function]}
 >
   <div
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-dVhcbM kvNqNA sc-bxivhb hBuNrQ"
 =======
     className="sc-hzDkRC dUKKqa sc-bxivhb hBuNrQ"
 >>>>>>> chore: ignore modal storyshot test
+=======
+    className="sc-fBuWsC gKaPXn sc-bxivhb hBuNrQ"
+>>>>>>> test: snapshots
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1776,10 +1784,14 @@ exports[`Storyshots Components|RadioButton all 1`] = `
   />
   <span
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-eqIVtm kUYoMV"
 =======
     className="sc-jhAzac lgjwhY"
 >>>>>>> chore: ignore modal storyshot test
+=======
+    className="sc-fMiknA jjTtpu"
+>>>>>>> test: snapshots
   >
     RadioButton
   </span>
@@ -1790,10 +1802,14 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-fAjcbJ kfFTej"
 =======
     className="sc-fBuWsC fhBHLX"
 >>>>>>> chore: ignore modal storyshot test
+=======
+    className="sc-dVhcbM jZSepA"
+>>>>>>> test: snapshots
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -1802,10 +1818,14 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
   </div>
   <div
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-fAjcbJ dzjBYa"
 =======
     className="sc-fBuWsC gPpQHJ"
 >>>>>>> chore: ignore modal storyshot test
+=======
+    className="sc-dVhcbM cwEphU"
+>>>>>>> test: snapshots
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -1814,10 +1834,14 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
   </div>
   <div
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-fAjcbJ dzjBYa"
 =======
     className="sc-fBuWsC gPpQHJ"
 >>>>>>> chore: ignore modal storyshot test
+=======
+    className="sc-dVhcbM cwEphU"
+>>>>>>> test: snapshots
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -1833,6 +1857,7 @@ exports[`Storyshots Components|Switch all 1`] = `
 >
   <div
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-caSCKo kWQqjb"
     data-test="switch-off"
   >
@@ -1845,19 +1870,31 @@ exports[`Storyshots Components|Switch all 1`] = `
     <span
       className="sc-fAjcbJ fiustL"
 >>>>>>> chore: ignore modal storyshot test
+=======
+    className="sc-eqIVtm pyvrD"
+    data-test="switch-off"
+  >
+    <span
+      className="sc-gisBJw lamecO"
+>>>>>>> test: snapshots
     >
       OFF
     </span>
     <div
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sc-gisBJw fAEJah"
 =======
       className="sc-dVhcbM jwNYCm"
 >>>>>>> chore: ignore modal storyshot test
+=======
+      className="sc-fAjcbJ hOxAbQ"
+>>>>>>> test: snapshots
       data-test="switch"
       onClick={[Function]}
     >
       <span
+<<<<<<< HEAD
 <<<<<<< HEAD
         className="sc-kjoXOD iWnFJD"
       />
@@ -1871,6 +1908,13 @@ exports[`Storyshots Components|Switch all 1`] = `
     <span
       className="sc-fAjcbJ fiustL"
 >>>>>>> chore: ignore modal storyshot test
+=======
+        className="sc-caSCKo viuTe"
+      />
+    </div>
+    <span
+      className="sc-gisBJw lamecO"
+>>>>>>> test: snapshots
     >
       ON
     </span>
@@ -1881,10 +1925,14 @@ exports[`Storyshots Components|Switch all 1`] = `
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="sc-TOsTZ enxdML"
 =======
   className="sc-caSCKo hWqqCP"
 >>>>>>> chore: ignore modal storyshot test
+=======
+  className="sc-kjoXOD byjLFR"
+>>>>>>> test: snapshots
 >
   Hello
 </p>
@@ -1893,10 +1941,14 @@ exports[`Storyshots Components|Text Standard 1`] = `
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="sc-kgAjT cHsuko"
 =======
   className="sc-gisBJw lhdlfD"
 >>>>>>> chore: ignore modal storyshot test
+=======
+  className="sc-cHGsZl dSGVCo"
+>>>>>>> test: snapshots
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
@@ -1917,6 +1969,7 @@ exports[`Storyshots Components|Toast all 1`] = `
 >
   <div
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-cJSrbW fNvIaZ"
     data-test="info-toast"
   >
@@ -1929,6 +1982,13 @@ exports[`Storyshots Components|Toast all 1`] = `
     <div
       className="sc-TOsTZ kJusbt sc-bxivhb dUTGrc"
 >>>>>>> chore: ignore modal storyshot test
+=======
+    className="sc-TOsTZ jvmFcq"
+    data-test="info-toast"
+  >
+    <div
+      className="sc-cJSrbW fHdgxk sc-bxivhb dUTGrc"
+>>>>>>> test: snapshots
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1940,19 +2000,27 @@ exports[`Storyshots Components|Toast all 1`] = `
     <div>
       <div
 <<<<<<< HEAD
+<<<<<<< HEAD
         className="sc-frDJqD bmdJnr"
 =======
         className="sc-kgAjT dTYLQy"
 >>>>>>> chore: ignore modal storyshot test
+=======
+        className="sc-ksYbfQ kJBFxS"
+>>>>>>> test: snapshots
       >
         ラベル
       </div>
       <div
 <<<<<<< HEAD
+<<<<<<< HEAD
         className="sc-kvZOFW kIxgt"
 =======
         className="sc-cJSrbW fGZEop"
 >>>>>>> chore: ignore modal storyshot test
+=======
+        className="sc-hmzhuo llJlbL"
+>>>>>>> test: snapshots
       >
         ここにテキスト。
       </div>
@@ -1964,19 +2032,27 @@ exports[`Storyshots Components|Toast all 1`] = `
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
 <<<<<<< HEAD
+<<<<<<< HEAD
   className="sc-hqyNC kgZSqH"
 =======
   className="sc-ksYbfQ idbpWX"
 >>>>>>> chore: ignore modal storyshot test
+=======
+  className="sc-frDJqD fPelqf"
+>>>>>>> test: snapshots
   data-test="tool-tip"
   direction="top"
 >
   <span
 <<<<<<< HEAD
+<<<<<<< HEAD
     className="sc-jbKcbu dghxHH"
 =======
     className="sc-hmzhuo keKHMu"
 >>>>>>> chore: ignore modal storyshot test
+=======
+    className="sc-kvZOFW krWgkH"
+>>>>>>> test: snapshots
   >
     テキスト要素
   </span>
