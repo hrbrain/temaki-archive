@@ -18,7 +18,9 @@ export const Component: React.FC<Props> = props => {
             title={props.title}
             buttons={props.buttons}
             onClose={props.onClose}
-        />,
+        >
+            {props.children}
+        </Body.Component>,
         portalId
     )
 }
