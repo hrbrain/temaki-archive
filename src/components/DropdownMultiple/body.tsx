@@ -91,10 +91,12 @@ type BodyType = {
     width?: string
 }
 const Body = styled.div<BodyType>`
+    min-height: 40px;
     position: relative;
     ${props => (props.width ? `width: ${props.width};` : '')}
     display: flex;
-    padding: 12px;
+    align-items: center;
+    padding: 0px 12px;
     border: 1px solid
         ${props => {
             if (props.isError) {
@@ -112,7 +114,8 @@ const Body = styled.div<BodyType>`
 `
 
 const Text = styled.div`
-    padding-right: 4px;
+    padding: 4px 4px 4px 0;
+    width: calc(100% - 28px);
 `
 
 const InnerText = styled.div`
@@ -121,6 +124,5 @@ const InnerText = styled.div`
     align-items: center;
     background: ${props => props.theme.colors.primary.N95};
     padding: 0 4px;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    margin: 4px 8px 4px 0px;
 `

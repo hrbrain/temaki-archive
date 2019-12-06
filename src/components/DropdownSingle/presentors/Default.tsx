@@ -105,6 +105,7 @@ const Body = styled.div<BodyType>`
 
 const Text = styled.div`
     padding-right: 4px;
+    width: calc(100% - 28px);
 `
 
 const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`
