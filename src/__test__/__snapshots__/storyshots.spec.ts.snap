@@ -899,7 +899,7 @@ exports[`Storyshots Components|Badge all 1`] = `
 
 exports[`Storyshots Components|Button Box 1`] = `
 <button
-  className="sc-htpNat jeSCcm"
+  className="sc-htpNat jBbDys"
   onClick={[Function]}
   type="box"
 >
