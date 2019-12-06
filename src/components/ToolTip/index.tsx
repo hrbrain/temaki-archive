@@ -109,8 +109,8 @@ const Outer: any = styled.div`
 const Text = styled.span`
     height: 100%;
     font-size: 14px;
-    padding: 12px;
-    color: ${props => props.theme.colors.text};
+    padding: 8px 12px;
+    color: ${props => props.theme.colors.text.default};
     max-width: 280px;
     word-break: break-all;
 `
