@@ -40,7 +40,7 @@ const Outer = styled.button<OuterProps>`
     border-style: none;
     padding: 0 ${(props: OuterProps) => (props.width ? '0' : '16px')};
     cursor: pointer;
-    height: ${(props: OuterProps) => props.height || '44px'};
+    height: ${(props: OuterProps) => props.height || '40px'};
     width: ${(props: OuterProps) => props.width || 'auto'};
     box-shadow: none;
     outline: none;
