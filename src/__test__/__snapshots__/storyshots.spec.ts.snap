@@ -1900,7 +1900,7 @@ exports[`Storyshots Components|ToolTip all 1`] = `
   direction="top"
 >
   <span
-    className="sc-tilXH bShgWV"
+    className="sc-tilXH jOzSOC"
   >
     テキスト要素
   </span>
