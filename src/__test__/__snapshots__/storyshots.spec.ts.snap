@@ -1086,12 +1086,12 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
   >
     <div>
       <div
-        className="sc-VigVT knBoya"
+        className="sc-VigVT dxxsVZ"
         data-test="body"
         onClick={[Function]}
       >
         <div
-          className="sc-jTzLTM tXdjR"
+          className="sc-jTzLTM dOaTGm"
           data-test="text"
         >
           選択してください
@@ -1349,7 +1349,7 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
         onClick={[Function]}
       >
         <div
-          className="sc-kEYyzF lmiZzL"
+          className="sc-kEYyzF Sobkb"
           data-test="text"
         >
           
