@@ -99,6 +99,7 @@ export declare const icons: {
     Group: string;
     Hamburger: string;
     Home: string;
+    Image: string;
     Index: string;
     Information: string;
     Help: string;

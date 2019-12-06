@@ -51,7 +51,7 @@ export const Component = React.memo<Props>(props => {
                     {props.fileName ? (
                         <>
                             <FileIcon
-                                svg={IconFiles.icons.Attachment}
+                                svg={IconFiles.icons.Image}
                                 size={iconSize}
                             />
                             <FileLabel>{props.fileName}</FileLabel>
@@ -59,7 +59,7 @@ export const Component = React.memo<Props>(props => {
                     ) : (
                         <>
                             <FileIcon
-                                svg={IconFiles.icons.Dragdrop}
+                                svg={IconFiles.icons.Image}
                                 size={iconSize}
                             />
                             <FileLabel>

@@ -31,6 +31,7 @@ import GlobalMenu from '~/../icons/global-menu.svg'
 import Group from '~/../icons/group.svg'
 import Hamburger from '~/../icons/hamburger.svg'
 import Home from '~/../icons/home.svg'
+import Image from '~/../icons/image.svg'
 import Index from '~/../icons/index.svg'
 import Information from '~/../icons/information.svg'
 import Help from '~/../icons/help.svg'
@@ -102,6 +103,7 @@ export const icons = {
     Group,
     Hamburger,
     Home,
+    Image,
     Index,
     Information,
     Help,

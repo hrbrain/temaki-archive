@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 60.1 (88133) - https://sketch.com -->
+    <title>basics/icon/common/image</title>
+    <desc>Created with Sketch.</desc>
+    <g id="basics/icon/common/image" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@icon/common/radio-disabled">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="fill" transform="translate(3.000000, 3.000000)" fill="#333333" fill-rule="nonzero">
+                <path d="M16,0 C17.1045695,0 18,0.8954305 18,2 L18,16 C18,17.1045695 17.1045695,18 16,18 L2,18 C0.8954305,18 0,17.1045695 0,16 L0,2 C0,0.8954305 0.8954305,0 2,0 L16,0 Z M16,1.5 L2,1.5 C1.75454011,1.5 1.55039163,1.67687516 1.50805567,1.91012437 L1.5,2 L1.5,10.542 L6.34925343,6.09651769 C6.72101742,5.75573403 7.28836275,5.74510834 7.67262648,6.07173251 L16.5,13.575 L16.5,2 C16.5,1.75454011 16.3231248,1.55039163 16.0898756,1.50805567 L16,1.5 Z M13,3 C14.1045695,3 15,3.8954305 15,5 C15,6.1045695 14.1045695,7 13,7 C11.8954305,7 11,6.1045695 11,5 C11,3.8954305 11.8954305,3 13,3 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
