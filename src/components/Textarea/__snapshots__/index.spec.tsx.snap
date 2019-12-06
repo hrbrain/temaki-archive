@@ -2,7 +2,7 @@
 
 exports[`textarea 以前のスナップショットと一致しているか 1`] = `
 .c0 {
-  border: 1px solid rgb(51,51,51);
+  border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   width: 280px;
   padding: 8px;
@@ -10,6 +10,23 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
   font-size: 14px;
   resize: none;
   outline: none;
+  color: rgb(51,51,51);
+}
+
+.c0::-webkit-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::-moz-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0:-ms-input-placeholder {
+  color: rgb(214,214,214);
+}
+
+.c0::placeholder {
+  color: rgb(214,214,214);
 }
 
 .c0:focus {
@@ -168,6 +185,14 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
     font-size: 14px;
     resize: none;
     outline: none;
+    color: ",
+                [Function],
+                ";
+    &::placeholder {
+        color: ",
+                [Function],
+                ";
+    }
 
     &:focus {
         border-color: ",
