@@ -1091,7 +1091,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
         onClick={[Function]}
       >
         <div
-          className="sc-jTzLTM dOaTGm"
+          className="sc-jTzLTM fczbSj"
           data-test="text"
         >
           選択してください
