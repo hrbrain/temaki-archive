@@ -38,19 +38,36 @@ type Props = {
           onChange: (value: NumberValue) => void
       })
 export const Component = React.memo<Props>(({ children: _, ...props }) => {
+    const [value, setValue] = React.useState(props.value)
+    const changeValue = React.useCallback(
+        (value: string | number) => {
+            props.onChange(value as any)
+            setValue(value)
+        },
+        [props.onChange]
+    )
+
+    React.useLayoutEffect(() => setValue(props.value), [props.value])
+
     switch (props.format) {
         case NUMBER:
             return (
                 <NumberContainer.Container
-                    Presenter={Presenter.Presenter}
                     {...props}
+                    onChange={changeValue}
+                    /* Propsの型でUnionしてるので format=NUMBER のときは必ずnumberのはず */
+                    value={value as number}
+                    Presenter={Presenter.Presenter}
                 />
             )
         case TEXT:
             return (
                 <TextContainer.Container
-                    Presenter={Presenter.Presenter}
                     {...props}
+                    onChange={changeValue}
+                    /* Propsの型でUnionしてるので format=STRING のときは必ずstringのはず */
+                    value={value as string}
+                    Presenter={Presenter.Presenter}
                 />
             )
     }

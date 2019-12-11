@@ -152,7 +152,8 @@ export declare const Textarea: import("react").NamedExoticComponent<{
     minRows?: number | undefined;
     maxRows?: number | undefined;
     errored?: boolean | undefined;
-    onChange?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
+    onChange?: ((value: string) => void) | undefined;
+    onChangeNative?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
     onFocus?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
     onBlur?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
 }>;

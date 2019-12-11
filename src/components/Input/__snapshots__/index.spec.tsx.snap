@@ -170,7 +170,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
       Presenter={[Function]}
       format="number"
       onBlur={[MockFunction]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       onChangeNative={[MockFunction]}
       value={145}
     >
@@ -508,7 +508,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
       Presenter={[Function]}
       format="text"
       onBlur={[MockFunction]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       onChangeNative={[MockFunction]}
       value="Testing Value"
     >

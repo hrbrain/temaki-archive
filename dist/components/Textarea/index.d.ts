@@ -8,7 +8,8 @@ declare type Props = {
     minRows?: number;
     maxRows?: number;
     errored?: boolean;
-    onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    onChange?: (value: string) => void;
+    onChangeNative?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onFocus?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onBlur?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };

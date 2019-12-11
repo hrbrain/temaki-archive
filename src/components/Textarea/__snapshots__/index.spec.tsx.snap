@@ -160,7 +160,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
   >
     <Styled(TextareaAutosize)
       onBlur={[MockFunction]}
-      onChange={[MockFunction]}
+      onChange={[Function]}
       onFocus={[MockFunction]}
       value="Testing Value"
     >
@@ -218,7 +218,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
         }
         forwardedRef={null}
         onBlur={[MockFunction]}
-        onChange={[MockFunction]}
+        onChange={[Function]}
         onFocus={[MockFunction]}
         value="Testing Value"
       >
@@ -226,7 +226,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
           className="c0"
           inputRef={[Function]}
           onBlur={[MockFunction]}
-          onChange={[MockFunction]}
+          onChange={[Function]}
           onFocus={[MockFunction]}
           onHeightChange={[Function]}
           useCacheForDOMMeasurements={false}
