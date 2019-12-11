@@ -209,6 +209,7 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     width: string;
 }>;
 export declare const Modal: import("react").FunctionComponent<{
+    isOpen: boolean;
     title: string;
     buttons?: (({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
