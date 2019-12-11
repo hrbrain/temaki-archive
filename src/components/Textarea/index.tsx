@@ -12,20 +12,36 @@ type Props = {
     minRows?: number
     maxRows?: number
     errored?: boolean
-    onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
+    onChange?: (value: string) => void
+    onChangeNative?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
     onFocus?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
     onBlur?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
 }
 
 const Component = React.memo<Props>(props => {
+    const [value, setValue] = React.useState(props.value)
+    const changeValue = React.useCallback(
+        (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+            e.persist()
+            props.onChangeNative && props.onChangeNative(e)
+            props.onChange && props.onChange(e.target.value)
+            setValue(e.target.value)
+        },
+        [props.onChange, props.onChangeNative]
+    )
+
+    React.useLayoutEffect(() => {
+        setValue(props.value)
+    }, [props.value])
+
     return (
         <Textarea
-            value={props.value}
+            value={value}
             placeholder={props.placeholder}
             minRows={props.minRows}
             maxRows={props.maxRows}
             errored={props.errored}
-            onChange={props.onChange}
+            onChange={changeValue}
             onFocus={props.onFocus}
             onBlur={props.onBlur}
         />
