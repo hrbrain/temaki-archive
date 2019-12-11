@@ -8,6 +8,7 @@ storiesOf('Components|Modal', module).add('all', () => {
     return (
         <div className="m-10">
             <Modal.Component
+                isOpen={Knobs.boolean('isOpen', true)}
                 title={Knobs.text('title', 'ロール作成')}
                 buttons={[
                     {
