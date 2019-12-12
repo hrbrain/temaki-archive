@@ -1751,6 +1751,64 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components|Modal all 1`] = `
+<div
+  className="m-10"
+>
+  <modal>
+    <div
+      className="sc-fMiknA jqZoBT"
+    >
+      <div
+        className="sc-dVhcbM ikSiMW"
+      >
+        <div
+          className="sc-eqIVtm hASYNG"
+        >
+          <div
+            className="sc-fAjcbJ emHNNw"
+          >
+            ロール作成
+          </div>
+          <div
+            className="sc-caSCKo evEljT"
+            data-test="closeIcon"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb gdKZPc"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24"
+            />
+          </div>
+        </div>
+        <div
+          className="sc-gisBJw eNYQsc"
+        >
+          コンテンツ
+        </div>
+        <div
+          className="sc-kjoXOD jYVAKy"
+        >
+          <button
+            className="sc-cHGsZl fHQAMV sc-htpNat jBbDys"
+            data-test="button0"
+            onClick={[Function]}
+            type="box"
+          >
+            登録
+          </button>
+        </div>
+      </div>
+    </div>
+  </modal>
+</div>
+`;
+
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
   className="sc-TOsTZ kuyLbM"
