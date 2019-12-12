@@ -11,7 +11,7 @@ type Props = {
     onClose: () => void
 }
 
-const portalId = document.getElementById('modal') as HTMLDivElement
+const root = document.getElementById('modal') as HTMLDivElement
 
 export const Component: React.FC<Props> = props => {
     if (props.isOpen) {
@@ -23,7 +23,7 @@ export const Component: React.FC<Props> = props => {
             >
                 {props.children}
             </Body.Component>,
-            portalId
+            root
         )
     }
     return null
