@@ -58,7 +58,8 @@ const Outer = styled.input<OuterProps>`
 
     &:focus {
         outline: none;
-        border-color: ${props => props.theme.colors.utilities.highlightGreen};
+        border-color: ${props =>
+            props.theme.colors.utilities.highlightGreen.default};
     }
 
     &::placeholder {
