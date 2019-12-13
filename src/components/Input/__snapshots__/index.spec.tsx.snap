@@ -12,16 +12,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
 
 .c0:focus {
   outline: none;
-  border-color: default:rgb(114,206,92);
-  -n20: rgb(142,216,125);
-  -n40: rgb(170,226,157);
-  -n60: rgb(199,235,190);
-  -n80: rgb(227,245,222);
-  -n90: rgb(240,250,238);
-  -n95: rgb(248,252,247);
-  -p20: rgb(68,123,55);
-  -p40: rgb(91,164,73);
-  -p60: rgb(114,206,92);
+  border-color: rgb(114,206,92);
 }
 
 .c0::-webkit-input-placeholder {
@@ -302,16 +293,7 @@ exports[`Input format of number should match previous snapshot when provided err
 
 .c0:focus {
   outline: none;
-  border-color: default:rgb(114,206,92);
-  -n20: rgb(142,216,125);
-  -n40: rgb(170,226,157);
-  -n60: rgb(199,235,190);
-  -n80: rgb(227,245,222);
-  -n90: rgb(240,250,238);
-  -n95: rgb(248,252,247);
-  -p20: rgb(68,123,55);
-  -p40: rgb(91,164,73);
-  -p60: rgb(114,206,92);
+  border-color: rgb(114,206,92);
 }
 
 .c0::-webkit-input-placeholder {
@@ -350,16 +332,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
 
 .c0:focus {
   outline: none;
-  border-color: default:rgb(114,206,92);
-  -n20: rgb(142,216,125);
-  -n40: rgb(170,226,157);
-  -n60: rgb(199,235,190);
-  -n80: rgb(227,245,222);
-  -n90: rgb(240,250,238);
-  -n95: rgb(248,252,247);
-  -p20: rgb(68,123,55);
-  -p40: rgb(91,164,73);
-  -p60: rgb(114,206,92);
+  border-color: rgb(114,206,92);
 }
 
 .c0::-webkit-input-placeholder {
@@ -640,16 +613,7 @@ exports[`Input format of text should match previous snapshot when provided error
 
 .c0:focus {
   outline: none;
-  border-color: default:rgb(114,206,92);
-  -n20: rgb(142,216,125);
-  -n40: rgb(170,226,157);
-  -n60: rgb(199,235,190);
-  -n80: rgb(227,245,222);
-  -n90: rgb(240,250,238);
-  -n95: rgb(248,252,247);
-  -p20: rgb(68,123,55);
-  -p40: rgb(91,164,73);
-  -p60: rgb(114,206,92);
+  border-color: rgb(114,206,92);
 }
 
 .c0::-webkit-input-placeholder {
