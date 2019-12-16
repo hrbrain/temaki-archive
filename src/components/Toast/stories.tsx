@@ -2,12 +2,17 @@ import { text, select } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Toast from './index'
+import * as Actions from '@storybook/addon-actions'
 
 storiesOf(`Components|Toast`, module).add('all', () => (
     <div className="m-10">
         <Toast.Component
+            index={1}
             label={text('Label', 'ラベル')}
-            text={text('Text', 'ここにテキスト。')}
+            text={text(
+                'Text',
+                'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'
+            )}
             type={select(
                 'Type',
                 {
@@ -16,6 +21,7 @@ storiesOf(`Components|Toast`, module).add('all', () => (
                 },
                 'info'
             )}
+            onClickClose={Actions.action('onClickClose')}
         />
     </div>
 ))

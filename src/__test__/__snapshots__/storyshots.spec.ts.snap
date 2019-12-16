@@ -1937,28 +1937,43 @@ exports[`Storyshots Components|Toast all 1`] = `
     />
     <div>
       <div
-        className="sc-gGBfsJ ipfKhN"
+        className="sc-jnlKLf kalmUy"
       >
         ラベル
       </div>
       <div
-        className="sc-jnlKLf fYEEUq"
+        className="sc-fYxtnH bUBVad"
       >
-        ここにテキスト。
+        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
+    <span
+      className="sc-gGBfsJ bbDIQG"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-bbmXgH ecQAKD sc-bxivhb dUTGrc"
+        color="white"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+        size="24px"
+      />
+    </span>
   </div>
 </div>
 `;
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-fYxtnH cMUWfm"
+  className="sc-tilXH bGAyRf"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-tilXH jOzSOC"
+    className="sc-hEsumM cpRjWl"
   >
     テキスト要素
   </span>
