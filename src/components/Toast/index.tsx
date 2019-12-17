@@ -23,7 +23,7 @@ type Props = {
 
 export const Component = React.memo<Props>((props: Props) => {
     switch (props.type) {
-        case 'buttonless':
+        case BUTTONLESS:
             return (
                 <Buttonless.Component
                     label={props.label}
@@ -31,7 +31,7 @@ export const Component = React.memo<Props>((props: Props) => {
                     variant={props.variant}
                 />
             )
-        case 'default':
+        case DEFAULT:
             return (
                 <Default.Component
                     label={props.label}
