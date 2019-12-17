@@ -1917,16 +1917,16 @@ exports[`Storyshots Components|Textarea all 1`] = `
 />
 `;
 
-exports[`Storyshots Components|Toast info 1`] = `
+exports[`Storyshots Components|Toast buttonless(info) 1`] = `
 <div
   className="m-10"
 >
   <div
-    className="sc-jqCOkK gspSoX"
-    data-test="info-toast"
+    className="sc-jqCOkK kpEiVZ"
+    data-test="info-buttonless-toast"
   >
     <div
-      className="sc-bbmXgH ecQAKD sc-bxivhb dUTGrc"
+      className="sc-uJMKN TpSKk sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1937,22 +1937,90 @@ exports[`Storyshots Components|Toast info 1`] = `
     />
     <div>
       <div
-        className="sc-jnlKLf kalmUy"
+        className="sc-bbmXgH iERjqw"
       >
         ラベル
       </div>
       <div
-        className="sc-fYxtnH bUBVad"
+        className="sc-gGBfsJ eNSfpq"
+      >
+        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
+<div
+  className="m-10"
+>
+  <div
+    className="sc-jqCOkK hAqplf"
+    data-test="warning-buttonless-toast"
+  >
+    <div
+      className="sc-uJMKN TpSKk sc-bxivhb dUTGrc"
+      color="white"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      size="24px"
+    />
+    <div>
+      <div
+        className="sc-bbmXgH iERjqw"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-gGBfsJ eNSfpq"
+      >
+        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|Toast default(info) 1`] = `
+<div
+  className="m-10"
+>
+  <div
+    className="sc-jnlKLf bvyjaH"
+    data-test="info-default-toast"
+  >
+    <div
+      className="sc-fYxtnH oVGQN sc-bxivhb dUTGrc"
+      color="white"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      size="24px"
+    />
+    <div>
+      <div
+        className="sc-hEsumM iDkJyn"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-ktHwxA ghQQzG"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
     <span
-      className="sc-gGBfsJ bbDIQG"
+      className="sc-tilXH ezXgWc"
       onClick={[Function]}
     >
       <div
-        className="sc-bbmXgH ecQAKD sc-bxivhb dUTGrc"
+        className="sc-fYxtnH oVGQN sc-bxivhb dUTGrc"
         color="white"
         dangerouslySetInnerHTML={
           Object {
@@ -1966,16 +2034,16 @@ exports[`Storyshots Components|Toast info 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Toast warning 1`] = `
+exports[`Storyshots Components|Toast default(warning) 1`] = `
 <div
   className="m-10"
 >
   <div
-    className="sc-uJMKN gCaHWH"
-    data-test="warning-toast"
+    className="sc-jnlKLf ldAlpo"
+    data-test="warning-default-toast"
   >
     <div
-      className="sc-bbmXgH ecQAKD sc-bxivhb dUTGrc"
+      className="sc-fYxtnH oVGQN sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1986,22 +2054,22 @@ exports[`Storyshots Components|Toast warning 1`] = `
     />
     <div>
       <div
-        className="sc-jnlKLf kalmUy"
+        className="sc-hEsumM iDkJyn"
       >
         ラベル
       </div>
       <div
-        className="sc-fYxtnH bUBVad"
+        className="sc-ktHwxA ghQQzG"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
     <span
-      className="sc-gGBfsJ bbDIQG"
+      className="sc-tilXH ezXgWc"
       onClick={[Function]}
     >
       <div
-        className="sc-bbmXgH ecQAKD sc-bxivhb dUTGrc"
+        className="sc-fYxtnH oVGQN sc-bxivhb dUTGrc"
         color="white"
         dangerouslySetInnerHTML={
           Object {
@@ -2017,12 +2085,12 @@ exports[`Storyshots Components|Toast warning 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-tilXH bGAyRf"
+  className="sc-cIShpX eAdmgL"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-hEsumM cpRjWl"
+    className="sc-kafWEX iNDGKx"
   >
     テキスト要素
   </span>

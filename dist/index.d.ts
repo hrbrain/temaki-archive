@@ -53,8 +53,9 @@ export declare const buttonShapeType: {
 export declare const Toast: import("react").NamedExoticComponent<{
     label: string;
     text?: string | undefined;
-    type: "info" | "warning";
+    variant: "info" | "warning";
     onClickClose: () => void;
+    type: "default" | "buttonless";
 }>;
 export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").Props>;
 export declare const Tooltip: import("react").NamedExoticComponent<{
