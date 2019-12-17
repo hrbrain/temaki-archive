@@ -165,6 +165,7 @@ export declare const Textarea: import("react").NamedExoticComponent<{
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
     onFocus?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
     onBlur?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
+    diff?: boolean | undefined;
 }>;
 export declare const DropdownSingle: import("react").NamedExoticComponent<{
     items: import("./components/DropdownSingle/ItemList").Item[];

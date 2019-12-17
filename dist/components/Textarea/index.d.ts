@@ -12,6 +12,7 @@ declare type Props = {
     onChangeNative?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onFocus?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onBlur?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    diff?: boolean;
 };
 declare const Component: React.NamedExoticComponent<Props>;
 export { Component };

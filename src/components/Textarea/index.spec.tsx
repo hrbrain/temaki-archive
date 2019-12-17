@@ -2,6 +2,7 @@ import * as Enzyme from 'enzyme'
 import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '../../__test__/utils'
+import * as Theme from '../../modules/theme'
 import 'jest-styled-components'
 
 import * as Textarea from './index'
@@ -79,5 +80,22 @@ describe('textarea', () => {
             />
         )
         expect(wrapper).toHaveStyleRule('border-color', 'rgb(224,85,72)')
+    })
+
+    it('diff時にCSSが効いているか', () => {
+        wrapper = mountWithTheme(
+            <Textarea.Component
+                value={'Testing Value'}
+                onChange={mockOnChange}
+                onFocus={mockOnFocus}
+                onBlur={mockOnBlur}
+                diff
+            />
+        )
+
+        expect(wrapper).toHaveStyleRule(
+            'background-color',
+            Theme.defaultTheme.colors.utilities.paleYellow.replace(/ /g, '')
+        )
     })
 })

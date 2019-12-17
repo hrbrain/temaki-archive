@@ -16,6 +16,7 @@ type Props = {
     onChangeNative?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
     onFocus?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
     onBlur?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
+    diff?: boolean
 }
 
 const Component = React.memo<Props>(props => {
@@ -44,6 +45,7 @@ const Component = React.memo<Props>(props => {
             onChange={changeValue}
             onFocus={props.onFocus}
             onBlur={props.onBlur}
+            diff={props.diff}
         />
     )
 })
@@ -56,7 +58,10 @@ export { Component }
  * Styles
  */
 
-const Textarea = styled(TextareaAutosize)<{ errored?: boolean }>`
+const Textarea = styled(TextareaAutosize)<{
+    errored?: boolean
+    diff?: boolean
+}>`
     border: 1px solid ${props => props.theme.colors.grayScale.S10};
     border-radius: 6px;
     width: 280px;
@@ -79,4 +84,7 @@ const Textarea = styled(TextareaAutosize)<{ errored?: boolean }>`
 
     border-color: ${props =>
         props.errored && props.theme.colors.utilities.red.default};
+
+    background-color: ${props =>
+        props.diff ? props.theme.colors.utilities.paleYellow : `inherit`};
 `
