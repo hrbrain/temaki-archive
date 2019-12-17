@@ -1902,7 +1902,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <textarea
-  className="sc-dNLxif dBEjlV"
+  className="sc-dNLxif jqCLbv"
   errored={false}
   onBlur={[Function]}
   onChange={[Function]}
