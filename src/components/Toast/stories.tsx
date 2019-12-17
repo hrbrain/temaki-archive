@@ -43,7 +43,6 @@ storiesOf(`Components|Toast`, module)
                 )}
                 type={'buttonless'}
                 variant={'info'}
-                onClickClose={Actions.action('onClickClose')}
             />
         </div>
     ))
@@ -57,7 +56,6 @@ storiesOf(`Components|Toast`, module)
                 )}
                 type={'buttonless'}
                 variant={'warning'}
-                onClickClose={Actions.action('onClickClose')}
             />
         </div>
     ))
