@@ -4,6 +4,7 @@ import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
 import * as DropdownSingle from './index'
 import * as ItemList from './ItemList'
+import * as Theme from '~/modules/theme'
 import 'jest-styled-components'
 
 describe('Dropdown(Single)コンポーネントのテスト', () => {
@@ -141,6 +142,29 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
                 .first()
                 .simulate('click')
             expect(mockOnChange).toHaveBeenCalled()
+        })
+    })
+
+    it('Diffが渡されている時に色が変わる', () => {
+        act(() => {
+            wrapper = mountWithTheme(
+                <DropdownSingle.Component
+                    type={'default'}
+                    placeholder="placeholder"
+                    items={items}
+                    value=""
+                    isError={false}
+                    width="200px"
+                    onChange={mockOnChange}
+                    diff
+                />
+            )
+            const el = wrapper.find('div[data-test="body"]')
+
+            expect(el).toHaveStyleRule(
+                'background-color',
+                Theme.defaultTheme.colors.utilities.paleYellow.replace(/ /g, '')
+            )
         })
     })
 })

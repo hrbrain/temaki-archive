@@ -1244,7 +1244,7 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
   >
     <div>
       <div
-        className="sc-cvbbAY goyLnE"
+        className="sc-cvbbAY cwtTFY"
         data-test="body"
         onClick={[Function]}
       >
@@ -1344,7 +1344,7 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
   >
     <div>
       <div
-        className="sc-hMqMXs dpRqmE"
+        className="sc-hMqMXs hXxmGh"
         data-test="body"
         onClick={[Function]}
       >

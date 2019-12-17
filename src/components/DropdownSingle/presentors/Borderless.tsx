@@ -23,6 +23,7 @@ type Props = {
         selected: ItemList.Value
     ) => string
     width?: string
+    diff?: boolean
     className?: string
 }
 
@@ -33,7 +34,11 @@ export const Component = React.memo<Props>(props => {
                 onClickOutside={props.onClickOutside}
                 inactive={!props.isMenuVisible}
             >
-                <Body data-test="body" onClick={props.onClick}>
+                <Body
+                    data-test="body"
+                    onClick={props.onClick}
+                    diff={props.diff}
+                >
                     <Text data-test="text">
                         {props.showTextBySelected(props.items, props.value)}
                     </Text>
@@ -91,7 +96,7 @@ const DropDownIcon = styled(Icon.Component)`
     }
 `
 
-const Body = styled.div<{ width?: string }>`
+const Body = styled.div<{ width?: string; diff?: boolean }>`
     width: ${props => props.width || '100%'};
     max-width: 262px;
     display: flex;
@@ -99,6 +104,9 @@ const Body = styled.div<{ width?: string }>`
     user-select: none;
     font-size: 14px;
     cursor: pointer;
+
+    background-color: ${props =>
+        props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
 `
 
 const Text = styled.div`
