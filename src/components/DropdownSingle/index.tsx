@@ -18,6 +18,7 @@ type Props = {
     placeholder?: string
     isError?: boolean
     width?: string
+    diff?: boolean
     className?: string
     defaultExpanded?: boolean
 }
@@ -46,6 +47,7 @@ export const Component = React.memo<Props>(props => {
                     isMenuVisible={isMenuVisible}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
+                    diff={props.diff}
                     className={props.className}
                 />
             )
@@ -61,6 +63,7 @@ export const Component = React.memo<Props>(props => {
                     isMenuVisible={isMenuVisible}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
+                    diff={props.diff}
                     className={props.className}
                 />
             )

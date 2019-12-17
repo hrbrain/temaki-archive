@@ -175,6 +175,7 @@ export declare const DropdownSingle: import("react").NamedExoticComponent<{
     placeholder?: string | undefined;
     isError?: boolean | undefined;
     width?: string | undefined;
+    diff?: boolean | undefined;
     className?: string | undefined;
     defaultExpanded?: boolean | undefined;
 }>;

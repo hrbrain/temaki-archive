@@ -62,6 +62,7 @@ storiesOf('Components|DropdownSingle', module)
                     isError={boolean('isError', false)}
                     width={text('width', '250px')}
                     onChange={action('text')}
+                    diff={boolean('Diff', false)}
                 />
             </div>
         )

@@ -10,6 +10,7 @@ declare type Props = {
     isMenuVisible: boolean;
     showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value) => string;
     width?: string;
+    diff?: boolean;
     className?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;

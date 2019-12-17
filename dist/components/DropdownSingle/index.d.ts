@@ -12,6 +12,7 @@ declare type Props = {
     placeholder?: string;
     isError?: boolean;
     width?: string;
+    diff?: boolean;
     className?: string;
     defaultExpanded?: boolean;
 };
