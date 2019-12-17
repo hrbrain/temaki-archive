@@ -187,6 +187,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     width?: string | undefined;
     placeholder?: string | undefined;
     isError?: boolean | undefined;
+    diff?: boolean | undefined;
     defaultExpanded?: boolean | undefined;
     className?: string | undefined;
 }>;

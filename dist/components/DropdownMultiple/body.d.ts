@@ -9,6 +9,7 @@ declare type Props = {
     onClick: () => void;
     placeholder?: string;
     isError?: boolean;
+    diff?: boolean;
     width?: string;
     isMenuVisible?: boolean;
 };

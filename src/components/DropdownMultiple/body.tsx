@@ -15,6 +15,7 @@ type Props = {
     onClick: () => void
     placeholder?: string
     isError?: boolean
+    diff?: boolean
     width?: string
     isMenuVisible?: boolean
 }
@@ -26,6 +27,7 @@ export const Component = React.memo<Props>(props => {
             onClick={props.onClick}
             isMenuVisible={props.isMenuVisible}
             isError={props.isError}
+            diff={props.diff}
             width={props.width}
         >
             <Text data-test="text">
@@ -88,6 +90,7 @@ const DropDownIcon = styled(Icon.Component)`
 type BodyType = {
     isMenuVisible?: boolean
     isError?: boolean
+    diff?: boolean
     width?: string
 }
 const Body = styled.div<BodyType>`
@@ -111,6 +114,9 @@ const Body = styled.div<BodyType>`
     user-select: none;
     font-size: 14px;
     cursor: pointer;
+
+    background-color: ${props =>
+        props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
 `
 
 const Text = styled.div`

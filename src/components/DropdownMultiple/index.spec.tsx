@@ -4,6 +4,7 @@ import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
 import * as DropdownMultiple from './index'
 import * as ItemList from './itemList'
+import * as Theme from '~/modules/theme'
 import 'jest-styled-components'
 
 describe('Dropdown(Multi)コンポーネントのテスト', () => {
@@ -114,6 +115,28 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
                 .first()
                 .simulate('click')
             expect(mockOnChange).toHaveBeenCalled()
+        })
+    })
+
+    it('Diffの時に色が変わるか', () => {
+        act(() => {
+            wrapper = mountWithTheme(
+                <DropdownMultiple.Component
+                    placeholder="placeholder"
+                    items={items}
+                    values={[]}
+                    isError={false}
+                    width="250px"
+                    diff
+                    onChange={mockOnChange}
+                />
+            )
+
+            const el = wrapper.find('div[data-test="body"]')
+            expect(el).toHaveStyleRule(
+                'background-color',
+                Theme.defaultTheme.colors.utilities.paleYellow.replace(/ /g, '')
+            )
         })
     })
 })
