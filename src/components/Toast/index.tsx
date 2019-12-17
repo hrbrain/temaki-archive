@@ -60,6 +60,13 @@ export const Component = React.memo<Props>(
                         ) : (
                             <Label>{label}</Label>
                         )}
+                        <CloseButton onClick={onClickClose}>
+                            <Icons
+                                svg={IconFiles.icons.Close}
+                                size="24px"
+                                color="white"
+                            />
+                        </CloseButton>
                     </WarningOuter>
                 )
         }
