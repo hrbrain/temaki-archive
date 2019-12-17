@@ -50,13 +50,20 @@ export declare const buttonShapeType: {
     circle: "circle";
     text: "text";
 };
-export declare const Toast: import("react").NamedExoticComponent<{
+export declare const Toast: import("react").NamedExoticComponent<({
     label: string;
     text?: string | undefined;
     variant: "info" | "warning";
+} & {
+    type: "default";
     onClickClose: () => void;
-    type: "default" | "buttonless";
-}>;
+}) | ({
+    label: string;
+    text?: string | undefined;
+    variant: "info" | "warning";
+} & {
+    type: "buttonless";
+})>;
 export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").Props>;
 export declare const Tooltip: import("react").NamedExoticComponent<{
     text: string;

@@ -5,14 +5,21 @@ import * as Default from './presentors/Default'
 /**
  * Component
  */
+const DEFAULT = 'default' as const
+const BUTTONLESS = 'buttonless' as const
 
 type Props = {
     label: string
     text?: string
     variant: 'info' | 'warning'
-    onClickClose: () => void
-    type: 'default' | 'buttonless'
-}
+} & (
+    | {
+          type: typeof DEFAULT
+          onClickClose: () => void
+      }
+    | {
+          type: typeof BUTTONLESS
+      })
 
 export const Component = React.memo<Props>((props: Props) => {
     switch (props.type) {
@@ -22,7 +29,6 @@ export const Component = React.memo<Props>((props: Props) => {
                     label={props.label}
                     text={props.text}
                     variant={props.variant}
-                    onClickClose={props.onClickClose}
                 />
             )
         case 'default':

@@ -11,7 +11,6 @@ type Props = {
     label: string
     text?: string
     variant: 'info' | 'warning'
-    onClickClose: () => void
 }
 
 export const Component = React.memo<Props>(props => {

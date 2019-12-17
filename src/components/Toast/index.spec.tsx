@@ -51,7 +51,6 @@ describe('Toast', () => {
                 label={'123'}
                 variant={'info'}
                 type={'buttonless'}
-                onClickClose={mockOnClick}
             />
         )
         const info = wrapper.find('div[data-test="info-buttonless-toast"]')
@@ -64,7 +63,6 @@ describe('Toast', () => {
                 label={'123'}
                 variant={'warning'}
                 type={'buttonless'}
-                onClickClose={mockOnClick}
             />
         )
         const warning = wrapper.find(
