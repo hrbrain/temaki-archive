@@ -18,7 +18,6 @@ type Props = {
 
 export const Component = React.memo<Props>(
     ({ label, text, type, onClickClose }) => {
-
         switch (type) {
             case 'info':
                 return (

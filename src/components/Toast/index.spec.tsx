@@ -4,12 +4,7 @@ import * as React from 'react'
 import { mountWithTheme } from '../../__test__/utils'
 import * as Toast from './index'
 
-const index = '1234'
-const closeProc = (index: string) => {
-    console.warn(index)
-}
-const handleOnClickClose = () => closeProc(index)
-
+let mockOnClick: jest.Mock
 describe('Toast', () => {
     let wrapper: Enzyme.ReactWrapper
 
@@ -18,7 +13,7 @@ describe('Toast', () => {
             <Toast.Component
                 label={'123'}
                 type={'info'}
-                onClickClose={handleOnClickClose}
+                onClickClose={mockOnClick}
             />
         )
         expect(wrapper.exists()).toBe(true)
@@ -29,7 +24,7 @@ describe('Toast', () => {
             <Toast.Component
                 label={'123'}
                 type={'info'}
-                onClickClose={handleOnClickClose}
+                onClickClose={mockOnClick}
             />
         )
         const info = wrapper.find('div[data-test="info-toast"]')
@@ -41,7 +36,7 @@ describe('Toast', () => {
             <Toast.Component
                 label={'123'}
                 type={'warning'}
-                onClickClose={handleOnClickClose}
+                onClickClose={mockOnClick}
             />
         )
         const warning = wrapper.find('div[data-test="warning-toast"]')
