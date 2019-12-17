@@ -1,11 +1,11 @@
-import { text, select } from '@storybook/addon-knobs'
+import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Toast from './index'
 import * as Actions from '@storybook/addon-actions'
 
 storiesOf(`Components|Toast`, module)
-    .add('info', () => (
+    .add('default(info)', () => (
         <div className="m-10">
             <Toast.Component
                 label={text('Label', 'ラベル')}
@@ -13,19 +13,13 @@ storiesOf(`Components|Toast`, module)
                     'Text',
                     'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'
                 )}
-                type={select(
-                    'Type',
-                    {
-                        info: 'info',
-                        warning: 'warning'
-                    },
-                    'info'
-                )}
+                type={'default'}
+                variant={'info'}
                 onClickClose={Actions.action('onClickClose')}
             />
         </div>
     ))
-    .add('warning', () => (
+    .add('default(warning)', () => (
         <div className="m-10">
             <Toast.Component
                 label={text('Label', 'ラベル')}
@@ -33,14 +27,36 @@ storiesOf(`Components|Toast`, module)
                     'Text',
                     'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'
                 )}
-                type={select(
-                    'Type',
-                    {
-                        info: 'info',
-                        warning: 'warning'
-                    },
-                    'warning'
+                type={'default'}
+                variant={'warning'}
+                onClickClose={Actions.action('onClickClose')}
+            />
+        </div>
+    ))
+    .add('buttonless(info)', () => (
+        <div className="m-10">
+            <Toast.Component
+                label={text('Label', 'ラベル')}
+                text={text(
+                    'Text',
+                    'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'
                 )}
+                type={'buttonless'}
+                variant={'info'}
+                onClickClose={Actions.action('onClickClose')}
+            />
+        </div>
+    ))
+    .add('buttonless(warning)', () => (
+        <div className="m-10">
+            <Toast.Component
+                label={text('Label', 'ラベル')}
+                text={text(
+                    'Text',
+                    'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'
+                )}
+                type={'buttonless'}
+                variant={'warning'}
                 onClickClose={Actions.action('onClickClose')}
             />
         </div>
