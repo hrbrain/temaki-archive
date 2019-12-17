@@ -1086,7 +1086,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
   >
     <div>
       <div
-        className="sc-VigVT dxxsVZ"
+        className="sc-VigVT iNeByi"
         data-test="body"
         onClick={[Function]}
       >

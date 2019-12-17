@@ -19,6 +19,7 @@ type Props = {
     width?: string
     placeholder?: string
     isError?: boolean
+    diff?: boolean
     defaultExpanded?: boolean
     className?: string
 }
@@ -61,6 +62,7 @@ export const Component = React.memo<Props>(props => {
                     values={props.values}
                     placeholder={props.placeholder}
                     isMenuVisible={isMenuVisible}
+                    diff={props.diff}
                     isError={props.isError}
                 />
                 <StyledItemList
