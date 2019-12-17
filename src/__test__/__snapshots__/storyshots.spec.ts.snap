@@ -1917,13 +1917,62 @@ exports[`Storyshots Components|Textarea all 1`] = `
 />
 `;
 
-exports[`Storyshots Components|Toast all 1`] = `
+exports[`Storyshots Components|Toast info 1`] = `
 <div
   className="m-10"
 >
   <div
     className="sc-jqCOkK gspSoX"
     data-test="info-toast"
+  >
+    <div
+      className="sc-bbmXgH ecQAKD sc-bxivhb dUTGrc"
+      color="white"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      size="24px"
+    />
+    <div>
+      <div
+        className="sc-jnlKLf kalmUy"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-fYxtnH bUBVad"
+      >
+        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+      </div>
+    </div>
+    <span
+      className="sc-gGBfsJ bbDIQG"
+      onClick={[Function]}
+    >
+      <div
+        className="sc-bbmXgH ecQAKD sc-bxivhb dUTGrc"
+        color="white"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": undefined,
+          }
+        }
+        size="24px"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|Toast warning 1`] = `
+<div
+  className="m-10"
+>
+  <div
+    className="sc-uJMKN gCaHWH"
+    data-test="warning-toast"
   >
     <div
       className="sc-bbmXgH ecQAKD sc-bxivhb dUTGrc"
