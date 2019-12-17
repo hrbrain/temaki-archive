@@ -54,8 +54,7 @@ export declare const Toast: import("react").NamedExoticComponent<{
     label: string;
     text?: string | undefined;
     type: "info" | "warning";
-    index: number;
-    onClickClose: (index: number) => void;
+    onClickClose: () => void;
 }>;
 export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").Props>;
 export declare const Tooltip: import("react").NamedExoticComponent<{
