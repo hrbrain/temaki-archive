@@ -7,7 +7,6 @@ import * as Actions from '@storybook/addon-actions'
 storiesOf(`Components|Toast`, module).add('all', () => (
     <div className="m-10">
         <Toast.Component
-            index={1}
             label={text('Label', 'ラベル')}
             text={text(
                 'Text',
