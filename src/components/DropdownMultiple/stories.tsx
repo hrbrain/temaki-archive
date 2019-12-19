@@ -32,6 +32,7 @@ storiesOf('Components|DropdownMultiple', module).add('Multi', () => (
             isError={boolean('isError', false)}
             width={text('width', '250px')}
             onChange={action('onChange')}
+            diff={boolean('Diff', false)}
         />
     </div>
 ))
