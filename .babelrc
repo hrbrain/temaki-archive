@@ -1,0 +1,4 @@
+{
+    "presets": ["@babel/preset-react", "@babel/preset-typescript"],
+    "plugins": [["@babel/plugin-transform-runtime", { "corejs": 3, "target": { "browsers":  [ "last 2 versions", "ie >= 11"]} }]]
+}

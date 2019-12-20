@@ -8,7 +8,7 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "docs:build": "build-storybook -c .storybook",
-    "build": "NODE_ENV=production webpack -p",
+    "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
     "test": "jest",
     "lint": "run-s lint:*",
     "lint:src": "eslint --ext .ts,.tsx ./src",
@@ -37,6 +37,13 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.7",
+    "@babel/runtime-corejs3": "^7.7.7",
     "@storybook/addon-a11y": "^5.1.9",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-backgrounds": "^5.1.9",
