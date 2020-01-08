@@ -6,6 +6,7 @@ import * as ClickOutside from '~/modules/ClickOutside'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ItemList from '../ItemList'
+import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
 /*
  * Component
@@ -25,37 +26,44 @@ type Props = {
     width?: string
     diff?: boolean
     className?: string
+    errorMessage?: string
 }
 export const Component = React.memo<Props>(props => {
     return (
         <Wrap width={props.width} className={props.className}>
-            <ClickOutside.Component
-                onClickOutside={props.onClickOutside}
-                inactive={!props.isMenuVisible}
-            >
-                <Body
-                    data-test="body"
-                    isMenuVisible={props.isMenuVisible}
-                    isError={props.isError}
-                    onClick={props.onClick}
-                    diff={props.diff}
+            <Inner>
+                <ClickOutside.Component
+                    onClickOutside={props.onClickOutside}
+                    inactive={!props.isMenuVisible}
                 >
-                    <Text data-test="text">
-                        {props.showTextBySelected(props.items, props.value)}
-                    </Text>
-                    <DropDownIcon
-                        className={props.isMenuVisible ? 'visible' : ''}
-                        svg={IconFiles.icons.DropdownOff}
-                        size="24px"
+                    <Body
+                        data-test="body"
+                        isMenuVisible={props.isMenuVisible}
+                        isError={props.isError}
+                        onClick={props.onClick}
+                        diff={props.diff}
+                    >
+                        <Text data-test="text">
+                            {props.showTextBySelected(props.items, props.value)}
+                        </Text>
+                        <DropDownIcon
+                            className={props.isMenuVisible ? 'visible' : ''}
+                            svg={IconFiles.icons.DropdownOff}
+                            size="24px"
+                        />
+                    </Body>
+                    <StyledItemList
+                        value={props.value}
+                        onClickItem={props.onClickMenuItem}
+                        items={props.items}
+                        isVisible={props.isMenuVisible}
                     />
-                </Body>
-                <StyledItemList
-                    value={props.value}
-                    onClickItem={props.onClickMenuItem}
-                    items={props.items}
-                    isVisible={props.isMenuVisible}
-                />
-            </ClickOutside.Component>
+                </ClickOutside.Component>
+            </Inner>
+            <ErrorMessage.Component
+                message={props.errorMessage}
+                errored={props.isError}
+            />
         </Wrap>
     )
 })
@@ -65,8 +73,11 @@ export const Component = React.memo<Props>(props => {
  */
 
 const Wrap = styled.div<{ width?: string }>`
-    position: relative;
     width: ${props => props.width || '100%'};
+`
+
+const Inner = styled.div`
+    position: relative;
 `
 
 const DropDownIcon = styled(Icon.Component)`

@@ -5,6 +5,7 @@ import * as Body from './body'
 import * as ItemList from './itemList'
 
 import * as ClickOutside from '~/modules/ClickOutside'
+import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
 /**
  * Component
@@ -22,6 +23,7 @@ type Props = {
     diff?: boolean
     defaultExpanded?: boolean
     className?: string
+    errorMessage?: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -52,26 +54,32 @@ export const Component = React.memo<Props>(props => {
 
     return (
         <Wrap className={props.className} width={props.width}>
-            <ClickOutside.Component
-                onClickOutside={clickOutside}
-                inactive={!isMenuVisible}
-            >
-                <Body.Component
-                    onClick={clickBody}
-                    items={props.items}
-                    values={props.values}
-                    placeholder={props.placeholder}
-                    isMenuVisible={isMenuVisible}
-                    diff={props.diff}
-                    isError={props.isError}
-                />
-                <StyledItemList
-                    isVisible={isMenuVisible}
-                    items={props.items}
-                    onClickItem={changeValue}
-                    values={props.values}
-                />
-            </ClickOutside.Component>
+            <Inner>
+                <ClickOutside.Component
+                    onClickOutside={clickOutside}
+                    inactive={!isMenuVisible}
+                >
+                    <Body.Component
+                        onClick={clickBody}
+                        items={props.items}
+                        values={props.values}
+                        placeholder={props.placeholder}
+                        isMenuVisible={isMenuVisible}
+                        diff={props.diff}
+                        isError={props.isError}
+                    />
+                    <StyledItemList
+                        isVisible={isMenuVisible}
+                        items={props.items}
+                        onClickItem={changeValue}
+                        values={props.values}
+                    />
+                </ClickOutside.Component>
+            </Inner>
+            <ErrorMessage.Component
+                errored={props.isError}
+                message={props.errorMessage}
+            />
         </Wrap>
     )
 })
@@ -83,8 +91,11 @@ Component.displayName = 'DropdownSingle'
  */
 
 const Wrap = styled.div<{ width?: string }>`
-    position: relative;
     width: ${props => props.width || '100%'};
+`
+
+const Inner = styled.div`
+    position: relative;
 `
 
 const StyledItemList = styled(ItemList.Component)<{ isVisible?: boolean }>`

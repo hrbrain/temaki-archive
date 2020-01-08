@@ -178,15 +178,15 @@ exports[`Input format of number should match previous snapshot 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bdVaJa",
+                  "componentId": "sc-bwzfXH",
                   "isStatic": true,
-                  "lastClassName": "bDWFJH",
+                  "lastClassName": "uTxCW",
                   "rules": Array [],
                 },
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bdVaJa",
+                "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -211,7 +211,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
+                        "componentId": "sc-htpNat",
                         "isStatic": false,
                         "lastClassName": "c0",
                         "rules": Array [
@@ -250,7 +250,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                       "displayName": "styled.input",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
+                      "styledComponentId": "sc-htpNat",
                       "target": "input",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -271,6 +271,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                   />
                 </StyledComponent>
               </styled.input>
+              <FormErrorMessage />
             </div>
           </StyledComponent>
         </styled.div>
@@ -498,15 +499,15 @@ exports[`Input format of text should match previous snapshot 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bdVaJa",
+                  "componentId": "sc-bwzfXH",
                   "isStatic": true,
-                  "lastClassName": "bDWFJH",
+                  "lastClassName": "uTxCW",
                   "rules": Array [],
                 },
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-bdVaJa",
+                "styledComponentId": "sc-bwzfXH",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -531,7 +532,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
+                        "componentId": "sc-htpNat",
                         "isStatic": false,
                         "lastClassName": "c0",
                         "rules": Array [
@@ -570,7 +571,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                       "displayName": "styled.input",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
+                      "styledComponentId": "sc-htpNat",
                       "target": "input",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -591,6 +592,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                   />
                 </StyledComponent>
               </styled.input>
+              <FormErrorMessage />
             </div>
           </StyledComponent>
         </styled.div>

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled, { css } from '~/modules/theme'
+import * as FormErrorMessage from '~/components/lib/FormErrorMessage'
 
 type Props = {
     type?: string
@@ -16,16 +17,12 @@ export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     return (
         <Wrapper>
             <Outer {...props} />
-            {renderErrorMessage(props.errored, props.errorMessage)}
+            <FormErrorMessage.Component
+                errored={props.errored}
+                message={props.errorMessage}
+            />
         </Wrapper>
     )
-}
-
-function renderErrorMessage(errored?: boolean, errorMessage?: string) {
-    if (errored && errorMessage) {
-        return <ErrorMessage>{errorMessage}</ErrorMessage>
-    }
-    return null
 }
 
 const Wrapper = styled.div``
@@ -65,9 +62,4 @@ const Outer = styled.input<OuterProps>`
     &::placeholder {
         color: ${props => props.theme.colors.grayScale.S20};
     }
-`
-
-const ErrorMessage = styled.p`
-    color: ${props => props.theme.colors.utilities.red};
-    padding-top: 4px;
 `

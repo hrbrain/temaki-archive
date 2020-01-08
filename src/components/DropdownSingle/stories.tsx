@@ -34,6 +34,7 @@ storiesOf('Components|DropdownSingle', module)
                     ''
                 )}
                 isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
                 width={text('width', '200px')}
                 onChange={action('onChange')}
                 diff={boolean('Diff', false)}

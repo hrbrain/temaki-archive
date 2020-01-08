@@ -30,6 +30,7 @@ storiesOf('Components|DropdownMultiple', module).add('Multi', () => (
                 { display: 'check' }
             )}
             isError={boolean('isError', false)}
+            errorMessage={text('ErrorMessage', '')}
             width={text('width', '250px')}
             onChange={action('onChange')}
             diff={boolean('Diff', false)}

@@ -63,9 +63,13 @@ describe('textarea', () => {
 
     it('onFocus時にCSSが効いているか', () => {
         act(() => {
-            expect(wrapper).toHaveStyleRule('border-color', 'rgb(114,206,92)', {
-                modifier: ':focus'
-            })
+            expect(wrapper.find('textarea')).toHaveStyleRule(
+                'border-color',
+                'rgb(114,206,92)',
+                {
+                    modifier: ':focus'
+                }
+            )
         })
     })
 
@@ -79,7 +83,27 @@ describe('textarea', () => {
                 errored
             />
         )
-        expect(wrapper).toHaveStyleRule('border-color', 'rgb(224,85,72)')
+        expect(wrapper.find('textarea')).toHaveStyleRule(
+            'border-color',
+            'rgb(224,85,72)'
+        )
+    })
+
+    it('errorのメッセージが表示されているか', () => {
+        wrapper = mountWithTheme(
+            <Textarea.Component
+                value={'Testing Value'}
+                onChange={mockOnChange}
+                onFocus={mockOnFocus}
+                onBlur={mockOnBlur}
+                errored
+                errorMessage="必須項目です"
+            />
+        )
+        const errorMessageEl = wrapper.find('div[data-test="error-message"]')
+
+        expect(errorMessageEl.exists()).toBeTruthy()
+        expect(errorMessageEl.text()).toEqual('必須項目です')
     })
 
     it('diff時にCSSが効いているか', () => {
@@ -93,7 +117,7 @@ describe('textarea', () => {
             />
         )
 
-        expect(wrapper).toHaveStyleRule(
+        expect(wrapper.find('textarea')).toHaveStyleRule(
             'background-color',
             Theme.defaultTheme.colors.utilities.paleYellow.replace(/ /g, '')
         )
