@@ -2,6 +2,17 @@
 
 exports[`textarea 以前のスナップショットと一致しているか 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 {
+  display: block;
   border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   width: 280px;
@@ -14,23 +25,23 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
   background-color: inherit;
 }
 
-.c0::-webkit-input-placeholder {
+.c1::-webkit-input-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0::-moz-placeholder {
+.c1::-moz-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0:-ms-input-placeholder {
+.c1:-ms-input-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0::placeholder {
+.c1::placeholder {
   color: rgb(214,214,214);
 }
 
-.c0:focus {
+.c1:focus {
   border-color: rgb(114,206,92);
 }
 
@@ -159,26 +170,59 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
     onFocus={[MockFunction]}
     value="Testing Value"
   >
-    <Styled(TextareaAutosize)
-      onBlur={[MockFunction]}
-      onChange={[Function]}
-      onFocus={[MockFunction]}
-      value="Testing Value"
-    >
+    <styled.div>
       <StyledComponent
         forwardedComponent={
           Object {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
-              "isStatic": false,
+              "componentId": "sc-bwzfXH",
+              "isStatic": true,
               "lastClassName": "c0",
               "rules": Array [
                 "
+    display: inline-flex;
+    flex-direction: column;
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+      >
+        <div
+          className="c0"
+        >
+          <Styled(TextareaAutosize)
+            onBlur={[MockFunction]}
+            onChange={[Function]}
+            onFocus={[MockFunction]}
+            value="Testing Value"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "
+    display: block;
     border: 1px solid ",
-                [Function],
-                ";
+                      [Function],
+                      ";
     border-radius: 6px;
     width: 280px;
     padding: 8px;
@@ -187,71 +231,75 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
     resize: none;
     outline: none;
     color: ",
-                [Function],
-                ";
+                      [Function],
+                      ";
     &::placeholder {
         color: ",
-                [Function],
-                ";
+                      [Function],
+                      ";
     }
 
     &:focus {
         border-color: ",
-                [Function],
-                ";
+                      [Function],
+                      ";
     }
 
     border-color: ",
-                [Function],
-                ";
+                      [Function],
+                      ";
 
     background-color: ",
-                [Function],
-                ";
+                      [Function],
+                      ";
 ",
-              ],
-            },
-            "displayName": "Styled(TextareaAutosize)",
-            "foldedComponentIds": Array [],
-            "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
-            "target": [Function],
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
-        onBlur={[MockFunction]}
-        onChange={[Function]}
-        onFocus={[MockFunction]}
-        value="Testing Value"
-      >
-        <TextareaAutosize
-          className="c0"
-          inputRef={[Function]}
-          onBlur={[MockFunction]}
-          onChange={[Function]}
-          onFocus={[MockFunction]}
-          onHeightChange={[Function]}
-          useCacheForDOMMeasurements={false}
-          value="Testing Value"
-        >
-          <textarea
-            className="c0"
-            onBlur={[MockFunction]}
-            onChange={[Function]}
-            onFocus={[MockFunction]}
-            style={
-              Object {
-                "height": 0,
+                    ],
+                  },
+                  "displayName": "Styled(TextareaAutosize)",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": [Function],
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
               }
-            }
-            value="Testing Value"
-          />
-        </TextareaAutosize>
+              forwardedRef={null}
+              onBlur={[MockFunction]}
+              onChange={[Function]}
+              onFocus={[MockFunction]}
+              value="Testing Value"
+            >
+              <TextareaAutosize
+                className="c1"
+                inputRef={[Function]}
+                onBlur={[MockFunction]}
+                onChange={[Function]}
+                onFocus={[MockFunction]}
+                onHeightChange={[Function]}
+                useCacheForDOMMeasurements={false}
+                value="Testing Value"
+              >
+                <textarea
+                  className="c1"
+                  onBlur={[MockFunction]}
+                  onChange={[Function]}
+                  onFocus={[MockFunction]}
+                  style={
+                    Object {
+                      "height": 0,
+                    }
+                  }
+                  value="Testing Value"
+                />
+              </TextareaAutosize>
+            </StyledComponent>
+          </Styled(TextareaAutosize)>
+          <FormErrorMessage />
+        </div>
       </StyledComponent>
-    </Styled(TextareaAutosize)>
+    </styled.div>
   </Textarea>
 </ThemeProvider>
 `;

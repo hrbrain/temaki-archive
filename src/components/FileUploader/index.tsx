@@ -4,6 +4,7 @@ import * as ReactDropzone from 'react-dropzone'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
+import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
 /**
  * Utils
@@ -20,6 +21,8 @@ type Props = {
     accept?: string
     width?: string
     className?: string
+    errored?: boolean
+    errorMessage?: string
 }
 
 /**
@@ -45,7 +48,7 @@ export const Component = React.memo<Props>(props => {
                 className: props.className
             })}
         >
-            <FileBox>
+            <FileBox errored={props.errored}>
                 <Input {...dropzone.getInputProps()} />
                 <FileItems>
                     {props.fileName ? (
@@ -69,6 +72,10 @@ export const Component = React.memo<Props>(props => {
                     )}
                 </FileItems>
             </FileBox>
+            <ErrorMessage.Component
+                message={props.errorMessage}
+                errored={props.errored}
+            />
         </Wrap>
     )
 })
@@ -79,15 +86,23 @@ export const Component = React.memo<Props>(props => {
 const Wrap = styled.div<{ width?: string }>`
     width: ${props => (props.width ? props.width : '100%')};
 `
-const FileBox = styled.div`
+const FileBox = styled.div<{ errored?: boolean }>`
     cursor: pointer;
     text-align: center;
     height: 40px;
     padding: 0 24px;
     border-radius: 6px;
-    border: 1px dashed ${props => props.theme.colors.primary.default};
+    border: 1px dashed
+        ${props =>
+            props.errored
+                ? props.theme.colors.utilities.red.default
+                : props.theme.colors.primary.default};
     &.attach {
-        border: 1px solid ${props => props.theme.colors.primary.default};
+        border: 1px solid
+            ${props =>
+                props.errored
+                    ? props.theme.colors.utilities.red.default
+                    : props.theme.colors.primary.default};
     }
 `
 const FileItems = styled.div`

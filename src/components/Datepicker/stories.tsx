@@ -12,6 +12,8 @@ storiesOf('Components|Datepicker', module)
             monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
             onChange={Actions.action('onChange')}
             width={Knobs.text('width', '100%')}
+            errored={Knobs.boolean('Error', false)}
+            errorMessage={Knobs.text('ErrorMessage', '')}
         />
     ))
     .add('Null', () => (
@@ -21,5 +23,7 @@ storiesOf('Components|Datepicker', module)
             monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
             onChange={Actions.action('onChange')}
             width={Knobs.text('width', '100%')}
+            errored={Knobs.boolean('Error', false)}
+            errorMessage={Knobs.text('ErrorMessage', '')}
         />
     ))

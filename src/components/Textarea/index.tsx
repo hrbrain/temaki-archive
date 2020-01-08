@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 import TextareaAutosize from 'react-textarea-autosize'
+import * as FormErrorMessage from '~/components/lib/FormErrorMessage'
 
 /**
  * Component
@@ -12,14 +13,16 @@ type Props = {
     minRows?: number
     maxRows?: number
     errored?: boolean
+    errorMessage?: string
     onChange?: (value: string) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
     onFocus?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
     onBlur?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
     diff?: boolean
+    className?: string
 }
 
-const Component = React.memo<Props>(props => {
+export const Component = React.memo<Props>(props => {
     const [value, setValue] = React.useState(props.value)
     const changeValue = React.useCallback(
         (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -36,32 +39,42 @@ const Component = React.memo<Props>(props => {
     }, [props.value])
 
     return (
-        <Textarea
-            value={value}
-            placeholder={props.placeholder}
-            minRows={props.minRows}
-            maxRows={props.maxRows}
-            errored={props.errored}
-            onChange={changeValue}
-            onFocus={props.onFocus}
-            onBlur={props.onBlur}
-            diff={props.diff}
-        />
+        <Outer className={props.className}>
+            <Textarea
+                value={value}
+                placeholder={props.placeholder}
+                minRows={props.minRows}
+                maxRows={props.maxRows}
+                errored={props.errored}
+                onChange={changeValue}
+                onFocus={props.onFocus}
+                onBlur={props.onBlur}
+                diff={props.diff}
+            />
+            <FormErrorMessage.Component
+                errored={props.errored}
+                message={props.errorMessage}
+            />
+        </Outer>
     )
 })
 
 Component.displayName = 'Textarea'
 
-export { Component }
-
 /**
  * Styles
  */
+
+const Outer = styled.div`
+    display: inline-flex;
+    flex-direction: column;
+`
 
 const Textarea = styled(TextareaAutosize)<{
     errored?: boolean
     diff?: boolean
 }>`
+    display: block;
     border: 1px solid ${props => props.theme.colors.grayScale.S10};
     border-radius: 6px;
     width: 280px;

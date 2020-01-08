@@ -12,6 +12,7 @@ storiesOf('Components|Textarea', module).add('all', () => {
             minRows={number('minRows', 2)}
             maxRows={number('maxRows', 10)}
             errored={boolean('errored', false)}
+            errorMessage={text('ErrorMessage', '')}
             onChange={action('onChange')}
             onFocus={action('onFocus')}
             onBlur={action('onBlur')}
