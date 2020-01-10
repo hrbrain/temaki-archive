@@ -8,6 +8,8 @@ declare type Props = {
     accept?: string;
     width?: string;
     className?: string;
+    errored?: boolean;
+    errorMessage?: string;
 };
 /**
  * Component

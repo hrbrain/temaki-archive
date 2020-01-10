@@ -67,7 +67,7 @@ export declare const Toast: import("react").NamedExoticComponent<({
 export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").Props>;
 export declare const Tooltip: import("react").NamedExoticComponent<{
     text: string;
-    direction?: "top" | "right" | "bottom" | "left" | undefined;
+    direction?: "left" | "right" | "top" | "bottom" | undefined;
 }>;
 export declare const RadioButton: import("react").NamedExoticComponent<{
     text: string;
@@ -161,11 +161,13 @@ export declare const Textarea: import("react").NamedExoticComponent<{
     minRows?: number | undefined;
     maxRows?: number | undefined;
     errored?: boolean | undefined;
+    errorMessage?: string | undefined;
     onChange?: ((value: string) => void) | undefined;
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
     onFocus?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
     onBlur?: ((e: import("react").ChangeEvent<HTMLTextAreaElement>) => void) | undefined;
     diff?: boolean | undefined;
+    className?: string | undefined;
 }>;
 export declare const DropdownSingle: import("react").NamedExoticComponent<{
     items: import("./components/DropdownSingle/ItemList").Item[];
@@ -178,6 +180,7 @@ export declare const DropdownSingle: import("react").NamedExoticComponent<{
     diff?: boolean | undefined;
     className?: string | undefined;
     defaultExpanded?: boolean | undefined;
+    errorMessage?: string | undefined;
 }>;
 export declare type DropdownSingleItem = _DropdownSingleItem;
 export declare const DropdownMultiple: import("react").NamedExoticComponent<{
@@ -190,6 +193,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     diff?: boolean | undefined;
     defaultExpanded?: boolean | undefined;
     className?: string | undefined;
+    errorMessage?: string | undefined;
 }>;
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
 export declare const MeatballMenu: import("react").NamedExoticComponent<{
@@ -205,6 +209,8 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     accept?: string | undefined;
     width?: string | undefined;
     className?: string | undefined;
+    errored?: boolean | undefined;
+    errorMessage?: string | undefined;
 }>;
 export declare const DatePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
@@ -212,6 +218,8 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     date: Date | null;
     onChange: (date: Date | null) => void;
     width: string;
+    errored?: boolean | undefined;
+    errorMessage?: string | undefined;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
@@ -220,6 +228,8 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     endDate: Date | null;
     onChange: (startDate: Date | null, endDate: Date | null) => void;
     width: string;
+    errored?: boolean | undefined;
+    errorMessage?: string | undefined;
 }>;
 export declare const Modal: import("react").FunctionComponent<{
     isOpen: boolean;
@@ -228,7 +238,7 @@ export declare const Modal: import("react").FunctionComponent<{
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
     } & {
         type: "box";
-        colorType?: "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "disabled" | undefined;
+        colorType?: "disabled" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | undefined;
         height?: string | undefined;
         width?: string | undefined;
     } & {
