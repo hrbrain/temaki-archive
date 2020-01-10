@@ -8,11 +8,13 @@ declare type Props = {
     minRows?: number;
     maxRows?: number;
     errored?: boolean;
+    errorMessage?: string;
     onChange?: (value: string) => void;
     onChangeNative?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onFocus?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onBlur?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     diff?: boolean;
+    className?: string;
 };
-declare const Component: React.NamedExoticComponent<Props>;
-export { Component };
+export declare const Component: React.NamedExoticComponent<Props>;
+export {};

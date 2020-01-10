@@ -11,6 +11,8 @@ declare type Props = {
     endDate: Date | null;
     onChange: (startDate: Date | null, endDate: Date | null) => void;
     width: string;
+    errored?: boolean;
+    errorMessage?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

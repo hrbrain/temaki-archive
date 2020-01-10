@@ -2,9 +2,6 @@ import * as React from 'react';
 import 'react-dates/initialize';
 import 'moment/locale/ja';
 /**
- * Utils
- */
-/**
  * Component
  */
 declare type Props = {
@@ -13,6 +10,8 @@ declare type Props = {
     date: Date | null;
     onChange: (date: Date | null) => void;
     width: string;
+    errored?: boolean;
+    errorMessage?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
