@@ -105,7 +105,7 @@ const ListItem = styled.li`
     display: flex;
     cursor: pointer;
     &:hover {
-        color: ${props => props.theme.colors.primary.N60};
+        color: ${props => props.theme.colors.primary.default};
     }
     & + & {
         margin-top: 12px;
