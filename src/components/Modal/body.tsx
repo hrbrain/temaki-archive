@@ -92,6 +92,7 @@ const Footer = styled.div`
 `
 
 const StyledButton = styled(Button.Component)`
+    min-width: 158px;
     & + & {
         margin-left: 16px;
     }

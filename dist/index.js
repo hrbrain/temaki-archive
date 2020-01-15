@@ -329,7 +329,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     display: flex;
     cursor: pointer;
     &:hover {
-        color: ${e=>e.theme.colors.primary.N60};
+        color: ${e=>e.theme.colors.primary.default};
     }
     & + & {
         margin-top: 12px;
@@ -455,7 +455,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     display: flex;
     cursor: pointer;
     &:hover {
-        color: ${e=>e.theme.colors.primary.N60};
+        color: ${e=>e.theme.colors.primary.default};
     }
     & + & {
         margin-top: 12px;
@@ -549,7 +549,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     }
     &:hover {
         transition: 0.2s;
-        color: ${e=>e.theme.colors.utilities.highlightGreen.default};
+        color: ${e=>e.theme.colors.primary.default};
     }
 `;var Rn=n(22);const An=e=>{var t;return o.createElement(Nn,null,o.createElement(zn,null,o.createElement(Wn,null,o.createElement(Bn,null,e.title),o.createElement(Un,{onClick:e.onClose,"data-test":"closeIcon"},o.createElement(k,{svg:b.Close,size:"24"}))),o.createElement(Kn,null,e.children),e.buttons&&o.createElement($n,null,ce()(t=e.buttons).call(t,(e,t)=>o.createElement(Gn,a()({key:t,"data-test":`button${t}`},e),e.text)))))},Nn=v.div`
     position: fixed;
@@ -588,6 +588,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     align-items: center;
     justify-content: flex-end;
 `,Gn=v(V)`
+    min-width: 158px;
     & + & {
         margin-left: 16px;
     }
