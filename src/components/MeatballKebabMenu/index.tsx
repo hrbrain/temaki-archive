@@ -37,7 +37,7 @@ const renderListItem = (
         <ListItem
             data-test={`list-item${index}`}
             onClick={listClick}
-            className={listItem.type}
+ { ...(listItem.type && { className: listItem.type })}
             key={listItem.item}
         >
             {listItem.item}
