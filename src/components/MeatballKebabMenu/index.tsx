@@ -18,6 +18,7 @@ type Props = {
 
 export type Item = {
     item: string
+    type?: string
     onClick: (e: React.MouseEvent) => void
 }
 
@@ -36,6 +37,7 @@ const renderListItem = (
         <ListItem
             data-test={`list-item${index}`}
             onClick={listClick}
+            className={listItem.type}
             key={listItem.item}
         >
             {listItem.item}
@@ -145,8 +147,7 @@ const ListItem = styled.li`
     & + & {
         margin-top: 8px;
     }
-    &:hover {
-        transition: 0.2s;
-        color: ${props => props.theme.colors.primary.default};
+    &.red {
+        color: ${props => props.theme.colors.utilities.red.default};
     }
 `
