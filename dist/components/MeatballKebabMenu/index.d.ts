@@ -10,6 +10,7 @@ declare type Props = {
 };
 export declare type Item = {
     item: string;
+    type?: string;
     onClick: (e: React.MouseEvent) => void;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
