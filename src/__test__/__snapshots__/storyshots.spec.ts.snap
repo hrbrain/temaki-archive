@@ -1732,21 +1732,21 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
         data-test="list-component"
       >
         <li
-          className="sc-dVhcbM eBVhnM"
+          className="sc-dVhcbM fQMOAO"
           data-test="list-item0"
           onClick={[Function]}
         >
           リスト1
         </li>
         <li
-          className="sc-dVhcbM eBVhnM"
+          className="sc-dVhcbM fQMOAO"
           data-test="list-item1"
           onClick={[Function]}
         >
           リスト2
         </li>
         <li
-          className="sc-dVhcbM eBVhnM"
+          className="red sc-dVhcbM fQMOAO"
           data-test="list-item2"
           onClick={[Function]}
         >
