@@ -111,16 +111,6 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
           },
         },
       },
-      "layers": Object {
-        "content": "50",
-        "fullmodal": "600",
-        "header": "300",
-        "loading": "1000",
-        "popover": "400",
-        "sidemodal": "500",
-        "toast": "200",
-        "tooltip": "100",
-      },
       "shadows": Object {
         "boxShadow": Object {
           "L1": "0 0 2px 0 rgba(0, 0, 0, 0.16)",
