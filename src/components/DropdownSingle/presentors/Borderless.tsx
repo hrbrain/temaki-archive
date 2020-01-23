@@ -98,7 +98,6 @@ const DropDownIcon = styled(Icon.Component)`
 
 const Body = styled.div<{ width?: string; diff?: boolean }>`
     width: ${props => props.width || '100%'};
-    max-width: 262px;
     display: flex;
     border-radius: 6px;
     user-select: none;
