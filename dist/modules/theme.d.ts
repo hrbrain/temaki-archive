@@ -116,14 +116,14 @@ export declare type RequiredThemeTextSizeSP = {
     };
 };
 export declare type RequiredThemeLayers = {
-    L1: string;
-    L2: string;
-    L3: string;
-    L4: string;
-    L5: string;
-    L6: string;
-    L7: string;
-    L8: string;
+    content: string;
+    tooltip: string;
+    toast: string;
+    header: string;
+    popover: string;
+    sidemodal: string;
+    fullmodal: string;
+    loading: string;
 };
 export declare type RequiredThemeProps = {
     colors: RequiredThemeColors;

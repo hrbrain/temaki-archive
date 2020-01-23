@@ -91,7 +91,7 @@ const ItemList = styled.ul<{ isVisible?: boolean }>`
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
     max-height: 204px;
     overflow-y: auto;
-    z-index: ${props => props.theme.layers.L3};
+    z-index: ${props => props.theme.layers.popover};
 `
 
 const ListInner = styled.div`
