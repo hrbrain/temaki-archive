@@ -97,6 +97,16 @@ exports[`Input format of number should match previous snapshot 1`] = `
           },
         },
       },
+      "layers": Object {
+        "L1": "50",
+        "L2": "100",
+        "L3": "200",
+        "L4": "300",
+        "L5": "400",
+        "L6": "500",
+        "L7": "600",
+        "L8": "1000",
+      },
       "shadows": Object {
         "boxShadow": Object {
           "L1": "0 0 2px 0 rgba(0, 0, 0, 0.16)",
@@ -417,6 +427,16 @@ exports[`Input format of text should match previous snapshot 1`] = `
             "default": "rgb(224, 85, 72)",
           },
         },
+      },
+      "layers": Object {
+        "L1": "50",
+        "L2": "100",
+        "L3": "200",
+        "L4": "300",
+        "L5": "400",
+        "L6": "500",
+        "L7": "600",
+        "L8": "1000",
       },
       "shadows": Object {
         "boxShadow": Object {

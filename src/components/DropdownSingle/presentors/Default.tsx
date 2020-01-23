@@ -128,7 +128,6 @@ const Text = styled.div`
 const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`
     position: absolute;
     left: 0;
-    max-width: 260px;
     width: 100%;
     transition: all 0.2s;
     transform-origin: top;

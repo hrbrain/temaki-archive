@@ -121,10 +121,22 @@ export type RequiredThemeTextSizeSP = {
     }
 }
 
+export type RequiredThemeLayers = {
+    L1: string
+    L2: string
+    L3: string
+    L4: string
+    L5: string
+    L6: string
+    L7: string
+    L8: string
+}
+
 export type RequiredThemeProps = {
     colors: RequiredThemeColors
     shadows: RequiredThemeShadows
     typography: RequiredThemeTextSize
+    layers: RequiredThemeLayers
 }
 
 export const defaultTheme: RequiredThemeProps = {
@@ -240,6 +252,16 @@ export const defaultTheme: RequiredThemeProps = {
                 H6: '14px'
             }
         }
+    },
+    layers: {
+        L1: '50',
+        L2: '100',
+        L3: '200',
+        L4: '300',
+        L5: '400',
+        L6: '500',
+        L7: '600',
+        L8: '1000'
     }
 }
 

@@ -89,7 +89,6 @@ const ItemList = styled.ul<{ isVisible?: boolean }>`
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
-    max-width: 262px;
     max-height: 204px;
     overflow-y: auto;
 `
