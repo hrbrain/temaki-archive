@@ -122,14 +122,14 @@ export type RequiredThemeTextSizeSP = {
 }
 
 export type RequiredThemeLayers = {
-    L1: string
-    L2: string
-    L3: string
-    L4: string
-    L5: string
-    L6: string
-    L7: string
-    L8: string
+    content: string
+    tooltip: string
+    toast: string
+    header: string
+    popover: string
+    sidemodal: string
+    fullmodal: string
+    loading: string
 }
 
 export type RequiredThemeProps = {
@@ -254,14 +254,14 @@ export const defaultTheme: RequiredThemeProps = {
         }
     },
     layers: {
-        L1: '50',
-        L2: '100',
-        L3: '200',
-        L4: '300',
-        L5: '400',
-        L6: '500',
-        L7: '600',
-        L8: '1000'
+        content: '50',
+        tooltip: '100',
+        toast: '200',
+        header: '300',
+        popover: '400',
+        sidemodal: '500',
+        fullmodal: '600',
+        loading: '1000'
     }
 }
 
