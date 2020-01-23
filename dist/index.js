@@ -500,7 +500,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     margin-left: 4px;
 `,Pn=v.input`
     display: none;
-`,Yn=o.memo(({type:e,position:t,listItems:n,onClick:r})=>{const[a,i]=o.useState(!1),s=o.useCallback(e=>{i(!a),r(e)},[a]),l=o.useCallback(()=>{i(!1)},[a]);return o.createElement(En,null,o.createElement(Ge,{"data-test":"click-outside",onClickOutside:l},o.createElement(jn,{"data-test":"menu-component",className:t,onClick:s},o.createElement(In,{"data-test":"icon-src",svg:On(e),size:"24px"})),o.createElement(Hn,{"data-test":"list-component",className:`${t} ${a?"":"hidden"}`},ce()(n).call(n,((e,t)=>(n,r)=>{const a=o.useCallback(r=>{n.onClick(r),t(!e)},[e]);return o.createElement(Fn,{"data-test":`list-item${r}`,onClick:a,className:n.type,key:n.item},n.item)})(a,i)))))}),On=e=>"meatball"==e?b.MenuH:b.MenuV,En=v.div`
+`,Yn=o.memo(({type:e,position:t,listItems:n,onClick:r})=>{const[a,i]=o.useState(!1),s=o.useCallback(e=>{i(!a),r(e)},[a]),l=o.useCallback(()=>{i(!1)},[a]);return o.createElement(En,null,o.createElement(Ge,{"data-test":"click-outside",onClickOutside:l},o.createElement(jn,{"data-test":"menu-component",className:t,onClick:s},o.createElement(In,{"data-test":"icon-src",svg:On(e),size:"24px"})),o.createElement(Hn,{"data-test":"list-component",className:`${t} ${a?"":"hidden"}`},ce()(n).call(n,((e,t)=>(n,r)=>{const a=o.useCallback(r=>{n.onClick(r),t(!e)},[e]);return o.createElement(Fn,{"data-test":`list-item${r}`,onClick:a,key:n.item,color:n.color},n.item)})(a,i)))))}),On=e=>"meatball"==e?b.MenuH:b.MenuV,En=v.div`
     position: relative;
 `,jn=v.div`
     cursor: pointer;
@@ -543,9 +543,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     & + & {
         margin-top: 8px;
     }
-    &.red {
-        color: ${e=>e.theme.colors.utilities.red.default};
-    }
+    color: ${e=>"primary"===e.color?e.theme.colors.primary.default:"destructive"===e.color?e.theme.colors.utilities.red.default:e.theme.colors.text.default};
 `;var Rn=n(22);const An=e=>{var t;return o.createElement(Nn,null,o.createElement(zn,null,o.createElement(Wn,null,o.createElement(Bn,null,e.title),o.createElement(Un,{onClick:e.onClose,"data-test":"closeIcon"},o.createElement(k,{svg:b.Close,size:"24"}))),o.createElement(Kn,null,e.children),e.buttons&&o.createElement($n,null,ce()(t=e.buttons).call(t,(e,t)=>o.createElement(Gn,a()({key:t,"data-test":`button${t}`},e),e.text)))))},Nn=v.div`
     position: fixed;
     z-index: 600;
