@@ -18,7 +18,7 @@ type Props = {
 
 export type Item = {
     item: string
-    type?: string
+    color?: 'default' | 'primary' | 'destructive'
     onClick: (e: React.MouseEvent) => void
 }
 
@@ -37,8 +37,8 @@ const renderListItem = (
         <ListItem
             data-test={`list-item${index}`}
             onClick={listClick}
- { ...(listItem.type && { className: listItem.type })}
             key={listItem.item}
+            color={listItem.color}
         >
             {listItem.item}
         </ListItem>
@@ -147,7 +147,13 @@ const ListItem = styled.li`
     & + & {
         margin-top: 8px;
     }
-    &.red {
-        color: ${props => props.theme.colors.utilities.red.default};
-    }
+    color: ${props => {
+        if (props.color === 'primary') {
+            return props.theme.colors.primary.default
+        }
+        if (props.color === 'destructive') {
+            return props.theme.colors.utilities.red.default
+        }
+        return props.theme.colors.text.default
+    }};
 `

@@ -32,5 +32,9 @@ storiesOf('Components|MeatballKebabMenu', module).add('all', () => {
 const menuItems = [
     { item: text('text1', 'リスト1'), onClick: action('onClick1') },
     { item: text('text2', 'リスト2'), onClick: action('onClick2') },
-    { item: text('text3', 'リスト3'), onClick: action('onClick3'), type: 'red' }
+    {
+        item: text('text3', 'リスト3'),
+        onClick: action('onClick3'),
+        color: 'destructive' as const
+    }
 ]
