@@ -1110,7 +1110,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
           />
         </div>
         <ul
-          className="sc-dxgOiQ beyORM sc-cSHVUG hhYcaI"
+          className="sc-dxgOiQ beyORM sc-cSHVUG dfFJYj"
           data-test="itemList"
         >
           <div
