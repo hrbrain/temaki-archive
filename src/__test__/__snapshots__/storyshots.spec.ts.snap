@@ -1110,7 +1110,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
           />
         </div>
         <ul
-          className="sc-dxgOiQ beyORM sc-cSHVUG jymDqp"
+          className="sc-dxgOiQ beyORM sc-cSHVUG hhYcaI"
           data-test="itemList"
         >
           <div
@@ -1269,7 +1269,7 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
         />
       </div>
       <ul
-        className="sc-jWBwVP iefMfI sc-ckVGcZ hNIlPU"
+        className="sc-jWBwVP iefMfI sc-ckVGcZ cepSGx"
         data-test="itemList"
       >
         <li
@@ -1372,7 +1372,7 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           />
         </div>
         <ul
-          className="sc-eHgmQL ktcSYO sc-ckVGcZ hNIlPU"
+          className="sc-eHgmQL ktcSYO sc-ckVGcZ cepSGx"
           data-test="itemList"
         >
           <li
@@ -1527,7 +1527,7 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
   className="ml-20 mt-10"
 >
   <ul
-    className="sc-ckVGcZ hNIlPU"
+    className="sc-ckVGcZ cepSGx"
     data-test="itemList"
   >
     <li

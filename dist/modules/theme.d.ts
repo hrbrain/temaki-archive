@@ -115,21 +115,10 @@ export declare type RequiredThemeTextSizeSP = {
         H6: string;
     };
 };
-export declare type RequiredThemeLayers = {
-    content: string;
-    tooltip: string;
-    toast: string;
-    header: string;
-    popover: string;
-    sidemodal: string;
-    fullmodal: string;
-    loading: string;
-};
 export declare type RequiredThemeProps = {
     colors: RequiredThemeColors;
     shadows: RequiredThemeShadows;
     typography: RequiredThemeTextSize;
-    layers: RequiredThemeLayers;
 };
 export declare const defaultTheme: RequiredThemeProps;
 declare const styled: styledComponents.ThemedBaseStyledInterface<RequiredThemeProps>, ServerStyleSheet: typeof styledComponents.ServerStyleSheet, StyleSheetManager: typeof styledComponents.StyleSheetManager, createGlobalStyle: <P extends object = {}>(first: styledComponents.CSSObject | TemplateStringsArray | styledComponents.InterpolationFunction<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>, ...interpolations: styledComponents.Interpolation<styledComponents.ThemedStyledProps<P, RequiredThemeProps>>[]) => styledComponents.GlobalStyleComponent<P, RequiredThemeProps>, css: styledComponents.BaseThemedCssFunction<RequiredThemeProps>, isStyledComponent: typeof styledComponents.isStyledComponent, keyframes: (strings: TemplateStringsArray | styledComponents.CSSKeyframes, ...interpolations: styledComponents.SimpleInterpolation[]) => styledComponents.Keyframes, withTheme: styledComponents.BaseWithThemeFnInterface<RequiredThemeProps>;

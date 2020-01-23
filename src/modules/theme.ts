@@ -121,22 +121,10 @@ export type RequiredThemeTextSizeSP = {
     }
 }
 
-export type RequiredThemeLayers = {
-    content: string
-    tooltip: string
-    toast: string
-    header: string
-    popover: string
-    sidemodal: string
-    fullmodal: string
-    loading: string
-}
-
 export type RequiredThemeProps = {
     colors: RequiredThemeColors
     shadows: RequiredThemeShadows
     typography: RequiredThemeTextSize
-    layers: RequiredThemeLayers
 }
 
 export const defaultTheme: RequiredThemeProps = {
@@ -252,16 +240,6 @@ export const defaultTheme: RequiredThemeProps = {
                 H6: '14px'
             }
         }
-    },
-    layers: {
-        content: '50',
-        tooltip: '100',
-        toast: '200',
-        header: '300',
-        popover: '400',
-        sidemodal: '500',
-        fullmodal: '600',
-        loading: '1000'
     }
 }
 
