@@ -443,6 +443,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     box-shadow: ${e=>e.theme.shadows.dropShadow.L5};
     max-height: 204px;
     overflow-y: auto;
+    z-index: ${e=>e.theme.layers.L3};
 `,jt=v.div`
     padding: 12px;
 `,It=v.li`
