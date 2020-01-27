@@ -61,8 +61,11 @@ const CheckIcon = styled(Icon.Component)`
     height: 24px;
     width: 24px;
 
-    & .primary {
+    & #fill {
         fill: ${props => props.theme.colors.primary.default};
+        & .disabled {
+            fill: ${props => props.theme.colors.grayScale.S20};
+        }
     }
 `
 
