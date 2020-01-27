@@ -78,6 +78,7 @@ function selectIconColor(theme: RequiredThemeProps, colorType?: string) {
  */
 
 const Outer = styled.button`
+    background: transparent;
     ${Styles.buttonBaseMixin}
     ${Styles.rippleEffectMixin}
     height: 24px;

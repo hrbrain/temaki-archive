@@ -130,6 +130,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     /* colors */
     ${e=>{switch(e.colorType){case"primary":return H(e.theme.colors.primary.default,e.theme.colors.primary.N20,e.theme.colors.primary.N40,e.theme.colors.grayScale.S0);case"secondary":return H(e.theme.colors.grayScale.S5,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S40,e.theme.colors.grayScale.S100,e.theme.colors.grayScale.S50);default:return""}}}
 `,U=({svg:e,colorType:t,children:n,...r})=>o.createElement($,r,function(e,t){if(!e)return null;return o.createElement(g,null,n=>o.createElement(k,{svg:e,size:"24px",color:K(n,t)}))}(e,t),function(e,t,n){if(!n)return null;return o.createElement(G,{colorType:t,svg:e,"data-test":"text-button-child"},n)}(e,t,n));function K(e,t){switch(t){case"primary":return e.colors.primary.default;case"destructive":return e.colors.utilities.red.default;default:return e.colors.text.default}}const $=v.button`
+    background: transparent;
     ${F}
     ${R}
     height: 24px;

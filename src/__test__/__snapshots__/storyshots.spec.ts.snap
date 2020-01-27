@@ -917,7 +917,7 @@ exports[`Storyshots Components|Button Circle 1`] = `
 
 exports[`Storyshots Components|Button Text 1`] = `
 <button
-  className="sc-EHOje hFCfGq"
+  className="sc-EHOje euMnIY"
   onClick={[Function]}
   type="text"
 >
