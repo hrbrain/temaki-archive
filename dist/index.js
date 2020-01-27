@@ -57,8 +57,11 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     height: 24px;
     width: 24px;
 
-    & .primary {
+    & #fill {
         fill: ${e=>e.theme.colors.primary.default};
+        & .disabled {
+            fill: ${e=>e.theme.colors.grayScale.S20};
+        }
     }
 `,x=v.span`
     height: 100%;
@@ -126,13 +129,13 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
 
     /* colors */
     ${e=>{switch(e.colorType){case"primary":return H(e.theme.colors.primary.default,e.theme.colors.primary.N20,e.theme.colors.primary.N40,e.theme.colors.grayScale.S0);case"secondary":return H(e.theme.colors.grayScale.S5,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S40,e.theme.colors.grayScale.S100,e.theme.colors.grayScale.S50);default:return""}}}
-`,U=({svg:e,colorType:t,children:n,...r})=>o.createElement($,r,function(e,t){if(!e)return null;return o.createElement(g,null,n=>o.createElement(k,{svg:e,size:"24px",color:K(n,t)}))}(e,t),function(e,t,n){if(!n)return null;return o.createElement(G,{colorType:t,svg:e,"data-test":"text-button-child"},n)}(e,t,n));function K(e,t){switch(t){case"destructive":return e.colors.utilities.red.default;default:return}}const $=v.button`
+`,U=({svg:e,colorType:t,children:n,...r})=>o.createElement($,r,function(e,t){if(!e)return null;return o.createElement(g,null,n=>o.createElement(k,{svg:e,size:"24px",color:K(n,t)}))}(e,t),function(e,t,n){if(!n)return null;return o.createElement(G,{colorType:t,svg:e,"data-test":"text-button-child"},n)}(e,t,n));function K(e,t){switch(t){case"primary":return e.colors.primary.default;case"destructive":return e.colors.utilities.red.default;default:return}}const $=v.button`
     ${F}
     ${R}
     height: 24px;
     width: auto;
 `,G=v.span`
-    color: ${e=>{switch(e.colorType){case"destructive":return e.theme.colors.utilities.red.default;default:return e.theme.colors.text}}};
+    color: ${e=>{switch(e.colorType){case"primary":return e.theme.colors.primary.default;case"destructive":return e.theme.colors.utilities.red.default;default:return e.theme.colors.text}}};
     padding-left: ${e=>e.svg?"4px":"0"};
     font-size: 14px;
     font-weight: normal;
@@ -513,6 +516,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
         bottom: 0;
     }
 `,In=v(k)``,Hn=v.ul`
+    white-space: pre-wrap;
     position: absolute;
     display: block;
     right: 0;

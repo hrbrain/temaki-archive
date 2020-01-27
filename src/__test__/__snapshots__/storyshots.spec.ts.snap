@@ -922,7 +922,7 @@ exports[`Storyshots Components|Button Text 1`] = `
   type="text"
 >
   <span
-    className="sc-bZQynM rlUyS"
+    className="sc-bZQynM bUEYNy"
     data-test="text-button-child"
   >
     Show filters
@@ -938,7 +938,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
   tabIndex={1}
 >
   <div
-    className="sc-htoDjs irgUaa sc-bxivhb hBuNrQ"
+    className="sc-htoDjs bsmXEx sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1728,7 +1728,7 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
         />
       </div>
       <ul
-        className="top hidden sc-fMiknA ckfPhm"
+        className="top hidden sc-fMiknA jeUOtE"
         data-test="list-component"
       >
         <li

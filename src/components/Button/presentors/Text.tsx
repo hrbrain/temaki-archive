@@ -64,6 +64,8 @@ function renderText(
 
 function selectIconColor(theme: RequiredThemeProps, colorType?: string) {
     switch (colorType) {
+        case 'primary':
+            return theme.colors.primary.default
         case 'destructive':
             return theme.colors.utilities.red.default
         default:
@@ -90,6 +92,8 @@ type TextType = {
 const Text = styled.span<TextType>`
     color: ${props => {
         switch (props.colorType) {
+            case 'primary':
+                return props.theme.colors.primary.default
             case 'destructive':
                 return props.theme.colors.utilities.red.default
             default:
