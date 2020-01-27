@@ -116,7 +116,7 @@ const Menu = styled.div`
 const MenuItem = styled(Icon.Component)``
 
 const List = styled.ul`
-    white-space: pre-wrap;
+    white-space: nowrap;
     position: absolute;
     display: block;
     right: 0;

@@ -238,7 +238,7 @@ export declare const Modal: import("react").FunctionComponent<{
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
     } & {
         type: "box";
-        colorType?: "disabled" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | undefined;
+        colorType?: "disabled" | "default" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | undefined;
         height?: string | undefined;
         width?: string | undefined;
     } & {
@@ -247,7 +247,7 @@ export declare const Modal: import("react").FunctionComponent<{
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
     } & {
         type: "circle";
-        colorType?: "primary" | "secondary" | undefined;
+        colorType?: "default" | "primary" | "secondary" | undefined;
         svg?: string | undefined;
     } & {
         text: string;
@@ -255,7 +255,7 @@ export declare const Modal: import("react").FunctionComponent<{
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
     } & {
         type: "text";
-        colorType?: "primary" | "destructive" | undefined;
+        colorType?: "default" | "primary" | "destructive" | undefined;
         svg?: string | undefined;
     } & {
         text: string;

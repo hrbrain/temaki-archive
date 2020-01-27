@@ -118,7 +118,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
     }
 
     /* color */
-    ${e=>{switch(e.colorType){case"primary":return H(e.theme.colors.primary.default,e.theme.colors.primary.N20,e.theme.colors.primary.N40,e.theme.colors.grayScale.S0);case"primary ghost":return H("inherit",e.theme.colors.primary.N80,e.theme.colors.primary.N60,e.theme.colors.primary.default,e.theme.colors.primary.default);case"secondary":return H(e.theme.colors.grayScale.S5,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S40,e.theme.colors.grayScale.S100,e.theme.colors.grayScale.S50);case"secondary ghost":return H("inherit",e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S40,e.theme.colors.grayScale.S100,e.theme.colors.grayScale.S50);case"destructive":return H(e.theme.colors.utilities.red.default,"rgb(179, 68, 58)","rgb(133, 51, 43)",e.theme.colors.grayScale.S0);case"destructive ghost":return H("inherit","rgb(250, 221, 218)","rgb(244, 187, 182)",e.theme.colors.utilities.red.default,e.theme.colors.utilities.red.default);case"disabled":return H(e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S0);default:return""}}}
+    ${e=>{switch(e.colorType){case"primary":return H(e.theme.colors.primary.default,e.theme.colors.primary.N20,e.theme.colors.primary.N40,e.theme.colors.grayScale.S0);case"primary ghost":return H("inherit",e.theme.colors.primary.N80,e.theme.colors.primary.N60,e.theme.colors.primary.default,e.theme.colors.primary.default);case"secondary":return H(e.theme.colors.grayScale.S5,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S40,e.theme.colors.grayScale.S100,e.theme.colors.grayScale.S10);case"secondary ghost":return H("inherit",e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S40,e.theme.colors.grayScale.S100,e.theme.colors.grayScale.S50);case"destructive":return H(e.theme.colors.utilities.red.default,"rgb(179, 68, 58)","rgb(133, 51, 43)",e.theme.colors.grayScale.S0);case"destructive ghost":return H("inherit","rgb(250, 221, 218)","rgb(244, 187, 182)",e.theme.colors.utilities.red.default,e.theme.colors.utilities.red.default);case"disabled":return H(e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S0);default:return""}}}
 `,z=({svg:e,...t})=>o.createElement(B,t,o.createElement(g,null,W(e,t.colorType))),W=(e,t)=>n=>{if(!e)return null;if(!t)return null;let r="";switch(t){case"primary":r=n.colors.grayScale.S0;break;case"secondary":r=n.colors.grayScale.S100}return o.createElement(k,{svg:e,size:"24px",color:r})},B=v.button`
     ${R}
     ${F}
@@ -129,7 +129,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
 
     /* colors */
     ${e=>{switch(e.colorType){case"primary":return H(e.theme.colors.primary.default,e.theme.colors.primary.N20,e.theme.colors.primary.N40,e.theme.colors.grayScale.S0);case"secondary":return H(e.theme.colors.grayScale.S5,e.theme.colors.grayScale.S20,e.theme.colors.grayScale.S40,e.theme.colors.grayScale.S100,e.theme.colors.grayScale.S50);default:return""}}}
-`,U=({svg:e,colorType:t,children:n,...r})=>o.createElement($,r,function(e,t){if(!e)return null;return o.createElement(g,null,n=>o.createElement(k,{svg:e,size:"24px",color:K(n,t)}))}(e,t),function(e,t,n){if(!n)return null;return o.createElement(G,{colorType:t,svg:e,"data-test":"text-button-child"},n)}(e,t,n));function K(e,t){switch(t){case"primary":return e.colors.primary.default;case"destructive":return e.colors.utilities.red.default;default:return}}const $=v.button`
+`,U=({svg:e,colorType:t,children:n,...r})=>o.createElement($,r,function(e,t){if(!e)return null;return o.createElement(g,null,n=>o.createElement(k,{svg:e,size:"24px",color:K(n,t)}))}(e,t),function(e,t,n){if(!n)return null;return o.createElement(G,{colorType:t,svg:e,"data-test":"text-button-child"},n)}(e,t,n));function K(e,t){switch(t){case"primary":return e.colors.primary.default;case"destructive":return e.colors.utilities.red.default;default:return e.colors.text.default}}const $=v.button`
     ${F}
     ${R}
     height: 24px;
@@ -516,7 +516,7 @@ Object.defineProperty(t,"__esModule",{value:!0});var n=null,r=!1,a=3,o=-1,i=-1,s
         bottom: 0;
     }
 `,In=v(k)``,Hn=v.ul`
-    white-space: pre-wrap;
+    white-space: nowrap;
     position: absolute;
     display: block;
     right: 0;

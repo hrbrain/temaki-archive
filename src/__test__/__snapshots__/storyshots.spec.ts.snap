@@ -1728,7 +1728,7 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
         />
       </div>
       <ul
-        className="top hidden sc-fMiknA jeUOtE"
+        className="top hidden sc-fMiknA bSasrg"
         data-test="list-component"
       >
         <li
