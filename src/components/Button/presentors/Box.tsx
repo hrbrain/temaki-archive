@@ -75,7 +75,7 @@ const Outer = styled.button<OuterProps>`
                     props.theme.colors.grayScale.S20,
                     props.theme.colors.grayScale.S40,
                     props.theme.colors.grayScale.S100,
-                    props.theme.colors.grayScale.S50
+                    props.theme.colors.grayScale.S10
                 )
             case 'secondary ghost':
                 return Styles.createCSSFromColorType(

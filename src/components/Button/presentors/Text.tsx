@@ -69,7 +69,7 @@ function selectIconColor(theme: RequiredThemeProps, colorType?: string) {
         case 'destructive':
             return theme.colors.utilities.red.default
         default:
-            return undefined
+            return theme.colors.text.default
     }
 }
 
