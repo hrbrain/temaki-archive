@@ -129,6 +129,7 @@ const InnerText = styled.div`
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.colors.primary.N95};
+    color: ${props => props.theme.colors.primary.default};
     padding: 0 4px;
     margin: 4px 8px 4px 0px;
 `

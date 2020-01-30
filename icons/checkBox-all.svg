@@ -11,7 +11,7 @@
                 <path d="M3,10 L17,10" id="Stroke-3" stroke="#FFFFFF" stroke-width="1.5"></path>
             </g>
             <g id="fill" transform="translate(2.000000, 2.000000)" fill-rule="nonzero">
-                <path d="M17.5,20 L2.5,20 C1.125,20 0,18.875 0,17.5 L0,2.5 C0,1.125 1.125,0 2.5,0 L17.5,0 C18.875,0 20,1.125 20,2.5 L20,17.5 C20,18.875 18.875,20 17.5,20" id="Fill-1" fill="#333333"></path>
+                <path d="M17.5,20 L2.5,20 C1.125,20 0,18.875 0,17.5 L0,2.5 C0,1.125 1.125,0 2.5,0 L17.5,0 C18.875,0 20,1.125 20,2.5 L20,17.5 C20,18.875 18.875,20 17.5,20" id="Fill-1"></path>
                 <polygon id="Stroke-3" fill="#FFFFFF" points="3 10.75 3 9.25 17 9.25 17 10.75"></polygon>
             </g>
         </g>
