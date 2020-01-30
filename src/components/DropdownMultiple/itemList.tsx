@@ -67,7 +67,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
 
     return (
         <ListItem onClick={handleClick}>
-            <Icon.Component
+            <CheckIcon
                 svg={
                     props.selected.indexOf(props.item.value) >= 0
                         ? IconFiles.icons.CheckBoxOn
@@ -108,6 +108,15 @@ const ListItem = styled.li`
     }
     & + & {
         margin-top: 12px;
+    }
+`
+
+const CheckIcon = styled(Icon.Component)`
+    & #fill {
+        fill: ${props => props.theme.colors.primary.default};
+        & .disabled {
+            fill: ${props => props.theme.colors.grayScale.S20};
+        }
     }
 `
 
