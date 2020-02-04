@@ -27,7 +27,7 @@ export const Component = React.memo<Props>(props => {
     const [
         focusedInput,
         setFocusedInput
-    ] = React.useState<ReactDates.FocusedInputShape | null>('startDate')
+    ] = React.useState<ReactDates.FocusedInputShape | null>(null)
 
     const conversionToMomentType = React.useCallback(
         (date: Date | null) => {
@@ -144,7 +144,6 @@ const Outer = styled.div<OuterProps>`
         }
         .SingleDatePickerInput {
             display: flex;
-            flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-around;
             align-items: center;
@@ -768,7 +767,6 @@ const Outer = styled.div<OuterProps>`
             margin: 0;
             position: relative;
             vertical-align: middle;
-            width: 106px;
         }
         .DateInput__small {
             width: 97px;
@@ -781,7 +779,6 @@ const Outer = styled.div<OuterProps>`
             color: #dbdbdb;
         }
         .DateInput_input {
-            text-align: center;
             background-color: transparent;
             font-weight: 200;
             line-height: 24px;
@@ -789,7 +786,13 @@ const Outer = styled.div<OuterProps>`
             height: 100%;
             font-size: 14px;
             text-align: left;
-            width: 112px;
+            border-style: none;
+            display: flex;
+            flex-grow: 1;
+            width: 100%;
+        }
+        #endDate {
+            padding-left: 8px;
         }
         .DateInput_input__small {
             font-size: 14px;
@@ -840,16 +843,15 @@ const Outer = styled.div<OuterProps>`
             stroke: #dbdbdb;
             fill: transparent;
         }
-        div.DateRangePickerInput > div.DateInput {
-            display: inline;
-        }
         .DateRangePickerInput {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-color: space-around;
             background-color: #fff;
-            display: inline-block;
             height: 40px;
             width: ${props => props.width};
             padding: 0 12px;
-            //position: absolute;
         }
         .DateRangePickerInput__disabled {
             background: #f2f2f2;
