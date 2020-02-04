@@ -86,6 +86,7 @@ const ItemList = styled.ul`
     max-height: 204px;
     overflow-y: auto;
     padding: 12px;
+    z-index: 1;
 `
 
 const Item = styled.li`
