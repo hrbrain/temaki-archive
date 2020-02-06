@@ -21,6 +21,8 @@ type Props = {
     width: string
     errored?: boolean
     errorMessage?: string
+    startDatePlaceholderText?: string
+    endDatePlaceholderText?: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -43,21 +45,11 @@ export const Component = React.memo<Props>(props => {
         [focusedInput]
     )
 
-    const handleOnDatesChange = React.useCallback(
-        ({ startDate, endDate }) => {
-            let rtnStartDate: Date = new Date()
-            let rtnEndDate: Date = new Date()
-
-            if (startDate != null) {
-                rtnStartDate = startDate.toDate()
-            }
-            if (endDate != null) {
-                rtnEndDate = endDate.toDate()
-            }
-            props.onChange(rtnStartDate, rtnEndDate)
-        },
-        [props.startDate, props.endDate]
-    )
+    const handleOnDatesChange = React.useCallback(({ startDate, endDate }) => {
+        const rtnStartDate = startDate ? startDate.toDate() : null
+        const rtnEndDate = endDate ? endDate.toDate() : null
+        props.onChange(rtnStartDate, rtnEndDate)
+    }, [])
 
     const calendarIconRender = React.useMemo(() => {
         return <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
@@ -82,6 +74,8 @@ export const Component = React.memo<Props>(props => {
                 startDateId={'startDate'}
                 endDate={conversionToMomentType(props.endDate)}
                 endDateId={'endDate'}
+                startDatePlaceholderText={props.startDatePlaceholderText}
+                endDatePlaceholderText={props.endDatePlaceholderText}
                 focusedInput={focusedInput}
                 onFocusChange={handleOnFocusChange}
                 onDatesChange={handleOnDatesChange}

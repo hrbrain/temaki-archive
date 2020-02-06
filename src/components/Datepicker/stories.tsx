@@ -8,6 +8,7 @@ storiesOf('Components|Datepicker', module)
     .add('Standard', () => (
         <Datepicker.Component
             date={Knobs.date('date', new Date('2019/12/25'))}
+            placeholderText={Knobs.text('placeholderText', '')}
             displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
             monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
             onChange={Actions.action('onChange')}
@@ -19,6 +20,7 @@ storiesOf('Components|Datepicker', module)
     .add('Null', () => (
         <Datepicker.Component
             date={null}
+            placeholderText={Knobs.text('placeholderText', '')}
             displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
             monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
             onChange={Actions.action('onChange')}

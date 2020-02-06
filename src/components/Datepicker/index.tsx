@@ -20,6 +20,7 @@ type Props = {
     width: string
     errored?: boolean
     errorMessage?: string
+    placeholderText?: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -38,11 +39,7 @@ export const Component = React.memo<Props>(props => {
 
     const handleOnDateChange = React.useCallback(
         date => {
-            let rtnDate: Date = new Date()
-            if (date != null) {
-                rtnDate = date.toDate()
-            }
-            props.onChange(rtnDate)
+            props.onChange(date ? date.toDate() : null)
         },
         [props.date]
     )
@@ -69,6 +66,7 @@ export const Component = React.memo<Props>(props => {
                 id={'date'}
                 date={conversionToMomentType(props.date)}
                 focused={focused}
+                placeholder={props.placeholderText}
                 customInputIcon={calendarIconRender}
                 displayFormat={props.displayFormat || 'YYYY年M月D日'}
                 numberOfMonths={1}
