@@ -13,6 +13,8 @@ declare type Props = {
     width: string;
     errored?: boolean;
     errorMessage?: string;
+    startDatePlaceholderText?: string;
+    endDatePlaceholderText?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

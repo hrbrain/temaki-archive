@@ -220,6 +220,7 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     width: string;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
+    placeholderText?: string | undefined;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
@@ -230,6 +231,8 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     width: string;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
+    startDatePlaceholderText?: string | undefined;
+    endDatePlaceholderText?: string | undefined;
 }>;
 export declare const Modal: import("react").FunctionComponent<{
     isOpen: boolean;
