@@ -77,7 +77,7 @@ const Textarea = styled(TextareaAutosize)<{
     display: block;
     border: 1px solid ${props => props.theme.colors.grayScale.S10};
     border-radius: 6px;
-    width: 280px;
+    width: 100%;
     padding: 8px;
     margin-top: 4px;
     font-size: 14px;

@@ -15,7 +15,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
   display: block;
   border: 1px solid rgb(234,234,234);
   border-radius: 6px;
-  width: 280px;
+  width: 100%;
   padding: 8px;
   margin-top: 4px;
   font-size: 14px;
@@ -224,7 +224,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
                       [Function],
                       ";
     border-radius: 6px;
-    width: 280px;
+    width: 100%;
     padding: 8px;
     margin-top: 4px;
     font-size: 14px;
