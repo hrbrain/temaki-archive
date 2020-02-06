@@ -1709,11 +1709,11 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   className="mr-10 mt-56"
 >
   <div
-    className="sc-jhAzac ioRAZu"
+    className="sc-jhAzac RvkIm"
   >
     <div>
       <div
-        className="top sc-fBuWsC kJHZBo"
+        className="top sc-fBuWsC kFzjzl"
         data-test="menu-component"
         onClick={[Function]}
       >
@@ -1914,7 +1914,7 @@ exports[`Storyshots Components|Textarea all 1`] = `
   className="sc-bbmXgH daPXaT"
 >
   <textarea
-    className="sc-gGBfsJ ldCssF"
+    className="sc-gGBfsJ jmTnuA"
     errored={false}
     onBlur={[Function]}
     onChange={[Function]}

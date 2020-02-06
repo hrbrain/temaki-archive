@@ -101,10 +101,11 @@ const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
  */
 const Wrap = styled.div`
     position: relative;
+    width: 24px;
 `
 const Menu = styled.div`
     cursor: pointer;
-    position: absolute;
+    position: relative;
     right: 0;
     &.top {
         top: 0;
