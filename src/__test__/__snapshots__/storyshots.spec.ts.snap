@@ -2735,6 +2735,15 @@ exports[`Storyshots basics|Icons index 1`] = `
     }
     fill="#888"
   />
+  <div
+    className="sc-bdVaJa cCvjGY"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
 </div>
 `;
 
