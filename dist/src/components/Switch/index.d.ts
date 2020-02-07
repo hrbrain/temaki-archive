@@ -3,11 +3,12 @@ import * as React from 'react';
  * Component
  */
 declare type Props = {
-    text?: string;
-    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
-    checked?: boolean;
-    disabled?: boolean;
-    indeterminate?: boolean;
+    onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
+    checked: boolean;
+    text: {
+        on: string;
+        off: string;
+    };
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

@@ -8,6 +8,7 @@ import Calendar from '~/../icons/calendar.svg'
 import CheckBoxAll from '~/../icons/checkBox-all.svg'
 import CheckBoxOff from '~/../icons/checkbox-off.svg'
 import CheckBoxOn from '~/../icons/checkbox-on.svg'
+import CheckBoxDisabled from '~/../icons/checkbox-disabled.svg'
 import ChevronDown from '~/../icons/chevron-down.svg'
 import ChevronLeft from '~/../icons/chevron-left.svg'
 import ChevronRight from '~/../icons/chevron-right.svg'
@@ -78,6 +79,7 @@ export const icons = {
     Calendar,
     CheckBoxAll,
     CheckBoxOn,
+    CheckBoxDisabled,
     CheckBoxOff,
     ChevronUp,
     ChevronDown,
