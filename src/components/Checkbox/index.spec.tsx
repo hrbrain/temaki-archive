@@ -46,4 +46,11 @@ describe('Checkbox', () => {
         const indeEl = wrapper.find('div[data-test="indeterminate-box"]')
         expect(indeEl).toHaveLength(1)
     })
+    it('should render disabled icon by indeterminate props', () => {
+        wrapper = mountWithTheme(
+            <Checkbox.Component disabled onClick={mockOnClick} />
+        )
+        const indeEl = wrapper.find('div[data-test="disabled-box"]')
+        expect(indeEl).toHaveLength(1)
+    })
 })
