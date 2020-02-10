@@ -11,6 +11,7 @@ export declare const icons: {
     CheckBoxOff: string;
     ChevronUp: string;
     ChevronDown: string;
+    CheckBoxDisabled: string;
     ChevronLeft: string;
     ChevronRight: string;
     Close: string;

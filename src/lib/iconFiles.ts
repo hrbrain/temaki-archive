@@ -9,6 +9,7 @@ import CheckBoxAll from '~/../icons/checkBox-all.svg'
 import CheckBoxOff from '~/../icons/checkbox-off.svg'
 import CheckBoxOn from '~/../icons/checkbox-on.svg'
 import ChevronDown from '~/../icons/chevron-down.svg'
+import CheckBoxDisabled from '~/../icons/checkbox-disabled.svg'
 import ChevronLeft from '~/../icons/chevron-left.svg'
 import ChevronRight from '~/../icons/chevron-right.svg'
 import ChevronUp from '~/../icons/chevron-up.svg'
@@ -81,6 +82,7 @@ export const icons = {
     CheckBoxOff,
     ChevronUp,
     ChevronDown,
+    CheckBoxDisabled,
     ChevronLeft,
     ChevronRight,
     Close,

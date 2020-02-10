@@ -15,6 +15,7 @@ export declare const Checkbox: import("react").NamedExoticComponent<{
     text?: string | undefined;
     onClick?: ((e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void) | undefined;
     checked?: boolean | undefined;
+    disabled?: boolean | undefined;
     indeterminate?: boolean | undefined;
 }>;
 export declare const Input: import("react").NamedExoticComponent<({
@@ -91,6 +92,7 @@ export declare const icons: {
     CheckBoxOff: string;
     ChevronUp: string;
     ChevronDown: string;
+    CheckBoxDisabled: string;
     ChevronLeft: string;
     ChevronRight: string;
     Close: string;
