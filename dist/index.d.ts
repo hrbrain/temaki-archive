@@ -208,7 +208,7 @@ export declare const MeatballMenu: import("react").NamedExoticComponent<{
 }>;
 export declare type MeatballMenuItem = _MeatballMenu.Item;
 export declare const FileUploader: import("react").NamedExoticComponent<{
-    onChange?: ((file: File) => void) | undefined;
+    onChange?: ((file: File | null) => void) | undefined;
     fileName: string | null;
     accept?: string | undefined;
     width?: string | undefined;

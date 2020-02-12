@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import * as Theme from '~/modules/theme'
 import * as ReactDropzone from 'react-dropzone'
 
 import * as IconFiles from '~/lib/iconFiles'
@@ -9,14 +9,15 @@ import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 /**
  * Utils
  */
+const styled = Theme.default
+
 const iconSize = '24px'
 
 /**
  * Props
  */
-
 type Props = {
-    onChange?: (file: File) => void
+    onChange?: (file: File | null) => void
     fileName: string | null
     accept?: string
     width?: string
@@ -40,6 +41,13 @@ export const Component = React.memo<Props>(props => {
         [props.onChange]
     )
     const dropzone = ReactDropzone.useDropzone({ onDrop, accept: props.accept })
+    const remove = React.useCallback(
+        (e: React.MouseEvent) => {
+            e.stopPropagation()
+            props.onChange && props.onChange(null)
+        },
+        [props.onChange]
+    )
 
     return (
         <Wrap
@@ -58,6 +66,7 @@ export const Component = React.memo<Props>(props => {
                                 size={iconSize}
                             />
                             <FileLabel>{props.fileName}</FileLabel>
+                            {renderRemoveButton(remove)}
                         </>
                     ) : (
                         <>
@@ -80,10 +89,27 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
+function renderRemoveButton(onClick: (e: React.MouseEvent) => void) {
+    return (
+        <Theme.ThemeConsumer>
+            {color => (
+                <RemoveButton onClick={onClick}>
+                    <Icon.Component
+                        svg={IconFiles.icons.Remove}
+                        size="24px"
+                        color={color.colors.utilities.red.default}
+                    />
+                </RemoveButton>
+            )}
+        </Theme.ThemeConsumer>
+    )
+}
+
 /**
  * Styles
  */
 const Wrap = styled.div<{ width?: string }>`
+    position: relative;
     width: ${props => (props.width ? props.width : '100%')};
 `
 const FileBox = styled.div<{ errored?: boolean }>`
@@ -123,4 +149,13 @@ const FileLabel = styled.span`
 `
 const Input = styled.input`
     display: none;
+`
+const RemoveButton = styled.div`
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    right: 24px;
+    cursor: pointer;
+    transform: translateY(-50%);
 `
