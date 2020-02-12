@@ -1676,10 +1676,10 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <div
-  className="sc-bRBYWo ccSRck"
+  className="sc-hzDkRC kpsoyz"
 >
   <input
-    className="sc-hzDkRC hVOXaq"
+    className="sc-jhAzac eitWma"
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1691,10 +1691,10 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <div
-  className="sc-bRBYWo ccSRck"
+  className="sc-hzDkRC kpsoyz"
 >
   <input
-    className="sc-hzDkRC hVOXaq"
+    className="sc-jhAzac eitWma"
     format="text"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1709,16 +1709,16 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   className="mr-10 mt-56"
 >
   <div
-    className="sc-jhAzac RvkIm"
+    className="sc-fBuWsC hVAXni"
   >
     <div>
       <div
-        className="top sc-fBuWsC kFzjzl"
+        className="top sc-fMiknA dhQuDg"
         data-test="menu-component"
         onClick={[Function]}
       >
         <div
-          className="sc-fMiknA bxZCMx sc-bxivhb hBuNrQ"
+          className="sc-dVhcbM fghLuF sc-bxivhb hBuNrQ"
           dangerouslySetInnerHTML={
             Object {
               "__html": undefined,
@@ -1728,25 +1728,25 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
         />
       </div>
       <ul
-        className="top hidden sc-dVhcbM iwPVpZ"
+        className="top hidden sc-eqIVtm jfGTae"
         data-test="list-component"
       >
         <li
-          className="sc-eqIVtm eVrSsJ"
+          className="sc-fAjcbJ cIWCkI"
           data-test="list-item0"
           onClick={[Function]}
         >
           リスト1
         </li>
         <li
-          className="sc-eqIVtm eVrSsJ"
+          className="sc-fAjcbJ cIWCkI"
           data-test="list-item1"
           onClick={[Function]}
         >
           リスト2
         </li>
         <li
-          className="sc-eqIVtm jxxHmS"
+          className="sc-fAjcbJ zjDVZ"
           color="destructive"
           data-test="list-item2"
           onClick={[Function]}
@@ -1766,21 +1766,21 @@ exports[`Storyshots Components|Modal all 1`] = `
 >
   <modal>
     <div
-      className="sc-fAjcbJ jyIoEm"
+      className="sc-caSCKo kbrwcF"
     >
       <div
-        className="sc-caSCKo gWCCbP"
+        className="sc-gisBJw jIRliE"
       >
         <div
-          className="sc-gisBJw dpKxUE"
+          className="sc-kjoXOD jhXcno"
         >
           <div
-            className="sc-kjoXOD jTpMrS"
+            className="sc-cHGsZl gucDRb"
           >
             ロール作成
           </div>
           <div
-            className="sc-cHGsZl kgvEp"
+            className="sc-TOsTZ ScwFR"
             data-test="closeIcon"
             onClick={[Function]}
           >
@@ -1796,15 +1796,15 @@ exports[`Storyshots Components|Modal all 1`] = `
           </div>
         </div>
         <div
-          className="sc-TOsTZ ldpBok"
+          className="sc-kgAjT kXoUtx"
         >
           コンテンツ
         </div>
         <div
-          className="sc-kgAjT dDlnJc"
+          className="sc-cJSrbW cIvoHm"
         >
           <button
-            className="sc-cJSrbW NIyIf sc-htpNat jBbDys"
+            className="sc-ksYbfQ EzIam sc-htpNat jBbDys"
             data-test="button0"
             onClick={[Function]}
             type="box"
@@ -1820,12 +1820,12 @@ exports[`Storyshots Components|Modal all 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
-  className="sc-ksYbfQ kcJuLh"
+  className="sc-hmzhuo bAyLVs"
   data-test="radio-on"
   onClick={[Function]}
 >
   <div
-    className="sc-hmzhuo iJZyng sc-bxivhb hBuNrQ"
+    className="sc-frDJqD dbvjbe sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1834,7 +1834,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-frDJqD jrefaL"
+    className="sc-kvZOFW fUtrDA"
   >
     RadioButton
   </span>
@@ -1844,7 +1844,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 <div>
   <div
-    className="sc-kvZOFW iXiPwL"
+    className="sc-hqyNC frIQZV"
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -1852,7 +1852,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
-    className="sc-kvZOFW gjEtmS"
+    className="sc-hqyNC hfLTIB"
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -1860,7 +1860,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
-    className="sc-kvZOFW gjEtmS"
+    className="sc-hqyNC hfLTIB"
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -1875,25 +1875,25 @@ exports[`Storyshots Components|Switch all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-hqyNC lgKxvu"
+    className="sc-jbKcbu eCYyBw"
     data-test="switch-off"
   >
     <span
-      className="sc-jqCOkK iSrRVm"
+      className="sc-uJMKN frgWuF"
     >
       OFF
     </span>
     <div
-      className="sc-jbKcbu ipvofn"
+      className="sc-dNLxif eRenBI"
       data-test="switch"
       onClick={[Function]}
     >
       <span
-        className="sc-dNLxif hKXEQm"
+        className="sc-jqCOkK hTyBEV"
       />
     </div>
     <span
-      className="sc-jqCOkK iSrRVm"
+      className="sc-uJMKN frgWuF"
     >
       ON
     </span>
@@ -1903,7 +1903,7 @@ exports[`Storyshots Components|Switch all 1`] = `
 
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-uJMKN FDwtV"
+  className="sc-bbmXgH isbRUi"
 >
   Hello
 </p>
@@ -1911,10 +1911,10 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <div
-  className="sc-bbmXgH daPXaT"
+  className="sc-gGBfsJ ejFkYG"
 >
   <textarea
-    className="sc-gGBfsJ jmTnuA"
+    className="sc-jnlKLf fpflqa"
     errored={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -1935,11 +1935,11 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-jnlKLf bvyjaH"
+    className="sc-fYxtnH grucde"
     data-test="info-buttonless-toast"
   >
     <div
-      className="sc-fYxtnH oVGQN sc-bxivhb dUTGrc"
+      className="sc-tilXH ihnyUe sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1950,12 +1950,12 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
     />
     <div>
       <div
-        className="sc-tilXH eUXSMo"
+        className="sc-hEsumM iDkJyn"
       >
         ラベル
       </div>
       <div
-        className="sc-hEsumM eXdjkg"
+        className="sc-ktHwxA ghQQzG"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
@@ -1969,11 +1969,11 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-jnlKLf ldAlpo"
+    className="sc-fYxtnH eEcrHa"
     data-test="warning-buttonless-toast"
   >
     <div
-      className="sc-fYxtnH oVGQN sc-bxivhb dUTGrc"
+      className="sc-tilXH ihnyUe sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1984,12 +1984,12 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
     />
     <div>
       <div
-        className="sc-tilXH eUXSMo"
+        className="sc-hEsumM iDkJyn"
       >
         ラベル
       </div>
       <div
-        className="sc-hEsumM eXdjkg"
+        className="sc-ktHwxA ghQQzG"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
@@ -2003,11 +2003,11 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-ktHwxA ibzaaV"
+    className="sc-cIShpX iIMjSA"
     data-test="info-default-toast"
   >
     <div
-      className="sc-cIShpX gJKBJX sc-bxivhb dUTGrc"
+      className="sc-kafWEX feNNfL sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -2018,22 +2018,22 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
     />
     <div>
       <div
-        className="sc-feJyhm jRrckz"
+        className="sc-iELTvK iNDNhJ"
       >
         ラベル
       </div>
       <div
-        className="sc-iELTvK ilNyFx"
+        className="sc-cmTdod bPpAQz"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
     <span
-      className="sc-kafWEX koTidX"
+      className="sc-feJyhm grXTRz"
       onClick={[Function]}
     >
       <div
-        className="sc-cIShpX gJKBJX sc-bxivhb dUTGrc"
+        className="sc-kafWEX feNNfL sc-bxivhb dUTGrc"
         color="white"
         dangerouslySetInnerHTML={
           Object {
@@ -2052,11 +2052,11 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-ktHwxA doIrQR"
+    className="sc-cIShpX ikOwSJ"
     data-test="warning-default-toast"
   >
     <div
-      className="sc-cIShpX gJKBJX sc-bxivhb dUTGrc"
+      className="sc-kafWEX feNNfL sc-bxivhb dUTGrc"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -2067,22 +2067,22 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
     />
     <div>
       <div
-        className="sc-feJyhm jRrckz"
+        className="sc-iELTvK iNDNhJ"
       >
         ラベル
       </div>
       <div
-        className="sc-iELTvK ilNyFx"
+        className="sc-cmTdod bPpAQz"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
     <span
-      className="sc-kafWEX koTidX"
+      className="sc-feJyhm grXTRz"
       onClick={[Function]}
     >
       <div
-        className="sc-cIShpX gJKBJX sc-bxivhb dUTGrc"
+        className="sc-kafWEX feNNfL sc-bxivhb dUTGrc"
         color="white"
         dangerouslySetInnerHTML={
           Object {
@@ -2098,12 +2098,12 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-cmTdod guMEqs"
+  className="sc-jwKygS ipDJDI"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-jwKygS elIyOi"
+    className="sc-btzYZH djEFlC"
   >
     テキスト要素
   </span>
@@ -2744,7 +2744,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
 >
   <div>
     <div
-      className="sc-gPEVay ftyCeT"
+      className="sc-gPEVay eLbxlc"
       onBlur={[Function]}
       onClick={[Function]}
       onDragEnter={[Function]}
@@ -2798,7 +2798,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
     className="mt-8"
   >
     <div
-      className="sc-gPEVay hnGpPh"
+      className="sc-gPEVay eVJILV"
       onBlur={[Function]}
       onClick={[Function]}
       onDragEnter={[Function]}
@@ -2843,6 +2843,21 @@ exports[`Storyshots components|FileUploader all 1`] = `
           >
             hoge.png
           </span>
+          <div
+            className="sc-bRBYWo kGEJFQ"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb fOXTLs"
+              color="rgb(224, 85, 72)"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24px"
+            />
+          </div>
         </div>
       </div>
     </div>
