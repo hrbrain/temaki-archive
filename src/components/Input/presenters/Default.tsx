@@ -12,6 +12,8 @@ type Props = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
     errored?: boolean
     errorMessage?: string
+    onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
 }
 export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     return (

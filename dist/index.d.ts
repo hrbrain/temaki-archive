@@ -26,6 +26,8 @@ export declare const Input: import("react").NamedExoticComponent<({
     placeholder?: string | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
+    onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
+    onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
 } & {
     format: "text";
     value: string;
@@ -39,6 +41,8 @@ export declare const Input: import("react").NamedExoticComponent<({
     placeholder?: string | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
+    onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
+    onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
 } & {
     format: "number";
     value: number;

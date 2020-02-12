@@ -15,6 +15,8 @@ storiesOf('Components|Input', module)
             onBlur={action('onBlur')}
             errored={boolean('Error', false)}
             errorMessage={text('Error Message', 'Error Message')}
+            onKeyDown={action('onKeyDown')}
+            onKeyUp={action('onKeyUp')}
         />
     ))
     .add('Number', () => (
@@ -26,5 +28,7 @@ storiesOf('Components|Input', module)
             onBlur={action('onBlur')}
             errored={boolean('Error', false)}
             errorMessage={text('Error Message', 'Error Message')}
+            onKeyDown={action('onKeyDown')}
+            onKeyUp={action('onKeyUp')}
         />
     ))
