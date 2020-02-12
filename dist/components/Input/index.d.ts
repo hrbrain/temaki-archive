@@ -18,6 +18,8 @@ declare type Props = {
     placeholder?: string;
     errored?: boolean;
     errorMessage?: string;
+    onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 } & ({
     format: typeof TEXT;
     value: StringValue;
