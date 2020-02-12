@@ -1683,6 +1683,8 @@ exports[`Storyshots Components|Input Number 1`] = `
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     placeholder="Enter your age"
     value="0"
   />
@@ -1698,6 +1700,8 @@ exports[`Storyshots Components|Input Text 1`] = `
     format="text"
     onBlur={[Function]}
     onChange={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
     placeholder="Enter your name"
     value=""
   />
