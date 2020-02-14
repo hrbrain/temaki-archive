@@ -375,7 +375,7 @@ const Outer = styled.div<OuterProps>`
             cursor: default;
         }
         .CalendarDay__default {
-            color: #333333;
+            color: ${props => props.theme.colors.grayScale.S0};
             background: #fff;
         }
         .CalendarDay__default:hover {
@@ -407,12 +407,12 @@ const Outer = styled.div<OuterProps>`
         }
         .CalendarDay__highlighted_calendar {
             background: #ffe8bc;
-            color: #333333;
+            color: ${props => props.theme.colors.grayScale.S0};
         }
         .CalendarDay__highlighted_calendar:active,
         .CalendarDay__highlighted_calendar:hover {
             background: #ffce71;
-            color: #333333;
+            color: ${props => props.theme.colors.grayScale.S0};
         }
         .CalendarDay__selected_span {
             background: #66e2da;
@@ -483,7 +483,7 @@ const Outer = styled.div<OuterProps>`
             border-collapse: separate;
         }
         .CalendarMonth_caption {
-            color: #333333;
+            color: ${props => props.theme.colors.grayScale.S0};
             font-size: 14px;
             text-align: center;
             padding-top: 10px;
@@ -644,7 +644,7 @@ const Outer = styled.div<OuterProps>`
         .DayPickerNavigation_svg__vertical {
             height: 42px;
             width: 42px;
-            fill: #333333;
+            fill: ${props => props.theme.colors.grayScale.S0};
         }
         .DayPickerNavigation_svg__disabled {
             fill: #f2f2f2;
@@ -796,7 +796,7 @@ const Outer = styled.div<OuterProps>`
             border: none;
             font-weight: 200;
             line-height: 24px;
-            color: #333333;
+            color: ${props => props.theme.colors.grayScale.S0};
             height: 100%;
             width: 112px;
             font-size: 14px;
@@ -873,12 +873,12 @@ const Outer = styled.div<OuterProps>`
         .DateRangePickerInput_arrow {
             display: inline-block;
             vertical-align: middle;
-            color: #333333;
+            color: ${props => props.theme.colors.grayScale.S0};
             width: 12px;
         }
         .DateRangePickerInput_arrow_svg {
             vertical-align: middle;
-            fill: #333333;
+            fill: ${props => props.theme.colors.grayScale.S0};
             height: 24px;
             width: 24px;
         }
