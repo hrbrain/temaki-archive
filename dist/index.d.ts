@@ -21,6 +21,7 @@ export declare const Checkbox: import("react").NamedExoticComponent<{
 export declare const Input: import("react").NamedExoticComponent<({
     type?: string | undefined;
     name?: string | undefined;
+    unit?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
     diff?: boolean | undefined;
@@ -29,6 +30,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     errorMessage?: string | undefined;
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
+    className?: string | undefined;
 } & {
     format: "text";
     value: string;
@@ -36,6 +38,7 @@ export declare const Input: import("react").NamedExoticComponent<({
 }) | ({
     type?: string | undefined;
     name?: string | undefined;
+    unit?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
     diff?: boolean | undefined;
@@ -44,6 +47,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     errorMessage?: string | undefined;
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
+    className?: string | undefined;
 } & {
     format: "number";
     value: number;

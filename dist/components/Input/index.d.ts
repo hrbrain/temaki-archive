@@ -12,6 +12,7 @@ declare const NUMBER: "number";
 declare type Props = {
     type?: string;
     name?: string;
+    unit?: string;
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     diff?: boolean;
@@ -20,6 +21,7 @@ declare type Props = {
     errorMessage?: string;
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+    className?: string;
 } & ({
     format: typeof TEXT;
     value: StringValue;
