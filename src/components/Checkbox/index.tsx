@@ -17,6 +17,17 @@ type Props = {
 }
 export const Component = React.memo<Props>(
     ({ text, indeterminate, checked, disabled, ...props }) => {
+        if (disabled) {
+            return (
+                <Outer tabIndex={1} data-test="disabled-box" {...props}>
+                    <CheckIcon
+                        svg={IconFiles.icons.CheckBoxDisabled}
+                        size="24px"
+                    />
+                    <Text>{text}</Text>
+                </Outer>
+            )
+        }
         // ON の方を優先にする
         if (checked) {
             return (
@@ -31,17 +42,6 @@ export const Component = React.memo<Props>(
             return (
                 <Outer tabIndex={1} data-test="indeterminate-box" {...props}>
                     <CheckIcon svg={IconFiles.icons.CheckBoxAll} size="24px" />
-                    <Text>{text}</Text>
-                </Outer>
-            )
-        }
-        if (disabled) {
-            return (
-                <Outer tabIndex={1} data-test="disabled-box" {...props}>
-                    <CheckIcon
-                        svg={IconFiles.icons.CheckBoxDisabled}
-                        size="24px"
-                    />
                     <Text>{text}</Text>
                 </Outer>
             )
