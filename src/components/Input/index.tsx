@@ -20,6 +20,7 @@ const NUMBER = 'number' as const
 type Props = {
     type?: string
     name?: string
+    unit?: string
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
     diff?: boolean
@@ -28,6 +29,7 @@ type Props = {
     errorMessage?: string
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+    className?: string
 } & (
     | {
           format: typeof TEXT

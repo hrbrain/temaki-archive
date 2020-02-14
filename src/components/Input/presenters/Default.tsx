@@ -7,6 +7,7 @@ type Props = {
     value?: string
     diff?: boolean
     name?: string
+    unit?: string
     placeholder?: string
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -14,11 +15,13 @@ type Props = {
     errorMessage?: string
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+    className?: string
 }
 export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     return (
-        <Wrapper>
+        <Wrapper className={props.className}>
             <Outer {...props} />
+            {props.unit && <Unit>{props.unit}</Unit>}
             <FormErrorMessage.Component
                 errored={props.errored}
                 message={props.errorMessage}
@@ -27,14 +30,17 @@ export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     )
 }
 
-const Wrapper = styled.div``
+const Wrapper = styled.div`
+    position: relative;
+    display: inline-flex;
+`
 
 type OuterProps = {
     value?: string
     diff?: boolean
     errored?: boolean
+    unit?: string
 }
-
 const Outer = styled.input<OuterProps>`
     height: 40px;
     padding: 0 12px;
@@ -54,6 +60,16 @@ const Outer = styled.input<OuterProps>`
                   background: ${props.theme.colors.utilities.paleYellow};
               `
             : ''}
+    
+    ${props =>
+        props.unit
+            ? css`
+                  /* フォント数 * フォントサイズ + Unitの左右Padding + これのPadding */
+                  padding-right: ${Number(props.unit.length) * 14 +
+                      12 * 2 +
+                      12}px;
+              `
+            : ''}
 
     &:focus {
         outline: none;
@@ -64,4 +80,20 @@ const Outer = styled.input<OuterProps>`
     &::placeholder {
         color: ${props => props.theme.colors.grayScale.S20};
     }
+`
+
+const Unit = styled.div`
+    position: absolute;
+    top: 1px;
+    right: 1px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 2px);
+    padding: 0 12px;
+
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: ${props => props.theme.colors.grayScale.S10};
 `

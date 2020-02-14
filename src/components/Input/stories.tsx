@@ -22,6 +22,7 @@ storiesOf('Components|Input', module)
     .add('Number', () => (
         <Input.Component
             format="number"
+            unit={text('単位', '')}
             value={number('Value', 0)}
             placeholder={text('Placeholder', 'Enter your age')}
             onChange={action('onChange')}

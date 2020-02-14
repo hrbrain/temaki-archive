@@ -2,6 +2,14 @@
 
 exports[`Input format of number should match previous snapshot 1`] = `
 .c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
   height: 40px;
   padding: 0 12px;
   border-radius: 6px;
@@ -10,24 +18,24 @@ exports[`Input format of number should match previous snapshot 1`] = `
   transition: 0.15s border-color;
 }
 
-.c0:focus {
+.c1:focus {
   outline: none;
   border-color: rgb(114,206,92);
 }
 
-.c0::-webkit-input-placeholder {
+.c1::-webkit-input-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0::-moz-placeholder {
+.c1::-moz-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0:-ms-input-placeholder {
+.c1:-ms-input-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0::placeholder {
+.c1::placeholder {
   color: rgb(214,214,214);
 }
 
@@ -180,8 +188,13 @@ exports[`Input format of number should match previous snapshot 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bwzfXH",
                   "isStatic": true,
-                  "lastClassName": "uTxCW",
-                  "rules": Array [],
+                  "lastClassName": "c0",
+                  "rules": Array [
+                    "
+    position: relative;
+    display: inline-flex;
+",
+                  ],
                 },
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
@@ -196,7 +209,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
             forwardedRef={null}
           >
             <div
-              className=""
+              className="c0"
             >
               <styled.input
                 format="number"
@@ -213,7 +226,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-htpNat",
                         "isStatic": false,
-                        "lastClassName": "c0",
+                        "lastClassName": "c1",
                         "rules": Array [
                           "
     height: 40px;
@@ -228,6 +241,10 @@ exports[`Input format of number should match previous snapshot 1`] = `
                           [Function],
                           "
 
+    ",
+                          [Function],
+                          "
+    
     ",
                           [Function],
                           "
@@ -263,7 +280,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                   value="145"
                 >
                   <input
-                    className="c0"
+                    className="c1"
                     format="number"
                     onBlur={[MockFunction]}
                     onChange={[Function]}
@@ -323,6 +340,14 @@ exports[`Input format of number should match previous snapshot when provided err
 
 exports[`Input format of text should match previous snapshot 1`] = `
 .c0 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c1 {
   height: 40px;
   padding: 0 12px;
   border-radius: 6px;
@@ -331,24 +356,24 @@ exports[`Input format of text should match previous snapshot 1`] = `
   transition: 0.15s border-color;
 }
 
-.c0:focus {
+.c1:focus {
   outline: none;
   border-color: rgb(114,206,92);
 }
 
-.c0::-webkit-input-placeholder {
+.c1::-webkit-input-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0::-moz-placeholder {
+.c1::-moz-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0:-ms-input-placeholder {
+.c1:-ms-input-placeholder {
   color: rgb(214,214,214);
 }
 
-.c0::placeholder {
+.c1::placeholder {
   color: rgb(214,214,214);
 }
 
@@ -501,8 +526,13 @@ exports[`Input format of text should match previous snapshot 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bwzfXH",
                   "isStatic": true,
-                  "lastClassName": "uTxCW",
-                  "rules": Array [],
+                  "lastClassName": "c0",
+                  "rules": Array [
+                    "
+    position: relative;
+    display: inline-flex;
+",
+                  ],
                 },
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
@@ -517,7 +547,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
             forwardedRef={null}
           >
             <div
-              className=""
+              className="c0"
             >
               <styled.input
                 format="text"
@@ -534,7 +564,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-htpNat",
                         "isStatic": false,
-                        "lastClassName": "c0",
+                        "lastClassName": "c1",
                         "rules": Array [
                           "
     height: 40px;
@@ -549,6 +579,10 @@ exports[`Input format of text should match previous snapshot 1`] = `
                           [Function],
                           "
 
+    ",
+                          [Function],
+                          "
+    
     ",
                           [Function],
                           "
@@ -584,7 +618,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                   value="Testing Value"
                 >
                   <input
-                    className="c0"
+                    className="c1"
                     format="text"
                     onBlur={[MockFunction]}
                     onChange={[Function]}
