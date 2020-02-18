@@ -1676,7 +1676,7 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <div
-  className="sc-hzDkRC iuTXBs"
+  className="sc-hzDkRC kbXJOz"
 >
   <input
     className="sc-jhAzac cAbgKp"
@@ -1694,7 +1694,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <div
-  className="sc-hzDkRC iuTXBs"
+  className="sc-hzDkRC kbXJOz"
 >
   <input
     className="sc-jhAzac cAbgKp"
