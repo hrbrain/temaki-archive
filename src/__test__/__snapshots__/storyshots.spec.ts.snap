@@ -2771,7 +2771,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
       width="400px"
     >
       <div
-        className="sc-iRbamj kQkLSz"
+        className="sc-iRbamj hqCntW"
       >
         <input
           autoComplete="off"
@@ -2824,7 +2824,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-iRbamj kQkLSz"
+        className="sc-iRbamj hqCntW"
       >
         <input
           autoComplete="off"

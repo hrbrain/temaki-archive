@@ -116,7 +116,7 @@ const FileBox = styled.div<{ errored?: boolean }>`
     cursor: pointer;
     text-align: center;
     height: 40px;
-    padding: 0 24px;
+    padding: 0 44px 0 16px;
     border-radius: 6px;
     border: 1px dashed
         ${props =>
