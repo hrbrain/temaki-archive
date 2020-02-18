@@ -33,6 +33,7 @@ export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
 const Wrapper = styled.div`
     position: relative;
     display: inline-flex;
+    flex-direction: column;
 `
 
 type OuterProps = {
