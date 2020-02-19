@@ -9,6 +9,7 @@ storiesOf('Components|Checkbox', module).add('all', () => {
         <Checkbox.Component
             onClick={action('onClick')}
             checked={boolean('Checked', false)}
+            disabled={boolean('Disabled', false)}
             indeterminate={boolean('Indeterminate', false)}
             text={text('Component', 'Checkbox')}
         />
