@@ -35,6 +35,14 @@ export const Component = React.memo<Props>(props => {
 
     const closeMenu = React.useCallback(() => setIsMenuVisible(false), [])
 
+    const handleOnChange = React.useCallback(
+        value => {
+            setIsMenuVisible(!isMenuVisible)
+            props.onChange(value)
+        },
+        [props.onChange]
+    )
+
     switch (props.type) {
         case 'borderless':
             return (
@@ -44,7 +52,7 @@ export const Component = React.memo<Props>(props => {
                     isError={props.isError}
                     onClick={clickBody}
                     onClickOutside={closeMenu}
-                    onClickMenuItem={props.onChange}
+                    onClickMenuItem={handleOnChange}
                     isMenuVisible={isMenuVisible}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
@@ -59,7 +67,7 @@ export const Component = React.memo<Props>(props => {
                     value={props.value}
                     isError={props.isError}
                     onClick={clickBody}
-                    onClickMenuItem={props.onChange}
+                    onClickMenuItem={handleOnChange}
                     onClickOutside={closeMenu}
                     isMenuVisible={isMenuVisible}
                     showTextBySelected={showTextBySelected}
