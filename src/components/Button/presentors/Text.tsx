@@ -14,6 +14,7 @@ type Props = {
     svg?: string
     colorType?: Index.TextColorTypeProp
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
+    nativeType?: 'submit' | 'reset' | 'button'
 }
 export const Component: React.FC<Props> = ({
     svg,
@@ -21,7 +22,7 @@ export const Component: React.FC<Props> = ({
     children,
     ...props
 }) => (
-    <Outer {...props}>
+    <Outer type={props.nativeType || 'submit'} {...props}>
         {renderIcon(svg, colorType)}
         {renderText(svg, colorType, children)}
     </Outer>

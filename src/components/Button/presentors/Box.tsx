@@ -17,7 +17,7 @@ export const Component: React.FC<Props> = ({ children, ...props }) => {
         return (
             <Outer
                 onClick={props.onClick}
-                type={props.nativeType}
+                type={props.nativeType || 'submit'}
                 height={props.height}
                 width={props.width}
                 colorType={props.colorType}
