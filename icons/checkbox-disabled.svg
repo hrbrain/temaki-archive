@@ -4,7 +4,7 @@
         <g id="@icon/common/checkBox-disabled">
             <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
             <g id="outline" transform="translate(2.000000, 2.000000)">
-                <path d="M17.5,20 L2.5,20 C1.125,20 0,18.875 0,17.5 L0,2.5 C0,1.125 1.125,0 2.5,0 L17.5,0 C18.875,0 20,1.125 20,2.5 L20,17.5 C20,18.875 18.875,20 17.5,20" id="Fill-1" fill="#088736" fill-rule="nonzero"></path>
+                <path d="M17.5,20 L2.5,20 C1.125,20 0,18.875 0,17.5 L0,2.5 C0,1.125 1.125,0 2.5,0 L17.5,0 C18.875,0 20,1.125 20,2.5 L20,17.5 C20,18.875 18.875,20 17.5,20" id="Fill-1" fill="#d6d6d6" fill-rule="nonzero"></path>
                 <polyline id="Stroke-3" stroke="#FFFFFF" stroke-width="1.5" points="4 10 8.615 14.5 16 5.5"></polyline>
             </g>
             <g id="fill" transform="translate(2.000000, 2.000000)" fill="#d6d6d6" fill-rule="nonzero">
