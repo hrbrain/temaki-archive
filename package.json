@@ -2,7 +2,7 @@
     "name": "hrb-temaki",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "version": "0.10.16",
+    "version": "0.10.17",
     "private": true,
     "license": "ISC",
     "scripts": {
