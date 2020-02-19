@@ -18,7 +18,7 @@ type Props = {
     nativeType?: 'submit' | 'reset' | 'button'
 } & OuterProps
 export const Component = ({ svg, ...props }: Props) => (
-    <Outer type={props.nativeType|| 'submit'} {...props}>
+    <Outer type={props.nativeType || 'submit'} {...props}>
         <ThemeConsumer>{renderIcon(svg, props.colorType)}</ThemeConsumer>
     </Outer>
 )
