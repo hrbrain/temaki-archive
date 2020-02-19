@@ -8,6 +8,7 @@ declare type Props = {
     svg?: string;
     colorType?: string;
     isLoading?: boolean;
+    nativeType?: 'submit' | 'reset' | 'button';
 } & OuterProps;
 export declare const Component: ({ svg, ...props }: Props) => JSX.Element;
 /**
