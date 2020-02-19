@@ -44,6 +44,7 @@ export const Component: React.FC<Props> = props => {
 const Background = styled.div`
     position: fixed;
     z-index: 600;
+    overflow: scroll;
     top: 0;
     left: 0;
     width: 100%;
@@ -56,8 +57,6 @@ const Background = styled.div`
 
 const Wrap = styled.div`
     width: 678px;
-    max-height: 678px;
-    overflow: scroll;
     background-color: ${props => props.theme.colors.grayScale.S0};
     border-radius: 8px;
 `

@@ -956,7 +956,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
 
 exports[`Storyshots Components|Datepicker Null 1`] = `
 <div
-  className="sc-gqjmRU iHWDmP"
+  className="sc-gqjmRU kvPvqF"
   width="100%"
 >
   <div
@@ -1017,7 +1017,7 @@ exports[`Storyshots Components|Datepicker Null 1`] = `
 
 exports[`Storyshots Components|Datepicker Standard 1`] = `
 <div
-  className="sc-gqjmRU iHWDmP"
+  className="sc-gqjmRU kvPvqF"
   width="100%"
 >
   <div
@@ -1771,10 +1771,10 @@ exports[`Storyshots Components|Modal all 1`] = `
 >
   <modal>
     <div
-      className="sc-gisBJw eYilK"
+      className="sc-gisBJw szfAD"
     >
       <div
-        className="sc-kjoXOD bfLSoQ"
+        className="sc-kjoXOD icZhEl"
       >
         <div
           className="sc-cHGsZl kNdMVs"
