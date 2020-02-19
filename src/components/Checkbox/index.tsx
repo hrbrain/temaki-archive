@@ -75,7 +75,7 @@ const CheckIcon = styled(Icon.Component)`
 
     & #fill {
         fill: ${props => props.theme.colors.primary.default};
-        & .disabled {
+        &.disabled {
             fill: ${props => props.theme.colors.grayScale.S20};
         }
     }
