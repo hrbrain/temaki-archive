@@ -938,7 +938,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
   tabIndex={1}
 >
   <div
-    className="sc-htoDjs bsmXEx sc-bxivhb hBuNrQ"
+    className="sc-htoDjs kVfsdQ sc-bxivhb hBuNrQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
