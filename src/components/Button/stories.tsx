@@ -30,7 +30,7 @@ const textOptions = {
 storiesOf('Components|Button', module)
     .add('Box', () => (
         <Button.Component
-            type="box"
+            variant="box"
             nativeType="submit"
             colorType={select('ColorType', boxOptions, boxOptions.Primary)}
             onClick={action('onClick')}
@@ -40,7 +40,7 @@ storiesOf('Components|Button', module)
     ))
     .add('Circle', () => (
         <Button.Component
-            type="circle"
+            variant="circle"
             nativeType="reset"
             colorType={select(
                 'ColorType',
@@ -53,7 +53,7 @@ storiesOf('Components|Button', module)
     ))
     .add('Text', () => (
         <Button.Component
-            type="text"
+            variant="text"
             nativeType="button"
             colorType={select('ColorType', textOptions, textOptions.Primary)}
             svg={IconFiles.icons.ArrowDown}

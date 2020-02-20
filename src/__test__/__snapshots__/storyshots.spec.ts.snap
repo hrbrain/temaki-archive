@@ -900,8 +900,9 @@ exports[`Storyshots Components|Badge all 1`] = `
 exports[`Storyshots Components|Button Box 1`] = `
 <button
   className="sc-htpNat jBbDys"
+  disabled={false}
   onClick={[Function]}
-  type="box"
+  type="submit"
 >
   Confirm
 </button>
@@ -911,7 +912,7 @@ exports[`Storyshots Components|Button Circle 1`] = `
 <button
   className="sc-ifAKCX jYTyKI"
   onClick={[Function]}
-  type="submit"
+  type="reset"
 />
 `;
 
@@ -919,7 +920,7 @@ exports[`Storyshots Components|Button Text 1`] = `
 <button
   className="sc-EHOje euMnIY"
   onClick={[Function]}
-  type="text"
+  type="button"
 >
   <span
     className="sc-bZQynM bUEYNy"
@@ -1809,10 +1810,10 @@ exports[`Storyshots Components|Modal all 1`] = `
           className="sc-ksYbfQ bNvMeG"
         >
           <button
-            className="sc-hmzhuo iEbskR sc-htpNat jBbDys"
-            data-test="button0"
+            className="button0 sc-hmzhuo iEbskR sc-htpNat jBbDys"
+            disabled={false}
             onClick={[Function]}
-            type="box"
+            type="submit"
           >
             登録
           </button>

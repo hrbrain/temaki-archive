@@ -9,7 +9,7 @@ describe('Modal component', () => {
     let title = 'ロール作成'
     let buttons = [
         {
-            type: 'box' as const,
+            variant: 'box' as const,
             colorType: 'primary' as const,
             text: '登録'
         }
@@ -44,9 +44,7 @@ describe('Modal component', () => {
 
     it('Should render a ', () => {
         buttons.forEach((_, index) => {
-            expect(
-                wrapper.find(`button[data-test="button${index}"]`)
-            ).toHaveLength(1)
+            expect(wrapper.find(`button.button${index}`)).toHaveLength(1)
         })
     })
 })

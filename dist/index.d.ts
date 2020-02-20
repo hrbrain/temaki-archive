@@ -252,7 +252,7 @@ export declare const Modal: import("react").FunctionComponent<{
         nativeType?: "button" | "submit" | "reset" | undefined;
         className?: string | undefined;
     } & {
-        type: "box";
+        variant: "box";
         colorType?: "disabled" | "default" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | undefined;
         height?: string | undefined;
         width?: string | undefined;
@@ -263,7 +263,7 @@ export declare const Modal: import("react").FunctionComponent<{
         nativeType?: "button" | "submit" | "reset" | undefined;
         className?: string | undefined;
     } & {
-        type: "circle";
+        variant: "circle";
         colorType?: "default" | "primary" | "secondary" | undefined;
         svg?: string | undefined;
     } & {
@@ -273,7 +273,7 @@ export declare const Modal: import("react").FunctionComponent<{
         nativeType?: "button" | "submit" | "reset" | undefined;
         className?: string | undefined;
     } & {
-        type: "text";
+        variant: "text";
         colorType?: "default" | "primary" | "destructive" | undefined;
         svg?: string | undefined;
     } & {

@@ -12,7 +12,7 @@ storiesOf('Components|Modal', module).add('all', () => {
                 title={Knobs.text('title', 'ロール作成')}
                 buttons={[
                     {
-                        type: 'box',
+                        variant: 'box',
                         colorType: 'primary',
                         text: '登録'
                     }

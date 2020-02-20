@@ -70,25 +70,25 @@ export type Props = {
     className?: string
 } & (
     | {
-          type: typeof buttonShapeType.box
+          variant: typeof buttonShapeType.box
           colorType?: BoxColorTypeProp
           height?: string
           width?: string
       }
     | {
-          type: typeof buttonShapeType.circle
+          variant: typeof buttonShapeType.circle
           colorType?: CircleColorTypeProp
           svg?: string
       }
     | {
-          type: typeof buttonShapeType.text
+          variant: typeof buttonShapeType.text
           colorType?: TextColorTypeProp
           svg?: string
       })
 export const Component: React.FC<Props> = props => {
     const [isLoading, handleClick] = useIsLoadingByAsyncClick(props.onClick)
 
-    switch (props.type) {
+    switch (props.variant) {
         case 'circle':
             return (
                 <Circle.Component

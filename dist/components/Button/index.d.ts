@@ -19,16 +19,16 @@ export declare type Props = {
     nativeType?: 'submit' | 'reset' | 'button';
     className?: string;
 } & ({
-    type: typeof buttonShapeType.box;
+    variant: typeof buttonShapeType.box;
     colorType?: BoxColorTypeProp;
     height?: string;
     width?: string;
 } | {
-    type: typeof buttonShapeType.circle;
+    variant: typeof buttonShapeType.circle;
     colorType?: CircleColorTypeProp;
     svg?: string;
 } | {
-    type: typeof buttonShapeType.text;
+    variant: typeof buttonShapeType.text;
     colorType?: TextColorTypeProp;
     svg?: string;
 });
