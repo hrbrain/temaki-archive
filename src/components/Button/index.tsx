@@ -92,9 +92,10 @@ export const Component: React.FC<Props> = props => {
             return (
                 <Circle.Component
                     onClick={handleClick}
+                    nativeType={props.nativeType || 'submit'}
                     colorType={props.colorType || 'primary'}
+                    svg={props.svg}
                     isLoading={isLoading}
-                    {...props}
                 />
             )
 
