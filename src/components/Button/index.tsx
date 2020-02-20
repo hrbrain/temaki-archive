@@ -67,6 +67,7 @@ const useIsLoadingByAsyncClick = (
 export type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>
     nativeType?: 'submit' | 'reset' | 'button'
+    className?: string
 } & (
     | {
           type: typeof buttonShapeType.box
@@ -96,6 +97,7 @@ export const Component: React.FC<Props> = props => {
                     colorType={props.colorType || 'primary'}
                     svg={props.svg}
                     isLoading={isLoading}
+                    className={props.className}
                 />
             )
 

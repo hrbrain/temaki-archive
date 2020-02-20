@@ -17,6 +17,7 @@ export declare const buttonShapeType: {
 export declare type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>;
     nativeType?: 'submit' | 'reset' | 'button';
+    className?: string;
 } & ({
     type: typeof buttonShapeType.box;
     colorType?: BoxColorTypeProp;
