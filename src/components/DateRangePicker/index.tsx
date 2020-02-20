@@ -3,6 +3,7 @@ import styled from '~/modules/theme'
 import * as moment from 'moment'
 import * as ReactDates from 'react-dates'
 import 'react-dates/initialize'
+// 日本時間で固定
 import 'moment/locale/ja'
 import * as Icon from '~/components/Icon'
 import * as IconFiles from '~/lib/iconFiles'
@@ -46,8 +47,9 @@ export const Component = React.memo<Props>(props => {
     )
 
     const handleOnDatesChange = React.useCallback(({ startDate, endDate }) => {
-        const rtnStartDate = startDate ? startDate.toDate() : null
-        const rtnEndDate = endDate ? endDate.toDate() : null
+        // 必ず12時が帰ってくるので9時にする（UTC上の0時）
+        const rtnStartDate = startDate ? startDate.hour(9).toDate() : null
+        const rtnEndDate = endDate ? endDate.hour(9).toDate() : null
         props.onChange(rtnStartDate, rtnEndDate)
     }, [])
 
