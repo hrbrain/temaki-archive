@@ -13,7 +13,7 @@ describe('Button type of box', () => {
         mockOnClick = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
-                <Button.Component type="box" onClick={mockOnClick}>
+                <Button.Component variant="box" onClick={mockOnClick}>
                     OK
                 </Button.Component>
             )
@@ -46,7 +46,7 @@ describe('Button type of circle', () => {
         act(() => {
             wrapper = mountWithTheme(
                 <Button.Component
-                    type="circle"
+                    variant="circle"
                     onClick={mockOnClick}
                     svg={IconFiles.icons.CheckBoxAll}
                 />
@@ -75,7 +75,7 @@ describe('Button type of text', () => {
         act(() => {
             wrapper = mountWithTheme(
                 <Button.Component
-                    type="text"
+                    variant="text"
                     svg={IconFiles.icons.CheckBoxAll}
                     onClick={mockOnClick}
                 >
