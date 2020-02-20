@@ -10,24 +10,23 @@ import * as Styles from '../lib/styles'
 
 type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
-    nativeType?: 'submit' | 'reset' | 'button'
+    nativeType: 'submit' | 'reset' | 'button'
+    className: string | undefined
 } & OuterProps
 export const Component: React.FC<Props> = ({ children, ...props }) => {
-    if (props.colorType === 'disabled') {
-        return (
-            <Outer
-                onClick={props.onClick}
-                type={props.nativeType || 'submit'}
-                height={props.height}
-                width={props.width}
-                colorType={props.colorType}
-                disabled
-            >
-                {children}
-            </Outer>
-        )
-    }
-    return <Outer {...props}>{children}</Outer>
+    return (
+        <Outer
+            onClick={props.onClick}
+            type={props.nativeType}
+            height={props.height}
+            width={props.width}
+            colorType={props.colorType}
+            disabled={props.colorType === 'disabled'}
+            className={props.className}
+        >
+            {children}
+        </Outer>
+    )
 }
 
 /**

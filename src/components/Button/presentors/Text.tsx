@@ -11,10 +11,11 @@ import * as Icon from '~/components/Icon'
  */
 
 type Props = {
-    svg?: string
-    colorType?: Index.TextColorTypeProp
+    svg?: string | undefined
+    colorType?: Index.TextColorTypeProp | undefined
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
-    nativeType?: 'submit' | 'reset' | 'button'
+    nativeType: 'submit' | 'reset' | 'button'
+    className: string | undefined
 }
 export const Component: React.FC<Props> = ({
     svg,
@@ -22,7 +23,11 @@ export const Component: React.FC<Props> = ({
     children,
     ...props
 }) => (
-    <Outer type={props.nativeType || 'submit'} {...props}>
+    <Outer
+        type={props.nativeType}
+        onClick={props.onClick}
+        className={props.className}
+    >
         {renderIcon(svg, colorType)}
         {renderText(svg, colorType, children)}
     </Outer>
