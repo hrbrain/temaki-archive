@@ -250,6 +250,7 @@ export declare const Modal: import("react").FunctionComponent<{
     buttons?: (({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
         nativeType?: "button" | "submit" | "reset" | undefined;
+        className?: string | undefined;
     } & {
         type: "box";
         colorType?: "disabled" | "default" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | undefined;
@@ -260,6 +261,7 @@ export declare const Modal: import("react").FunctionComponent<{
     }) | ({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
         nativeType?: "button" | "submit" | "reset" | undefined;
+        className?: string | undefined;
     } & {
         type: "circle";
         colorType?: "default" | "primary" | "secondary" | undefined;
@@ -269,6 +271,7 @@ export declare const Modal: import("react").FunctionComponent<{
     }) | ({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
         nativeType?: "button" | "submit" | "reset" | undefined;
+        className?: string | undefined;
     } & {
         type: "text";
         colorType?: "default" | "primary" | "destructive" | undefined;

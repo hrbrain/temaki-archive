@@ -16,12 +16,14 @@ type Props = {
     colorType: string | undefined
     isLoading: boolean | undefined
     nativeType: 'submit' | 'reset' | 'button'
+    className: string | undefined
 } & OuterProps
 export const Component = ({ svg, ...props }: Props) => (
     <Outer
         type={props.nativeType}
         onClick={props.onClick}
         colorType={props.colorType}
+        className={props.className}
     >
         <ThemeConsumer>{renderIcon(svg, props.colorType)}</ThemeConsumer>
     </Outer>
