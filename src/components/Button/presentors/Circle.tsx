@@ -12,13 +12,17 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
-    svg?: string
-    colorType?: string
-    isLoading?: boolean
-    nativeType?: 'submit' | 'reset' | 'button'
+    svg: string | undefined
+    colorType: string | undefined
+    isLoading: boolean | undefined
+    nativeType: 'submit' | 'reset' | 'button'
 } & OuterProps
 export const Component = ({ svg, ...props }: Props) => (
-    <Outer type={props.nativeType || 'submit'} {...props}>
+    <Outer
+        type={props.nativeType}
+        onClick={props.onClick}
+        colorType={props.colorType}
+    >
         <ThemeConsumer>{renderIcon(svg, props.colorType)}</ThemeConsumer>
     </Outer>
 )

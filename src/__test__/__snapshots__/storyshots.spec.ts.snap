@@ -911,7 +911,7 @@ exports[`Storyshots Components|Button Circle 1`] = `
 <button
   className="sc-ifAKCX jYTyKI"
   onClick={[Function]}
-  type="circle"
+  type="submit"
 />
 `;
 

@@ -5,10 +5,10 @@ import * as Index from '../index';
  */
 declare type Props = {
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    svg?: string;
-    colorType?: string;
-    isLoading?: boolean;
-    nativeType?: 'submit' | 'reset' | 'button';
+    svg: string | undefined;
+    colorType: string | undefined;
+    isLoading: boolean | undefined;
+    nativeType: 'submit' | 'reset' | 'button';
 } & OuterProps;
 export declare const Component: ({ svg, ...props }: Props) => JSX.Element;
 /**
