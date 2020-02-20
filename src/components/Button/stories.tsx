@@ -31,6 +31,7 @@ storiesOf('Components|Button', module)
     .add('Box', () => (
         <Button.Component
             type="box"
+            nativeType="submit"
             colorType={select('ColorType', boxOptions, boxOptions.Primary)}
             onClick={action('onClick')}
         >
@@ -40,6 +41,7 @@ storiesOf('Components|Button', module)
     .add('Circle', () => (
         <Button.Component
             type="circle"
+            nativeType="reset"
             colorType={select(
                 'ColorType',
                 circleOptions,
@@ -52,6 +54,7 @@ storiesOf('Components|Button', module)
     .add('Text', () => (
         <Button.Component
             type="text"
+            nativeType="button"
             colorType={select('ColorType', textOptions, textOptions.Primary)}
             svg={IconFiles.icons.ArrowDown}
             onClick={action('onClick')}

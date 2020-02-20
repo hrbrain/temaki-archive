@@ -107,7 +107,8 @@ export const Component: React.FC<Props> = props => {
                     onClick={handleClick}
                     colorType={props.colorType || 'primary'}
                     svg={props.svg}
-                    {...props}
+                    nativeType={props.nativeType || 'submit'}
+                    className={props.className}
                 >
                     {props.children}
                 </TextPresentor.Component>
@@ -120,7 +121,8 @@ export const Component: React.FC<Props> = props => {
                     width={props.width}
                     colorType={props.colorType || 'primary'}
                     onClick={handleClick}
-                    {...props}
+                    nativeType={props.nativeType || 'submit'}
+                    className={props.className}
                 >
                     {isLoading ? 'loading...' : props.children}
                 </Box.Component>
