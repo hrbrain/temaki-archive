@@ -17,7 +17,7 @@ type Props = {
     isLoading: boolean | undefined
     nativeType: 'submit' | 'reset' | 'button'
     className: string | undefined
-    dataTest:string | undefined
+    dataTest: string | undefined
 } & OuterProps
 export const Component = ({ svg, ...props }: Props) => (
     <Outer
