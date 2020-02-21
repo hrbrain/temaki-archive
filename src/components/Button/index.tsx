@@ -66,7 +66,7 @@ const useIsLoadingByAsyncClick = (
 
 export type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>
-    nativeType?: 'submit' | 'reset' | 'button'
+    type?: 'submit' | 'reset' | 'button'
     className?: string
     dataTest?: string
 } & (
@@ -95,7 +95,7 @@ export const Component: React.FC<Props> = props => {
                 <Circle.Component
                     dataTest={props.dataTest}
                     onClick={handleClick}
-                    nativeType={props.nativeType || 'submit'}
+                    type={props.type || 'submit'}
                     colorType={props.colorType || 'primary'}
                     svg={props.svg}
                     isLoading={isLoading}
@@ -110,7 +110,7 @@ export const Component: React.FC<Props> = props => {
                     onClick={handleClick}
                     colorType={props.colorType || 'primary'}
                     svg={props.svg}
-                    nativeType={props.nativeType || 'submit'}
+                    type={props.type || 'submit'}
                     className={props.className}
                 >
                     {props.children}
@@ -125,7 +125,7 @@ export const Component: React.FC<Props> = props => {
                     width={props.width}
                     colorType={props.colorType || 'primary'}
                     onClick={handleClick}
-                    nativeType={props.nativeType || 'submit'}
+                    type={props.type || 'submit'}
                     className={props.className}
                 >
                     {isLoading ? 'loading...' : props.children}
