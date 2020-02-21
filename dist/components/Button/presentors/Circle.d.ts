@@ -8,7 +8,7 @@ declare type Props = {
     svg: string | undefined;
     colorType: string | undefined;
     isLoading: boolean | undefined;
-    nativeType: 'submit' | 'reset' | 'button';
+    type: 'submit' | 'reset' | 'button';
     className: string | undefined;
     dataTest: string | undefined;
 } & OuterProps;

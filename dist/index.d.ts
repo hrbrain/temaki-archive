@@ -249,7 +249,7 @@ export declare const Modal: import("react").FunctionComponent<{
     title: string;
     buttons?: (({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        nativeType?: "button" | "submit" | "reset" | undefined;
+        type?: "button" | "submit" | "reset" | undefined;
         className?: string | undefined;
         dataTest?: string | undefined;
     } & {
@@ -261,7 +261,7 @@ export declare const Modal: import("react").FunctionComponent<{
         text: string;
     }) | ({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        nativeType?: "button" | "submit" | "reset" | undefined;
+        type?: "button" | "submit" | "reset" | undefined;
         className?: string | undefined;
         dataTest?: string | undefined;
     } & {
@@ -272,7 +272,7 @@ export declare const Modal: import("react").FunctionComponent<{
         text: string;
     }) | ({
         onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        nativeType?: "button" | "submit" | "reset" | undefined;
+        type?: "button" | "submit" | "reset" | undefined;
         className?: string | undefined;
         dataTest?: string | undefined;
     } & {

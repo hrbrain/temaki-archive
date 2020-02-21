@@ -5,7 +5,7 @@ import * as Index from '../index';
  */
 declare type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    nativeType: 'submit' | 'reset' | 'button';
+    type: 'submit' | 'reset' | 'button';
     className: string | undefined;
     dataTest: string | undefined;
 } & OuterProps;

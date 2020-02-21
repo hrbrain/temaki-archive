@@ -14,7 +14,7 @@ type Props = {
     svg: string | undefined
     colorType: Index.TextColorTypeProp | undefined
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
-    nativeType: 'submit' | 'reset' | 'button'
+    type: 'submit' | 'reset' | 'button'
     className: string | undefined
     dataTest: string | undefined
 }
@@ -25,7 +25,7 @@ export const Component: React.FC<Props> = ({
     ...props
 }) => (
     <Outer
-        type={props.nativeType}
+        type={props.type}
         onClick={props.onClick}
         className={props.className}
         data-test={props.dataTest}

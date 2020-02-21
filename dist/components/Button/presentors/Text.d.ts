@@ -7,7 +7,7 @@ declare type Props = {
     svg: string | undefined;
     colorType: Index.TextColorTypeProp | undefined;
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    nativeType: 'submit' | 'reset' | 'button';
+    type: 'submit' | 'reset' | 'button';
     className: string | undefined;
     dataTest: string | undefined;
 };
