@@ -46,12 +46,15 @@ export const Component = React.memo<Props>(props => {
         [focusedInput]
     )
 
-    const handleOnDatesChange = React.useCallback(({ startDate, endDate }) => {
-        // 必ず12時が帰ってくるので9時にする（UTC上の0時）
-        const rtnStartDate = startDate ? startDate.hour(9).toDate() : null
-        const rtnEndDate = endDate ? endDate.hour(9).toDate() : null
-        props.onChange(rtnStartDate, rtnEndDate)
-    }, [])
+    const handleOnDatesChange = React.useCallback(
+        ({ startDate, endDate }) => {
+            // 必ず12時が帰ってくるので9時にする（UTC上の0時）
+            const rtnStartDate = startDate ? startDate.hour(9).toDate() : null
+            const rtnEndDate = endDate ? endDate.hour(9).toDate() : null
+            props.onChange(rtnStartDate, rtnEndDate)
+        },
+        [props.onChange]
+    )
 
     const calendarIconRender = React.useMemo(() => {
         return <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
