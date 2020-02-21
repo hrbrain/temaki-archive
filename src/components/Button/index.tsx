@@ -92,6 +92,7 @@ export const Component: React.FC<Props> = props => {
         case 'circle':
             return (
                 <Circle.Component
+                    {...props}
                     onClick={handleClick}
                     nativeType={props.nativeType || 'submit'}
                     colorType={props.colorType || 'primary'}
@@ -104,6 +105,7 @@ export const Component: React.FC<Props> = props => {
         case 'text':
             return (
                 <TextPresentor.Component
+                    {...props}
                     onClick={handleClick}
                     colorType={props.colorType || 'primary'}
                     svg={props.svg}
@@ -117,6 +119,7 @@ export const Component: React.FC<Props> = props => {
         default:
             return (
                 <Box.Component
+                    {...props}
                     height={props.height}
                     width={props.width}
                     colorType={props.colorType || 'primary'}

@@ -24,6 +24,7 @@ export const Component: React.FC<Props> = ({
     ...props
 }) => (
     <Outer
+        {...props}
         type={props.nativeType}
         onClick={props.onClick}
         className={props.className}

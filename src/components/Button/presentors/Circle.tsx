@@ -20,6 +20,7 @@ type Props = {
 } & OuterProps
 export const Component = ({ svg, ...props }: Props) => (
     <Outer
+        {...props}
         type={props.nativeType}
         onClick={props.onClick}
         colorType={props.colorType}

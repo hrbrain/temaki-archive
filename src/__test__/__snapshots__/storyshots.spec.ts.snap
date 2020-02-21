@@ -1811,6 +1811,7 @@ exports[`Storyshots Components|Modal all 1`] = `
         >
           <button
             className="sc-hmzhuo iEbskR sc-htpNat jBbDys"
+            data-test="button0"
             disabled={false}
             onClick={[Function]}
             type="submit"
