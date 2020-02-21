@@ -47,7 +47,7 @@ export const Component = React.memo<Props>(props => {
             date.hour(9)
             return props.onChange(date.toDate())
         },
-        [props.date]
+        [props.date, props.onChange]
     )
 
     const calendarIconRender = React.useMemo(() => {
