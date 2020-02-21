@@ -16,6 +16,7 @@ type Props = {
 export const Component: React.FC<Props> = ({ children, ...props }) => {
     return (
         <Outer
+            {...props}
             onClick={props.onClick}
             type={props.nativeType}
             height={props.height}
