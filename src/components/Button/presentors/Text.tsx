@@ -11,9 +11,9 @@ import * as Icon from '~/components/Icon'
  */
 
 type Props = {
-    svg?: string | undefined
-    colorType?: Index.TextColorTypeProp | undefined
-    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
+    svg: string | undefined
+    colorType: Index.TextColorTypeProp | undefined
+    onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
     nativeType: 'submit' | 'reset' | 'button'
     className: string | undefined
 }

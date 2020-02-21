@@ -44,7 +44,9 @@ describe('Modal component', () => {
 
     it('Should render a ', () => {
         buttons.forEach((_, index) => {
-            expect(wrapper.find(`button.button${index}`)).toHaveLength(1)
+            expect(
+                wrapper.find(`button[data-test="button${index}"]`)
+            ).toHaveLength(1)
         })
     })
 })
