@@ -28,7 +28,7 @@ export const Component: React.FC<Props> = props => {
                         {props.buttons.map((buttonProps, index) => (
                             <StyledButton
                                 key={index}
-                                data-test={`button${index}`}
+                                dataTest={`button${index}`}
                                 {...buttonProps}
                             >
                                 {buttonProps.text}

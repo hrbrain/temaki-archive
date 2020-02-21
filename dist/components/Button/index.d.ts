@@ -18,6 +18,7 @@ export declare type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>;
     nativeType?: 'submit' | 'reset' | 'button';
     className?: string;
+    dataTest?: string;
 } & ({
     variant: typeof buttonShapeType.box;
     colorType?: BoxColorTypeProp;

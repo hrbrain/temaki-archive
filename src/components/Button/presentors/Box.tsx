@@ -12,11 +12,11 @@ type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
     nativeType: 'submit' | 'reset' | 'button'
     className: string | undefined
+    dataTest:string | undefined
 } & OuterProps
 export const Component: React.FC<Props> = ({ children, ...props }) => {
     return (
         <Outer
-            {...props}
             onClick={props.onClick}
             type={props.nativeType}
             height={props.height}
@@ -24,6 +24,7 @@ export const Component: React.FC<Props> = ({ children, ...props }) => {
             colorType={props.colorType}
             disabled={props.colorType === 'disabled'}
             className={props.className}
+            data-test={props.dataTest}
         >
             {children}
         </Outer>

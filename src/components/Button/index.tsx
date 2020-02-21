@@ -68,6 +68,7 @@ export type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>
     nativeType?: 'submit' | 'reset' | 'button'
     className?: string
+    dataTest?: string
 } & (
     | {
           variant: typeof buttonShapeType.box
@@ -92,7 +93,7 @@ export const Component: React.FC<Props> = props => {
         case 'circle':
             return (
                 <Circle.Component
-                    {...props}
+                    dataTest={props.dataTest}
                     onClick={handleClick}
                     nativeType={props.nativeType || 'submit'}
                     colorType={props.colorType || 'primary'}
@@ -105,7 +106,7 @@ export const Component: React.FC<Props> = props => {
         case 'text':
             return (
                 <TextPresentor.Component
-                    {...props}
+                    dataTest={props.dataTest}
                     onClick={handleClick}
                     colorType={props.colorType || 'primary'}
                     svg={props.svg}
@@ -119,7 +120,7 @@ export const Component: React.FC<Props> = props => {
         default:
             return (
                 <Box.Component
-                    {...props}
+                    dataTest={props.dataTest}
                     height={props.height}
                     width={props.width}
                     colorType={props.colorType || 'primary'}
