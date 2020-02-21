@@ -1810,7 +1810,7 @@ exports[`Storyshots Components|Modal all 1`] = `
           className="sc-ksYbfQ bNvMeG"
         >
           <button
-            className="button0 sc-hmzhuo iEbskR sc-htpNat jBbDys"
+            className="sc-hmzhuo iEbskR sc-htpNat jBbDys"
             disabled={false}
             onClick={[Function]}
             type="submit"
