@@ -7,6 +7,7 @@ declare type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
     nativeType: 'submit' | 'reset' | 'button';
     className: string | undefined;
+    dataTest: string | undefined;
 } & OuterProps;
 export declare const Component: React.FC<Props>;
 /**

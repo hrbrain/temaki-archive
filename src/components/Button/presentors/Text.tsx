@@ -16,6 +16,7 @@ type Props = {
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
     nativeType: 'submit' | 'reset' | 'button'
     className: string | undefined
+    dataTest:string | undefined
 }
 export const Component: React.FC<Props> = ({
     svg,
@@ -24,10 +25,10 @@ export const Component: React.FC<Props> = ({
     ...props
 }) => (
     <Outer
-        {...props}
         type={props.nativeType}
         onClick={props.onClick}
         className={props.className}
+        data-test={props.dataTest}
     >
         {renderIcon(svg, colorType)}
         {renderText(svg, colorType, children)}
