@@ -36,7 +36,7 @@ export const Component = React.memo<Props>(props => {
     const closeMenu = React.useCallback(() => setIsMenuVisible(false), [])
 
     const handleOnChange = React.useCallback(
-        value => {
+        (value: ItemList.Value) => {
             setIsMenuVisible(!isMenuVisible)
             props.onChange(value)
         },
