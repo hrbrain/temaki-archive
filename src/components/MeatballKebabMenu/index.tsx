@@ -75,13 +75,20 @@ export const Component = React.memo<Props>(
                             svg={selectMeatOrKebab(type)}
                             size="24px"
                         />
+                        <ListWrapper>
+                            <List
+                                data-test="list-component"
+                                className={`${position} ${
+                                    !isShow ? 'hidden' : ''
+                                }`}
+                                listNum={listItems.length}
+                            >
+                                {listItems.map(
+                                    renderListItem(isShow, setIsShow)
+                                )}
+                            </List>
+                        </ListWrapper>
                     </Menu>
-                    <List
-                        data-test="list-component"
-                        className={`${position} ${!isShow ? 'hidden' : ''}`}
-                    >
-                        {listItems.map(renderListItem(isShow, setIsShow))}
-                    </List>
                 </ClickOutside.Component>
             </Wrap>
         )
@@ -116,11 +123,14 @@ const Menu = styled.div`
 `
 const MenuItem = styled(Icon.Component)``
 
-const List = styled.ul`
-    white-space: nowrap;
+const ListWrapper = styled.div`
     position: absolute;
+`
+
+const List = styled.ul<{ listNum: number }>`
+    white-space: nowrap;
+    position: fixed;
     display: block;
-    right: 0;
     max-width: 140px;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
@@ -129,14 +139,15 @@ const List = styled.ul`
     transition: 0.2s;
     visibility: visible;
     transform: scaleY(1);
-    position: top;
     &.top {
         transform-origin: top;
-        top: 24px;
     }
     &.bottom {
         transform-origin: bottom;
-        bottom: 24px;
+        margin-top: calc(
+            (-${props => props.listNum} * 24px) +
+                (-${props => props.listNum} * 8px) - 40px
+        );
     }
     &.hidden {
         visibility: hidden;
