@@ -77,9 +77,6 @@ describe('MeatballKebabMenu', () => {
         expect(checkEl).toHaveStyleRule('transform-origin', 'top', {
             modifier: '&.top'
         })
-        expect(checkEl).toHaveStyleRule('top', '24px', {
-            modifier: '&.top'
-        })
     })
 
     it('bottom時のリストが正常に表示される', () => {
@@ -93,9 +90,6 @@ describe('MeatballKebabMenu', () => {
         )
         const checkEl = wrapper.find('ul[data-test="list-component"]')
         expect(checkEl).toHaveStyleRule('transform-origin', 'bottom', {
-            modifier: '&.bottom'
-        })
-        expect(checkEl).toHaveStyleRule('bottom', '24px', {
             modifier: '&.bottom'
         })
     })
