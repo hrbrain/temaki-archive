@@ -37,7 +37,7 @@ export const Component = React.memo<Props>(props => {
 
     const handleOnChange = React.useCallback(
         (value: ItemList.Value) => {
-            setIsMenuVisible(!isMenuVisible)
+            setIsMenuVisible(false)
             props.onChange(value)
         },
         [props.onChange]
