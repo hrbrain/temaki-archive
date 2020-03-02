@@ -1,6 +1,5 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
-import * as moment from 'moment'
 import * as ReactDates from 'react-dates'
 import 'react-dates/initialize'
 // 日本時間で固定
@@ -30,7 +29,7 @@ export const Component = React.memo<Props>(props => {
 
     const conversionToMomentType = React.useCallback(
         (date: Date | null) => {
-            return date ? moment(date) : null
+            return date ? Moment(date) : null
         },
         [props.date]
     )
