@@ -4,10 +4,13 @@ import * as ReactDates from 'react-dates'
 import 'react-dates/initialize'
 // 日本時間で固定
 import 'moment/locale/ja'
-import * as Moment from 'moment'
+import * as _Moment from 'moment'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
+
+// これを消すとRollupでエラーが出る
+const Moment = _Moment
 
 /**
  * Component
@@ -39,7 +42,7 @@ export const Component = React.memo<Props>(props => {
     }, [focused])
 
     const handleOnDateChange = React.useCallback(
-        (date: null | Moment.Moment) => {
+        (date: null | _Moment.Moment) => {
             if (!date) return props.onChange(null)
 
             // 必ず12時が帰ってくるので9時にして返す（UTC上での0時）

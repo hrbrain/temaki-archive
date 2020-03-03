@@ -10,7 +10,7 @@
     "scripts": {
         "start": "start-storybook -p 6006",
         "docs:build": "build-storybook -c .storybook",
-        "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+        "build": "rollup -c",
         "test": "jest",
         "lint": "run-s lint:*",
         "lint:src": "eslint --ext .ts,.tsx ./src",
@@ -86,6 +86,7 @@
         "rollup-plugin-babel": "^4.3.3",
         "rollup-plugin-commonjs": "^10.1.0",
         "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-uglify": "^6.0.4",
         "ts-jest": "^24.0.1",
         "ts-loader": "^6.0.4",
         "typescript": "3.5.3",
