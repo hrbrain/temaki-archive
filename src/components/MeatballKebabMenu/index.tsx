@@ -123,14 +123,13 @@ const Menu = styled.div`
 `
 const MenuItem = styled(Icon.Component)``
 
-const ListWrapper = styled.div`
-    position: absolute;
-`
+const ListWrapper = styled.div``
 
 const List = styled.ul<{ listNum: number }>`
     white-space: nowrap;
-    position: fixed;
+    position: absolute;
     display: block;
+    right: 0;
     max-width: 140px;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
@@ -141,13 +140,11 @@ const List = styled.ul<{ listNum: number }>`
     transform: scaleY(1);
     &.top {
         transform-origin: top;
+        top: 24px;
     }
     &.bottom {
         transform-origin: bottom;
-        margin-top: calc(
-            (-${props => props.listNum} * 24px) +
-                (-${props => props.listNum} * 8px) - 40px
-        );
+        bottom: 24px;
     }
     &.hidden {
         visibility: hidden;

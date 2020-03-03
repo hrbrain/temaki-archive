@@ -1733,10 +1733,10 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
           size="24px"
         />
         <div
-          className="sc-fAjcbJ JufLj"
+          className="sc-fAjcbJ byigni"
         >
           <ul
-            className="top hidden sc-caSCKo jdhJxx"
+            className="top hidden sc-caSCKo ewrmvO"
             data-test="list-component"
           >
             <li
