@@ -8,3 +8,4 @@ coverage/*
 storybook-static/
 .DS_Store
 dist/
+.env
