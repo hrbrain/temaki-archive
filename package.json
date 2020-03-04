@@ -1,12 +1,11 @@
 {
-    "name": "hrb-temaki",
+    "name": "@hrbrain/temaki",
     "main": "./dist/index.cjs.js",
     "module": "./dist/index.esm.js",
     "browser": "./dist/index.umd.js",
     "types": "./dist/index.d.ts",
     "version": "0.10.25",
-    "private": true,
-    "license": "ISC",
+    "license": "Apache-2.0",
     "scripts": {
         "start": "start-storybook -p 6006",
         "docs:build": "build-storybook -c .storybook",
