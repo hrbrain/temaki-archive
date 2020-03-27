@@ -17,7 +17,8 @@
         "lint:src": "eslint --ext .ts,.tsx ./src",
         "lint-fix": "run-s lint-fix:*",
         "lint-fix:src": "eslint --ext .ts,.tsx --fix ./src",
-        "type-check": "tsc --noEmit"
+        "type-check": "tsc --noEmit",
+        "prepublish": "npm run build"
     },
     "peerDependencies": {
         "react": ">=16.8.6",
