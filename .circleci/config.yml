@@ -42,7 +42,7 @@ jobs:
             - ./node_modules
       - run:
           name: Try release
-          commane: yarn release:trigger
+          command: yarn release:trigger
 
 workflows:
   version: 2
