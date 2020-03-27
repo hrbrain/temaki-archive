@@ -1,5 +1,5 @@
 version: 2
-jobs: 
+jobs:
   test:
     working_directory: ~/dir
     docker:
@@ -17,7 +17,7 @@ jobs:
               - ./node_modules
       - run:
           name: Run test
-          command: yarn test --ci
+          command: yarn test --ci --runInBand
       - run:
           name: Run type check
           command: yarn type-check
@@ -27,7 +27,7 @@ jobs:
 
   release:
     working_directory: ~/dir
-    docker: 
+    docker:
       - image: circleci/node:12
     steps:
       - checkout
