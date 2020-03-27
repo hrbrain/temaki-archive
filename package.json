@@ -1,26 +1,23 @@
 {
-    "name": "hrb-temaki",
-    "main": "./dist/index.js",
+    "name": "@hrbrain/temaki",
+    "main": "./dist/index.cjs.js",
+    "module": "./dist/index.esm.js",
+    "browser": "./dist/index.umd.js",
     "types": "./dist/index.d.ts",
-    "version": "0.10.25",
-    "private": true,
-    "license": "ISC",
+    "version": "1.0.0",
+    "license": "Apache-2.0",
     "scripts": {
         "start": "start-storybook -p 6006",
         "docs:build": "build-storybook -c .storybook",
-        "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+        "release:prepare": "shipjs prepare",
+        "release:trigger": "shipjs trigger",
+        "build": "rollup -c",
         "test": "jest",
         "lint": "run-s lint:*",
         "lint:src": "eslint --ext .ts,.tsx ./src",
         "lint-fix": "run-s lint-fix:*",
         "lint-fix:src": "eslint --ext .ts,.tsx --fix ./src",
         "type-check": "tsc --noEmit"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run build && tsc --emitDeclarationOnly && git add ./dist",
-            "pre-push": "npm run lint && npm run test"
-        }
     },
     "peerDependencies": {
         "react": ">=16.8.6",
@@ -29,7 +26,6 @@
     "dependencies": {
         "@types/react": "^16.8.23",
         "@types/styled-components": "4.1.18",
-        "global": "^4.4.0",
         "moment": "^2.24.0",
         "react": "^16.8.6",
         "react-dates": "^21.4.0",
@@ -87,11 +83,15 @@
         "react-dom": "^16.8.6",
         "react-test-renderer": "^16.8.6",
         "react-textarea-autosize": "^7.1.0",
+        "rollup": "^1.32.0",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-uglify": "^6.0.4",
+        "shipjs": "^0.16.1",
         "ts-jest": "^24.0.1",
         "ts-loader": "^6.0.4",
         "typescript": "3.5.3",
-        "utility-types": "^3.5.0",
-        "webpack": "^4.35.3",
-        "webpack-cli": "^3.3.6"
+        "utility-types": "^3.5.0"
     }
 }

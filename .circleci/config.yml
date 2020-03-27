@@ -1,9 +1,9 @@
 version: 2
-jobs: 
+jobs:
   test:
     working_directory: ~/dir
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:12
     steps:
       - checkout
       - restore_cache:
@@ -17,13 +17,32 @@ jobs:
               - ./node_modules
       - run:
           name: Run test
-          command: yarn test --ci
+          command: yarn test --ci --runInBand
       - run:
           name: Run type check
           command: yarn type-check
       - run:
           name: Run lint
           command: yarn lint
+
+  release:
+    working_directory: ~/dir
+    docker:
+      - image: circleci/node:12
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Try release
+          commane: yarn release:trigger
 
 workflows:
   version: 2
@@ -35,3 +54,10 @@ workflows:
               ignore: master
             tags:
               only: /.*/
+  release:
+    jobs:
+      - release:
+          filters:
+            branches:
+              only: /master/
+
