@@ -1,7 +1,6 @@
 .circleci
 .storybook
 public
-src
 .babelrc
 .editorconfig
 .env
