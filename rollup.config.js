@@ -11,6 +11,11 @@ const extensions = ['.js', '.jsx', '.ts', '.tsx']
 
 const config = {
     input: 'src/index.tsx',
+    external: [
+        'styled-components',
+        'react',
+        'react-dom'
+    ],
     output: [
         {
             file: pkg.main,
