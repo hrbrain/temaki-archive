@@ -24,12 +24,7 @@ export const Component = React.memo<Props>(props => {
 
     const showItem =
         filteredItems.length > 0 ? (
-            filteredItems.map(
-                renderItem(
-                    props.values,
-                    props.onClickItem,
-                )
-            )
+            filteredItems.map(renderItem(props.values, props.onClickItem))
         ) : (
             <NotFoundText>
                 &quot;{props.searchValue}&quot;が見つかりませんでした。
@@ -47,10 +42,10 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-const renderItem = (
-    selected: Value[],
-    onClickItem: (value: Value) => void,
-) => (item: Item, index: number) => {
+const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
+    item: Item,
+    index: number
+) => {
     return (
         <ItemComponent
             item={item}
