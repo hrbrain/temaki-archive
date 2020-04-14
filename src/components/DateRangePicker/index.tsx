@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
-import * as _Moment from 'moment'
+import * as moment from 'moment'
 import * as ReactDates from 'react-dates'
 import 'react-dates/initialize'
 // 日本時間で固定
@@ -8,9 +8,6 @@ import 'moment/locale/ja'
 import * as Icon from '~/components/Icon'
 import * as IconFiles from '~/lib/iconFiles'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
-
-// これを消すとRollupでエラーが出る
-const Moment = _Moment
 
 /**
  * Component
@@ -37,7 +34,7 @@ export const Component = React.memo<Props>(props => {
 
     const conversionToMomentType = React.useCallback(
         (date: Date | null) => {
-            return date ? Moment(date) : null
+            return date ? moment(date) : null
         },
         [props.startDate, props.endDate]
     )
