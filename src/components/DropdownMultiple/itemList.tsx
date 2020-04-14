@@ -11,29 +11,46 @@ import * as Icon from '~/components/Icon'
 type Props = {
     items: Item[]
     values: Value[]
+    searchValue: string
     onClickItem: (value: Value) => void
     className?: string
     isVisible?: boolean
 }
 
 export const Component = React.memo<Props>(props => {
+    const filteredItems = props.items.filter(item =>
+        item.text.includes(props.searchValue)
+    )
+
+    const showItem =
+        filteredItems.length > 0 ? (
+            filteredItems.map(
+                renderItem(
+                    props.values,
+                    props.onClickItem,
+                )
+            )
+        ) : (
+            <NotFoundText>
+                &quot;{props.searchValue}&quot;が見つかりませんでした。
+            </NotFoundText>
+        )
+
     return (
         <ItemList
             data-test="itemList"
             className={props.className}
             isVisible={props.isVisible}
         >
-            <ListInner>
-                {props.items.map(renderItem(props.values, props.onClickItem))}
-            </ListInner>
+            <ListInner>{showItem}</ListInner>
         </ItemList>
     )
 })
 
-const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
-    item: Item,
-    index: number
-) => {
+const renderItem = (
+    selected: Value[],
+    onClickItem: (value: Value) => void,
+) => (item: Item, index: number) => {
     return (
         <ItemComponent
             item={item}
@@ -123,4 +140,10 @@ const CheckIcon = styled(Icon.Component)`
 
 const Text = styled.div`
     padding-left: 4px;
+`
+
+const NotFoundText = styled.div`
+    color: ${props => props.theme.colors.grayScale.S10};
+    word-break: break-all;
+    padding: 6px 0;
 `

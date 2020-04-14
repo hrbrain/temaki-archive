@@ -31,6 +31,14 @@ export const Component = React.memo<Props>(props => {
         props.defaultExpanded
     )
 
+    const [searchValue, setSearchValue] = React.useState<string>('')
+    const changeSearchValue = React.useCallback(
+        (event: React.ChangeEvent<HTMLInputElement>) => {
+            setSearchValue(event.target.value)
+        },
+        [searchValue]
+    )
+
     const clickBody = React.useCallback(() => {
         setIsMenuVisible(!isMenuVisible)
     }, [isMenuVisible])
@@ -67,12 +75,15 @@ export const Component = React.memo<Props>(props => {
                         isMenuVisible={isMenuVisible}
                         diff={props.diff}
                         isError={props.isError}
+                        onChangeSearchValue={changeSearchValue}
+                        searchValue={searchValue}
                     />
                     <StyledItemList
                         isVisible={isMenuVisible}
                         items={props.items}
                         onClickItem={changeValue}
                         values={props.values}
+                        searchValue={searchValue}
                     />
                 </ClickOutside.Component>
             </Inner>
