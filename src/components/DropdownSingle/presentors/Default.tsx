@@ -41,6 +41,11 @@ export const Component = React.memo<Props>(props => {
         setSearchValue('')
     }, [])
 
+    const inputRef = React.useRef<HTMLInputElement | null>(null)
+    React.useEffect(() => {
+        if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
+    }, [props.isMenuVisible])
+
     return (
         <Wrap width={props.width} className={props.className}>
             <Inner>
@@ -68,11 +73,7 @@ export const Component = React.memo<Props>(props => {
                                         type="text"
                                         value={searchValue}
                                         onChange={changeSearchValue}
-                                        ref={ref =>
-                                            ref && props.isMenuVisible
-                                                ? ref.focus()
-                                                : null
-                                        }
+                                        ref={inputRef}
                                     />
                                 </SelectorInput>
                             </>
