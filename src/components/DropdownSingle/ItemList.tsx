@@ -14,26 +14,47 @@ type Props = {
     onClickItem: (value: Value) => void
     className?: string
     isVisible?: boolean
+    onBlurSearchValue?: () => void
 }
 
 export const Component = React.memo<Props>(props => {
+    const filteredItems = props.items.filter(item =>
+        item.text.includes(props.value)
+    )
+
+    const showItem =
+        filteredItems.length > 0 ? (
+            filteredItems.map(
+                renderItem(
+                    props.value,
+                    props.onClickItem,
+                    props.onBlurSearchValue
+                )
+            )
+        ) : (
+            <NotFoundText>
+                &quot;{props.value}&quot;が見つかりませんでした。
+            </NotFoundText>
+        )
     return (
         <ItemList data-test="itemList" className={props.className}>
-            {props.items.map(renderItem(props.value, props.onClickItem))}
+            {showItem}
         </ItemList>
     )
 })
 
-const renderItem = (selected: Value, onClickItem: (value: Value) => void) => (
-    item: Item,
-    index: number
-) => {
+const renderItem = (
+    selected: Value,
+    onClickItem: (value: Value) => void,
+    onBlurSearchValue?: () => void
+) => (item: Item, index: number) => {
     return (
         <ItemComponent
             item={item}
             key={index}
             selected={selected}
             onClickItem={onClickItem}
+            onBlurSearchValue={onBlurSearchValue}
         />
     )
 }
@@ -52,12 +73,14 @@ type ItemProps = {
     item: Item
     selected: Value
     onClickItem: (value: Value) => void
+    onBlurSearchValue?: () => void
 }
 
 const ItemComponent = React.memo<ItemProps>(props => {
     const handleClick = React.useCallback(() => {
+        if (props.onBlurSearchValue !== undefined) props.onBlurSearchValue()
         props.onClickItem(props.item.value)
-    }, [props.onClickItem, props.item])
+    }, [props.onClickItem, props.item, props.onBlurSearchValue])
 
     return (
         <Item onClick={handleClick}>
@@ -105,4 +128,10 @@ const Item = styled.li`
 
 const Text = styled.div`
     padding-left: 4px;
+`
+
+const NotFoundText = styled.div`
+    color: ${props => props.theme.colors.grayScale.S10};
+    word-break: break-all;
+    padding: 6px 0;
 `

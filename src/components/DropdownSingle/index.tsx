@@ -29,9 +29,12 @@ export const Component = React.memo<Props>(props => {
         props.defaultExpanded || false
     )
 
+    const [focused, setFocused] = React.useState(false)
+
     const clickBody = React.useCallback(() => {
         setIsMenuVisible(!isMenuVisible)
-    }, [isMenuVisible])
+        setFocused(!focused)
+    }, [isMenuVisible, focused])
 
     const closeMenu = React.useCallback(() => setIsMenuVisible(false), [])
 

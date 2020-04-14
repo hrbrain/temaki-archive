@@ -20,19 +20,7 @@ storiesOf('Components|DropdownSingle', module)
                     { value: '5', text: 'さくらんぼ' },
                     { value: '6', text: 'ぶどう' }
                 ]}
-                value={select(
-                    'selected',
-                    {
-                        未選択時: '',
-                        りんご: '1',
-                        いちご: '2',
-                        バナナ: '3',
-                        メロン: '4',
-                        さくらんぼ: '5',
-                        ぶどう: '6'
-                    },
-                    ''
-                )}
+                value={''}
                 isError={boolean('isError', false)}
                 errorMessage={text('ErrorMessage', '')}
                 width={text('width', '200px')}
