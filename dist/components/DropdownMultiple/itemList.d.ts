@@ -4,8 +4,7 @@ import * as React from 'react';
  */
 declare type Props = {
     items: Item[];
-    values: Value[];
-    searchValue: string;
+    value: Value;
     onClickItem: (value: Value) => void;
     className?: string;
     isVisible?: boolean;

@@ -10,8 +10,7 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     items: Item[]
-    values: Value[]
-    searchValue: string
+    value: Value
     onClickItem: (value: Value) => void
     className?: string
     isVisible?: boolean
@@ -19,15 +18,15 @@ type Props = {
 
 export const Component = React.memo<Props>(props => {
     const filteredItems = props.items.filter(item =>
-        item.text.includes(props.searchValue)
+        item.text.includes(props.value)
     )
 
     const showItem =
         filteredItems.length > 0 ? (
-            filteredItems.map(renderItem(props.values, props.onClickItem))
+            filteredItems.map(renderItem(props.value, props.onClickItem))
         ) : (
             <NotFoundText>
-                &quot;{props.searchValue}&quot;が見つかりませんでした。
+                &quot;{props.value}&quot;が見つかりませんでした。
             </NotFoundText>
         )
 
@@ -42,7 +41,7 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
+const renderItem = (selected: Value, onClickItem: (value: Value) => void) => (
     item: Item,
     index: number
 ) => {
@@ -68,7 +67,7 @@ export type Value = string
 
 type ItemProps = {
     item: Item
-    selected: Value[]
+    selected: Value
     onClickItem: (value: Value) => void
 }
 
