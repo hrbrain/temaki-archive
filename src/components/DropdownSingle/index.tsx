@@ -29,6 +29,18 @@ export const Component = React.memo<Props>(props => {
         props.defaultExpanded || false
     )
 
+    const [searchValue, setSearchValue] = React.useState(props.value)
+    const changeSearchValue = React.useCallback(
+        (event: React.ChangeEvent<HTMLInputElement>) => {
+            setSearchValue(event.target.value)
+        },
+        [searchValue]
+    )
+
+    const blurSearchValue = React.useCallback(() => {
+        setSearchValue('')
+    }, [])
+
     const [focused, setFocused] = React.useState(false)
 
     const clickBody = React.useCallback(() => {
@@ -78,6 +90,9 @@ export const Component = React.memo<Props>(props => {
                     diff={props.diff}
                     errorMessage={props.errorMessage}
                     className={props.className}
+                    searchValue={searchValue}
+                    onChangeSearchValue={changeSearchValue}
+                    onBlurSearchValue={blurSearchValue}
                 />
             )
     }

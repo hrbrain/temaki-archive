@@ -27,20 +27,11 @@ type Props = {
     diff?: boolean
     className?: string
     errorMessage?: string
+    searchValue: string
+    onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
+    onBlurSearchValue: () => void
 }
 export const Component = React.memo<Props>(props => {
-    const [searchValue, setSearchValue] = React.useState(props.value)
-    const changeSearchValue = React.useCallback(
-        (event: React.ChangeEvent<HTMLInputElement>) => {
-            setSearchValue(event.target.value)
-        },
-        [searchValue]
-    )
-
-    const blurSearchValue = React.useCallback(() => {
-        setSearchValue('')
-    }, [])
-
     const inputRef = React.useRef<HTMLInputElement | null>(null)
     React.useEffect(() => {
         if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
@@ -71,8 +62,8 @@ export const Component = React.memo<Props>(props => {
                                     <Input
                                         data-test="input"
                                         type="text"
-                                        value={searchValue}
-                                        onChange={changeSearchValue}
+                                        value={props.searchValue}
+                                        onChange={props.onChangeSearchValue}
                                         ref={inputRef}
                                     />
                                 </SelectorInput>
@@ -87,11 +78,11 @@ export const Component = React.memo<Props>(props => {
                         )}
                     </Body>
                     <StyledItemList
-                        value={searchValue}
+                        value={props.searchValue}
                         onClickItem={props.onClickMenuItem}
                         items={props.items}
                         isVisible={props.isMenuVisible}
-                        onBlurSearchValue={blurSearchValue}
+                        onBlurSearchValue={props.onBlurSearchValue}
                     />
                 </ClickOutside.Component>
             </Inner>
