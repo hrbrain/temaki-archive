@@ -190,7 +190,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bwzfXH",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
@@ -532,7 +532,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bwzfXH",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
                     "
