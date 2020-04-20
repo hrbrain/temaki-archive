@@ -16,9 +16,9 @@ jobs:
           paths:
               - ./node_modules
       - run:
-          name: Run test
-          no_output_timeout: 15m
-          command: yarn test --ci
+        name: Run test
+        no_output_timeout: 15m
+        command: yarn test --ci
       - run:
           name: Run type check
           command: yarn type-check
