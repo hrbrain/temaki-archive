@@ -20,6 +20,41 @@ storiesOf('Components|DropdownSingle', module)
                     { value: '5', text: 'さくらんぼ' },
                     { value: '6', text: 'ぶどう' }
                 ]}
+                value={select(
+                    'selected',
+                    {
+                        未選択時: '',
+                        りんご: '1',
+                        いちご: '2',
+                        バナナ: '3',
+                        メロン: '4',
+                        さくらんぼ: '5',
+                        ぶどう: '6'
+                    },
+                    ''
+                )}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '200px')}
+                onChange={action('onChange')}
+                diff={boolean('Diff', false)}
+            />
+        </div>
+    ))
+    .add('Input', () => (
+        <div className="ml-20 mt-10">
+            <DropdownSingle.Component
+                type={'default'}
+                placeholder={text('placeholder', '選択してください')}
+                items={[
+                    { value: '', text: '' },
+                    { value: '1', text: 'りんご' },
+                    { value: '2', text: 'いちご' },
+                    { value: '3', text: 'バナナ' },
+                    { value: '4', text: 'メロン' },
+                    { value: '5', text: 'さくらんぼ' },
+                    { value: '6', text: 'ぶどう' }
+                ]}
                 value={''}
                 isError={boolean('isError', false)}
                 errorMessage={text('ErrorMessage', '')}
