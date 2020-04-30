@@ -4,36 +4,55 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as DropdownSingle from './index'
 
-storiesOf('Components|DropdownMultiple', module).add('Multi', () => (
-    <div className="ml-20 mt-10">
-        <DropdownSingle.Component
-            placeholder={text('placeholder', '選択してください')}
-            items={[
-                { value: '1', text: 'りんご' },
-                { value: '2', text: 'いちご' },
-                { value: '3', text: 'バナナ' },
-                { value: '4', text: 'メロン' },
-                { value: '5', text: 'さくらんぼ' },
-                { value: '6', text: 'ぶどう' }
-            ]}
-            values={optionsKnob(
-                'selected',
-                {
-                    りんご: '1',
-                    いちご: '2',
-                    バナナ: '3',
-                    メロン: '4',
-                    さくらんぼ: '5',
-                    ぶどう: '6'
-                },
-                [],
-                { display: 'check' }
-            )}
-            isError={boolean('isError', false)}
-            errorMessage={text('ErrorMessage', '')}
-            width={text('width', '250px')}
-            onChange={action('onChange')}
-            diff={boolean('Diff', false)}
-        />
-    </div>
-))
+const items = [
+    { value: '1', text: 'りんご' },
+    { value: '2', text: 'いちご' },
+    { value: '3', text: 'バナナ' },
+    { value: '4', text: 'メロン' },
+    { value: '5', text: 'さくらんぼ' },
+    { value: '6', text: 'ぶどう' }
+]
+
+const itemOptions = items.reduce(
+    (accum, item) => ({ ...accum, [item.text]: item.value }),
+    {}
+)
+
+storiesOf('Components|DropdownMultiple', module)
+    .add('Multi', () => (
+        <div className="ml-20 mt-10">
+            <DropdownSingle.Component
+                placeholder={text('placeholder', '選択してください')}
+                items={items}
+                values={optionsKnob('selected', itemOptions, [], {
+                    display: 'check'
+                })}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '250px')}
+                onChange={action('onChange')}
+                diff={boolean('Diff', false)}
+            />
+        </div>
+    ))
+    .add('Input', () => (
+        <div className="ml-20 mt-10">
+            <DropdownSingle.Component
+                placeholder={text('placeholder', '選択してください')}
+                items={[
+                    { value: '1', text: 'りんご' },
+                    { value: '2', text: 'いちご' },
+                    { value: '3', text: 'バナナ' },
+                    { value: '4', text: 'メロン' },
+                    { value: '5', text: 'さくらんぼ' },
+                    { value: '6', text: 'ぶどう' }
+                ]}
+                values={[]}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '250px')}
+                onChange={action('onChange')}
+                diff={boolean('Diff', false)}
+            />
+        </div>
+    ))

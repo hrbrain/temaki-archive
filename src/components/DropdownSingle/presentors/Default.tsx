@@ -27,8 +27,16 @@ type Props = {
     diff?: boolean
     className?: string
     errorMessage?: string
+    searchValue: string
+    onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
+    onBlurSearchValue: () => void
 }
 export const Component = React.memo<Props>(props => {
+    const inputRef = React.useRef<HTMLInputElement | null>(null)
+    React.useEffect(() => {
+        if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
+    }, [props.isMenuVisible])
+
     return (
         <Wrap width={props.width} className={props.className}>
             <Inner>
@@ -43,20 +51,38 @@ export const Component = React.memo<Props>(props => {
                         onClick={props.onClick}
                         diff={props.diff}
                     >
-                        <Text data-test="text">
-                            {props.showTextBySelected(props.items, props.value)}
-                        </Text>
                         <DropDownIcon
                             className={props.isMenuVisible ? 'visible' : ''}
                             svg={IconFiles.icons.DropdownOff}
                             size="24px"
                         />
+                        {props.isMenuVisible ? (
+                            <>
+                                <SelectorInput>
+                                    <Input
+                                        data-test="input"
+                                        type="text"
+                                        value={props.searchValue}
+                                        onChange={props.onChangeSearchValue}
+                                        ref={inputRef}
+                                    />
+                                </SelectorInput>
+                            </>
+                        ) : (
+                            <Text data-test="text">
+                                {props.showTextBySelected(
+                                    props.items,
+                                    props.value
+                                )}
+                            </Text>
+                        )}
                     </Body>
                     <StyledItemList
-                        value={props.value}
+                        value={props.searchValue}
                         onClickItem={props.onClickMenuItem}
                         items={props.items}
                         isVisible={props.isMenuVisible}
+                        onBlurSearchValue={props.onBlurSearchValue}
                     />
                 </ClickOutside.Component>
             </Inner>
@@ -120,11 +146,6 @@ const Body = styled.div<BodyType>`
         props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
 `
 
-const Text = styled.div`
-    padding-right: 4px;
-    width: calc(100% - 28px);
-`
-
 const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`
     position: absolute;
     left: 0;
@@ -141,4 +162,29 @@ const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`
         visibility: hidden;
         transform: scaleY(0);
     `}
+`
+
+const Text = styled.div`
+    padding-right: 4px;
+    width: calc(100% - 28px);
+`
+
+const SelectorInput = styled.div`
+    padding-right: 4px;
+    width: calc(100% - 28px);
+    transition: border-color 0.15s;
+    outline: 0;
+    &.focused {
+        border-color: ${props =>
+            props.theme.colors.utilities.highlightGreen.default};
+    }
+`
+
+const Input = styled.input`
+    width: 100%;
+    border: none;
+    background: none;
+    &:focus {
+        outline: 0;
+    }
 `
