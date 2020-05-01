@@ -24,6 +24,10 @@ type Props = {
     errorMessage?: string
     startDatePlaceholderText?: string
     endDatePlaceholderText?: string
+    selectedRangeColor?: string
+    selectedColor?: string
+    selectedHoverColor?: string
+    defaultHoverColor?: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -73,7 +77,7 @@ export const Component = React.memo<Props>(props => {
     }, [])
 
     return (
-        <Outer width={props.width} errored={props.errored}>
+        <Outer width={props.width} defaultHoverColor={props.defaultHoverColor} selectedHoverColor={props.selectedHoverColor} selectedColor={props.selectedColor} selectedRangeColor={props.selectedRangeColor}   errored={props.errored}>
             <ReactDates.DateRangePicker
                 startDate={conversionToMomentType(props.startDate)}
                 startDateId={'startDate'}
@@ -110,6 +114,10 @@ export const Component = React.memo<Props>(props => {
 type OuterProps = {
     width: string
     errored?: boolean
+    selectedRangeColor?: string
+    selectedColor?: string
+    selectedHoverColor?: string
+    defaultHoverColor?: string
 }
 
 const Outer = styled.div<OuterProps>`
@@ -386,7 +394,7 @@ const Outer = styled.div<OuterProps>`
             background: #fff;
         }
         .CalendarDay__default:hover {
-            background: #e4e7e7;
+            background: ${props => props.defaultHoverColor ? `${props.defaultHoverColor}`: "#e4e7e7"};
             color: inherit;
         }
         .CalendarDay__hovered_offset {
@@ -421,18 +429,18 @@ const Outer = styled.div<OuterProps>`
             color: #484848;
         }
         .CalendarDay__selected_span {
-            background: rgb(244, 244, 244);
-            border-right: rgb(244, 244, 244);
-            border-left: rgb(244, 244, 244);
+            background: ${props => props.selectedRangeColor ? `${props.selectedRangeColor}`: "#f4f4f4"};
+            border-right: ${props => props.selectedRangeColor ? `${props.selectedRangeColor}`: "#f4f4f4"};
+            border-left: ${props => props.selectedRangeColor ? `${props.selectedRangeColor}`: "#f4f4f4"};
         }
         .CalendarDay__selected_span:active,
         .CalendarDay__selected_span:hover {
-            background: rgb(244, 244, 244);
+            background: ${props => props.selectedHoverColor ? `${props.selectedHoverColor}`: "#f4f4f4"};
         }
         .CalendarDay__selected,
         .CalendarDay__selected:active,
         .CalendarDay__selected:hover {
-            background: RGB(34, 34, 34);
+            background: ${props => props.selectedColor ? `${props.selectedColor}`: "#222222"};
             border-radius: 70px;
             color: #fff;
         }
@@ -492,6 +500,9 @@ const Outer = styled.div<OuterProps>`
             padding-top: 10px;
             padding-bottom: 12px;
             caption-side: initial;
+        }
+        .CalendarMonth_caption strong {
+            font-weight: bold
         }
         .CalendarMonth_caption__verticalScrollable {
             padding-top: 12px;
