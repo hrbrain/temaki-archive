@@ -23,10 +23,10 @@ storiesOf('Components|DateRangePicker', module)
                 'startDatePlaceholderText',
                 ''
             )}
-            selectedRangeColor={Knobs.text("selectedRangeColor", "")}
-            selectedColor={Knobs.text("selectedColor", "")}
-            selectedHoverColor={Knobs.text("selectedHoverColor", "")}
-            defaultHoverColor={Knobs.text("defaultHoverColor", "")}
+            selectedRangeColor={Knobs.text('selectedRangeColor', '')}
+            selectedColor={Knobs.text('selectedColor', '')}
+            selectedHoverColor={Knobs.text('selectedHoverColor', '')}
+            defaultHoverColor={Knobs.text('defaultHoverColor', '')}
             endDatePlaceholderText={Knobs.text('endDatePlaceholderText', '')}
             displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
             monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
@@ -49,10 +49,10 @@ storiesOf('Components|DateRangePicker', module)
             monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
             onChange={Actions.action('onChange')}
             width={Knobs.text('width', '300px')}
-            selectedRangeColor={Knobs.text("selectedRangeColor", "")}
-            selectedColor={Knobs.text("selectedColor", "")}
-            selectedHoverColor={Knobs.text("selectedHoverColor", "")}
-            defaultHoverColor={Knobs.text("defaultHoverColor", "")}
+            selectedRangeColor={Knobs.text('selectedRangeColor', '')}
+            selectedColor={Knobs.text('selectedColor', '')}
+            selectedHoverColor={Knobs.text('selectedHoverColor', '')}
+            defaultHoverColor={Knobs.text('defaultHoverColor', '')}
             errored={Knobs.boolean('Error', false)}
             errorMessage={Knobs.text('ErrorMessage', '')}
         />

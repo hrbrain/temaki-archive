@@ -77,7 +77,14 @@ export const Component = React.memo<Props>(props => {
     }, [])
 
     return (
-        <Outer width={props.width} defaultHoverColor={props.defaultHoverColor} selectedHoverColor={props.selectedHoverColor} selectedColor={props.selectedColor} selectedRangeColor={props.selectedRangeColor}   errored={props.errored}>
+        <Outer
+            width={props.width}
+            defaultHoverColor={props.defaultHoverColor}
+            selectedHoverColor={props.selectedHoverColor}
+            selectedColor={props.selectedColor}
+            selectedRangeColor={props.selectedRangeColor}
+            errored={props.errored}
+        >
             <ReactDates.DateRangePicker
                 startDate={conversionToMomentType(props.startDate)}
                 startDateId={'startDate'}
@@ -394,7 +401,10 @@ const Outer = styled.div<OuterProps>`
             background: #fff;
         }
         .CalendarDay__default:hover {
-            background: ${props => props.defaultHoverColor ? `${props.defaultHoverColor}`: "#e4e7e7"};
+            background: ${props =>
+                props.defaultHoverColor
+                    ? `${props.defaultHoverColor}`
+                    : '#e4e7e7'};
             color: inherit;
         }
         .CalendarDay__hovered_offset {
@@ -429,18 +439,31 @@ const Outer = styled.div<OuterProps>`
             color: #484848;
         }
         .CalendarDay__selected_span {
-            background: ${props => props.selectedRangeColor ? `${props.selectedRangeColor}`: "#f4f4f4"};
-            border-right: ${props => props.selectedRangeColor ? `${props.selectedRangeColor}`: "#f4f4f4"};
-            border-left: ${props => props.selectedRangeColor ? `${props.selectedRangeColor}`: "#f4f4f4"};
+            background: ${props =>
+                props.selectedRangeColor
+                    ? `${props.selectedRangeColor}`
+                    : '#f4f4f4'};
+            border-right: ${props =>
+                props.selectedRangeColor
+                    ? `${props.selectedRangeColor}`
+                    : '#f4f4f4'};
+            border-left: ${props =>
+                props.selectedRangeColor
+                    ? `${props.selectedRangeColor}`
+                    : '#f4f4f4'};
         }
         .CalendarDay__selected_span:active,
         .CalendarDay__selected_span:hover {
-            background: ${props => props.selectedHoverColor ? `${props.selectedHoverColor}`: "#f4f4f4"};
+            background: ${props =>
+                props.selectedHoverColor
+                    ? `${props.selectedHoverColor}`
+                    : '#f4f4f4'};
         }
         .CalendarDay__selected,
         .CalendarDay__selected:active,
         .CalendarDay__selected:hover {
-            background: ${props => props.selectedColor ? `${props.selectedColor}`: "#222222"};
+            background: ${props =>
+                props.selectedColor ? `${props.selectedColor}` : '#222222'};
             border-radius: 70px;
             color: #fff;
         }
@@ -502,7 +525,7 @@ const Outer = styled.div<OuterProps>`
             caption-side: initial;
         }
         .CalendarMonth_caption strong {
-            font-weight: bold
+            font-weight: bold;
         }
         .CalendarMonth_caption__verticalScrollable {
             padding-top: 12px;

@@ -24,7 +24,6 @@ type Props = {
     placeholderText?: string
     selectedColor?: string
     defaultHoverColor?: string
-
 }
 
 export const Component = React.memo<Props>(props => {
@@ -69,7 +68,12 @@ export const Component = React.memo<Props>(props => {
     }, [])
 
     return (
-        <Outer width={props.width} defaultHoverColor={props.defaultHoverColor} selectedColor={props.selectedColor} errored={props.errored}>
+        <Outer
+            width={props.width}
+            defaultHoverColor={props.defaultHoverColor}
+            selectedColor={props.selectedColor}
+            errored={props.errored}
+        >
             <ReactDates.SingleDatePicker
                 id={'date'}
                 date={conversionToMomentType(props.date)}
@@ -391,7 +395,10 @@ const Outer = styled.div<OuterProps>`
             background: #fff;
         }
         .CalendarDay__default:hover {
-            background: ${props => props.defaultHoverColor ? `${props.defaultHoverColor}`: "#e4e7e7"};
+            background: ${props =>
+                props.defaultHoverColor
+                    ? `${props.defaultHoverColor}`
+                    : '#e4e7e7'};
             color: inherit;
         }
         .CalendarDay__hovered_offset {
@@ -440,7 +447,8 @@ const Outer = styled.div<OuterProps>`
         .CalendarDay__selected,
         .CalendarDay__selected:active,
         .CalendarDay__selected:hover {
-            background: ${props => props.selectedColor ? `${props.selectedColor}`: "#222222"};
+            background: ${props =>
+                props.selectedColor ? `${props.selectedColor}` : '#222222'};
             color: #fff;
             border-radius: 70px;
         }
