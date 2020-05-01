@@ -22,6 +22,9 @@ type Props = {
     errored?: boolean
     errorMessage?: string
     placeholderText?: string
+    selectedColor?: string
+    defaultHoverColor?: string
+
 }
 
 export const Component = React.memo<Props>(props => {
@@ -66,7 +69,7 @@ export const Component = React.memo<Props>(props => {
     }, [])
 
     return (
-        <Outer width={props.width} errored={props.errored}>
+        <Outer width={props.width} defaultHoverColor={props.defaultHoverColor} selectedColor={props.selectedColor} errored={props.errored}>
             <ReactDates.SingleDatePicker
                 id={'date'}
                 date={conversionToMomentType(props.date)}
@@ -97,6 +100,10 @@ export const Component = React.memo<Props>(props => {
 type OuterProps = {
     width: string
     errored?: boolean
+    selectedRangeColor?: string
+    selectedColor?: string
+    selectedHoverColor?: string
+    defaultHoverColor?: string
 }
 const Outer = styled.div<OuterProps>`
     & {
@@ -384,7 +391,7 @@ const Outer = styled.div<OuterProps>`
             background: #fff;
         }
         .CalendarDay__default:hover {
-            background: #e4e7e7;
+            background: ${props => props.defaultHoverColor ? `${props.defaultHoverColor}`: "#e4e7e7"};
             color: inherit;
         }
         .CalendarDay__hovered_offset {
@@ -433,7 +440,7 @@ const Outer = styled.div<OuterProps>`
         .CalendarDay__selected,
         .CalendarDay__selected:active,
         .CalendarDay__selected:hover {
-            background: RGB(34, 34, 34);
+            background: ${props => props.selectedColor ? `${props.selectedColor}`: "#222222"};
             color: #fff;
             border-radius: 70px;
         }
@@ -494,6 +501,9 @@ const Outer = styled.div<OuterProps>`
             padding-top: 10px;
             padding-bottom: 12px;
             caption-side: initial;
+        }
+        .CalendarMonth_caption strong {
+            font-weight: bold;
         }
         .CalendarMonth_caption__verticalScrollable {
             padding-top: 12px;
