@@ -378,8 +378,8 @@ const Outer = styled.div<OuterProps>`
         td.CalendarDay__default {
             width: 44px;
             height: 44px;
-            marging-top: 12px;
-            marging-bottom: 12px;
+            margin-top: 12px;
+            margin-bottom: 12px;
         }
         .CalendarDay {
             -moz-box-sizing: border-box;
@@ -880,7 +880,7 @@ const Outer = styled.div<OuterProps>`
             position: relative;
             display: flex;
             align-items: center;
-            justify-color: space-around;
+            justify-content: space-around;
             background-color: #fff;
             height: 40px;
             width: ${props => props.width};
