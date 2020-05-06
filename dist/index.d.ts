@@ -232,6 +232,8 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     placeholderText?: string | undefined;
+    selectedColor?: string | undefined;
+    defaultHoverColor?: string | undefined;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
@@ -244,6 +246,10 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     errorMessage?: string | undefined;
     startDatePlaceholderText?: string | undefined;
     endDatePlaceholderText?: string | undefined;
+    selectedRangeColor?: string | undefined;
+    selectedColor?: string | undefined;
+    selectedHoverColor?: string | undefined;
+    defaultHoverColor?: string | undefined;
 }>;
 export declare const Modal: import("react").FunctionComponent<{
     isOpen: boolean;

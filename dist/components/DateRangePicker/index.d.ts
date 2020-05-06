@@ -15,6 +15,10 @@ declare type Props = {
     errorMessage?: string;
     startDatePlaceholderText?: string;
     endDatePlaceholderText?: string;
+    selectedRangeColor?: string;
+    selectedColor?: string;
+    selectedHoverColor?: string;
+    defaultHoverColor?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
