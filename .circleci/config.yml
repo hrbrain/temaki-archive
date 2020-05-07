@@ -1,5 +1,5 @@
 version: 2
-jobs: 
+jobs:
   test:
     working_directory: ~/dir
     docker:
