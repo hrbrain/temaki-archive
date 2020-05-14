@@ -6,7 +6,8 @@ import * as ItemList from '../ItemList';
 declare type Props = {
     items: ItemList.Item[];
     value: ItemList.Value;
-    onClick: () => void;
+    searchValue?: string;
+    onClick: (e: React.MouseEvent) => void;
     onClickOutside: () => void;
     onClickMenuItem: (index: string) => void;
     isError?: boolean;

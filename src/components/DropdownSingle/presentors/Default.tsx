@@ -57,17 +57,19 @@ export const Component = React.memo<Props>(props => {
                             size="24px"
                         />
                         {props.isMenuVisible ? (
-                            <>
-                                <SelectorInput>
-                                    <Input
-                                        data-test="input"
-                                        type="text"
-                                        value={props.searchValue}
-                                        onChange={props.onChangeSearchValue}
-                                        ref={inputRef}
-                                    />
-                                </SelectorInput>
-                            </>
+                            <SelectorInput>
+                                {props.showTextBySelected(
+                                    props.items,
+                                    props.value
+                                )}
+                                <Input
+                                    data-test="input"
+                                    type="text"
+                                    value={props.searchValue}
+                                    onChange={props.onChangeSearchValue}
+                                    ref={inputRef}
+                                />
+                            </SelectorInput>
                         ) : (
                             <Text data-test="text">
                                 {props.showTextBySelected(

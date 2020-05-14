@@ -40,6 +40,11 @@ export const Component = React.memo<Props>(props => {
             {props.isMenuVisible ? (
                 <>
                     <SelectorInput>
+                        {showTextBySelected(
+                            props.items,
+                            props.values,
+                            props.placeholder
+                        )}
                         <Input
                             data-test="input"
                             type="text"
