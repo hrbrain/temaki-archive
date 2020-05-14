@@ -14,7 +14,7 @@ import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
-    onClick: () => void
+    onClick: (e: React.MouseEvent) => void
     onClickOutside: () => void
     onClickMenuItem: (value: ItemList.Value) => void
     isError?: boolean

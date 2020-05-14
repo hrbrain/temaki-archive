@@ -32,6 +32,7 @@ export const Component = React.memo<Props>(props => {
     )
 
     const [searchValue, setSearchValue] = React.useState<string>('')
+
     const changeSearchValue = React.useCallback(
         (event: React.ChangeEvent<HTMLInputElement>) => {
             setSearchValue(event.target.value)
@@ -39,13 +40,23 @@ export const Component = React.memo<Props>(props => {
         [searchValue]
     )
 
-    const clickBody = React.useCallback(() => {
-        setIsMenuVisible(!isMenuVisible)
-    }, [isMenuVisible])
+    const clickBody = React.useCallback(
+        (e: React.MouseEvent) => {
+            e.preventDefault()
+            setIsMenuVisible(!isMenuVisible)
+            setSearchValue('')
+        },
+        [isMenuVisible]
+    )
 
-    const clickOutside = React.useCallback(() => {
-        setIsMenuVisible(false)
-    }, [isMenuVisible])
+    const clickOutside = React.useCallback(
+        (e: React.MouseEvent<unknown>) => {
+            e.preventDefault()
+            setIsMenuVisible(false)
+            setSearchValue('')
+        },
+        [isMenuVisible]
+    )
 
     const changeValue = React.useCallback(
         (value: ItemList.Value) => {
@@ -94,7 +105,7 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-Component.displayName = 'DropdownSingle'
+Component.displayName = 'DropdownMultiple'
 
 /**
  * Styles

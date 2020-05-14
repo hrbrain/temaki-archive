@@ -43,10 +43,15 @@ export const Component = React.memo<Props>(props => {
 
     const [focused, setFocused] = React.useState(false)
 
-    const clickBody = React.useCallback(() => {
-        setIsMenuVisible(!isMenuVisible)
-        setFocused(!focused)
-    }, [isMenuVisible, focused])
+    const clickBody = React.useCallback(
+        (e: React.MouseEvent) => {
+            e.preventDefault()
+            setIsMenuVisible(!isMenuVisible)
+            setFocused(!focused)
+            setSearchValue('')
+        },
+        [isMenuVisible, focused]
+    )
 
     const closeMenu = React.useCallback(() => setIsMenuVisible(false), [])
 

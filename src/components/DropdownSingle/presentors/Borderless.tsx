@@ -14,6 +14,7 @@ type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
     onClick: () => void
+    onClick: (e: React.MouseEvent) => void
     onClickOutside: () => void
     onClickMenuItem: (index: string) => void
     isError?: boolean
