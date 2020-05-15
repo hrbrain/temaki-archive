@@ -13,7 +13,7 @@ import * as ItemList from '../ItemList'
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
-    onClick: () => void
+    searchValue: string
     onClick: (e: React.MouseEvent) => void
     onClickOutside: () => void
     onClickMenuItem: (index: string) => void
@@ -54,6 +54,7 @@ export const Component = React.memo<Props>(props => {
                     value={props.value}
                     onClickItem={props.onClickMenuItem}
                     isVisible={props.isMenuVisible}
+                    searchValue={props.searchValue}
                 />
             </ClickOutside.Component>
         </Wrap>

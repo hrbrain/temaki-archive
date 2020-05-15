@@ -93,7 +93,8 @@ export const Component = React.memo<Props>(props => {
                         isVisible={isMenuVisible}
                         items={props.items}
                         onClickItem={changeValue}
-                        value={searchValue}
+                        values={props.values}
+                        searchValue={searchValue}
                     />
                 </ClickOutside.Component>
             </Inner>

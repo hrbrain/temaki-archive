@@ -11,6 +11,7 @@ import * as Icon from '~/components/Icon'
 type Props = {
     items: Item[]
     value: Value
+    searchValue?: string
     onClickItem: (value: Value) => void
     className?: string
     isVisible?: boolean
@@ -18,11 +19,12 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(props => {
-    const filteredItems = props.items.filter(item =>
-        item.text.includes(props.value)
-    )
+    const searchValue = props.searchValue
+    const filteredItems = searchValue
+        ? props.items.filter(item => item.text.includes(searchValue))
+        : []
 
-    const showItem =
+    const showItem = searchValue ? (
         filteredItems.length > 0 ? (
             filteredItems.map(
                 renderItem(
@@ -33,9 +35,12 @@ export const Component = React.memo<Props>(props => {
             )
         ) : (
             <NotFoundText>
-                &quot;{props.value}&quot;が見つかりませんでした。
+                &quot;{searchValue}&quot;が見つかりませんでした。
             </NotFoundText>
         )
+    ) : (
+        props.items.map(renderItem(props.value, props.onClickItem))
+    )
     return (
         <ItemList data-test="itemList" className={props.className}>
             {showItem}

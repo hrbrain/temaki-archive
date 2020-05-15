@@ -80,7 +80,8 @@ export const Component = React.memo<Props>(props => {
                         )}
                     </Body>
                     <StyledItemList
-                        value={props.searchValue}
+                        value={props.value}
+                        searchValue={props.searchValue}
                         onClickItem={props.onClickMenuItem}
                         items={props.items}
                         isVisible={props.isMenuVisible}

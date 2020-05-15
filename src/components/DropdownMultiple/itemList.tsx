@@ -10,7 +10,8 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     items: Item[]
-    value: Value
+    values: Value[]
+    searchValue: string
     onClickItem: (value: Value) => void
     className?: string
     isVisible?: boolean
@@ -18,15 +19,17 @@ type Props = {
 
 export const Component = React.memo<Props>(props => {
     const filteredItems = props.items.filter(item =>
-        item.text.includes(props.value)
+        item.text.includes(props.searchValue)
     )
 
     const showItem =
-        filteredItems.length > 0 ? (
-            filteredItems.map(renderItem(props.value, props.onClickItem))
+        props.searchValue === '' ? (
+            props.items.map(renderItem(props.values, props.onClickItem))
+        ) : filteredItems.length > 0 ? (
+            filteredItems.map(renderItem(props.values, props.onClickItem))
         ) : (
             <NotFoundText>
-                &quot;{props.value}&quot;が見つかりませんでした。
+                &quot;{props.searchValue}&quot;が見つかりませんでした。
             </NotFoundText>
         )
 
@@ -41,7 +44,7 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-const renderItem = (selected: Value, onClickItem: (value: Value) => void) => (
+const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
     item: Item,
     index: number
 ) => {
@@ -67,7 +70,7 @@ export type Value = string
 
 type ItemProps = {
     item: Item
-    selected: Value
+    selected: Value[]
     onClickItem: (value: Value) => void
 }
 
@@ -75,7 +78,6 @@ const ItemComponent = React.memo<ItemProps>(props => {
     const handleClick = React.useCallback(() => {
         props.onClickItem(props.item.value)
     }, [props.onClickItem, props.item])
-
     return (
         <ListItem onClick={handleClick}>
             <CheckIcon

@@ -29,7 +29,7 @@ export const Component = React.memo<Props>(props => {
         props.defaultExpanded || false
     )
 
-    const [searchValue, setSearchValue] = React.useState(props.value)
+    const [searchValue, setSearchValue] = React.useState('')
     const changeSearchValue = React.useCallback(
         (event: React.ChangeEvent<HTMLInputElement>) => {
             setSearchValue(event.target.value)
@@ -78,6 +78,7 @@ export const Component = React.memo<Props>(props => {
                     width={props.width}
                     diff={props.diff}
                     className={props.className}
+                    searchValue={searchValue}
                 />
             )
         case 'default':
