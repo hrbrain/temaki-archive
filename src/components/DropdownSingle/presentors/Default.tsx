@@ -39,10 +39,9 @@ export const Component = React.memo<Props>(props => {
     }, [props.isMenuVisible])
 
     const filteredItems = React.useMemo(() => {
-        const items = props.searchValue
-            ? props.items.filter(item => item.text.includes(props.searchValue))
-            : []
-
+        const items = props.items.filter(item =>
+            item.text.includes(props.searchValue)
+        )
         return items
     }, [props.searchValue])
 
@@ -60,11 +59,6 @@ export const Component = React.memo<Props>(props => {
                         onClick={props.onClick}
                         diff={props.diff}
                     >
-                        <DropDownIcon
-                            className={props.isMenuVisible ? 'visible' : ''}
-                            svg={IconFiles.icons.DropdownOff}
-                            size="24px"
-                        />
                         {props.isMenuVisible ? (
                             <SelectorInput>
                                 {props.showTextBySelected(
@@ -88,6 +82,11 @@ export const Component = React.memo<Props>(props => {
                                 )}
                             </Text>
                         )}
+                        <DropDownIcon
+                            className={props.isMenuVisible ? 'visible' : ''}
+                            svg={IconFiles.icons.DropdownOff}
+                            size="24px"
+                        />
                     </Body>
                     {filteredItems.length ? (
                         <StyledItemList
@@ -145,6 +144,7 @@ type BodyType = {
 
 const Body = styled.div<BodyType>`
     min-height: 40px;
+    position: relative;
     display: flex;
     padding: 8px 12px;
     border: 1px solid
@@ -210,7 +210,14 @@ const Input = styled.input`
 `
 
 const NotFoundText = styled.div`
+    display: block;
+    background: ${props => props.theme.colors.grayScale.S0};
+    border-radius: 6px;
+    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
+    max-height: 204px;
+    overflow-y: auto;
+    z-index: 1;
     color: ${props => props.theme.colors.grayScale.S50};
     word-break: break-all;
-    padding: 6px 0;
+    padding: 12px;
 `
