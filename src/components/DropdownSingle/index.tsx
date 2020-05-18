@@ -69,7 +69,7 @@ export const Component = React.memo<Props>(props => {
                 props.onChange('')
             }
         },
-        [searchValue]
+        [searchValue, props.onChange]
     )
 
     switch (props.type) {

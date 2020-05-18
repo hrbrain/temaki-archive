@@ -38,6 +38,14 @@ export const Component = React.memo<Props>(props => {
         if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
     }, [props.isMenuVisible])
 
+    const filteredItems = React.useMemo(() => {
+        const items = props.searchValue
+            ? props.items.filter(item => item.text.includes(props.searchValue))
+            : []
+
+        return items
+    }, [props.searchValue])
+
     return (
         <Wrap width={props.width} className={props.className}>
             <Inner>
@@ -81,14 +89,21 @@ export const Component = React.memo<Props>(props => {
                             </Text>
                         )}
                     </Body>
-                    <StyledItemList
-                        value={props.value}
-                        searchValue={props.searchValue}
-                        onClickItem={props.onClickMenuItem}
-                        items={props.items}
-                        isVisible={props.isMenuVisible}
-                        onBlurSearchValue={props.onBlurSearchValue}
-                    />
+                    {filteredItems.length ? (
+                        <StyledItemList
+                            value={props.value}
+                            filteredItems={filteredItems}
+                            onClickItem={props.onClickMenuItem}
+                            items={props.items}
+                            isVisible={props.isMenuVisible}
+                            onBlurSearchValue={props.onBlurSearchValue}
+                        />
+                    ) : (
+                        <NotFoundText>
+                            &quot;{props.searchValue}
+                            &quot;が見つかりませんでした。
+                        </NotFoundText>
+                    )}
                 </ClickOutside.Component>
             </Inner>
             <ErrorMessage.Component
@@ -192,4 +207,10 @@ const Input = styled.input`
     &:focus {
         outline: 0;
     }
+`
+
+const NotFoundText = styled.div`
+    color: ${props => props.theme.colors.grayScale.S50};
+    word-break: break-all;
+    padding: 6px 0;
 `

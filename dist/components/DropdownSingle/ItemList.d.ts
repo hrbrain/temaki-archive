@@ -5,11 +5,11 @@ import * as React from 'react';
 declare type Props = {
     items: Item[];
     value: Value;
-    searchValue?: string;
     onClickItem: (value: Value) => void;
     className?: string;
     isVisible?: boolean;
     onBlurSearchValue?: () => void;
+    filteredItems?: Item[];
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 /**

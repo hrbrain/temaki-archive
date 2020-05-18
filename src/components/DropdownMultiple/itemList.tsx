@@ -11,28 +11,16 @@ import * as Icon from '~/components/Icon'
 type Props = {
     items: Item[]
     values: Value[]
-    searchValue: string
     onClickItem: (value: Value) => void
     className?: string
     isVisible?: boolean
+    filteredItems: Item[]
 }
 
 export const Component = React.memo<Props>(props => {
-    const filteredItems = props.items.filter(item =>
-        item.text.includes(props.searchValue)
-    )
-
-    const showItem =
-        props.searchValue === '' ? (
-            props.items.map(renderItem(props.values, props.onClickItem))
-        ) : filteredItems.length > 0 ? (
-            filteredItems.map(renderItem(props.values, props.onClickItem))
-        ) : (
-            <NotFoundText>
-                &quot;{props.searchValue}&quot;が見つかりませんでした。
-            </NotFoundText>
-        )
-
+    const showItem = props.filteredItems
+        ? props.filteredItems.map(renderItem(props.values, props.onClickItem))
+        : props.items.map(renderItem(props.values, props.onClickItem))
     return (
         <ItemList
             data-test="itemList"
@@ -136,10 +124,4 @@ const CheckIcon = styled(Icon.Component)`
 
 const Text = styled.div`
     padding-left: 4px;
-`
-
-const NotFoundText = styled.div`
-    color: ${props => props.theme.colors.grayScale.S50};
-    word-break: break-all;
-    padding: 6px 0;
 `

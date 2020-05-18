@@ -54,7 +54,6 @@ export const Component = React.memo<Props>(props => {
                     value={props.value}
                     onClickItem={props.onClickMenuItem}
                     isVisible={props.isMenuVisible}
-                    searchValue={props.searchValue}
                 />
             </ClickOutside.Component>
         </Wrap>
