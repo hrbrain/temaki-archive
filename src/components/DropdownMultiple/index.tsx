@@ -43,7 +43,7 @@ export const Component = React.memo<Props>(props => {
     const clickBody = React.useCallback(
         (e: React.MouseEvent) => {
             e.preventDefault()
-            setIsMenuVisible(!isMenuVisible)
+            setIsMenuVisible(true)
             setSearchValue('')
         },
         [isMenuVisible]
