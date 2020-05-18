@@ -1455,6 +1455,46 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
             20
           </div>
         </li>
+        <li
+          className="sc-kkGfuU ewELqP"
+          onClick={[Function]}
+        >
+          <div
+            className="sc-bxivhb eaqBKs"
+            color="rgb(234, 234, 234)"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+          <div
+            className="sc-iAyFgw favZgW"
+          >
+            50
+          </div>
+        </li>
+        <li
+          className="sc-kkGfuU ewELqP"
+          onClick={[Function]}
+        >
+          <div
+            className="sc-bxivhb eaqBKs"
+            color="rgb(234, 234, 234)"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+          <div
+            className="sc-iAyFgw favZgW"
+          >
+            100
+          </div>
+        </li>
       </ul>
     </div>
   </div>
