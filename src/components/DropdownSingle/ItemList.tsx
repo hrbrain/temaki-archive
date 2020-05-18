@@ -136,7 +136,7 @@ const Text = styled.div`
 `
 
 const NotFoundText = styled.div`
-    color: ${props => props.theme.colors.grayScale.S10};
+    color: ${props => props.theme.colors.grayScale.S50};
     word-break: break-all;
     padding: 6px 0;
 `
