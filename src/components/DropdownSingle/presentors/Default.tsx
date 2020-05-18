@@ -30,6 +30,7 @@ type Props = {
     searchValue: string
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
     onBlurSearchValue: () => void
+    onKeyDown: (event: React.KeyboardEvent) => void
 }
 export const Component = React.memo<Props>(props => {
     const inputRef = React.useRef<HTMLInputElement | null>(null)
@@ -67,6 +68,7 @@ export const Component = React.memo<Props>(props => {
                                     type="text"
                                     value={props.searchValue}
                                     onChange={props.onChangeSearchValue}
+                                    onKeyDown={props.onKeyDown}
                                     ref={inputRef}
                                 />
                             </SelectorInput>

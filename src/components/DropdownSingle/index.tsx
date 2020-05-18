@@ -63,6 +63,15 @@ export const Component = React.memo<Props>(props => {
         [props.onChange]
     )
 
+    const keyDownInInput = React.useCallback(
+        (e: React.KeyboardEvent) => {
+            if (e.keyCode === 8 && searchValue === '') {
+                props.onChange('')
+            }
+        },
+        [searchValue]
+    )
+
     switch (props.type) {
         case 'borderless':
             return (
@@ -99,6 +108,7 @@ export const Component = React.memo<Props>(props => {
                     searchValue={searchValue}
                     onChangeSearchValue={changeSearchValue}
                     onBlurSearchValue={blurSearchValue}
+                    onKeyDown={keyDownInInput}
                 />
             )
     }
