@@ -1082,11 +1082,11 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-jKJlTe kcvHkS"
+    className="sc-ckVGcZ cxeNlN"
     width="250px"
   >
     <div
-      className="sc-eNQAEJ iAtEUT"
+      className="sc-jKJlTe eMJMax"
     >
       <div>
         <div
@@ -1111,7 +1111,7 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
           />
         </div>
         <ul
-          className="sc-chPdSV bwBBtF sc-hMqMXs lfEFkv"
+          className="sc-chPdSV bwBBtF sc-eNQAEJ hcjOHb"
           data-test="itemList"
         >
           <div
@@ -1244,11 +1244,11 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-jKJlTe kcvHkS"
+    className="sc-ckVGcZ cxeNlN"
     width="250px"
   >
     <div
-      className="sc-eNQAEJ iAtEUT"
+      className="sc-jKJlTe eMJMax"
     >
       <div>
         <div
@@ -1273,7 +1273,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
           />
         </div>
         <ul
-          className="sc-chPdSV bwBBtF sc-hMqMXs lfEFkv"
+          className="sc-chPdSV bwBBtF sc-eNQAEJ hcjOHb"
           data-test="itemList"
         >
           <div
@@ -1506,20 +1506,26 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-eHgmQL cXxRes"
+    className="sc-hSdWYo etKfsB"
     width="200px"
   >
     <div
-      className="sc-cvbbAY eFzwdd"
+      className="sc-eHgmQL jvQohW"
     >
       <div>
         <div
-          className="sc-brqgnP dtYkOy"
+          className="sc-jWBwVP etIrxK"
           data-test="body"
           onClick={[Function]}
         >
           <div
-            className="sc-bxivhb hBuNrQ sc-jWBwVP hiBtpa"
+            className="sc-cMljjf cexRqk"
+            data-test="text"
+          >
+            
+          </div>
+          <div
+            className="sc-bxivhb hBuNrQ sc-cvbbAY kjAdRY"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -1527,15 +1533,9 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
             }
             size="24px"
           />
-          <div
-            className="sc-jAaTju kHYYUq"
-            data-test="text"
-          >
-            
-          </div>
         </div>
         <ul
-          className="sc-kEYyzF lesDll sc-cMljjf ezmHhC"
+          className="sc-kEYyzF lesDll sc-brqgnP bOxABy"
           data-test="itemList"
         >
           <li
@@ -1690,20 +1690,26 @@ exports[`Storyshots Components|DropdownSingle Input 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-eHgmQL cXxRes"
+    className="sc-hSdWYo etKfsB"
     width="200px"
   >
     <div
-      className="sc-cvbbAY eFzwdd"
+      className="sc-eHgmQL jvQohW"
     >
       <div>
         <div
-          className="sc-brqgnP dtYkOy"
+          className="sc-jWBwVP etIrxK"
           data-test="body"
           onClick={[Function]}
         >
           <div
-            className="sc-bxivhb hBuNrQ sc-jWBwVP hiBtpa"
+            className="sc-cMljjf cexRqk"
+            data-test="text"
+          >
+            
+          </div>
+          <div
+            className="sc-bxivhb hBuNrQ sc-cvbbAY kjAdRY"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -1711,15 +1717,9 @@ exports[`Storyshots Components|DropdownSingle Input 1`] = `
             }
             size="24px"
           />
-          <div
-            className="sc-jAaTju kHYYUq"
-            data-test="text"
-          >
-            
-          </div>
         </div>
         <ul
-          className="sc-kEYyzF lesDll sc-cMljjf ezmHhC"
+          className="sc-kEYyzF lesDll sc-brqgnP bOxABy"
           data-test="itemList"
         >
           <li
