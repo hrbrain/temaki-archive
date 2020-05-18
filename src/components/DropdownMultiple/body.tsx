@@ -20,6 +20,7 @@ type Props = {
     isMenuVisible?: boolean
     searchValue: string
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
+    onKeydown: (event: React.KeyboardEvent) => void
 }
 
 export const Component = React.memo<Props>(props => {
@@ -27,7 +28,6 @@ export const Component = React.memo<Props>(props => {
     React.useEffect(() => {
         if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
     }, [props.isMenuVisible])
-
     return (
         <Body
             data-test="body"
@@ -51,6 +51,7 @@ export const Component = React.memo<Props>(props => {
                             value={props.searchValue}
                             onChange={props.onChangeSearchValue}
                             ref={inputRef}
+                            onKeyDown={props.onKeydown}
                         />
                     </SelectorInput>
                 </>

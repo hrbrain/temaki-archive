@@ -14,6 +14,7 @@ declare type Props = {
     isMenuVisible?: boolean;
     searchValue: string;
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onKeydown: (event: React.KeyboardEvent) => void;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

@@ -71,6 +71,16 @@ export const Component = React.memo<Props>(props => {
         [props.values, props.onChange]
     )
 
+    const keyDownInInput = React.useCallback(
+        (e: React.KeyboardEvent) => {
+            if (e.keyCode === 8 && searchValue === '') {
+                const slicedItem = props.values.slice(0, -1)
+                props.onChange(slicedItem)
+            }
+        },
+        [props.values, searchValue]
+    )
+
     return (
         <Wrap className={props.className} width={props.width}>
             <Inner>
@@ -88,6 +98,7 @@ export const Component = React.memo<Props>(props => {
                         isError={props.isError}
                         onChangeSearchValue={changeSearchValue}
                         searchValue={searchValue}
+                        onKeydown={keyDownInInput}
                     />
                     <StyledItemList
                         isVisible={isMenuVisible}
