@@ -46,7 +46,7 @@ export const Component = React.memo<Props>(props => {
             setIsMenuVisible(true)
             setSearchValue('')
         },
-        [isMenuVisible]
+        []
     )
 
     const clickOutside = React.useCallback(
@@ -55,7 +55,7 @@ export const Component = React.memo<Props>(props => {
             setIsMenuVisible(false)
             setSearchValue('')
         },
-        [isMenuVisible]
+        []
     )
 
     const changeValue = React.useCallback(
