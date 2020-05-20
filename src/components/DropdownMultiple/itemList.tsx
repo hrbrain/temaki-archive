@@ -18,9 +18,9 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(props => {
-    const showItem = props.filteredItems
-        ? props.filteredItems.map(renderItem(props.values, props.onClickItem))
-        : props.items.map(renderItem(props.values, props.onClickItem))
+    const showItem = props.filteredItems.map(
+        renderItem(props.values, props.onClickItem)
+    )
     return (
         <ItemList
             data-test="itemList"
