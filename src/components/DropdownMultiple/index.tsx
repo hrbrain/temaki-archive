@@ -43,7 +43,6 @@ export const Component = React.memo<Props>(props => {
     const clickBody = React.useCallback((e: React.MouseEvent) => {
         e.preventDefault()
         setIsMenuVisible(true)
-        setSearchValue('')
     }, [])
 
     const clickOutside = React.useCallback((e: React.MouseEvent<unknown>) => {
@@ -168,4 +167,5 @@ const NotFoundText = styled.div`
     color: ${props => props.theme.colors.grayScale.S50};
     word-break: break-all;
     padding: 12px;
+    margin-top: 6px;
 `
