@@ -88,7 +88,7 @@ src/components
 # Linter の起動
 $ yarn lint
 # 自動 Lint
-$ yarn lint-:fix
+$ yarn lint-fix
 
 # ビルド
 $ yarn build
