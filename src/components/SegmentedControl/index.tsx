@@ -9,11 +9,17 @@ export type Props = {
     items: Item[]
     selectedIndex: number
     onClickTab: (index: number) => void
+    className: string
+    itemsWidth?: string
 }
 
 export const Component = React.memo<Props>(
-    ({ items, selectedIndex, onClickTab }) => {
-        return <div>{items.map(renderItem(selectedIndex, onClickTab))}</div>
+    ({ items, selectedIndex, onClickTab, className, itemsWidth }) => {
+        return (
+            <div className={className}>
+                {items.map(renderItem(selectedIndex, onClickTab, itemsWidth))}
+            </div>
+        )
     }
 )
 
@@ -23,7 +29,8 @@ export type Item = {
 
 const renderItem = (
     selectedIndex: number,
-    onClickTab: (index: number) => void
+    onClickTab: (index: number) => void,
+    itemWidth?: string
 ) => (item: Item, key: number) => {
     const handleClick = React.useCallback(() => onClickTab(key), [])
     return (
@@ -32,6 +39,7 @@ const renderItem = (
             selected={selectedIndex === key}
             onClick={handleClick}
             key={key}
+            itemWidth={itemWidth}
         >
             {item.text}
         </Box>
@@ -44,7 +52,7 @@ Component.displayName = 'SegmentedControl'
  * Styles
  */
 
-const Box = styled.div<{ selected?: boolean }>`
+const Box = styled.div<{ selected?: boolean; itemWidth?: string }>`
     transition: 0.2s;
     background: ${props =>
         props.selected
@@ -66,6 +74,9 @@ const Box = styled.div<{ selected?: boolean }>`
     border-collapse: collapse;
     user-select: none;
     cursor: pointer;
+    width: ${props => props.itemWidth || '100%'};
+    justify-content: center;
+    align-items: center;
 
     &:first-child {
         border-top-left-radius: 6px;
