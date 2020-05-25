@@ -206,6 +206,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     defaultExpanded?: boolean | undefined;
     className?: string | undefined;
     errorMessage?: string | undefined;
+    iconFile?: string | undefined;
 }>;
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
 export declare const MeatballMenu: import("react").NamedExoticComponent<{
