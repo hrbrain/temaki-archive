@@ -2,7 +2,7 @@ import { text, boolean, optionsKnob } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 import * as React from 'react'
-import * as DropdownSingle from './index'
+import * as DropdownMultiple from './index'
 
 const items = [
     { value: '1', text: 'りんご' },
@@ -21,7 +21,7 @@ const itemOptions = items.reduce(
 storiesOf('Components|DropdownMultiple', module)
     .add('Multi', () => (
         <div className="ml-20 mt-10">
-            <DropdownSingle.Component
+            <DropdownMultiple.Component
                 placeholder={text('placeholder', '選択してください')}
                 items={items}
                 values={optionsKnob('selected', itemOptions, [], {
@@ -37,7 +37,7 @@ storiesOf('Components|DropdownMultiple', module)
     ))
     .add('Input', () => (
         <div className="ml-20 mt-10">
-            <DropdownSingle.Component
+            <DropdownMultiple.Component
                 placeholder={text('placeholder', '選択してください')}
                 items={[
                     { value: '1', text: 'りんご' },
