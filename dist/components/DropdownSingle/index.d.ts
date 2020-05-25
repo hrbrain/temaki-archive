@@ -16,6 +16,7 @@ declare type Props = {
     className?: string;
     defaultExpanded?: boolean;
     errorMessage?: string;
+    iconFile?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

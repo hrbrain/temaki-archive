@@ -192,6 +192,7 @@ export declare const DropdownSingle: import("react").NamedExoticComponent<{
     className?: string | undefined;
     defaultExpanded?: boolean | undefined;
     errorMessage?: string | undefined;
+    iconFile?: string | undefined;
 }>;
 export declare type DropdownSingleItem = _DropdownSingleItem;
 export declare const DropdownMultiple: import("react").NamedExoticComponent<{

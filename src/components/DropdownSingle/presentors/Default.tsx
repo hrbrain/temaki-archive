@@ -31,6 +31,7 @@ type Props = {
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
     onBlurSearchValue: () => void
     onKeyDown: (event: React.KeyboardEvent) => void
+    iconFile?: string
 }
 export const Component = React.memo<Props>(props => {
     const inputRef = React.useRef<HTMLInputElement | null>(null)
@@ -82,11 +83,18 @@ export const Component = React.memo<Props>(props => {
                                 )}
                             </Text>
                         )}
-                        <DropDownIcon
-                            className={props.isMenuVisible ? 'visible' : ''}
-                            svg={IconFiles.icons.DropdownOff}
-                            size="24px"
-                        />
+                        <IconWrap onClick={props.onClick}>
+                            <DropdownIcon
+                                className={props.isMenuVisible ? 'visible' : ''}
+                                svg={
+                                    props.isMenuVisible
+                                        ? IconFiles.icons.DropdownOn
+                                        : props.iconFile ||
+                                          IconFiles.icons.Search
+                                }
+                                size="24px"
+                            />
+                        </IconWrap>
                     </Body>
                     {filteredItems.length ? (
                         <StyledItemList
@@ -125,14 +133,16 @@ const Inner = styled.div`
     position: relative;
 `
 
-const DropDownIcon = styled(Icon.Component)`
+const IconWrap = styled.div``
+
+const DropdownIcon = styled(Icon.Component)`
     position: absolute;
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.2s;
     &.visible {
-        transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%);
     }
 `
 
