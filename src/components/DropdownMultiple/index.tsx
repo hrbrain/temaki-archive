@@ -24,6 +24,7 @@ type Props = {
     defaultExpanded?: boolean
     className?: string
     errorMessage?: string
+    iconFile?: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -98,6 +99,7 @@ export const Component = React.memo<Props>(props => {
                         onChangeSearchValue={changeSearchValue}
                         searchValue={searchValue}
                         onKeydown={keyDownInInput}
+                        iconFile={props.iconFile}
                     />
                     {filteredItems.length ? (
                         <StyledItemList
