@@ -98,7 +98,7 @@ export const Component = React.memo<Props>(props => {
                             onBlurSearchValue={props.onBlurSearchValue}
                         />
                     ) : (
-                        <NotFoundText>
+                        <NotFoundText isVisible={props.isMenuVisible}>
                             &quot;{props.searchValue}
                             &quot;が見つかりませんでした。
                         </NotFoundText>
@@ -209,8 +209,8 @@ const Input = styled.input`
     }
 `
 
-const NotFoundText = styled.div`
-    display: block;
+const NotFoundText = styled.div<{ isVisible: boolean }>`
+    display: ${props => (props.isVisible ? `block` : `none`)};
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};

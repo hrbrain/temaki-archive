@@ -17,6 +17,10 @@ declare type Props = {
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onBlurSearchValue: () => void;
     onKeyDown: (event: React.KeyboardEvent) => void;
+    icons?: {
+        file: string;
+        size: string;
+    };
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
