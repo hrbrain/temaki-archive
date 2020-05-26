@@ -24,7 +24,6 @@ type Props = {
     defaultExpanded?: boolean
     className?: string
     errorMessage?: string
-    iconFile?: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -41,16 +40,22 @@ export const Component = React.memo<Props>(props => {
         [searchValue]
     )
 
-    const clickBody = React.useCallback((e: React.MouseEvent) => {
-        e.preventDefault()
-        setIsMenuVisible(true)
-    }, [])
+    const clickBody = React.useCallback(
+        (e: React.MouseEvent) => {
+            e.preventDefault()
+            setIsMenuVisible(!isMenuVisible)
+        },
+        [isMenuVisible]
+    )
 
-    const clickOutside = React.useCallback((e: React.MouseEvent<unknown>) => {
-        e.preventDefault()
-        setIsMenuVisible(false)
-        setSearchValue('')
-    }, [])
+    const clickOutside = React.useCallback(
+        (e: React.MouseEvent<unknown>) => {
+            e.preventDefault()
+            setIsMenuVisible(false)
+            setSearchValue('')
+        },
+        [isMenuVisible]
+    )
 
     const changeValue = React.useCallback(
         (value: ItemList.Value) => {
@@ -99,7 +104,6 @@ export const Component = React.memo<Props>(props => {
                         onChangeSearchValue={changeSearchValue}
                         searchValue={searchValue}
                         onKeydown={keyDownInInput}
-                        iconFile={props.iconFile}
                     />
                     {filteredItems.length ? (
                         <StyledItemList

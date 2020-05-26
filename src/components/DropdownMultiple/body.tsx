@@ -29,6 +29,7 @@ export const Component = React.memo<Props>(props => {
     React.useEffect(() => {
         if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
     }, [props.isMenuVisible])
+
     return (
         <Body
             data-test="body"
@@ -63,16 +64,13 @@ export const Component = React.memo<Props>(props => {
                     )}
                 </Text>
             )}
-
-            <DropDownIcon
-                className={props.isMenuVisible ? 'visible' : ''}
-                svg={
-                    props.isMenuVisible
-                        ? IconFiles.icons.DropdownOn
-                        : props.iconFile || IconFiles.icons.Search
-                }
-                size="24px"
-            />
+            <IconWrap onClick={props.onClick}>
+                <DropdownIcon
+                    className={props.isMenuVisible ? 'visible' : ''}
+                    svg={IconFiles.icons.DropdownOff}
+                    size="24px"
+                />
+            </IconWrap>
         </Body>
     )
 })
@@ -106,15 +104,16 @@ const renderText = (value: string, key: number, items: ItemList.Item[]) => {
 /**
  * Styles
  */
+const IconWrap = styled.div``
 
-const DropDownIcon = styled(Icon.Component)`
+const DropdownIcon = styled(Icon.Component)`
     position: absolute;
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.2s;
     &.visible {
-        transform: translateY(-50%);
+        transform: translateY(-50%) rotate(180deg);
     }
 `
 
