@@ -22,7 +22,6 @@ type Props = {
     className?: string
     defaultExpanded?: boolean
     errorMessage?: string
-    iconFile?: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -110,7 +109,6 @@ export const Component = React.memo<Props>(props => {
                     onChangeSearchValue={changeSearchValue}
                     onBlurSearchValue={blurSearchValue}
                     onKeyDown={keyDownInInput}
-                    iconFile={props.iconFile}
                 />
             )
     }

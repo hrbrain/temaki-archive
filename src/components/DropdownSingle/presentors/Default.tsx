@@ -86,12 +86,7 @@ export const Component = React.memo<Props>(props => {
                         <IconWrap onClick={props.onClick}>
                             <DropdownIcon
                                 className={props.isMenuVisible ? 'visible' : ''}
-                                svg={
-                                    props.isMenuVisible
-                                        ? IconFiles.icons.DropdownOn
-                                        : props.iconFile ||
-                                          IconFiles.icons.Search
-                                }
+                                svg={IconFiles.icons.DropdownOff}
                                 size="24px"
                             />
                         </IconWrap>
@@ -142,7 +137,7 @@ const DropdownIcon = styled(Icon.Component)`
     transform: translateY(-50%);
     transition: 0.2s;
     &.visible {
-        transform: translateY(-50%);
+        transform: translateY(-50%) rotate(180deg);
     }
 `
 

@@ -16,6 +16,7 @@ declare type Props = {
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onKeydown: (event: React.KeyboardEvent) => void;
     iconFile?: string;
+    onClickIcon: (event: React.MouseEvent) => void;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
