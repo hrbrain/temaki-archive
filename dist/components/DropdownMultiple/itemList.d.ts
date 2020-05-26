@@ -4,11 +4,10 @@ import * as React from 'react';
  */
 declare type Props = {
     items: Item[];
-    values: Value[];
+    value: Value;
     onClickItem: (value: Value) => void;
     className?: string;
     isVisible?: boolean;
-    filteredItems: Item[];
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 /**

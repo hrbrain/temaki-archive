@@ -3,7 +3,7 @@ import * as ItemList from '../ItemList';
 declare type Props = {
     items: ItemList.Item[];
     value: ItemList.Value;
-    onClick: (e: React.MouseEvent) => void;
+    onClick: () => void;
     onClickOutside: () => void;
     onClickMenuItem: (value: ItemList.Value) => void;
     isError?: boolean;
@@ -16,7 +16,6 @@ declare type Props = {
     searchValue: string;
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onBlurSearchValue: () => void;
-    onKeyDown: (event: React.KeyboardEvent) => void;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

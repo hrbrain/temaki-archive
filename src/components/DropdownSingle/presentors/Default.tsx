@@ -14,7 +14,7 @@ import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
-    onClick: (e: React.MouseEvent) => void
+    onClick: () => void
     onClickOutside: () => void
     onClickMenuItem: (value: ItemList.Value) => void
     isError?: boolean
@@ -30,20 +30,12 @@ type Props = {
     searchValue: string
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
     onBlurSearchValue: () => void
-    onKeyDown: (event: React.KeyboardEvent) => void
 }
 export const Component = React.memo<Props>(props => {
     const inputRef = React.useRef<HTMLInputElement | null>(null)
     React.useEffect(() => {
         if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
     }, [props.isMenuVisible])
-
-    const filteredItems = React.useMemo(() => {
-        const items = props.items.filter(item =>
-            item.text.includes(props.searchValue)
-        )
-        return items
-    }, [props.searchValue])
 
     return (
         <Wrap width={props.width} className={props.className}>
@@ -59,21 +51,23 @@ export const Component = React.memo<Props>(props => {
                         onClick={props.onClick}
                         diff={props.diff}
                     >
+                        <DropDownIcon
+                            className={props.isMenuVisible ? 'visible' : ''}
+                            svg={IconFiles.icons.DropdownOff}
+                            size="24px"
+                        />
                         {props.isMenuVisible ? (
-                            <SelectorInput>
-                                {props.showTextBySelected(
-                                    props.items,
-                                    props.value
-                                )}
-                                <Input
-                                    data-test="input"
-                                    type="text"
-                                    value={props.searchValue}
-                                    onChange={props.onChangeSearchValue}
-                                    onKeyDown={props.onKeyDown}
-                                    ref={inputRef}
-                                />
-                            </SelectorInput>
+                            <>
+                                <SelectorInput>
+                                    <Input
+                                        data-test="input"
+                                        type="text"
+                                        value={props.searchValue}
+                                        onChange={props.onChangeSearchValue}
+                                        ref={inputRef}
+                                    />
+                                </SelectorInput>
+                            </>
                         ) : (
                             <Text data-test="text">
                                 {props.showTextBySelected(
@@ -82,27 +76,14 @@ export const Component = React.memo<Props>(props => {
                                 )}
                             </Text>
                         )}
-                        <DropDownIcon
-                            className={props.isMenuVisible ? 'visible' : ''}
-                            svg={IconFiles.icons.DropdownOff}
-                            size="24px"
-                        />
                     </Body>
-                    {filteredItems.length ? (
-                        <StyledItemList
-                            value={props.value}
-                            filteredItems={filteredItems}
-                            onClickItem={props.onClickMenuItem}
-                            items={props.items}
-                            isVisible={props.isMenuVisible}
-                            onBlurSearchValue={props.onBlurSearchValue}
-                        />
-                    ) : (
-                        <NotFoundText>
-                            &quot;{props.searchValue}
-                            &quot;が見つかりませんでした。
-                        </NotFoundText>
-                    )}
+                    <StyledItemList
+                        value={props.searchValue}
+                        onClickItem={props.onClickMenuItem}
+                        items={props.items}
+                        isVisible={props.isMenuVisible}
+                        onBlurSearchValue={props.onBlurSearchValue}
+                    />
                 </ClickOutside.Component>
             </Inner>
             <ErrorMessage.Component
@@ -144,7 +125,6 @@ type BodyType = {
 
 const Body = styled.div<BodyType>`
     min-height: 40px;
-    position: relative;
     display: flex;
     padding: 8px 12px;
     border: 1px solid
@@ -207,18 +187,4 @@ const Input = styled.input`
     &:focus {
         outline: 0;
     }
-`
-
-const NotFoundText = styled.div`
-    display: block;
-    background: ${props => props.theme.colors.grayScale.S0};
-    border-radius: 6px;
-    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
-    max-height: 204px;
-    overflow-y: auto;
-    z-index: 1;
-    color: ${props => props.theme.colors.grayScale.S50};
-    word-break: break-all;
-    padding: 12px;
-    margin-top: 6px;
 `

@@ -10,17 +10,26 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     items: Item[]
-    values: Value[]
+    value: Value
     onClickItem: (value: Value) => void
     className?: string
     isVisible?: boolean
-    filteredItems: Item[]
 }
 
 export const Component = React.memo<Props>(props => {
-    const showItem = props.filteredItems.map(
-        renderItem(props.values, props.onClickItem)
+    const filteredItems = props.items.filter(item =>
+        item.text.includes(props.value)
     )
+
+    const showItem =
+        filteredItems.length > 0 ? (
+            filteredItems.map(renderItem(props.value, props.onClickItem))
+        ) : (
+            <NotFoundText>
+                &quot;{props.value}&quot;が見つかりませんでした。
+            </NotFoundText>
+        )
+
     return (
         <ItemList
             data-test="itemList"
@@ -32,7 +41,7 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
+const renderItem = (selected: Value, onClickItem: (value: Value) => void) => (
     item: Item,
     index: number
 ) => {
@@ -58,7 +67,7 @@ export type Value = string
 
 type ItemProps = {
     item: Item
-    selected: Value[]
+    selected: Value
     onClickItem: (value: Value) => void
 }
 
@@ -66,6 +75,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
     const handleClick = React.useCallback(() => {
         props.onClickItem(props.item.value)
     }, [props.onClickItem, props.item])
+
     return (
         <ListItem onClick={handleClick}>
             <CheckIcon
@@ -124,4 +134,10 @@ const CheckIcon = styled(Icon.Component)`
 
 const Text = styled.div`
     padding-left: 4px;
+`
+
+const NotFoundText = styled.div`
+    color: ${props => props.theme.colors.grayScale.S10};
+    word-break: break-all;
+    padding: 6px 0;
 `
