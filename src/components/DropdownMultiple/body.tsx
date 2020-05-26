@@ -12,22 +12,15 @@ import * as ItemList from './itemList'
 type Props = {
     items: ItemList.Item[]
     values: ItemList.Value[]
-    onClick: (e: React.MouseEvent) => void
+    onClick: () => void
     placeholder?: string
     isError?: boolean
     diff?: boolean
     width?: string
     isMenuVisible?: boolean
-    searchValue: string
-    onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
-    onKeydown: (event: React.KeyboardEvent) => void
 }
 
 export const Component = React.memo<Props>(props => {
-    const inputRef = React.useRef<HTMLInputElement | null>(null)
-    React.useEffect(() => {
-        if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
-    }, [props.isMenuVisible])
     return (
         <Body
             data-test="body"
@@ -37,32 +30,13 @@ export const Component = React.memo<Props>(props => {
             diff={props.diff}
             width={props.width}
         >
-            {props.isMenuVisible ? (
-                <SelectorInput>
-                    {showTextBySelected(
-                        props.items,
-                        props.values,
-                        props.placeholder
-                    )}
-                    <Input
-                        data-test="input"
-                        type="text"
-                        value={props.searchValue}
-                        onChange={props.onChangeSearchValue}
-                        ref={inputRef}
-                        onKeyDown={props.onKeydown}
-                    />
-                </SelectorInput>
-            ) : (
-                <Text data-test="text">
-                    {showTextBySelected(
-                        props.items,
-                        props.values,
-                        props.placeholder
-                    )}
-                </Text>
-            )}
-
+            <Text data-test="text">
+                {showTextBySelected(
+                    props.items,
+                    props.values,
+                    props.placeholder
+                )}
+            </Text>
             <DropDownIcon
                 className={props.isMenuVisible ? 'visible' : ''}
                 svg={IconFiles.icons.DropdownOff}
@@ -158,24 +132,4 @@ const InnerText = styled.div`
     color: ${props => props.theme.colors.primary.default};
     padding: 0 4px;
     margin: 4px 8px 4px 0px;
-`
-
-const SelectorInput = styled.div`
-    padding-right: 4px;
-    width: calc(100% - 28px);
-    transition: border-color 0.15s;
-    outline: 0;
-    &.focused {
-        border-color: ${props =>
-            props.theme.colors.utilities.highlightGreen.default};
-    }
-`
-
-const Input = styled.input`
-    width: 100%;
-    border: none;
-    background: none;
-    &:focus {
-        outline: 0;
-    }
 `

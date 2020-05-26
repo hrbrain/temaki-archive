@@ -14,7 +14,7 @@ import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
-    onClick: (e: React.MouseEvent) => void
+    onClick: () => void
     onClickOutside: () => void
     onClickMenuItem: (value: ItemList.Value) => void
     isError?: boolean
@@ -27,24 +27,8 @@ type Props = {
     diff?: boolean
     className?: string
     errorMessage?: string
-    searchValue: string
-    onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
-    onBlurSearchValue: () => void
-    onKeyDown: (event: React.KeyboardEvent) => void
 }
 export const Component = React.memo<Props>(props => {
-    const inputRef = React.useRef<HTMLInputElement | null>(null)
-    React.useEffect(() => {
-        if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
-    }, [props.isMenuVisible])
-
-    const filteredItems = React.useMemo(() => {
-        const items = props.items.filter(item =>
-            item.text.includes(props.searchValue)
-        )
-        return items
-    }, [props.searchValue])
-
     return (
         <Wrap width={props.width} className={props.className}>
             <Inner>
@@ -59,50 +43,21 @@ export const Component = React.memo<Props>(props => {
                         onClick={props.onClick}
                         diff={props.diff}
                     >
-                        {props.isMenuVisible ? (
-                            <SelectorInput>
-                                {props.showTextBySelected(
-                                    props.items,
-                                    props.value
-                                )}
-                                <Input
-                                    data-test="input"
-                                    type="text"
-                                    value={props.searchValue}
-                                    onChange={props.onChangeSearchValue}
-                                    onKeyDown={props.onKeyDown}
-                                    ref={inputRef}
-                                />
-                            </SelectorInput>
-                        ) : (
-                            <Text data-test="text">
-                                {props.showTextBySelected(
-                                    props.items,
-                                    props.value
-                                )}
-                            </Text>
-                        )}
+                        <Text data-test="text">
+                            {props.showTextBySelected(props.items, props.value)}
+                        </Text>
                         <DropDownIcon
                             className={props.isMenuVisible ? 'visible' : ''}
                             svg={IconFiles.icons.DropdownOff}
                             size="24px"
                         />
                     </Body>
-                    {filteredItems.length ? (
-                        <StyledItemList
-                            value={props.value}
-                            filteredItems={filteredItems}
-                            onClickItem={props.onClickMenuItem}
-                            items={props.items}
-                            isVisible={props.isMenuVisible}
-                            onBlurSearchValue={props.onBlurSearchValue}
-                        />
-                    ) : (
-                        <NotFoundText>
-                            &quot;{props.searchValue}
-                            &quot;が見つかりませんでした。
-                        </NotFoundText>
-                    )}
+                    <StyledItemList
+                        value={props.value}
+                        onClickItem={props.onClickMenuItem}
+                        items={props.items}
+                        isVisible={props.isMenuVisible}
+                    />
                 </ClickOutside.Component>
             </Inner>
             <ErrorMessage.Component
@@ -144,7 +99,6 @@ type BodyType = {
 
 const Body = styled.div<BodyType>`
     min-height: 40px;
-    position: relative;
     display: flex;
     padding: 8px 12px;
     border: 1px solid
@@ -166,6 +120,11 @@ const Body = styled.div<BodyType>`
         props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
 `
 
+const Text = styled.div`
+    padding-right: 4px;
+    width: calc(100% - 28px);
+`
+
 const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`
     position: absolute;
     left: 0;
@@ -182,43 +141,4 @@ const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`
         visibility: hidden;
         transform: scaleY(0);
     `}
-`
-
-const Text = styled.div`
-    padding-right: 4px;
-    width: calc(100% - 28px);
-`
-
-const SelectorInput = styled.div`
-    padding-right: 4px;
-    width: calc(100% - 28px);
-    transition: border-color 0.15s;
-    outline: 0;
-    &.focused {
-        border-color: ${props =>
-            props.theme.colors.utilities.highlightGreen.default};
-    }
-`
-
-const Input = styled.input`
-    width: 100%;
-    border: none;
-    background: none;
-    &:focus {
-        outline: 0;
-    }
-`
-
-const NotFoundText = styled.div`
-    display: block;
-    background: ${props => props.theme.colors.grayScale.S0};
-    border-radius: 6px;
-    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
-    max-height: 204px;
-    overflow-y: auto;
-    z-index: 1;
-    color: ${props => props.theme.colors.grayScale.S50};
-    word-break: break-all;
-    padding: 12px;
-    margin-top: 6px;
 `

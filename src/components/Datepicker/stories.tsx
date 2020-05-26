@@ -4,18 +4,10 @@ import * as Datepicker from './index'
 import * as Knobs from '@storybook/addon-knobs'
 import * as Actions from '@storybook/addon-actions'
 
-const name = 'date'
-const defaultDate = new Date('2019/12/25')
-
-const testKnobDate = (label: string, defaultValue: Date) => {
-    const stringTimestamp = Knobs.date(label, defaultValue)
-    return new Date(stringTimestamp)
-}
-
 storiesOf('Components|Datepicker', module)
     .add('Standard', () => (
         <Datepicker.Component
-            date={testKnobDate(name, defaultDate)}
+            date={Knobs.date('date', new Date('2019/12/25'))}
             placeholderText={Knobs.text('placeholderText', '')}
             displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
             monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}

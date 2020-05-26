@@ -13,8 +13,7 @@ import * as ItemList from '../ItemList'
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
-    searchValue: string
-    onClick: (e: React.MouseEvent) => void
+    onClick: () => void
     onClickOutside: () => void
     onClickMenuItem: (index: string) => void
     isError?: boolean

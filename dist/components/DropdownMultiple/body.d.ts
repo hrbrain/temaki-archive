@@ -6,15 +6,12 @@ import * as ItemList from './itemList';
 declare type Props = {
     items: ItemList.Item[];
     values: ItemList.Value[];
-    onClick: (e: React.MouseEvent) => void;
+    onClick: () => void;
     placeholder?: string;
     isError?: boolean;
     diff?: boolean;
     width?: string;
     isMenuVisible?: boolean;
-    searchValue: string;
-    onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    onKeydown: (event: React.KeyboardEvent) => void;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
