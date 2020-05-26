@@ -21,7 +21,6 @@ type Props = {
     searchValue: string
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
     onKeydown: (event: React.KeyboardEvent) => void
-    iconFile?: string
 }
 
 export const Component = React.memo<Props>(props => {
