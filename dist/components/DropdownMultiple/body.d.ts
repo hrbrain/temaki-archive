@@ -12,8 +12,6 @@ declare type Props = {
     diff?: boolean;
     width?: string;
     isMenuVisible?: boolean;
-    searchValue: string;
-    onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

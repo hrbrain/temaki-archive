@@ -4,21 +4,11 @@ import * as DatepickerRange from './index'
 import * as Knobs from '@storybook/addon-knobs'
 import * as Actions from '@storybook/addon-actions'
 
-const startName = 'startDate'
-const endName = 'endDate'
-const defaultStartDate = new Date('2019/12/1')
-const defaultEndDate = new Date('2019/12/31')
-
-const testKnobDate = (label: string, defaultValue: Date) => {
-    const stringTimestamp = Knobs.date(label, defaultValue)
-    return new Date(stringTimestamp)
-}
-
 storiesOf('Components|DateRangePicker', module)
     .add('Standard', () => (
         <DatepickerRange.Component
-            startDate={testKnobDate(startName, defaultStartDate)}
-            endDate={testKnobDate(endName, defaultEndDate)}
+            startDate={Knobs.date('startDate', new Date('2019/12/1'))}
+            endDate={Knobs.date('endDate', new Date('2019/12/31'))}
             startDatePlaceholderText={Knobs.text(
                 'startDatePlaceholderText',
                 ''

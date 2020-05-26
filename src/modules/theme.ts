@@ -257,9 +257,9 @@ const {
     keyframes,
     withTheme
 } = casted
-const ThemeConsumer: React.ExoticComponent<React.ConsumerProps<
-    RequiredThemeProps
->> = casted.ThemeConsumer
+const ThemeConsumer: React.ExoticComponent<
+    React.ConsumerProps<RequiredThemeProps>
+> = casted.ThemeConsumer
 const ThemeContext: React.Context<RequiredThemeProps> = casted.ThemeContext
 const ThemeProvider: React.ComponentClass<
     styledComponents.ThemeProviderProps<RequiredThemeProps, RequiredThemeProps>,
