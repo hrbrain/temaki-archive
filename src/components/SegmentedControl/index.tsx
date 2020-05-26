@@ -9,7 +9,7 @@ export type Props = {
     items: Item[]
     selectedIndex: number
     onClickTab: (index: number) => void
-    className: string
+    className?: string
     itemsWidth?: string
 }
 
