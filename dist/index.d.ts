@@ -1,4 +1,5 @@
 /// <reference types="react" />
+/// <reference types="@emotion/core" />
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
@@ -167,6 +168,7 @@ export declare const Switch: import("react").NamedExoticComponent<{
 }>;
 export declare const Textarea: import("react").NamedExoticComponent<{
     value?: string | undefined;
+    name?: string | undefined;
     placeholder?: string | undefined;
     minRows?: number | undefined;
     maxRows?: number | undefined;
