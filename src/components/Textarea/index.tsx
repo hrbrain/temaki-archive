@@ -42,6 +42,7 @@ export const Component = React.memo<Props>(props => {
     return (
         <Outer className={props.className}>
             <Textarea
+                name={props.name}
                 value={value}
                 placeholder={props.placeholder}
                 minRows={props.minRows}
