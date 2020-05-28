@@ -167,6 +167,7 @@ export declare const Switch: import("react").NamedExoticComponent<{
 }>;
 export declare const Textarea: import("react").NamedExoticComponent<{
     value?: string | undefined;
+    name?: string | undefined;
     placeholder?: string | undefined;
     minRows?: number | undefined;
     maxRows?: number | undefined;

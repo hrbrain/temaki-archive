@@ -9,6 +9,7 @@ import * as FormErrorMessage from '~/components/lib/FormErrorMessage'
 
 type Props = {
     value?: string
+    name?: string
     placeholder?: string
     minRows?: number
     maxRows?: number
