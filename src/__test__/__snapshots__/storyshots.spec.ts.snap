@@ -1539,7 +1539,7 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
             onClick={[Function]}
           >
             <div
-              className="sc-bxivhb hBuNrQ sc-brqgnP bAFNte"
+              className="sc-bxivhb hBuNrQ sc-brqgnP fVeyme"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": undefined,
@@ -1728,7 +1728,7 @@ exports[`Storyshots Components|DropdownSingle Input 1`] = `
             onClick={[Function]}
           >
             <div
-              className="sc-bxivhb hBuNrQ sc-brqgnP bAFNte"
+              className="sc-bxivhb hBuNrQ sc-brqgnP fVeyme"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": undefined,
