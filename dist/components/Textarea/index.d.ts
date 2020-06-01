@@ -4,6 +4,7 @@ import * as React from 'react';
  */
 declare type Props = {
     value?: string;
+    name?: string;
     placeholder?: string;
     minRows?: number;
     maxRows?: number;

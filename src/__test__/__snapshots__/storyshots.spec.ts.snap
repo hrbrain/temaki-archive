@@ -2219,9 +2219,11 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 `;
 
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
-<div>
+<div
+  className="m-10"
+>
   <div
-    className="sc-hEsumM jnlmRn"
+    className="sc-hEsumM jSijSg"
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -2229,7 +2231,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
-    className="sc-hEsumM ehWEOX"
+    className="sc-hEsumM JeARV"
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -2237,7 +2239,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
-    className="sc-hEsumM ehWEOX"
+    className="sc-hEsumM JeARV"
     data-test="item2"
     onClick={[Function]}
     selected={false}

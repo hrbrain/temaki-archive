@@ -19,9 +19,11 @@ storiesOf('Components|SegmentedControl', module).add('molecule', () => {
 
     return (
         <SegmentedControl.Component
+            className="m-10"
             selectedIndex={number('index', 0, {})}
             items={data}
             onClickTab={action('tabIndex')}
+            itemsWidth={text('itemsWidth', '200px')}
         />
     )
 })
