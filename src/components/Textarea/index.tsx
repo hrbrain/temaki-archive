@@ -9,6 +9,7 @@ import * as FormErrorMessage from '~/components/lib/FormErrorMessage'
 
 type Props = {
     value?: string
+    name?: string
     placeholder?: string
     minRows?: number
     maxRows?: number
@@ -41,6 +42,7 @@ export const Component = React.memo<Props>(props => {
     return (
         <Outer className={props.className}>
             <Textarea
+                name={props.name}
                 value={value}
                 placeholder={props.placeholder}
                 minRows={props.minRows}

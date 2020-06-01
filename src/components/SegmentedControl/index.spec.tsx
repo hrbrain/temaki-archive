@@ -26,6 +26,7 @@ describe('SegmentedControl', () => {
                 selectedIndex={0}
                 items={data}
                 onClickTab={mockOnClickTab}
+                className="m-10"
             />
         )
     })

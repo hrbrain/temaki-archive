@@ -17,8 +17,14 @@ const testKnobDate = (label: string, defaultValue: Date) => {
 storiesOf('Components|DateRangePicker', module)
     .add('Standard', () => (
         <DatepickerRange.Component
-            startDate={testKnobDate(startName, defaultStartDate)}
-            endDate={testKnobDate(endName, defaultEndDate)}
+            startDate={testKnobDate(
+                'startDate',
+                testKnobDate(startName, defaultStartDate)
+            )}
+            endDate={testKnobDate(
+                'endDate',
+                testKnobDate(endName, defaultEndDate)
+            )}
             startDatePlaceholderText={Knobs.text(
                 'startDatePlaceholderText',
                 ''
