@@ -85,7 +85,8 @@ export type Props = {
           variant: typeof buttonShapeType.text
           colorType?: TextColorTypeProp
           svg?: string
-      })
+      }
+)
 export const Component: React.FC<Props> = props => {
     const [isLoading, handleClick] = useIsLoadingByAsyncClick(props.onClick)
 

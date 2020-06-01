@@ -13,6 +13,9 @@ declare type Props = {
     diff?: boolean;
     className?: string;
     errorMessage?: string;
+    searchValue: string;
+    onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onBlurSearchValue: () => void;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

@@ -19,7 +19,8 @@ type Props = {
       }
     | {
           type: typeof BUTTONLESS
-      })
+      }
+)
 
 export const Component = React.memo<Props>((props: Props) => {
     switch (props.type) {
