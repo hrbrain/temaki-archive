@@ -82,11 +82,13 @@ export const Component = React.memo<Props>(props => {
                                 )}
                             </Text>
                         )}
-                        <DropDownIcon
-                            className={props.isMenuVisible ? 'visible' : ''}
-                            svg={IconFiles.icons.DropdownOff}
-                            size="24px"
-                        />
+                        <IconWrap onClick={props.onClick}>
+                            <DropdownIcon
+                                className={props.isMenuVisible ? 'visible' : ''}
+                                svg={IconFiles.icons.DropdownOff}
+                                size="24px"
+                            />
+                        </IconWrap>
                     </Body>
                     {filteredItems.length ? (
                         <StyledItemList
@@ -98,7 +100,7 @@ export const Component = React.memo<Props>(props => {
                             onBlurSearchValue={props.onBlurSearchValue}
                         />
                     ) : (
-                        <NotFoundText>
+                        <NotFoundText isVisible={props.isMenuVisible}>
                             &quot;{props.searchValue}
                             &quot;が見つかりませんでした。
                         </NotFoundText>
@@ -125,7 +127,9 @@ const Inner = styled.div`
     position: relative;
 `
 
-const DropDownIcon = styled(Icon.Component)`
+const IconWrap = styled.div``
+
+const DropdownIcon = styled(Icon.Component)`
     position: absolute;
     right: 12px;
     top: 50%;
@@ -209,8 +213,8 @@ const Input = styled.input`
     }
 `
 
-const NotFoundText = styled.div`
-    display: block;
+const NotFoundText = styled.div<{ isVisible: boolean }>`
+    display: ${props => (props.isVisible ? `block` : `none`)};
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};

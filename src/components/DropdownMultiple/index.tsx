@@ -40,16 +40,22 @@ export const Component = React.memo<Props>(props => {
         [searchValue]
     )
 
-    const clickBody = React.useCallback((e: React.MouseEvent) => {
-        e.preventDefault()
-        setIsMenuVisible(true)
-    }, [])
+    const clickBody = React.useCallback(
+        (e: React.MouseEvent) => {
+            e.preventDefault()
+            setIsMenuVisible(!isMenuVisible)
+        },
+        [isMenuVisible]
+    )
 
-    const clickOutside = React.useCallback((e: React.MouseEvent<unknown>) => {
-        e.preventDefault()
-        setIsMenuVisible(false)
-        setSearchValue('')
-    }, [])
+    const clickOutside = React.useCallback(
+        (e: React.MouseEvent<unknown>) => {
+            e.preventDefault()
+            setIsMenuVisible(false)
+            setSearchValue('')
+        },
+        [isMenuVisible]
+    )
 
     const changeValue = React.useCallback(
         (value: ItemList.Value) => {
@@ -108,7 +114,7 @@ export const Component = React.memo<Props>(props => {
                             values={props.values}
                         />
                     ) : (
-                        <NotFoundText>
+                        <NotFoundText isVisible={isMenuVisible}>
                             &quot;{searchValue}&quot;が見つかりませんでした。
                         </NotFoundText>
                     )}
@@ -156,8 +162,8 @@ const StyledItemList = styled(ItemList.Component)<{ isVisible?: boolean }>`
     `}
 `
 
-const NotFoundText = styled.div`
-    display: block;
+const NotFoundText = styled.div<{ isVisible?: boolean }>`
+    display: ${props => (props.isVisible ? 'block' : 'none')};
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
