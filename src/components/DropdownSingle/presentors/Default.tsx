@@ -215,6 +215,9 @@ const Input = styled.input`
 
 const NotFoundText = styled.div<{ isVisible: boolean }>`
     display: ${props => (props.isVisible ? `block` : `none`)};
+    position: absolute;
+    right: 0;
+    width: 100%;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
