@@ -18,12 +18,6 @@
         "lint-fix:src": "eslint --ext .ts,.tsx --fix ./src",
         "type-check": "tsc --noEmit"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run build && tsc --emitDeclarationOnly && git add ./dist",
-            "pre-push": "npm run lint && npm run test"
-        }
-    },
     "peerDependencies": {
         "react": ">=16.8.6",
         "react-dom": ">=16.8.6",
