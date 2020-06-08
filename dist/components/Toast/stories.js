@@ -1,0 +1,57 @@
+"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _addonKnobs = require("@storybook/addon-knobs");
+
+var _react = require("@storybook/react");
+
+var React = _interopRequireWildcard(require("react"));
+
+var Toast = _interopRequireWildcard(require("./index"));
+
+var Actions = _interopRequireWildcard(require("@storybook/addon-actions"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+(0, _react.storiesOf)("Components|Toast", module).add('default(info)', function () {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "m-10"
+  }, /*#__PURE__*/React.createElement(Toast.Component, {
+    label: (0, _addonKnobs.text)('Label', 'ラベル'),
+    text: (0, _addonKnobs.text)('Text', 'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'),
+    type: 'default',
+    variant: 'info',
+    onClickClose: Actions.action('onClickClose')
+  }));
+}).add('default(warning)', function () {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "m-10"
+  }, /*#__PURE__*/React.createElement(Toast.Component, {
+    label: (0, _addonKnobs.text)('Label', 'ラベル'),
+    text: (0, _addonKnobs.text)('Text', 'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'),
+    type: 'default',
+    variant: 'warning',
+    onClickClose: Actions.action('onClickClose')
+  }));
+}).add('buttonless(info)', function () {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "m-10"
+  }, /*#__PURE__*/React.createElement(Toast.Component, {
+    label: (0, _addonKnobs.text)('Label', 'ラベル'),
+    text: (0, _addonKnobs.text)('Text', 'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'),
+    type: 'buttonless',
+    variant: 'info'
+  }));
+}).add('buttonless(warning)', function () {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "m-10"
+  }, /*#__PURE__*/React.createElement(Toast.Component, {
+    label: (0, _addonKnobs.text)('Label', 'ラベル'),
+    text: (0, _addonKnobs.text)('Text', 'メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。'),
+    type: 'buttonless',
+    variant: 'warning'
+  }));
+});
