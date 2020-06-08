@@ -1,4 +1,16 @@
 {
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "baseUrl": ".",
+                "alias": {
+                    "@": "./src",
+                    "~": "./src"
+                }
+            }
+        ]
+    ],
     "presets": [
         "@babel/preset-react",
         "@babel/preset-typescript",
