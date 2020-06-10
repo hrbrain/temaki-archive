@@ -153,9 +153,7 @@ const Body = styled.div<BodyType>`
         props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
 `
 
-const BodyWrap = styled.div`
-    width: 100%;
-`
+const BodyWrap = styled.div``
 
 const Text = styled.div`
     padding: 4px 4px 4px 0;
