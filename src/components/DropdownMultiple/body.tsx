@@ -31,7 +31,7 @@ export const Component = React.memo<Props>(props => {
     }, [props.isMenuVisible])
 
     return (
-        <BodyWrap>
+        <>
             <Body
                 data-test="body"
                 isMenuVisible={props.isMenuVisible}
@@ -73,7 +73,7 @@ export const Component = React.memo<Props>(props => {
                     size="24px"
                 />
             </IconWrap>
-        </BodyWrap>
+        </>
     )
 })
 
