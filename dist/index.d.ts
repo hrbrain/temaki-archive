@@ -32,6 +32,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     className?: string | undefined;
+    step?: number | undefined;
 } & {
     format: "text";
     value: string;
@@ -49,10 +50,12 @@ export declare const Input: import("react").NamedExoticComponent<({
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     className?: string | undefined;
+    step?: number | undefined;
 } & {
     format: "number";
     value: number;
     onChange: (value: number) => void;
+    type?: "number" | undefined;
 })>;
 export declare const Button: import("react").FunctionComponent<_Button.Props>;
 export declare const buttonShapeType: {

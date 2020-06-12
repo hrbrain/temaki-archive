@@ -22,6 +22,7 @@ declare type Props = {
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     className?: string;
+    step?: number;
 } & ({
     format: typeof TEXT;
     value: StringValue;
@@ -30,6 +31,7 @@ declare type Props = {
     format: typeof NUMBER;
     value: NumberValue;
     onChange: (value: NumberValue) => void;
+    type?: typeof NUMBER;
 });
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
