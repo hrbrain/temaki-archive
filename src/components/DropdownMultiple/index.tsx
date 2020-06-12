@@ -40,22 +40,16 @@ export const Component = React.memo<Props>(props => {
         [searchValue]
     )
 
-    const clickBody = React.useCallback(
-        (e: React.MouseEvent) => {
-            e.preventDefault()
-            setIsMenuVisible(true)
-        },
-        [isMenuVisible]
-    )
+    const clickBody = React.useCallback((e: React.MouseEvent) => {
+        e.preventDefault()
+        setIsMenuVisible(true)
+    }, [])
 
-    const clickOutside = React.useCallback(
-        (e: React.MouseEvent<unknown>) => {
-            e.preventDefault()
-            setIsMenuVisible(false)
-            setSearchValue('')
-        },
-        [isMenuVisible]
-    )
+    const clickOutside = React.useCallback((e: React.MouseEvent<unknown>) => {
+        e.preventDefault()
+        setIsMenuVisible(false)
+        setSearchValue('')
+    }, [])
 
     const clickIcon = React.useCallback(
         (e: React.MouseEvent) => {
