@@ -100,7 +100,7 @@ export const Container: ContainerType<Props, InjectProps> = ({
                 e.preventDefault()
             }
         },
-        [changeValue]
+        []
     )
 
     return (
