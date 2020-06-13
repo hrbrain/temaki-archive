@@ -6,6 +6,10 @@ import * as Input from '../index'
 const firstDecimalPlace = 1
 const secondDecimalPlace = 2
 
+/* keyCode */
+const keyCodeUpArrow = 38
+const keyCodeDownArrow = 40
+
 /**
  * Utils
  */
@@ -88,6 +92,18 @@ export const Container: ContainerType<Props, InjectProps> = ({
         }
     }, [])
 
+    const keyDown = React.useCallback(
+        (e: React.KeyboardEvent<HTMLInputElement>) => {
+            if (
+                e.keyCode === keyCodeUpArrow ||
+                e.keyCode === keyCodeDownArrow
+            ) {
+                e.preventDefault()
+            }
+        },
+        []
+    )
+
     return (
         // @ts-ignore 型推論がうまくいってない
         <Presenter
@@ -95,6 +111,7 @@ export const Container: ContainerType<Props, InjectProps> = ({
             onChange={changeValue}
             step={formattedStep(decimalPlace || 0)}
             {...props}
+            onKeyDown={keyDown}
         />
     )
 }

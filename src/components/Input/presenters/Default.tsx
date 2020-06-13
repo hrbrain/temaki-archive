@@ -36,6 +36,16 @@ const Wrapper = styled.div`
     position: relative;
     display: inline-flex;
     flex-direction: column;
+
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
 `
 
 type OuterProps = {
