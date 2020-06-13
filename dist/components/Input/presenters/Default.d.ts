@@ -13,6 +13,7 @@ declare type Props = {
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     className?: string;
+    step?: number;
 };
 export declare const Presenter: React.FC<Props>;
 export {};

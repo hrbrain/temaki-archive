@@ -3,6 +3,9 @@ import { ContainerType } from '~/types/utils'
 
 import * as Input from '../index'
 
+const firstDecimalPlace = 1
+const secondDecimalPlace = 2
+
 /**
  * Utils
  */
@@ -12,7 +15,8 @@ const useChangeNumberValueFromChangeEvent = (
     onChangeNative:
         | ((e: React.ChangeEvent<HTMLInputElement>) => void)
         | undefined,
-    value: Input.NumberValue
+    value: Input.NumberValue,
+    step?: number
 ) =>
     React.useCallback(
         (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,10 +36,15 @@ const useChangeNumberValueFromChangeEvent = (
                     return
                 }
 
+                if (step !== undefined) {
+                    onChange(Number(num.toFixed(step)))
+                    return
+                }
+
                 onChange(num)
             }
         },
-        [onChange, onChangeNative, value]
+        [onChange, onChangeNative, value, step]
     )
 
 /**
@@ -46,6 +55,7 @@ type Props = {
     value: number
     onChange?: (value: Input.NumberValue) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    step?: number
 }
 type InjectProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -56,16 +66,35 @@ export const Container: ContainerType<Props, InjectProps> = ({
     value,
     onChange,
     onChangeNative,
+    step,
     ...props
 }) => {
     const changeValue = useChangeNumberValueFromChangeEvent(
         onChange,
         onChangeNative,
-        value
+        value,
+        step
     )
+
+    const formattedStep = React.useCallback((stepNum: number) => {
+        switch (stepNum) {
+            case firstDecimalPlace:
+                return 0.1 // 小数第1位
+            case secondDecimalPlace:
+                return 0.01 // 小数第2位
+            case 0:
+            default:
+                return 1
+        }
+    }, [])
 
     return (
         // @ts-ignore 型推論がうまくいってない
-        <Presenter value={value.toString()} onChange={changeValue} {...props} />
+        <Presenter
+            value={value.toString()}
+            onChange={changeValue}
+            step={formattedStep(step || 1)}
+            {...props}
+        />
     )
 }
