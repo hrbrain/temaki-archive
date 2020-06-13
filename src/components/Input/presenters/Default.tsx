@@ -18,6 +18,7 @@ type Props = {
     className?: string
     decimalPlace?: number | null
 }
+
 export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     return (
         <Wrapper className={props.className}>
