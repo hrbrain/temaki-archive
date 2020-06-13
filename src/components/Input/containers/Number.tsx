@@ -6,8 +6,8 @@ import * as Input from '../index'
 const firstDecimalPlace = 1
 const secondDecimalPlace = 2
 
-const keyCodeUp = 38
-const keyCodeDown = 40
+const keyCodeUpArrow = 38
+const keyCodeDownArrow = 40
 
 /**
  * Utils
@@ -93,7 +93,10 @@ export const Container: ContainerType<Props, InjectProps> = ({
 
     const keyDown = React.useCallback(
         (e: React.KeyboardEvent<HTMLInputElement>) => {
-            if (e.keyCode === keyCodeUp || e.keyCode === keyCodeDown) {
+            if (
+                e.keyCode === keyCodeUpArrow ||
+                e.keyCode === keyCodeDownArrow
+            ) {
                 e.preventDefault()
             }
         },
