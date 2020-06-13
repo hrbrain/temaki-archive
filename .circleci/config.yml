@@ -17,7 +17,7 @@ jobs:
               - ./node_modules
       - run:
           name: Run test
-          command: yarn test --ci --runInBand
+          command: yarn test --ci
       - run:
           name: Run type check
           command: yarn type-check
