@@ -22,7 +22,7 @@ declare type Props = {
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     className?: string;
-    step?: number;
+    decimalPlace?: number | null;
 } & ({
     format: typeof TEXT;
     value: StringValue;

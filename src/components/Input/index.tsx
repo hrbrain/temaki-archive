@@ -30,7 +30,7 @@ type Props = {
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     className?: string
-    step?: number
+    decimalPlace?: number | null
 } & (
     | {
           format: typeof TEXT
@@ -65,7 +65,7 @@ export const Component = React.memo<Props>(({ children: _, ...props }) => {
                     /* Propsの型でUnionしてるので format=NUMBER のときは必ずnumberのはず */
                     value={value as number}
                     Presenter={Presenter.Presenter}
-                    step={props.step}
+                    decimalPlace={props.decimalPlace}
                 />
             )
         case TEXT:

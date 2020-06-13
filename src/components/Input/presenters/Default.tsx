@@ -16,8 +16,9 @@ type Props = {
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     className?: string
-    step?: number
+    decimalPlace?: number | null
 }
+
 export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     return (
         <Wrapper className={props.className}>
