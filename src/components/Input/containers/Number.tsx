@@ -16,7 +16,7 @@ const useChangeNumberValueFromChangeEvent = (
         | ((e: React.ChangeEvent<HTMLInputElement>) => void)
         | undefined,
     value: Input.NumberValue,
-    step?: number
+    stepNum?: number | null
 ) =>
     React.useCallback(
         (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,15 +36,15 @@ const useChangeNumberValueFromChangeEvent = (
                     return
                 }
 
-                if (step !== undefined) {
-                    onChange(Number(num.toFixed(step)))
+                if (stepNum !== null) {
+                    onChange(Number(num.toFixed(stepNum)))
                     return
                 }
 
                 onChange(num)
             }
         },
-        [onChange, onChangeNative, value, step]
+        [onChange, onChangeNative, value, stepNum]
     )
 
 /**
@@ -55,7 +55,7 @@ type Props = {
     value: number
     onChange?: (value: Input.NumberValue) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
-    step?: number
+    stepNum?: number | null
 }
 type InjectProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -66,14 +66,14 @@ export const Container: ContainerType<Props, InjectProps> = ({
     value,
     onChange,
     onChangeNative,
-    step,
+    stepNum,
     ...props
 }) => {
     const changeValue = useChangeNumberValueFromChangeEvent(
         onChange,
         onChangeNative,
         value,
-        step
+        stepNum
     )
 
     const formattedStep = React.useCallback((stepNum: number) => {
@@ -82,7 +82,7 @@ export const Container: ContainerType<Props, InjectProps> = ({
                 return 0.1 // 小数第1位
             case secondDecimalPlace:
                 return 0.01 // 小数第2位
-            case 0:
+            case 0: // 整数
             default:
                 return 1
         }

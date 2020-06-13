@@ -45,7 +45,7 @@ storiesOf('Components|Input', module)
             errorMessage={text('Error Message', 'Error Message')}
             onKeyDown={action('onKeyDown')}
             onKeyUp={action('onKeyUp')}
-            step={number('小数点第', 0)}
+            stepNum={number('小数点第', 0)}
             type="number"
         />
     ))
