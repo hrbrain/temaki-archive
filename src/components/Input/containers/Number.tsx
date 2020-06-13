@@ -6,6 +6,7 @@ import * as Input from '../index'
 const firstDecimalPlace = 1
 const secondDecimalPlace = 2
 
+/* keyCode */
 const keyCodeUpArrow = 38
 const keyCodeDownArrow = 40
 
