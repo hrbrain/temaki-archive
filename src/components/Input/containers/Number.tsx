@@ -93,7 +93,7 @@ export const Container: ContainerType<Props, InjectProps> = ({
         <Presenter
             value={value.toString()}
             onChange={changeValue}
-            step={formattedStep(step || 1)}
+            step={formattedStep(stepNum || 0)}
             {...props}
         />
     )
