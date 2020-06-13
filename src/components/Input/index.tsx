@@ -30,6 +30,7 @@ type Props = {
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     className?: string
+    step?: number
 } & (
     | {
           format: typeof TEXT
@@ -40,13 +41,14 @@ type Props = {
           format: typeof NUMBER
           value: NumberValue
           onChange: (value: NumberValue) => void
+          type?: typeof NUMBER
       }
 )
 export const Component = React.memo<Props>(({ children: _, ...props }) => {
     const [value, setValue] = React.useState(props.value)
     const changeValue = React.useCallback(
         (value: string | number) => {
-            props.onChange(value as any)
+            props.onChange(value as never)
             setValue(value)
         },
         [props.onChange]
@@ -63,6 +65,7 @@ export const Component = React.memo<Props>(({ children: _, ...props }) => {
                     /* Propsの型でUnionしてるので format=NUMBER のときは必ずnumberのはず */
                     value={value as number}
                     Presenter={Presenter.Presenter}
+                    step={props.step}
                 />
             )
         case TEXT:

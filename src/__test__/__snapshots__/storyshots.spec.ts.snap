@@ -2053,6 +2053,27 @@ exports[`Storyshots Components|Input Number 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     placeholder="Enter your age"
+    step={0.1}
+    value="0"
+  />
+  
+</div>
+`;
+
+exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
+<div
+  className="sc-gisBJw bknDY"
+>
+  <input
+    className="sc-kjoXOD dyVnsD"
+    format="number"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    placeholder="Enter your age"
+    step={0.1}
+    type="number"
     value="0"
   />
   
