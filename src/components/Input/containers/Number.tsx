@@ -16,7 +16,7 @@ const useChangeNumberValueFromChangeEvent = (
         | ((e: React.ChangeEvent<HTMLInputElement>) => void)
         | undefined,
     value: Input.NumberValue,
-    stepNum?: number | null
+    decimalPlace?: number | null
 ) =>
     React.useCallback(
         (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,15 +36,15 @@ const useChangeNumberValueFromChangeEvent = (
                     return
                 }
 
-                if (stepNum !== null) {
-                    onChange(Number(num.toFixed(stepNum)))
+                if (decimalPlace !== null) {
+                    onChange(Number(num.toFixed(decimalPlace)))
                     return
                 }
 
                 onChange(num)
             }
         },
-        [onChange, onChangeNative, value, stepNum]
+        [onChange, onChangeNative, value, decimalPlace]
     )
 
 /**
@@ -55,7 +55,7 @@ type Props = {
     value: number
     onChange?: (value: Input.NumberValue) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
-    stepNum?: number | null
+    decimalPlace?: number | null
 }
 type InjectProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -66,18 +66,18 @@ export const Container: ContainerType<Props, InjectProps> = ({
     value,
     onChange,
     onChangeNative,
-    stepNum,
+    decimalPlace,
     ...props
 }) => {
     const changeValue = useChangeNumberValueFromChangeEvent(
         onChange,
         onChangeNative,
         value,
-        stepNum
+        decimalPlace
     )
 
-    const formattedStep = React.useCallback((stepNum: number) => {
-        switch (stepNum) {
+    const formattedStep = React.useCallback((dp: number) => {
+        switch (dp) {
             case firstDecimalPlace:
                 return 0.1 // 小数第1位
             case secondDecimalPlace:
@@ -93,7 +93,7 @@ export const Container: ContainerType<Props, InjectProps> = ({
         <Presenter
             value={value.toString()}
             onChange={changeValue}
-            step={formattedStep(stepNum || 0)}
+            step={formattedStep(decimalPlace || 0)}
             {...props}
         />
     )

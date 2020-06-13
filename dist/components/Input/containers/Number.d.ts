@@ -8,7 +8,7 @@ declare type Props = {
     value: number;
     onChange?: (value: Input.NumberValue) => void;
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    stepNum?: number | null;
+    decimalPlace?: number | null;
 };
 declare type InjectProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
