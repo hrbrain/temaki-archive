@@ -2043,7 +2043,7 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <div
-  className="sc-gisBJw bknDY"
+  className="sc-gisBJw cIhFtz"
 >
   <input
     className="sc-kjoXOD dyVnsD"
@@ -2062,7 +2062,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
 <div
-  className="sc-gisBJw bknDY"
+  className="sc-gisBJw cIhFtz"
 >
   <input
     className="sc-kjoXOD dyVnsD"
@@ -2082,7 +2082,7 @@ exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <div
-  className="sc-gisBJw bknDY"
+  className="sc-gisBJw cIhFtz"
 >
   <input
     className="sc-kjoXOD dyVnsD"
