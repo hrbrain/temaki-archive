@@ -21,60 +21,56 @@ type Props = {
     searchValue: string
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
     onKeydown: (event: React.KeyboardEvent) => void
-    onClickIcon: (event: React.MouseEvent) => void
 }
 
 export const Component = React.memo<Props>(props => {
     const inputRef = React.useRef<HTMLInputElement | null>(null)
-
     React.useEffect(() => {
         if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
     }, [props.isMenuVisible])
 
     return (
-        <>
-            <Body
-                data-test="body"
-                isMenuVisible={props.isMenuVisible}
-                isError={props.isError}
-                diff={props.diff}
-                width={props.width}
-                onClick={props.onClick}
-            >
-                {props.isMenuVisible ? (
-                    <SelectorInput>
-                        {showTextBySelected(
-                            props.items,
-                            props.values,
-                            props.placeholder
-                        )}
-                        <Input
-                            data-test="input"
-                            type="text"
-                            value={props.searchValue}
-                            onChange={props.onChangeSearchValue}
-                            ref={inputRef}
-                            onKeyDown={props.onKeydown}
-                        />
-                    </SelectorInput>
-                ) : (
-                    <Text data-test="text">
-                        {showTextBySelected(
-                            props.items,
-                            props.values,
-                            props.placeholder
-                        )}
-                    </Text>
-                )}
-            </Body>
-            <IconWrap onClick={props.onClickIcon}>
+        <Body
+            data-test="body"
+            onClick={props.onClick}
+            isMenuVisible={props.isMenuVisible}
+            isError={props.isError}
+            diff={props.diff}
+            width={props.width}
+        >
+            {props.isMenuVisible ? (
+                <SelectorInput>
+                    {showTextBySelected(
+                        props.items,
+                        props.values,
+                        props.placeholder
+                    )}
+                    <Input
+                        data-test="input"
+                        type="text"
+                        value={props.searchValue}
+                        onChange={props.onChangeSearchValue}
+                        ref={inputRef}
+                        onKeyDown={props.onKeydown}
+                    />
+                </SelectorInput>
+            ) : (
+                <Text data-test="text">
+                    {showTextBySelected(
+                        props.items,
+                        props.values,
+                        props.placeholder
+                    )}
+                </Text>
+            )}
+            <IconWrap onClick={props.onClick}>
                 <DropdownIcon
                     className={props.isMenuVisible ? 'visible' : ''}
                     svg={IconFiles.icons.DropdownOff}
                     size="24px"
                 />
             </IconWrap>
-        </>
+        </Body>
     )
 })
 
@@ -107,9 +103,7 @@ const renderText = (value: string, key: number, items: ItemList.Item[]) => {
 /**
  * Styles
  */
-const IconWrap = styled.div`
-    cursor: pointer;
-`
+const IconWrap = styled.div``
 
 const DropdownIcon = styled(Icon.Component)`
     position: absolute;

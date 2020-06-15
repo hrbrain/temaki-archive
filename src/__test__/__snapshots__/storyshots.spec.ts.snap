@@ -1100,20 +1100,20 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
           >
             選択してください
           </div>
-        </div>
-        <div
-          className="sc-VigVT ikhhqW"
-          onClick={[Function]}
-        >
           <div
-            className="sc-bxivhb hBuNrQ sc-jTzLTM fuqQfO"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
+            className="sc-VigVT fIhGog"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb hBuNrQ sc-jTzLTM fuqQfO"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
               }
-            }
-            size="24px"
-          />
+              size="24px"
+            />
+          </div>
         </div>
         <ul
           className="sc-kgoBCf fMpODd sc-hMqMXs lfEFkv"
@@ -1267,20 +1267,20 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
           >
             選択してください
           </div>
-        </div>
-        <div
-          className="sc-VigVT ikhhqW"
-          onClick={[Function]}
-        >
           <div
-            className="sc-bxivhb hBuNrQ sc-jTzLTM fuqQfO"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
+            className="sc-VigVT fIhGog"
+            onClick={[Function]}
+          >
+            <div
+              className="sc-bxivhb hBuNrQ sc-jTzLTM fuqQfO"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
               }
-            }
-            size="24px"
-          />
+              size="24px"
+            />
+          </div>
         </div>
         <ul
           className="sc-kgoBCf fMpODd sc-hMqMXs lfEFkv"

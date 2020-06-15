@@ -40,21 +40,19 @@ export const Component = React.memo<Props>(props => {
         [searchValue]
     )
 
-    const clickBody = React.useCallback((e: React.MouseEvent) => {
-        e.preventDefault()
-        setIsMenuVisible(true)
-    }, [])
-
-    const clickOutside = React.useCallback((e: React.MouseEvent<unknown>) => {
-        e.preventDefault()
-        setIsMenuVisible(false)
-        setSearchValue('')
-    }, [])
-
-    const clickIcon = React.useCallback(
+    const clickBody = React.useCallback(
         (e: React.MouseEvent) => {
             e.preventDefault()
             setIsMenuVisible(!isMenuVisible)
+        },
+        [isMenuVisible]
+    )
+
+    const clickOutside = React.useCallback(
+        (e: React.MouseEvent<unknown>) => {
+            e.preventDefault()
+            setIsMenuVisible(false)
+            setSearchValue('')
         },
         [isMenuVisible]
     )
@@ -71,7 +69,6 @@ export const Component = React.memo<Props>(props => {
         },
         [props.values, props.onChange]
     )
-
     const filteredItems = React.useMemo(() => {
         const items = props.items.filter(item =>
             item.text.includes(searchValue)
@@ -107,7 +104,6 @@ export const Component = React.memo<Props>(props => {
                         onChangeSearchValue={changeSearchValue}
                         searchValue={searchValue}
                         onKeydown={keyDownInInput}
-                        onClickIcon={clickIcon}
                     />
                     {filteredItems.length ? (
                         <StyledItemList
