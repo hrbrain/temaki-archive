@@ -31,14 +31,33 @@ export const Component = React.memo<Props>(props => {
         props.defaultExpanded
     )
 
-    const clickBody = React.useCallback(() => {
-        setIsMenuVisible(!isMenuVisible)
-    }, [isMenuVisible])
+    const [searchValue, setSearchValue] = React.useState<string>('')
+
+    const changeSearchValue = React.useCallback(
+        (event: React.ChangeEvent<HTMLInputElement>) => {
+            setSearchValue(event.target.value)
+        },
+        [searchValue]
+    )
+
+    const clickBody = React.useCallback((e: React.MouseEvent) => {
+        e.preventDefault()
+        setIsMenuVisible(true)
+    }, [])
 
     const clickOutside = React.useCallback((e: React.MouseEvent<unknown>) => {
         e.preventDefault()
         setIsMenuVisible(false)
+        setSearchValue('')
     }, [])
+
+    const clickIcon = React.useCallback(
+        (e: React.MouseEvent) => {
+            e.preventDefault()
+            setIsMenuVisible(!isMenuVisible)
+        },
+        [isMenuVisible]
+    )
 
     const changeValue = React.useCallback(
         (value: ItemList.Value) => {
@@ -51,6 +70,23 @@ export const Component = React.memo<Props>(props => {
             }
         },
         [props.values, props.onChange]
+    )
+
+    const filteredItems = React.useMemo(() => {
+        const items = props.items.filter(item =>
+            item.text.includes(searchValue)
+        )
+        return items
+    }, [searchValue])
+
+    const keyDownInInput = React.useCallback(
+        (e: React.KeyboardEvent) => {
+            if (e.keyCode === 8 && searchValue === '') {
+                const slicedItem = props.values.slice(0, -1)
+                props.onChange(slicedItem)
+            }
+        },
+        [props.values, searchValue, props.onChange]
     )
 
     return (
@@ -68,13 +104,24 @@ export const Component = React.memo<Props>(props => {
                         isMenuVisible={isMenuVisible}
                         diff={props.diff}
                         isError={props.isError}
+                        onChangeSearchValue={changeSearchValue}
+                        searchValue={searchValue}
+                        onKeydown={keyDownInInput}
+                        onClickIcon={clickIcon}
                     />
-                    <StyledItemList
-                        isVisible={isMenuVisible}
-                        items={props.items}
-                        onClickItem={changeValue}
-                        values={props.values}
-                    />
+                    {filteredItems.length ? (
+                        <StyledItemList
+                            filteredItems={filteredItems}
+                            isVisible={isMenuVisible}
+                            items={props.items}
+                            onClickItem={changeValue}
+                            values={props.values}
+                        />
+                    ) : (
+                        <NotFoundText isVisible={isMenuVisible}>
+                            &quot;{searchValue}&quot;が見つかりませんでした。
+                        </NotFoundText>
+                    )}
                 </ClickOutside.Component>
             </Inner>
             <ErrorMessage.Component
@@ -117,4 +164,21 @@ const StyledItemList = styled(ItemList.Component)<{ isVisible?: boolean }>`
         visibility: hidden;
         transform: scaleY(0);
     `}
+`
+
+const NotFoundText = styled.div<{ isVisible?: boolean }>`
+    display: ${props => (props.isVisible ? 'block' : 'none')};
+    position: absolute;
+    right: 0;
+    width: 100%;
+    background: ${props => props.theme.colors.grayScale.S0};
+    border-radius: 6px;
+    box-shadow: ${props => props.theme.shadows.dropShadow.L5};
+    max-height: 204px;
+    overflow-y: auto;
+    z-index: 1;
+    color: ${props => props.theme.colors.grayScale.S50};
+    word-break: break-all;
+    padding: 12px;
+    margin-top: 6px;
 `
