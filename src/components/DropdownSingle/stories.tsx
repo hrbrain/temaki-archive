@@ -41,29 +41,6 @@ storiesOf('Components|DropdownSingle', module)
             />
         </div>
     ))
-    .add('Input', () => (
-        <div className="ml-20 mt-10">
-            <DropdownSingle.Component
-                type={'default'}
-                placeholder={text('placeholder', '選択してください')}
-                items={[
-                    { value: '', text: '' },
-                    { value: '1', text: 'りんご' },
-                    { value: '2', text: 'いちご' },
-                    { value: '3', text: 'バナナ' },
-                    { value: '4', text: 'メロン' },
-                    { value: '5', text: 'さくらんぼ' },
-                    { value: '6', text: 'ぶどう' }
-                ]}
-                value={''}
-                isError={boolean('isError', false)}
-                errorMessage={text('ErrorMessage', '')}
-                width={text('width', '200px')}
-                onChange={action('onChange')}
-                diff={boolean('Diff', false)}
-            />
-        </div>
-    ))
     .add('Borderless', () => {
         return (
             <div className="ml-20 mt-10">

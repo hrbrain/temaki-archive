@@ -14,20 +14,18 @@ type Props = {
     onClickItem: (value: Value) => void
     className?: string
     isVisible?: boolean
-    filteredItems: Item[]
 }
 
 export const Component = React.memo<Props>(props => {
-    const showItem = props.filteredItems.map(
-        renderItem(props.values, props.onClickItem)
-    )
     return (
         <ItemList
             data-test="itemList"
             className={props.className}
             isVisible={props.isVisible}
         >
-            <ListInner>{showItem}</ListInner>
+            <ListInner>
+                {props.items.map(renderItem(props.values, props.onClickItem))}
+            </ListInner>
         </ItemList>
     )
 })

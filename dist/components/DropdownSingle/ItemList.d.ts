@@ -8,8 +8,6 @@ declare type Props = {
     onClickItem: (value: Value) => void;
     className?: string;
     isVisible?: boolean;
-    onBlurSearchValue?: () => void;
-    filteredItems?: Item[];
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 /**
