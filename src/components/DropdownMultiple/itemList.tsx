@@ -64,6 +64,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
     const handleClick = React.useCallback(() => {
         props.onClickItem(props.item.value)
     }, [props.onClickItem, props.item])
+
     return (
         <ListItem onClick={handleClick}>
             <CheckIcon
