@@ -53,7 +53,6 @@ export const Component = React.memo<Props>(props => {
         [props.values, props.onChange]
     )
 
-
     return (
         <Wrap className={props.className} width={props.width}>
             <Inner>
