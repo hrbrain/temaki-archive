@@ -29,29 +29,9 @@ export const Component = React.memo<Props>(props => {
         props.defaultExpanded || false
     )
 
-    const [searchValue, setSearchValue] = React.useState('')
-    const changeSearchValue = React.useCallback(
-        (event: React.ChangeEvent<HTMLInputElement>) => {
-            setSearchValue(event.target.value)
-        },
-        [searchValue]
-    )
-
-    const blurSearchValue = React.useCallback(() => {
-        setSearchValue('')
-    }, [])
-
-    const [focused, setFocused] = React.useState(false)
-
-    const clickBody = React.useCallback(
-        (e: React.MouseEvent) => {
-            e.preventDefault()
-            setIsMenuVisible(!isMenuVisible)
-            setFocused(!focused)
-            setSearchValue('')
-        },
-        [isMenuVisible, focused]
-    )
+    const clickBody = React.useCallback(() => {
+        setIsMenuVisible(!isMenuVisible)
+    }, [isMenuVisible])
 
     const closeMenu = React.useCallback(() => setIsMenuVisible(false), [])
 
@@ -61,15 +41,6 @@ export const Component = React.memo<Props>(props => {
             props.onChange(value)
         },
         [props.onChange]
-    )
-
-    const keyDownInInput = React.useCallback(
-        (e: React.KeyboardEvent) => {
-            if (e.keyCode === 8 && searchValue === '') {
-                props.onChange('')
-            }
-        },
-        [searchValue, props.onChange]
     )
 
     switch (props.type) {
@@ -87,7 +58,6 @@ export const Component = React.memo<Props>(props => {
                     width={props.width}
                     diff={props.diff}
                     className={props.className}
-                    searchValue={searchValue}
                 />
             )
         case 'default':
@@ -105,10 +75,6 @@ export const Component = React.memo<Props>(props => {
                     diff={props.diff}
                     errorMessage={props.errorMessage}
                     className={props.className}
-                    searchValue={searchValue}
-                    onChangeSearchValue={changeSearchValue}
-                    onBlurSearchValue={blurSearchValue}
-                    onKeyDown={keyDownInInput}
                 />
             )
     }
