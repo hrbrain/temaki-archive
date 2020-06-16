@@ -26,7 +26,6 @@ type Props = {
 
 export const Component = React.memo<Props>(props => {
     const inputRef = React.useRef<HTMLInputElement | null>(null)
-
     React.useEffect(() => {
         if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
     }, [props.isMenuVisible])
