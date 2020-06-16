@@ -3,13 +3,6 @@ import { ContainerType } from '~/types/utils'
 
 import * as Input from '../index'
 
-const firstDecimalPlace = 1
-const secondDecimalPlace = 2
-
-/* keyCode */
-const keyCodeUpArrow = 38
-const keyCodeDownArrow = 40
-
 /**
  * Utils
  */
@@ -35,13 +28,22 @@ const useChangeNumberValueFromChangeEvent = (
                     return
                 }
 
-                const num = Number(tgtValue)
-                if (isNaN(num)) {
+                if (decimalPlace && decimalPlace > 0) {
+                    if (tgtValue.endsWith('.')) {
+                        onChange(tgtValue.replace(/[^0-9.]/g, '') as any)
+                        return
+                    }
+                    const num = Number(tgtValue)
+                    if (isNaN(num)) {
+                        return
+                    }
+
+                    onChange(Number(num.toFixed(decimalPlace)))
                     return
                 }
 
-                if (decimalPlace !== null) {
-                    onChange(Number(num.toFixed(decimalPlace)))
+                const num = Number(tgtValue)
+                if (isNaN(num)) {
                     return
                 }
 
@@ -80,38 +82,12 @@ export const Container: ContainerType<Props, InjectProps> = ({
         decimalPlace
     )
 
-    const formattedStep = React.useCallback((dp: number) => {
-        switch (dp) {
-            case firstDecimalPlace:
-                return 0.1 // 小数第1位
-            case secondDecimalPlace:
-                return 0.01 // 小数第2位
-            case 0: // 整数
-            default:
-                return 1
-        }
-    }, [])
-
-    const keyDown = React.useCallback(
-        (e: React.KeyboardEvent<HTMLInputElement>) => {
-            if (
-                e.keyCode === keyCodeUpArrow ||
-                e.keyCode === keyCodeDownArrow
-            ) {
-                e.preventDefault()
-            }
-        },
-        []
-    )
-
     return (
         // @ts-ignore 型推論がうまくいってない
         <Presenter
-            value={value.toString()}
+            value={value ? value.toString() : undefined}
             onChange={changeValue}
-            step={formattedStep(decimalPlace || 0)}
             {...props}
-            onKeyDown={keyDown}
         />
     )
 }
