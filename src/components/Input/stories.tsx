@@ -46,6 +46,5 @@ storiesOf('Components|Input', module)
             onKeyDown={action('onKeyDown')}
             onKeyUp={action('onKeyUp')}
             decimalPlace={number('小数点第', 0)}
-            type="number"
         />
     ))

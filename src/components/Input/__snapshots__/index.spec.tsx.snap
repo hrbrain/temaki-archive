@@ -190,8 +190,6 @@ exports[`Input format of number should match previous snapshot 1`] = `
         format="number"
         onBlur={[MockFunction]}
         onChange={[Function]}
-        onKeyDown={[Function]}
-        step={1}
         value="145"
       >
         <styled.div>
@@ -241,8 +239,6 @@ exports[`Input format of number should match previous snapshot 1`] = `
                 format="number"
                 onBlur={[MockFunction]}
                 onChange={[Function]}
-                onKeyDown={[Function]}
-                step={1}
                 value="145"
               >
                 <StyledComponent
@@ -305,8 +301,6 @@ exports[`Input format of number should match previous snapshot 1`] = `
                   forwardedRef={null}
                   onBlur={[MockFunction]}
                   onChange={[Function]}
-                  onKeyDown={[Function]}
-                  step={1}
                   value="145"
                 >
                   <input
@@ -314,8 +308,6 @@ exports[`Input format of number should match previous snapshot 1`] = `
                     format="number"
                     onBlur={[MockFunction]}
                     onChange={[Function]}
-                    onKeyDown={[Function]}
-                    step={1}
                     value="145"
                   />
                 </StyledComponent>
@@ -366,9 +358,6 @@ exports[`Input format of number should match previous snapshot when provided err
   className="c0"
   format="number"
   onChange={[Function]}
-  onKeyDown={[Function]}
-  step={1}
-  value="0"
 />
 `;
 
