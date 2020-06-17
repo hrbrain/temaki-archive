@@ -1,4 +1,5 @@
 /// <reference types="react" />
+/// <reference types="@emotion/core" />
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
