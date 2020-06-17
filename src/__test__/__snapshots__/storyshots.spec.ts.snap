@@ -2053,6 +2053,7 @@ exports[`Storyshots Components|Input Number 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     placeholder="Enter your age"
+    value="0"
   />
   
 </div>
@@ -2070,6 +2071,7 @@ exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     placeholder="Enter your age"
+    value="0"
   />
   
 </div>
