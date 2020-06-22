@@ -83,6 +83,6 @@ export const Container: ContainerType<Props, InjectProps> = ({
 
     return (
         // @ts-ignore 型推論がうまくいってない
-        <Presenter value={value} onChange={changeValue} {...props} />
+        <Presenter value={value.toString()} onChange={changeValue} {...props} />
     )
 }
