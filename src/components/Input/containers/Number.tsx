@@ -21,6 +21,9 @@ const useChangeNumberValueFromChangeEvent = (
                 onChangeNative(e)
             }
             if (onChange) {
+                // tgtValueが空文字列, -, .が含まれる値の場合,
+                // number以外の値を入れたいので as any を付けて強制的に代入している
+
                 const tgtValue = e.target.value
                 if (tgtValue === '') {
                     onChange('' as any)
