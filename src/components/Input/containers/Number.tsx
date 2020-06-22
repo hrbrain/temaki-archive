@@ -24,7 +24,12 @@ const useChangeNumberValueFromChangeEvent = (
             if (onChange) {
                 const tgtValue = e.target.value
                 if (tgtValue === '') {
-                    onChange(0)
+                    onChange('' as any)
+                    return
+                }
+
+                if (tgtValue === '-') {
+                    onChange(tgtValue as any)
                     return
                 }
 
@@ -35,7 +40,7 @@ const useChangeNumberValueFromChangeEvent = (
 
                 if (decimalPlace && decimalPlace > 0) {
                     if (tgtValue.endsWith('.')) {
-                        onChange(tgtValue.replace(/[^0-9.]/g, '') as any)
+                        onChange(tgtValue.replace(/[^0-9.\-]/g, '') as any)
                         return
                     }
                     const num = Number(tgtValue)
@@ -84,6 +89,6 @@ export const Container: ContainerType<Props, InjectProps> = ({
 
     return (
         // @ts-ignore 型推論がうまくいってない
-        <Presenter value={value.toString()} onChange={changeValue} {...props} />
+        <Presenter value={value} onChange={changeValue} {...props} />
     )
 }
