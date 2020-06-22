@@ -40,11 +40,11 @@ const useChangeNumberValueFromChangeEvent = (
 
                 if (decimalPlace && decimalPlace > 0) {
                     if (tgtValue.endsWith('.')) {
-                        onChange(tgtValue.replace(/[^0-9.\-]/g, '') as any)
                         return
                     }
                     const num = Number(tgtValue)
                     if (isNaN(num)) {
+                        onChange(tgtValue.replace(/[^0-9.-]/g, '') as any)
                         return
                     }
 
