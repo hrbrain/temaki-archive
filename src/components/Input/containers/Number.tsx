@@ -12,7 +12,6 @@ const useChangeNumberValueFromChangeEvent = (
     onChangeNative:
         | ((e: React.ChangeEvent<HTMLInputElement>) => void)
         | undefined,
-    value: Input.NumberValue,
     decimalPlace?: number | null
 ) =>
     React.useCallback(
@@ -40,10 +39,6 @@ const useChangeNumberValueFromChangeEvent = (
 
                 if (decimalPlace && decimalPlace > 0) {
                     if (tgtValue.endsWith('.')) {
-                        return
-                    }
-                    const num = Number(tgtValue)
-                    if (isNaN(num)) {
                         onChange(tgtValue.replace(/[^0-9.-]/g, '') as any)
                         return
                     }
@@ -55,7 +50,7 @@ const useChangeNumberValueFromChangeEvent = (
                 onChange(num)
             }
         },
-        [onChange, onChangeNative, value, decimalPlace]
+        [onChange, onChangeNative, decimalPlace]
     )
 
 /**
@@ -83,7 +78,6 @@ export const Container: ContainerType<Props, InjectProps> = ({
     const changeValue = useChangeNumberValueFromChangeEvent(
         onChange,
         onChangeNative,
-        value,
         decimalPlace
     )
 
