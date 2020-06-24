@@ -12,7 +12,6 @@ const useChangeNumberValueFromChangeEvent = (
     onChangeNative:
         | ((e: React.ChangeEvent<HTMLInputElement>) => void)
         | undefined,
-    value: Input.NumberValue,
     decimalPlace?: number | null
 ) =>
     React.useCallback(
@@ -22,9 +21,17 @@ const useChangeNumberValueFromChangeEvent = (
                 onChangeNative(e)
             }
             if (onChange) {
+                // tgtValueが空文字列, -, .が含まれる値の場合,
+                // number以外の値を入れたいので as any を付けて強制的に代入している
+
                 const tgtValue = e.target.value
                 if (tgtValue === '') {
-                    onChange(0)
+                    onChange('' as any)
+                    return
+                }
+
+                if (tgtValue === '-') {
+                    onChange(tgtValue as any)
                     return
                 }
 
@@ -35,11 +42,7 @@ const useChangeNumberValueFromChangeEvent = (
 
                 if (decimalPlace && decimalPlace > 0) {
                     if (tgtValue.endsWith('.')) {
-                        onChange(tgtValue.replace(/[^0-9.]/g, '') as any)
-                        return
-                    }
-                    const num = Number(tgtValue)
-                    if (isNaN(num)) {
+                        onChange(tgtValue.replace(/[^0-9.-]/g, '') as any)
                         return
                     }
 
@@ -50,7 +53,32 @@ const useChangeNumberValueFromChangeEvent = (
                 onChange(num)
             }
         },
-        [onChange, onChangeNative, value, decimalPlace]
+        [onChange, onChangeNative, decimalPlace]
+    )
+const useBlurNumberValueFromFocusEvent = (
+    value: number,
+    onChange: ((value: Input.NumberValue) => void) | undefined,
+    onBlur: ((e: React.FocusEvent<HTMLInputElement>) => void) | undefined
+) =>
+    React.useCallback(
+        (e: React.FocusEvent<HTMLInputElement>) => {
+            if (onBlur) {
+                onBlur(e)
+            }
+            // 値が . で終わる、または、- で始まる場合適切な値に書き換える
+            if (onChange) {
+                const val = Number(value)
+                if (value.toString().endsWith('.')) {
+                    onChange(val)
+                    return
+                }
+                if (isNaN(val)) {
+                    onChange(0)
+                    return
+                }
+            }
+        },
+        [onChange, onBlur, value]
     )
 
 /**
@@ -61,6 +89,7 @@ type Props = {
     value: number
     onChange?: (value: Input.NumberValue) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
     decimalPlace?: number | null
 }
 type InjectProps = {
@@ -73,17 +102,24 @@ export const Container: ContainerType<Props, InjectProps> = ({
     onChange,
     onChangeNative,
     decimalPlace,
+    onBlur,
     ...props
 }) => {
     const changeValue = useChangeNumberValueFromChangeEvent(
         onChange,
         onChangeNative,
-        value,
         decimalPlace
     )
 
+    const blurValue = useBlurNumberValueFromFocusEvent(value, onChange, onBlur)
+
     return (
         // @ts-ignore 型推論がうまくいってない
-        <Presenter value={value.toString()} onChange={changeValue} {...props} />
+        <Presenter
+            value={value.toString()}
+            onChange={changeValue}
+            onBlur={blurValue}
+            {...props}
+        />
     )
 }

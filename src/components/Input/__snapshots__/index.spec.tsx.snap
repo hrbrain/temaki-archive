@@ -188,7 +188,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
     >
       <Component
         format="number"
-        onBlur={[MockFunction]}
+        onBlur={[Function]}
         onChange={[Function]}
         value="145"
       >
@@ -237,7 +237,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
             >
               <styled.input
                 format="number"
-                onBlur={[MockFunction]}
+                onBlur={[Function]}
                 onChange={[Function]}
                 value="145"
               >
@@ -299,14 +299,14 @@ exports[`Input format of number should match previous snapshot 1`] = `
                     }
                   }
                   forwardedRef={null}
-                  onBlur={[MockFunction]}
+                  onBlur={[Function]}
                   onChange={[Function]}
                   value="145"
                 >
                   <input
                     className="c1"
                     format="number"
-                    onBlur={[MockFunction]}
+                    onBlur={[Function]}
                     onChange={[Function]}
                     value="145"
                   />
@@ -357,6 +357,7 @@ exports[`Input format of number should match previous snapshot when provided err
 <input
   className="c0"
   format="number"
+  onBlur={[Function]}
   onChange={[Function]}
   value="0"
 />

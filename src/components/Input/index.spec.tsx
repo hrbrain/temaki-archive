@@ -149,7 +149,7 @@ describe('Input format of number', () => {
         const inputEl = wrapper.find('input')
         act(() => {
             inputEl.simulate('change', { target: { value: '' } })
-            expect(mockOnChange).toHaveBeenCalledWith(0)
+            expect(mockOnChange).toHaveBeenCalledWith('')
         })
     })
 
