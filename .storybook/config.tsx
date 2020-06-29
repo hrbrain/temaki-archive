@@ -3,6 +3,8 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { addDecorator, addParameters, configure } from '@storybook/react'
 import * as React from 'react'
 import { defaultTheme, ThemeProvider } from '../src/modules/theme'
+import { ConfigProvider } from 'antd';
+import jaJP from 'antd/es/locale/ja_JP';
 
 const req = require.context('../src', true, /(.*\.)?stories\.tsx$/)
 
@@ -18,7 +20,9 @@ addParameters({
 })
 addDecorator(storyfn => (
   <ThemeProvider theme={defaultTheme}>
-    <>{storyfn()}</>
+    <ConfigProvider locale={jaJP}>
+      {storyfn()}
+    </ConfigProvider>
   </ThemeProvider>
 ))
 
