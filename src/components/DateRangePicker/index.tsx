@@ -41,23 +41,15 @@ export const Component = React.memo<Props>(props => {
         [props.startDate, props.endDate]
     )
 
-    /* TODO: 型 '({ startDate, endDate }: { startDate: Moment.Moment; endDate: Moment.Moment; }) => void' を型 '(values: RangeValue<Moment>, formatString: [string, string]) => void' に割り当てることはできません。
-  パラメーター '__0' および 'values' は型に互換性がありません。
-    型 'RangeValue<Moment>' を型 '{ startDate: Moment; endDate: Moment; }' に割り当てることはできません。
-      型 'null' を型 '{ startDate: Moment; endDate: Moment; }' に割り当てることはできません。 */
-
     const handleOnDatesChange = React.useCallback(
-        ({
-            startDate,
-            endDate
-        }) => {
-            console.log(startDate) // undefined
-            console.log(endDate) // undefined
+        ({ startDate, endDate }) => {
+            // console.log(startDate) // undefined
+            // console.log(endDate) // undefined
             // 必ず12時が帰ってくるので9時にする（UTC上の0時）
             const rtnStartDate = startDate ? startDate.hour(9).toDate() : null
             const rtnEndDate = endDate ? endDate.hour(9).toDate() : null
-            console.log(rtnStartDate)
-            console.log(rtnEndDate)
+            // console.log(rtnStartDate)
+            // console.log(rtnEndDate)
             props.onChange(rtnStartDate, rtnEndDate) // nullっぽい
         },
         [props.onChange]

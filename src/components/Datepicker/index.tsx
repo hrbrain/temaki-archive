@@ -8,7 +8,7 @@ import * as Antd from 'antd'
  * -> styled-components がハッシュ化されるので上書きしてもハッシュ化されてしまっている…？lessが変数つかってるとかでバッティングしてるっぽい…
  */
 // import 'antd/lib/date-picker/style/index.css'
-import locale from 'antd/es/date-picker/locale/ja_JP'
+import jaJP from 'antd/es/date-picker/locale/ja_JP'
 import './lib/styles.less'
 
 import * as React from 'react'
@@ -41,11 +41,11 @@ type Props = {
 }
 
 // 週の始まり
-Moment.locale('ja', {
-    week: {
-        dow: 1
-    } as any
-})
+// Moment.locale('ja', {
+//     week: {
+//         dow: 1
+//     } as any
+// })
 
 export const Component = React.memo<Props>(props => {
     const conversionToMomentType = React.useCallback(
@@ -55,16 +55,16 @@ export const Component = React.memo<Props>(props => {
         [props.date]
     )
 
-    const handleOnDateChange = React.useCallback(
-        (date: null | Moment.Moment) => {
-            if (!date) return props.onChange(null)
+    // const handleOnDateChange = React.useCallback(
+    //     (date: null | Moment.Moment) => {
+    //         if (!date) return props.onChange(null)
 
-            // 必ず12時が帰ってくるので9時にして返す（UTC上での0時）
-            date.hour(9)
-            return props.onChange(date.toDate())
-        },
-        [props.date, props.onChange]
-    )
+    //         // 必ず12時が帰ってくるので9時にして返す（UTC上での0時）
+    //         date.hour(9)
+    //         return props.onChange(date.toDate())
+    //     },
+    //     [props.date, props.onChange]
+    // )
 
     const calendarIconRender = React.useMemo(() => {
         return <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
@@ -89,7 +89,7 @@ export const Component = React.memo<Props>(props => {
             if (!date) return
             return (
                 <ApplicateButton
-                    onClick={() => handleOnDateChange(date)}
+                    // onClick={() => handleOnDateChange(date)}
                     variant="box"
                 >
                     適用
@@ -106,7 +106,7 @@ export const Component = React.memo<Props>(props => {
             errored={props.errored}
         >
             <Antd.DatePicker
-                locale={locale}
+                locale={jaJP}
                 placeholder={props.placeholderText}
                 format={props.displayFormat || 'YYYY年M月D日'}
                 showToday={false}
