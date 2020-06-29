@@ -1,5 +1,5 @@
+import './lib/styles.less';
 import * as React from 'react';
-import 'react-dates/initialize';
 import 'moment/locale/ja';
 /**
  * Component
@@ -15,6 +15,7 @@ declare type Props = {
     placeholderText?: string;
     selectedColor?: string;
     defaultHoverColor?: string;
+    showTime?: boolean;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

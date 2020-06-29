@@ -238,6 +238,7 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     placeholderText?: string | undefined;
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
+    showTime?: boolean | undefined;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;

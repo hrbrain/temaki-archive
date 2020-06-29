@@ -29,7 +29,9 @@
     "dependencies": {
         "@types/react": "^16.8.23",
         "@types/styled-components": "4.1.18",
+        "antd": "^4.1.4",
         "global": "^4.4.0",
+        "less-loader": "^6.1.0",
         "moment": "^2.24.0",
         "react": "^16.8.6",
         "react-dates": "^21.4.0",
