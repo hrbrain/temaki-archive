@@ -28,8 +28,31 @@ module.exports = ({ config }) => {
     {
       test: /\.svg$/,
       loader: 'raw-loader'
+    },
+    {
+      test: /\.less$/,
+      use: [
+        {
+          loader: require.resolve('style-loader')
+        },
+        {
+          loader: require.resolve('css-loader')
+        },
+        {
+          loader: require.resolve('less-loader'),
+          options: {
+            lessOptions: {
+              modifyVars: {
+                '@font-family': "'Noto Sans JP', sans-serif"
+              },
+              javascriptEnabled: true
+            }
+          }
+        }
+      ]
     }
   ]
+
   config.resolve.alias = {
     ...config.resolve.alias,
     '~': path.resolve(__dirname, '../src')
