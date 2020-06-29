@@ -1,0 +1,98 @@
+@import '~antd/lib/date-picker/style/index.less';
+
+@primary-color: #088736;
+@picker-panel-cell-width: 32px;
+@picker-panel-cell-height: 32px;
+@picker-panel-width: 296px;
+
+.ant-picker-panel-container {
+    border-radius: 6px;
+}
+
+.ant-picker-date-panel {
+    width: @picker-panel-width;
+    .ant-picker-content {
+        width: @picker-panel-width;
+        tbody {
+            padding: 16px 12px 12px;
+        }
+        th,
+        td {
+            min-width: 32px;
+        }
+        th {
+            width: @picker-panel-cell-width;
+            height: @picker-panel-cell-height;
+            padding: 0;
+        }
+        td {
+            padding-top: 8px;
+        }
+    }
+}
+
+.ant-picker-date-panel .ant-picker-body {
+    width: @picker-panel-width;
+    padding: 0;
+}
+.ant-picker-cell-in-view {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    margin-top: 12px;
+}
+
+.ant-picker-header {
+    border-color: rgb(214, 214, 214);
+    button {
+        color: #333;
+    }
+}
+.ant-picker-content {
+    thead {
+        border-bottom: 1px solid rgb(214, 214, 214);
+        background-color: #f5f5f5;
+        tr {
+            th {
+                min-width: 32px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                .ant-picker-cell-in-view
+                    .ant-picker-cell-selected
+                    .ant-picker-cell-inner {
+                    border-radius: 6px;
+                    min-width: 32px;
+                    min-height: 32px;
+                    text-align: center;
+                    line-height: 32px;
+                    color: #fff;
+                    background: @primary-color;
+                }
+                .ant-picker-cell-inner {
+                    border-radius: 6px;
+                    min-width: 32px;
+                    min-height: 32px;
+                }
+            }
+        }
+    }
+}
+.ant-picker-cell .ant-picker-cell-inner {
+    min-width: @picker-panel-cell-width;
+    height: @picker-panel-cell-height;
+    line-height: @picker-panel-cell-height;
+}
+.ant-picker-cell::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 32px;
+    transform: translateY(-50%);
+    content: '';
+}
