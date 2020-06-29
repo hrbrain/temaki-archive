@@ -1,8 +1,11 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
-import * as moment from 'moment'
-import * as ReactDates from 'react-dates'
-import 'react-dates/initialize'
+import * as Moment from 'moment'
+import * as Antd from 'antd'
+// AntDesign内でreset.cssが存在するため
+import 'antd/es/date-picker/style'
+import locale from 'antd/es/date-picker/locale/ja_JP'
+
 // 日本時間で固定
 import 'moment/locale/ja'
 import * as Icon from '~/components/Icon'
@@ -31,31 +34,31 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(props => {
-    const [
-        focusedInput,
-        setFocusedInput
-    ] = React.useState<ReactDates.FocusedInputShape | null>(null)
-
     const conversionToMomentType = React.useCallback(
         (date: Date | null) => {
-            return date ? moment(date) : null
+            return date ? Moment(date) : undefined
         },
         [props.startDate, props.endDate]
     )
 
-    const handleOnFocusChange = React.useCallback(
-        (focusedInput: ReactDates.FocusedInputShape | null) => {
-            setFocusedInput(focusedInput)
-        },
-        [focusedInput]
-    )
+    /* TODO: 型 '({ startDate, endDate }: { startDate: Moment.Moment; endDate: Moment.Moment; }) => void' を型 '(values: RangeValue<Moment>, formatString: [string, string]) => void' に割り当てることはできません。
+  パラメーター '__0' および 'values' は型に互換性がありません。
+    型 'RangeValue<Moment>' を型 '{ startDate: Moment; endDate: Moment; }' に割り当てることはできません。
+      型 'null' を型 '{ startDate: Moment; endDate: Moment; }' に割り当てることはできません。 */
 
     const handleOnDatesChange = React.useCallback(
-        ({ startDate, endDate }) => {
+        ({
+            startDate,
+            endDate
+        }) => {
+            console.log(startDate) // undefined
+            console.log(endDate) // undefined
             // 必ず12時が帰ってくるので9時にする（UTC上の0時）
             const rtnStartDate = startDate ? startDate.hour(9).toDate() : null
             const rtnEndDate = endDate ? endDate.hour(9).toDate() : null
-            props.onChange(rtnStartDate, rtnEndDate)
+            console.log(rtnStartDate)
+            console.log(rtnEndDate)
+            props.onChange(rtnStartDate, rtnEndDate) // nullっぽい
         },
         [props.onChange]
     )
@@ -64,17 +67,17 @@ export const Component = React.memo<Props>(props => {
         return <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
     }, [])
 
-    const ChevronLeftIconRender = React.useMemo(() => {
-        return <Icon.Component svg={IconFiles.icons.ChevronLeft} size="24px" />
-    }, [])
+    // const ChevronLeftIconRender = React.useMemo(() => {
+    //     return <Icon.Component svg={IconFiles.icons.ChevronLeft} size="24px" />
+    // }, [])
 
-    const ChevronRightIconRender = React.useMemo(() => {
-        return <Icon.Component svg={IconFiles.icons.ChevronRight} size="24px" />
-    }, [])
+    // const ChevronRightIconRender = React.useMemo(() => {
+    //     return <Icon.Component svg={IconFiles.icons.ChevronRight} size="24px" />
+    // }, [])
 
-    const allowAllDays = React.useCallback(() => {
-        return false
-    }, [])
+    // const allowAllDays = React.useCallback(() => {
+    //     return false
+    // }, [])
 
     return (
         <Outer
@@ -85,7 +88,22 @@ export const Component = React.memo<Props>(props => {
             selectedRangeColor={props.selectedRangeColor}
             errored={props.errored}
         >
-            <ReactDates.DateRangePicker
+            <Antd.DatePicker.RangePicker
+                locale={locale}
+                onChange={handleOnDatesChange}
+                format={props.displayFormat || 'YYYY年M月D日'}
+                suffixIcon={calendarIconRender}
+                value={[
+                    Moment(conversionToMomentType(props.startDate)),
+                    Moment(conversionToMomentType(props.endDate))
+                ]}
+                separator={'~'}
+            />
+            {/* ranges={{
+              [Dictionary.report.thisMonth]: [moment().startOf('month'), moment().endOf('month')]
+            }} */}
+            {/* { [range: string]: moment[] } | { [range: string]: () => moment[] } */}
+            {/* <ReactDates.DateRangePicker
                 startDate={conversionToMomentType(props.startDate)}
                 startDateId={'startDate'}
                 endDate={conversionToMomentType(props.endDate)}
@@ -105,7 +123,7 @@ export const Component = React.memo<Props>(props => {
                 enableOutsideDays={true}
                 isOutsideRange={allowAllDays}
                 keepOpenOnDateSelect={true}
-            />
+            /> */}
             <ErrorMessage.Component
                 errored={props.errored}
                 message={props.errorMessage}

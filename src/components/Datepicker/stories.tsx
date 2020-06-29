@@ -5,7 +5,7 @@ import * as Knobs from '@storybook/addon-knobs'
 import * as Actions from '@storybook/addon-actions'
 
 const name = 'date'
-const defaultDate = new Date('2019/12/25')
+const defaultDate = new Date('2019-12-25')
 
 const testKnobDate = (label: string, defaultValue: Date) => {
     const stringTimestamp = Knobs.date(label, defaultValue)
@@ -25,6 +25,21 @@ storiesOf('Components|Datepicker', module)
             defaultHoverColor={Knobs.text('defaultHoverColor', '')}
             errored={Knobs.boolean('Error', false)}
             errorMessage={Knobs.text('ErrorMessage', '')}
+        />
+    ))
+    .add('ShowTime', () => (
+        <Datepicker.Component
+            date={testKnobDate(name, defaultDate)}
+            placeholderText={Knobs.text('placeholderText', '')}
+            displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
+            monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
+            onChange={Actions.action('onChange')}
+            width={Knobs.text('width', '100%')}
+            selectedColor={Knobs.text('selectedColor', '')}
+            defaultHoverColor={Knobs.text('defaultHoverColor', '')}
+            errored={Knobs.boolean('Error', false)}
+            errorMessage={Knobs.text('ErrorMessage', '')}
+            showTime={true}
         />
     ))
     .add('Null', () => (
