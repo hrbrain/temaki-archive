@@ -41,6 +41,7 @@ type Props = {
 }
 
 // 週の始まり
+// @eslint-ignore
 moment.locale('ja', {
     week: {
         dow: 1
