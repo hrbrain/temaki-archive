@@ -8,7 +8,7 @@ import * as Antd from 'antd'
  * -> styled-components がハッシュ化されるので上書きしてもハッシュ化されてしまっている…？lessが変数つかってるとかでバッティングしてるっぽい…
  */
 // import 'antd/lib/date-picker/style/index.css'
-import jaJP from 'antd/es/date-picker/locale/ja_JP'
+import locale from 'antd/es/date-picker/locale/ja_JP'
 import './lib/styles.less'
 
 import * as React from 'react'
@@ -16,7 +16,7 @@ import styled from '~/modules/theme'
 
 // 日本時間で固定
 import 'moment/locale/ja'
-import * as Moment from 'moment'
+import * as moment from 'moment'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
@@ -41,16 +41,16 @@ type Props = {
 }
 
 // 週の始まり
-// Moment.locale('ja', {
-//     week: {
-//         dow: 1
-//     } as any
-// })
+moment.locale('ja', {
+    week: {
+        dow: 1
+    } as any
+})
 
 export const Component = React.memo<Props>(props => {
     const conversionToMomentType = React.useCallback(
-        (date: Date | null): Moment.Moment | null | undefined => {
-            return date ? Moment(date) : null
+        (date: Date | null): moment.Moment | null | undefined => {
+            return date ? moment(date) : null
         },
         [props.date]
     )
@@ -106,7 +106,7 @@ export const Component = React.memo<Props>(props => {
             errored={props.errored}
         >
             <Antd.DatePicker
-                locale={jaJP}
+                locale={locale}
                 placeholder={props.placeholderText}
                 format={props.displayFormat || 'YYYY年M月D日'}
                 showToday={false}
