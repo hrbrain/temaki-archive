@@ -42,7 +42,8 @@ type Props = {
           value: NumberValue
           onChange: (value: NumberValue) => void
           type?: typeof NUMBER
-      })
+      }
+)
 export const Component = React.memo<Props>(({ children: _, ...props }) => {
     const [value, setValue] = React.useState(props.value)
     const changeValue = React.useCallback(

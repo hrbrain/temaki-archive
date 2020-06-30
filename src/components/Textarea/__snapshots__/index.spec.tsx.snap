@@ -178,7 +178,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-bwzfXH",
-              "isStatic": true,
+              "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
                 "
