@@ -41,7 +41,7 @@ type Props = {
 }
 
 // 週の始まり
-moment.updateLocale('ja', {
+moment.locale('ja', {
     week: {
         dow: 1
     } as any
