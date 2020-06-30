@@ -1,5 +1,4 @@
 import * as React from 'react';
-import 'antd/es/date-picker/style';
 import 'moment/locale/ja';
 /**
  * Component

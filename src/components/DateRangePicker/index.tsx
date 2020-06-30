@@ -3,8 +3,9 @@ import styled from '~/modules/theme'
 import * as Moment from 'moment'
 import * as Antd from 'antd'
 // AntDesign内でreset.cssが存在するため
-import 'antd/es/date-picker/style'
-import locale from 'antd/es/date-picker/locale/ja_JP'
+// import 'antd/es/date-picker/style'
+
+import locale from 'antd/lib/date-picker/locale/ja_JP'
 
 // 日本時間で固定
 import 'moment/locale/ja'

@@ -8,8 +8,8 @@ import * as Antd from 'antd'
  * -> styled-components がハッシュ化されるので上書きしてもハッシュ化されてしまっている…？lessが変数つかってるとかでバッティングしてるっぽい…
  */
 // import 'antd/lib/date-picker/style/index.css'
-import locale from 'antd/es/date-picker/locale/ja_JP'
-import './lib/styles.less'
+import locale from 'antd/lib/date-picker/locale/ja_JP'
+//import './lib/styles.less'
 
 import * as React from 'react'
 import styled from '~/modules/theme'

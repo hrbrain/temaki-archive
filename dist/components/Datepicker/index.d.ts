@@ -1,4 +1,3 @@
-import './lib/styles.less';
 import * as React from 'react';
 import 'moment/locale/ja';
 /**
