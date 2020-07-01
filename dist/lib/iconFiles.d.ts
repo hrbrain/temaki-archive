@@ -69,4 +69,5 @@ export declare const icons: {
     Undo: string;
     Url: string;
     Warning: string;
+    Loading: string;
 };

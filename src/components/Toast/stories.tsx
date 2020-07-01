@@ -59,3 +59,17 @@ storiesOf(`Components|Toast`, module)
             />
         </div>
     ))
+    .add('buttonless(progress)', () => (
+        <div className="m-10">
+            <Toast.Component
+                label={text('Label', 'ラベル')}
+                text={text(
+                    'アップロード処理中',
+                    '状態が入ります状態が入ります'
+                )}
+                color="#333"
+                type={'buttonless'}
+                variant={'progress'}
+            />
+        </div>
+    ))

@@ -7,7 +7,9 @@ declare const BUTTONLESS: "buttonless";
 declare type Props = {
     label: string;
     text?: string;
-    variant: 'info' | 'warning';
+    color?: string;
+    icon?: string;
+    variant: 'info' | 'warning' | 'progress';
 } & ({
     type: typeof DEFAULT;
     onClickClose: () => void;

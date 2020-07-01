@@ -68,6 +68,7 @@ import TreeToggle from '~/../icons/tree-toggle.svg'
 import Undo from '~/../icons/undo.svg'
 import Url from '~/../icons/url.svg'
 import Warning from '~/../icons/warning.svg'
+import Loading from '~/../icons/loading.svg'
 
 export const icons = {
     AddIcon,
@@ -139,5 +140,6 @@ export const icons = {
     TreeToggle,
     Undo,
     Url,
-    Warning
+    Warning,
+    Loading
 }

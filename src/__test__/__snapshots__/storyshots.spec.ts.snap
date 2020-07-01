@@ -2348,13 +2348,51 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
     <div>
       <div
         className="sc-bYSBpT jKJUMz"
+        color="rgb(255, 255, 255)"
       >
         ラベル
       </div>
       <div
         className="sc-elJkPf bWeByM"
+        color="rgb(255, 255, 255)"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components|Toast buttonless(progress) 1`] = `
+<div
+  className="m-10"
+>
+  <div
+    className="sc-btzYZH gEYhKi"
+    data-test="progress-buttonless-toast"
+  >
+    <div
+      className="sc-bxivhb dUTGrc sc-lhVmIH hSOIJL"
+      color="white"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      size="24px"
+    />
+    <div>
+      <div
+        className="sc-bYSBpT jCIedS"
+        color="#333"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-elJkPf fchTqU"
+        color="#333"
+      >
+        状態が入ります状態が入ります
       </div>
     </div>
   </div>
@@ -2382,11 +2420,13 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
     <div>
       <div
         className="sc-bYSBpT jKJUMz"
+        color="rgb(255, 255, 255)"
       >
         ラベル
       </div>
       <div
         className="sc-elJkPf bWeByM"
+        color="rgb(255, 255, 255)"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
@@ -2511,6 +2551,15 @@ exports[`Storyshots basics|Icons index 1`] = `
 <div
   className="flex flex-wrap w-64"
 >
+  <div
+    className="sc-bdVaJa cCvjGY"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
   <div
     className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
