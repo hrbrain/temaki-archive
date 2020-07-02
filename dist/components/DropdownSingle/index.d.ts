@@ -9,6 +9,7 @@ declare type Props = {
     value: ItemList.Value;
     type: 'default' | 'borderless';
     onChange: (value: ItemList.Value) => void;
+    onClickBody?: (event: React.MouseEvent) => void;
     placeholder?: string;
     isError?: boolean;
     width?: string;

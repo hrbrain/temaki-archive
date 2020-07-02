@@ -194,6 +194,7 @@ export declare const DropdownSingle: import("react").NamedExoticComponent<{
     value: string;
     type: "default" | "borderless";
     onChange: (value: string) => void;
+    onClickBody?: ((event: import("react").MouseEvent<Element, MouseEvent>) => void) | undefined;
     placeholder?: string | undefined;
     isError?: boolean | undefined;
     width?: string | undefined;
