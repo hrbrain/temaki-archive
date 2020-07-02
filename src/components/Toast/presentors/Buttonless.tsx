@@ -37,10 +37,10 @@ export const Component = React.memo<Props>(
                     <Icons svg={icon} size="24px" color={'white'} />
                 )}
                 {text ? (
-                    <div>
+                    <>
                         <Label color={color}>{label}</Label>
                         <Text color={color}>{text}</Text>
-                    </div>
+                    </>
                 ) : (
                     <Label color={color}>{label}</Label>
                 )}
