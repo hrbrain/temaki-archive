@@ -66,14 +66,18 @@ export declare const buttonShapeType: {
 export declare const Toast: import("react").NamedExoticComponent<({
     label: string;
     text?: string | undefined;
-    variant: "info" | "warning";
+    color?: string | undefined;
+    icon?: string | undefined;
+    variant: "progress" | "info" | "warning";
 } & {
     type: "default";
     onClickClose: () => void;
 }) | ({
     label: string;
     text?: string | undefined;
-    variant: "info" | "warning";
+    color?: string | undefined;
+    icon?: string | undefined;
+    variant: "progress" | "info" | "warning";
 } & {
     type: "buttonless";
 })>;
@@ -158,6 +162,7 @@ export declare const icons: {
     Undo: string;
     Url: string;
     Warning: string;
+    Loading: string;
 };
 export declare const defaultTheme: _RequiredThemeProps;
 export declare type RequiredThemeProps = _RequiredThemeProps;

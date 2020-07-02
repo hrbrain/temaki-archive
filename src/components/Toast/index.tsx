@@ -11,7 +11,9 @@ const BUTTONLESS = 'buttonless' as const
 type Props = {
     label: string
     text?: string
-    variant: 'info' | 'warning'
+    color?: string
+    icon?: string
+    variant: 'info' | 'warning' | 'progress'
 } & (
     | {
           type: typeof DEFAULT
@@ -29,6 +31,7 @@ export const Component = React.memo<Props>((props: Props) => {
                 <Buttonless.Component
                     label={props.label}
                     text={props.text}
+                    color={props.color}
                     variant={props.variant}
                 />
             )

@@ -11,7 +11,7 @@ import * as Icon from '~/components/Icon'
 type Props = {
     label: string
     text?: string
-    variant: 'info' | 'warning'
+    variant: 'info' | 'warning' | 'progress'
     onClickClose: () => void
 }
 
@@ -27,10 +27,10 @@ export const Component = React.memo<Props>(props => {
                 color={'white'}
             />
             {props.text ? (
-                <div>
+                <>
                     <Label>{props.label}</Label>
                     <Text>{props.text}</Text>
-                </div>
+                </>
             ) : (
                 <Label>{props.label}</Label>
             )}
@@ -45,11 +45,11 @@ export const Component = React.memo<Props>(props => {
  * Styles
  */
 type OuterType = {
-    variant: 'info' | 'warning'
+    variant: 'info' | 'warning' | 'progress'
     highlightGreen: string
     red: string
 }
-const Outer = styled.div<{ variant: 'info' | 'warning' }>`
+const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
     display: inline-flex;
     align-items: start;
     padding: 12px;
