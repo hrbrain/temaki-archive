@@ -27,10 +27,10 @@ export const Component = React.memo<Props>(props => {
                 color={'white'}
             />
             {props.text ? (
-                <>
+                <div>
                     <Label>{props.label}</Label>
                     <Text>{props.text}</Text>
-                </>
+                </div>
             ) : (
                 <Label>{props.label}</Label>
             )}
