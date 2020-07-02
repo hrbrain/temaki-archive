@@ -2345,17 +2345,19 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
       }
       size="24px"
     />
-    <div
-      className="sc-bYSBpT jKJUMz"
-      color="rgb(255, 255, 255)"
-    >
-      ラベル
-    </div>
-    <div
-      className="sc-elJkPf bWeByM"
-      color="rgb(255, 255, 255)"
-    >
-      メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+    <div>
+      <div
+        className="sc-bYSBpT jKJUMz"
+        color="rgb(255, 255, 255)"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-elJkPf bWeByM"
+        color="rgb(255, 255, 255)"
+      >
+        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+      </div>
     </div>
   </div>
 </div>
@@ -2379,17 +2381,19 @@ exports[`Storyshots Components|Toast buttonless(progress) 1`] = `
       }
       size="24px"
     />
-    <div
-      className="sc-bYSBpT jCIedS"
-      color="#333"
-    >
-      ラベル
-    </div>
-    <div
-      className="sc-elJkPf fchTqU"
-      color="#333"
-    >
-      状態が入ります状態が入ります
+    <div>
+      <div
+        className="sc-bYSBpT jCIedS"
+        color="#333"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-elJkPf fchTqU"
+        color="#333"
+      >
+        状態が入ります状態が入ります
+      </div>
     </div>
   </div>
 </div>
@@ -2413,17 +2417,19 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
       }
       size="24px"
     />
-    <div
-      className="sc-bYSBpT jKJUMz"
-      color="rgb(255, 255, 255)"
-    >
-      ラベル
-    </div>
-    <div
-      className="sc-elJkPf bWeByM"
-      color="rgb(255, 255, 255)"
-    >
-      メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+    <div>
+      <div
+        className="sc-bYSBpT jKJUMz"
+        color="rgb(255, 255, 255)"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-elJkPf bWeByM"
+        color="rgb(255, 255, 255)"
+      >
+        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+      </div>
     </div>
   </div>
 </div>
@@ -2447,15 +2453,17 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
       }
       size="24px"
     />
-    <div
-      className="sc-gxMtzJ hsMYna"
-    >
-      ラベル
-    </div>
-    <div
-      className="sc-dfVpRl evwIDa"
-    >
-      メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+    <div>
+      <div
+        className="sc-gxMtzJ hsMYna"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-dfVpRl evwIDa"
+      >
+        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+      </div>
     </div>
     <span
       className="sc-dqBHgY lhwDWX"
@@ -2494,15 +2502,17 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
       }
       size="24px"
     />
-    <div
-      className="sc-gxMtzJ hsMYna"
-    >
-      ラベル
-    </div>
-    <div
-      className="sc-dfVpRl evwIDa"
-    >
-      メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+    <div>
+      <div
+        className="sc-gxMtzJ hsMYna"
+      >
+        ラベル
+      </div>
+      <div
+        className="sc-dfVpRl evwIDa"
+      >
+        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
+      </div>
     </div>
     <span
       className="sc-dqBHgY lhwDWX"
