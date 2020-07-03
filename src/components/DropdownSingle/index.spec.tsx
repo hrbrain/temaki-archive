@@ -10,10 +10,12 @@ import 'jest-styled-components'
 describe('Dropdown(Single)コンポーネントのテスト', () => {
     let wrapper: Enzyme.ReactWrapper
     let mockOnChange: jest.Mock
+    let mockOnClickBody: jest.Mock
     let items: ItemList.Item[]
 
     beforeEach(() => {
         mockOnChange = jest.fn()
+        mockOnClickBody = jest.fn()
         items = [
             { value: '', text: '' },
             { value: '1', text: 'りんご' },
@@ -166,5 +168,24 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
                 Theme.defaultTheme.colors.utilities.paleYellow.replace(/ /g, '')
             )
         })
+    })
+
+    it('onClickBodyを押すことができる', () => {
+        act(() => {
+            wrapper = mountWithTheme(
+                <DropdownSingle.Component
+                    type={'default'}
+                    placeholder="placeholder"
+                    items={items}
+                    value=""
+                    isError={false}
+                    width="250px"
+                    onClickBody={mockOnClickBody}
+                    onChange={mockOnChange}
+                />
+            )
+        })
+        wrapper.find('div[data-test="body"]').simulate('click')
+        expect(mockOnClickBody).toHaveBeenCalled()
     })
 })

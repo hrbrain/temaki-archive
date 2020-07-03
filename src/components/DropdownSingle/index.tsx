@@ -15,6 +15,7 @@ type Props = {
     value: ItemList.Value
     type: 'default' | 'borderless'
     onChange: (value: ItemList.Value) => void
+    onClickBody?: (event: React.MouseEvent) => void
     placeholder?: string
     isError?: boolean
     width?: string
@@ -49,11 +50,14 @@ export const Component = React.memo<Props>(props => {
             setIsMenuVisible(!isMenuVisible)
             setFocused(!focused)
             setSearchValue('')
+            props.onClickBody && props.onClickBody(e)
         },
         [isMenuVisible, focused]
     )
 
-    const closeMenu = React.useCallback(() => setIsMenuVisible(false), [])
+    const closeMenu = React.useCallback(() => {
+        setIsMenuVisible(false)
+    }, [])
 
     const handleOnChange = React.useCallback(
         (value: ItemList.Value) => {

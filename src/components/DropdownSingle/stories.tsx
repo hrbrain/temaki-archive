@@ -37,6 +37,7 @@ storiesOf('Components|DropdownSingle', module)
                 errorMessage={text('ErrorMessage', '')}
                 width={text('width', '200px')}
                 onChange={action('onChange')}
+                onClickBody={action('onClickBody')}
                 diff={boolean('Diff', false)}
             />
         </div>
@@ -60,6 +61,7 @@ storiesOf('Components|DropdownSingle', module)
                 errorMessage={text('ErrorMessage', '')}
                 width={text('width', '200px')}
                 onChange={action('onChange')}
+                onClickBody={action('onClickBody')}
                 diff={boolean('Diff', false)}
             />
         </div>
@@ -87,6 +89,7 @@ storiesOf('Components|DropdownSingle', module)
                     isError={boolean('isError', false)}
                     width={text('width', '250px')}
                     onChange={action('text')}
+                    onClickBody={action('text')}
                     diff={boolean('Diff', false)}
                 />
             </div>
