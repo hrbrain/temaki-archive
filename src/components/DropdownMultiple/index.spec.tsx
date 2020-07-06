@@ -28,6 +28,7 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
                     placeholder="placeholder"
                     items={items}
                     values={[]}
+                    defaultExpanded={true}
                     isError={false}
                     width="250px"
                     onChange={mockOnChange}
@@ -43,7 +44,7 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
     it('StateのisVisibleによってul要素が見え隠れする', () => {
         expect(wrapper.find('ul[data-test="itemList"]')).toHaveStyleRule(
             'visibility',
-            'hidden'
+            'visible'
         )
         wrapper.find('div[data-test="body"]').simulate('click')
         expect(wrapper.find('ul[data-test="itemList"]')).toHaveStyleRule(

@@ -111,9 +111,8 @@ export const Component = React.memo<Props>(props => {
                     />
                     {filteredItems.length ? (
                         <StyledItemList
-                            filteredItems={filteredItems}
                             isVisible={isMenuVisible}
-                            items={props.items}
+                            items={filteredItems}
                             onClickItem={changeValue}
                             values={props.values}
                         />
