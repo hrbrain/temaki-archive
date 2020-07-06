@@ -71,6 +71,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
                 placeholder="placeholder"
                 items={items}
                 value=""
+                defaultExpanded={true}
                 isError={true}
                 width="200px"
                 onChange={mockOnChange}
@@ -119,6 +120,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
                 placeholder="placeholder"
                 items={items}
                 value=""
+                defaultExpanded={true}
                 isError={true}
                 width="250px"
                 onChange={mockOnChange}
@@ -138,6 +140,18 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
 
     it('ドロップダウンの中身がクリックされた時にonClickItemが呼ばれる', () => {
         act(() => {
+            wrapper = mountWithTheme(
+                <DropdownSingle.Component
+                    type={'default'}
+                    placeholder="placeholder"
+                    items={items}
+                    value=""
+                    defaultExpanded={true}
+                    isError={true}
+                    width="250px"
+                    onChange={mockOnChange}
+                />
+            )
             wrapper.find('div[data-test="body"]').simulate('click')
             wrapper
                 .find('li')
