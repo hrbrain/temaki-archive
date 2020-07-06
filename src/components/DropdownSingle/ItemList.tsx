@@ -19,11 +19,7 @@ type Props = {
 
 export const Component = React.memo((props: Props) => {
     const showItem = props.items.map(
-        renderItem(
-            props.value,
-            props.onClickItem,
-            props.onBlurSearchValue
-        )
+        renderItem(props.value, props.onClickItem, props.onBlurSearchValue)
     )
     return (
         <ItemList data-test="itemList" className={props.className}>

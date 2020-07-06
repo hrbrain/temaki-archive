@@ -26,9 +26,7 @@ export const Component = React.memo<Props>(props => {
             className={props.className}
             isVisible={props.isVisible}
         >
-            <ListInner>
-                {props.isVisible ? showItem : null}
-            </ListInner>
+            <ListInner>{props.isVisible ? showItem : null}</ListInner>
         </ItemList>
     )
 })
