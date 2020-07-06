@@ -15,22 +15,19 @@ type Props = {
     className?: string
     isVisible?: boolean
     onBlurSearchValue?: () => void
-    filteredItems?: Item[]
 }
 
-export const Component = React.memo<Props>(props => {
-    const showItem = props.filteredItems
-        ? props.filteredItems.map(
-              renderItem(
-                  props.value,
-                  props.onClickItem,
-                  props.onBlurSearchValue
-              )
-          )
-        : props.items.map(renderItem(props.value, props.onClickItem))
+export const Component = React.memo((props: Props) => {
+    const showItem = props.items.map(
+        renderItem(
+            props.value,
+            props.onClickItem,
+            props.onBlurSearchValue
+        )
+    )
     return (
         <ItemList data-test="itemList" className={props.className}>
-            {showItem}
+            {props.isVisible ? showItem : null}
         </ItemList>
     )
 })
