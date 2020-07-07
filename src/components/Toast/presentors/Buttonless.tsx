@@ -6,9 +6,11 @@ import * as Icon from '~/components/Icon'
 /*
  * Component
  */
+type Variant = 'warning' | 'info' | 'progress'
+
 type Props = {
     label: string
-    variant: 'info' | 'warning' | 'progress'
+    variant: Variant
     color?: string
     text?: string
     icon?: IconFileKeys
@@ -47,12 +49,12 @@ export const Component = React.memo<Props>(
  */
 
 type OuterType = {
-    variant: 'info' | 'warning' | 'progress'
+    variant: Variant
     highlightGreen: string
-    grayScalS5: string
+    grayScaleS5: string
     red: string
 }
-const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
+const Outer = styled.div<{ variant: Variant }>`
     display: inline-flex;
     align-items: start;
     padding: 12px;
@@ -63,7 +65,7 @@ const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
             variant: props.variant,
             highlightGreen: props.theme.colors.utilities.highlightGreen.default,
             red: props.theme.colors.utilities.red.default,
-            grayScalS5: props.theme.colors.grayScale.S5
+            grayScaleS5: props.theme.colors.grayScale.S5
         })}
 `
 
@@ -72,7 +74,7 @@ const getVariantColor = (props: OuterType) => {
         case 'info':
             return `background-color: ${props.highlightGreen};`
         case 'progress':
-            return `background-color: ${props.grayScalS5};`
+            return `background-color: ${props.grayScaleS5};`
         case 'warning':
             return `background-color: ${props.red};`
         default:
@@ -85,7 +87,7 @@ const getVariantFontColor = ({
     textDefault,
     grayScaleS0
 }: {
-    variant: 'warning' | 'info' | 'progress'
+    variant: Variant
     textDefault: string
     grayScaleS0: string
 }) => {
@@ -104,7 +106,7 @@ const getVariantFontColor = ({
 const Icons = styled(Icon.Component)`
     top: 0;
 `
-const Label = styled.div<{ variant: 'warning' | 'progress' | 'info' }>`
+const Label = styled.div<{ variant: Variant }>`
     max-width: 290px;
     word-break: break-all;
     line-height: 24px;

@@ -1,8 +1,9 @@
 import * as React from 'react';
 import * as IconFiles from '~/lib/iconFiles';
+declare type Variant = 'warning' | 'info' | 'progress';
 declare type Props = {
     label: string;
-    variant: 'info' | 'warning' | 'progress';
+    variant: Variant;
     color?: string;
     text?: string;
     icon?: IconFileKeys;

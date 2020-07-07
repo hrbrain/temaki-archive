@@ -8,12 +8,14 @@ import * as Default from './presentors/Default'
 const DEFAULT = 'default' as const
 const BUTTONLESS = 'buttonless' as const
 
+type Variant = 'warning' | 'info' | 'progress'
+
 type Props = {
     label: string
     text?: string
     color?: string
     icon?: string
-    variant: 'info' | 'warning' | 'progress'
+    variant: Variant
 } & (
     | {
           type: typeof DEFAULT

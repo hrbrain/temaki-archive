@@ -4,12 +4,13 @@ import * as React from 'react';
  */
 declare const DEFAULT: "default";
 declare const BUTTONLESS: "buttonless";
+declare type Variant = 'warning' | 'info' | 'progress';
 declare type Props = {
     label: string;
     text?: string;
     color?: string;
     icon?: string;
-    variant: 'info' | 'warning' | 'progress';
+    variant: Variant;
 } & ({
     type: typeof DEFAULT;
     onClickClose: () => void;

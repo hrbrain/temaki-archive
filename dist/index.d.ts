@@ -68,7 +68,7 @@ export declare const Toast: import("react").NamedExoticComponent<({
     text?: string | undefined;
     color?: string | undefined;
     icon?: string | undefined;
-    variant: "progress" | "info" | "warning";
+    variant: "progress" | "warning" | "info";
 } & {
     type: "default";
     onClickClose: () => void;
@@ -77,7 +77,7 @@ export declare const Toast: import("react").NamedExoticComponent<({
     text?: string | undefined;
     color?: string | undefined;
     icon?: string | undefined;
-    variant: "progress" | "info" | "warning";
+    variant: "progress" | "warning" | "info";
 } & {
     type: "buttonless";
 })>;
