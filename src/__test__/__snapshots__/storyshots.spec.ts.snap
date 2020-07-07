@@ -1726,7 +1726,7 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-jtRfpW dISplp"
+    className="sc-jtRfpW SDiva"
     data-test="info-default-toast"
   >
     <div
@@ -1746,7 +1746,7 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
         ラベル
       </div>
       <div
-        className="sc-dfVpRl evwIDa"
+        className="sc-gxMtzJ sc-dfVpRl dAMmob"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
@@ -1775,7 +1775,7 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-jtRfpW ckFpwu"
+    className="sc-jtRfpW dhhcRC"
     data-test="warning-default-toast"
   >
     <div
@@ -1795,7 +1795,7 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
         ラベル
       </div>
       <div
-        className="sc-dfVpRl evwIDa"
+        className="sc-gxMtzJ sc-dfVpRl dAMmob"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>

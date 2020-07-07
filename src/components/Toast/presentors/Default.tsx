@@ -28,11 +28,11 @@ export const Component = React.memo<Props>(props => {
             />
             {props.text ? (
                 <div>
-                    <Label>{props.label}</Label>
-                    <Text>{props.text}</Text>
+                    <Label variant={props.variant}>{props.label}</Label>
+                    <Text variant={props.variant}>{props.text}</Text>
                 </div>
             ) : (
-                <Label>{props.label}</Label>
+                <Label variant={props.variant}>{props.label}</Label>
             )}
             <CloseButton onClick={props.onClickClose}>
                 <Icons svg={IconFiles.icons.Close} size="24px" color="white" />
@@ -48,6 +48,7 @@ type OuterType = {
     variant: 'info' | 'warning' | 'progress'
     highlightGreen: string
     red: string
+    grayScalS10: string
 }
 const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
     display: inline-flex;
@@ -59,20 +60,42 @@ const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
         getVariantColor({
             variant: props.variant,
             highlightGreen: props.theme.colors.utilities.highlightGreen.default,
-            red: props.theme.colors.utilities.red.default
+            red: props.theme.colors.utilities.red.default,
+            grayScalS10: props.theme.colors.grayScale.S10
         })}
 `
 const getVariantColor = (props: OuterType) => {
-    if (props.variant === 'info') {
-        return `
-      background-color: ${props.highlightGreen};
-    `
-    } else if (props.variant === 'warning') {
-        return `
-        background-color: ${props.red};
-    `
+    switch (props.variant) {
+        case 'info':
+            return `background-color: ${props.highlightGreen};`
+        case 'progress':
+            return `background-color: ${props.grayScalS10};`
+        case 'warning':
+            return `background-color: ${props.red};`
+        default:
+            throw Error('not provided type')
     }
-    return ''
+}
+
+const getVariantFontColor = ({
+    variant,
+    textDefault,
+    grayScaleS0
+}: {
+    variant: 'warning' | 'info' | 'progress'
+    textDefault: string
+    grayScaleS0: string
+}) => {
+    switch (variant) {
+        case 'info':
+            return `color: ${grayScaleS0};`
+        case 'progress':
+            return `color: ${textDefault};`
+        case 'warning':
+            return `color: ${grayScaleS0};`
+        default:
+            throw Error('not provided type')
+    }
 }
 
 const Icons = styled(Icon.Component)`
@@ -87,20 +110,23 @@ const CloseButton = styled.span`
     ${buttonMixin}
 `
 
-const Label = styled.div`
+const Label = styled.div<{ variant: 'warning' | 'progress' | 'info' }>`
     max-width: 290px;
     word-break: break-all;
     line-height: 24px;
     font-size: 14px;
     padding-left: 4px;
     font-weight: bold;
-    color: ${props => props.theme.colors.grayScale.S0};
+    ${props =>
+        getVariantFontColor({
+            variant: props.variant,
+            grayScaleS0: `${props.theme.colors.grayScale.S0}`,
+            textDefault: `${props.theme.colors.text.default}`
+        })}
 `
-const Text = styled.div`
-    max-width: 290px;
-    word-break: break-all;
+
+const Text = styled(Label)`
+    line-height: none;
     white-space: pre-wrap;
-    font-size: 14px;
     padding: 4px 0 0 4px;
-    color: ${props => props.theme.colors.grayScale.S0};
 `
