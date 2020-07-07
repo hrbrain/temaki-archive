@@ -48,7 +48,7 @@ type OuterType = {
     variant: 'info' | 'warning' | 'progress'
     highlightGreen: string
     red: string
-    grayScalS10: string
+    grayScalS5: string
 }
 const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
     display: inline-flex;
@@ -61,7 +61,7 @@ const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
             variant: props.variant,
             highlightGreen: props.theme.colors.utilities.highlightGreen.default,
             red: props.theme.colors.utilities.red.default,
-            grayScalS10: props.theme.colors.grayScale.S10
+            grayScalS5: props.theme.colors.grayScale.S5
         })}
 `
 const getVariantColor = (props: OuterType) => {
@@ -69,7 +69,7 @@ const getVariantColor = (props: OuterType) => {
         case 'info':
             return `background-color: ${props.highlightGreen};`
         case 'progress':
-            return `background-color: ${props.grayScalS10};`
+            return `background-color: ${props.grayScalS5};`
         case 'warning':
             return `background-color: ${props.red};`
         default:
@@ -126,7 +126,8 @@ const Label = styled.div<{ variant: 'warning' | 'progress' | 'info' }>`
 `
 
 const Text = styled(Label)`
-    line-height: none;
+    line-height: normal;
+    font-weight: normal;
     white-space: pre-wrap;
     padding: 4px 0 0 4px;
 `
