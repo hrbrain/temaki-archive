@@ -67,7 +67,6 @@ storiesOf(`Components|Toast`, module)
                     'アップロード処理中',
                     '状態が入ります状態が入ります'
                 )}
-                color="#333"
                 type={'buttonless'}
                 variant={'progress'}
             />

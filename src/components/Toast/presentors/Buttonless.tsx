@@ -3,13 +3,14 @@ import styled from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
-import * as modules from '~/modules/theme'
 /*
  * Component
  */
+type Variant = 'warning' | 'info' | 'progress'
+
 type Props = {
     label: string
-    variant: 'info' | 'warning' | 'progress'
+    variant: Variant
     color?: string
     text?: string
     icon?: IconFileKeys
@@ -18,13 +19,7 @@ type Props = {
 type IconFileKeys = keyof typeof IconFiles.icons
 
 export const Component = React.memo<Props>(
-    ({
-        label,
-        variant,
-        text,
-        color = modules.defaultTheme.colors.grayScale.S0,
-        icon = IconFiles.icons.SingleCheck
-    }) => {
+    ({ label, variant, text, icon = IconFiles.icons.SingleCheck }) => {
         return (
             <Outer variant={variant} data-test={`${variant}-buttonless-toast`}>
                 {variant === 'progress' ? (
@@ -38,11 +33,11 @@ export const Component = React.memo<Props>(
                 )}
                 {text ? (
                     <div>
-                        <Label color={color}>{label}</Label>
-                        <Text color={color}>{text}</Text>
+                        <Label variant={variant}>{label}</Label>
+                        <Text variant={variant}>{text}</Text>
                     </div>
                 ) : (
-                    <Label color={color}>{label}</Label>
+                    <Label variant={variant}>{label}</Label>
                 )}
             </Outer>
         )
@@ -54,12 +49,12 @@ export const Component = React.memo<Props>(
  */
 
 type OuterType = {
-    variant: 'info' | 'warning' | 'progress'
+    variant: Variant
     highlightGreen: string
-    gray: string
+    grayScaleS5: string
     red: string
 }
-const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
+const Outer = styled.div<{ variant: Variant }>`
     display: inline-flex;
     align-items: start;
     padding: 12px;
@@ -70,42 +65,64 @@ const Outer = styled.div<{ variant: 'info' | 'warning' | 'progress' }>`
             variant: props.variant,
             highlightGreen: props.theme.colors.utilities.highlightGreen.default,
             red: props.theme.colors.utilities.red.default,
-            gray: props.theme.colors.grayScale.S5
+            grayScaleS5: props.theme.colors.grayScale.S5
         })}
 `
+
 const getVariantColor = (props: OuterType) => {
-    if (props.variant === 'info') {
-        return `
-      background-color: ${props.highlightGreen};
-    `
-    } else if (props.variant === 'warning') {
-        return `
-        background-color: ${props.red};
-    `
-    } else if (props.variant === 'progress') {
-        return `background-color: ${props.gray}
-        `
+    switch (props.variant) {
+        case 'info':
+            return `background-color: ${props.highlightGreen};`
+        case 'progress':
+            return `background-color: ${props.grayScaleS5};`
+        case 'warning':
+            return `background-color: ${props.red};`
+        default:
+            throw Error('not provided type')
     }
-    return ''
+}
+
+const getVariantFontColor = ({
+    variant,
+    textDefault,
+    grayScaleS0
+}: {
+    variant: Variant
+    textDefault: string
+    grayScaleS0: string
+}) => {
+    switch (variant) {
+        case 'info':
+            return `color: ${grayScaleS0};`
+        case 'progress':
+            return `color: ${textDefault};`
+        case 'warning':
+            return `color: ${grayScaleS0};`
+        default:
+            throw Error('not provided type')
+    }
 }
 
 const Icons = styled(Icon.Component)`
     top: 0;
 `
-const Label = styled.div<{ color: string }>`
+const Label = styled.div<{ variant: Variant }>`
     max-width: 290px;
     word-break: break-all;
     line-height: 24px;
     font-size: 14px;
     padding-left: 4px;
     font-weight: bold;
-    color: ${props => props.color};
+    ${props =>
+        getVariantFontColor({
+            variant: props.variant,
+            grayScaleS0: `${props.theme.colors.grayScale.S0}`,
+            textDefault: `${props.theme.colors.text.default}`
+        })}
 `
-const Text = styled.div<{ color: string }>`
-    max-width: 290px;
-    word-break: break-all;
+const Text = styled(Label)`
+    line-height: normal;
+    font-weight: normal;
     white-space: pre-wrap;
-    font-size: 14px;
     padding: 4px 0 0 4px;
-    color: ${props => props.color};
 `
