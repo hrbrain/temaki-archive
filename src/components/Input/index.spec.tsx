@@ -46,7 +46,6 @@ describe('Input format of text', () => {
         expect(value === mockValue).toBe(true)
     })
 
-    // tslint:disable-next-line
     it("should call onChange method on change input's value", () => {
         const inputEl = wrapper.find('input')
         act(() => {
@@ -135,7 +134,6 @@ describe('Input format of number', () => {
         expect(value === mockValue.toString()).toBe(true)
     })
 
-    // tslint:disable-next-line
     it("should call onChange method on change input's value", () => {
         const inputEl = wrapper.find('input')
         act(() => {

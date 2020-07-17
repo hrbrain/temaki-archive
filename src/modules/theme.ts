@@ -263,7 +263,6 @@ const ThemeConsumer: React.ExoticComponent<React.ConsumerProps<
 const ThemeContext: React.Context<RequiredThemeProps> = casted.ThemeContext
 const ThemeProvider: React.ComponentClass<
     styledComponents.ThemeProviderProps<RequiredThemeProps, RequiredThemeProps>,
-    // tslint:disable-next-line:no-any
     any
 > = casted.ThemeProvider
 
