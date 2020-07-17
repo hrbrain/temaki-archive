@@ -21,9 +21,6 @@ jobs:
       - run:
           name: Run type check
           command: yarn type-check
-      - run:
-          name: Run lint
-          command: yarn lint
 
 workflows:
   version: 2
