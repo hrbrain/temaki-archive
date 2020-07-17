@@ -3,7 +3,7 @@ jobs:
   test:
     working_directory: ~/dir
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:12
     steps:
       - checkout
       - restore_cache:
@@ -21,9 +21,6 @@ jobs:
       - run:
           name: Run type check
           command: yarn type-check
-      - run:
-          name: Run lint
-          command: yarn lint
 
 workflows:
   version: 2

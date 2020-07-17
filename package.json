@@ -7,19 +7,15 @@
     "license": "ISC",
     "scripts": {
         "start": "start-storybook -p 6006",
-        "docs:build": "build-storybook -c .storybook",
         "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+        "build:declaration": "tsc --emitDeclarationOnly",
+        "docs:build": "build-storybook -c .storybook",
         "test": "jest",
-        "lint": "run-s lint:*",
-        "lint:src": "eslint --ext .ts,.tsx ./src",
-        "lint-fix": "run-s lint-fix:*",
-        "lint-fix:src": "eslint --ext .ts,.tsx --fix ./src",
         "type-check": "tsc --noEmit"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run build && tsc --emitDeclarationOnly && git add ./dist",
-            "pre-push": "npm run lint && npm run test"
+            "pre-commit": "lint-staged && npm run build && npm run build:declaration && git add ./dist"
         }
     },
     "peerDependencies": {
@@ -82,6 +78,7 @@
         "jest": "^24.8.0",
         "jest-cli": "^24.8.0",
         "jest-styled-components": "^6.3.3",
+        "lint-staged": "^10.2.11",
         "npm-run-all": "^4.1.5",
         "prettier": "^1.18.2",
         "react-dom": "^16.8.6",
