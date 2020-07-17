@@ -15,7 +15,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run build && npm run build:declaration && git add ./dist && lint-staged"
+            "pre-commit": "lint-staged && npm run build && npm run build:declaration && git add ./dist"
         }
     },
     "peerDependencies": {
