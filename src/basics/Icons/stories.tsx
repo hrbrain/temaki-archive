@@ -16,10 +16,8 @@ Storybook.storiesOf('basics|Icons', module).add('index', () => {
     return <div className="flex flex-wrap w-64">{iconElements}</div>
 })
 
-/* tslint:disable:no-any */
 const compose = (...functions: ((arg: any) => any)[]) => (arg: any) =>
     functions.reduceRight((p, f) => f(p), arg)
-/* tslint:enable:no-any */
 
 const toSvgRaw = (iconMap: { [key: string]: string }) => (key: string) =>
     iconMap[key]
