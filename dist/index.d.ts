@@ -160,6 +160,7 @@ export declare const icons: {
     Transition: string;
     TreeToggle: string;
     Undo: string;
+    Union: string;
     Url: string;
     Warning: string;
     Loading: string;

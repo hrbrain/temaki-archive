@@ -71,7 +71,7 @@ export const Component = React.memo<Props>(props => {
                     ) : (
                         <>
                             <FileIcon
-                                svg={IconFiles.icons.Dragdrop}
+                                svg={IconFiles.icons.Union}
                                 size={iconSize}
                             />
                             <FileLabel>
@@ -145,7 +145,7 @@ const FileLabel = styled.span`
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 13px;
-    margin-left: 4px;
+    margin-left: 8px;
 `
 const Input = styled.input`
     display: none;
