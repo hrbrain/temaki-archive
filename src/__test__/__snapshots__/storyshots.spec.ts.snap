@@ -2470,6 +2470,15 @@ exports[`Storyshots basics|Icons index 1`] = `
     }
     fill="#888"
   />
+  <div
+    className="sc-bdVaJa cCvjGY"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
 </div>
 `;
 
@@ -2521,7 +2530,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-            className="sc-eqIVtm cClmoA"
+            className="sc-eqIVtm eLYOyf"
           >
             ファイルを選択またはドラッグ&ドロップ
           </span>
@@ -2574,7 +2583,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-            className="sc-eqIVtm cClmoA"
+            className="sc-eqIVtm eLYOyf"
           >
             hoge.png
           </span>
