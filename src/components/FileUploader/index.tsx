@@ -145,7 +145,7 @@ const FileLabel = styled.span`
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 13px;
-    margin-left: 8px;
+    margin-left: 4px;
 `
 const Input = styled.input`
     display: none;
