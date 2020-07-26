@@ -71,7 +71,7 @@ export const Component = React.memo<Props>(props => {
                     ) : (
                         <>
                             <FileIcon
-                                svg={IconFiles.icons.Dragdrop}
+                                svg={IconFiles.icons.Union}
                                 size={iconSize}
                             />
                             <FileLabel>
