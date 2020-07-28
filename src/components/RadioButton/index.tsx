@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled, { defaultTheme } from '~/modules/theme'
+import styled, { ThemeConsumer } from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
@@ -18,11 +18,15 @@ export const Component = React.memo<Props>(({ text, checked, onClick }) => {
     if (checked) {
         return (
             <Outer data-test="radio-on" onClick={onClick}>
-                <RadioButton
-                    svg={IconFiles.icons.RadioOn}
-                    size="24px"
-                    color={defaultTheme.colors.primary.default}
-                />
+                <ThemeConsumer>
+                    {theme => (
+                        <RadioButton
+                            svg={IconFiles.icons.RadioOn}
+                            size="24px"
+                            color={theme.colors.primary.default}
+                        />
+                    )}
+                </ThemeConsumer>
                 <Label>{text}</Label>
             </Outer>
         )
@@ -30,11 +34,15 @@ export const Component = React.memo<Props>(({ text, checked, onClick }) => {
 
     return (
         <Outer data-test="radio-off" onClick={onClick}>
-            <RadioButton
-                svg={IconFiles.icons.RadioOff}
-                size="24px"
-                color={defaultTheme.colors.primary.default}
-            />
+            <ThemeConsumer>
+                {theme => (
+                    <RadioButton
+                        svg={IconFiles.icons.RadioOff}
+                        size="24px"
+                        color={theme.colors.primary.default}
+                    />
+                )}
+            </ThemeConsumer>
             <Label>{text}</Label>
         </Outer>
     )
@@ -51,6 +59,7 @@ const Outer = styled.div`
 `
 
 const RadioButton = styled(Icon.Component)`
+    color: ${props => props.theme.colors.primary.default};
     display: flex;
     align-items: center;
     justify-content: center;
