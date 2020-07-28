@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import styled, { defaultTheme } from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
@@ -18,7 +18,11 @@ export const Component = React.memo<Props>(({ text, checked, onClick }) => {
     if (checked) {
         return (
             <Outer data-test="radio-on" onClick={onClick}>
-                <RadioButton svg={IconFiles.icons.RadioOn} size="24px" />
+                <RadioButton
+                    svg={IconFiles.icons.RadioOn}
+                    size="24px"
+                    color={defaultTheme.colors.primary.default}
+                />
                 <Label>{text}</Label>
             </Outer>
         )
@@ -26,7 +30,11 @@ export const Component = React.memo<Props>(({ text, checked, onClick }) => {
 
     return (
         <Outer data-test="radio-off" onClick={onClick}>
-            <RadioButton svg={IconFiles.icons.RadioOff} size="24px" />
+            <RadioButton
+                svg={IconFiles.icons.RadioOff}
+                size="24px"
+                color={defaultTheme.colors.primary.default}
+            />
             <Label>{text}</Label>
         </Outer>
     )
