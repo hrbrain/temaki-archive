@@ -47,6 +47,7 @@ import MoveUp from '~/../icons/move-up.svg'
 import Notifiacation from '~/../icons/notification.svg'
 import Phone from '~/../icons/phone.svg'
 import Pin from '~/../icons/pin.svg'
+import RadioDisabled from '~/../icons/radio-disabled.svg'
 import RadioOff from '~/../icons/radio-off.svg'
 import RadioOn from '~/../icons/radio-on.svg'
 import Redo from '~/../icons/redo.svg'
@@ -121,6 +122,7 @@ export const icons = {
     Notifiacation,
     Phone,
     Pin,
+    RadioDisabled,
     RadioOff,
     RadioOn,
     Redo,
