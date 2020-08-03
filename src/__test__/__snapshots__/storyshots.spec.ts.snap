@@ -1501,7 +1501,7 @@ exports[`Storyshots Components|Modal all 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
-  className="sc-jnlKLf bbmXgq"
+  className="sc-jnlKLf iYffli"
   data-test="radio-on"
   onClick={[Function]}
 >
@@ -1515,11 +1515,6 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     }
     size="24px"
   />
-  <span
-    className="sc-tilXH isyswE"
-  >
-    RadioButton
-  </span>
 </div>
 `;
 
