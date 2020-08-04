@@ -26,6 +26,18 @@ describe('RadioButton', () => {
         expect(mockOnClick).toHaveBeenCalled()
     })
 
+    it('RadioDisabledアイコンを表示する', () => {
+        wrapper = mountWithTheme(
+            <RadioButton.Component
+                disabled
+                onClick={mockOnClick}
+                text={'123'}
+            />
+        )
+        const el = wrapper.find('div[data-test="radio-disabled"]')
+        expect(el).toHaveLength(1)
+    })
+
     it('RadioOnアイコンを表示する', () => {
         wrapper = mountWithTheme(
             <RadioButton.Component checked onClick={mockOnClick} text={'123'} />

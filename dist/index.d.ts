@@ -89,6 +89,7 @@ export declare const Tooltip: import("react").NamedExoticComponent<{
 export declare const RadioButton: import("react").NamedExoticComponent<{
     text: string;
     onClick: (e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void;
+    disabled?: boolean | undefined;
     checked?: boolean | undefined;
 }>;
 export declare const icons: {
@@ -141,6 +142,7 @@ export declare const icons: {
     Notifiacation: string;
     Phone: string;
     Pin: string;
+    RadioDisabled: string;
     RadioOff: string;
     RadioOn: string;
     Redo: string;
