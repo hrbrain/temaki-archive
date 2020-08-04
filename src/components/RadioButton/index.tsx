@@ -72,7 +72,7 @@ export const Component = React.memo<Props>(
 const Outer = styled.div<{ disabled?: boolean }>`
     display: inline-flex;
     align-items: center;
-    cursor: ${props => (props.disabled ? 'auto' : 'pointer')};
+    cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
 `
 
 const RadioButton = styled(Icon.Component)`
