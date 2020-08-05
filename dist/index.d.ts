@@ -89,6 +89,8 @@ export declare const Tooltip: import("react").NamedExoticComponent<{
 export declare const RadioButton: import("react").NamedExoticComponent<{
     text: string;
     onClick: (e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void;
+    color?: string | undefined;
+    fontColor?: string | undefined;
     disabled?: boolean | undefined;
     checked?: boolean | undefined;
 }>;
