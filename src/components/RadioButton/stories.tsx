@@ -11,8 +11,8 @@ storiesOf('Components|RadioButton', module).add('all', () => {
             onClick={action('onClick')}
             checked={boolean('Checked', true)}
             disabled={Knobs.boolean('disabled', false)}
-            color={Knobs.text('color', 'rgb(142, 216, 125)')}
-            fontColor={Knobs.text('fontColor', 'rgb(142, 216, 125)')}
+            color={Knobs.text('color', '#333')}
+            fontColor={Knobs.text('fontColor', '#333')}
             text={text('Component', 'RadioButton')}
         />
     )

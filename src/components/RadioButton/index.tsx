@@ -90,5 +90,11 @@ const Label = styled.span<{ fontColor?: string }>`
         props.fontColor ? props.fontColor : props.theme.colors.primary.P95};
 `
 const DisabledLabel = styled.span`
+    max-width: 280px;
+    word-break: break-all;
+    font-size: 14px;
+    padding-left: 4px;
+    height: 24px;
+    line-height: 24px;
     color: ${props => props.theme.colors.primary.N60};
 `
