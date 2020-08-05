@@ -1506,8 +1506,8 @@ exports[`Storyshots Components|RadioButton all 1`] = `
   onClick={[Function]}
 >
   <div
-    className="sc-bxivhb gNGtnl sc-fYxtnH cOcFI"
-    color="rgb(142, 216, 125)"
+    className="sc-bxivhb edXnbt sc-fYxtnH khqZZC"
+    color="#333"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1516,7 +1516,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-tilXH idKlQA"
+    className="sc-tilXH kzBSYf"
   >
     RadioButton
   </span>
