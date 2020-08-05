@@ -5,6 +5,8 @@ import * as React from 'react';
 declare type Props = {
     text: string;
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
+    color?: string;
+    fontColor?: string;
     disabled?: boolean;
     checked?: boolean;
 };
