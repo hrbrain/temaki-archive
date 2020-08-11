@@ -1503,6 +1503,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 <div
   className="sc-jnlKLf iYffli"
   data-test="radio-on"
+  disabled={false}
   onClick={[Function]}
 >
   <div
