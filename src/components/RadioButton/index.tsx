@@ -36,7 +36,11 @@ export const Component = React.memo<Props>(
         }
         if (checked) {
             return (
-                <Outer data-test="radio-on" onClick={onClick}>
+                <Outer
+                    data-test="radio-on"
+                    disabled={disabled}
+                    onClick={onClick}
+                >
                     <RadioButton
                         svg={IconFiles.icons.RadioOn}
                         size="24px"
@@ -48,7 +52,7 @@ export const Component = React.memo<Props>(
         }
 
         return (
-            <Outer data-test="radio-off" onClick={onClick}>
+            <Outer data-test="radio-off" disabled={disabled} onClick={onClick}>
                 <RadioButton
                     svg={IconFiles.icons.RadioOff}
                     size="24px"
@@ -96,5 +100,5 @@ const DisabledLabel = styled.span`
     padding-left: 4px;
     height: 24px;
     line-height: 24px;
-    color: ${props => props.theme.colors.primary.N60};
+    color: ${props => props.theme.colors.grayScale.S20};
 `
