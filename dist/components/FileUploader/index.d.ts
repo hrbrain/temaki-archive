@@ -10,6 +10,7 @@ declare type Props = {
     className?: string;
     errored?: boolean;
     errorMessage?: string;
+    borderColor?: string;
 };
 /**
  * Component

@@ -89,8 +89,6 @@ export declare const Tooltip: import("react").NamedExoticComponent<{
 export declare const RadioButton: import("react").NamedExoticComponent<{
     text: string;
     onClick: (e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void;
-    color?: string | undefined;
-    fontColor?: string | undefined;
     disabled?: boolean | undefined;
     checked?: boolean | undefined;
 }>;
@@ -237,6 +235,7 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     className?: string | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
+    borderColor?: string | undefined;
 }>;
 export declare const DatePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
