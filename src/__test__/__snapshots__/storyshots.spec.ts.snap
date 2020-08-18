@@ -1507,8 +1507,8 @@ exports[`Storyshots Components|RadioButton all 1`] = `
   onClick={[Function]}
 >
   <div
-    className="sc-bxivhb edXnbt sc-fYxtnH khqZZC"
-    color="#333"
+    className="sc-bxivhb bKOEzJ sc-fYxtnH ieKlAa"
+    color="rgb(8,135,54)"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1517,7 +1517,8 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-tilXH kzBSYf"
+    className="sc-tilXH isyswE"
+    disabled={false}
   >
     RadioButton
   </span>
@@ -2541,7 +2542,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-            className="sc-eqIVtm cClmoA"
+            className="sc-eqIVtm eYJdrv"
           >
             ファイルを選択またはドラッグ&ドロップ
           </span>
@@ -2594,7 +2595,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-            className="sc-eqIVtm cClmoA"
+            className="sc-eqIVtm eYJdrv"
           >
             hoge.png
           </span>
