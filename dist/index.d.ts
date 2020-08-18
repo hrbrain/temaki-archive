@@ -275,7 +275,7 @@ export declare const Modal: import("react").FunctionComponent<{
         dataTest?: string | undefined;
     } & {
         variant: "box";
-        colorType?: "disabled" | "default" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | undefined;
+        colorType?: "disabled" | "default" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "grayScaleS100" | undefined;
         height?: string | undefined;
         width?: string | undefined;
     } & {
@@ -298,7 +298,7 @@ export declare const Modal: import("react").FunctionComponent<{
         dataTest?: string | undefined;
     } & {
         variant: "text";
-        colorType?: "default" | "primary" | "destructive" | undefined;
+        colorType?: "default" | "primary" | "destructive" | "grayScaleS100" | undefined;
         svg?: string | undefined;
     } & {
         text: string;

@@ -16,6 +16,7 @@ export type ColorTypeProp =
     | 'destructive'
     | 'destructive ghost'
     | 'disabled'
+    | 'grayScaleS100'
     | 'default'
 
 export type BoxColorTypeProp = ColorTypeProp
@@ -27,7 +28,7 @@ export type CircleColorTypeProp = Extract<
 
 export type TextColorTypeProp = Extract<
     ColorTypeProp,
-    'primary' | 'destructive' | 'default'
+    'primary' | 'destructive' | 'default' | 'grayScaleS100'
 >
 
 export const buttonShapeType = {
