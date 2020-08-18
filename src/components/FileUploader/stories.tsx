@@ -13,6 +13,7 @@ storiesOf('components|FileUploader', module).add('all', () => {
                     onChange={action('onDrop')}
                     width={Knobs.text('width', '400px')}
                     fileName={null}
+                    borderColor={Knobs.text('borderColor', '')}
                     errored={Knobs.boolean('Error', false)}
                     errorMessage={Knobs.text('ErrorMessage', '')}
                 />
@@ -21,6 +22,7 @@ storiesOf('components|FileUploader', module).add('all', () => {
                 <FileUploader.Component
                     onChange={action('onDrop')}
                     fileName={Knobs.text('fileName', 'hoge.png')}
+                    borderColor={Knobs.text('borderColor', '')}
                     errored={Knobs.boolean('Error', false)}
                     errorMessage={Knobs.text('ErrorMessage', '')}
                 />

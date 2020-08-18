@@ -24,6 +24,7 @@ type Props = {
     className?: string
     errored?: boolean
     errorMessage?: string
+    borderColor?: string
 }
 
 /**
@@ -56,7 +57,7 @@ export const Component = React.memo<Props>(props => {
                 className: props.className
             })}
         >
-            <FileBox errored={props.errored}>
+            <FileBox errored={props.errored} borderColor={props.borderColor}>
                 <Input {...dropzone.getInputProps()} />
                 <FileItems>
                     {props.fileName ? (
@@ -112,7 +113,7 @@ const Wrap = styled.div<{ width?: string }>`
     position: relative;
     width: ${props => (props.width ? props.width : '100%')};
 `
-const FileBox = styled.div<{ errored?: boolean }>`
+const FileBox = styled.div<{ errored?: boolean; borderColor?: string }>`
     cursor: pointer;
     text-align: center;
     height: 40px;
@@ -122,12 +123,16 @@ const FileBox = styled.div<{ errored?: boolean }>`
         ${props =>
             props.errored
                 ? props.theme.colors.utilities.red.default
+                : props.borderColor
+                ? props.borderColor
                 : props.theme.colors.primary.default};
     &.attach {
         border: 1px solid
             ${props =>
                 props.errored
                     ? props.theme.colors.utilities.red.default
+                    : props.borderColor
+                    ? props.borderColor
                     : props.theme.colors.primary.default};
     }
 `
@@ -144,7 +149,7 @@ const FileLabel = styled.span`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 13px;
+    font-size: 14px;
     margin-left: 4px;
 `
 const Input = styled.input`
