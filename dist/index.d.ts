@@ -1,5 +1,6 @@
 /// <reference types="react" />
 /// <reference types="@emotion/core" />
+/// <reference types="styled-components" />
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
@@ -86,11 +87,14 @@ export declare const Tooltip: import("react").NamedExoticComponent<{
     text: string;
     direction?: "left" | "right" | "top" | "bottom" | undefined;
 }>;
-export declare const RadioButton: import("react").NamedExoticComponent<{
+export declare const RadioButton: import("react").ForwardRefExoticComponent<Pick<{
     text: string;
     onClick: (e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void;
     disabled?: boolean | undefined;
     checked?: boolean | undefined;
+    theme: _RequiredThemeProps;
+}, "text" | "onClick" | "disabled" | "checked"> & {
+    theme?: _RequiredThemeProps | undefined;
 }>;
 export declare const icons: {
     AddIcon: string;

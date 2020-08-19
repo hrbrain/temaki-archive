@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import styled, { withTheme, RequiredThemeProps } from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
@@ -13,10 +13,11 @@ type Props = {
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void
     disabled?: boolean
     checked?: boolean
+    theme: RequiredThemeProps
 }
 
-export const Component = React.memo<Props>(
-    ({ text, checked, onClick, disabled }) => {
+export const Component = withTheme(
+    React.memo<Props>(({ text, checked, onClick, disabled, theme }) => {
         if (disabled) {
             return (
                 <Outer
@@ -27,7 +28,7 @@ export const Component = React.memo<Props>(
                     <RadioButton
                         svg={IconFiles.icons.RadioDisabled}
                         size="24px"
-                        color={disabled ? 'rgb(214,214,214)' : 'rgb(8,135,54)'}
+                        color={theme.colors.grayScale.S20}
                     />
                     <DisabledLabel>{text}</DisabledLabel>
                 </Outer>
@@ -42,7 +43,11 @@ export const Component = React.memo<Props>(
                 >
                     <RadioButton
                         svg={IconFiles.icons.RadioOn}
-                        color={disabled ? 'rgb(214,214,214)' : 'rgb(8,135,54)'}
+                        color={
+                            disabled
+                                ? theme.colors.grayScale.S20
+                                : theme.colors.primary.default
+                        }
                         size="24px"
                     />
                     <Label disabled={disabled}>{text}</Label>
@@ -55,12 +60,16 @@ export const Component = React.memo<Props>(
                 <RadioButton
                     svg={IconFiles.icons.RadioOff}
                     size="40px"
-                    color={disabled ? 'rgb(214,214,214)' : 'rgb(8,135,54)'}
+                    color={
+                        disabled
+                            ? theme.colors.grayScale.S20
+                            : theme.colors.primary.default
+                    }
                 />
                 <Label disabled={disabled}>{text}</Label>
             </Outer>
         )
-    }
+    })
 )
 
 /**
