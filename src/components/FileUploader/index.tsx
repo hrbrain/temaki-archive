@@ -24,7 +24,7 @@ type Props = {
     className?: string
     errored?: boolean
     errorMessage?: string
-    borderColorType?: string
+    borderColorType?: BorderColorType
 }
 
 /**
@@ -57,7 +57,10 @@ export const Component = React.memo<Props>(props => {
                 className: props.className
             })}
         >
-            <FileBox errored={props.errored}>
+            <FileBox
+                errored={props.errored}
+                borderColorType={props.borderColorType}
+            >
                 <Input {...dropzone.getInputProps()} />
                 <FileItems>
                     {props.fileName ? (
@@ -109,12 +112,12 @@ function renderRemoveButton(onClick: (e: React.MouseEvent) => void) {
 /**
  * Styles
  */
-type ColorType = 'primary' | 'grayScaleS100'
+type BorderColorType = 'primary' | 'grayScaleS100'
 const getBorderColor = (
     theme: Theme.RequiredThemeProps,
-    colorType: ColorType | undefined = 'primary'
+    borderColorType: BorderColorType | undefined = 'primary'
 ) => {
-    switch (colorType) {
+    switch (borderColorType) {
         case 'primary':
             return theme.colors.primary.default
         case 'grayScaleS100':
@@ -127,7 +130,10 @@ const Wrap = styled.div<{ width?: string }>`
     position: relative;
     width: ${props => (props.width ? props.width : '100%')};
 `
-const FileBox = styled.div<{ errored?: boolean; colorType?: ColorType }>`
+const FileBox = styled.div<{
+    errored?: boolean
+    borderColorType?: BorderColorType
+}>`
     cursor: pointer;
     text-align: center;
     height: 40px;
@@ -137,13 +143,13 @@ const FileBox = styled.div<{ errored?: boolean; colorType?: ColorType }>`
         ${props =>
             props.errored
                 ? props.theme.colors.utilities.red.default
-                : getBorderColor(props.theme, props.colorType)};
+                : getBorderColor(props.theme, props.borderColorType)};
     &.attach {
         border: 1px solid
             ${props =>
                 props.errored
                     ? props.theme.colors.utilities.red.default
-                    : getBorderColor(props.theme, props.colorType)};
+                    : getBorderColor(props.theme, props.borderColorType)};
     }
 `
 const FileItems = styled.div`
