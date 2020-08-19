@@ -19,7 +19,6 @@
         }
     },
     "dependencies": {
-        "@types/styled-components": "4.1.18",
         "global": "^4.4.0",
         "moment": "^2.24.0",
         "react-dates": "^21.4.0",
@@ -90,6 +89,7 @@
     "peerDependencies": {
         "@types/react": "^16.8.6",
         "@types/react-dom": "^16.8.3",
+        "@types/styled-components": "^4.1.18",
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
         "styled-components": "^4.3.2"
