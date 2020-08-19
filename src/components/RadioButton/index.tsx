@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import styled, { withTheme, RequiredThemeProps } from '~/modules/theme'
 
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
@@ -11,14 +11,13 @@ import * as Icon from '~/components/Icon'
 type Props = {
     text: string
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void
-    color?: string
-    fontColor?: string
     disabled?: boolean
     checked?: boolean
+    theme: RequiredThemeProps
 }
 
-export const Component = React.memo<Props>(
-    ({ text, checked, onClick, disabled, fontColor, color }) => {
+export const Component = withTheme(
+    React.memo<Props>(({ text, checked, onClick, disabled, theme }) => {
         if (disabled) {
             return (
                 <Outer
@@ -29,6 +28,7 @@ export const Component = React.memo<Props>(
                     <RadioButton
                         svg={IconFiles.icons.RadioDisabled}
                         size="24px"
+                        color={theme.colors.grayScale.S20}
                     />
                     <DisabledLabel>{text}</DisabledLabel>
                 </Outer>
@@ -43,10 +43,10 @@ export const Component = React.memo<Props>(
                 >
                     <RadioButton
                         svg={IconFiles.icons.RadioOn}
+                        color={theme.colors.primary.default}
                         size="24px"
-                        color={color}
                     />
-                    <Label fontColor={fontColor}>{text}</Label>
+                    <Label disabled={disabled}>{text}</Label>
                 </Outer>
             )
         }
@@ -55,13 +55,13 @@ export const Component = React.memo<Props>(
             <Outer data-test="radio-off" disabled={disabled} onClick={onClick}>
                 <RadioButton
                     svg={IconFiles.icons.RadioOff}
-                    size="24px"
-                    color={color}
+                    size="40px"
+                    color={theme.colors.primary.default}
                 />
-                <Label fontColor={fontColor}>{text}</Label>
+                <Label disabled={disabled}>{text}</Label>
             </Outer>
         )
-    }
+    })
 )
 
 /**
@@ -74,7 +74,9 @@ const Outer = styled.div<{ disabled?: boolean }>`
     cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
 `
 
-const RadioButton = styled(Icon.Component)`
+const RadioButton = styled(Icon.Component)<{
+    color?: string
+}>`
     color: ${props =>
         props.color ? props.color : props.theme.colors.primary.default};
     display: flex;
@@ -83,7 +85,7 @@ const RadioButton = styled(Icon.Component)`
     height: 24px;
     width: 24px;
 `
-const Label = styled.span<{ fontColor?: string }>`
+const Label = styled.span<{ disabled?: boolean }>`
     max-width: 280px;
     word-break: break-all;
     font-size: 14px;
@@ -91,7 +93,9 @@ const Label = styled.span<{ fontColor?: string }>`
     height: 24px;
     line-height: 24px;
     color: ${props =>
-        props.fontColor ? props.fontColor : props.theme.colors.primary.P95};
+        props.disabled
+            ? props.theme.colors.grayScale.S20
+            : props.theme.colors.primary.P95};
 `
 const DisabledLabel = styled.span`
     max-width: 280px;

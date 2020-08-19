@@ -1,5 +1,6 @@
 /// <reference types="react" />
 /// <reference types="@emotion/core" />
+/// <reference types="styled-components" />
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
@@ -86,13 +87,14 @@ export declare const Tooltip: import("react").NamedExoticComponent<{
     text: string;
     direction?: "left" | "right" | "top" | "bottom" | undefined;
 }>;
-export declare const RadioButton: import("react").NamedExoticComponent<{
+export declare const RadioButton: import("react").ForwardRefExoticComponent<Pick<{
     text: string;
     onClick: (e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void;
-    color?: string | undefined;
-    fontColor?: string | undefined;
     disabled?: boolean | undefined;
     checked?: boolean | undefined;
+    theme: _RequiredThemeProps;
+}, "text" | "onClick" | "disabled" | "checked"> & {
+    theme?: _RequiredThemeProps | undefined;
 }>;
 export declare const icons: {
     AddIcon: string;
@@ -237,6 +239,7 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     className?: string | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
+    borderColorType?: "primary" | "grayScaleS100" | undefined;
 }>;
 export declare const DatePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
@@ -276,7 +279,7 @@ export declare const Modal: import("react").FunctionComponent<{
         dataTest?: string | undefined;
     } & {
         variant: "box";
-        colorType?: "disabled" | "default" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | undefined;
+        colorType?: "disabled" | "default" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "grayScaleS100" | undefined;
         height?: string | undefined;
         width?: string | undefined;
     } & {
@@ -299,7 +302,7 @@ export declare const Modal: import("react").FunctionComponent<{
         dataTest?: string | undefined;
     } & {
         variant: "text";
-        colorType?: "default" | "primary" | "destructive" | undefined;
+        colorType?: "default" | "primary" | "destructive" | "grayScaleS100" | undefined;
         svg?: string | undefined;
     } & {
         text: string;

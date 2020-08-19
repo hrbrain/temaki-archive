@@ -2,10 +2,10 @@ import * as React from 'react';
 /**
  * Utils
  */
-export declare type ColorTypeProp = 'primary' | 'primary ghost' | 'secondary' | 'secondary ghost' | 'destructive' | 'destructive ghost' | 'disabled' | 'default';
+export declare type ColorTypeProp = 'primary' | 'primary ghost' | 'secondary' | 'secondary ghost' | 'destructive' | 'destructive ghost' | 'disabled' | 'grayScaleS100' | 'default';
 export declare type BoxColorTypeProp = ColorTypeProp;
 export declare type CircleColorTypeProp = Extract<ColorTypeProp, 'primary' | 'secondary' | 'default'>;
-export declare type TextColorTypeProp = Extract<ColorTypeProp, 'primary' | 'destructive' | 'default'>;
+export declare type TextColorTypeProp = Extract<ColorTypeProp, 'primary' | 'destructive' | 'default' | 'grayScaleS100'>;
 export declare const buttonShapeType: {
     box: "box";
     circle: "circle";

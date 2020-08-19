@@ -1,14 +1,17 @@
+/// <reference types="styled-components" />
 import * as React from 'react';
+import { RequiredThemeProps } from '~/modules/theme';
 /**
  * Component
  */
 declare type Props = {
     text: string;
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
-    color?: string;
-    fontColor?: string;
     disabled?: boolean;
     checked?: boolean;
+    theme: RequiredThemeProps;
 };
-export declare const Component: React.NamedExoticComponent<Props>;
+export declare const Component: React.ForwardRefExoticComponent<Pick<Props, "text" | "onClick" | "disabled" | "checked"> & {
+    theme?: RequiredThemeProps | undefined;
+}>;
 export {};

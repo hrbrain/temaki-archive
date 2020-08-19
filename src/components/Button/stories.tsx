@@ -8,24 +8,25 @@ import * as Button from './index'
 import * as IconFiles from '~/lib/iconFiles'
 
 const boxOptions = {
-    Primary: 'primary' as const,
-    PrimaryGhost: 'primary ghost' as const,
-    Secondary: 'secondary' as const,
-    SecondaryGhost: 'secondary ghost' as const,
-    Destructive: 'destructive' as const,
-    DestructiveGhost: 'destructive ghost' as const,
-    Disabled: 'disabled' as const
-}
+    Primary: 'primary',
+    PrimaryGhost: 'primary ghost',
+    Secondary: 'secondary',
+    SecondaryGhost: 'secondary ghost',
+    Destructive: 'destructive',
+    DestructiveGhost: 'destructive ghost',
+    Disabled: 'disabled'
+} as const
 
 const circleOptions = {
-    Primary: 'primary' as const,
-    Secondary: 'secondary' as const
-}
+    Primary: 'primary',
+    Secondary: 'secondary'
+} as const
 
 const textOptions = {
-    Primary: 'primary' as const,
-    Destructive: 'destructive' as const
-}
+    Primary: 'primary',
+    Destructive: 'destructive',
+    grayScaleS100: 'grayScaleS100'
+} as const
 
 storiesOf('Components|Button', module)
     .add('Box', () => (

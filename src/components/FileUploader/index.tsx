@@ -24,6 +24,7 @@ type Props = {
     className?: string
     errored?: boolean
     errorMessage?: string
+    borderColorType?: BorderColorType
 }
 
 /**
@@ -56,7 +57,10 @@ export const Component = React.memo<Props>(props => {
                 className: props.className
             })}
         >
-            <FileBox errored={props.errored}>
+            <FileBox
+                errored={props.errored}
+                borderColorType={props.borderColorType}
+            >
                 <Input {...dropzone.getInputProps()} />
                 <FileItems>
                     {props.fileName ? (
@@ -108,11 +112,28 @@ function renderRemoveButton(onClick: (e: React.MouseEvent) => void) {
 /**
  * Styles
  */
+type BorderColorType = 'primary' | 'grayScaleS100'
+const getBorderColor = (
+    theme: Theme.RequiredThemeProps,
+    borderColorType: BorderColorType | undefined = 'primary'
+) => {
+    switch (borderColorType) {
+        case 'primary':
+            return theme.colors.primary.default
+        case 'grayScaleS100':
+            return theme.colors.grayScale.S10
+        default:
+            throw new Error('not provided type')
+    }
+}
 const Wrap = styled.div<{ width?: string }>`
     position: relative;
     width: ${props => (props.width ? props.width : '100%')};
 `
-const FileBox = styled.div<{ errored?: boolean }>`
+const FileBox = styled.div<{
+    errored?: boolean
+    borderColorType?: BorderColorType
+}>`
     cursor: pointer;
     text-align: center;
     height: 40px;
@@ -122,13 +143,13 @@ const FileBox = styled.div<{ errored?: boolean }>`
         ${props =>
             props.errored
                 ? props.theme.colors.utilities.red.default
-                : props.theme.colors.primary.default};
+                : getBorderColor(props.theme, props.borderColorType)};
     &.attach {
         border: 1px solid
             ${props =>
                 props.errored
                     ? props.theme.colors.utilities.red.default
-                    : props.theme.colors.primary.default};
+                    : getBorderColor(props.theme, props.borderColorType)};
     }
 `
 const FileItems = styled.div`
@@ -144,7 +165,7 @@ const FileLabel = styled.span`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 13px;
+    font-size: ${props => props.theme.typography.pc.body.default};
     margin-left: 4px;
 `
 const Input = styled.input`
