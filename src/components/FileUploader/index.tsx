@@ -159,7 +159,7 @@ const FileLabel = styled.span`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: ${props => props.theme.typography.pc.body.default};
     margin-left: 4px;
 `
 const Input = styled.input`
