@@ -24,7 +24,7 @@ type Props = {
     className?: string
     errored?: boolean
     errorMessage?: string
-    borderColor?: string
+    borderColorType?: string
 }
 
 /**
@@ -57,7 +57,7 @@ export const Component = React.memo<Props>(props => {
                 className: props.className
             })}
         >
-            <FileBox errored={props.errored} borderColor={props.borderColor}>
+            <FileBox errored={props.errored}>
                 <Input {...dropzone.getInputProps()} />
                 <FileItems>
                     {props.fileName ? (
@@ -109,11 +109,25 @@ function renderRemoveButton(onClick: (e: React.MouseEvent) => void) {
 /**
  * Styles
  */
+type ColorType = 'primary' | 'grayScaleS100'
+const getBorderColor = (
+    theme: Theme.RequiredThemeProps,
+    colorType: ColorType | undefined = 'primary'
+) => {
+    switch (colorType) {
+        case 'primary':
+            return theme.colors.primary.default
+        case 'grayScaleS100':
+            return theme.colors.grayScale.S10
+        default:
+            throw new Error('not provided type')
+    }
+}
 const Wrap = styled.div<{ width?: string }>`
     position: relative;
     width: ${props => (props.width ? props.width : '100%')};
 `
-const FileBox = styled.div<{ errored?: boolean; borderColor?: string }>`
+const FileBox = styled.div<{ errored?: boolean; colorType?: ColorType }>`
     cursor: pointer;
     text-align: center;
     height: 40px;
@@ -123,17 +137,13 @@ const FileBox = styled.div<{ errored?: boolean; borderColor?: string }>`
         ${props =>
             props.errored
                 ? props.theme.colors.utilities.red.default
-                : props.borderColor
-                ? props.borderColor
-                : props.theme.colors.primary.default};
+                : getBorderColor(props.theme, props.colorType)};
     &.attach {
         border: 1px solid
             ${props =>
                 props.errored
                     ? props.theme.colors.utilities.red.default
-                    : props.borderColor
-                    ? props.borderColor
-                    : props.theme.colors.primary.default};
+                    : getBorderColor(props.theme, props.colorType)};
     }
 `
 const FileItems = styled.div`

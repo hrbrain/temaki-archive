@@ -235,7 +235,7 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     className?: string | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
-    borderColor?: string | undefined;
+    borderColorType?: string | undefined;
 }>;
 export declare const DatePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
