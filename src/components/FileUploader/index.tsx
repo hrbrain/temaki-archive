@@ -121,7 +121,7 @@ const getBorderColor = (
         case 'primary':
             return theme.colors.primary.default
         case 'grayScaleS100':
-            return theme.colors.grayScale.S10
+            return theme.colors.grayScale.S100
         default:
             throw new Error('not provided type')
     }
