@@ -43,11 +43,7 @@ export const Component = withTheme(
                 >
                     <RadioButton
                         svg={IconFiles.icons.RadioOn}
-                        color={
-                            disabled
-                                ? theme.colors.grayScale.S20
-                                : theme.colors.primary.default
-                        }
+                        color={theme.colors.primary.default}
                         size="24px"
                     />
                     <Label disabled={disabled}>{text}</Label>
@@ -60,11 +56,7 @@ export const Component = withTheme(
                 <RadioButton
                     svg={IconFiles.icons.RadioOff}
                     size="40px"
-                    color={
-                        disabled
-                            ? theme.colors.grayScale.S20
-                            : theme.colors.primary.default
-                    }
+                    color={theme.colors.primary.default}
                 />
                 <Label disabled={disabled}>{text}</Label>
             </Outer>
