@@ -8,7 +8,7 @@ import * as Default from './presentors/Default'
 const DEFAULT = 'default' as const
 const BUTTONLESS = 'buttonless' as const
 
-type Variant = 'warning' | 'info' | 'progress'
+export type Variant = 'warning' | 'info' | 'progress'
 
 type Props = {
     label: string
