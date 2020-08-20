@@ -22,7 +22,7 @@ describe('RadioButton', () => {
     })
 
     it('onClickを呼び出す', () => {
-        wrapper.simulate('click')
+        wrapper.find('div[data-test="radio-off"]').simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
     })
 
