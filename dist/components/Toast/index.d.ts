@@ -4,7 +4,7 @@ import * as React from 'react';
  */
 declare const DEFAULT: "default";
 declare const BUTTONLESS: "buttonless";
-export declare type Variant = 'warning' | 'info' | 'progress';
+declare type Variant = 'warning' | 'info' | 'progress';
 declare type Props = {
     label: string;
     text?: string;
