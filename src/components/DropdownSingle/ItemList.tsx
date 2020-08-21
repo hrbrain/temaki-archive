@@ -69,7 +69,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
     }, [props.onClickItem, props.item, props.onBlurSearchValue])
     const noop = () => {}
     return (
-        <Item onClick={props.item.disabled ? handleClick : noop}>
+        <Item onClick={props.item.disabled ? noop : handleClick}>
             <Icon.Component
                 svg={IconFiles.icons.SingleCheck}
                 size="24px"
@@ -114,8 +114,8 @@ const Item = styled.li`
 
 const Text = styled.div<{ disabled?: boolean }>`
     padding-left: 4px;
-    color: ${props =>
-        props.disabled
-            ? props.theme.colors.grayScale.S20
-            : props.theme.colors.primary.default};
+    ${props =>
+        props.disabled &&
+        `color: ${props.theme.colors.grayScale.S20};
+        cursor: not-allowed;`}
 `
