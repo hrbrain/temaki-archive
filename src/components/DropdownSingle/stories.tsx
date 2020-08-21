@@ -14,7 +14,7 @@ storiesOf('Components|DropdownSingle', module)
                 items={[
                     { value: '', text: '' },
                     { value: '1', text: 'りんご' },
-                    { value: '2', text: 'いちご' },
+                    { value: '2', text: 'いちご', disabled: true },
                     { value: '3', text: 'バナナ' },
                     { value: '4', text: 'メロン' },
                     { value: '5', text: 'さくらんぼ' },
