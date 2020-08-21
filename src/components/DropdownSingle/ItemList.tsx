@@ -51,6 +51,7 @@ const renderItem = (
 export type Item = {
     value: Value
     text: string
+    disabled?: boolean
 }
 export type Value = string
 
@@ -66,9 +67,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
         if (props.onBlurSearchValue !== undefined) props.onBlurSearchValue()
         props.onClickItem(props.item.value)
     }, [props.onClickItem, props.item, props.onBlurSearchValue])
-
+    const noop = () => {}
     return (
-        <Item onClick={handleClick}>
+        <Item onClick={props.item.disabled ? noop : handleClick}>
             <Icon.Component
                 svg={IconFiles.icons.SingleCheck}
                 size="24px"
@@ -78,7 +79,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
                         : defaultTheme.colors.grayScale.S10
                 }
             />
-            <Text>{props.item.text}</Text>
+            <Text disabled={props.item.disabled}>{props.item.text}</Text>
         </Item>
     )
 })
@@ -111,6 +112,10 @@ const Item = styled.li`
     }
 `
 
-const Text = styled.div`
+const Text = styled.div<{ disabled?: boolean }>`
     padding-left: 4px;
+    ${props =>
+        props.disabled &&
+        `color: ${props.theme.colors.grayScale.S20};
+        cursor: not-allowed;`}
 `

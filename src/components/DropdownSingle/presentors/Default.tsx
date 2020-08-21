@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import styled, { RequiredThemeProps } from '~/modules/theme'
 
 import * as ClickOutside from '~/modules/ClickOutside'
 
@@ -14,6 +14,7 @@ import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
+    disabled?: boolean
     onClick: (e: React.MouseEvent) => void
     onClickOutside: () => void
     onClickMenuItem: (value: ItemList.Value) => void
@@ -27,6 +28,7 @@ type Props = {
     diff?: boolean
     className?: string
     errorMessage?: string
+    placeholder?: string
     searchValue: string
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void
     onBlurSearchValue: () => void
@@ -44,7 +46,7 @@ export const Component = React.memo<Props>(props => {
         )
         return items
     }, [props.searchValue])
-
+    const noop = () => {}
     return (
         <Wrap width={props.width} className={props.className}>
             <Inner>
@@ -56,7 +58,8 @@ export const Component = React.memo<Props>(props => {
                         data-test="body"
                         isMenuVisible={props.isMenuVisible}
                         isError={props.isError}
-                        onClick={props.onClick}
+                        onClick={!props.disabled ? props.onClick : noop}
+                        disabled={props.disabled}
                         diff={props.diff}
                     >
                         {props.isMenuVisible ? (
@@ -68,6 +71,8 @@ export const Component = React.memo<Props>(props => {
                                 <Input
                                     data-test="input"
                                     type="text"
+                                    disabled={props.disabled}
+                                    placeholder={props.placeholder}
                                     value={props.searchValue}
                                     onChange={props.onChangeSearchValue}
                                     onKeyDown={props.onKeyDown}
@@ -82,7 +87,9 @@ export const Component = React.memo<Props>(props => {
                                 )}
                             </Text>
                         )}
-                        <IconWrap onClick={props.onClick}>
+                        <IconWrap
+                            onClick={!props.disabled ? props.onClick : noop}
+                        >
                             <DropdownIcon
                                 className={props.isMenuVisible ? 'visible' : ''}
                                 svg={IconFiles.icons.DropdownOff}
@@ -143,6 +150,22 @@ type BodyType = {
     isMenuVisible?: boolean
     isError?: boolean
     diff?: boolean
+    disabled?: boolean
+}
+
+const getBackgroundColor = (
+    theme: RequiredThemeProps,
+    diff?: boolean,
+    disabled?: boolean
+) => {
+    if (disabled) {
+        return theme.colors.grayScale.S20
+    }
+    if (diff) {
+        return theme.colors.utilities.paleYellow
+    } else {
+        return 'inherit'
+    }
 }
 
 const Body = styled.div<BodyType>`
@@ -163,10 +186,9 @@ const Body = styled.div<BodyType>`
     border-radius: 6px;
     user-select: none;
     font-size: 14px;
-    cursor: pointer;
-
+    cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
     background-color: ${props =>
-        props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
+        getBackgroundColor(props.theme, props.diff, props.disabled)};
 `
 
 const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`

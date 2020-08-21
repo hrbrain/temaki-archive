@@ -3,6 +3,7 @@ import * as ItemList from '../ItemList';
 declare type Props = {
     items: ItemList.Item[];
     value: ItemList.Value;
+    disabled?: boolean;
     onClick: (e: React.MouseEvent) => void;
     onClickOutside: () => void;
     onClickMenuItem: (value: ItemList.Value) => void;
@@ -13,6 +14,7 @@ declare type Props = {
     diff?: boolean;
     className?: string;
     errorMessage?: string;
+    placeholder?: string;
     searchValue: string;
     onChangeSearchValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onBlurSearchValue: () => void;

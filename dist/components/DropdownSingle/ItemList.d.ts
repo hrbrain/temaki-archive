@@ -17,6 +17,7 @@ export declare const Component: React.MemoExoticComponent<(props: Props) => JSX.
 export declare type Item = {
     value: Value;
     text: string;
+    disabled?: boolean;
 };
 export declare type Value = string;
 export {};

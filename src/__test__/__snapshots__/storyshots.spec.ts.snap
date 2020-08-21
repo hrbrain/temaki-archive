@@ -1233,8 +1233,9 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
     >
       <div>
         <div
-          className="sc-fzolEj jnVetQ"
+          className="sc-fzolEj eYWLOF"
           data-test="body"
+          disabled={false}
           onClick={[Function]}
         >
           <div
@@ -1281,7 +1282,7 @@ exports[`Storyshots Components|DropdownSingle Input 1`] = `
     >
       <div>
         <div
-          className="sc-fzolEj jnVetQ"
+          className="sc-fzolEj eYWLOF"
           data-test="body"
           onClick={[Function]}
         >
