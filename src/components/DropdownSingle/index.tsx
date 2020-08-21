@@ -13,6 +13,7 @@ export type Item = ItemList.Item
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
+    disabled?: boolean
     type: 'default' | 'borderless'
     onChange: (value: ItemList.Value) => void
     onClickBody?: (event: React.MouseEvent) => void
@@ -100,6 +101,8 @@ export const Component = React.memo<Props>(props => {
                     items={props.items}
                     value={props.value}
                     isError={props.isError}
+                    disabled={props.disabled}
+                    placeholder={props.placeholder}
                     onClick={clickBody}
                     onClickMenuItem={handleOnChange}
                     onClickOutside={closeMenu}

@@ -7,6 +7,7 @@ export declare type Item = ItemList.Item;
 declare type Props = {
     items: ItemList.Item[];
     value: ItemList.Value;
+    disabled?: boolean;
     type: 'default' | 'borderless';
     onChange: (value: ItemList.Value) => void;
     onClickBody?: (event: React.MouseEvent) => void;

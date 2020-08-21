@@ -33,6 +33,7 @@ storiesOf('Components|DropdownSingle', module)
                     },
                     ''
                 )}
+                disabled={boolean('disabled', false)}
                 isError={boolean('isError', false)}
                 errorMessage={text('ErrorMessage', '')}
                 width={text('width', '200px')}
