@@ -161,7 +161,7 @@ const FileIcon = styled(Icon.Component)`
     margin-top: 7px;
 `
 const FileLabel = styled.span`
-    max-width: 248px;
+    max-width: 262px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
