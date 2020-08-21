@@ -2542,11 +2542,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-<<<<<<< HEAD
-            className="sc-eqIVtm jDsWUR"
-=======
-            className="sc-fzoYHE cWQYNT"
->>>>>>> 05b4875... test: fix test
+            className="sc-fzoYHE eCfOfT"
           >
             ファイルを選択またはドラッグ&ドロップ
           </span>
@@ -2599,11 +2595,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-<<<<<<< HEAD
-            className="sc-eqIVtm jDsWUR"
-=======
-            className="sc-fzoYHE cWQYNT"
->>>>>>> 05b4875... test: fix test
+            className="sc-fzoYHE eCfOfT"
           >
             hoge.png
           </span>
