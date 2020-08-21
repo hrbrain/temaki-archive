@@ -22,7 +22,7 @@ describe('Checkbox', () => {
     })
 
     it('should call onClick by users click', () => {
-        wrapper.simulate('click')
+        wrapper.find('div[data-test="nocheck-box"]').simulate('click')
         expect(mockOnClick).toHaveBeenCalled()
     })
 
