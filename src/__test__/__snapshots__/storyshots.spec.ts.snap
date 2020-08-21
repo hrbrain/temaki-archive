@@ -891,7 +891,7 @@ Array [
 
 exports[`Storyshots Components|Badge all 1`] = `
 <div
-  className="sc-AxirZ fgpywr"
+  className="sc-bwzfXH GIbIi"
 >
   10
 </div>
@@ -899,7 +899,7 @@ exports[`Storyshots Components|Badge all 1`] = `
 
 exports[`Storyshots Components|Button Box 1`] = `
 <button
-  className="sc-AxiKw brELHc"
+  className="sc-htpNat jBbDys"
   disabled={false}
   onClick={[Function]}
   type="submit"
@@ -910,7 +910,7 @@ exports[`Storyshots Components|Button Box 1`] = `
 
 exports[`Storyshots Components|Button Circle 1`] = `
 <button
-  className="sc-AxhUy fCMmlZ"
+  className="sc-ifAKCX jYTyKI"
   onClick={[Function]}
   type="reset"
 />
@@ -918,12 +918,12 @@ exports[`Storyshots Components|Button Circle 1`] = `
 
 exports[`Storyshots Components|Button Text 1`] = `
 <button
-  className="sc-AxgMl kYTquo"
+  className="sc-EHOje euMnIY"
   onClick={[Function]}
   type="button"
 >
   <span
-    className="sc-AxheI ikxDYW"
+    className="sc-bZQynM bUEYNy"
     data-test="text-button-child"
   >
     Show filters
@@ -933,13 +933,13 @@ exports[`Storyshots Components|Button Text 1`] = `
 
 exports[`Storyshots Components|Checkbox all 1`] = `
 <div
-  className="sc-Axmtr jgrOWU"
+  className="sc-gzVnrw iyQuzR"
   data-test="nocheck-box"
   onClick={[Function]}
   tabIndex={1}
 >
   <div
-    className="sc-AxhCb eBehuO sc-AxmLO fwmUQb"
+    className="sc-bxivhb hBuNrQ sc-htoDjs kVfsdQ"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -948,7 +948,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
     size="24px"
   />
   <span
-    className="sc-fzozJi ndvKQ"
+    className="sc-dnqmqq gZhRLK"
   >
     Checkbox
   </span>
@@ -957,7 +957,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
 
 exports[`Storyshots Components|Datepicker Null 1`] = `
 <div
-  className="sc-fzplWN OzktN"
+  className="sc-gqjmRU cEmUoj"
   width="100%"
 >
   <div
@@ -974,7 +974,7 @@ exports[`Storyshots Components|Datepicker Null 1`] = `
           type="button"
         >
           <div
-            className="sc-AxhCb eBehuO"
+            className="sc-bxivhb hBuNrQ"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -1018,7 +1018,7 @@ exports[`Storyshots Components|Datepicker Null 1`] = `
 
 exports[`Storyshots Components|Datepicker Standard 1`] = `
 <div
-  className="sc-fzplWN OzktN"
+  className="sc-gqjmRU cEmUoj"
   width="100%"
 >
   <div
@@ -1035,7 +1035,7 @@ exports[`Storyshots Components|Datepicker Standard 1`] = `
           type="button"
         >
           <div
-            className="sc-AxhCb eBehuO"
+            className="sc-bxivhb hBuNrQ"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -1082,31 +1082,31 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-fznWqX jYLkbR"
+    className="sc-jKJlTe kcvHkS"
     width="250px"
   >
     <div
-      className="sc-fzoiQi faTAJQ"
+      className="sc-eNQAEJ iAtEUT"
     >
       <div>
         <div
-          className="sc-fznZeY iBiAUT"
+          className="sc-fjdhpX bAfkxi"
           data-test="body"
           onClick={[Function]}
         >
           <div
-            className="sc-fzokOt cvbxUL"
+            className="sc-jzJRlG bWROPL"
             data-test="text"
           >
             選択してください
           </div>
         </div>
         <div
-          className="sc-fznyAO hkawof"
+          className="sc-VigVT ikhhqW"
           onClick={[Function]}
         >
           <div
-            className="sc-AxhCb eBehuO sc-fznKkj begaOd"
+            className="sc-bxivhb hBuNrQ sc-jTzLTM fuqQfO"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -1116,11 +1116,11 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
           />
         </div>
         <ul
-          className="sc-fzoLag wSgMS sc-fzqARJ cWxzpn"
+          className="sc-kgoBCf fMpODd sc-hMqMXs lfEFkv"
           data-test="itemList"
         >
           <div
-            className="sc-fzoXzr iYbrAy"
+            className="sc-kGXeez cslsSp"
           />
         </ul>
       </div>
@@ -1134,31 +1134,31 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-fznWqX jYLkbR"
+    className="sc-jKJlTe kcvHkS"
     width="250px"
   >
     <div
-      className="sc-fzoiQi faTAJQ"
+      className="sc-eNQAEJ iAtEUT"
     >
       <div>
         <div
-          className="sc-fznZeY iBiAUT"
+          className="sc-fjdhpX bAfkxi"
           data-test="body"
           onClick={[Function]}
         >
           <div
-            className="sc-fzokOt cvbxUL"
+            className="sc-jzJRlG bWROPL"
             data-test="text"
           >
             選択してください
           </div>
         </div>
         <div
-          className="sc-fznyAO hkawof"
+          className="sc-VigVT ikhhqW"
           onClick={[Function]}
         >
           <div
-            className="sc-AxhCb eBehuO sc-fznKkj begaOd"
+            className="sc-bxivhb hBuNrQ sc-jTzLTM fuqQfO"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -1168,11 +1168,11 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
           />
         </div>
         <ul
-          className="sc-fzoLag wSgMS sc-fzqARJ cWxzpn"
+          className="sc-kgoBCf fMpODd sc-hMqMXs lfEFkv"
           data-test="itemList"
         >
           <div
-            className="sc-fzoXzr iYbrAy"
+            className="sc-kGXeez cslsSp"
           />
         </ul>
       </div>
@@ -1186,23 +1186,23 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-fzpkJw eXHpSp"
+    className="sc-gipzik bHEhLY"
     width="250px"
   >
     <div>
       <div
-        className="sc-fzoant elNpzX"
+        className="sc-bRBYWo hzeiJn"
         data-test="body"
         onClick={[Function]}
       >
         <div
-          className="sc-fzomME jPCpAX"
+          className="sc-hzDkRC fDIGex"
           data-test="text"
         >
           20
         </div>
         <div
-          className="sc-AxhCb eBehuO sc-fznMnq bkQFQJ"
+          className="sc-bxivhb hBuNrQ sc-Rmtcm kvfWzN"
           dangerouslySetInnerHTML={
             Object {
               "__html": undefined,
@@ -1212,7 +1212,7 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
         />
       </div>
       <ul
-        className="sc-fzoyTs jRJGXL sc-fznzOf cSjaXa"
+        className="sc-kkGfuU jgIvgL sc-csuQGl lmxiT"
         data-test="itemList"
       />
     </div>
@@ -1225,30 +1225,31 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-fzpmMD eYJJMw"
+    className="sc-eHgmQL cXxRes"
     width="200px"
   >
     <div
-      className="sc-fznxKY frHUqC"
+      className="sc-cvbbAY eFzwdd"
     >
       <div>
         <div
-          className="sc-fzolEj jnVetQ"
+          className="sc-cMljjf eJNeIv"
           data-test="body"
+          disabled={false}
           onClick={[Function]}
         >
           <div
-            className="sc-fzqPZZ kMjWQM"
+            className="sc-jDwBTQ jzIKbf"
             data-test="text"
           >
             
           </div>
           <div
-            className="sc-fznMAR DQQGK"
+            className="sc-jWBwVP fDrbnp"
             onClick={[Function]}
           >
             <div
-              className="sc-AxhCb eBehuO sc-fznWOq cidPqW"
+              className="sc-bxivhb hBuNrQ sc-brqgnP fVeyme"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": undefined,
@@ -1259,7 +1260,7 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
           </div>
         </div>
         <ul
-          className="sc-fzoyTs jRJGXL sc-fzqBkg jOcokz"
+          className="sc-kkGfuU jgIvgL sc-jAaTju gTjAUH"
           data-test="itemList"
         />
       </div>
@@ -1273,30 +1274,30 @@ exports[`Storyshots Components|DropdownSingle Input 1`] = `
   className="ml-20 mt-10"
 >
   <div
-    className="sc-fzpmMD eYJJMw"
+    className="sc-eHgmQL cXxRes"
     width="200px"
   >
     <div
-      className="sc-fznxKY frHUqC"
+      className="sc-cvbbAY eFzwdd"
     >
       <div>
         <div
-          className="sc-fzolEj jnVetQ"
+          className="sc-cMljjf eJNeIv"
           data-test="body"
           onClick={[Function]}
         >
           <div
-            className="sc-fzqPZZ kMjWQM"
+            className="sc-jDwBTQ jzIKbf"
             data-test="text"
           >
             
           </div>
           <div
-            className="sc-fznMAR DQQGK"
+            className="sc-jWBwVP fDrbnp"
             onClick={[Function]}
           >
             <div
-              className="sc-AxhCb eBehuO sc-fznWOq cidPqW"
+              className="sc-bxivhb hBuNrQ sc-brqgnP fVeyme"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": undefined,
@@ -1307,7 +1308,7 @@ exports[`Storyshots Components|DropdownSingle Input 1`] = `
           </div>
         </div>
         <ul
-          className="sc-fzoyTs jRJGXL sc-fzqBkg jOcokz"
+          className="sc-kkGfuU jgIvgL sc-jAaTju gTjAUH"
           data-test="itemList"
         />
       </div>
@@ -1321,7 +1322,7 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
   className="ml-20 mt-10"
 >
   <ul
-    className="sc-fzoyTs jRJGXL"
+    className="sc-kkGfuU jgIvgL"
     data-test="itemList"
   />
 </div>
@@ -1329,10 +1330,10 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
 
 exports[`Storyshots Components|Input Number 1`] = `
 <div
-  className="sc-fznLPX hNFdSl"
+  className="sc-gisBJw cIhFtz"
 >
   <input
-    className="sc-fzoaKM gPSa-dm"
+    className="sc-kjoXOD dyVnsD"
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1347,10 +1348,10 @@ exports[`Storyshots Components|Input Number 1`] = `
 
 exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
 <div
-  className="sc-fznLPX hNFdSl"
+  className="sc-gisBJw cIhFtz"
 >
   <input
-    className="sc-fzoaKM gPSa-dm"
+    className="sc-kjoXOD dyVnsD"
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1365,10 +1366,10 @@ exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
 
 exports[`Storyshots Components|Input Text 1`] = `
 <div
-  className="sc-fznLPX hNFdSl"
+  className="sc-gisBJw cIhFtz"
 >
   <input
-    className="sc-fzoaKM gPSa-dm"
+    className="sc-kjoXOD dyVnsD"
     format="text"
     onBlur={[Function]}
     onChange={[Function]}
@@ -1385,16 +1386,16 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   className="mr-10 mt-56"
 >
   <div
-    className="sc-fzqAui bSUXjZ"
+    className="sc-TOsTZ gIgGkZ"
   >
     <div>
       <div
-        className="sc-fzqMdD gWuOGf top"
+        className="sc-kgAjT grWYMI top"
         data-test="menu-component"
         onClick={[Function]}
       >
         <div
-          className="sc-AxhCb eBehuO sc-fzowVh gSfeHE"
+          className="sc-bxivhb hBuNrQ sc-cJSrbW dLwzxs"
           dangerouslySetInnerHTML={
             Object {
               "__html": undefined,
@@ -1403,28 +1404,28 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
           size="24px"
         />
         <div
-          className="sc-fzoJus cXGpQF"
+          className="sc-ksYbfQ jHwjmi"
         >
           <ul
-            className="sc-fzoVTD cEigny top hidden"
+            className="sc-hmzhuo cKkkit top hidden"
             data-test="list-component"
           >
             <li
-              className="sc-fzpisO RuwgB"
+              className="sc-frDJqD eAYMcm"
               data-test="list-item0"
               onClick={[Function]}
             >
               リスト1
             </li>
             <li
-              className="sc-fzpisO RuwgB"
+              className="sc-frDJqD eAYMcm"
               data-test="list-item1"
               onClick={[Function]}
             >
               リスト2
             </li>
             <li
-              className="sc-fzpisO fXYbTv"
+              className="sc-frDJqD cMnuQS"
               color="destructive"
               data-test="list-item2"
               onClick={[Function]}
@@ -1446,26 +1447,26 @@ exports[`Storyshots Components|Modal all 1`] = `
 >
   <modal>
     <div
-      className="sc-fznyYp ipAJtZ"
+      className="sc-kvZOFW lopafL"
     >
       <div
-        className="sc-fznLxA jfPTMb"
+        className="sc-hqyNC jdcXhp"
       >
         <div
-          className="sc-fznXWL bLmbfY"
+          className="sc-jbKcbu jiLWgm"
         >
           <div
-            className="sc-fzokvW kcjXdo"
+            className="sc-dNLxif fjlJNi"
           >
             ロール作成
           </div>
           <div
-            className="sc-fzqzlV bUxSBz"
+            className="sc-jqCOkK iquMPk"
             data-test="closeIcon"
             onClick={[Function]}
           >
             <div
-              className="sc-AxhCb bZyDsW"
+              className="sc-bxivhb gdKZPc"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": undefined,
@@ -1476,15 +1477,15 @@ exports[`Storyshots Components|Modal all 1`] = `
           </div>
         </div>
         <div
-          className="sc-fzqLLg lhjIXO"
+          className="sc-uJMKN kQzCjM"
         >
           コンテンツ
         </div>
         <div
-          className="sc-fzoxnE kfbURP"
+          className="sc-bbmXgH gckBdo"
         >
           <button
-            className="sc-AxiKw brELHc sc-fzoMdx gViCdJ"
+            className="sc-htpNat jBbDys sc-gGBfsJ grRLJp"
             data-test="button0"
             disabled={false}
             onClick={[Function]}
@@ -1501,13 +1502,13 @@ exports[`Storyshots Components|Modal all 1`] = `
 
 exports[`Storyshots Components|RadioButton all 1`] = `
 <div
-  className="sc-fzoWqW dRgihX"
+  className="sc-jnlKLf iYffli"
   data-test="radio-on"
   disabled={false}
   onClick={[Function]}
 >
   <div
-    className="sc-AxhCb dxsMWA sc-fzplgP jkpXIP"
+    className="sc-bxivhb iLtEre sc-fYxtnH fPTXZr"
     color="rgb(51, 51, 51)"
     dangerouslySetInnerHTML={
       Object {
@@ -1517,7 +1518,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
     size="24px"
   />
   <span
-    className="sc-fznzqM gYgSZn"
+    className="sc-tilXH isyswE"
     disabled={false}
   >
     RadioButton
@@ -1530,7 +1531,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fznYue hsvDDa"
+    className="sc-ktHwxA lmZleY"
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -1538,7 +1539,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
-    className="sc-fznYue iljinW"
+    className="sc-ktHwxA bYpzQe"
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -1546,7 +1547,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
-    className="sc-fznYue iljinW"
+    className="sc-ktHwxA bYpzQe"
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -1561,25 +1562,25 @@ exports[`Storyshots Components|Switch all 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fzonjX bzqwap"
+    className="sc-cIShpX gcZLKb"
     data-test="switch-off"
   >
     <span
-      className="sc-fzoCCn cTegbK"
+      className="sc-iELTvK khcWys"
     >
       OFF
     </span>
     <div
-      className="sc-fzqzEs ekqGkZ"
+      className="sc-kafWEX jaJUrx"
       data-test="switch"
       onClick={[Function]}
     >
       <span
-        className="sc-fzqOul cihRYN"
+        className="sc-feJyhm cBESBY"
       />
     </div>
     <span
-      className="sc-fzoCCn cTegbK"
+      className="sc-iELTvK khcWys"
     >
       ON
     </span>
@@ -1589,7 +1590,7 @@ exports[`Storyshots Components|Switch all 1`] = `
 
 exports[`Storyshots Components|Text Standard 1`] = `
 <p
-  className="sc-fzoPby iWutLR"
+  className="sc-cmTdod bJFFLr"
 >
   Hello
 </p>
@@ -1597,10 +1598,10 @@ exports[`Storyshots Components|Text Standard 1`] = `
 
 exports[`Storyshots Components|Textarea all 1`] = `
 <div
-  className="sc-fzpdbB fSqlbg"
+  className="sc-jwKygS fITEcL"
 >
   <textarea
-    className="sc-fzppAM cuzvTZ"
+    className="sc-btzYZH bRYbyv"
     errored={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -1621,11 +1622,11 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fznBtT hBCsTA"
+    className="sc-lhVmIH dMVQSK"
     data-test="info-buttonless-toast"
   >
     <div
-      className="sc-AxhCb kxENht sc-fznNTe kcxoJJ"
+      className="sc-bxivhb dUTGrc sc-bYSBpT bROmGJ"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1636,12 +1637,12 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
     />
     <div>
       <div
-        className="sc-fzobTh brfsGz"
+        className="sc-elJkPf fSuee"
       >
         ラベル
       </div>
       <div
-        className="sc-fzobTh sc-fzooss jJhKpM"
+        className="sc-elJkPf sc-jtRfpW IRGPX"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
@@ -1655,11 +1656,11 @@ exports[`Storyshots Components|Toast buttonless(progress) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fznBtT fuuRfY"
+    className="sc-lhVmIH iSzVAS"
     data-test="progress-buttonless-toast"
   >
     <div
-      className="sc-AxhCb kxENht sc-fznNTe kcxoJJ"
+      className="sc-bxivhb dUTGrc sc-bYSBpT bROmGJ"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1670,12 +1671,12 @@ exports[`Storyshots Components|Toast buttonless(progress) 1`] = `
     />
     <div>
       <div
-        className="sc-fzobTh hAIaLj"
+        className="sc-elJkPf fEWYfY"
       >
         ラベル
       </div>
       <div
-        className="sc-fzobTh sc-fzooss fkQRAo"
+        className="sc-elJkPf sc-jtRfpW beLXMA"
       >
         状態が入ります状態が入ります
       </div>
@@ -1689,11 +1690,11 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fznBtT lfRaez"
+    className="sc-lhVmIH dnLtrr"
     data-test="warning-buttonless-toast"
   >
     <div
-      className="sc-AxhCb kxENht sc-fznNTe kcxoJJ"
+      className="sc-bxivhb dUTGrc sc-bYSBpT bROmGJ"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1704,12 +1705,12 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
     />
     <div>
       <div
-        className="sc-fzobTh brfsGz"
+        className="sc-elJkPf fSuee"
       >
         ラベル
       </div>
       <div
-        className="sc-fzobTh sc-fzooss jJhKpM"
+        className="sc-elJkPf sc-jtRfpW IRGPX"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
@@ -1723,11 +1724,11 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fzqyvX hUSFlO"
+    className="sc-kTUwUJ hkbvXf"
     data-test="info-default-toast"
   >
     <div
-      className="sc-AxhCb kxENht sc-fzqKVi ddogoZ"
+      className="sc-bxivhb dUTGrc sc-dqBHgY bIytbs"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1738,22 +1739,22 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
     />
     <div>
       <div
-        className="sc-fzoOEf hloDsZ"
+        className="sc-dfVpRl fxOUBj"
       >
         ラベル
       </div>
       <div
-        className="sc-fzoOEf sc-fzpdyU hWFquA"
+        className="sc-dfVpRl sc-gzOgki hbNfHp"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
     <span
-      className="sc-fzoCUK glNDqf"
+      className="sc-gxMtzJ epDZms"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb kxENht sc-fzqKVi ddogoZ"
+        className="sc-bxivhb dUTGrc sc-dqBHgY bIytbs"
         color="white"
         dangerouslySetInnerHTML={
           Object {
@@ -1772,11 +1773,11 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
   className="m-10"
 >
   <div
-    className="sc-fzqyvX fsZonF"
+    className="sc-kTUwUJ dSGGUH"
     data-test="warning-default-toast"
   >
     <div
-      className="sc-AxhCb kxENht sc-fzqKVi ddogoZ"
+      className="sc-bxivhb dUTGrc sc-dqBHgY bIytbs"
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -1787,22 +1788,22 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
     />
     <div>
       <div
-        className="sc-fzoOEf hloDsZ"
+        className="sc-dfVpRl fxOUBj"
       >
         ラベル
       </div>
       <div
-        className="sc-fzoOEf sc-fzpdyU hWFquA"
+        className="sc-dfVpRl sc-gzOgki hbNfHp"
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
     <span
-      className="sc-fzoCUK glNDqf"
+      className="sc-gxMtzJ epDZms"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb kxENht sc-fzqKVi ddogoZ"
+        className="sc-bxivhb dUTGrc sc-dqBHgY bIytbs"
         color="white"
         dangerouslySetInnerHTML={
           Object {
@@ -1818,12 +1819,12 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
 
 exports[`Storyshots Components|ToolTip all 1`] = `
 <div
-  className="sc-fzppip bODhgj"
+  className="sc-iyvyFf jhMOAK"
   data-test="tool-tip"
   direction="top"
 >
   <span
-    className="sc-fznBMq eQVHlP"
+    className="sc-hwwEjo eSunMv"
   >
     テキスト要素
   </span>
@@ -1835,7 +1836,7 @@ exports[`Storyshots basics|Icons index 1`] = `
   className="flex flex-wrap w-64"
 >
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1844,7 +1845,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1853,7 +1854,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1862,7 +1863,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1871,7 +1872,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1880,7 +1881,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1889,7 +1890,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1898,7 +1899,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1907,7 +1908,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1916,7 +1917,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1925,7 +1926,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1934,7 +1935,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1943,7 +1944,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1952,7 +1953,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1961,7 +1962,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1970,7 +1971,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1979,7 +1980,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1988,7 +1989,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -1997,7 +1998,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2006,7 +2007,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2015,7 +2016,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2024,7 +2025,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2033,7 +2034,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2042,7 +2043,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2051,7 +2052,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2060,7 +2061,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2069,7 +2070,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2078,7 +2079,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2087,7 +2088,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2096,7 +2097,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2105,7 +2106,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2114,7 +2115,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2123,7 +2124,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2132,7 +2133,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2141,7 +2142,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2150,7 +2151,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2159,7 +2160,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2168,7 +2169,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2177,7 +2178,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2186,7 +2187,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2195,7 +2196,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2204,7 +2205,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2213,7 +2214,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2222,7 +2223,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2231,7 +2232,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2240,7 +2241,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2249,7 +2250,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2258,7 +2259,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2267,7 +2268,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2276,7 +2277,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2285,7 +2286,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2294,7 +2295,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2303,7 +2304,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2312,7 +2313,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2321,7 +2322,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2330,7 +2331,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2339,7 +2340,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2348,7 +2349,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2357,7 +2358,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2366,7 +2367,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2375,7 +2376,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2384,7 +2385,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2393,7 +2394,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2402,7 +2403,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2411,7 +2412,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2420,7 +2421,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2429,7 +2430,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2438,7 +2439,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2447,7 +2448,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2456,7 +2457,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2465,7 +2466,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2474,7 +2475,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2483,7 +2484,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="sc-bdVaJa cCvjGY"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
@@ -2500,7 +2501,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
 >
   <div>
     <div
-      className="sc-fzqAbL gGxUqu"
+      className="sc-jhAzac bvtblw"
       onBlur={[Function]}
       onClick={[Function]}
       onDragEnter={[Function]}
@@ -2513,11 +2514,11 @@ exports[`Storyshots components|FileUploader all 1`] = `
       width="400px"
     >
       <div
-        className="sc-fzqMAW jtKaSj"
+        className="sc-fBuWsC bKcKdj"
       >
         <input
           autoComplete="off"
-          className="sc-fzpkqZ loOdwT"
+          className="sc-fAjcbJ eplkBQ"
           multiple={true}
           onChange={[Function]}
           onClick={[Function]}
@@ -2530,10 +2531,10 @@ exports[`Storyshots components|FileUploader all 1`] = `
           type="file"
         />
         <div
-          className="sc-fzoydu NgWoI"
+          className="sc-fMiknA gbDqtB"
         >
           <div
-            className="sc-AxhCb eBehuO sc-fzoJMP gsOfyA"
+            className="sc-bxivhb hBuNrQ sc-dVhcbM cpkkCf"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -2542,7 +2543,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-            className="sc-fzoYHE eCfOfT"
+            className="sc-eqIVtm jDsWUR"
           >
             ファイルを選択またはドラッグ&ドロップ
           </span>
@@ -2554,7 +2555,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
     className="mt-8"
   >
     <div
-      className="sc-fzqAbL fVrmWC"
+      className="sc-jhAzac ijNrch"
       onBlur={[Function]}
       onClick={[Function]}
       onDragEnter={[Function]}
@@ -2566,11 +2567,11 @@ exports[`Storyshots components|FileUploader all 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-fzqMAW jtKaSj"
+        className="sc-fBuWsC bKcKdj"
       >
         <input
           autoComplete="off"
-          className="sc-fzpkqZ loOdwT"
+          className="sc-fAjcbJ eplkBQ"
           multiple={true}
           onChange={[Function]}
           onClick={[Function]}
@@ -2583,10 +2584,10 @@ exports[`Storyshots components|FileUploader all 1`] = `
           type="file"
         />
         <div
-          className="sc-fzoydu NgWoI"
+          className="sc-fMiknA gbDqtB"
         >
           <div
-            className="sc-AxhCb eBehuO sc-fzoJMP gsOfyA"
+            className="sc-bxivhb hBuNrQ sc-dVhcbM cpkkCf"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -2595,16 +2596,16 @@ exports[`Storyshots components|FileUploader all 1`] = `
             size="24px"
           />
           <span
-            className="sc-fzoYHE eCfOfT"
+            className="sc-eqIVtm jDsWUR"
           >
             hoge.png
           </span>
           <div
-            className="sc-fznAgC eoYzWY"
+            className="sc-caSCKo jIcVXR"
             onClick={[Function]}
           >
             <div
-              className="sc-AxhCb bLkCMk"
+              className="sc-bxivhb fOXTLs"
               color="rgb(224, 85, 72)"
               dangerouslySetInnerHTML={
                 Object {
@@ -2623,7 +2624,7 @@ exports[`Storyshots components|FileUploader all 1`] = `
 
 exports[`Storyshots components|Icon Standard 1`] = `
 <div
-  className="sc-AxhCb cTHWuO"
+  className="sc-bxivhb edXnbt"
   color="#333"
   dangerouslySetInnerHTML={
     Object {

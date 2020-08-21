@@ -171,41 +171,134 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
     value="Testing Value"
   >
     <styled.div>
-      <div
-        className="c0"
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bwzfXH",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "
+    display: inline-flex;
+    flex-direction: column;
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
       >
-        <Styled(TextareaAutosize)
-          onBlur={[MockFunction]}
-          onChange={[Function]}
-          onFocus={[MockFunction]}
-          value="Testing Value"
+        <div
+          className="c0"
         >
-          <TextareaAutosize
-            className="c1"
-            inputRef={[Function]}
+          <Styled(TextareaAutosize)
             onBlur={[MockFunction]}
             onChange={[Function]}
             onFocus={[MockFunction]}
-            onHeightChange={[Function]}
-            useCacheForDOMMeasurements={false}
             value="Testing Value"
           >
-            <textarea
-              className="c1"
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": false,
+                    "lastClassName": "c1",
+                    "rules": Array [
+                      "
+    display: block;
+    border: 1px solid ",
+                      [Function],
+                      ";
+    border-radius: 6px;
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    color: ",
+                      [Function],
+                      ";
+    &::placeholder {
+        color: ",
+                      [Function],
+                      ";
+    }
+
+    &:focus {
+        border-color: ",
+                      [Function],
+                      ";
+    }
+
+    border-color: ",
+                      [Function],
+                      ";
+
+    background-color: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "Styled(TextareaAutosize)",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": [Function],
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
               onBlur={[MockFunction]}
               onChange={[Function]}
               onFocus={[MockFunction]}
-              style={
-                Object {
-                  "height": 0,
-                }
-              }
               value="Testing Value"
-            />
-          </TextareaAutosize>
-        </Styled(TextareaAutosize)>
-        <FormErrorMessage />
-      </div>
+            >
+              <TextareaAutosize
+                className="c1"
+                inputRef={[Function]}
+                onBlur={[MockFunction]}
+                onChange={[Function]}
+                onFocus={[MockFunction]}
+                onHeightChange={[Function]}
+                useCacheForDOMMeasurements={false}
+                value="Testing Value"
+              >
+                <textarea
+                  className="c1"
+                  onBlur={[MockFunction]}
+                  onChange={[Function]}
+                  onFocus={[MockFunction]}
+                  style={
+                    Object {
+                      "height": 0,
+                    }
+                  }
+                  value="Testing Value"
+                />
+              </TextareaAutosize>
+            </StyledComponent>
+          </Styled(TextareaAutosize)>
+          <FormErrorMessage />
+        </div>
+      </StyledComponent>
     </styled.div>
   </Textarea>
 </ThemeProvider>

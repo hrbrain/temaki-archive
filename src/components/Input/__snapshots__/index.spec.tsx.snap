@@ -193,25 +193,128 @@ exports[`Input format of number should match previous snapshot 1`] = `
         value="145"
       >
         <styled.div>
-          <div
-            className="c0"
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": false,
+                  "lastClassName": "c0",
+                  "rules": Array [
+                    "
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <styled.input
-              format="number"
-              onBlur={[Function]}
-              onChange={[Function]}
-              value="145"
+            <div
+              className="c0"
             >
-              <input
-                className="c1"
+              <styled.input
                 format="number"
                 onBlur={[Function]}
                 onChange={[Function]}
                 value="145"
-              />
-            </styled.input>
-            <FormErrorMessage />
-          </div>
+              >
+                <StyledComponent
+                  format="number"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": false,
+                        "lastClassName": "c1",
+                        "rules": Array [
+                          "
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 6px;
+    border: solid 1px ",
+                          [Function],
+                          ";
+    transition: 0.15s border-color;
+
+    ",
+                          [Function],
+                          "
+
+    ",
+                          [Function],
+                          "
+    
+    ",
+                          [Function],
+                          "
+
+    &:focus {
+        outline: none;
+        border-color: ",
+                          [Function],
+                          ";
+    }
+
+    &::placeholder {
+        color: ",
+                          [Function],
+                          ";
+    }
+",
+                        ],
+                      },
+                      "displayName": "styled.input",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": "input",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  value="145"
+                >
+                  <input
+                    className="c1"
+                    format="number"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    value="145"
+                  />
+                </StyledComponent>
+              </styled.input>
+              <FormErrorMessage />
+            </div>
+          </StyledComponent>
         </styled.div>
       </Component>
     </Component>
@@ -453,25 +556,128 @@ exports[`Input format of text should match previous snapshot 1`] = `
         value="Testing Value"
       >
         <styled.div>
-          <div
-            className="c0"
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": false,
+                  "lastClassName": "c0",
+                  "rules": Array [
+                    "
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <styled.input
-              format="text"
-              onBlur={[MockFunction]}
-              onChange={[Function]}
-              value="Testing Value"
+            <div
+              className="c0"
             >
-              <input
-                className="c1"
+              <styled.input
                 format="text"
                 onBlur={[MockFunction]}
                 onChange={[Function]}
                 value="Testing Value"
-              />
-            </styled.input>
-            <FormErrorMessage />
-          </div>
+              >
+                <StyledComponent
+                  format="text"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": false,
+                        "lastClassName": "c1",
+                        "rules": Array [
+                          "
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 6px;
+    border: solid 1px ",
+                          [Function],
+                          ";
+    transition: 0.15s border-color;
+
+    ",
+                          [Function],
+                          "
+
+    ",
+                          [Function],
+                          "
+    
+    ",
+                          [Function],
+                          "
+
+    &:focus {
+        outline: none;
+        border-color: ",
+                          [Function],
+                          ";
+    }
+
+    &::placeholder {
+        color: ",
+                          [Function],
+                          ";
+    }
+",
+                        ],
+                      },
+                      "displayName": "styled.input",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": "input",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  onBlur={[MockFunction]}
+                  onChange={[Function]}
+                  value="Testing Value"
+                >
+                  <input
+                    className="c1"
+                    format="text"
+                    onBlur={[MockFunction]}
+                    onChange={[Function]}
+                    value="Testing Value"
+                  />
+                </StyledComponent>
+              </styled.input>
+              <FormErrorMessage />
+            </div>
+          </StyledComponent>
         </styled.div>
       </Component>
     </Component>
