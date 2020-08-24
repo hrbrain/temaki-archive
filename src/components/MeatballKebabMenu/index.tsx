@@ -13,13 +13,13 @@ type Props = {
     type: 'meatball' | 'kebab'
     position: 'top' | 'bottom'
     listItems: Item[]
-    onClick: (e: React.MouseEvent) => void
+    onClick: (e: React.MouseEvent<HTMLElement>) => void
 }
 
 export type Item = {
     item: string
     color?: 'default' | 'primary' | 'destructive'
-    onClick: (e: React.MouseEvent) => void
+    onClick: (e: React.MouseEvent<HTMLElement>) => void
 }
 
 const renderListItem = (
@@ -27,7 +27,7 @@ const renderListItem = (
     setIsShow: (value: boolean) => void
 ) => (listItem: Item, index: number) => {
     const listClick = React.useCallback(
-        (e: React.MouseEvent) => {
+        (e: React.MouseEvent<HTMLElement>) => {
             listItem.onClick(e)
             setIsShow(!isShow)
         },
@@ -36,6 +36,7 @@ const renderListItem = (
     return (
         <ListItem
             data-test={`list-item${index}`}
+            data-item={listItem.item}
             onClick={listClick}
             key={listItem.item}
             color={listItem.color}
@@ -49,7 +50,7 @@ export const Component = React.memo<Props>(
     ({ type, position, listItems, onClick }) => {
         const [isShow, setIsShow] = React.useState<boolean>(false)
         const handleClick = React.useCallback(
-            (e: React.MouseEvent) => {
+            (e: React.MouseEvent<HTMLElement>) => {
                 setIsShow(!isShow)
                 onClick(e)
             },

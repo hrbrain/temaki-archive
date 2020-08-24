@@ -1412,6 +1412,7 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
           >
             <li
               className="sc-fzpisO RuwgB"
+              data-item="リスト1"
               data-test="list-item0"
               onClick={[Function]}
             >
@@ -1419,6 +1420,7 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
             </li>
             <li
               className="sc-fzpisO RuwgB"
+              data-item="リスト2"
               data-test="list-item1"
               onClick={[Function]}
             >
@@ -1427,6 +1429,7 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
             <li
               className="sc-fzpisO fXYbTv"
               color="destructive"
+              data-item="リスト3"
               data-test="list-item2"
               onClick={[Function]}
             >

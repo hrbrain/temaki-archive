@@ -229,7 +229,7 @@ export declare const MeatballMenu: import("react").NamedExoticComponent<{
     type: "meatball" | "kebab";
     position: "top" | "bottom";
     listItems: _MeatballMenu.Item[];
-    onClick: (e: import("react").MouseEvent<Element, MouseEvent>) => void;
+    onClick: (e: import("react").MouseEvent<HTMLElement, MouseEvent>) => void;
 }>;
 export declare type MeatballMenuItem = _MeatballMenu.Item;
 export declare const FileUploader: import("react").NamedExoticComponent<{
