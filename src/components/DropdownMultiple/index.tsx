@@ -77,7 +77,7 @@ export const Component = React.memo<Props>(props => {
             item.text.includes(searchValue)
         )
         return items
-    }, [searchValue])
+    }, [searchValue, props.items])
 
     const keyDownInInput = React.useCallback(
         (e: React.KeyboardEvent) => {
