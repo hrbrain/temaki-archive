@@ -270,6 +270,7 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     selectedColor?: string | undefined;
     selectedHoverColor?: string | undefined;
     defaultHoverColor?: string | undefined;
+    invalidInputMessage?: string | undefined;
 }>;
 export declare const Modal: import("react").FunctionComponent<{
     isOpen: boolean;
