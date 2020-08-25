@@ -24,7 +24,11 @@ storiesOf('Components|Datepicker', module)
             selectedColor={Knobs.text('selectedColor', '')}
             defaultHoverColor={Knobs.text('defaultHoverColor', '')}
             errored={Knobs.boolean('Error', false)}
-            errorMessage={Knobs.text('ErrorMessage', '')}
+            errorMessage={Knobs.text('ErrorMessage', 'aaaaaaaaa')}
+            invalidInputMessage={Knobs.text(
+                'invalidInputMessage',
+                '2000/01/23のようにYYYY/MM/DDと入力してください'
+            )}
         />
     ))
     .add('Null', () => (
