@@ -41,11 +41,8 @@ export const Component = React.memo<Props>(props => {
     }, [props.isMenuVisible])
 
     const filteredItems = React.useMemo(() => {
-        const items = props.items.filter(item =>
-            item.text.includes(props.searchValue)
-        )
-        return items
-    }, [props.searchValue])
+        return props.items.filter(item => item.text.includes(props.searchValue))
+    }, [props.searchValue, props.items])
     const noop = () => {}
     return (
         <Wrap width={props.width} className={props.className}>
