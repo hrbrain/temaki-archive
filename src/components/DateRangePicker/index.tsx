@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
-import * as moment from 'moment'
+import * as Moment from 'moment'
 import * as ReactDates from 'react-dates'
 import 'react-dates/initialize'
 // 日本時間で固定
@@ -28,6 +28,12 @@ type Props = {
     selectedColor?: string
     selectedHoverColor?: string
     defaultHoverColor?: string
+    invalidInputMessage?: string
+}
+
+type InvalidInput = {
+    isInvalid: boolean
+    message: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -36,9 +42,15 @@ export const Component = React.memo<Props>(props => {
         setFocusedInput
     ] = React.useState<ReactDates.FocusedInputShape | null>(null)
 
+    const [invalidInput, setInvalidInput] = React.useState<InvalidInput>({
+        isInvalid: false,
+        message:
+            props.invalidInputMessage || '入力フォーマットが正しくありません'
+    })
+
     const conversionToMomentType = React.useCallback(
         (date: Date | null) => {
-            return date ? moment(date) : null
+            return date ? Moment(date) : null
         },
         [props.startDate, props.endDate]
     )
@@ -51,13 +63,25 @@ export const Component = React.memo<Props>(props => {
     )
 
     const handleOnDatesChange = React.useCallback(
-        ({ startDate, endDate }) => {
+        ({
+            startDate,
+            endDate
+        }: {
+            startDate: null | Moment.Moment
+            endDate: null | Moment.Moment
+        }) => {
+            if (!startDate || !endDate) {
+                setInvalidInput({ ...invalidInput, isInvalid: true })
+            } else {
+                setInvalidInput({ ...invalidInput, isInvalid: false })
+            }
+
             // 必ず12時が帰ってくるので9時にする（UTC上の0時）
             const rtnStartDate = startDate ? startDate.hour(9).toDate() : null
             const rtnEndDate = endDate ? endDate.hour(9).toDate() : null
             props.onChange(rtnStartDate, rtnEndDate)
         },
-        [props.onChange]
+        [props.onChange, setInvalidInput]
     )
 
     const calendarIconRender = React.useMemo(() => {
@@ -76,6 +100,16 @@ export const Component = React.memo<Props>(props => {
         return false
     }, [])
 
+    const errored = React.useMemo(
+        () => props.errored || invalidInput.isInvalid,
+        [props.errored, invalidInput.isInvalid]
+    )
+
+    const errorMessage = React.useMemo(() => {
+        if (invalidInput.isInvalid) return invalidInput.message
+        return props.errorMessage
+    }, [invalidInput, props.invalidInputMessage, props.errorMessage])
+
     return (
         <Outer
             width={props.width}
@@ -83,7 +117,7 @@ export const Component = React.memo<Props>(props => {
             selectedHoverColor={props.selectedHoverColor}
             selectedColor={props.selectedColor}
             selectedRangeColor={props.selectedRangeColor}
-            errored={props.errored}
+            errored={errored}
         >
             <ReactDates.DateRangePicker
                 startDate={conversionToMomentType(props.startDate)}
@@ -106,10 +140,7 @@ export const Component = React.memo<Props>(props => {
                 isOutsideRange={allowAllDays}
                 keepOpenOnDateSelect={true}
             />
-            <ErrorMessage.Component
-                errored={props.errored}
-                message={props.errorMessage}
-            />
+            <ErrorMessage.Component errored={errored} message={errorMessage} />
         </Outer>
     )
 })

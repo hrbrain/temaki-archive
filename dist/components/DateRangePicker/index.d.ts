@@ -19,6 +19,7 @@ declare type Props = {
     selectedColor?: string;
     selectedHoverColor?: string;
     defaultHoverColor?: string;
+    invalidInputMessage?: string;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
