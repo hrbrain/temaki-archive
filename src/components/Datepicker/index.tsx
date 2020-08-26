@@ -38,7 +38,8 @@ export const Component = React.memo<Props>(props => {
     const [invalidInput, setInvalidInput] = React.useState<InvalidInput>({
         isInvalid: false,
         message:
-            props.invalidInputMessage || '入力フォーマットが正しくありません'
+            props.invalidInputMessage ||
+            'YYYY/MM/DDまたはYYYY年MM月DD日と入力してください。'
     })
 
     const conversionToMomentType = React.useCallback(
