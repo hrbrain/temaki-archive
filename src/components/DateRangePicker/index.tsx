@@ -28,12 +28,6 @@ type Props = {
     selectedColor?: string
     selectedHoverColor?: string
     defaultHoverColor?: string
-    invalidInputMessage?: string
-}
-
-type InvalidInput = {
-    isInvalid: boolean
-    message: string
 }
 
 export const Component = React.memo<Props>(props => {
@@ -41,13 +35,6 @@ export const Component = React.memo<Props>(props => {
         focusedInput,
         setFocusedInput
     ] = React.useState<ReactDates.FocusedInputShape | null>(null)
-
-    const [invalidInput, setInvalidInput] = React.useState<InvalidInput>({
-        isInvalid: false,
-        message:
-            props.invalidInputMessage ||
-            'YYYY/MM/DDまたはYYYY年MM月DD日と入力してください。'
-    })
 
     const conversionToMomentType = React.useCallback(
         (date: Date | null) => {
@@ -71,18 +58,12 @@ export const Component = React.memo<Props>(props => {
             startDate: null | Moment.Moment
             endDate: null | Moment.Moment
         }) => {
-            if (!startDate || !endDate) {
-                setInvalidInput({ ...invalidInput, isInvalid: true })
-            } else {
-                setInvalidInput({ ...invalidInput, isInvalid: false })
-            }
-
             // 必ず12時が帰ってくるので9時にする（UTC上の0時）
             const rtnStartDate = startDate ? startDate.hour(9).toDate() : null
             const rtnEndDate = endDate ? endDate.hour(9).toDate() : null
             props.onChange(rtnStartDate, rtnEndDate)
         },
-        [props.onChange, setInvalidInput]
+        [props.onChange]
     )
 
     const calendarIconRender = React.useMemo(() => {
@@ -101,16 +82,6 @@ export const Component = React.memo<Props>(props => {
         return false
     }, [])
 
-    const errored = React.useMemo(
-        () => props.errored || invalidInput.isInvalid,
-        [props.errored, invalidInput.isInvalid]
-    )
-
-    const errorMessage = React.useMemo(() => {
-        if (invalidInput.isInvalid) return invalidInput.message
-        return props.errorMessage
-    }, [invalidInput, props.invalidInputMessage, props.errorMessage])
-
     return (
         <Outer
             width={props.width}
@@ -118,7 +89,7 @@ export const Component = React.memo<Props>(props => {
             selectedHoverColor={props.selectedHoverColor}
             selectedColor={props.selectedColor}
             selectedRangeColor={props.selectedRangeColor}
-            errored={errored}
+            errored={props.errored}
         >
             <ReactDates.DateRangePicker
                 startDate={conversionToMomentType(props.startDate)}
@@ -141,7 +112,10 @@ export const Component = React.memo<Props>(props => {
                 isOutsideRange={allowAllDays}
                 keepOpenOnDateSelect={true}
             />
-            <ErrorMessage.Component errored={errored} message={errorMessage} />
+            <ErrorMessage.Component
+                errored={props.errored}
+                message={props.errorMessage}
+            />
         </Outer>
     )
 })
