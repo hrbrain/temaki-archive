@@ -107,8 +107,8 @@ export const Component = React.memo<Props>(props => {
     }, [])
 
     const errored = React.useMemo(
-        () => props.errored || invalidInput.isInvalid,
-        [props.errored, invalidInput.isInvalid]
+        () => props.errored || (!focusedInput && invalidInput.isInvalid),
+        [props.errored, invalidInput.isInvalid, focusedInput]
     )
 
     const errorMessage = React.useMemo(() => {
