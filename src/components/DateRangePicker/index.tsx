@@ -106,10 +106,14 @@ export const Component = React.memo<Props>(props => {
         return false
     }, [])
 
-    const errored = React.useMemo(
-        () => props.errored || (!focusedInput && invalidInput.isInvalid),
-        [props.errored, invalidInput.isInvalid, focusedInput]
-    )
+    const errored = React.useMemo(() => {
+        // eslint-disable-next-line
+        console.log('focusedInput', focusedInput)
+        // eslint-disable-next-line
+        console.log('invalidInput.isInvalid', invalidInput.isInvalid)
+
+        return props.errored || (!focusedInput && invalidInput.isInvalid)
+    }, [props.errored, invalidInput.isInvalid, focusedInput])
 
     const errorMessage = React.useMemo(() => {
         if (invalidInput.isInvalid) return invalidInput.message
