@@ -71,7 +71,12 @@ export const Component = React.memo<Props>(props => {
             startDate: null | Moment.Moment
             endDate: null | Moment.Moment
         }) => {
-            if (!startDate || !endDate) {
+            // startとend片方だけの入力は許可されているので、入力しようとしている方のフォーマットのチェックのみ行う
+            const isInvalidCondition =
+                (focusedInput === 'startDate' && !startDate) ||
+                (focusedInput === 'endDate' && !endDate)
+
+            if (isInvalidCondition) {
                 setInvalidInput({ ...invalidInput, isInvalid: true })
             } else {
                 setInvalidInput({ ...invalidInput, isInvalid: false })
@@ -82,7 +87,7 @@ export const Component = React.memo<Props>(props => {
             const rtnEndDate = endDate ? endDate.hour(9).toDate() : null
             props.onChange(rtnStartDate, rtnEndDate)
         },
-        [props.onChange, setInvalidInput]
+        [props.onChange, setInvalidInput, focusedInput]
     )
 
     const calendarIconRender = React.useMemo(() => {
