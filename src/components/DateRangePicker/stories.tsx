@@ -40,10 +40,6 @@ storiesOf('Components|DateRangePicker', module)
             width={Knobs.text('width', '300px')}
             errored={Knobs.boolean('Error', false)}
             errorMessage={Knobs.text('ErrorMessage', '')}
-            invalidInputMessage={Knobs.text(
-                'invalidInputMessage',
-                '2000/01/23のようにYYYY/MM/DDと入力してください'
-            )}
         />
     ))
     .add('Null', () => (

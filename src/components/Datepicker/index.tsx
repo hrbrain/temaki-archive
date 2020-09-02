@@ -24,23 +24,10 @@ type Props = {
     placeholderText?: string
     selectedColor?: string
     defaultHoverColor?: string
-    invalidInputMessage?: string
-}
-
-type InvalidInput = {
-    isInvalid: boolean
-    message: string
 }
 
 export const Component = React.memo<Props>(props => {
     const [focused, setFocused] = React.useState<boolean>(false)
-
-    const [invalidInput, setInvalidInput] = React.useState<InvalidInput>({
-        isInvalid: false,
-        message:
-            props.invalidInputMessage ||
-            'YYYY/MM/DDまたはYYYY年MM月DD日と入力してください。'
-    })
 
     const conversionToMomentType = React.useCallback(
         (date: Date | null) => {
@@ -56,16 +43,14 @@ export const Component = React.memo<Props>(props => {
     const handleOnDateChange = React.useCallback(
         (date: null | Moment.Moment) => {
             if (!date) {
-                setInvalidInput({ ...invalidInput, isInvalid: true })
                 return props.onChange(null)
             }
-            setInvalidInput({ ...invalidInput, isInvalid: false })
 
             // 必ず12時が帰ってくるので9時にして返す（UTC上での0時）
             date.hour(9)
             return props.onChange(date.toDate())
         },
-        [props.date, props.onChange, setInvalidInput]
+        [props.date, props.onChange]
     )
 
     const calendarIconRender = React.useMemo(() => {
@@ -84,22 +69,12 @@ export const Component = React.memo<Props>(props => {
         return false
     }, [])
 
-    const errored = React.useMemo(
-        () => props.errored || invalidInput.isInvalid,
-        [props.errored, invalidInput.isInvalid]
-    )
-
-    const errorMessage = React.useMemo(() => {
-        if (invalidInput.isInvalid) return invalidInput.message
-        return props.errorMessage
-    }, [invalidInput, props.invalidInputMessage, props.errorMessage])
-
     return (
         <Outer
             width={props.width}
             defaultHoverColor={props.defaultHoverColor}
             selectedColor={props.selectedColor}
-            errored={errored}
+            errored={props.errored}
         >
             <ReactDates.SingleDatePicker
                 id={'date'}
@@ -117,7 +92,10 @@ export const Component = React.memo<Props>(props => {
                 enableOutsideDays={true}
                 isOutsideRange={allowAllDays}
             />
-            <ErrorMessage.Component message={errorMessage} errored={errored} />
+            <ErrorMessage.Component
+                message={props.errorMessage}
+                errored={props.errored}
+            />
         </Outer>
     )
 })
