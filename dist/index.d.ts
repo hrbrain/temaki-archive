@@ -159,6 +159,7 @@ export declare const icons: {
     SortList: string;
     SortUpDown: string;
     SortItems: string;
+    Subtract: string;
     Staff: string;
     Tag: string;
     Text: string;
@@ -309,4 +310,16 @@ export declare const Modal: import("react").FunctionComponent<{
         text: string;
     }))[] | undefined;
     onClose: () => void;
+}>;
+export declare const ScaleController: import("react").ForwardRefExoticComponent<Pick<{
+    scale: number;
+    onChangeScale: (scale: number) => void;
+    theme: _RequiredThemeProps;
+}, "scale" | "onChangeScale"> & {
+    theme?: _RequiredThemeProps | undefined;
+}>;
+export declare const ScaleBody: import("react").NamedExoticComponent<{
+    scale: number;
+    displayType?: "Horizontal" | "Vertical" | undefined;
+    children: import("react").ReactNode;
 }>;
