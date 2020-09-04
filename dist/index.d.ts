@@ -318,7 +318,7 @@ export declare const ScaleController: import("react").ForwardRefExoticComponent<
 }, "scale" | "onChangeScale"> & {
     theme?: _RequiredThemeProps | undefined;
 }>;
-export declare const ScaleBody: import("react").NamedExoticComponent<{
+export declare const ScaleRange: import("react").NamedExoticComponent<{
     scale: number;
     displayType?: "Horizontal" | "Vertical" | undefined;
     children: import("react").ReactNode;

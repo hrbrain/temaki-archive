@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 
 import * as ScaleController from './controller'
-import * as ScaleBody from './body'
+import * as ScaleRange from './range'
 
 storiesOf('Components|Scale', module).add('Default', () => {
     return (
@@ -13,9 +13,9 @@ storiesOf('Components|Scale', module).add('Default', () => {
                 scale={Number(text('scale', '1'))}
                 onChangeScale={action('onChangeScale')}
             />
-            <ScaleBody.Component scale={Number(text('scale', '1'))}>
+            <ScaleRange.Component scale={Number(text('scale', '1'))}>
                 <div>ScaleTarget</div>
-            </ScaleBody.Component>
+            </ScaleRange.Component>
         </>
     )
 })
