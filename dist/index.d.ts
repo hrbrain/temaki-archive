@@ -313,13 +313,16 @@ export declare const Modal: import("react").FunctionComponent<{
 }>;
 export declare const ScaleController: import("react").ForwardRefExoticComponent<Pick<{
     scale: number;
+    step?: number | undefined;
+    min?: number | undefined;
+    max?: number | undefined;
     onChangeScale: (scale: number) => void;
     theme: _RequiredThemeProps;
-}, "scale" | "onChangeScale"> & {
+}, "max" | "min" | "scale" | "step" | "onChangeScale"> & {
     theme?: _RequiredThemeProps | undefined;
 }>;
 export declare const ScaleRange: import("react").NamedExoticComponent<{
     scale: number;
-    displayType?: "Horizontal" | "Vertical" | undefined;
+    displayType: "Horizontal" | "Vertical";
     children: import("react").ReactNode;
 }>;

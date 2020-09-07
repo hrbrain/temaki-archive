@@ -5,12 +5,16 @@ type DisplayTypeProps = 'Horizontal' | 'Vertical'
 
 type Props = {
     scale: number
-    displayType?: DisplayTypeProps
+    displayType: DisplayTypeProps
     children: React.ReactNode
 }
 
 export const Component = React.memo<Props>(props => {
-    return <Scale scale={props.scale}>{props.children}</Scale>
+    return (
+        <Scale scale={props.scale} displayType={props.displayType}>
+            {props.children}
+        </Scale>
+    )
 })
 
 const Scale = styled.div<Props>`
