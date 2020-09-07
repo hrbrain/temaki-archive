@@ -12,6 +12,9 @@ storiesOf('Components|Scale', module)
             <ScaleController.Component
                 scale={Number(text('scale', '1'))}
                 onChangeScale={action('onChangeScale')}
+                min={Number(text('min', '0'))}
+                max={Number(text('max', '1.2'))}
+                step={Number(text('step', '0.1'))}
             />
             <ScaleRange.Component
                 scale={Number(text('scale', '1'))}
@@ -26,6 +29,9 @@ storiesOf('Components|Scale', module)
             <ScaleController.Component
                 scale={Number(text('scale', '1'))}
                 onChangeScale={action('onChangeScale')}
+                min={Number(text('min', '0'))}
+                max={Number(text('max', '1.2'))}
+                step={Number(text('step', '0.1'))}
             />
             <ScaleRange.Component
                 scale={Number(text('scale', '1'))}

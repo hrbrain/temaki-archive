@@ -6,32 +6,43 @@ import * as Icon from '~/components/Icon'
 
 type Props = {
     scale: number
+    step?: number
+    min?: number
+    max?: number
     onChangeScale: (scale: number) => void
     theme: RequiredThemeProps
 }
 
+const defaultMax = 1
+const defaultMin = 0.25
+const defaultStep = 0.05
+
 export const Component = withTheme(
-    React.memo<Props>(({ scale, onChangeScale, theme }) => {
+    React.memo<Props>(props => {
         const clickIncrement = React.useCallback(() => {
-            if (scale >= 1) return
-            onChangeScale(scale + 0.05)
-        }, [scale])
+            if (props.scale >= (props.max ? props.max : defaultMax)) return
+            props.onChangeScale(
+                props.scale + (props.step ? props.step : defaultStep)
+            )
+        }, [props.scale])
 
         const clickDecrement = React.useCallback(() => {
-            if (scale <= 0.25) return
-            onChangeScale(scale - 0.05)
-        }, [scale])
+            if (props.scale <= (props.min ? props.min : defaultMin)) return
+            props.onChangeScale(
+                props.scale - (props.step ? props.step : defaultStep)
+            )
+        }, [props.scale])
 
         const displayValue = React.useMemo(() => {
-            return `${Math.round(scale * 100)}.00%`
-        }, [scale])
+            return `${Math.round(props.scale * 100)}.00%`
+        }, [props.scale])
 
         return (
             <ScaleWrap>
                 <ScaleButtonLeft onClick={clickIncrement}>
                     <StyledIcon
                         svg={IconFiles.icons.AddIcon}
-                        color={theme.colors.primary.default}
+                        color={props.theme.colors.primary.default}
                         size={'24px'}
                     />
                 </ScaleButtonLeft>
