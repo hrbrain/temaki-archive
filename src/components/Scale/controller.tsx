@@ -39,7 +39,10 @@ export const Component = withTheme(
 
         return (
             <ScaleWrap>
-                <ScaleButtonLeft onClick={clickIncrement}>
+                <ScaleButtonLeft
+                    onClick={clickIncrement}
+                    data-test="incrementScale"
+                >
                     <StyledIcon
                         svg={IconFiles.icons.AddIcon}
                         color={props.theme.colors.primary.default}
@@ -47,7 +50,10 @@ export const Component = withTheme(
                     />
                 </ScaleButtonLeft>
                 <ScaleLabel>{displayValue}</ScaleLabel>
-                <ScaleButtonRight onClick={clickDecrement}>
+                <ScaleButtonRight
+                    onClick={clickDecrement}
+                    data-test="decrementScale"
+                >
                     <StyledIcon svg={IconFiles.icons.Subtract} size={'24px'} />
                 </ScaleButtonRight>
             </ScaleWrap>
