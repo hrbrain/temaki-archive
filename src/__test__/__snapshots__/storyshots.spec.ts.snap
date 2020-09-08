@@ -2360,11 +2360,7 @@ exports[`Storyshots Components|Datepicker Null 1`] = `
 }
 
 <div
-<<<<<<< HEAD
   className="c0"
-=======
-  className="sc-fzpans jGHqak"
->>>>>>> 801c951... Fix snapshot
   width="100%"
 >
   <div
@@ -3528,11 +3524,7 @@ exports[`Storyshots Components|Datepicker Standard 1`] = `
 }
 
 <div
-<<<<<<< HEAD
   className="c0"
-=======
-  className="sc-fzpans jGHqak"
->>>>>>> 801c951... Fix snapshot
   width="100%"
 >
   <div
@@ -4969,16 +4961,91 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 
 exports[`Storyshots Components|Scale Horizontal 1`] = `
 Array [
-  <div
-    className="sc-fznYue jFtPuv"
+  .c2 {
+  height: 24px;
+  width: 24px;
+}
+
+.c2 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c2 #fill {
+  fill: rgb(51,51,51);
+}
+
+.c6 {
+  height: 24px;
+  width: 24px;
+}
+
+.c6 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 138px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 6px;
+  background: rgb(255,255,255);
+  border: 1px solid rgb(234,234,234);
+}
+
+.c4 {
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: rgb(51,51,51);
+}
+
+.c3 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.c1 {
+  cursor: pointer;
+  width: 32px;
+  text-align: center;
+  background: rgb(245,245,245);
+  border-right: 1px solid rgb(234,234,234);
+  border-radius: 5px 0 0 5px;
+}
+
+.c5 {
+  cursor: pointer;
+  width: 32px;
+  text-align: center;
+  background: rgb(245,245,245);
+  border-left: 1px solid rgb(234,234,234);
+  border-radius: 0 5px 5px 0;
+}
+
+<div
+    className="c0"
   >
     <div
-      className="sc-fzqzEs sc-fzoCCn jYgNMq"
+      className="c1"
       data-test="incrementScale"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb dxsMWA sc-fzqOul bKZsVf"
+        className="c2 c3"
         color="rgb(51, 51, 51)"
         dangerouslySetInnerHTML={
           Object {
@@ -4989,17 +5056,17 @@ Array [
       />
     </div>
     <span
-      className="sc-fzonjX IRZQm"
+      className="c4"
     >
       100.00%
     </span>
     <div
-      className="sc-fzqzEs sc-fzoPby iVVjI"
+      className="c5"
       data-test="decrementScale"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb eBehuO sc-fzqOul bKZsVf"
+        className="c6 c3"
         dangerouslySetInnerHTML={
           Object {
             "__html": undefined,
@@ -5009,8 +5076,17 @@ Array [
       />
     </div>
   </div>,
-  <div
-    className="sc-fzpdbB dtWqBQ"
+  .c0 {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+
+<div
+    className="c0"
     scale={1}
   >
     <div>
@@ -5022,16 +5098,91 @@ Array [
 
 exports[`Storyshots Components|Scale Vertical 1`] = `
 Array [
-  <div
-    className="sc-fznYue jFtPuv"
+  .c2 {
+  height: 24px;
+  width: 24px;
+}
+
+.c2 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c2 #fill {
+  fill: rgb(51,51,51);
+}
+
+.c6 {
+  height: 24px;
+  width: 24px;
+}
+
+.c6 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 138px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  border-radius: 6px;
+  background: rgb(255,255,255);
+  border: 1px solid rgb(234,234,234);
+}
+
+.c4 {
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: rgb(51,51,51);
+}
+
+.c3 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.c1 {
+  cursor: pointer;
+  width: 32px;
+  text-align: center;
+  background: rgb(245,245,245);
+  border-right: 1px solid rgb(234,234,234);
+  border-radius: 5px 0 0 5px;
+}
+
+.c5 {
+  cursor: pointer;
+  width: 32px;
+  text-align: center;
+  background: rgb(245,245,245);
+  border-left: 1px solid rgb(234,234,234);
+  border-radius: 0 5px 5px 0;
+}
+
+<div
+    className="c0"
   >
     <div
-      className="sc-fzqzEs sc-fzoCCn jYgNMq"
+      className="c1"
       data-test="incrementScale"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb dxsMWA sc-fzqOul bKZsVf"
+        className="c2 c3"
         color="rgb(51, 51, 51)"
         dangerouslySetInnerHTML={
           Object {
@@ -5042,17 +5193,17 @@ Array [
       />
     </div>
     <span
-      className="sc-fzonjX IRZQm"
+      className="c4"
     >
       100.00%
     </span>
     <div
-      className="sc-fzqzEs sc-fzoPby iVVjI"
+      className="c5"
       data-test="decrementScale"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb eBehuO sc-fzqOul bKZsVf"
+        className="c6 c3"
         dangerouslySetInnerHTML={
           Object {
             "__html": undefined,
@@ -5062,8 +5213,17 @@ Array [
       />
     </div>
   </div>,
-  <div
-    className="sc-fzpdbB gACPrs"
+  .c0 {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+<div
+    className="c0"
     scale={1}
   >
     <div>
@@ -5168,11 +5328,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
   className="m-10"
 >
   <div
-<<<<<<< HEAD
     className="c0"
-=======
-    className="sc-fzppAM kDhqIx"
->>>>>>> 801c951... Fix snapshot
     data-test="item0"
     onClick={[Function]}
     selected={true}
@@ -5180,11 +5336,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     最初のタブ
   </div>
   <div
-<<<<<<< HEAD
     className="c1"
-=======
-    className="sc-fzppAM jLWOjl"
->>>>>>> 801c951... Fix snapshot
     data-test="item1"
     onClick={[Function]}
     selected={false}
@@ -5192,11 +5344,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
     真ん中のタブ
   </div>
   <div
-<<<<<<< HEAD
     className="c1"
-=======
-    className="sc-fzppAM jLWOjl"
->>>>>>> 801c951... Fix snapshot
     data-test="item2"
     onClick={[Function]}
     selected={false}
@@ -5258,45 +5406,25 @@ exports[`Storyshots Components|Switch all 1`] = `
   className="m-10"
 >
   <div
-<<<<<<< HEAD
     className="c0"
     data-test="switch-off"
   >
     <span
       className="c1"
-=======
-    className="sc-fznBtT gltBuW"
-    data-test="switch-off"
-  >
-    <span
-      className="sc-fzooss clhSCP"
->>>>>>> 801c951... Fix snapshot
     >
       OFF
     </span>
     <div
-<<<<<<< HEAD
       className="c2"
-=======
-      className="sc-fznNTe jGuaHJ"
->>>>>>> 801c951... Fix snapshot
       data-test="switch"
       onClick={[Function]}
     >
       <span
-<<<<<<< HEAD
         className="c3"
       />
     </div>
     <span
       className="c1"
-=======
-        className="sc-fzobTh eFLbxn"
-      />
-    </div>
-    <span
-      className="sc-fzooss clhSCP"
->>>>>>> 801c951... Fix snapshot
     >
       ON
     </span>
@@ -5310,11 +5438,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 }
 
 <p
-<<<<<<< HEAD
   className="c0"
-=======
-  className="sc-fzqyvX kqBNTj"
->>>>>>> 801c951... Fix snapshot
 >
   Hello
 </p>
@@ -5366,17 +5490,10 @@ exports[`Storyshots Components|Textarea all 1`] = `
 }
 
 <div
-<<<<<<< HEAD
   className="c0"
 >
   <textarea
     className="c1"
-=======
-  className="sc-fzqKVi dkDqIt"
->
-  <textarea
-    className="sc-fzoCUK jfHnMX"
->>>>>>> 801c951... Fix snapshot
     errored={false}
     onBlur={[Function]}
     onChange={[Function]}
@@ -5454,19 +5571,11 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
   className="m-10"
 >
   <div
-<<<<<<< HEAD
     className="c0"
     data-test="info-buttonless-toast"
   >
     <div
       className="c1 c2"
-=======
-    className="sc-fzoOEf eccCsP"
-    data-test="info-buttonless-toast"
-  >
-    <div
-      className="sc-AxhCb kxENht sc-fzpdyU bYhqCM"
->>>>>>> 801c951... Fix snapshot
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -5477,20 +5586,12 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
     />
     <div>
       <div
-<<<<<<< HEAD
         className="c3"
-=======
-        className="sc-fzppip cwVPcz"
->>>>>>> 801c951... Fix snapshot
       >
         ラベル
       </div>
       <div
-<<<<<<< HEAD
         className="c4"
-=======
-        className="sc-fzppip sc-fznBMq dRAalg"
->>>>>>> 801c951... Fix snapshot
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
@@ -5561,19 +5662,11 @@ exports[`Storyshots Components|Toast buttonless(progress) 1`] = `
   className="m-10"
 >
   <div
-<<<<<<< HEAD
     className="c0"
     data-test="progress-buttonless-toast"
   >
     <div
       className="c1 c2"
-=======
-    className="sc-fzoOEf eoOmCz"
-    data-test="progress-buttonless-toast"
-  >
-    <div
-      className="sc-AxhCb kxENht sc-fzpdyU bYhqCM"
->>>>>>> 801c951... Fix snapshot
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -5584,20 +5677,12 @@ exports[`Storyshots Components|Toast buttonless(progress) 1`] = `
     />
     <div>
       <div
-<<<<<<< HEAD
         className="c3"
-=======
-        className="sc-fzppip eflobr"
->>>>>>> 801c951... Fix snapshot
       >
         ラベル
       </div>
       <div
-<<<<<<< HEAD
         className="c4"
-=======
-        className="sc-fzppip sc-fznBMq liTRHs"
->>>>>>> 801c951... Fix snapshot
       >
         状態が入ります状態が入ります
       </div>
@@ -5668,19 +5753,11 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
   className="m-10"
 >
   <div
-<<<<<<< HEAD
     className="c0"
     data-test="warning-buttonless-toast"
   >
     <div
       className="c1 c2"
-=======
-    className="sc-fzoOEf fLtWjY"
-    data-test="warning-buttonless-toast"
-  >
-    <div
-      className="sc-AxhCb kxENht sc-fzpdyU bYhqCM"
->>>>>>> 801c951... Fix snapshot
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -5691,20 +5768,12 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
     />
     <div>
       <div
-<<<<<<< HEAD
         className="c3"
-=======
-        className="sc-fzppip cwVPcz"
->>>>>>> 801c951... Fix snapshot
       >
         ラベル
       </div>
       <div
-<<<<<<< HEAD
         className="c4"
-=======
-        className="sc-fzppip sc-fznBMq dRAalg"
->>>>>>> 801c951... Fix snapshot
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
@@ -5779,19 +5848,11 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
   className="m-10"
 >
   <div
-<<<<<<< HEAD
     className="c0"
     data-test="info-default-toast"
   >
     <div
       className="c1 c2"
-=======
-    className="sc-fznNvL gZihGy"
-    data-test="info-default-toast"
-  >
-    <div
-      className="sc-AxhCb kxENht sc-fzocqA kkAEKc"
->>>>>>> 801c951... Fix snapshot
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -5802,38 +5863,22 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
     />
     <div>
       <div
-<<<<<<< HEAD
         className="c3"
-=======
-        className="sc-fzqyOu jvcOcY"
->>>>>>> 801c951... Fix snapshot
       >
         ラベル
       </div>
       <div
-<<<<<<< HEAD
         className="c4"
-=======
-        className="sc-fzqyOu sc-fzqKxP iIgVpe"
->>>>>>> 801c951... Fix snapshot
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
     <span
-<<<<<<< HEAD
       className="c5"
       onClick={[Function]}
     >
       <div
         className="c1 c2"
-=======
-      className="sc-fzonZV fZuFKQ"
-      onClick={[Function]}
-    >
-      <div
-        className="sc-AxhCb kxENht sc-fzocqA kkAEKc"
->>>>>>> 801c951... Fix snapshot
         color="white"
         dangerouslySetInnerHTML={
           Object {
@@ -5913,19 +5958,11 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
   className="m-10"
 >
   <div
-<<<<<<< HEAD
     className="c0"
     data-test="warning-default-toast"
   >
     <div
       className="c1 c2"
-=======
-    className="sc-fznNvL dXsYkx"
-    data-test="warning-default-toast"
-  >
-    <div
-      className="sc-AxhCb kxENht sc-fzocqA kkAEKc"
->>>>>>> 801c951... Fix snapshot
       color="white"
       dangerouslySetInnerHTML={
         Object {
@@ -5936,38 +5973,22 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
     />
     <div>
       <div
-<<<<<<< HEAD
         className="c3"
-=======
-        className="sc-fzqyOu jvcOcY"
->>>>>>> 801c951... Fix snapshot
       >
         ラベル
       </div>
       <div
-<<<<<<< HEAD
         className="c4"
-=======
-        className="sc-fzqyOu sc-fzqKxP iIgVpe"
->>>>>>> 801c951... Fix snapshot
       >
         メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
       </div>
     </div>
     <span
-<<<<<<< HEAD
       className="c5"
       onClick={[Function]}
     >
       <div
         className="c1 c2"
-=======
-      className="sc-fzonZV fZuFKQ"
-      onClick={[Function]}
-    >
-      <div
-        className="sc-AxhCb kxENht sc-fzocqA kkAEKc"
->>>>>>> 801c951... Fix snapshot
         color="white"
         dangerouslySetInnerHTML={
           Object {
@@ -6023,20 +6044,12 @@ exports[`Storyshots Components|ToolTip all 1`] = `
 }
 
 <div
-<<<<<<< HEAD
   className="c0"
-=======
-  className="sc-pANHa cXeqgQ"
->>>>>>> 801c951... Fix snapshot
   data-test="tool-tip"
   direction="top"
 >
   <span
-<<<<<<< HEAD
     className="c1"
-=======
-    className="sc-pIJJz hmtqXg"
->>>>>>> 801c951... Fix snapshot
   >
     テキスト要素
   </span>
@@ -6714,7 +6727,7 @@ exports[`Storyshots basics|Icons index 1`] = `
     fill="#888"
   />
   <div
-    className="sc-AxjAm cCPmjj"
+    className="c0"
     dangerouslySetInnerHTML={
       Object {
         "__html": undefined,
