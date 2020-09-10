@@ -171,7 +171,6 @@ export declare const icons: {
     Url: string;
     Warning: string;
     Loading: string;
-    Batsu: string;
 };
 export declare const defaultTheme: _RequiredThemeProps;
 export declare type RequiredThemeProps = _RequiredThemeProps;

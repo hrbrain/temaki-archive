@@ -142,11 +142,7 @@ const renderText = (
     return (
         <InnerText key={`${value}-${index}`}>
             {item.text}
-            {hasRemove && (
-                <div onClick={onClick(value, index)}>
-                    <Remove />
-                </div>
-            )}
+            {hasRemove && <Remove onClick={onClick(value, index)} />}
         </InnerText>
     )
 }
@@ -222,7 +218,7 @@ const Remove = styled.div`
             ${props => props.theme.colors.utilities.red.default};
         border-right: transparent;
         border-left: transparent;
-        transform: translate(45deg, 45deg);
+        border-bottom: transparent;
         transform: rotate(45deg);
         border-width: 2px;
         border-radius: 2px;
@@ -238,7 +234,7 @@ const Remove = styled.div`
             ${props => props.theme.colors.utilities.red.default};
         border-right: transparent;
         border-left: transparent;
-        transform: translate(45deg, 45deg);
+        border-bottom: transparent;
         transform: rotate(135deg);
         border-width: 2px;
         border-radius: 2px;
@@ -254,7 +250,7 @@ const InnerText = styled.div`
     align-items: center;
     background: ${props => props.theme.colors.primary.N95};
     color: ${props => props.theme.colors.primary.default};
-    padding: 6.5px 12px 6.5px 8px;
+    padding: 6.5px 8px;
     margin: 4px 8px 4px 0px;
     border-radius: 20px;
     font-weight: bold;

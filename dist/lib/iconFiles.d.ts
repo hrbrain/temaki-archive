@@ -73,5 +73,4 @@ export declare const icons: {
     Url: string;
     Warning: string;
     Loading: string;
-    Batsu: string;
 };
