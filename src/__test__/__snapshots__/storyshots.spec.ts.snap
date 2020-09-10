@@ -6571,15 +6571,6 @@ exports[`Storyshots basics|Icons index 1`] = `
     }
     fill="#888"
   />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
 </div>
 `;
 
