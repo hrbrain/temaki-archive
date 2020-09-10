@@ -143,9 +143,9 @@ const renderText = (
         <InnerText key={`${value}-${index}`}>
             {item.text}
             {hasRemove && (
-                <RemoveWrap onClick={onClick(value, index)}>
-                    <Icon.Component svg={IconFiles.icons.Batsu} size="10px" />
-                </RemoveWrap>
+                <div onClick={onClick(value, index)}>
+                    <Remove />
+                </div>
             )}
         </InnerText>
     )
@@ -206,11 +206,47 @@ const Text = styled.div`
     width: calc(100% - 28px);
 `
 
-const RemoveWrap = styled.div`
-    margin: 0 0px 0 8px;
+const Remove = styled.div`
+    display: block;
     background: ${props => props.theme.colors.grayScale.S0};
-    padding: 4px;
     border-radius: 50%;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+}
+    &:before {
+        content: '';
+        display: block;
+        border-top: solid 1px
+            ${props => props.theme.colors.utilities.red.default};
+        border-right: transparent;
+        border-left: transparent;
+        transform: translate(45deg, 45deg);
+        transform: rotate(45deg);
+        border-width: 2px;
+        border-radius: 2px;
+        width: 10px;
+        position: absolute;
+        top: 7px;
+        left: 3px;
+    }
+    &:after {
+        content: '';
+        display: block;
+        border-top: solid 1px
+            ${props => props.theme.colors.utilities.red.default};
+        border-right: transparent;
+        border-left: transparent;
+        transform: translate(45deg, 45deg);
+        transform: rotate(135deg);
+        border-width: 2px;
+        border-radius: 2px;
+        width: 10px;
+        position: absolute;
+        top: 7px;
+        left: 3px;
+    }
 `
 const InnerText = styled.div`
     display: inline-flex;
@@ -218,11 +254,11 @@ const InnerText = styled.div`
     align-items: center;
     background: ${props => props.theme.colors.primary.N95};
     color: ${props => props.theme.colors.primary.default};
-    padding: 0 4px;
+    padding: 6.5px 12px 6.5px 8px;
     margin: 4px 8px 4px 0px;
-    border-radius: 12px;
+    border-radius: 20px;
     font-weight: bold;
-    line-height: 1.8;
+    line-height: 1;
 `
 
 const SelectorInput = styled.div`
