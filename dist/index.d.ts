@@ -171,6 +171,7 @@ export declare const icons: {
     Url: string;
     Warning: string;
     Loading: string;
+    Batsu: string;
 };
 export declare const defaultTheme: _RequiredThemeProps;
 export declare type RequiredThemeProps = _RequiredThemeProps;
@@ -217,6 +218,8 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     items: import("./components/DropdownMultiple/itemList").Item[];
     values: string[];
     onChange: (value: string[]) => void;
+    hasRemove?: boolean | undefined;
+    onClickRemove?: ((value: string, index: number) => void) | undefined;
     width?: string | undefined;
     placeholder?: string | undefined;
     isError?: boolean | undefined;

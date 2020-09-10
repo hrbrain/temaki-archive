@@ -72,6 +72,7 @@ import Union from '~/../icons/union.svg'
 import Url from '~/../icons/url.svg'
 import Warning from '~/../icons/warning.svg'
 import Loading from '~/../icons/loading.svg'
+import Batsu from '~/../icons/batsu.svg'
 
 export const icons = {
     AddIcon,
@@ -147,5 +148,6 @@ export const icons = {
     Union,
     Url,
     Warning,
-    Loading
+    Loading,
+    Batsu
 }
