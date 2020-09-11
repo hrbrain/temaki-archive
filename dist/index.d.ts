@@ -311,18 +311,14 @@ export declare const Modal: import("react").FunctionComponent<{
     }))[] | undefined;
     onClose: () => void;
 }>;
-export declare const ScaleController: import("react").ForwardRefExoticComponent<Pick<{
-    scale: number;
-    step?: number | undefined;
-    min?: number | undefined;
-    max?: number | undefined;
-    onChangeScale: (scale: number) => void;
+export declare const StepNumber: import("react").ForwardRefExoticComponent<Pick<{
+    defaultValue: number;
+    step: number;
+    min: number;
+    max: number;
+    unit: string;
     theme: _RequiredThemeProps;
-}, "max" | "min" | "scale" | "step" | "onChangeScale"> & {
+    rate: number;
+}, "max" | "min" | "defaultValue" | "step" | "unit" | "rate"> & {
     theme?: _RequiredThemeProps | undefined;
-}>;
-export declare const ScaleRange: import("react").NamedExoticComponent<{
-    scale: number;
-    displayType: "Horizontal" | "Vertical";
-    children: import("react").ReactNode;
 }>;

@@ -29,8 +29,7 @@ import {
 import * as _DatePicker from './components/Datepicker/index'
 import * as _DateRangePicker from './components/DateRangePicker/index'
 
-import * as _ScaleController from './components/Scale/controller'
-import * as _ScaleRange from './components/Scale/range'
+import * as _StepNumber from './components/StepNumber'
 
 export const Text = _Text.Component
 export const Icon = _Icon.Component
@@ -57,5 +56,4 @@ export const FileUploader = _FileUploader.Component
 export const DatePicker = _DatePicker.Component
 export const DateRangePicker = _DateRangePicker.Component
 export const Modal = _Modal.Component
-export const ScaleController = _ScaleController.Component
-export const ScaleRange = _ScaleRange.Component
+export const StepNumber = _StepNumber.Component

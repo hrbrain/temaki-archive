@@ -5,63 +5,64 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
 type Props = {
-    scale: number
-    step?: number
-    min?: number
-    max?: number
-    onChangeScale: (scale: number) => void
+    defaultValue: number
+    step: number
+    min: number
+    max: number
+    unit: string
     theme: RequiredThemeProps
+    rate: number
 }
-
-const defaultMax = 1
-const defaultMin = 0.25
-const defaultStep = 0.05
 
 export const Component = withTheme(
     React.memo<Props>(props => {
+        const [currentValue, setCurrentValue] = React.useState(
+            props.defaultValue || 0
+        )
+
         const clickIncrement = React.useCallback(() => {
-            if (props.scale >= (props.max ? props.max : defaultMax)) return
-            props.onChangeScale(
-                props.scale + (props.step ? props.step : defaultStep)
-            )
-        }, [props.scale])
+            if (currentValue >= props.max) return
+            setCurrentValue(currentValue + props.step)
+        }, [currentValue])
 
         const clickDecrement = React.useCallback(() => {
-            if (props.scale <= (props.min ? props.min : defaultMin)) return
-            props.onChangeScale(
-                props.scale - (props.step ? props.step : defaultStep)
-            )
-        }, [props.scale])
+            if (currentValue <= props.min) return
+            setCurrentValue(currentValue - props.step)
+        }, [currentValue])
 
         const displayValue = React.useMemo(() => {
-            return `${Math.round(props.scale * 100)}.00%`
-        }, [props.scale])
+            const formatValue = Math.round(currentValue * props.rate)
+            return formatValue
+        }, [currentValue])
 
         return (
-            <ScaleWrap>
-                <ScaleButtonLeft
+            <Wrap>
+                <IncrementButton
                     onClick={clickIncrement}
-                    data-test="incrementScale"
+                    data-test="incrementValue"
                 >
                     <StyledIcon
                         svg={IconFiles.icons.AddIcon}
                         color={props.theme.colors.primary.default}
                         size={'24px'}
                     />
-                </ScaleButtonLeft>
-                <ScaleLabel>{displayValue}</ScaleLabel>
-                <ScaleButtonRight
+                </IncrementButton>
+                <Label>
+                    {displayValue}
+                    {props.unit}
+                </Label>
+                <DecrementButton
                     onClick={clickDecrement}
-                    data-test="decrementScale"
+                    data-test="decrementValue"
                 >
                     <StyledIcon svg={IconFiles.icons.Subtract} size={'24px'} />
-                </ScaleButtonRight>
-            </ScaleWrap>
+                </DecrementButton>
+            </Wrap>
         )
     })
 )
 
-const ScaleWrap = styled.div`
+const Wrap = styled.div`
     display: flex;
     justify-content: space-between;
     width: 138px;
@@ -73,17 +74,10 @@ const ScaleWrap = styled.div`
     border: 1px solid ${props => props.theme.colors.grayScale.S10};
 `
 
-const ScaleLabel = styled.span`
+const Label = styled.span`
     font-size: 12px;
     user-select: none;
     color: ${props => props.theme.colors.primary.default};
-`
-
-const ScaleButton = styled.div`
-    cursor: pointer;
-    width: 32px;
-    text-align: center;
-    background: ${props => props.theme.colors.grayScale.S5};
 `
 
 const StyledIcon = styled(Icon.Component)`
@@ -92,11 +86,18 @@ const StyledIcon = styled(Icon.Component)`
     height: 100%;
 `
 
-const ScaleButtonLeft = styled(ScaleButton)`
+const Button = styled.div`
+    cursor: pointer;
+    width: 32px;
+    text-align: center;
+    background: ${props => props.theme.colors.grayScale.S5};
+`
+
+const IncrementButton = styled(Button)`
     border-right: 1px solid ${props => props.theme.colors.grayScale.S10};
     border-radius: 5px 0 0 5px;
 `
-const ScaleButtonRight = styled(ScaleButton)`
+const DecrementButton = styled(Button)`
     border-left: 1px solid ${props => props.theme.colors.grayScale.S10};
     border-radius: 0 5px 5px 0;
 `
