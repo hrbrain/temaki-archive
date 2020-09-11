@@ -26,19 +26,19 @@ export const Component = withTheme(
             const total = currentValue + props.step
             setCurrentValue(total)
             props.onChangeValue(total)
-        }, [currentValue])
+        }, [currentValue, props.max, props.step, props.onChangeValue])
 
         const clickDecrement = React.useCallback(() => {
             if (currentValue <= props.min) return
             const total = currentValue - props.step
             setCurrentValue(total)
             props.onChangeValue(total)
-        }, [currentValue])
+        }, [currentValue, props.min, props.step, props.onChangeValue])
 
         const displayValue = React.useMemo(() => {
             const formatValue = Math.round(currentValue * props.rate)
             return formatValue
-        }, [currentValue])
+        }, [currentValue, props.rate])
 
         return (
             <Wrap>
