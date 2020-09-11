@@ -13,7 +13,10 @@ describe('StepNumber Component', () => {
     let mockUnit: string
     let mockRate: number
 
+    let mockOnChangeValue: jest.Mock
+
     beforeEach(() => {
+        mockOnChangeValue = jest.fn()
         act(() => {
             wrapper = mountWithTheme(
                 <StepNumber.Component
@@ -23,15 +26,17 @@ describe('StepNumber Component', () => {
                     step={mockStep}
                     unit={mockUnit}
                     rate={mockRate}
+                    onChangeValue={mockOnChangeValue}
                 />
             )
         })
     })
+
     it('コンポーネントが定義されている', () => {
         expect(wrapper).toBeDefined()
     })
 
-    it('increment', () => {
+    it('incrementしているか', () => {
         act(() => {
             const increment = wrapper
                 .find('div[data-test="incrementValue"]')
@@ -40,12 +45,22 @@ describe('StepNumber Component', () => {
         })
     })
 
-    it('decrement', () => {
+    it('decrementしている', () => {
         act(() => {
             const decrement = wrapper
                 .find('div[data-test="decrementValue"]')
                 .simulate('click')
             expect(decrement).toHaveLength(1)
         })
+    })
+
+    it('incrementしたときにonChangeValueが呼ばれているか', () => {
+        wrapper.find('div[data-test="incrementValue"]').simulate('click')
+        expect(mockOnChangeValue).toHaveBeenCalled()
+    })
+
+    it('decrementしたときにonChangeValueが呼ばれているか', () => {
+        wrapper.find('div[data-test="decrementValue"]').simulate('click')
+        expect(mockOnChangeValue).toHaveBeenCalled()
     })
 })
