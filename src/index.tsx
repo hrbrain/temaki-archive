@@ -29,7 +29,7 @@ import {
 import * as _DatePicker from './components/Datepicker/index'
 import * as _DateRangePicker from './components/DateRangePicker/index'
 
-import * as _StepNumber from './components/StepNumber'
+import * as _StepNumber from './components/StepNumber/index'
 
 export const Text = _Text.Component
 export const Icon = _Icon.Component

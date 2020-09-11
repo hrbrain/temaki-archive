@@ -10,8 +10,9 @@ type Props = {
     min: number
     max: number
     unit: string
-    theme: RequiredThemeProps
     rate: number
+    onChangeValue: (value: number) => void
+    theme: RequiredThemeProps
 }
 
 export const Component = withTheme(
@@ -22,12 +23,16 @@ export const Component = withTheme(
 
         const clickIncrement = React.useCallback(() => {
             if (currentValue >= props.max) return
-            setCurrentValue(currentValue + props.step)
+            const total = currentValue + props.step
+            setCurrentValue(total)
+            props.onChangeValue(total)
         }, [currentValue])
 
         const clickDecrement = React.useCallback(() => {
             if (currentValue <= props.min) return
-            setCurrentValue(currentValue - props.step)
+            const total = currentValue - props.step
+            setCurrentValue(total)
+            props.onChangeValue(total)
         }, [currentValue])
 
         const displayValue = React.useMemo(() => {
