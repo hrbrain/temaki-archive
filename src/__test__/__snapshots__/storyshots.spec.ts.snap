@@ -4959,9 +4959,8 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Scale Horizontal 1`] = `
-Array [
-  .c2 {
+exports[`Storyshots Components|Scale Default 1`] = `
+.c2 {
   height: 24px;
   width: 24px;
 }
@@ -5037,200 +5036,46 @@ Array [
 }
 
 <div
-    className="c0"
+  className="c0"
+>
+  <div
+    className="c1"
+    data-test="incrementValue"
+    onClick={[Function]}
   >
     <div
-      className="c1"
-      data-test="incrementScale"
-      onClick={[Function]}
-    >
-      <div
-        className="c2 c3"
-        color="rgb(51, 51, 51)"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
+      className="c2 c3"
+      color="rgb(51, 51, 51)"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
         }
-        size="24px"
-      />
-    </div>
-    <span
-      className="c4"
-    >
-      100.00%
-    </span>
-    <div
-      className="c5"
-      data-test="decrementScale"
-      onClick={[Function]}
-    >
-      <div
-        className="c6 c3"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
-        }
-        size="24px"
-      />
-    </div>
-  </div>,
-  .c0 {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-}
-
-<div
-    className="c0"
-    scale={1}
+      }
+      size="24px"
+    />
+  </div>
+  <span
+    className="c4"
   >
-    <div>
-      ScaleTarget
-    </div>
-  </div>,
-]
-`;
-
-exports[`Storyshots Components|Scale Vertical 1`] = `
-Array [
-  .c2 {
-  height: 24px;
-  width: 24px;
-}
-
-.c2 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c2 #fill {
-  fill: rgb(51,51,51);
-}
-
-.c6 {
-  height: 24px;
-  width: 24px;
-}
-
-.c6 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 138px;
-  height: 32px;
-  text-align: center;
-  line-height: 32px;
-  border-radius: 6px;
-  background: rgb(255,255,255);
-  border: 1px solid rgb(234,234,234);
-}
-
-.c4 {
-  font-size: 12px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  color: rgb(51,51,51);
-}
-
-.c3 {
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
-
-.c1 {
-  cursor: pointer;
-  width: 32px;
-  text-align: center;
-  background: rgb(245,245,245);
-  border-right: 1px solid rgb(234,234,234);
-  border-radius: 5px 0 0 5px;
-}
-
-.c5 {
-  cursor: pointer;
-  width: 32px;
-  text-align: center;
-  background: rgb(245,245,245);
-  border-left: 1px solid rgb(234,234,234);
-  border-radius: 0 5px 5px 0;
-}
-
-<div
-    className="c0"
+    1
+    回
+  </span>
+  <div
+    className="c5"
+    data-test="decrementValue"
+    onClick={[Function]}
   >
     <div
-      className="c1"
-      data-test="incrementScale"
-      onClick={[Function]}
-    >
-      <div
-        className="c2 c3"
-        color="rgb(51, 51, 51)"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
+      className="c6 c3"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
         }
-        size="24px"
-      />
-    </div>
-    <span
-      className="c4"
-    >
-      100.00%
-    </span>
-    <div
-      className="c5"
-      data-test="decrementScale"
-      onClick={[Function]}
-    >
-      <div
-        className="c6 c3"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
-        }
-        size="24px"
-      />
-    </div>
-  </div>,
-  .c0 {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transform-origin: top center;
-  -ms-transform-origin: top center;
-  transform-origin: top center;
-}
-
-<div
-    className="c0"
-    scale={1}
-  >
-    <div>
-      ScaleTarget
-    </div>
-  </div>,
-]
+      }
+      size="24px"
+    />
+  </div>
+</div>
 `;
 
 exports[`Storyshots Components|SegmentedControl molecule 1`] = `
