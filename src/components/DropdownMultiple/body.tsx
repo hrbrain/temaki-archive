@@ -13,7 +13,7 @@ type Props = {
     items: ItemList.Item[]
     values: ItemList.Value[]
     onClick: (e: React.MouseEvent) => void
-    onClickRemove?: (value: string, index: number) => void
+    onClickRemove?: (index: number) => void
     hasRemove?: boolean
     placeholder?: string
     isError?: boolean
@@ -110,7 +110,7 @@ const showTextBySelected = ({
     values: ItemList.Value[]
     placeholder?: string
     hasRemove?: boolean
-    onClickRemove?: (value: string, index: number) => void
+    onClickRemove?: (index: number) => void
 }): React.ReactElement | string => {
     if (values.length <= 0) {
         return placeholder || ''
@@ -129,20 +129,20 @@ const renderText = (
     index: number,
     items: ItemList.Item[],
     hasRemove?: boolean,
-    onClickRemove?: (value: string, index: number) => void
+    onClickRemove?: (index: number) => void
 ) => {
     const item = items.find(item => item.value === value)
 
     if (!item) {
         throw new Error(`Items don't have the value`)
     }
-    const onClick = (value: string, index: number) => () => {
-        onClickRemove && onClickRemove(value, index)
+    const onClick = (index: number) => () => {
+        onClickRemove && onClickRemove(index)
     }
     return (
         <InnerText key={`${value}-${index}`}>
             {item.text}
-            {hasRemove && <Remove onClick={onClick(value, index)} />}
+            {hasRemove && <Remove onClick={onClick(index)} />}
         </InnerText>
     )
 }
