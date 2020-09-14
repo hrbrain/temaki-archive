@@ -18,7 +18,7 @@ type Props = {
     values: ItemList.Value[]
     onChange: (value: ItemList.Value[]) => void
     hasRemove?: boolean
-    onClickRemove?: (value: string, index: number) => void
+    onClickRemove?: (index: number) => void
     width?: string
     placeholder?: string
     isError?: boolean
