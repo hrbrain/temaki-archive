@@ -159,6 +159,7 @@ export declare const icons: {
     SortList: string;
     SortUpDown: string;
     SortItems: string;
+    Subtract: string;
     Staff: string;
     Tag: string;
     Text: string;
@@ -309,4 +310,16 @@ export declare const Modal: import("react").FunctionComponent<{
         text: string;
     }))[] | undefined;
     onClose: () => void;
+}>;
+export declare const StepNumber: import("react").ForwardRefExoticComponent<Pick<{
+    defaultValue: number;
+    step: number;
+    min: number;
+    max: number;
+    unit: string;
+    rate: number;
+    onChangeValue: (value: number) => void;
+    theme: _RequiredThemeProps;
+}, "max" | "min" | "defaultValue" | "step" | "unit" | "rate" | "onChangeValue"> & {
+    theme?: _RequiredThemeProps | undefined;
 }>;

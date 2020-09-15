@@ -61,6 +61,7 @@ export declare const icons: {
     SortList: string;
     SortUpDown: string;
     SortItems: string;
+    Subtract: string;
     Staff: string;
     Tag: string;
     Text: string;

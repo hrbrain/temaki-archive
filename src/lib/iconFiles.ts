@@ -60,6 +60,7 @@ import SortList from '~/../icons/sort-list.svg'
 import SortUpDown from '~/../icons/sort-updown.svg'
 import Sort from '~/../icons/sort.svg'
 import SortItems from '~/../icons/sortItems.svg'
+import Subtract from '~/../icons/subtract.svg'
 import Staff from '~/../icons/staff.svg'
 import Tag from '~/../icons/tag.svg'
 import Text from '~/../icons/text.svg'
@@ -135,6 +136,7 @@ export const icons = {
     SortList,
     SortUpDown,
     SortItems,
+    Subtract,
     Staff,
     Tag,
     Text,
