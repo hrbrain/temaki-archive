@@ -204,6 +204,7 @@ const Text = styled.div`
 
 const Remove = styled.div`
     display: block;
+    cursor: pointer;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 50%;
     position: relative;
