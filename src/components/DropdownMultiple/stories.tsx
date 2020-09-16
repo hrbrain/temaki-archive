@@ -27,7 +27,6 @@ storiesOf('Components|DropdownMultiple', module)
                 values={optionsKnob('selected', itemOptions, [], {
                     display: 'check'
                 })}
-                hasRemove={boolean('hasRemove', false)}
                 onClickRemove={action('onClickRemove')}
                 isError={boolean('isError', false)}
                 errorMessage={text('ErrorMessage', '')}
@@ -50,7 +49,6 @@ storiesOf('Components|DropdownMultiple', module)
                     { value: '6', text: 'ぶどう' }
                 ]}
                 values={[]}
-                hasRemove={boolean('hasRemove', false)}
                 onClickRemove={action('onClickRemove')}
                 isError={boolean('isError', false)}
                 errorMessage={text('ErrorMessage', '')}

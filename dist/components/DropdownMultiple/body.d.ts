@@ -8,7 +8,6 @@ declare type Props = {
     values: ItemList.Value[];
     onClick: (e: React.MouseEvent) => void;
     onClickRemove?: (index: number) => void;
-    hasRemove?: boolean;
     placeholder?: string;
     isError?: boolean;
     diff?: boolean;

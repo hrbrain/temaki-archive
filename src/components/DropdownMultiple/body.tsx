@@ -14,7 +14,6 @@ type Props = {
     values: ItemList.Value[]
     onClick: (e: React.MouseEvent) => void
     onClickRemove?: (index: number) => void
-    hasRemove?: boolean
     placeholder?: string
     isError?: boolean
     diff?: boolean
@@ -35,7 +34,6 @@ export const Component = React.memo<Props>(props => {
         items,
         values,
         placeholder,
-        hasRemove,
         searchValue,
         onKeydown,
         onChangeSearchValue,
@@ -64,7 +62,6 @@ export const Component = React.memo<Props>(props => {
                             items,
                             values,
                             placeholder,
-                            hasRemove,
                             onClickRemove
                         })}
                         <Input
@@ -82,7 +79,6 @@ export const Component = React.memo<Props>(props => {
                             items,
                             values,
                             placeholder,
-                            hasRemove,
                             onClickRemove
                         })}
                     </Text>
@@ -103,13 +99,11 @@ const showTextBySelected = ({
     items,
     values,
     placeholder,
-    hasRemove,
     onClickRemove
 }: {
     items: ItemList.Item[]
     values: ItemList.Value[]
     placeholder?: string
-    hasRemove?: boolean
     onClickRemove?: (index: number) => void
 }): React.ReactElement | string => {
     if (values.length <= 0) {
@@ -118,7 +112,7 @@ const showTextBySelected = ({
     return (
         <>
             {values.map((value, index) => {
-                return renderText(value, index, items, hasRemove, onClickRemove)
+                return renderText(value, index, items, onClickRemove)
             })}
         </>
     )
@@ -128,7 +122,6 @@ const renderText = (
     value: string,
     index: number,
     items: ItemList.Item[],
-    hasRemove?: boolean,
     onClickRemove?: (index: number) => void
 ) => {
     const item = items.find(item => item.value === value)
@@ -142,7 +135,7 @@ const renderText = (
     return (
         <InnerText key={`${value}-${index}`}>
             {item.text}
-            {hasRemove && <Remove onClick={onClick(index)} />}
+            {onClickRemove && <Remove onClick={onClick(index)} />}
         </InnerText>
     )
 }
