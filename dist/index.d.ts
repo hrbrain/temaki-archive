@@ -217,6 +217,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     items: import("./components/DropdownMultiple/itemList").Item[];
     values: string[];
     onChange: (value: string[]) => void;
+    onClickRemove?: ((index: number) => void) | undefined;
     width?: string | undefined;
     placeholder?: string | undefined;
     isError?: boolean | undefined;

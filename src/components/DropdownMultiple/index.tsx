@@ -17,6 +17,7 @@ type Props = {
     items: ItemList.Item[]
     values: ItemList.Value[]
     onChange: (value: ItemList.Value[]) => void
+    onClickRemove?: (index: number) => void
     width?: string
     placeholder?: string
     isError?: boolean
@@ -105,6 +106,7 @@ export const Component = React.memo<Props>(props => {
                         diff={props.diff}
                         isError={props.isError}
                         onChangeSearchValue={changeSearchValue}
+                        onClickRemove={props.onClickRemove}
                         searchValue={searchValue}
                         onKeydown={keyDownInInput}
                         onClickIcon={clickIcon}
