@@ -22,8 +22,7 @@
         "global": "^4.4.0",
         "moment": "^2.24.0",
         "react-dates": "^21.4.0",
-        "react-dropzone": "^10.2.1",
-        "url-loader": "^4.1.0"
+        "react-dropzone": "^10.2.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.7.7",
@@ -85,6 +84,7 @@
         "ts-jest": "^24.0.1",
         "ts-loader": "^6.0.4",
         "typescript": "3.5.3",
+        "url-loader": "^4.1.0",
         "utility-types": "^3.5.0",
         "webpack": "^4.35.3",
         "webpack-cli": "^3.3.6"
