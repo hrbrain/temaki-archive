@@ -5,12 +5,13 @@ import LoadingGif from '../../../images/loading-sping.gif'
 
 type Props = {
     visible?: boolean
+    text?: string
 }
 export const Component = React.memo<Props>(props => {
     return (
         <Wrap visible={props.visible}>
             <Loading src={LoadingGif} alt="Loading" />
-            <Text>読み込み中…</Text>
+            <Text>{props.text ? props.text : '読み込み中…'}</Text>
         </Wrap>
     )
 })

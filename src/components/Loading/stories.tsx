@@ -5,5 +5,10 @@ import * as React from 'react'
 import * as Loading from './index'
 
 storiesOf('components|Loading', module).add('all', () => {
-    return <Loading.Component visible={Knobs.boolean('visible', false)} />
+    return (
+        <Loading.Component
+            visible={Knobs.boolean('visible', false)}
+            text={Knobs.text('text', '')}
+        />
+    )
 })
