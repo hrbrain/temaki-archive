@@ -6821,3 +6821,57 @@ exports[`Storyshots components|Icon Standard 1`] = `
   size="24px"
 />
 `;
+
+exports[`Storyshots components|Loading all 1`] = `
+.c0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255,255,255);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c1 {
+  width: 100px;
+}
+
+.c2 {
+  margin-top: 12px;
+  color: rgb(51,51,51);
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="Loading"
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    読み込み中…
+  </div>
+</div>
+`;

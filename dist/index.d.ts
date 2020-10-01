@@ -324,3 +324,7 @@ export declare const StepNumber: import("react").ForwardRefExoticComponent<Pick<
 }, "max" | "min" | "defaultValue" | "step" | "unit" | "rate" | "onChangeValue"> & {
     theme?: _RequiredThemeProps | undefined;
 }>;
+export declare const Loading: import("react").NamedExoticComponent<{
+    visible?: boolean | undefined;
+    text?: string | undefined;
+}>;
