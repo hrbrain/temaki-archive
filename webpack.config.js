@@ -52,6 +52,17 @@ module.exports = {
                         loader: 'raw-loader'
                     }
                 ]
+            },
+            {
+                test: /.*\.(gif|jpe?g|png)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]'
+                        }
+                    }
+                ]
             }
         ]
     },
