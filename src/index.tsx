@@ -30,6 +30,7 @@ import * as _DatePicker from './components/Datepicker/index'
 import * as _DateRangePicker from './components/DateRangePicker/index'
 
 import * as _StepNumber from './components/StepNumber/index'
+import * as _Loading from './components/Loading/index'
 
 export const Text = _Text.Component
 export const Icon = _Icon.Component
@@ -57,3 +58,4 @@ export const DatePicker = _DatePicker.Component
 export const DateRangePicker = _DateRangePicker.Component
 export const Modal = _Modal.Component
 export const StepNumber = _StepNumber.Component
+export const Loading = _Loading.Component
