@@ -30,10 +30,10 @@ module.exports = ({ config }) => {
       loader: 'raw-loader'
     },
     {
-      test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
+      test: /\.(jpe?g|png|gif)(\?.*)?$/,
       use: [
           {
-              loader: require.resolve('file-loader'),
+              loader: require.resolve('url-loader'),
               options: {
                   limit: 8192
               }
