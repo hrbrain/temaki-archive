@@ -25,9 +25,9 @@ module.exports = {
                 test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
-                            name: '[contenthash].[ext]'
+                            limit: 8192
                         }
                     }
                 ]

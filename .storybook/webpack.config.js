@@ -34,8 +34,8 @@ module.exports = ({ config }) => {
       use: [
           {
               loader: require.resolve('file-loader'),
-              query: {
-                  name: 'static/media/[name].[hash:8].[ext]'
+              options: {
+                  limit: 8192
               }
           }
       ]
