@@ -30,13 +30,10 @@ module.exports = ({ config }) => {
       loader: 'raw-loader'
     },
     {
-      test: /\.(jpe?g|png|gif)(\?.*)?$/,
+      test: /\.gif$/,
       use: [
           {
               loader: require.resolve('url-loader'),
-              options: {
-                  limit: 8192
-              }
           }
       ]
     }
