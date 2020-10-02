@@ -1,6 +1,6 @@
 {
     "name": "hrb-temaki",
-    "version": "0.10.65",
+    "version": "0.10.66",
     "private": true,
     "license": "Apache-2.0",
     "main": "./dist/index.js",
@@ -84,6 +84,7 @@
         "ts-jest": "^24.0.1",
         "ts-loader": "^6.0.4",
         "typescript": "3.5.3",
+        "url-loader": "^4.1.0",
         "utility-types": "^3.5.0",
         "webpack": "^4.35.3",
         "webpack-cli": "^3.3.6"
