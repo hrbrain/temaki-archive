@@ -6845,11 +6845,12 @@ exports[`Storyshots components|Loading all 1`] = `
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(255,255,255);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  background-color: rgb(255,255,255);
+  color: rgb(51,51,51);
 }
 
 .c1 {
@@ -6858,7 +6859,6 @@ exports[`Storyshots components|Loading all 1`] = `
 
 .c2 {
   margin-top: 12px;
-  color: rgb(51,51,51);
 }
 
 <div
