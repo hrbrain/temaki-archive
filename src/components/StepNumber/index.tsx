@@ -13,6 +13,7 @@ type Props = {
     rate: number
     onChangeValue: (value: number) => void
     theme: RequiredThemeProps
+    className?: string
 }
 
 export const Component = withTheme(
@@ -41,7 +42,7 @@ export const Component = withTheme(
         }, [currentValue, props.rate])
 
         return (
-            <Wrap>
+            <Wrap className={props.className}>
                 <IncrementButton
                     onClick={clickIncrement}
                     data-test="incrementValue"
@@ -77,12 +78,12 @@ const Wrap = styled.div`
     border-radius: 6px;
     background: ${props => props.theme.colors.grayScale.S0};
     border: 1px solid ${props => props.theme.colors.grayScale.S10};
+    color: ${props => props.theme.colors.primary.default};
 `
 
 const Label = styled.span`
     font-size: 12px;
     user-select: none;
-    color: ${props => props.theme.colors.primary.default};
 `
 
 const StyledIcon = styled(Icon.Component)`

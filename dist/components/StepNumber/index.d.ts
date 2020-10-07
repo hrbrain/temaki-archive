@@ -10,8 +10,9 @@ declare type Props = {
     rate: number;
     onChangeValue: (value: number) => void;
     theme: RequiredThemeProps;
+    className?: string;
 };
-export declare const Component: React.ForwardRefExoticComponent<Pick<Props, "max" | "min" | "defaultValue" | "step" | "unit" | "rate" | "onChangeValue"> & {
+export declare const Component: React.ForwardRefExoticComponent<Pick<Props, "className" | "max" | "min" | "defaultValue" | "step" | "unit" | "rate" | "onChangeValue"> & {
     theme?: RequiredThemeProps | undefined;
 }>;
 export {};
