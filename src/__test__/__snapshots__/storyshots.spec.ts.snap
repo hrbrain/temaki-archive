@@ -5121,6 +5121,7 @@ exports[`Storyshots Components|StepNumber Default 1`] = `
   border-radius: 6px;
   background: rgb(255,255,255);
   border: 1px solid rgb(234,234,234);
+  color: rgb(51,51,51);
 }
 
 .c4 {
@@ -5129,7 +5130,6 @@ exports[`Storyshots Components|StepNumber Default 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: rgb(51,51,51);
 }
 
 .c3 {
