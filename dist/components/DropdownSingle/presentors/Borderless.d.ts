@@ -4,7 +4,7 @@ import * as ItemList from '../ItemList';
  * Component
  */
 declare type Props = {
-    items: ItemList.Item[];
+    items: ItemList.ItemType[];
     value: ItemList.Value;
     searchValue: string;
     onClick: (e: React.MouseEvent) => void;
@@ -12,7 +12,7 @@ declare type Props = {
     onClickMenuItem: (index: string) => void;
     isError?: boolean;
     isMenuVisible?: boolean;
-    showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value) => string;
+    showTextBySelected: (items: ItemList.ItemType[], selected: ItemList.Value) => string;
     width?: string;
     diff?: boolean;
     className?: string;

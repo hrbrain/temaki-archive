@@ -9,7 +9,7 @@ import * as Icon from '~/components/Icon'
  */
 
 type Props = {
-    items: Item[]
+    items: ItemType[]
     value: Value
     onClickItem: (value: Value) => void
     className?: string
@@ -32,7 +32,7 @@ const renderItem = (
     selected: Value,
     onClickItem: (value: Value) => void,
     onBlurSearchValue?: () => void
-) => (item: Item, index: number) => {
+) => (item: ItemType, index: number) => {
     return (
         <ItemComponent
             item={item}
@@ -48,15 +48,16 @@ const renderItem = (
  * ItemComponent
  */
 
-export type Item = {
+export type ItemType = {
     value: Value
     text: string
+    remarks?: string
     disabled?: boolean
 }
 export type Value = string
 
 type ItemProps = {
-    item: Item
+    item: ItemType
     selected: Value
     onClickItem: (value: Value) => void
     onBlurSearchValue?: () => void
@@ -79,7 +80,12 @@ const ItemComponent = React.memo<ItemProps>(props => {
                         : defaultTheme.colors.grayScale.S10
                 }
             />
-            <Text disabled={props.item.disabled}>{props.item.text}</Text>
+            <Text disabled={props.item.disabled}>
+                {props.item.text}
+                {props.item.remarks === '' ? null : (
+                    <RemarksText>{props.item.remarks}</RemarksText>
+                )}
+            </Text>
         </Item>
     )
 })
@@ -118,4 +124,9 @@ const Text = styled.div<{ disabled?: boolean }>`
         props.disabled &&
         `color: ${props.theme.colors.grayScale.S20};
         cursor: not-allowed;`}
+`
+
+const RemarksText = styled.div<{ disabled?: boolean }>`
+    padding-left: 4px;
+    font-size: 12px;
 `

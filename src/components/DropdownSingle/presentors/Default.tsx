@@ -12,7 +12,7 @@ import * as ErrorMessage from '~/components/lib/FormErrorMessage'
  * Component
  */
 type Props = {
-    items: ItemList.Item[]
+    items: ItemList.ItemType[]
     value: ItemList.Value
     disabled?: boolean
     onClick: (e: React.MouseEvent) => void
@@ -21,7 +21,7 @@ type Props = {
     isError?: boolean
     isMenuVisible: boolean
     showTextBySelected: (
-        items: ItemList.Item[],
+        items: ItemList.ItemType[],
         selected: ItemList.Value
     ) => string
     width?: string

@@ -199,7 +199,7 @@ export declare const Textarea: import("react").NamedExoticComponent<{
     className?: string | undefined;
 }>;
 export declare const DropdownSingle: import("react").NamedExoticComponent<{
-    items: import("./components/DropdownSingle/ItemList").Item[];
+    items: import("./components/DropdownSingle/ItemList").ItemType[];
     value: string;
     disabled?: boolean | undefined;
     type: "default" | "borderless";

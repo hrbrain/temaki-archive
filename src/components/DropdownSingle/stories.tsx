@@ -13,12 +13,34 @@ storiesOf('Components|DropdownSingle', module)
                 placeholder={text('placeholder', '選択してください')}
                 items={[
                     { value: '', text: '' },
-                    { value: '1', text: 'りんご' },
-                    { value: '2', text: 'いちご', disabled: true },
-                    { value: '3', text: 'バナナ' },
-                    { value: '4', text: 'メロン' },
-                    { value: '5', text: 'さくらんぼ' },
-                    { value: '6', text: 'ぶどう' }
+                    {
+                        value: '1',
+                        text: 'りんご',
+                        remarks: 'りんごを新しい項目として登録します。'
+                    },
+                    {
+                        value: '2',
+                        text: 'いちご',
+                        remarks: 'いちごを新しい項目として追加します。'
+                    },
+                    {
+                        value: '3',
+                        text: 'バナナ',
+                        remarks: 'いちごの説明ですよ'
+                    },
+                    {
+                        value: '4',
+                        text: 'メロン',
+                        remarks: 'メロン説明ですよ'
+                    },
+                    {
+                        value: '5',
+                        text: 'さくらんぼ'
+                    },
+                    {
+                        value: '6',
+                        text: 'ぶどう'
+                    }
                 ]}
                 value={select(
                     'selected',
@@ -50,12 +72,34 @@ storiesOf('Components|DropdownSingle', module)
                 placeholder={text('placeholder', '選択してください')}
                 items={[
                     { value: '', text: '' },
-                    { value: '1', text: 'りんご' },
-                    { value: '2', text: 'いちご' },
-                    { value: '3', text: 'バナナ' },
-                    { value: '4', text: 'メロン' },
-                    { value: '5', text: 'さくらんぼ' },
-                    { value: '6', text: 'ぶどう' }
+                    {
+                        value: '1',
+                        text: 'りんご',
+                        remarks: 'りんごを新しい項目として登録します。'
+                    },
+                    {
+                        value: '2',
+                        text: 'いちご',
+                        remarks: 'いちごを新しい項目として追加します。'
+                    },
+                    {
+                        value: '3',
+                        text: 'バナナ',
+                        remarks: 'いちごの説明ですよ'
+                    },
+                    {
+                        value: '4',
+                        text: 'メロン',
+                        remarks: 'メロン説明ですよ'
+                    },
+                    {
+                        value: '5',
+                        text: 'さくらんぼ'
+                    },
+                    {
+                        value: '6',
+                        text: 'ぶどう'
+                    }
                 ]}
                 value={''}
                 isError={boolean('isError', false)}
@@ -102,12 +146,36 @@ storiesOf('Components|DropdownSingle', module)
                 <ItemList.Component
                     items={[
                         { value: '', text: '' },
-                        { value: '1', text: 'りんご' },
-                        { value: '2', text: 'いちご' },
-                        { value: '3', text: 'バナナ' },
-                        { value: '4', text: 'メロン' },
-                        { value: '5', text: 'さくらんぼ' },
-                        { value: '6', text: 'ぶどう' }
+                        {
+                            value: '1',
+                            text: 'りんご',
+                            remarks: 'りんごの説明ですよ'
+                        },
+                        {
+                            value: '2',
+                            text: 'いちご',
+                            remarks: 'いちごの説明ですよ'
+                        },
+                        {
+                            value: '3',
+                            text: 'バナナ',
+                            remarks: 'いちごの説明ですよ'
+                        },
+                        {
+                            value: '4',
+                            text: 'メロン',
+                            remarks: 'いちごの説明ですよ'
+                        },
+                        {
+                            value: '5',
+                            text: 'さくらんぼ',
+                            remarks: 'いちごの説明ですよ'
+                        },
+                        {
+                            value: '6',
+                            text: 'ぶどう',
+                            remarks: 'いちごの説明ですよ'
+                        }
                     ]}
                     value={select(
                         'selected',

@@ -11,7 +11,7 @@ describe('Dropdown(Single)コンポーネントのテスト', () => {
     let wrapper: Enzyme.ReactWrapper
     let mockOnChange: jest.Mock
     let mockOnClickBody: jest.Mock
-    let items: ItemList.Item[]
+    let items: ItemList.ItemType[]
 
     beforeEach(() => {
         mockOnChange = jest.fn()
