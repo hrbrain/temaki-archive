@@ -82,9 +82,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
             />
             <Text disabled={props.item.disabled}>
                 {props.item.text}
-                {props.item.remarks ? (
+                {props.item.remarks && (
                     <RemarksText>{props.item.remarks}</RemarksText>
-                ) : null}
+                )}
             </Text>
         </StyledItem>
     )
