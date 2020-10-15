@@ -78,7 +78,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
             />
             <Text>
                 {props.item.text}
-                {props.item.remarks === '' ? (
+                {props.item.remarks ? (
                     <RemarksText>{props.item.remarks}</RemarksText>
                 ) : null}
             </Text>
