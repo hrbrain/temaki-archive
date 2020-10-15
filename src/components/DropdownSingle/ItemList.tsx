@@ -128,4 +128,5 @@ const Text = styled.div<{ disabled?: boolean }>`
 
 const RemarksText = styled.div`
     font-size: 12px;
+    word-wrap: anywhere;
 `

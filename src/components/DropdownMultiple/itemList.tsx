@@ -133,4 +133,5 @@ const Text = styled.div`
 
 const RemarksText = styled.div`
     font-size: 12px;
+    word-wrap: anywhere;
 `
