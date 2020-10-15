@@ -78,9 +78,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
             />
             <Text>
                 {props.item.text}
-                {props.item.remarks === '' ? null : (
+                {props.item.remarks === '' ? (
                     <RemarksText>{props.item.remarks}</RemarksText>
-                )}
+                ) : null}
             </Text>
         </ListItem>
     )
@@ -131,7 +131,7 @@ const Text = styled.div`
     padding-left: 4px;
 `
 
-const RemarksText = styled.div<{ disabled?: boolean }>`
+const RemarksText = styled.div`
     padding-left: 4px;
     font-size: 12px;
 `

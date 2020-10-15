@@ -82,9 +82,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
             />
             <Text disabled={props.item.disabled}>
                 {props.item.text}
-                {props.item.remarks === '' ? null : (
+                {props.item.remarks ? (
                     <RemarksText>{props.item.remarks}</RemarksText>
-                )}
+                ) : null}
             </Text>
         </Item>
     )
@@ -126,7 +126,7 @@ const Text = styled.div<{ disabled?: boolean }>`
         cursor: not-allowed;`}
 `
 
-const RemarksText = styled.div<{ disabled?: boolean }>`
+const RemarksText = styled.div`
     padding-left: 4px;
     font-size: 12px;
 `

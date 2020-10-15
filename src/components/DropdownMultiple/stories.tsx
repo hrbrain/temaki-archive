@@ -5,7 +5,6 @@ import * as React from 'react'
 import * as DropdownMultiple from './index'
 
 const items = [
-    { value: '', text: '' },
     {
         value: '1',
         text: 'りんご',
@@ -28,7 +27,8 @@ const items = [
     },
     {
         value: '5',
-        text: 'さくらんぼ'
+        text: 'さくらんぼ',
+        remarks: ''
     },
     {
         value: '6',
