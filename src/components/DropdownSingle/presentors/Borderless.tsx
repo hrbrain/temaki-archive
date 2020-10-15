@@ -11,7 +11,7 @@ import * as ItemList from '../ItemList'
  * Component
  */
 type Props = {
-    items: ItemList.ItemType[]
+    items: ItemList.Item[]
     value: ItemList.Value
     searchValue: string
     onClick: (e: React.MouseEvent) => void
@@ -20,7 +20,7 @@ type Props = {
     isError?: boolean
     isMenuVisible?: boolean
     showTextBySelected: (
-        items: ItemList.ItemType[],
+        items: ItemList.Item[],
         selected: ItemList.Value
     ) => string
     width?: string

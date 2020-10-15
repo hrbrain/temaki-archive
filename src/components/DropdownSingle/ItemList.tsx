@@ -9,7 +9,7 @@ import * as Icon from '~/components/Icon'
  */
 
 type Props = {
-    items: ItemType[]
+    items: Item[]
     value: Value
     onClickItem: (value: Value) => void
     className?: string
@@ -32,7 +32,7 @@ const renderItem = (
     selected: Value,
     onClickItem: (value: Value) => void,
     onBlurSearchValue?: () => void
-) => (item: ItemType, index: number) => {
+) => (item: Item, index: number) => {
     return (
         <ItemComponent
             item={item}
@@ -48,7 +48,7 @@ const renderItem = (
  * ItemComponent
  */
 
-export type ItemType = {
+export type Item = {
     value: Value
     text: string
     remarks?: string
@@ -57,7 +57,7 @@ export type ItemType = {
 export type Value = string
 
 type ItemProps = {
-    item: ItemType
+    item: Item
     selected: Value
     onClickItem: (value: Value) => void
     onBlurSearchValue?: () => void
@@ -70,7 +70,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
     }, [props.onClickItem, props.item, props.onBlurSearchValue])
     const noop = () => {}
     return (
-        <Item onClick={props.item.disabled ? noop : handleClick}>
+        <StyledItem onClick={props.item.disabled ? noop : handleClick}>
             <Icon.Component
                 svg={IconFiles.icons.SingleCheck}
                 size="24px"
@@ -86,7 +86,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
                     <RemarksText>{props.item.remarks}</RemarksText>
                 ) : null}
             </Text>
-        </Item>
+        </StyledItem>
     )
 })
 
@@ -104,7 +104,7 @@ const ItemList = styled.ul`
     z-index: 1;
 `
 
-const Item = styled.li`
+const StyledItem = styled.li`
     list-style-type: none;
     user-select: none;
     font-size: 14px;

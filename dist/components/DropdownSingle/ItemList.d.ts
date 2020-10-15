@@ -3,7 +3,7 @@ import * as React from 'react';
  * Component
  */
 declare type Props = {
-    items: ItemType[];
+    items: Item[];
     value: Value;
     onClickItem: (value: Value) => void;
     className?: string;
@@ -14,7 +14,7 @@ export declare const Component: React.MemoExoticComponent<(props: Props) => JSX.
 /**
  * ItemComponent
  */
-export declare type ItemType = {
+export declare type Item = {
     value: Value;
     text: string;
     remarks?: string;

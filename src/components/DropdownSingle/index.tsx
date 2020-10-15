@@ -8,10 +8,10 @@ import * as Borderless from './presentors/Borderless'
  * Component
  */
 
-export type Item = ItemList.ItemType
+export type Item = ItemList.Item
 
 type Props = {
-    items: ItemList.ItemType[]
+    items: ItemList.Item[]
     value: ItemList.Value
     disabled?: boolean
     type: 'default' | 'borderless'
@@ -124,7 +124,7 @@ export const Component = React.memo<Props>(props => {
 Component.displayName = 'DropdownSingle'
 
 const showTextBySelected = (
-    items: ItemList.ItemType[],
+    items: ItemList.Item[],
     selected: ItemList.Value
 ): string => {
     const text = items.find(item => item.value === selected)

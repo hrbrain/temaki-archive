@@ -3,9 +3,9 @@ import * as ItemList from './ItemList';
 /**
  * Component
  */
-export declare type Item = ItemList.ItemType;
+export declare type Item = ItemList.Item;
 declare type Props = {
-    items: ItemList.ItemType[];
+    items: ItemList.Item[];
     value: ItemList.Value;
     disabled?: boolean;
     type: 'default' | 'borderless';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ItemList from '../ItemList';
 declare type Props = {
-    items: ItemList.ItemType[];
+    items: ItemList.Item[];
     value: ItemList.Value;
     disabled?: boolean;
     onClick: (e: React.MouseEvent) => void;
@@ -9,7 +9,7 @@ declare type Props = {
     onClickMenuItem: (value: ItemList.Value) => void;
     isError?: boolean;
     isMenuVisible: boolean;
-    showTextBySelected: (items: ItemList.ItemType[], selected: ItemList.Value) => string;
+    showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value) => string;
     width?: string;
     diff?: boolean;
     className?: string;
