@@ -64,8 +64,16 @@ storiesOf('Components|DropdownMultiple', module)
             <DropdownMultiple.Component
                 placeholder={text('placeholder', '選択してください')}
                 items={[
-                    { value: '1', text: 'りんご' },
-                    { value: '2', text: 'いちご' },
+                    {
+                        value: '1',
+                        text: 'りんご',
+                        remarks: 'りんごを新しい項目として登録します。'
+                    },
+                    {
+                        value: '2',
+                        text: 'いちご',
+                        remarks: 'いちごを新しい項目として登録します。'
+                    },
                     { value: '3', text: 'バナナ' },
                     { value: '4', text: 'メロン' },
                     { value: '5', text: 'さくらんぼ' },

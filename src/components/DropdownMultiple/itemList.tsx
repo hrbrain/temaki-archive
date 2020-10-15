@@ -132,6 +132,5 @@ const Text = styled.div`
 `
 
 const RemarksText = styled.div`
-    padding-left: 4px;
     font-size: 12px;
 `

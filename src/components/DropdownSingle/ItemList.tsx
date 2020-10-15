@@ -127,6 +127,5 @@ const Text = styled.div<{ disabled?: boolean }>`
 `
 
 const RemarksText = styled.div`
-    padding-left: 4px;
     font-size: 12px;
 `
