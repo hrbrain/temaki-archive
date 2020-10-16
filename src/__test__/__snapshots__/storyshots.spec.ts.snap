@@ -5903,16 +5903,6 @@ exports[`Storyshots Components|StepNumber Default 1`] = `
   fill: rgb(51,51,51);
 }
 
-.c6 {
-  height: 24px;
-  width: 24px;
-}
-
-.c6 svg {
-  height: 24px;
-  width: 24px;
-}
-
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5995,7 +5985,8 @@ exports[`Storyshots Components|StepNumber Default 1`] = `
     onClick={[Function]}
   >
     <div
-      className="c6 c3"
+      className="c2 c3"
+      color="rgb(51, 51, 51)"
       dangerouslySetInnerHTML={
         Object {
           "__html": undefined,

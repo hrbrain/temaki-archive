@@ -61,7 +61,11 @@ export const Component = withTheme(
                     onClick={clickDecrement}
                     data-test="decrementValue"
                 >
-                    <StyledIcon svg={IconFiles.icons.Subtract} size={'24px'} />
+                    <StyledIcon
+                        svg={IconFiles.icons.Subtract}
+                        color={props.theme.colors.primary.default}
+                        size={'24px'}
+                    />
                 </DecrementButton>
             </Wrap>
         )
