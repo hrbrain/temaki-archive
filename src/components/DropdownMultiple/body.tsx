@@ -56,7 +56,7 @@ export const Component = React.memo<Props>(props => {
                 width={width}
                 onClick={onClick}
             >
-                {props.isMenuVisible ? (
+                {isMenuVisible ? (
                     <SelectorInput>
                         {showTextBySelected({
                             items,
@@ -166,11 +166,13 @@ type BodyType = {
 }
 const Body = styled.div<BodyType>`
     min-height: 40px;
+    max-height: ${props => (props.isMenuVisible ? '168px' : '98px')};
+    overflow: scroll;
     position: relative;
     ${props => (props.width ? `width: ${props.width};` : '')}
     display: flex;
     align-items: center;
-    padding: 0px 12px;
+    padding: 0 12px;
     border: 1px solid
         ${props => {
             if (props.isError) {
@@ -193,6 +195,8 @@ const Body = styled.div<BodyType>`
 const Text = styled.div`
     padding: 4px 4px 4px 0;
     width: calc(100% - 28px);
+    position: relative;
+    top: 10px;
 `
 
 const Remove = styled.div`
