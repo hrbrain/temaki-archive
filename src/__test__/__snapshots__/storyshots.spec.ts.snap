@@ -4425,6 +4425,8 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
 
 .c2 {
   min-height: 40px;
+  max-height: 98px;
+  overflow: scroll;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4434,7 +4436,7 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 12px;
+  padding: 0 12px;
   border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   -webkit-user-select: none;
@@ -4449,6 +4451,8 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
 .c3 {
   padding: 4px 4px 4px 0;
   width: calc(100% - 28px);
+  position: relative;
+  top: 10px;
 }
 
 .c7 {
@@ -4574,6 +4578,8 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
 
 .c2 {
   min-height: 40px;
+  max-height: 98px;
+  overflow: scroll;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4583,7 +4589,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 12px;
+  padding: 0 12px;
   border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   -webkit-user-select: none;
@@ -4598,6 +4604,8 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
 .c3 {
   padding: 4px 4px 4px 0;
   width: calc(100% - 28px);
+  position: relative;
+  top: 10px;
 }
 
 .c7 {
