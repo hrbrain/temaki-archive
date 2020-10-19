@@ -194,8 +194,6 @@ const Text = styled.div<{ isMenuVisible?: boolean }>`
     width: calc(100% - 28px);
     max-height: ${props => (props.isMenuVisible ? '168px' : '98px')};
     overflow: scroll;
-    position: relative;
-    top: 10px;
 `
 
 const Remove = styled.div`
