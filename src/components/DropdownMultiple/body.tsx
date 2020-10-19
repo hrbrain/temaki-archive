@@ -53,6 +53,7 @@ export const Component = React.memo<Props>(props => {
                 isError={isError}
                 diff={diff}
                 width={width}
+                isMenuVisible={isMenuVisible}
                 onClick={onClick}
             >
                 {isMenuVisible ? (
