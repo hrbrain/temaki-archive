@@ -50,7 +50,6 @@ export const Component = React.memo<Props>(props => {
         <>
             <Body
                 data-test="body"
-                isMenuVisible={isMenuVisible}
                 isError={isError}
                 diff={diff}
                 width={width}
@@ -74,7 +73,7 @@ export const Component = React.memo<Props>(props => {
                         />
                     </SelectorInput>
                 ) : (
-                    <Text data-test="text">
+                    <Text data-test="text" isMenuVisible={isMenuVisible}>
                         {showTextBySelected({
                             items,
                             values,
@@ -166,10 +165,8 @@ type BodyType = {
 }
 const Body = styled.div<BodyType>`
     min-height: 40px;
-    max-height: ${props => (props.isMenuVisible ? '168px' : '98px')};
-    overflow: scroll;
     position: relative;
-    ${props => (props.width ? `width: ${props.width};` : '')}
+    ${props => (props.width ? `width: ${props.width}` : '')};
     display: flex;
     align-items: center;
     padding: 0 12px;
@@ -192,9 +189,11 @@ const Body = styled.div<BodyType>`
         props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
 `
 
-const Text = styled.div`
+const Text = styled.div<{ isMenuVisible?: boolean }>`
     padding: 4px 4px 4px 0;
     width: calc(100% - 28px);
+    max-height: ${props => (props.isMenuVisible ? '168px' : '98px')};
+    overflow: scroll;
     position: relative;
     top: 10px;
 `
@@ -242,6 +241,7 @@ const Remove = styled.div`
         left: 3px;
     }
 `
+
 const InnerText = styled.div`
     display: inline-flex;
     justify-content: center;
