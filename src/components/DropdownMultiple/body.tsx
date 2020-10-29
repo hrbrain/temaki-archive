@@ -193,8 +193,6 @@ const Body = styled.div<BodyType>`
 const Text = styled.div`
     padding: 4px 4px 4px 0;
     width: calc(100% - 28px);
-    max-height: 98px;
-    overflow: scroll;
 `
 
 const Remove = styled.div`
@@ -256,8 +254,6 @@ const InnerText = styled.div`
 const SelectorInput = styled.div`
     padding-right: 4px;
     width: calc(100% - 28px);
-    max-height: 168px;
-    overflow: scroll;
     transition: border-color 0.15s;
     outline: 0;
     &.focused {
