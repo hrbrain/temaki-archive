@@ -1,6 +1,53 @@
 import * as React from 'react'
 import * as styledComponents from 'styled-components'
 
+export type RequiredThemeColors = {
+    mainColors: {
+        primary: {
+            100: string
+            200: string
+            300: string
+            400: string
+            500: string
+            600: string
+            700: string
+            800: string
+        }
+        grayScale: {
+            100: string
+            200: string
+            300: string
+            400: string
+            500: string
+            600: string
+            700: string
+            800: string
+        }
+    }
+    utility: {
+        red: {
+            100: string
+            200: string
+            300: string
+            400: string
+            500: string
+            600: string
+            700: string
+            800: string
+        }
+        highlightGreen: {
+            100: string
+            200: string
+            300: string
+            400: string
+            500: string
+            600: string
+            700: string
+            800: string
+        }
+    }
+}
+
 export type RequiredThemeColorsOld = {
     primary: {
         default: string
@@ -122,12 +169,59 @@ export type RequiredThemeTextSizeSP = {
 }
 
 export type RequiredThemeProps = {
+    colors: RequiredThemeColors
     colorsOld: RequiredThemeColorsOld
     shadows: RequiredThemeShadows
     typography: RequiredThemeTextSize
 }
 
 export const defaultTheme: RequiredThemeProps = {
+    colors: {
+        mainColors: {
+            primary: {
+                100: 'rgb(242,249,245)',
+                200: 'rgb(230,243,234)',
+                300: 'rgb(206,231,215)',
+                400: 'rgb(156,207,175)',
+                500: 'rgb(107,183,134)',
+                600: 'rgb(8,135,54)',
+                700: 'rgb(6,108,43)',
+                800: 'rgb(6,108,43)'
+            },
+            grayScale: {
+                100: 'rgb(255,255,255)',
+                200: 'rgb(245,245,245)',
+                300: 'rgb(234,234,234)',
+                400: 'rgb(214,214,214)',
+                500: 'rgb(173,173,173)',
+                600: 'rgb(51,51,51)',
+                700: 'rgb(34,34,34)',
+                800: 'rgb(17,17,17)'
+            }
+        },
+        utility: {
+            red: {
+                100: 'rgb(253,246,246)',
+                200: 'rgb(252,238,237)',
+                300: 'rgb(249,221,218)',
+                400: 'rgb(243,187,182)',
+                500: 'rgb(236,153,145)',
+                600: 'rgb(224,85,72)',
+                700: 'rgb(179,68,58)',
+                800: 'rgb(179,68,58)'
+            },
+            highlightGreen: {
+                100: 'rgb(248,252,247)',
+                200: 'rgb(240,250,238)',
+                300: 'rgb(227,245,222)',
+                400: 'rgb(199,235,190)',
+                500: 'rgb(170,226,157)',
+                600: 'rgb(114,206,92)',
+                700: 'rgb(91,165,74)',
+                800: 'rgb(80,144,64)'
+            }
+        }
+    },
     colorsOld: {
         primary: {
             default: 'rgb(51, 51, 51)',

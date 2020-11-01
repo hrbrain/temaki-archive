@@ -1,5 +1,51 @@
 import * as React from 'react';
 import * as styledComponents from 'styled-components';
+export declare type RequiredThemeColors = {
+    mainColors: {
+        primary: {
+            100: string;
+            200: string;
+            300: string;
+            400: string;
+            500: string;
+            600: string;
+            700: string;
+            800: string;
+        };
+        grayScale: {
+            100: string;
+            200: string;
+            300: string;
+            400: string;
+            500: string;
+            600: string;
+            700: string;
+            800: string;
+        };
+    };
+    utility: {
+        red: {
+            100: string;
+            200: string;
+            300: string;
+            400: string;
+            500: string;
+            600: string;
+            700: string;
+            800: string;
+        };
+        highlightGreen: {
+            100: string;
+            200: string;
+            300: string;
+            400: string;
+            500: string;
+            600: string;
+            700: string;
+            800: string;
+        };
+    };
+};
 export declare type RequiredThemeColorsOld = {
     primary: {
         default: string;
@@ -116,6 +162,7 @@ export declare type RequiredThemeTextSizeSP = {
     };
 };
 export declare type RequiredThemeProps = {
+    colors: RequiredThemeColors;
     colorsOld: RequiredThemeColorsOld;
     shadows: RequiredThemeShadows;
     typography: RequiredThemeTextSize;

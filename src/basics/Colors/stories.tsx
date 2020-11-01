@@ -21,6 +21,24 @@ const renderColorsEachKeys = (obj: { [key: string]: string }) => {
 
 storiesOf('Basics|Colors', module).add('all', () => (
     <div className="container p-4">
+        <h1 className="text-xl mt-8">Main Colors</h1>
+        <h2 className="text-l mt-4">Gray Scale</h2>
+        <div className="flex mt-4">
+            {renderColorsEachKeys(defaultTheme.colors.mainColors.grayScale)}
+        </div>
+        <h2 className="text-l mt-4">Primary</h2>
+        <div className="flex mt-4">
+            {renderColorsEachKeys(defaultTheme.colors.mainColors.primary)}
+        </div>
+        <h1 className="text-xl mt-8">Utility</h1>
+        <h2 className="text-l mt-4">Red</h2>
+        <div className="flex mt-4">
+            {renderColorsEachKeys(defaultTheme.colors.utility.red)}
+        </div>
+        <h2 className="text-l mt-4">Highlight Green</h2>
+        <div className="flex mt-4">
+            {renderColorsEachKeys(defaultTheme.colors.utility.highlightGreen)}
+        </div>
         <h1 className="text-xl mt-8">Main Colors Old</h1>
         <h2 className="text-l mt-4">Gray Scale</h2>
         <div className="flex mt-4">
