@@ -14,6 +14,6 @@ Component.displayName = 'FormErrorMessage'
 
 const Outer = styled.div`
     margin-top: 4px;
-    color: ${props => props.theme.colors.utilities.red.default};
+    color: ${props => props.theme.colorsOld.utilities.red.default};
     font-size: ${props => props.theme.typography.pc.body.default};
 `

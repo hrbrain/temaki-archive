@@ -74,9 +74,9 @@ const CheckIcon = styled(Icon.Component)`
     width: 24px;
 
     & #fill {
-        fill: ${props => props.theme.colors.primary.default};
+        fill: ${props => props.theme.colorsOld.primary.default};
         &.disabled {
-            fill: ${props => props.theme.colors.grayScale.S20};
+            fill: ${props => props.theme.colorsOld.grayScale.S20};
         }
     }
 `
@@ -85,5 +85,5 @@ const Text = styled.span`
     height: 100%;
     font-size: 14px;
     padding-left: 4px;
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colorsOld.text};
 `

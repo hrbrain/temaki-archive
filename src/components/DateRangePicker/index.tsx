@@ -855,7 +855,7 @@ const Outer = styled.div<OuterProps>`
         .DateInput_input__focused {
             outline: none;
             border-color: ${props =>
-                props.theme.colors.utilities.highlightGreen};
+                props.theme.colorsOld.utilities.highlightGreen};
         }
         .DateInput_screenReaderMessage {
             border: 0;
@@ -900,8 +900,8 @@ const Outer = styled.div<OuterProps>`
             border: 1px solid
                 ${props =>
                     props.errored
-                        ? props.theme.colors.utilities.red.default
-                        : props.theme.colors.grayScale.S10};
+                        ? props.theme.colorsOld.utilities.red.default
+                        : props.theme.colorsOld.grayScale.S10};
             transition: all 0.15s;
         }
         .DateRangePickerInput__rtl {

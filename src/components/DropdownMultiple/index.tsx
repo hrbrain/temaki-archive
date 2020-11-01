@@ -172,13 +172,13 @@ const NotFoundText = styled.div<{ isVisible?: boolean }>`
     position: absolute;
     right: 0;
     width: 100%;
-    background: ${props => props.theme.colors.grayScale.S0};
+    background: ${props => props.theme.colorsOld.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
     max-height: 204px;
     overflow-y: auto;
     z-index: 1;
-    color: ${props => props.theme.colors.grayScale.S50};
+    color: ${props => props.theme.colorsOld.grayScale.S50};
     word-break: break-all;
     padding: 12px;
     margin-top: 6px;

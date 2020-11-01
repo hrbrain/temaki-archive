@@ -174,12 +174,12 @@ const Body = styled.div<BodyType>`
     border: 1px solid
         ${props => {
             if (props.isError) {
-                return props.theme.colors.utilities.red.default
+                return props.theme.colorsOld.utilities.red.default
             }
             if (props.isMenuVisible) {
-                return props.theme.colors.utilities.highlightGreen.default
+                return props.theme.colorsOld.utilities.highlightGreen.default
             }
-            return props.theme.colors.grayScale.S10
+            return props.theme.colorsOld.grayScale.S10
         }};
     border-radius: 6px;
     user-select: none;
@@ -187,7 +187,7 @@ const Body = styled.div<BodyType>`
     cursor: pointer;
 
     background-color: ${props =>
-        props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
+        props.diff ? props.theme.colorsOld.utilities.paleYellow : 'inherit'};
 `
 
 const Text = styled.div`
@@ -198,7 +198,7 @@ const Text = styled.div`
 const Remove = styled.div`
     display: block;
     cursor: pointer;
-    background: ${props => props.theme.colors.grayScale.S0};
+    background: ${props => props.theme.colorsOld.grayScale.S0};
     border-radius: 50%;
     position: relative;
     width: 16px;
@@ -209,7 +209,7 @@ const Remove = styled.div`
         content: '';
         display: block;
         border-top: solid 1px
-            ${props => props.theme.colors.utilities.red.default};
+            ${props => props.theme.colorsOld.utilities.red.default};
         border-right: transparent;
         border-left: transparent;
         border-bottom: transparent;
@@ -225,7 +225,7 @@ const Remove = styled.div`
         content: '';
         display: block;
         border-top: solid 1px
-            ${props => props.theme.colors.utilities.red.default};
+            ${props => props.theme.colorsOld.utilities.red.default};
         border-right: transparent;
         border-left: transparent;
         border-bottom: transparent;
@@ -242,8 +242,8 @@ const InnerText = styled.div`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background: ${props => props.theme.colors.primary.N95};
-    color: ${props => props.theme.colors.primary.default};
+    background: ${props => props.theme.colorsOld.primary.N95};
+    color: ${props => props.theme.colorsOld.primary.default};
     padding: 6.5px 8px;
     margin: 4px 8px 4px 0px;
     border-radius: 20px;
@@ -258,7 +258,7 @@ const SelectorInput = styled.div`
     outline: 0;
     &.focused {
         border-color: ${props =>
-            props.theme.colors.utilities.highlightGreen.default};
+            props.theme.colorsOld.utilities.highlightGreen.default};
     }
 `
 

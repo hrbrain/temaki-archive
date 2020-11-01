@@ -119,7 +119,7 @@ describe('textarea', () => {
 
         expect(wrapper.find('textarea')).toHaveStyleRule(
             'background-color',
-            Theme.defaultTheme.colors.utilities.paleYellow.replace(/ /g, '')
+            Theme.defaultTheme.colorsOld.utilities.paleYellow.replace(/ /g, '')
         )
     })
 })

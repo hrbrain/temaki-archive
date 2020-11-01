@@ -148,8 +148,8 @@ const Outer = styled.div<OuterProps>`
             border: solid 1px
                 ${props =>
                     props.errored
-                        ? props.theme.colors.utilities.red.default
-                        : props.theme.colors.grayScale.S10};
+                        ? props.theme.colorsOld.utilities.red.default
+                        : props.theme.colorsOld.grayScale.S10};
             border-radius: 6px;
             display: flex;
             flex-direction: row;
@@ -393,7 +393,7 @@ const Outer = styled.div<OuterProps>`
             cursor: default;
         }
         .CalendarDay__default {
-            color: ${props => props.theme.colors.grayScale.S100};
+            color: ${props => props.theme.colorsOld.grayScale.S100};
             background: #fff;
         }
         .CalendarDay__default:hover {
@@ -428,12 +428,12 @@ const Outer = styled.div<OuterProps>`
         }
         .CalendarDay__highlighted_calendar {
             background: #ffe8bc;
-            color: ${props => props.theme.colors.grayScale.S100};
+            color: ${props => props.theme.colorsOld.grayScale.S100};
         }
         .CalendarDay__highlighted_calendar:active,
         .CalendarDay__highlighted_calendar:hover {
             background: #ffce71;
-            color: ${props => props.theme.colors.grayScale.S100};
+            color: ${props => props.theme.colorsOld.grayScale.S100};
         }
         .CalendarDay__selected_span {
             background: #66e2da;
@@ -505,7 +505,7 @@ const Outer = styled.div<OuterProps>`
             border-collapse: separate;
         }
         .CalendarMonth_caption {
-            color: ${props => props.theme.colors.grayScale.S100};
+            color: ${props => props.theme.colorsOld.grayScale.S100};
             font-size: 14px;
             text-align: center;
             padding-top: 10px;
@@ -669,7 +669,7 @@ const Outer = styled.div<OuterProps>`
         .DayPickerNavigation_svg__vertical {
             height: 42px;
             width: 42px;
-            fill: ${props => props.theme.colors.grayScale.S100};
+            fill: ${props => props.theme.colorsOld.grayScale.S100};
         }
         .DayPickerNavigation_svg__disabled {
             fill: #f2f2f2;
@@ -821,7 +821,7 @@ const Outer = styled.div<OuterProps>`
             border: none;
             font-weight: 200;
             line-height: 24px;
-            color: ${props => props.theme.colors.grayScale.S100};
+            color: ${props => props.theme.colorsOld.grayScale.S100};
             height: 100%;
             width: 112px;
             font-size: 14px;
@@ -848,7 +848,7 @@ const Outer = styled.div<OuterProps>`
         .DateInput_input__focused {
             outline: none;
             border-color: ${props =>
-                props.theme.colors.utilities.highlightGreen};
+                props.theme.colorsOld.utilities.highlightGreen};
         }
         .DateInput_screenReaderMessage {
             border: 0;
@@ -898,12 +898,12 @@ const Outer = styled.div<OuterProps>`
         .DateRangePickerInput_arrow {
             display: inline-block;
             vertical-align: middle;
-            color: ${props => props.theme.colors.grayScale.S100};
+            color: ${props => props.theme.colorsOld.grayScale.S100};
             width: 12px;
         }
         .DateRangePickerInput_arrow_svg {
             vertical-align: middle;
-            fill: ${props => props.theme.colors.grayScale.S100};
+            fill: ${props => props.theme.colorsOld.grayScale.S100};
             height: 24px;
             width: 24px;
         }

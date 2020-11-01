@@ -49,7 +49,7 @@ export const Component = withTheme(
                 >
                     <StyledIcon
                         svg={IconFiles.icons.AddIcon}
-                        color={props.theme.colors.primary.default}
+                        color={props.theme.colorsOld.primary.default}
                         size={'24px'}
                     />
                 </IncrementButton>
@@ -76,9 +76,9 @@ const Wrap = styled.div`
     text-align: center;
     line-height: 32px;
     border-radius: 6px;
-    background: ${props => props.theme.colors.grayScale.S0};
-    border: 1px solid ${props => props.theme.colors.grayScale.S10};
-    color: ${props => props.theme.colors.primary.default};
+    background: ${props => props.theme.colorsOld.grayScale.S0};
+    border: 1px solid ${props => props.theme.colorsOld.grayScale.S10};
+    color: ${props => props.theme.colorsOld.primary.default};
 `
 
 const Label = styled.span`
@@ -96,14 +96,14 @@ const Button = styled.div`
     cursor: pointer;
     width: 32px;
     text-align: center;
-    background: ${props => props.theme.colors.grayScale.S5};
+    background: ${props => props.theme.colorsOld.grayScale.S5};
 `
 
 const IncrementButton = styled(Button)`
-    border-right: 1px solid ${props => props.theme.colors.grayScale.S10};
+    border-right: 1px solid ${props => props.theme.colorsOld.grayScale.S10};
     border-radius: 5px 0 0 5px;
 `
 const DecrementButton = styled(Button)`
-    border-left: 1px solid ${props => props.theme.colors.grayScale.S10};
+    border-left: 1px solid ${props => props.theme.colorsOld.grayScale.S10};
     border-radius: 0 5px 5px 0;
 `

@@ -76,7 +76,7 @@ describe('Input format of text', () => {
         expect(inputEl).toMatchSnapshot()
         expect(inputEl).toHaveStyleRule(
             'border-color',
-            defaultTheme.colors.utilities.red.default.replace(/ /g, '')
+            defaultTheme.colorsOld.utilities.red.default.replace(/ /g, '')
         )
     })
 
@@ -182,7 +182,7 @@ describe('Input format of number', () => {
         expect(inputEl).toMatchSnapshot()
         expect(inputEl).toHaveStyleRule(
             'border-color',
-            defaultTheme.colors.utilities.red.default.replace(/ /g, '')
+            defaultTheme.colorsOld.utilities.red.default.replace(/ /g, '')
         )
     })
 

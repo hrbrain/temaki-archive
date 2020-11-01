@@ -73,13 +73,13 @@ function renderText(
 function selectIconColor(theme: RequiredThemeProps, colorType?: string) {
     switch (colorType) {
         case 'primary':
-            return theme.colors.primary.default
+            return theme.colorsOld.primary.default
         case 'destructive':
-            return theme.colors.utilities.red.default
+            return theme.colorsOld.utilities.red.default
         case 'grayScaleS100':
-            return theme.colors.grayScale.S100
+            return theme.colorsOld.grayScale.S100
         default:
-            return theme.colors.text.default
+            return theme.colorsOld.text.default
     }
 }
 
@@ -104,13 +104,13 @@ const Text = styled.span<TextType>`
     color: ${props => {
         switch (props.colorType) {
             case 'primary':
-                return props.theme.colors.primary.default
+                return props.theme.colorsOld.primary.default
             case 'destructive':
-                return props.theme.colors.utilities.red.default
+                return props.theme.colorsOld.utilities.red.default
             case 'grayScaleS100':
-                return props.theme.colors.grayScale.S100
+                return props.theme.colorsOld.grayScale.S100
             default:
-                return props.theme.colors.text
+                return props.theme.colorsOld.text
         }
     }};
     padding-left: ${props => (props.svg ? '4px' : '0')};

@@ -56,12 +56,12 @@ const Box = styled.div<{ selected?: boolean; itemWidth?: string }>`
     transition: 0.2s;
     background: ${props =>
         props.selected
-            ? props.theme.colors.primary.default
-            : props.theme.colors.grayScale.S0};
+            ? props.theme.colorsOld.primary.default
+            : props.theme.colorsOld.grayScale.S0};
     color: ${props =>
         props.selected
-            ? props.theme.colors.grayScale.S0
-            : props.theme.colors.primary.default};
+            ? props.theme.colorsOld.grayScale.S0
+            : props.theme.colorsOld.primary.default};
     display: inline-flex;
     text-align: center;
     padding-left: 12px;
@@ -69,7 +69,7 @@ const Box = styled.div<{ selected?: boolean; itemWidth?: string }>`
     font-size: 14px;
     height: 40px;
     line-height: 40px;
-    border: 1px solid ${props => props.theme.colors.primary.default};
+    border: 1px solid ${props => props.theme.colorsOld.primary.default};
     border-right: 0;
     border-collapse: collapse;
     user-select: none;
@@ -86,6 +86,7 @@ const Box = styled.div<{ selected?: boolean; itemWidth?: string }>`
     &:last-child {
         border-top-right-radius: 6px;
         border-bottom-right-radius: 6px;
-        border-right: 1px solid ${props => props.theme.colors.primary.default};
+        border-right: 1px solid
+            ${props => props.theme.colorsOld.primary.default};
     }
 `

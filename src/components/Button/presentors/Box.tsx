@@ -65,56 +65,56 @@ const Outer = styled.button<OuterProps>`
         switch (props.colorType) {
             case 'primary':
                 return Styles.createCSSFromColorType(
-                    props.theme.colors.primary.default,
-                    props.theme.colors.primary.N20,
-                    props.theme.colors.primary.N40,
-                    props.theme.colors.grayScale.S0
+                    props.theme.colorsOld.primary.default,
+                    props.theme.colorsOld.primary.N20,
+                    props.theme.colorsOld.primary.N40,
+                    props.theme.colorsOld.grayScale.S0
                 )
             case 'primary ghost':
                 return Styles.createCSSFromColorType(
                     'inherit',
-                    props.theme.colors.primary.N80,
-                    props.theme.colors.primary.N60,
-                    props.theme.colors.primary.default,
-                    props.theme.colors.primary.default
+                    props.theme.colorsOld.primary.N80,
+                    props.theme.colorsOld.primary.N60,
+                    props.theme.colorsOld.primary.default,
+                    props.theme.colorsOld.primary.default
                 )
             case 'secondary':
                 return Styles.createCSSFromColorType(
-                    props.theme.colors.grayScale.S5,
-                    props.theme.colors.grayScale.S20,
-                    props.theme.colors.grayScale.S40,
-                    props.theme.colors.grayScale.S100,
-                    props.theme.colors.grayScale.S10
+                    props.theme.colorsOld.grayScale.S5,
+                    props.theme.colorsOld.grayScale.S20,
+                    props.theme.colorsOld.grayScale.S40,
+                    props.theme.colorsOld.grayScale.S100,
+                    props.theme.colorsOld.grayScale.S10
                 )
             case 'secondary ghost':
                 return Styles.createCSSFromColorType(
                     'inherit',
-                    props.theme.colors.grayScale.S20,
-                    props.theme.colors.grayScale.S40,
-                    props.theme.colors.grayScale.S100,
-                    props.theme.colors.grayScale.S50
+                    props.theme.colorsOld.grayScale.S20,
+                    props.theme.colorsOld.grayScale.S40,
+                    props.theme.colorsOld.grayScale.S100,
+                    props.theme.colorsOld.grayScale.S50
                 )
             case 'destructive':
                 return Styles.createCSSFromColorType(
-                    props.theme.colors.utilities.red.default,
+                    props.theme.colorsOld.utilities.red.default,
                     'rgb(179, 68, 58)',
                     'rgb(133, 51, 43)',
-                    props.theme.colors.grayScale.S0
+                    props.theme.colorsOld.grayScale.S0
                 )
             case 'destructive ghost':
                 return Styles.createCSSFromColorType(
                     'inherit',
                     'rgb(250, 221, 218)',
                     'rgb(244, 187, 182)',
-                    props.theme.colors.utilities.red.default,
-                    props.theme.colors.utilities.red.default
+                    props.theme.colorsOld.utilities.red.default,
+                    props.theme.colorsOld.utilities.red.default
                 )
             case 'disabled':
                 return Styles.createCSSFromColorType(
-                    props.theme.colors.grayScale.S20,
-                    props.theme.colors.grayScale.S20,
-                    props.theme.colors.grayScale.S20,
-                    props.theme.colors.grayScale.S0
+                    props.theme.colorsOld.grayScale.S20,
+                    props.theme.colorsOld.grayScale.S20,
+                    props.theme.colorsOld.grayScale.S20,
+                    props.theme.colorsOld.grayScale.S0
                 )
             default:
                 return ''

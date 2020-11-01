@@ -75,8 +75,8 @@ const ItemComponent = React.memo<ItemProps>(props => {
                 size="24px"
                 color={
                     props.item.value === props.selected
-                        ? defaultTheme.colors.primary.default
-                        : defaultTheme.colors.grayScale.S10
+                        ? defaultTheme.colorsOld.primary.default
+                        : defaultTheme.colorsOld.grayScale.S10
                 }
             />
             <Text disabled={props.item.disabled}>{props.item.text}</Text>
@@ -89,7 +89,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
  */
 
 const ItemList = styled.ul`
-    background: ${props => props.theme.colors.grayScale.S0};
+    background: ${props => props.theme.colorsOld.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
     max-height: 204px;
@@ -105,7 +105,7 @@ const Item = styled.li`
     display: flex;
     cursor: pointer;
     &:hover {
-        color: ${props => props.theme.colors.primary.default};
+        color: ${props => props.theme.colorsOld.primary.default};
     }
     & + & {
         margin-top: 12px;
@@ -116,6 +116,6 @@ const Text = styled.div<{ disabled?: boolean }>`
     padding-left: 4px;
     ${props =>
         props.disabled &&
-        `color: ${props.theme.colors.grayScale.S20};
+        `color: ${props.theme.colorsOld.grayScale.S20};
         cursor: not-allowed;`}
 `

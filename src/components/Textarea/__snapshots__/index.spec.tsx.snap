@@ -48,7 +48,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
 <ThemeProvider
   theme={
     Object {
-      "colors": Object {
+      "colorsOld": Object {
         "grayScale": Object {
           "S0": "rgb(255, 255, 255)",
           "S10": "rgb(234, 234, 234)",

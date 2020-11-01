@@ -132,7 +132,7 @@ const List = styled.ul<{ listNum: number }>`
     display: block;
     right: 0;
     max-width: 140px;
-    background: ${props => props.theme.colors.grayScale.S0};
+    background: ${props => props.theme.colorsOld.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.boxShadow.L5};
     padding: 12px;
@@ -160,11 +160,11 @@ const ListItem = styled.li`
     }
     color: ${props => {
         if (props.color === 'primary') {
-            return props.theme.colors.primary.default
+            return props.theme.colorsOld.primary.default
         }
         if (props.color === 'destructive') {
-            return props.theme.colors.utilities.red.default
+            return props.theme.colorsOld.utilities.red.default
         }
-        return props.theme.colors.text.default
+        return props.theme.colorsOld.text.default
     }};
 `

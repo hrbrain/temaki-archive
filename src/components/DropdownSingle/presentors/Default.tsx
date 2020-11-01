@@ -156,10 +156,10 @@ const getBackgroundColor = (
     disabled?: boolean
 ) => {
     if (disabled) {
-        return theme.colors.grayScale.S20
+        return theme.colorsOld.grayScale.S20
     }
     if (diff) {
-        return theme.colors.utilities.paleYellow
+        return theme.colorsOld.utilities.paleYellow
     } else {
         return 'inherit'
     }
@@ -173,12 +173,12 @@ const Body = styled.div<BodyType>`
     border: 1px solid
         ${props => {
             if (props.isError) {
-                return props.theme.colors.utilities.red.default
+                return props.theme.colorsOld.utilities.red.default
             }
             if (props.isMenuVisible) {
-                return props.theme.colors.utilities.highlightGreen.default
+                return props.theme.colorsOld.utilities.highlightGreen.default
             }
-            return props.theme.colors.grayScale.S10
+            return props.theme.colorsOld.grayScale.S10
         }};
     border-radius: 6px;
     user-select: none;
@@ -218,7 +218,7 @@ const SelectorInput = styled.div`
     outline: 0;
     &.focused {
         border-color: ${props =>
-            props.theme.colors.utilities.highlightGreen.default};
+            props.theme.colorsOld.utilities.highlightGreen.default};
     }
 `
 
@@ -236,13 +236,13 @@ const NotFoundText = styled.div<{ isVisible: boolean }>`
     position: absolute;
     right: 0;
     width: 100%;
-    background: ${props => props.theme.colors.grayScale.S0};
+    background: ${props => props.theme.colorsOld.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
     max-height: 204px;
     overflow-y: auto;
     z-index: 1;
-    color: ${props => props.theme.colors.grayScale.S50};
+    color: ${props => props.theme.colorsOld.grayScale.S50};
     word-break: break-all;
     padding: 12px;
     margin-top: 6px;

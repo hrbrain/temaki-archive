@@ -77,7 +77,7 @@ const Textarea = styled(TextareaAutosize)<{
     diff?: boolean
 }>`
     display: block;
-    border: 1px solid ${props => props.theme.colors.grayScale.S10};
+    border: 1px solid ${props => props.theme.colorsOld.grayScale.S10};
     border-radius: 6px;
     width: 100%;
     padding: 8px;
@@ -85,21 +85,21 @@ const Textarea = styled(TextareaAutosize)<{
     font-size: 14px;
     resize: none;
     outline: none;
-    color: ${props => props.theme.colors.grayScale.S100};
+    color: ${props => props.theme.colorsOld.grayScale.S100};
     &::placeholder {
-        color: ${props => props.theme.colors.grayScale.S20};
+        color: ${props => props.theme.colorsOld.grayScale.S20};
     }
 
     &:focus {
         border-color: ${props =>
             props.errored
-                ? props.theme.colors.utilities.red.default
-                : props.theme.colors.utilities.highlightGreen.default};
+                ? props.theme.colorsOld.utilities.red.default
+                : props.theme.colorsOld.utilities.highlightGreen.default};
     }
 
     border-color: ${props =>
-        props.errored && props.theme.colors.utilities.red.default};
+        props.errored && props.theme.colorsOld.utilities.red.default};
 
     background-color: ${props =>
-        props.diff ? props.theme.colors.utilities.paleYellow : `inherit`};
+        props.diff ? props.theme.colorsOld.utilities.paleYellow : `inherit`};
 `

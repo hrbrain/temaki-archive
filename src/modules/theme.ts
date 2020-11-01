@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as styledComponents from 'styled-components'
 
-export type RequiredThemeColors = {
+export type RequiredThemeColorsOld = {
     primary: {
         default: string
         N20: string
@@ -122,13 +122,13 @@ export type RequiredThemeTextSizeSP = {
 }
 
 export type RequiredThemeProps = {
-    colors: RequiredThemeColors
+    colorsOld: RequiredThemeColorsOld
     shadows: RequiredThemeShadows
     typography: RequiredThemeTextSize
 }
 
 export const defaultTheme: RequiredThemeProps = {
-    colors: {
+    colorsOld: {
         primary: {
             default: 'rgb(51, 51, 51)',
             N20: 'rgb(92, 92, 92)',

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as styledComponents from 'styled-components';
-export declare type RequiredThemeColors = {
+export declare type RequiredThemeColorsOld = {
     primary: {
         default: string;
         N20: string;
@@ -116,7 +116,7 @@ export declare type RequiredThemeTextSizeSP = {
     };
 };
 export declare type RequiredThemeProps = {
-    colors: RequiredThemeColors;
+    colorsOld: RequiredThemeColorsOld;
     shadows: RequiredThemeShadows;
     typography: RequiredThemeTextSize;
 };
