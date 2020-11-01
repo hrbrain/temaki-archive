@@ -2,7 +2,7 @@ import * as React from 'react'
 import * as styledComponents from 'styled-components'
 
 export type RequiredThemeColors = {
-    mainColors: {
+    main: {
         primary: {
             100: string
             200: string
@@ -177,7 +177,7 @@ export type RequiredThemeProps = {
 
 export const defaultTheme: RequiredThemeProps = {
     colors: {
-        mainColors: {
+        main: {
             primary: {
                 100: 'rgb(242,249,245)',
                 200: 'rgb(230,243,234)',

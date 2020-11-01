@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as styledComponents from 'styled-components';
 export declare type RequiredThemeColors = {
-    mainColors: {
+    main: {
         primary: {
             100: string;
             200: string;

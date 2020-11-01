@@ -49,7 +49,7 @@ exports[`textarea 以前のスナップショットと一致しているか 1`] 
   theme={
     Object {
       "colors": Object {
-        "mainColors": Object {
+        "main": Object {
           "grayScale": Object {
             "100": "rgb(255,255,255)",
             "200": "rgb(245,245,245)",

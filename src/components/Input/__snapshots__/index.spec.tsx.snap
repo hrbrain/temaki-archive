@@ -56,7 +56,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
   theme={
     Object {
       "colors": Object {
-        "mainColors": Object {
+        "main": Object {
           "grayScale": Object {
             "100": "rgb(255,255,255)",
             "200": "rgb(245,245,245)",
@@ -362,7 +362,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
   theme={
     Object {
       "colors": Object {
-        "mainColors": Object {
+        "main": Object {
           "grayScale": Object {
             "100": "rgb(255,255,255)",
             "200": "rgb(245,245,245)",

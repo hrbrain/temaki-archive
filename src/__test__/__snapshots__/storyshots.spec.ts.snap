@@ -7,7 +7,7 @@ exports[`Storyshots Basics|Colors all 1`] = `
   <h1
     className="text-xl mt-8"
   >
-    Main Colors
+    Main
   </h1>
   <h2
     className="text-l mt-4"
