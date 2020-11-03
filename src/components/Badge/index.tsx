@@ -22,8 +22,8 @@ const Outer = styled.div`
     line-height: 20px;
     border-radius: 50%;
 
-    color: ${props => props.theme.colorsOld.grayScale.S0};
-    background: ${props => props.theme.colorsOld.utilities.red.default};
+    color: ${props => props.theme.colors.grayScale.S0};
+    background: ${props => props.theme.colors.utilities.red.default};
     font-size: 12px;
     font-weight: bold;
     text-align: center;

@@ -28,7 +28,7 @@ export { Component }
 const Outer: any = styled.div`
     display: inline-flex;
     align-items: center;
-    background: ${props => props.theme.colorsOld.grayScale.S5};
+    background: ${props => props.theme.colors.grayScale.S5};
     border-radius: 6px;
     filter: drop-shadow(${props => props.theme.shadows.dropShadow.L5});
     position: relative;
@@ -48,7 +48,7 @@ const Outer: any = styled.div`
                 margin: auto;
 
                 border-right: 6px solid transparent;
-                border-bottom: 6px solid ${props.theme.colorsOld.grayScale.S5};
+                border-bottom: 6px solid ${props.theme.colors.grayScale.S5};
                 border-left: 6px solid transparent;
             }
         `};
@@ -64,7 +64,7 @@ const Outer: any = styled.div`
                 height: 0;
                 margin-right: -6px;
         
-                border-left: 6px solid ${props.theme.colorsOld.grayScale.S5};
+                border-left: 6px solid ${props.theme.colors.grayScale.S5};
                 border-top: 6px solid transparent;
                 border-bottom: 6px solid transparent;
             }
@@ -83,7 +83,7 @@ const Outer: any = styled.div`
                 height: 0;
                 margin: auto;
         
-                border-top: 6px solid ${props.theme.colorsOld.grayScale.S5};
+                border-top: 6px solid ${props.theme.colors.grayScale.S5};
                 border-right: 6px solid transparent;
                 border-left: 6px solid transparent;
             }
@@ -99,7 +99,7 @@ const Outer: any = styled.div`
                 height: 0;
                 margin-left: -6px;
         
-                border-right: 6px solid ${props.theme.colorsOld.grayScale.S5};
+                border-right: 6px solid ${props.theme.colors.grayScale.S5};
                 border-top: 6px solid transparent;
                 border-bottom: 6px solid transparent;
             }
@@ -110,7 +110,7 @@ const Text = styled.span`
     height: 100%;
     font-size: 14px;
     padding: 8px 12px;
-    color: ${props => props.theme.colorsOld.text.default};
+    color: ${props => props.theme.colors.text.default};
     max-width: 280px;
     word-break: break-all;
 `

@@ -52,10 +52,10 @@ const Switch = styled.div`
     height: 24px;
     border-radius: 12px;
     cursor: pointer;
-    background: ${props => props.theme.colorsOld.primary.N60};
+    background: ${props => props.theme.colors.primary.N60};
     transition: 0.2s;
     &.activeOuter {
-        background: ${props => props.theme.colorsOld.primary.default};
+        background: ${props => props.theme.colors.primary.default};
     }
 `
 const SwitchItem = styled.span`
@@ -65,7 +65,7 @@ const SwitchItem = styled.span`
     width: 16px;
     height: 16px;
     border-radius: 8px;
-    background: ${props => props.theme.colorsOld.grayScale.S0};
+    background: ${props => props.theme.colors.grayScale.S0};
     transition: 0.2s;
     &.activeSwitch {
         left: 22px;

@@ -57,7 +57,7 @@ const Background = styled.div`
 
 const Wrap = styled.div`
     width: 678px;
-    background-color: ${props => props.theme.colorsOld.grayScale.S0};
+    background-color: ${props => props.theme.colors.grayScale.S0};
     border-radius: 8px;
 `
 
@@ -66,7 +66,7 @@ const Head = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 24px;
-    border-bottom: 1px solid ${props => props.theme.colorsOld.grayScale.S20};
+    border-bottom: 1px solid ${props => props.theme.colors.grayScale.S20};
 `
 
 const Title = styled.div`
@@ -84,7 +84,7 @@ const Body = styled.div`
 
 const Footer = styled.div`
     padding: 24px;
-    border-top: 1px solid ${props => props.theme.colorsOld.grayScale.S20};
+    border-top: 1px solid ${props => props.theme.colors.grayScale.S20};
     display: flex;
     align-items: center;
     justify-content: flex-end;

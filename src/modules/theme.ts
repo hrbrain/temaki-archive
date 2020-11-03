@@ -46,9 +46,7 @@ export type RequiredThemeColors = {
             800: string
         }
     }
-}
-
-export type RequiredThemeColorsOld = {
+    // これ以下のプロパティはdeprecated
     primary: {
         default: string
         N20: string
@@ -170,7 +168,6 @@ export type RequiredThemeTextSizeSP = {
 
 export type RequiredThemeProps = {
     colors: RequiredThemeColors
-    colorsOld: RequiredThemeColorsOld
     shadows: RequiredThemeShadows
     typography: RequiredThemeTextSize
 }
@@ -220,9 +217,7 @@ export const defaultTheme: RequiredThemeProps = {
                 700: 'rgb(91,165,74)',
                 800: 'rgb(80,144,64)'
             }
-        }
-    },
-    colorsOld: {
+        },
         primary: {
             default: 'rgb(51, 51, 51)',
             N20: 'rgb(92, 92, 92)',

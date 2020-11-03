@@ -10,5 +10,5 @@ export const Component: React.FC = ({ children }) => {
 }
 
 const StyledText = styled.p`
-    color: ${props => props.theme.colorsOld.text.default};
+    color: ${props => props.theme.colors.text.default};
 `

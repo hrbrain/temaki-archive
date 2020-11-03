@@ -101,7 +101,7 @@ function renderRemoveButton(onClick: (e: React.MouseEvent) => void) {
                     <Icon.Component
                         svg={IconFiles.icons.Remove}
                         size="24px"
-                        color={color.colorsOld.utilities.red.default}
+                        color={color.colors.utilities.red.default}
                     />
                 </RemoveButton>
             )}
@@ -119,9 +119,9 @@ const getBorderColor = (
 ) => {
     switch (borderColorType) {
         case 'primary':
-            return theme.colorsOld.primary.default
+            return theme.colors.primary.default
         case 'grayScaleS100':
-            return theme.colorsOld.grayScale.S100
+            return theme.colors.grayScale.S100
         default:
             throw new Error('not provided type')
     }
@@ -142,13 +142,13 @@ const FileBox = styled.div<{
     border: 1px dashed
         ${props =>
             props.errored
-                ? props.theme.colorsOld.utilities.red.default
+                ? props.theme.colors.utilities.red.default
                 : getBorderColor(props.theme, props.borderColorType)};
     &.attach {
         border: 1px solid
             ${props =>
                 props.errored
-                    ? props.theme.colorsOld.utilities.red.default
+                    ? props.theme.colors.utilities.red.default
                     : getBorderColor(props.theme, props.borderColorType)};
     }
 `

@@ -28,7 +28,7 @@ export const Component = withTheme(
                     <RadioButton
                         svg={IconFiles.icons.RadioDisabled}
                         size="24px"
-                        color={theme.colorsOld.grayScale.S20}
+                        color={theme.colors.grayScale.S20}
                     />
                     <DisabledLabel>{text}</DisabledLabel>
                 </Outer>
@@ -43,7 +43,7 @@ export const Component = withTheme(
                 >
                     <RadioButton
                         svg={IconFiles.icons.RadioOn}
-                        color={theme.colorsOld.primary.default}
+                        color={theme.colors.primary.default}
                         size="24px"
                     />
                     <Label disabled={disabled}>{text}</Label>
@@ -56,7 +56,7 @@ export const Component = withTheme(
                 <RadioButton
                     svg={IconFiles.icons.RadioOff}
                     size="40px"
-                    color={theme.colorsOld.primary.default}
+                    color={theme.colors.primary.default}
                 />
                 <Label disabled={disabled}>{text}</Label>
             </Outer>
@@ -78,7 +78,7 @@ const RadioButton = styled(Icon.Component)<{
     color?: string
 }>`
     color: ${props =>
-        props.color ? props.color : props.theme.colorsOld.primary.default};
+        props.color ? props.color : props.theme.colors.primary.default};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,8 +94,8 @@ const Label = styled.span<{ disabled?: boolean }>`
     line-height: 24px;
     color: ${props =>
         props.disabled
-            ? props.theme.colorsOld.grayScale.S20
-            : props.theme.colorsOld.primary.P95};
+            ? props.theme.colors.grayScale.S20
+            : props.theme.colors.primary.P95};
 `
 const DisabledLabel = styled.span`
     max-width: 280px;
@@ -104,5 +104,5 @@ const DisabledLabel = styled.span`
     padding-left: 4px;
     height: 24px;
     line-height: 24px;
-    color: ${props => props.theme.colorsOld.grayScale.S20};
+    color: ${props => props.theme.colors.grayScale.S20};
 `

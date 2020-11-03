@@ -63,10 +63,9 @@ const Outer = styled.div<{ variant: Variant }>`
     ${props =>
         getVariantColor({
             variant: props.variant,
-            highlightGreen:
-                props.theme.colorsOld.utilities.highlightGreen.default,
-            red: props.theme.colorsOld.utilities.red.default,
-            grayScaleS5: props.theme.colorsOld.grayScale.S5
+            highlightGreen: props.theme.colors.utilities.highlightGreen.default,
+            red: props.theme.colors.utilities.red.default,
+            grayScaleS5: props.theme.colors.grayScale.S5
         })}
 `
 
@@ -117,8 +116,8 @@ const Label = styled.div<{ variant: Variant }>`
     ${props =>
         getVariantFontColor({
             variant: props.variant,
-            grayScaleS0: `${props.theme.colorsOld.grayScale.S0}`,
-            textDefault: `${props.theme.colorsOld.text.default}`
+            grayScaleS0: `${props.theme.colors.grayScale.S0}`,
+            textDefault: `${props.theme.colors.text.default}`
         })}
 `
 const Text = styled(Label)`

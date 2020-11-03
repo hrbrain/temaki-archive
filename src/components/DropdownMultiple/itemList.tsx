@@ -86,7 +86,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
 
 const ItemList = styled.ul<{ isVisible?: boolean }>`
     display: block;
-    background: ${props => props.theme.colorsOld.grayScale.S0};
+    background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
     max-height: 204px;
@@ -105,7 +105,7 @@ const ListItem = styled.li`
     display: flex;
     cursor: pointer;
     &:hover {
-        color: ${props => props.theme.colorsOld.primary.default};
+        color: ${props => props.theme.colors.primary.default};
     }
     & + & {
         margin-top: 12px;
@@ -114,9 +114,9 @@ const ListItem = styled.li`
 
 const CheckIcon = styled(Icon.Component)`
     & #fill {
-        fill: ${props => props.theme.colorsOld.primary.default};
+        fill: ${props => props.theme.colors.primary.default};
         & .disabled {
-            fill: ${props => props.theme.colorsOld.grayScale.S20};
+            fill: ${props => props.theme.colors.grayScale.S20};
         }
     }
 `

@@ -136,10 +136,7 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
             const el = wrapper.find('div[data-test="body"]')
             expect(el).toHaveStyleRule(
                 'background-color',
-                Theme.defaultTheme.colorsOld.utilities.paleYellow.replace(
-                    / /g,
-                    ''
-                )
+                Theme.defaultTheme.colors.utilities.paleYellow.replace(/ /g, '')
             )
         })
     })

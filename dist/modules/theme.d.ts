@@ -45,8 +45,6 @@ export declare type RequiredThemeColors = {
             800: string;
         };
     };
-};
-export declare type RequiredThemeColorsOld = {
     primary: {
         default: string;
         N20: string;
@@ -163,7 +161,6 @@ export declare type RequiredThemeTextSizeSP = {
 };
 export declare type RequiredThemeProps = {
     colors: RequiredThemeColors;
-    colorsOld: RequiredThemeColorsOld;
     shadows: RequiredThemeShadows;
     typography: RequiredThemeTextSize;
 };

@@ -106,7 +106,7 @@ const Body = styled.div<{ width?: string; diff?: boolean }>`
     cursor: pointer;
 
     background-color: ${props =>
-        props.diff ? props.theme.colorsOld.utilities.paleYellow : 'inherit'};
+        props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
 `
 
 const Text = styled.div`

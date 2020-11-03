@@ -58,19 +58,19 @@ const Outer = styled.input<OuterProps>`
     height: 40px;
     padding: 0 12px;
     border-radius: 6px;
-    border: solid 1px ${props => props.theme.colorsOld.grayScale.S10};
+    border: solid 1px ${props => props.theme.colors.grayScale.S10};
     transition: 0.15s border-color;
 
     ${props =>
         props.errored &&
         css`
-            border-color: ${props.theme.colorsOld.utilities.red.default};
+            border-color: ${props.theme.colors.utilities.red.default};
         `}
 
     ${props =>
         props.diff
             ? css`
-                  background: ${props.theme.colorsOld.utilities.paleYellow};
+                  background: ${props.theme.colors.utilities.paleYellow};
               `
             : ''}
     
@@ -87,11 +87,11 @@ const Outer = styled.input<OuterProps>`
     &:focus {
         outline: none;
         border-color: ${props =>
-            props.theme.colorsOld.utilities.highlightGreen.default};
+            props.theme.colors.utilities.highlightGreen.default};
     }
 
     &::placeholder {
-        color: ${props => props.theme.colorsOld.grayScale.S20};
+        color: ${props => props.theme.colors.grayScale.S20};
     }
 `
 
@@ -108,5 +108,5 @@ const Unit = styled.div`
 
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
-    background-color: ${props => props.theme.colorsOld.grayScale.S10};
+    background-color: ${props => props.theme.colors.grayScale.S10};
 `

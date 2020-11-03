@@ -31,8 +31,8 @@ const Wrap = styled.div<{ visible?: boolean }>`
     visibility: hidden;
     opacity: 0;
     transition: all 0.3s;
-    background-color: ${props => props.theme.colorsOld.grayScale.S0};
-    color: ${props => props.theme.colorsOld.primary.default};
+    background-color: ${props => props.theme.colors.grayScale.S0};
+    color: ${props => props.theme.colors.primary.default};
 
     ${props =>
         props.visible &&

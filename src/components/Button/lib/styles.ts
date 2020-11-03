@@ -57,7 +57,7 @@ export const rippleEffectMixin = ({ theme }: { theme: RequiredThemeProps }) => `
         pointer-events: none;
         background-image: radial-gradient(
             circle,
-            ${theme.colorsOld.grayScale.S0} 10%,
+            ${theme.colors.grayScale.S0} 10%,
             transparent 10.01%
         );
         background-repeat: no-repeat;

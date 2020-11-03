@@ -46,10 +46,10 @@ const renderIcon = (svg?: string, colorType?: string) => (
 
     switch (colorType) {
         case 'primary':
-            color = theme.colorsOld.grayScale.S0
+            color = theme.colors.grayScale.S0
             break
         case 'secondary':
-            color = theme.colorsOld.grayScale.S100
+            color = theme.colors.grayScale.S100
             break
     }
     return <Icon.Component svg={svg} size="24px" color={color} />
@@ -75,18 +75,18 @@ const Outer = styled.button<OuterProps>`
         switch (props.colorType) {
             case 'primary':
                 return Styles.createCSSFromColorType(
-                    props.theme.colorsOld.primary.default,
-                    props.theme.colorsOld.primary.N20,
-                    props.theme.colorsOld.primary.N40,
-                    props.theme.colorsOld.grayScale.S0
+                    props.theme.colors.primary.default,
+                    props.theme.colors.primary.N20,
+                    props.theme.colors.primary.N40,
+                    props.theme.colors.grayScale.S0
                 )
             case 'secondary':
                 return Styles.createCSSFromColorType(
-                    props.theme.colorsOld.grayScale.S5,
-                    props.theme.colorsOld.grayScale.S20,
-                    props.theme.colorsOld.grayScale.S40,
-                    props.theme.colorsOld.grayScale.S100,
-                    props.theme.colorsOld.grayScale.S50
+                    props.theme.colors.grayScale.S5,
+                    props.theme.colors.grayScale.S20,
+                    props.theme.colors.grayScale.S40,
+                    props.theme.colors.grayScale.S100,
+                    props.theme.colors.grayScale.S50
                 )
             default:
                 return ''
