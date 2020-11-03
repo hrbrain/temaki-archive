@@ -597,7 +597,7 @@ exports[`Storyshots Basics|Colors all 1`] = `
   <h1
     className="text-xl mt-8"
   >
-    Main Colors Old
+    Main Colors (deprecated)
   </h1>
   <h2
     className="text-l mt-4"
@@ -1011,7 +1011,7 @@ exports[`Storyshots Basics|Colors all 1`] = `
   <h1
     className="text-xl mt-8"
   >
-    Utility Old
+    Utility (deprecated)
   </h1>
   <h2
     className="text-l mt-4"
