@@ -191,7 +191,7 @@ const Body = styled.div<BodyType>`
 `
 
 const Text = styled.div`
-    padding: 4px 4px 4px 0;
+    padding: 6px 4px 6px 0;
     width: calc(100% - 28px);
 `
 
@@ -245,7 +245,7 @@ const InnerText = styled.div`
     background: ${props => props.theme.colors.primary.N95};
     color: ${props => props.theme.colors.primary.default};
     padding: 6.5px 8px;
-    margin: 4px 8px 4px 0px;
+    margin: 2px 4px 2px 0;
     border-radius: 20px;
     font-weight: bold;
     line-height: 1;
