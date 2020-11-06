@@ -49,7 +49,7 @@ export const Component = withTheme(
                 >
                     <StyledIcon
                         svg={IconFiles.icons.AddIcon}
-                        color={props.theme.colors.primary.default}
+                        color={props.theme.colors.grayScale.S100}
                         size={'24px'}
                     />
                 </IncrementButton>
@@ -63,7 +63,7 @@ export const Component = withTheme(
                 >
                     <StyledIcon
                         svg={IconFiles.icons.Subtract}
-                        color={props.theme.colors.primary.default}
+                        color={props.theme.colors.grayScale.S100}
                         size={'24px'}
                     />
                 </DecrementButton>
@@ -82,7 +82,7 @@ const Wrap = styled.div`
     border-radius: 6px;
     background: ${props => props.theme.colors.grayScale.S0};
     border: 1px solid ${props => props.theme.colors.grayScale.S10};
-    color: ${props => props.theme.colors.primary.default};
+    color: ${props => props.theme.colors.grayScale.S100};
 `
 
 const Label = styled.span`
