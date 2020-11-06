@@ -50,13 +50,13 @@ export const Component = React.memo<Props>(props => {
         <>
             <Body
                 data-test="body"
+                isMenuVisible={isMenuVisible}
                 isError={isError}
                 diff={diff}
                 width={width}
-                isMenuVisible={isMenuVisible}
                 onClick={onClick}
             >
-                {isMenuVisible ? (
+                {props.isMenuVisible ? (
                     <SelectorInput>
                         {showTextBySelected({
                             items,
