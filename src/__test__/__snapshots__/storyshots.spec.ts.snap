@@ -5,10 +5,818 @@ exports[`Storyshots Basics|Colors all 1`] = `
   className="container p-4"
 >
   <h1
-    className="text-xl"
+    className="text-xl mt-8"
+  >
+    Main
+  </h1>
+  <h2
+    className="text-l mt-4"
+  >
+    Gray Scale
+  </h2>
+  <div
+    className="flex mt-4"
+  >
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(17,17,17)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        800
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(34,34,34)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        700
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(51,51,51)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        600
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(173,173,173)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        500
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(214,214,214)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        400
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(234,234,234)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        300
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(245,245,245)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        200
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(255,255,255)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        100
+      </p>
+    </div>
+  </div>
+  <h2
+    className="text-l mt-4"
   >
     Primary
+  </h2>
+  <div
+    className="flex mt-4"
+  >
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(6,108,43)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        800
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(6,108,43)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        700
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(8,135,54)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        600
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(107,183,134)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        500
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(156,207,175)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        400
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(206,231,215)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        300
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(230,243,234)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        200
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(242,249,245)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        100
+      </p>
+    </div>
+  </div>
+  <h1
+    className="text-xl mt-8"
+  >
+    Utility
   </h1>
+  <h2
+    className="text-l mt-4"
+  >
+    Red
+  </h2>
+  <div
+    className="flex mt-4"
+  >
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(179,68,58)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        800
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(179,68,58)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        700
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(224,85,72)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        600
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(236,153,145)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        500
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(243,187,182)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        400
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(249,221,218)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        300
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(252,238,237)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        200
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(253,246,246)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        100
+      </p>
+    </div>
+  </div>
+  <h2
+    className="text-l mt-4"
+  >
+    Highlight Green
+  </h2>
+  <div
+    className="flex mt-4"
+  >
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(80,144,64)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        800
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(91,165,74)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        700
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(114,206,92)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        600
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(170,226,157)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        500
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(199,235,190)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        400
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(227,245,222)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        300
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(240,250,238)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        200
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(248,252,247)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        100
+      </p>
+    </div>
+  </div>
+  <h1
+    className="text-xl mt-8"
+  >
+    Main Colors (deprecated)
+  </h1>
+  <h2
+    className="text-l mt-4"
+  >
+    Gray Scale
+  </h2>
+  <div
+    className="flex mt-4"
+  >
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(71, 71, 71)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S90
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(92, 92, 92)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S80
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(112, 112, 112)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S70
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(133, 133, 133)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S60
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(153, 153, 153)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S50
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(245, 245, 245)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S5
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(173, 173, 173)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S40
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(193, 193, 193)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S30
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(214, 214, 214)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S20
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(51, 51, 51)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S100
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(234, 234, 234)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S10
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
+            "backgroundColor": "rgb(255, 255, 255)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        S0
+      </p>
+    </div>
+  </div>
+  <h2
+    className="text-l mt-4"
+  >
+    Primary
+  </h2>
   <div
     className="flex mt-4"
   >
@@ -203,7 +1011,7 @@ exports[`Storyshots Basics|Colors all 1`] = `
   <h1
     className="text-xl mt-8"
   >
-    Utility
+    Utility (deprecated)
   </h1>
   <h2
     className="text-l mt-4"
