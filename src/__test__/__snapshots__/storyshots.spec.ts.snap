@@ -4434,7 +4434,7 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 12px;
+  padding: 0 12px;
   border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   -webkit-user-select: none;
@@ -4447,7 +4447,7 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
 }
 
 .c3 {
-  padding: 4px 4px 4px 0;
+  padding: 6px 4px 6px 0;
   width: calc(100% - 28px);
 }
 
@@ -4583,7 +4583,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 12px;
+  padding: 0 12px;
   border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   -webkit-user-select: none;
@@ -4596,7 +4596,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
 }
 
 .c3 {
-  padding: 4px 4px 4px 0;
+  padding: 6px 4px 6px 0;
   width: calc(100% - 28px);
 }
 
