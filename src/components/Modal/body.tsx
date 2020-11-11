@@ -19,7 +19,10 @@ export const Component: React.FC<Props> = props => {
                 <Head>
                     <Title>{props.title}</Title>
                     <IconWrap onClick={props.onClose} data-test="closeIcon">
-                        <Icon.Component svg={IconFiles.icons.Close} size="24" />
+                        <Icon.Component
+                            svg={IconFiles.icons.Close}
+                            size="24px"
+                        />
                     </IconWrap>
                 </Head>
                 <Body>{props.children}</Body>
@@ -66,16 +69,23 @@ const Head = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 24px;
-    border-bottom: 1px solid ${props => props.theme.colors.grayScale.S20};
+    border-bottom: 1px solid ${props => props.theme.colors.main.grayScale[300]};
 `
 
 const Title = styled.div`
+    color: ${props => props.theme.colors.grayScale.S100};
     font-size: 18px;
     font-weight: bold;
 `
 
 const IconWrap = styled.div`
     cursor: pointer;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: background-color 0.2s ease 0s;
 `
 
 const Body = styled.div`
@@ -84,7 +94,7 @@ const Body = styled.div`
 
 const Footer = styled.div`
     padding: 24px;
-    border-top: 1px solid ${props => props.theme.colors.grayScale.S20};
+    border-top: 1px solid ${props => props.theme.colors.main.grayScale[300]};
     display: flex;
     align-items: center;
     justify-content: flex-end;
