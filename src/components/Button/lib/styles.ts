@@ -12,13 +12,13 @@ export const createCSSFromColorType = (
         border: 1px solid ${border || base};
         background-color: ${base};
         &:hover {
-            background-color: ${hovered};
-            border-color: ${border || hovered};
+            background-color: ${border};
+            border-color: ${hovered};
             /* box-shadow */
         }
         &:active {
-            background-color: ${activated};
-            border-color: ${border || activated};
+            background-color: ${hovered};
+            border-color: ${hovered || activated};
             box-shadow: none;
             outline: none;
         }
