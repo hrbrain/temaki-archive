@@ -1787,13 +1787,13 @@ exports[`Storyshots Components|Button Box 1`] = `
 }
 
 .c0:hover {
-  background-color: rgb(92,92,92);
+  background-color: null;
   border-color: rgb(92,92,92);
 }
 
 .c0:active {
-  background-color: rgb(133,133,133);
-  border-color: rgb(133,133,133);
+  background-color: rgb(92,92,92);
+  border-color: rgb(92,92,92);
   box-shadow: none;
   outline: none;
 }
@@ -1879,13 +1879,13 @@ exports[`Storyshots Components|Button Circle 1`] = `
 }
 
 .c0:hover {
-  background-color: rgb(92,92,92);
+  background-color: null;
   border-color: rgb(92,92,92);
 }
 
 .c0:active {
-  background-color: rgb(133,133,133);
-  border-color: rgb(133,133,133);
+  background-color: rgb(92,92,92);
+  border-color: rgb(92,92,92);
   box-shadow: none;
   outline: none;
 }
@@ -5519,13 +5519,13 @@ exports[`Storyshots Components|Modal all 1`] = `
 }
 
 .c8:hover {
-  background-color: rgb(92,92,92);
+  background-color: null;
   border-color: rgb(92,92,92);
 }
 
 .c8:active {
-  background-color: rgb(133,133,133);
-  border-color: rgb(133,133,133);
+  background-color: rgb(92,92,92);
+  border-color: rgb(92,92,92);
   box-shadow: none;
   outline: none;
 }
@@ -5536,13 +5536,13 @@ exports[`Storyshots Components|Modal all 1`] = `
 }
 
 .c5 {
-  height: 24;
-  width: 24;
+  height: 24px;
+  width: 24px;
 }
 
 .c5 svg {
-  height: 24;
-  width: 24;
+  height: 24px;
+  width: 24px;
 }
 
 .c0 {
@@ -5588,16 +5588,33 @@ exports[`Storyshots Components|Modal all 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 24px;
-  border-bottom: 1px solid rgb(214,214,214);
+  border-bottom: 1px solid rgb(234,234,234);
 }
 
 .c3 {
+  color: rgb(51,51,51);
   font-size: 18px;
   font-weight: bold;
 }
 
 .c4 {
   cursor: pointer;
+  height: 32px;
+  width: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: background-color 0.2s ease 0s;
+  transition: background-color 0.2s ease 0s;
 }
 
 .c6 {
@@ -5606,7 +5623,7 @@ exports[`Storyshots Components|Modal all 1`] = `
 
 .c7 {
   padding: 24px;
-  border-top: 1px solid rgb(214,214,214);
+  border-top: 1px solid rgb(234,234,234);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5659,7 +5676,7 @@ exports[`Storyshots Components|Modal all 1`] = `
                   "__html": undefined,
                 }
               }
-              size="24"
+              size="24px"
             />
           </div>
         </div>
