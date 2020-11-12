@@ -229,7 +229,12 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
 export declare const MeatballMenu: import("react").NamedExoticComponent<{
     type: "meatball" | "kebab";
+<<<<<<< HEAD
     position: "left" | "right" | "top" | "bottom";
+=======
+    position: "top" | "bottom";
+    size?: string | undefined;
+>>>>>>> beab90c... fix: add size propertiy
     listItems: _MeatballMenu.Item[];
     onClick: (e: import("react").MouseEvent<HTMLElement, MouseEvent>) => void;
     color?: string | undefined;
