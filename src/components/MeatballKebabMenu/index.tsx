@@ -12,6 +12,7 @@ import * as ClickOutside from '../../modules/ClickOutside'
 type Props = {
     type: 'meatball' | 'kebab'
     position: 'top' | 'left' | 'right' | 'bottom'
+    size?: string
     listItems: Item[]
     onClick: (e: React.MouseEvent<HTMLElement>) => void
     color?: string
@@ -48,7 +49,7 @@ const renderListItem = (
 }
 
 export const Component = React.memo<Props>(
-    ({ type, position, listItems, onClick, color }) => {
+    ({ type, position, listItems, onClick, color, size = "24px" }) => {
         const [isShow, setIsShow] = React.useState<boolean>(false)
         const handleClick = React.useCallback(
             (e: React.MouseEvent<HTMLElement>) => {
@@ -62,7 +63,7 @@ export const Component = React.memo<Props>(
         }, [isShow])
 
         return (
-            <Wrap>
+            <Wrap size={size}>
                 <ClickOutside.Component
                     data-test="click-outside"
                     onClickOutside={clickOutside}
@@ -71,8 +72,8 @@ export const Component = React.memo<Props>(
                         <MenuItem
                             data-test="icon-src"
                             svg={selectMeatOrKebab(type)}
-                            size="24px"
                             color={color}
+                            size={size}
                         />
                         <ListWrapper>
                             <List
@@ -104,9 +105,9 @@ const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
 /**
  * style
  */
-const Wrap = styled.div`
+const Wrap = styled.div<{ size: string }>`
     position: relative;
-    width: 24px;
+    width: ${props => props.size};
 `
 const Menu = styled.div`
     cursor: pointer;
