@@ -5316,6 +5316,25 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 .c0 {
   position: relative;
   width: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: background-color 0.2s ease 0s;
+  transition: background-color 0.2s ease 0s;
+}
+
+.c0:hover {
+  background: rgb(245,245,245);
+  border-radius: 6px;
 }
 
 .c1 {
@@ -5372,11 +5391,33 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 <div
   className="flex items-center justify-center w-screen h-screen"
 >
+<<<<<<< HEAD
   <div>
     <div
       className="c0"
     >
       <div>
+=======
+  <div
+    className="c0"
+    size="24px"
+  >
+    <div>
+      <div
+        className="c1 top"
+        data-test="menu-component"
+        onClick={[Function]}
+      >
+        <div
+          className="c2 "
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": undefined,
+            }
+          }
+          size="24px"
+        />
+>>>>>>> bafaedc... test: update snapshots
         <div
           className="c1"
           data-test="menu-component"
