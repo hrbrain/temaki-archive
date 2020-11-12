@@ -5316,6 +5316,7 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 .c0 {
   position: relative;
   width: 24px;
+  height: 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
