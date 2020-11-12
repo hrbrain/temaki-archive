@@ -108,6 +108,14 @@ const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
 const Wrap = styled.div<{ size: string }>`
     position: relative;
     width: ${props => props.size};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease 0s;
+    &:hover {
+        background: ${props => props.theme.colors.grayScale.S5};
+        border-radius: 6px;
+    }
 `
 const Menu = styled.div`
     cursor: pointer;
