@@ -11,6 +11,7 @@ export declare type RequiredThemeColors = {
             600: string;
             700: string;
             800: string;
+            900: string;
         };
         grayScale: {
             100: string;

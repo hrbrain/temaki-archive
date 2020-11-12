@@ -66,8 +66,8 @@ const Outer = styled.button<OuterProps>`
             case 'primary':
                 return Styles.createCSSFromColorType(
                     props.theme.colors.primary.default,
-                    props.theme.colors.primary.N20,
-                    props.theme.colors.primary.N40,
+                    props.theme.colors.main.primary[700],
+                    props.theme.colors.main.primary[900],
                     props.theme.colors.grayScale.S0
                 )
             case 'primary ghost':
