@@ -86,6 +86,11 @@ const IconWrap = styled.div`
     align-items: center;
     display: flex;
     transition: background-color 0.2s ease 0s;
+    background: ${props => props.theme.colors.grayScale.S0};
+    &:hover {
+        background: ${props => props.theme.colors.grayScale.S5};
+        border-radius: 6px;
+    }
 `
 
 const Body = styled.div`
