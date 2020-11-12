@@ -72,8 +72,12 @@ export const Component = React.memo<Props>(
                         <MenuItem
                             data-test="icon-src"
                             svg={selectMeatOrKebab(type)}
+<<<<<<< HEAD
                             color={color}
                             size={size}
+=======
+                            size="24px"
+>>>>>>> 080d0d2... fix: MeatballKebabMenu
                         />
                         <ListWrapper>
                             <List
@@ -108,6 +112,7 @@ const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
 const Wrap = styled.div<{ size: string }>`
     position: relative;
     width: ${props => props.size};
+    height: ${props => props.size};
     display: flex;
     align-items: center;
     justify-content: center;
