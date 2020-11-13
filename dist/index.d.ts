@@ -34,7 +34,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     className?: string | undefined;
     decimalPlace?: number | null | undefined;
-    ref?: import("react").RefObject<HTMLInputElement> | ((instance: HTMLInputElement | null) => void) | null | undefined;
+    inputRef?: import("react").RefObject<HTMLInputElement> | ((instance: HTMLInputElement | null) => void) | null | undefined;
 } & {
     format: "text";
     value: string;
@@ -53,7 +53,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     className?: string | undefined;
     decimalPlace?: number | null | undefined;
-    ref?: import("react").RefObject<HTMLInputElement> | ((instance: HTMLInputElement | null) => void) | null | undefined;
+    inputRef?: import("react").RefObject<HTMLInputElement> | ((instance: HTMLInputElement | null) => void) | null | undefined;
 } & {
     format: "number";
     value: number;

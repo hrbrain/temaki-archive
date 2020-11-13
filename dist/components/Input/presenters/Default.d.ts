@@ -14,7 +14,7 @@ declare type Props = {
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     className?: string;
     decimalPlace?: number | null;
-    ref?: ((instance: HTMLInputElement | null) => void) | React.RefObject<HTMLInputElement> | null | undefined;
+    inputRef?: ((instance: HTMLInputElement | null) => void) | React.RefObject<HTMLInputElement> | null;
 };
 export declare const Presenter: React.FC<Props>;
 export {};
