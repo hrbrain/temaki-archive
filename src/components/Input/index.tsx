@@ -31,6 +31,11 @@ type Props = {
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     className?: string
     decimalPlace?: number | null
+    ref?:
+        | ((instance: HTMLInputElement | null) => void)
+        | React.RefObject<HTMLInputElement>
+        | null
+        | undefined
 } & (
     | {
           format: typeof TEXT
