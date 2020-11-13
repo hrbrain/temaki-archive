@@ -15,17 +15,14 @@ type Props = {
     dataTest: string | undefined
 } & OuterProps
 export const Component: React.FC<Props> = ({ children, ...props }) => {
-    const colorType = React.useMemo(() => {
-        return props.colorType
-    }, [props.colorType])
     return (
         <Outer
             onClick={props.onClick}
             type={props.type}
             height={props.height}
             width={props.width}
-            colorType={colorType}
-            disabled={colorType === 'disabled'}
+            colorType={props.colorType}
+            disabled={props.colorType === 'disabled'}
             className={props.className}
             data-test={props.dataTest}
         >

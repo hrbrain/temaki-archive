@@ -93,7 +93,7 @@ export type Props = {
 export const Component: React.FC<Props> = props => {
     const [isLoading, handleClick] = useIsLoadingByAsyncClick(props.onClick)
 
-    const isLoadingColorType = React.useMemo<ColorTypeProp>(() => {
+    const boxColorType = React.useMemo<ColorTypeProp>(() => {
         if (isLoading) {
             return 'disabled'
         }
@@ -134,7 +134,7 @@ export const Component: React.FC<Props> = props => {
                     dataTest={props.dataTest}
                     height={props.height}
                     width={props.width}
-                    colorType={isLoadingColorType}
+                    colorType={boxColorType}
                     onClick={handleClick}
                     type={props.type || 'submit'}
                     className={props.className}
