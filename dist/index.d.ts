@@ -156,6 +156,7 @@ export declare const icons: {
     Remove: string;
     Search: string;
     Settings: string;
+    Share: string;
     SingleCheck: string;
     Sort: string;
     SortList: string;
