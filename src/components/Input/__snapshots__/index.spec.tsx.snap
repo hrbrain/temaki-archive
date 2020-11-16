@@ -90,6 +90,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
             "600": "rgb(8,135,54)",
             "700": "rgb(6,108,43)",
             "800": "rgb(6,108,43)",
+            "900": "rgb(6,95,38)",
           },
         },
         "primary": Object {
@@ -394,6 +395,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
             "600": "rgb(8,135,54)",
             "700": "rgb(6,108,43)",
             "800": "rgb(6,108,43)",
+            "900": "rgb(6,95,38)",
           },
         },
         "primary": Object {

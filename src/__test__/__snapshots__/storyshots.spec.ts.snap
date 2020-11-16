@@ -169,6 +169,23 @@ exports[`Storyshots Basics|Colors all 1`] = `
         className="h-16 w-16"
         style={
           Object {
+            "backgroundColor": "rgb(6,95,38)",
+          }
+        }
+      />
+      <p
+        className="text-center text-xs mt-2"
+      >
+        900
+      </p>
+    </div>
+    <div
+      className="ml-4"
+    >
+      <div
+        className="h-16 w-16"
+        style={
+          Object {
             "backgroundColor": "rgb(6,108,43)",
           }
         }
@@ -1787,13 +1804,13 @@ exports[`Storyshots Components|Button Box 1`] = `
 }
 
 .c0:hover {
-  background-color: null;
-  border-color: rgb(92,92,92);
+  background-color: rgb(6,108,43);
+  border-color: rgb(6,108,43);
 }
 
 .c0:active {
-  background-color: rgb(92,92,92);
-  border-color: rgb(92,92,92);
+  background-color: rgb(6,95,38);
+  border-color: rgb(6,95,38);
   box-shadow: none;
   outline: none;
 }
@@ -1879,13 +1896,13 @@ exports[`Storyshots Components|Button Circle 1`] = `
 }
 
 .c0:hover {
-  background-color: null;
+  background-color: rgb(92,92,92);
   border-color: rgb(92,92,92);
 }
 
 .c0:active {
-  background-color: rgb(92,92,92);
-  border-color: rgb(92,92,92);
+  background-color: rgb(133,133,133);
+  border-color: rgb(133,133,133);
   box-shadow: none;
   outline: none;
 }
@@ -5546,13 +5563,13 @@ exports[`Storyshots Components|Modal all 1`] = `
 }
 
 .c8:hover {
-  background-color: null;
-  border-color: rgb(92,92,92);
+  background-color: rgb(6,108,43);
+  border-color: rgb(6,108,43);
 }
 
 .c8:active {
-  background-color: rgb(92,92,92);
-  border-color: rgb(92,92,92);
+  background-color: rgb(6,95,38);
+  border-color: rgb(6,95,38);
   box-shadow: none;
   outline: none;
 }
@@ -5642,6 +5659,12 @@ exports[`Storyshots Components|Modal all 1`] = `
   display: flex;
   -webkit-transition: background-color 0.2s ease 0s;
   transition: background-color 0.2s ease 0s;
+  background: rgb(255,255,255);
+}
+
+.c4:hover {
+  background: rgb(245,245,245);
+  border-radius: 6px;
 }
 
 .c6 {
