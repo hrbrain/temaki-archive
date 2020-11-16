@@ -1,12 +1,20 @@
 import { RequiredThemeProps } from '~/modules/theme'
 
-export const createCSSFromColorType = (
-    base: string,
-    hovered: string,
-    activated: string,
-    text: string,
-    border: string | null = null
-) => {
+type CreateCSSFromColorType = {
+    base: string
+    hovered: string
+    activated: string
+    text: string
+    border?: string | null
+}
+
+export const createCSSFromColorType = ({
+    base,
+    hovered,
+    activated,
+    text,
+    border = null
+}: CreateCSSFromColorType) => {
     return `
         color: ${text};
         border: 1px solid ${border || base};
