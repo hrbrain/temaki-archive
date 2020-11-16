@@ -37,6 +37,34 @@ export const createCSSFromColorType = ({
     `
 }
 
+export const createCSSFromColorTypeSecondary = ({
+    base,
+    hovered,
+    text,
+    border = null
+}: CreateCSSFromColorType) => {
+    return `
+        color: ${text};
+        border: 1px solid ${border || base};
+        background-color: ${base};
+        &:hover {
+            background-color: ${border};
+            border-color: ${hovered};
+            /* box-shadow */
+        }
+        &:active {
+            background-color: ${hovered};
+            border-color: ${hovered};
+            box-shadow: none;
+            outline: none;
+        }
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    `
+}
+
 export const buttonBaseMixin = `
     display: flex;
     justify-content: center;
