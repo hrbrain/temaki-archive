@@ -5309,6 +5309,10 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   width: 24px;
 }
 
+.c2 #fill {
+  fill: rgba(83,180,100,1);
+}
+
 .c0 {
   position: relative;
   width: 24px;
@@ -5317,22 +5321,12 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 .c1 {
   cursor: pointer;
   position: relative;
-  right: 0;
-}
-
-.c1.top {
-  top: 0;
-}
-
-.c1.bottom {
-  bottom: 0;
 }
 
 .c3 {
   white-space: nowrap;
   position: absolute;
   display: block;
-  right: 0;
   max-width: 140px;
   background: rgb(255,255,255);
   border-radius: 6px;
@@ -5350,21 +5344,46 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   -webkit-transform-origin: top;
   -ms-transform-origin: top;
   transform-origin: top;
+  right: 0;
   top: 24px;
+}
+
+.c3.left {
+  -webkit-transform-origin: left;
+  -ms-transform-origin: left;
+  transform-origin: left;
+  bottom: -48px;
+  left: 48px;
+}
+
+.c3.right {
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  bottom: -48px;
+  right: 48px;
 }
 
 .c3.bottom {
   -webkit-transform-origin: bottom;
   -ms-transform-origin: bottom;
   transform-origin: bottom;
+  right: 0;
   bottom: 24px;
 }
 
-.c3.hidden {
+.c3.hidden-vertical {
   visibility: hidden;
   -webkit-transform: scaleY(0);
   -ms-transform: scaleY(0);
   transform: scaleY(0);
+}
+
+.c3.hidden-horizontal {
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
 }
 
 .c5 {
@@ -5388,64 +5407,67 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 }
 
 <div
-  className="mr-10 mt-56"
+  className="flex items-center justify-center w-screen h-screen"
 >
-  <div
-    className="c0"
-  >
-    <div>
-      <div
-        className="c1 top"
-        data-test="menu-component"
-        onClick={[Function]}
-      >
+  <div>
+    <div
+      className="c0"
+    >
+      <div>
         <div
-          className="c2 "
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
-        <div
-          className=""
+          className="c1"
+          data-test="menu-component"
+          onClick={[Function]}
         >
-          <ul
-            className="c3 top hidden"
-            data-test="list-component"
+          <div
+            className="c2 "
+            color="rgba(83,180,100,1)"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+          <div
+            className=""
           >
-            <li
-              className="c4 c5"
-              data-item="リスト1"
-              data-test="list-item0"
-              onClick={[Function]}
+            <ul
+              className="c3 top hidden-vertical"
+              data-test="list-component"
             >
-              リスト1
-            </li>
-            <li
-              className="c4 c5"
-              data-item="リスト2"
-              data-test="list-item1"
-              onClick={[Function]}
-            >
-              リスト2
-            </li>
-            <li
-              className="c4 c6"
-              color="destructive"
-              data-item="リスト3"
-              data-test="list-item2"
-              onClick={[Function]}
-            >
-              リスト3
-            </li>
-          </ul>
+              <li
+                className="c4 c5"
+                data-item="リスト1"
+                data-test="list-item0"
+                onClick={[Function]}
+              >
+                リスト1
+              </li>
+              <li
+                className="c4 c5"
+                data-item="リスト2"
+                data-test="list-item1"
+                onClick={[Function]}
+              >
+                リスト2
+              </li>
+              <li
+                className="c4 c6"
+                color="destructive"
+                data-item="リスト3"
+                data-test="list-item2"
+                onClick={[Function]}
+              >
+                リスト3
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+    <div />
   </div>
-  <div />
 </div>
 `;
 
