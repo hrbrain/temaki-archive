@@ -229,10 +229,9 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
 export declare const MeatballMenu: import("react").NamedExoticComponent<{
     type: "meatball" | "kebab";
-    position: "left" | "right" | "top" | "bottom";
+    position: "top" | "bottom";
     listItems: _MeatballMenu.Item[];
     onClick: (e: import("react").MouseEvent<HTMLElement, MouseEvent>) => void;
-    color?: string | undefined;
 }>;
 export declare type MeatballMenuItem = _MeatballMenu.Item;
 export declare const FileUploader: import("react").NamedExoticComponent<{

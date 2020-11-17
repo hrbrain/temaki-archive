@@ -10,11 +10,10 @@ import * as MeatballKebabMenu from './index'
 describe('MeatballKebabMenu', () => {
     let wrapper: Enzyme.ReactWrapper
     let mockOnClick: jest.Mock
-    let item: MeatballKebabMenu.Item[]
 
     beforeEach(() => {
         mockOnClick = jest.fn()
-        item = [
+        const item = [
             {
                 item: 'リスト１',
                 onClick: mockOnClick
@@ -54,12 +53,30 @@ describe('MeatballKebabMenu', () => {
         expect(mockOnClick).toHaveBeenCalled()
     })
 
+    it('Menuアイコンがtopに表示される', () => {
+        const checkEl = wrapper.find('div[data-test="menu-component"]')
+        expect(checkEl).toHaveStyleRule('top', '0', { modifier: '&.top' })
+    })
+    it('Menuアイコンがbottomに表示される', () => {
+        wrapper = mountWithTheme(
+            <MeatballKebabMenu.Component
+                type={'meatball'}
+                listItems={[{ item: 'dummy', onClick: mockOnClick }]}
+                position={'bottom'}
+                onClick={mockOnClick}
+            />
+        )
+        const checkEl = wrapper.find('div[data-test="menu-component"]')
+        expect(checkEl).toHaveStyleRule('bottom', '0', {
+            modifier: '&.bottom'
+        })
+    })
+
     it('top時のリストが正常に表示される', () => {
         const checkEl = wrapper.find('ul[data-test="list-component"]')
-
-        expect(checkEl).toHaveStyleRule('transform-origin', 'top')
-        expect(checkEl).toHaveStyleRule('visibility', 'hidden')
-        expect(checkEl).toHaveStyleRule('transform', 'scaleY(0)')
+        expect(checkEl).toHaveStyleRule('transform-origin', 'top', {
+            modifier: '&.top'
+        })
     })
 
     it('bottom時のリストが正常に表示される', () => {
@@ -71,45 +88,19 @@ describe('MeatballKebabMenu', () => {
                 onClick={mockOnClick}
             />
         )
-
         const checkEl = wrapper.find('ul[data-test="list-component"]')
-
-        expect(checkEl).toHaveStyleRule('transform-origin', 'bottom')
-        expect(checkEl).toHaveStyleRule('visibility', 'hidden')
-        expect(checkEl).toHaveStyleRule('transform', 'scaleY(0)')
+        expect(checkEl).toHaveStyleRule('transform-origin', 'bottom', {
+            modifier: '&.bottom'
+        })
     })
 
-    it('left時のリストが正常に表示される', () => {
-        wrapper = mountWithTheme(
-            <MeatballKebabMenu.Component
-                type={'meatball'}
-                listItems={[{ item: 'dummy', onClick: mockOnClick }]}
-                position={'left'}
-                onClick={mockOnClick}
-            />
-        )
-
+    it('Listのhiddenが正常に作動する', () => {
         const checkEl = wrapper.find('ul[data-test="list-component"]')
-
-        expect(checkEl).toHaveStyleRule('transform-origin', 'left')
-        expect(checkEl).toHaveStyleRule('visibility', 'hidden')
-        expect(checkEl).toHaveStyleRule('transform', 'scaleX(0)')
-    })
-
-    it('right時のリストが正常に表示される', () => {
-        wrapper = mountWithTheme(
-            <MeatballKebabMenu.Component
-                type={'meatball'}
-                listItems={[{ item: 'dummy', onClick: mockOnClick }]}
-                position={'right'}
-                onClick={mockOnClick}
-            />
-        )
-
-        const checkEl = wrapper.find('ul[data-test="list-component"]')
-
-        expect(checkEl).toHaveStyleRule('transform-origin', 'right')
-        expect(checkEl).toHaveStyleRule('visibility', 'hidden')
-        expect(checkEl).toHaveStyleRule('transform', 'scaleX(0)')
+        expect(checkEl).toHaveStyleRule('visibility', 'hidden', {
+            modifier: '&.hidden'
+        })
+        expect(checkEl).toHaveStyleRule('transform', 'scaleY(0)', {
+            modifier: '&.hidden'
+        })
     })
 })
