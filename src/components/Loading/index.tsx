@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-import LoadingGif from '../../../images/loading-sping.gif'
+import LoadingGif from 'images/loading-sping.gif'
 
 type Props = {
     visible?: boolean

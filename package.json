@@ -7,7 +7,7 @@
     "types": "./dist/index.d.ts",
     "scripts": {
         "start": "start-storybook -p 6006",
-        "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+        "build": "esbuild src/index.tsx --bundle --loader:.svg=text --loader:.gif=dataurl --define:process.env.NODE_ENV='\"production\"' --outdir=dist",
         "build:declaration": "tsc --emitDeclarationOnly",
         "docs:build": "build-storybook -c .storybook",
         "test": "jest",
@@ -61,6 +61,7 @@
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0",
         "enzyme-to-json": "^3.3.5",
+        "esbuild": "^0.8.9",
         "eslint": "^6.0.1",
         "eslint-config-prettier": "^6.0.0",
         "eslint-loader": "^2.2.1",
