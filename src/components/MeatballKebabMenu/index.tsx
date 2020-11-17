@@ -49,7 +49,7 @@ const renderListItem = (
 }
 
 export const Component = React.memo<Props>(
-    ({ type, position, listItems, onClick, color, size = "24px" }) => {
+    ({ type, position, listItems, onClick, color, size = '24px' }) => {
         const [isShow, setIsShow] = React.useState<boolean>(false)
         const handleClick = React.useCallback(
             (e: React.MouseEvent<HTMLElement>) => {
@@ -72,12 +72,8 @@ export const Component = React.memo<Props>(
                         <MenuItem
                             data-test="icon-src"
                             svg={selectMeatOrKebab(type)}
-<<<<<<< HEAD
                             color={color}
                             size={size}
-=======
-                            size="24px"
->>>>>>> 080d0d2... fix: MeatballKebabMenu
                         />
                         <ListWrapper>
                             <List
