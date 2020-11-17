@@ -77,14 +77,8 @@ export const Component = React.memo<Props>(
                         <ListWrapper>
                             <List
                                 data-test="list-component"
-                                className={`${position} ${
-                                    !isShow
-                                        ? position === 'top' ||
-                                          position === 'bottom'
-                                            ? 'hidden-vertical'
-                                            : 'hidden-horizontal'
-                                        : ''
-                                }`}
+                                position={position}
+                                isHidden={!isShow}
                                 listNum={listItems.length}
                             >
                                 {listItems.map(
@@ -122,7 +116,12 @@ const MenuItem = styled(Icon.Component)``
 
 const ListWrapper = styled.div``
 
-const List = styled.ul<{ listNum: number }>`
+type ListProps = {
+    listNum: number
+    isHidden: boolean
+    position: Props['position']
+}
+const List = styled.ul<ListProps>`
     white-space: nowrap;
     position: absolute;
     display: block;
@@ -134,35 +133,53 @@ const List = styled.ul<{ listNum: number }>`
     transition: 0.2s;
     visibility: visible;
     transform: scaleY(1);
-    &.top {
+    ${props => {
+        switch (props.position) {
+            case 'top':
+                return `
         transform-origin: top;
         right: 0;
         top: 24px;
-    }
-    &.left {
-        transform-origin: left;
+        `
+
+            case 'left':
+                return `
+                transform-origin: left;
         bottom: -48px;
         left: 48px;
-    }
-    &.right {
-        transform-origin: right;
+                `
+            case 'right':
+                return `
+                transform-origin: right;
         bottom: -48px;
         right: 48px;
-    }
-    &.bottom {
-        transform-origin: bottom;
+                `
+            case 'bottom':
+                return `
+                transform-origin: bottom;
         right: 0;
         bottom: 24px;
-    }
-    &.hidden-vertical {
-        visibility: hidden;
-        transform: scaleY(0);
-    }
-    &.hidden-horizontal {
-        visibility: hidden;
-        transform: scaleX(0);
-    }
+                `
+        }
+    }}
+
+    ${props => {
+        if (!props.isHidden) return ''
+
+        switch (props.position) {
+            case 'top':
+            case 'bottom':
+                return `visibility: hidden;
+transform: scaleY(0);`
+
+            case 'left':
+            case 'right':
+                return `visibility: hidden;
+transform: scaleX(0);`
+        }
+    }}
 `
+
 const ListItem = styled.li`
     cursor: pointer;
     list-style: none;

@@ -5338,52 +5338,15 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   -webkit-transform: scaleY(1);
   -ms-transform: scaleY(1);
   transform: scaleY(1);
-}
-
-.c3.top {
   -webkit-transform-origin: top;
   -ms-transform-origin: top;
   transform-origin: top;
   right: 0;
   top: 24px;
-}
-
-.c3.left {
-  -webkit-transform-origin: left;
-  -ms-transform-origin: left;
-  transform-origin: left;
-  bottom: -48px;
-  left: 48px;
-}
-
-.c3.right {
-  -webkit-transform-origin: right;
-  -ms-transform-origin: right;
-  transform-origin: right;
-  bottom: -48px;
-  right: 48px;
-}
-
-.c3.bottom {
-  -webkit-transform-origin: bottom;
-  -ms-transform-origin: bottom;
-  transform-origin: bottom;
-  right: 0;
-  bottom: 24px;
-}
-
-.c3.hidden-vertical {
   visibility: hidden;
   -webkit-transform: scaleY(0);
   -ms-transform: scaleY(0);
   transform: scaleY(0);
-}
-
-.c3.hidden-horizontal {
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  transform: scaleX(0);
 }
 
 .c5 {
@@ -5433,7 +5396,7 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
             className=""
           >
             <ul
-              className="c3 top hidden-vertical"
+              className="c3"
               data-test="list-component"
             >
               <li
