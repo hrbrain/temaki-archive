@@ -5409,33 +5409,12 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 <div
   className="flex items-center justify-center w-screen h-screen"
 >
-<<<<<<< HEAD
   <div>
     <div
       className="c0"
+      size="24px"
     >
       <div>
-=======
-  <div
-    className="c0"
-    size="24px"
-  >
-    <div>
-      <div
-        className="c1 top"
-        data-test="menu-component"
-        onClick={[Function]}
-      >
-        <div
-          className="c2 "
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": undefined,
-            }
-          }
-          size="24px"
-        />
->>>>>>> bafaedc... test: update snapshots
         <div
           className="c1"
           data-test="menu-component"
