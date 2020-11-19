@@ -5136,6 +5136,7 @@ exports[`Storyshots Components|Input Number 1`] = `
   padding: 0 12px;
   border-radius: 6px;
   border: solid 1px rgb(234,234,234);
+  color: rgb(51,51,51);
   -webkit-transition: 0.15s border-color;
   transition: 0.15s border-color;
 }
@@ -5205,6 +5206,7 @@ exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
   padding: 0 12px;
   border-radius: 6px;
   border: solid 1px rgb(234,234,234);
+  color: rgb(51,51,51);
   -webkit-transition: 0.15s border-color;
   transition: 0.15s border-color;
 }
@@ -5274,6 +5276,7 @@ exports[`Storyshots Components|Input Text 1`] = `
   padding: 0 12px;
   border-radius: 6px;
   border: solid 1px rgb(234,234,234);
+  color: rgb(51,51,51);
   -webkit-transition: 0.15s border-color;
   transition: 0.15s border-color;
 }
@@ -5615,7 +5618,7 @@ exports[`Storyshots Components|Modal all 1`] = `
 }
 
 .c3 {
-  color: rgb(51,51,51);
+  color: rgb(51,51,51)!important;
   font-size: 18px;
   font-weight: bold;
 }
