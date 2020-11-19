@@ -7,25 +7,32 @@ import { action } from '@storybook/addon-actions'
 
 storiesOf('Components|MeatballKebabMenu', module).add('all', () => {
     return (
-        <div className="mr-10 mt-56">
-            <MeatballKebabMenu.Component
-                type={select(
-                    'Type',
-                    { meatball: 'meatball', kebab: 'kebab' },
-                    'meatball'
-                )}
-                position={select(
-                    'Position',
-                    {
-                        top: 'top',
-                        bottom: 'bottom'
-                    },
-                    'top'
-                )}
-                listItems={menuItems}
-                onClick={action('onClick')}
-            />
-            <ClickOutside.Component onClickOutside={action('onClickOutside')} />
+        <div className="flex items-center justify-center w-screen h-screen">
+            <div>
+                <MeatballKebabMenu.Component
+                    color={text('color', 'rgba(83,180,100,1)')}
+                    type={select(
+                        'Type',
+                        { meatball: 'meatball', kebab: 'kebab' },
+                        'meatball'
+                    )}
+                    position={select(
+                        'Position',
+                        {
+                            top: 'top',
+                            left: 'left',
+                            right: 'right',
+                            bottom: 'bottom'
+                        },
+                        'top'
+                    )}
+                    listItems={menuItems}
+                    onClick={action('onClick')}
+                />
+                <ClickOutside.Component
+                    onClickOutside={action('onClickOutside')}
+                />
+            </div>
         </div>
     )
 })

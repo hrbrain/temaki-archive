@@ -11,9 +11,10 @@ import * as ClickOutside from '../../modules/ClickOutside'
 
 type Props = {
     type: 'meatball' | 'kebab'
-    position: 'top' | 'bottom'
+    position: 'top' | 'left' | 'right' | 'bottom'
     listItems: Item[]
     onClick: (e: React.MouseEvent<HTMLElement>) => void
+    color?: string
 }
 
 export type Item = {
@@ -47,7 +48,7 @@ const renderListItem = (
 }
 
 export const Component = React.memo<Props>(
-    ({ type, position, listItems, onClick }) => {
+    ({ type, position, listItems, onClick, color }) => {
         const [isShow, setIsShow] = React.useState<boolean>(false)
         const handleClick = React.useCallback(
             (e: React.MouseEvent<HTMLElement>) => {
@@ -66,22 +67,18 @@ export const Component = React.memo<Props>(
                     data-test="click-outside"
                     onClickOutside={clickOutside}
                 >
-                    <Menu
-                        data-test="menu-component"
-                        className={position}
-                        onClick={handleClick}
-                    >
+                    <Menu data-test="menu-component" onClick={handleClick}>
                         <MenuItem
                             data-test="icon-src"
                             svg={selectMeatOrKebab(type)}
                             size="24px"
+                            color={color}
                         />
                         <ListWrapper>
                             <List
                                 data-test="list-component"
-                                className={`${position} ${
-                                    !isShow ? 'hidden' : ''
-                                }`}
+                                position={position}
+                                isHidden={!isShow}
                                 listNum={listItems.length}
                             >
                                 {listItems.map(
@@ -114,23 +111,20 @@ const Wrap = styled.div`
 const Menu = styled.div`
     cursor: pointer;
     position: relative;
-    right: 0;
-    &.top {
-        top: 0;
-    }
-    &.bottom {
-        bottom: 0;
-    }
 `
 const MenuItem = styled(Icon.Component)``
 
 const ListWrapper = styled.div``
 
-const List = styled.ul<{ listNum: number }>`
+type ListProps = {
+    listNum: number
+    isHidden: boolean
+    position: Props['position']
+}
+const List = styled.ul<ListProps>`
     white-space: nowrap;
     position: absolute;
     display: block;
-    right: 0;
     max-width: 140px;
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
@@ -139,19 +133,53 @@ const List = styled.ul<{ listNum: number }>`
     transition: 0.2s;
     visibility: visible;
     transform: scaleY(1);
-    &.top {
+    ${props => {
+        switch (props.position) {
+            case 'top':
+                return `
         transform-origin: top;
+        right: 0;
         top: 24px;
-    }
-    &.bottom {
-        transform-origin: bottom;
+        `
+
+            case 'left':
+                return `
+                transform-origin: left;
+        bottom: -48px;
+        left: 48px;
+                `
+            case 'right':
+                return `
+                transform-origin: right;
+        bottom: -48px;
+        right: 48px;
+                `
+            case 'bottom':
+                return `
+                transform-origin: bottom;
+        right: 0;
         bottom: 24px;
-    }
-    &.hidden {
-        visibility: hidden;
-        transform: scaleY(0);
-    }
+                `
+        }
+    }}
+
+    ${props => {
+        if (!props.isHidden) return ''
+
+        switch (props.position) {
+            case 'top':
+            case 'bottom':
+                return `visibility: hidden;
+transform: scaleY(0);`
+
+            case 'left':
+            case 'right':
+                return `visibility: hidden;
+transform: scaleX(0);`
+        }
+    }}
 `
+
 const ListItem = styled.li`
     cursor: pointer;
     list-style: none;
