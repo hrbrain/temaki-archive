@@ -73,7 +73,7 @@ const Head = styled.div`
 `
 
 const Title = styled.div`
-    color: ${props => props.theme.colors.main.grayScale[600]};
+    color: ${props => props.theme.colors.main.grayScale[600]}!important;
     font-size: 18px;
     font-weight: bold;
 `
