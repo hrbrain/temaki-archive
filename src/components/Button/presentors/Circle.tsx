@@ -74,20 +74,20 @@ const Outer = styled.button<OuterProps>`
     ${props => {
         switch (props.colorType) {
             case 'primary':
-                return Styles.createCSSFromColorType(
-                    props.theme.colors.primary.default,
-                    props.theme.colors.primary.N20,
-                    props.theme.colors.primary.N40,
-                    props.theme.colors.grayScale.S0
-                )
+                return Styles.createCSSFromColorType({
+                    base: props.theme.colors.primary.default,
+                    hovered: props.theme.colors.primary.N20,
+                    activated: props.theme.colors.primary.N40,
+                    text: props.theme.colors.grayScale.S0
+                })
             case 'secondary':
-                return Styles.createCSSFromColorType(
-                    props.theme.colors.grayScale.S5,
-                    props.theme.colors.grayScale.S20,
-                    props.theme.colors.grayScale.S40,
-                    props.theme.colors.grayScale.S100,
-                    props.theme.colors.grayScale.S50
-                )
+                return Styles.createCSSFromColorTypeSecondary({
+                    base: props.theme.colors.grayScale.S5,
+                    hovered: props.theme.colors.grayScale.S20,
+                    activated: props.theme.colors.grayScale.S40,
+                    text: props.theme.colors.grayScale.S100,
+                    border: props.theme.colors.grayScale.S10
+                })
             default:
                 return ''
         }

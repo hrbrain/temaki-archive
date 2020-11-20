@@ -59,6 +59,7 @@ const Outer = styled.input<OuterProps>`
     padding: 0 12px;
     border-radius: 6px;
     border: solid 1px ${props => props.theme.colors.grayScale.S10};
+    color: ${props => props.theme.colors.main.grayScale[600]};
     transition: 0.15s border-color;
 
     ${props =>
