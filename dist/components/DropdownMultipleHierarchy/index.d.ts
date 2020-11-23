@@ -1,15 +1,11 @@
 import * as React from 'react';
-export declare type Value = string;
-export declare type MenuItem = {
-    label: string;
-    value: Value;
-    children?: MenuItem[];
-};
+import * as Menu from './Menu';
+export declare type Item = Menu.Item;
 export declare type Props = {
     className?: string;
-    menuItems: MenuItem[];
+    items: Menu.Item[];
     selectedValues: string[];
     width?: string;
-    onClickItem: (value: Value) => void;
+    onClickItem: (value: Menu.Value) => void;
 };
 export declare const Component: React.NamedExoticComponent<Props>;

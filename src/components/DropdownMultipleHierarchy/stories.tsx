@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import * as DropdownMultipleHierarchy from '.'
 import { action } from '@storybook/addon-actions'
 
-const menuItems: DropdownMultipleHierarchy.MenuItem[] = [
+const items: DropdownMultipleHierarchy.Item[] = [
     {
         label: 'label1',
         value: 'value1',
@@ -38,8 +38,9 @@ const menuItems: DropdownMultipleHierarchy.MenuItem[] = [
 
 const props: DropdownMultipleHierarchy.Props = {
     selectedValues: ['value1-1', 'value1-1-1', 'value2'],
-    menuItems: menuItems,
-    onClickItem: action('onClickItem')
+    items,
+    onClickItem: action('onClickItem'),
+    width: '300px'
 }
 
 storiesOf('Components|DropdownMultipleHierarchy', module).add('default', () => (
