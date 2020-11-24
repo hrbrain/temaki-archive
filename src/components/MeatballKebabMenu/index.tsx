@@ -107,8 +107,9 @@ const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
  */
 const Wrap = styled.div<{ size: string }>`
     position: relative;
-    width: ${props => props.size};
-    height: ${props => props.size};
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +120,6 @@ const Wrap = styled.div<{ size: string }>`
     }
 `
 const Menu = styled.div`
-    cursor: pointer;
     position: relative;
 `
 const MenuItem = styled(Icon.Component)``
