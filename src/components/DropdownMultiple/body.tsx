@@ -124,6 +124,7 @@ const renderText = (
     items: ItemList.Item[],
     onClickRemove?: (index: number) => void
 ) => {
+    if (items.length === 0) return null
     const item = items.find(item => item.value === value)
 
     if (!item) {
