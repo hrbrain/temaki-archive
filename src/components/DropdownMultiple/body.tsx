@@ -130,7 +130,7 @@ const renderText = (
         console.warn(
             `${JSON.stringify(
                 items
-            )} don't have the ${value}, This error has occured in temaki DropdownMultiple`
+            )} don't have the ${value}. This error has occured in temaki DropdownMultiple`
         )
         return null
     }
