@@ -127,7 +127,7 @@ const renderText = (
     const item = items.find(item => item.value === value)
 
     if (!item) {
-        console.warn(`${item} don't hava the value`)
+        console.error(`${items} don't hava the ${value}`)
         return null
     }
     const onClick = (index: number) => () => {
