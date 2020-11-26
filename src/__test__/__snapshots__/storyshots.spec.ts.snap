@@ -5415,7 +5415,6 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
   <div>
     <div
       className="c0"
-      size="24px"
     >
       <div>
         <div
