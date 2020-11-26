@@ -124,11 +124,15 @@ const renderText = (
     items: ItemList.Item[],
     onClickRemove?: (index: number) => void
 ) => {
-    if (items.length === 0) return null
     const item = items.find(item => item.value === value)
 
     if (!item) {
-        throw new Error(`Items don't have the value`)
+        console.warn(
+            `${JSON.stringify(
+                items
+            )} don't have the ${value}. This error has occured in temaki DropdownMultiple`
+        )
+        return null
     }
     const onClick = (index: number) => () => {
         onClickRemove && onClickRemove(index)

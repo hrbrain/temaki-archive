@@ -21,7 +21,7 @@ export const createCSSFromColorType = ({
         background-color: ${base};
         &:hover {
             background-color: ${hovered};
-            border-color: ${hovered};
+            border-color: ${border || base};
             /* box-shadow */
         }
         &:active {
