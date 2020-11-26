@@ -63,7 +63,7 @@ export const Component = React.memo<Props>(
         }, [isShow])
 
         return (
-            <Wrap size={size}>
+            <Wrap>
                 <ClickOutside.Component
                     data-test="click-outside"
                     onClickOutside={clickOutside}
@@ -105,7 +105,7 @@ const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
 /**
  * style
  */
-const Wrap = styled.div<{ size: string }>`
+const Wrap = styled.div`
     position: relative;
     cursor: pointer;
     width: 32px;
