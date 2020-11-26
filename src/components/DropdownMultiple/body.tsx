@@ -127,8 +127,6 @@ const renderText = (
     const item = items.find(item => item.value === value)
 
     if (!item) {
-        // ex: [] don't hava the 23
-        // unitId:23をown.currentFilterとして保存していながら(サーバーからも受け取っているが), unitsが空([])。組織情報編集で既に全ての項目自体を削除されていたり何かしらでアクセスできない場合ここに来る。この場合itemは作らない
         console.warn(
             `${JSON.stringify(
                 items
