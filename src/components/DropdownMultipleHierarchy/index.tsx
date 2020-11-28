@@ -1,25 +1,118 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
+import * as Body from './Body'
 import * as Menu from './Menu'
+
+import * as ClickOutside from '~/modules/ClickOutside'
 
 export type Item = Menu.Item
 export type Props = {
-    className?: string
     items: Menu.Item[]
-    selectedValues: string[]
+    values: Menu.Value[]
+    onChange: (value: Menu.Value[]) => void
+    onClickRemove?: (value: Menu.Value) => void
     width?: string
-    onClickItem: (value: Menu.Value) => void
+    placeholder?: string
+    isError?: boolean
+    diff?: boolean
+    defaultExpanded?: boolean
+    className?: string
+    errorMessage?: string
 }
 
 export const Component = React.memo<Props>(props => {
+    const [isMenuVisible, setIsMenuVisible] = React.useState(
+        props.defaultExpanded
+    )
+
+    const [searchValue, setSearchValue] = React.useState<string>('')
+
+    const changeSearchValue = React.useCallback(
+        (event: React.ChangeEvent<HTMLInputElement>) => {
+            setSearchValue(event.target.value)
+        },
+        [searchValue]
+    )
+
+    const clickBody = React.useCallback((e: React.MouseEvent) => {
+        e.preventDefault()
+        setIsMenuVisible(true)
+    }, [])
+
+    const clickOutside = React.useCallback((e: React.MouseEvent<unknown>) => {
+        e.preventDefault()
+        setIsMenuVisible(false)
+        setSearchValue('')
+    }, [])
+
+    const clickIcon = React.useCallback(
+        (e: React.MouseEvent) => {
+            e.preventDefault()
+            setIsMenuVisible(!isMenuVisible)
+        },
+        [isMenuVisible]
+    )
+
+    const changeValue = React.useCallback(
+        (value: Menu.Value) => {
+            if (props.values.includes(value)) {
+                const newValues = props.values.filter(x => x !== value)
+                props.onChange(newValues)
+            } else {
+                const newValues = [...props.values, value]
+                props.onChange(newValues)
+            }
+        },
+        [props.values, props.onChange]
+    )
+
+    // TODO: filter実装
+    // const filteredItems = React.useMemo(() => {
+    //     const items = props.items.filter(item =>
+    //         item.label.includes(searchValue)
+    //     )
+    //     return items
+    // }, [searchValue, props.items])
+
+    const keyDownInInput = React.useCallback(
+        (e: React.KeyboardEvent) => {
+            if (e.keyCode === 8 && searchValue === '') {
+                const slicedItem = props.values.slice(0, -1)
+                props.onChange(slicedItem)
+            }
+        },
+        [props.values, searchValue, props.onChange]
+    )
+
     return (
         <Wrap className={props.className} width={props.width}>
-            <Menu.Component
-                items={props.items}
-                selectedValues={props.selectedValues}
-                onClickItem={props.onClickItem}
-            />
+            <ClickOutside.Component
+                onClickOutside={clickOutside}
+                inactive={!isMenuVisible}
+            >
+                <Body.Component
+                    onClick={clickBody}
+                    items={props.items}
+                    values={props.values}
+                    placeholder={props.placeholder}
+                    isMenuVisible={isMenuVisible}
+                    diff={props.diff}
+                    isError={props.isError}
+                    onChangeSearchValue={changeSearchValue}
+                    onClickRemove={props.onClickRemove}
+                    searchValue={searchValue}
+                    onKeydown={keyDownInInput}
+                    onClickIcon={clickIcon}
+                />
+                {isMenuVisible && (
+                    <Menu.Component
+                        items={props.items}
+                        selectedValues={props.values}
+                        onClickItem={changeValue}
+                    />
+                )}
+            </ClickOutside.Component>
         </Wrap>
     )
 })
