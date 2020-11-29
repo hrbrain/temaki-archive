@@ -47,20 +47,18 @@ const items: DropdownMultipleHierarchy.Item[] = [
     }
 ]
 
-const props: DropdownMultipleHierarchy.Props = {
-    values: ['value1-1', 'value1-1-1', 'value2', 'value1-1-1-2'],
-    items,
-    placeholder: text('placeholder', '選択してください'),
-    onClickRemove: action('onClickRemove'),
-    isError: boolean('isError', false),
-    errorMessage: text('ErrorMessage', ''),
-    width: text('width', '250px'),
-    onChange: action('onChange'),
-    diff: boolean('Diff', false)
-}
-
 storiesOf('Components|DropdownMultipleHierarchy', module).add('default', () => (
     <div className="ml-20 mt-10">
-        <DropdownMultipleHierarchy.Component {...props} />
+        <DropdownMultipleHierarchy.Component
+            values={['value1-1', 'value1-1-1', 'value2', 'value1-1-1-2']}
+            items={items}
+            placeholder={text('placeholder', '選択してください')}
+            onClickRemove={action('onClickRemove')}
+            isError={boolean('isError', false)}
+            errorMessage={text('ErrorMessage', '')}
+            width={text('width', '250px')}
+            onChange={action('onChange')}
+            diff={boolean('diff', false)}
+        />
     </div>
 ))
