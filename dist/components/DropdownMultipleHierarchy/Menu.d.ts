@@ -11,7 +11,7 @@ export declare type Item = {
 declare type Props = {
     items: Item[];
     selectedValues: string[];
-    onClickItem: (value: Value) => void;
+    onClickItem: (item: Item) => void;
     className?: string;
 };
 export declare const Component: React.FC<Props>;

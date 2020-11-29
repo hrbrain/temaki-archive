@@ -56,12 +56,15 @@ export const Component = React.memo<Props>(props => {
     )
 
     const changeValue = React.useCallback(
-        (value: Menu.Value) => {
-            if (props.values.includes(value)) {
-                const newValues = props.values.filter(x => x !== value)
+        (item: Menu.Item) => {
+            if (props.values.includes(item.value)) {
+                const newValues = removeValueWithChildren(props.values, item)
                 props.onChange(newValues)
             } else {
-                const newValues = [...props.values, value]
+                const newValues = deduplicate([
+                    ...props.values,
+                    ...getValueArrWithChildren(item)
+                ])
                 props.onChange(newValues)
             }
         },
@@ -122,6 +125,40 @@ export const Component = React.memo<Props>(props => {
         </Wrap>
     )
 })
+
+const deduplicate = (arr: string[]) => Array.from(new Set(arr))
+
+const getValueArrWithChildren = (item: Menu.Item) => {
+    let resultArr: Menu.Value[] = []
+    resultArr.push(item.value)
+
+    if (item.children === undefined) return resultArr
+
+    for (const child of item.children) {
+        if (child.children === undefined) {
+            resultArr.push(child.value)
+        } else {
+            resultArr = resultArr.concat(getValueArrWithChildren(child))
+        }
+    }
+    return resultArr
+}
+
+const removeValueWithChildren = (values: Menu.Value[], item: Menu.Item) => {
+    let resultArr: Menu.Value[] = values
+    resultArr = values.filter(value => value !== item.value)
+
+    if (item.children === undefined) return resultArr
+
+    for (const child of item.children) {
+        if (child.children === undefined) {
+            resultArr = resultArr.filter(value => value !== child.value)
+        } else {
+            resultArr = removeValueWithChildren(resultArr, child)
+        }
+    }
+    return resultArr
+}
 
 Component.displayName = 'DropdownMultipleHierarchy'
 

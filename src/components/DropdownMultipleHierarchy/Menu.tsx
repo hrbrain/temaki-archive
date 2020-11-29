@@ -17,7 +17,7 @@ export type Item = {
 type Props = {
     items: Item[]
     selectedValues: string[]
-    onClickItem: (value: Value) => void
+    onClickItem: (item: Item) => void
     className?: string
 }
 
@@ -25,7 +25,7 @@ export const Component: React.FC<Props> = props => (
     <Wrap className={props.className}>
         {props.items.map(item => (
             <StyledItem
-                {...item}
+                item={item}
                 key={item.value}
                 selectedValues={props.selectedValues}
                 onClickItem={props.onClickItem}
@@ -38,9 +38,10 @@ export const Component: React.FC<Props> = props => (
  * Item
  */
 
-type ItemProps = Item & {
+type ItemProps = {
+    item: Item
     selectedValues: string[]
-    onClickItem: (value: Value) => void
+    onClickItem: (item: Item) => void
     className?: string
 }
 
@@ -48,19 +49,19 @@ const Item: React.FC<ItemProps> = props => {
     const [isOpen, setIsOpen] = React.useState(false)
 
     const isSelected = React.useMemo(
-        () => props.selectedValues.includes(props.value),
+        () => props.selectedValues.includes(props.item.value),
         [props]
     )
-    const hasChildren = React.useMemo(() => props.children !== undefined, [
-        props.children
+    const hasChildren = React.useMemo(() => props.item.children !== undefined, [
+        props.item.children
     ])
 
     const openChildren = React.useCallback(() => {
         setIsOpen(prev => !prev)
     }, [])
     const handleClick = React.useCallback(() => {
-        props.onClickItem(props.value)
-    }, [props.onClickItem, props.value])
+        props.onClickItem(props.item)
+    }, [props.onClickItem, props.item])
 
     return (
         <ItemWrap className={props.className}>
@@ -83,14 +84,14 @@ const Item: React.FC<ItemProps> = props => {
                         }
                         size="24px"
                     />
-                    <Text>{props.label}</Text>
+                    <Text>{props.item.label}</Text>
                 </ClickArea>
             </Li>
             {isOpen &&
-                props.children !== undefined &&
-                props.children.map(child => (
+                props.item.children !== undefined &&
+                props.item.children.map(child => (
                     <Item
-                        {...child}
+                        item={child}
                         key={child.value}
                         selectedValues={props.selectedValues}
                         onClickItem={props.onClickItem}
