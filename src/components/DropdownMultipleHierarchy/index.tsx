@@ -5,6 +5,7 @@ import * as Body from './Body'
 import * as Menu from './Menu'
 
 import * as ClickOutside from '~/modules/ClickOutside'
+import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
 export type Item = Menu.Item
 export type Props = {
@@ -114,6 +115,10 @@ export const Component = React.memo<Props>(props => {
                     />
                 </ClickOutside.Component>
             </Inner>
+            <ErrorMessage.Component
+                errored={props.isError}
+                message={props.errorMessage}
+            />
         </Wrap>
     )
 })
