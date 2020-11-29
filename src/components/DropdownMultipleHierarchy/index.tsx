@@ -87,32 +87,33 @@ export const Component = React.memo<Props>(props => {
 
     return (
         <Wrap className={props.className} width={props.width}>
-            <ClickOutside.Component
-                onClickOutside={clickOutside}
-                inactive={!isMenuVisible}
-            >
-                <Body.Component
-                    onClick={clickBody}
-                    items={props.items}
-                    values={props.values}
-                    placeholder={props.placeholder}
-                    isMenuVisible={isMenuVisible}
-                    diff={props.diff}
-                    isError={props.isError}
-                    onChangeSearchValue={changeSearchValue}
-                    onClickRemove={props.onClickRemove}
-                    searchValue={searchValue}
-                    onKeydown={keyDownInInput}
-                    onClickIcon={clickIcon}
-                />
-                {isMenuVisible && (
-                    <Menu.Component
+            <Inner>
+                <ClickOutside.Component
+                    onClickOutside={clickOutside}
+                    inactive={!isMenuVisible}
+                >
+                    <Body.Component
+                        onClick={clickBody}
+                        items={props.items}
+                        values={props.values}
+                        placeholder={props.placeholder}
+                        isMenuVisible={isMenuVisible}
+                        diff={props.diff}
+                        isError={props.isError}
+                        onChangeSearchValue={changeSearchValue}
+                        onClickRemove={props.onClickRemove}
+                        searchValue={searchValue}
+                        onKeydown={keyDownInInput}
+                        onClickIcon={clickIcon}
+                    />
+                    <StyledMenu
+                        isVisible={isMenuVisible}
                         items={props.items}
                         selectedValues={props.values}
                         onClickItem={changeValue}
                     />
-                )}
-            </ClickOutside.Component>
+                </ClickOutside.Component>
+            </Inner>
         </Wrap>
     )
 })
@@ -121,4 +122,28 @@ Component.displayName = 'DropdownMultipleHierarchy'
 
 const Wrap = styled.div<{ width?: string }>`
     width: ${props => props.width || '100%'};
+`
+
+const Inner = styled.div`
+    position: relative;
+`
+
+const StyledMenu = styled(Menu.Component)<{ isVisible?: boolean }>`
+    width: 100%;
+    position: absolute;
+    right: 0;
+    margin-top: 4px;
+    transform-origin: top;
+    transition: 0.2s;
+
+    ${props =>
+        props.isVisible
+            ? `
+        visibility: visible;
+        transform: scaleY(1);
+    `
+            : `
+        visibility: hidden;
+        transform: scaleY(0);
+    `}
 `

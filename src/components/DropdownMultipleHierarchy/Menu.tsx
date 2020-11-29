@@ -18,10 +18,11 @@ type Props = {
     items: Item[]
     selectedValues: string[]
     onClickItem: (value: Value) => void
+    className?: string
 }
 
 export const Component: React.FC<Props> = props => (
-    <Wrap>
+    <Wrap className={props.className}>
         {props.items.map(item => (
             <StyledItem
                 {...item}
