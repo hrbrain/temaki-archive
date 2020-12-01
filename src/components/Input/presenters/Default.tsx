@@ -17,16 +17,12 @@ type Props = {
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
     className?: string
     decimalPlace?: number | null
-    inputRef?:
-        | ((instance: HTMLInputElement | null) => void)
-        | React.RefObject<HTMLInputElement>
-        | null
 }
 
 export const Presenter: React.FC<Props> = ({ children: _, ...props }) => {
     return (
         <Wrapper className={props.className}>
-            <Outer {...props} ref={props.inputRef} />
+            <Outer {...props} />
             {props.unit && <Unit>{props.unit}</Unit>}
             <FormErrorMessage.Component
                 errored={props.errored}
