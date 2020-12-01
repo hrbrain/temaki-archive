@@ -28,13 +28,20 @@ const textOptions = {
     grayScaleS100: 'grayScaleS100'
 } as const
 
+const sleep = (msec: number) =>
+    new Promise(resolve => setTimeout(resolve, msec))
+const handleClick = async () => {
+    await sleep(1000)
+    action('onClick')
+}
+
 storiesOf('Components|Button', module)
     .add('Box', () => (
         <Button.Component
             variant="box"
             type="submit"
             colorType={select('ColorType', boxOptions, boxOptions.Primary)}
-            onClick={action('onClick')}
+            onClick={handleClick}
         >
             Confirm
         </Button.Component>
