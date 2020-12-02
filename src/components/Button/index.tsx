@@ -3,6 +3,8 @@ import * as React from 'react'
 import * as Box from './presentors/Box'
 import * as Circle from './presentors/Circle'
 import * as TextPresentor from './presentors/Text'
+import LoadingGif from '../../../images/loading-sping.gif'
+import styled from '~/modules/theme'
 
 /**
  * Utils
@@ -91,6 +93,13 @@ export type Props = {
 export const Component: React.FC<Props> = props => {
     const [isLoading, handleClick] = useIsLoadingByAsyncClick(props.onClick)
 
+    const boxColorType = React.useMemo<ColorTypeProp>(() => {
+        if (isLoading) {
+            return 'disabled'
+        }
+        return props.colorType || 'primary'
+    }, [props.colorType, isLoading])
+
     switch (props.variant) {
         case 'circle':
             return (
@@ -125,13 +134,26 @@ export const Component: React.FC<Props> = props => {
                     dataTest={props.dataTest}
                     height={props.height}
                     width={props.width}
-                    colorType={props.colorType || 'primary'}
+                    colorType={boxColorType}
                     onClick={handleClick}
                     type={props.type || 'submit'}
                     className={props.className}
                 >
-                    {isLoading ? 'loading...' : props.children}
+                    {isLoading ? (
+                        <Loading src={LoadingGif} alt="Loading" size={'24px'} />
+                    ) : (
+                        props.children
+                    )}
                 </Box.Component>
             )
     }
 }
+
+const Loading = styled.img<{ size: string }>`
+    height: ${props => props.size};
+    width: ${props => props.size};
+    & svg {
+        height: ${props => props.size};
+        width: ${props => props.size};
+    }
+`
