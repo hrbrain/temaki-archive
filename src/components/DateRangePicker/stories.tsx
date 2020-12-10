@@ -34,8 +34,8 @@ storiesOf('Components|DateRangePicker', module)
             selectedHoverColor={Knobs.text('selectedHoverColor', '')}
             defaultHoverColor={Knobs.text('defaultHoverColor', '')}
             endDatePlaceholderText={Knobs.text('endDatePlaceholderText', '')}
-            displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
-            monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
+            displayFormat={Knobs.text('displayFormat', 'yyyy年M月d日')}
+            monthFormat={Knobs.text('monthFormat', 'yyyy[年]M[月]')}
             onChange={Actions.action('onChange')}
             width={Knobs.text('width', '300px')}
             errored={Knobs.boolean('Error', false)}
@@ -51,8 +51,8 @@ storiesOf('Components|DateRangePicker', module)
                 ''
             )}
             endDatePlaceholderText={Knobs.text('endDatePlaceholderText', '')}
-            displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
-            monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
+            displayFormat={Knobs.text('displayFormat', 'yyyy年M月d日')}
+            monthFormat={Knobs.text('monthFormat', 'yyyy[年]M[月]')}
             onChange={Actions.action('onChange')}
             width={Knobs.text('width', '300px')}
             selectedRangeColor={Knobs.text('selectedRangeColor', '')}

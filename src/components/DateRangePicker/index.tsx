@@ -102,9 +102,9 @@ export const Component = React.memo<Props>(props => {
                 onFocusChange={handleOnFocusChange}
                 onDatesChange={handleOnDatesChange}
                 customInputIcon={calendarIconRender}
-                displayFormat={props.displayFormat || 'YYYY年M月D日'}
+                displayFormat={props.displayFormat || 'yyyy年M月d日'}
                 numberOfMonths={1}
-                monthFormat={props.monthFormat || 'YYYY[年]M[月]'}
+                monthFormat={props.monthFormat || 'yyyy[年]M[月]'}
                 navPrev={ChevronLeftIconRender}
                 navNext={ChevronRightIconRender}
                 customArrowIcon={'~'}

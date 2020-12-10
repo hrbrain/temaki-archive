@@ -17,8 +17,8 @@ storiesOf('Components|Datepicker', module)
         <Datepicker.Component
             date={testKnobDate(name, defaultDate)}
             placeholderText={Knobs.text('placeholderText', '')}
-            displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
-            monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
+            displayFormat={Knobs.text('displayFormat', 'yyyy年M月d日')}
+            monthFormat={Knobs.text('monthFormat', 'yyyy[年]M[月]')}
             onChange={Actions.action('onChange')}
             width={Knobs.text('width', '100%')}
             selectedColor={Knobs.text('selectedColor', '')}
@@ -31,8 +31,8 @@ storiesOf('Components|Datepicker', module)
         <Datepicker.Component
             date={null}
             placeholderText={Knobs.text('placeholderText', '')}
-            displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
-            monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
+            displayFormat={Knobs.text('displayFormat', 'yyyy年M月d日')}
+            monthFormat={Knobs.text('monthFormat', 'yyyy[年]M[月]')}
             onChange={Actions.action('onChange')}
             width={Knobs.text('width', '100%')}
             selectedColor={Knobs.text('selectedColor', '')}
