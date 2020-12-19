@@ -19,7 +19,6 @@
         }
     },
     "dependencies": {
-        "global": "^4.4.0",
         "moment": "^2.24.0",
         "react-dates": "^21.4.0",
         "react-dropzone": "^10.2.1"
