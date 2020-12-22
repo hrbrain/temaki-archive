@@ -74,7 +74,6 @@ const Outer = styled.input<OuterProps>`
                   background: ${props.theme.colors.utilities.paleYellow};
               `
             : ''}
-    
     ${props =>
         props.unit
             ? css`
@@ -82,6 +81,13 @@ const Outer = styled.input<OuterProps>`
                   padding-right: ${Number(props.unit.length) * 14 +
                       12 * 2 +
                       12}px;
+              `
+            : ''}
+    ${props =>
+        props.disabled
+            ? css`
+                  background: ${props.theme.colors.grayScale.S20};
+                  cursor: not-allowed;
               `
             : ''}
 
@@ -92,7 +98,10 @@ const Outer = styled.input<OuterProps>`
     }
 
     &::placeholder {
-        color: ${props => props.theme.colors.grayScale.S20};
+        color: ${props =>
+            !props.disabled
+                ? props.theme.colors.grayScale.S20
+                : props.theme.colors.grayScale.S40};
     }
 `
 

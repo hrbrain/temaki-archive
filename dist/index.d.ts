@@ -34,6 +34,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
     diff?: boolean | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
@@ -52,6 +53,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
     diff?: boolean | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
