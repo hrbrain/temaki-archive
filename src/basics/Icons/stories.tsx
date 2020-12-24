@@ -26,13 +26,13 @@ const toSvgRawWithName = (iconMap: { [key: string]: string }) => (
     name: key
 })
 
-const renderIcon = (fill?: string) => (arg: {
+const renderIcon = (fill?: string) => (params: {
     html: string
     name: string
 }): React.ReactElement => (
     <Wrapper>
-        <Icon dangerouslySetInnerHTML={{ __html: arg.html }} fill={fill} />
-        <Name>{arg.name}</Name>
+        <Icon dangerouslySetInnerHTML={{ __html: params.html }} fill={fill} />
+        <Name>{params.name}</Name>
     </Wrapper>
 )
 
