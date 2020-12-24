@@ -36,9 +36,6 @@ const renderIcon = (fill?: string) => (params: {
     </Wrapper>
 )
 
-type IconProps = {
-    fill?: string
-}
 const Wrapper = styled.div`
     margin-top: 12px;
     margin-left: 4px;
@@ -47,6 +44,9 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
 `
+type IconProps = {
+    fill?: string
+}
 const Icon = styled.div<IconProps>`
     & #fill {
         fill: ${props => props.fill};
