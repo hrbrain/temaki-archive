@@ -3540,6 +3540,7 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
   border: none;
   outline: none;
   padding: 0 4px 0 0;
+  background: none;
 }
 
 .c0 .SingleDatePicker {
@@ -4704,6 +4705,7 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
   border: none;
   outline: none;
   padding: 0 4px 0 0;
+  background: none;
 }
 
 .c0 .SingleDatePicker {

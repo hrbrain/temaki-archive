@@ -187,7 +187,7 @@ const Outer = styled.div<OuterProps>`
             border: none;
             outline: none;
             padding: 0 4px 0 0;
-            background-color: none;
+            background: none;
         }
         .SingleDatePickerInput_calendarIcon_svg {
         }
