@@ -7,7 +7,7 @@ import * as Illustration from './index'
 
 Storybook.storiesOf('components|Illustration', module).add('Standard', () => (
     <Illustration.Component
-        svg={IllustrationFiles.illustrations.Create}
+        svg={IllustrationFiles.illustrations.Sample}
         size={{
             width: text('Size Width', '401px'),
             height: text('Size Height', '276px')

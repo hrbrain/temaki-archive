@@ -1,5 +1,5 @@
-import Create from '~/../illustrations/create.svg'
+import Sample from '~/../illustrations/sample.svg'
 
 export const illustrations = {
-    Create
+    Sample
 }

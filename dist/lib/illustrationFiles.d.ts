@@ -1,3 +1,3 @@
 export declare const illustrations: {
-    Create: string;
+    Sample: string;
 };

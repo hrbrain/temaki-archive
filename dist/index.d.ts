@@ -13,6 +13,13 @@ export declare const Icon: (props: {
     color?: string | undefined;
     className?: string | undefined;
 }) => JSX.Element;
+export declare const Illustration: (props: {
+    svg: string;
+    size: {
+        width: string;
+        height: string;
+    };
+}) => JSX.Element;
 export declare const Checkbox: import("react").NamedExoticComponent<{
     text?: string | undefined;
     onClick?: ((e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void) | undefined;

@@ -1,6 +1,7 @@
 import * as _Checkbox from './components/Checkbox/index'
 import * as _Text from './components/Text/index'
 import * as _Icon from './components/Icon/index'
+import * as _Illustration from './components/Illustration/index'
 import { Component as _Input } from './components/Input/index'
 import * as _Button from './components/Button/index'
 import * as _Toast from './components/Toast/index'
@@ -34,6 +35,7 @@ import * as _Loading from './components/Loading/index'
 
 export const Text = _Text.Component
 export const Icon = _Icon.Component
+export const Illustration = _Illustration.Component
 export const Checkbox = _Checkbox.Component
 export const Input = _Input
 export const Button = _Button.Component

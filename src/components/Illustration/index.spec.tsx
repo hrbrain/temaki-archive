@@ -11,7 +11,7 @@ describe('Illustration', () => {
     beforeEach(() => {
         wrapper = mountWithTheme(
             <Illustration.Component
-                svg={IllustrationFiles.illustrations.Create}
+                svg={IllustrationFiles.illustrations.Sample}
                 size={{
                     width: '401px',
                     height: '276px'
