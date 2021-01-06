@@ -5,12 +5,35 @@ import * as React from 'react'
 import * as DropdownMultiple from './index'
 
 const items = [
-    { value: '1', text: 'りんご' },
-    { value: '2', text: 'いちご' },
-    { value: '3', text: 'バナナ' },
-    { value: '4', text: 'メロン' },
-    { value: '5', text: 'さくらんぼ' },
-    { value: '6', text: 'ぶどう' }
+    {
+        value: '1',
+        text: 'りんご',
+        remarks: 'りんごを新しい項目として登録します。'
+    },
+    {
+        value: '2',
+        text: 'いちご',
+        remarks: 'いちごを新しい項目として追加します。'
+    },
+    {
+        value: '3',
+        text: 'バナナ',
+        remarks: 'いちごの説明ですよ'
+    },
+    {
+        value: '4',
+        text: 'メロン',
+        remarks: 'メロン説明ですよ'
+    },
+    {
+        value: '5',
+        text: 'さくらんぼ',
+        remarks: ''
+    },
+    {
+        value: '6',
+        text: 'ぶどう'
+    }
 ]
 
 const itemOptions = items.reduce(
@@ -41,8 +64,16 @@ storiesOf('Components|DropdownMultiple', module)
             <DropdownMultiple.Component
                 placeholder={text('placeholder', '選択してください')}
                 items={[
-                    { value: '1', text: 'りんご' },
-                    { value: '2', text: 'いちご' },
+                    {
+                        value: '1',
+                        text: 'りんご',
+                        remarks: 'りんごを新しい項目として登録します。'
+                    },
+                    {
+                        value: '2',
+                        text: 'いちご',
+                        remarks: 'いちごを新しい項目として登録します。'
+                    },
                     { value: '3', text: 'バナナ' },
                     { value: '4', text: 'メロン' },
                     { value: '5', text: 'さくらんぼ' },

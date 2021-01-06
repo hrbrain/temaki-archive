@@ -51,6 +51,7 @@ const renderItem = (
 export type Item = {
     value: Value
     text: string
+    remarks?: string
     disabled?: boolean
 }
 export type Value = string
@@ -69,7 +70,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
     }, [props.onClickItem, props.item, props.onBlurSearchValue])
     const noop = () => {}
     return (
-        <Item onClick={props.item.disabled ? noop : handleClick}>
+        <StyledItem onClick={props.item.disabled ? noop : handleClick}>
             <Icon.Component
                 svg={IconFiles.icons.SingleCheck}
                 size="24px"
@@ -79,8 +80,13 @@ const ItemComponent = React.memo<ItemProps>(props => {
                         : defaultTheme.colors.grayScale.S10
                 }
             />
-            <Text disabled={props.item.disabled}>{props.item.text}</Text>
-        </Item>
+            <Text disabled={props.item.disabled}>
+                {props.item.text}
+                {props.item.remarks && (
+                    <RemarksText>{props.item.remarks}</RemarksText>
+                )}
+            </Text>
+        </StyledItem>
     )
 })
 
@@ -98,7 +104,7 @@ const ItemList = styled.ul`
     z-index: 1;
 `
 
-const Item = styled.li`
+const StyledItem = styled.li`
     list-style-type: none;
     user-select: none;
     font-size: 14px;
@@ -118,4 +124,9 @@ const Text = styled.div<{ disabled?: boolean }>`
         props.disabled &&
         `color: ${props.theme.colors.grayScale.S20};
         cursor: not-allowed;`}
+`
+
+const RemarksText = styled.div`
+    font-size: 12px;
+    word-wrap: anywhere;
 `
