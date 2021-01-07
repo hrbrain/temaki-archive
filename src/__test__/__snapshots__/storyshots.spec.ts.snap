@@ -7811,6 +7811,58 @@ exports[`Storyshots components|Icon Standard 1`] = `
 />
 `;
 
+exports[`Storyshots components|Illustration SVG as Element 1`] = `
+.c0 {
+  height: 276px;
+  width: 401px;
+}
+
+.c0 svg {
+  height: 276px;
+  width: 401px;
+}
+
+<div
+  className="c0"
+  size={
+    Object {
+      "height": "276px",
+      "width": "401px",
+    }
+  }
+>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots components|Illustration SVG as string 1`] = `
+.c0 {
+  height: 276px;
+  width: 401px;
+}
+
+.c0 svg {
+  height: 276px;
+  width: 401px;
+}
+
+<div
+  className="c0"
+  size={
+    Object {
+      "height": "276px",
+      "width": "401px",
+    }
+  }
+/>
+`;
+
 exports[`Storyshots components|Illustration Standard 1`] = `
 .c0 {
   height: 276px;
