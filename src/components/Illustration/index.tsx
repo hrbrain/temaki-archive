@@ -7,9 +7,9 @@ import styled from '~/modules/theme'
 
 type Props = {
     svg: string
-    size: {
-        width: string
-        height: string
+    size?: {
+        width?: string
+        height?: string
     }
 }
 
@@ -29,10 +29,10 @@ type WrapProps = {
     size: Props['size']
 }
 const Wrap = styled.div<WrapProps>`
-    height: ${props => props.size.height};
-    width: ${props => props.size.width};
+    height: ${props => (props.size && props.size.height) || 'auto'};
+    width: ${props => (props.size && props.size.width) || '100%'};
     & svg {
-        height: ${props => props.size.height};
-        width: ${props => props.size.width};
+        height: ${props => (props.size && props.size.height) || 'auto'};
+        width: ${props => (props.size && props.size.width) || '100%'};
     }
 `

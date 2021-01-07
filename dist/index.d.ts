@@ -15,10 +15,10 @@ export declare const Icon: (props: {
 }) => JSX.Element;
 export declare const Illustration: (props: {
     svg: string;
-    size: {
-        width: string;
-        height: string;
-    };
+    size?: {
+        width?: string | undefined;
+        height?: string | undefined;
+    } | undefined;
 }) => JSX.Element;
 export declare const Checkbox: import("react").NamedExoticComponent<{
     text?: string | undefined;
