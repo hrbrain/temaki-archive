@@ -6,7 +6,7 @@ import styled from '~/modules/theme'
 //------------------------------------------------------------------------------
 
 type Props = {
-    svg: string
+    svg: string | React.ReactElement
     size?: {
         width?: string
         height?: string
@@ -17,9 +17,17 @@ type Props = {
 // component
 //------------------------------------------------------------------------------
 
-export const Component = (props: Props) => (
-    <Wrap size={props.size} dangerouslySetInnerHTML={{ __html: props.svg }} />
-)
+export const Component = (props: Props) => {
+    if (typeof props.svg === 'string')
+        return (
+            <Wrap
+                size={props.size}
+                dangerouslySetInnerHTML={{ __html: props.svg }}
+            />
+        )
+
+    return <Wrap size={props.size}>{props.svg}</Wrap>
+}
 
 //------------------------------------------------------------------------------
 // styles

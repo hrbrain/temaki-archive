@@ -1,6 +1,6 @@
-/// <reference types="react" />
+import * as React from 'react';
 declare type Props = {
-    svg: string;
+    svg: string | React.ReactElement;
     size?: {
         width?: string;
         height?: string;
