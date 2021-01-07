@@ -7863,28 +7863,6 @@ exports[`Storyshots components|Illustration SVG as string 1`] = `
 />
 `;
 
-exports[`Storyshots components|Illustration Standard 1`] = `
-.c0 {
-  height: 276px;
-  width: 401px;
-}
-
-.c0 svg {
-  height: 276px;
-  width: 401px;
-}
-
-<div
-  className="c0"
-  size={
-    Object {
-      "height": "276px",
-      "width": "401px",
-    }
-  }
-/>
-`;
-
 exports[`Storyshots components|Loading all 1`] = `
 .c0 {
   position: fixed;
