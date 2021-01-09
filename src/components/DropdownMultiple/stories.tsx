@@ -41,7 +41,7 @@ const itemOptions = items.reduce(
     {}
 )
 
-storiesOf('Components|DropdownMultiple', module)
+storiesOf('Components/DropdownMultiple', module)
     .add('Multi', () => (
         <div className="ml-20 mt-10">
             <DropdownMultiple.Component

@@ -4,7 +4,7 @@ import * as React from 'react'
 
 import * as Loading from './index'
 
-storiesOf('components|Loading', module).add('all', () => {
+storiesOf('Components/Loading', module).add('all', () => {
     return (
         <Loading.Component
             visible={Knobs.boolean('visible', false)}

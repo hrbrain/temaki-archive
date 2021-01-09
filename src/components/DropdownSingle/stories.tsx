@@ -5,7 +5,7 @@ import * as React from 'react'
 import * as DropdownSingle from './index'
 import * as ItemList from './ItemList'
 
-storiesOf('Components|DropdownSingle', module)
+storiesOf('Components/DropdownSingle', module)
     .add('Default', () => (
         <div className="ml-20 mt-10">
             <DropdownSingle.Component

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as SegmentedControl from './index'
 
-storiesOf('Components|SegmentedControl', module).add('molecule', () => {
+storiesOf('Components/SegmentedControl', module).add('molecule', () => {
     const data: SegmentedControl.Item[] = [
         {
             text: text('text1', '最初のタブ')
