@@ -56,14 +56,16 @@ export const Component = React.memo<Props>(props => {
                 width={width}
                 onClick={onClick}
             >
-                {props.isMenuVisible ? (
+                <SelectedItems>
+                    {showSelectedItems({
+                        items,
+                        values,
+                        placeholder,
+                        onClickRemove
+                    })}
+                </SelectedItems>
+                {props.isMenuVisible && (
                     <SelectorInput>
-                        {showTextBySelected({
-                            items,
-                            values,
-                            placeholder,
-                            onClickRemove
-                        })}
                         <Input
                             data-test="input"
                             type="text"
@@ -73,15 +75,6 @@ export const Component = React.memo<Props>(props => {
                             onKeyDown={onKeydown}
                         />
                     </SelectorInput>
-                ) : (
-                    <Text data-test="text">
-                        {showTextBySelected({
-                            items,
-                            values,
-                            placeholder,
-                            onClickRemove
-                        })}
-                    </Text>
                 )}
             </Body>
             <IconWrap onClick={onClickIcon}>
@@ -95,7 +88,7 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-const showTextBySelected = ({
+const showSelectedItems = ({
     items,
     values,
     placeholder,
@@ -112,13 +105,13 @@ const showTextBySelected = ({
     return (
         <>
             {values.map((value, index) => {
-                return renderText(value, index, items, onClickRemove)
+                return renderItem(value, index, items, onClickRemove)
             })}
         </>
     )
 }
 
-const renderText = (
+const renderItem = (
     value: Menu.Value,
     index: number,
     items: Menu.Item[],
@@ -188,7 +181,7 @@ const Body = styled.div<BodyType>`
     position: relative;
     ${props => (props.width ? `width: ${props.width};` : '')}
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 0px 12px;
     border: 1px solid
         ${props => {
@@ -209,9 +202,11 @@ const Body = styled.div<BodyType>`
         props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
 `
 
-const Text = styled.div`
+const SelectedItems = styled.div`
     padding: 4px 4px 4px 0;
     width: calc(100% - 28px);
+    max-height: 110px;
+    overflow-y: scroll;
 `
 
 const Remove = styled.div`
@@ -271,7 +266,7 @@ const InnerText = styled.div`
 `
 
 const SelectorInput = styled.div`
-    padding-right: 4px;
+    margin: 4px;
     width: calc(100% - 28px);
     transition: border-color 0.15s;
     outline: 0;

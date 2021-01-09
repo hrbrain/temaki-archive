@@ -50,7 +50,13 @@ const items: DropdownMultipleHierarchy.Item[] = [
 storiesOf('Components|DropdownMultipleHierarchy', module).add('default', () => (
     <div className="ml-20 mt-10">
         <DropdownMultipleHierarchy.Component
-            values={['value1-1', 'value1-1-1', 'value2', 'value1-1-1-2']}
+            values={[
+                'value1-1',
+                'value1-1-1',
+                'value2',
+                'value1-1-1-1',
+                'value1-1-1-2'
+            ]}
             items={items}
             placeholder={text('placeholder', '選択してください')}
             onClickRemove={action('onClickRemove')}
