@@ -4,6 +4,7 @@ import styled from '~/modules/theme'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ItemList from './itemList'
+import * as Theme from '../../modules/theme'
 
 /**
  * Component
@@ -15,6 +16,7 @@ type Props = {
     onClick: (e: React.MouseEvent) => void
     onClickRemove?: (index: number) => void
     placeholder?: string
+    disabled?: boolean
     isError?: boolean
     diff?: boolean
     width?: string
@@ -28,6 +30,7 @@ type Props = {
 export const Component = React.memo<Props>(props => {
     const {
         isMenuVisible,
+        disabled,
         isError,
         diff,
         width,
@@ -50,6 +53,7 @@ export const Component = React.memo<Props>(props => {
         <>
             <Body
                 data-test="body"
+                disabled={disabled}
                 isError={isError}
                 diff={diff}
                 width={width}
@@ -74,7 +78,7 @@ export const Component = React.memo<Props>(props => {
                         />
                     </SelectorInput>
                 ) : (
-                    <Text data-test="text">
+                    <Text data-test="text" disabled={disabled}>
                         {showTextBySelected({
                             items,
                             values,
@@ -87,7 +91,12 @@ export const Component = React.memo<Props>(props => {
             <IconWrap onClick={onClickIcon}>
                 <DropdownIcon
                     className={isMenuVisible ? 'visible' : ''}
-                    svg={IconFiles.icons.DropdownOff}
+                    disabled={disabled}
+                    svg={
+                        disabled
+                            ? IconFiles.icons.DropdownOffDisabled
+                            : IconFiles.icons.DropdownOff
+                    }
                     size="24px"
                 />
             </IconWrap>
@@ -95,17 +104,19 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
+type ShowTextBySelected = {
+    items: ItemList.Item[]
+    values: ItemList.Value[]
+    placeholder?: string
+    onClickRemove?: (index: number) => void
+}
+
 const showTextBySelected = ({
     items,
     values,
     placeholder,
     onClickRemove
-}: {
-    items: ItemList.Item[]
-    values: ItemList.Value[]
-    placeholder?: string
-    onClickRemove?: (index: number) => void
-}): React.ReactElement | string => {
+}: ShowTextBySelected): React.ReactElement | string => {
     if (values.length <= 0) {
         return placeholder || ''
     }
@@ -152,19 +163,37 @@ const IconWrap = styled.div`
     cursor: pointer;
 `
 
-const DropdownIcon = styled(Icon.Component)`
+type DropdownType = {
+    disabled?: boolean
+}
+const DropdownIcon = styled(Icon.Component)<DropdownType>`
     position: absolute;
     right: 12px;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.2s;
+    cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
     &.visible {
         transform: translateY(-50%) rotate(180deg);
     }
 `
 
+const getBackgroundColor = (
+    status: { diff?: boolean; disabled?: boolean },
+    theme: Theme.RequiredThemeProps
+) => {
+    switch (true) {
+        case status.diff == true:
+            return theme.colors.utilities.paleYellow
+        case status.disabled === true:
+            return theme.colors.grayScale.S20
+        default:
+            return 'inherit'
+    }
+}
 type BodyType = {
     isMenuVisible?: boolean
+    disabled?: boolean
     isError?: boolean
     diff?: boolean
     width?: string
@@ -189,15 +218,22 @@ const Body = styled.div<BodyType>`
     border-radius: 6px;
     user-select: none;
     font-size: 14px;
-    cursor: pointer;
-
+    cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
     background-color: ${props =>
-        props.diff ? props.theme.colors.utilities.paleYellow : 'inherit'};
+        getBackgroundColor(
+            { disabled: props.disabled, diff: props.diff },
+            props.theme
+        )};
 `
 
-const Text = styled.div`
+type TextType = { disabled?: boolean }
+const Text = styled.div<TextType>`
     padding: 6px 4px 6px 0;
     width: calc(100% - 28px);
+    color: ${props =>
+        props.disabled
+            ? props.theme.colors.grayScale.S50
+            : props.theme.colors.primary.default};
 `
 
 const Remove = styled.div`
@@ -243,12 +279,16 @@ const Remove = styled.div`
     }
 `
 
-const InnerText = styled.div`
+type InterTextType = { disabled?: boolean }
+const InnerText = styled.div<InterTextType>`
     display: inline-flex;
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.colors.primary.N95};
-    color: ${props => props.theme.colors.primary.default};
+    color: ${props =>
+        props.disabled
+            ? props.theme.colors.grayScale.S50
+            : props.theme.colors.primary.default};
     padding: 6.5px 8px;
     margin: 2px 4px 2px 0;
     border-radius: 20px;

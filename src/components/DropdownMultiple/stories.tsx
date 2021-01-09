@@ -52,6 +52,7 @@ storiesOf('Components/DropdownMultiple', module)
                 })}
                 onClickRemove={action('onClickRemove')}
                 isError={boolean('isError', false)}
+                disabled={boolean('disabled', false)}
                 errorMessage={text('ErrorMessage', '')}
                 width={text('width', '250px')}
                 onChange={action('onChange')}
@@ -81,6 +82,7 @@ storiesOf('Components/DropdownMultiple', module)
                 ]}
                 values={[]}
                 onClickRemove={action('onClickRemove')}
+                disabled={boolean('disabled', false)}
                 isError={boolean('isError', false)}
                 errorMessage={text('ErrorMessage', '')}
                 width={text('width', '250px')}

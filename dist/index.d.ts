@@ -129,6 +129,7 @@ export declare const icons: {
     Drag: string;
     Dragdrop: string;
     DropdownOff: string;
+    DropdownOffDisabled: string;
     DropdownOn: string;
     Edit: string;
     Event: string;
@@ -229,6 +230,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     onClickRemove?: ((index: number) => void) | undefined;
     width?: string | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     isError?: boolean | undefined;
     diff?: boolean | undefined;
     defaultExpanded?: boolean | undefined;

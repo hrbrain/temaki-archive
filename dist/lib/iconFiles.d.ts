@@ -23,6 +23,7 @@ export declare const icons: {
     Drag: string;
     Dragdrop: string;
     DropdownOff: string;
+    DropdownOffDisabled: string;
     DropdownOn: string;
     Edit: string;
     Event: string;
