@@ -264,6 +264,7 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     placeholderText?: string | undefined;
+    disabled?: boolean | undefined;
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
 }>;

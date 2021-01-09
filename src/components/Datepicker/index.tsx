@@ -22,6 +22,7 @@ type Props = {
     errored?: boolean
     errorMessage?: string
     placeholderText?: string
+    disabled?: boolean
     selectedColor?: string
     defaultHoverColor?: string
 }
@@ -80,6 +81,7 @@ export const Component = React.memo<Props>(props => {
                 id={'date'}
                 date={conversionToMomentType(props.date)}
                 focused={focused}
+                disabled={props.disabled}
                 placeholder={props.placeholderText}
                 customInputIcon={calendarIconRender}
                 displayFormat={props.displayFormat || 'YYYY年M月D日'}
@@ -845,6 +847,7 @@ const Outer = styled.div<OuterProps>`
         .DateInput_input__disabled {
             background: #f2f2f2;
             font-style: italic;
+            cursor: not-allowed;
         }
         .DateInput_input__focused {
             outline: none;
