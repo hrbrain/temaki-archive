@@ -38,7 +38,7 @@ const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
     return (
         <ItemComponent
             item={item}
-            key={index}
+            key={`${index}-${item.value}`}
             selected={selected}
             onClickItem={onClickItem}
         />
