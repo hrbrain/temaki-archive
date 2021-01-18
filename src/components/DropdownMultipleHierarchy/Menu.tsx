@@ -134,6 +134,7 @@ const Li = styled.li`
     &:hover {
         color: ${props => props.theme.colors.primary.default};
     }
+    white-space: nowrap;
 `
 
 const OpenIconArea = styled.div``
@@ -159,4 +160,5 @@ const CheckIcon = styled(Icon.Component)`
 
 const Text = styled.div`
     padding-left: 4px;
+    padding-right: 10px;
 `
