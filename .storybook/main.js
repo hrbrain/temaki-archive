@@ -10,7 +10,9 @@ module.exports = {
         '@storybook/addon-backgrounds'
     ],
     webpackFinal: async (config, { configType }) => {
-        // ref: https://github.com/storybookjs/storybook/issues/6188#issuecomment-570910186
+        /**
+         * @see https://github.com/storybookjs/storybook/issues/6188#issuecomment-570910186
+         */
         const fileLoaderRule = config.module.rules.find(rule => RegExp(rule.test).test('.svg'));
         fileLoaderRule.exclude = /\.svg$/;
         config.module.rules.push({
