@@ -52,6 +52,7 @@ const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
 export type Item = {
     text: string
     value: Value
+    remarks?: string
 }
 export type Value = string
 
@@ -75,7 +76,12 @@ const ItemComponent = React.memo<ItemProps>(props => {
                 }
                 size="24px"
             />
-            <Text>{props.item.text}</Text>
+            <Text>
+                {props.item.text}
+                {props.item.remarks && (
+                    <RemarksText>{props.item.remarks}</RemarksText>
+                )}
+            </Text>
         </ListItem>
     )
 })
@@ -123,4 +129,9 @@ const CheckIcon = styled(Icon.Component)`
 
 const Text = styled.div`
     padding-left: 4px;
+`
+
+const RemarksText = styled.div`
+    font-size: 12px;
+    word-wrap: anywhere;
 `

@@ -5,7 +5,7 @@ import * as React from 'react'
 
 import * as Input from './index'
 
-storiesOf('Components|Input', module)
+storiesOf('Components/Input', module)
     .add('Text', () => (
         <Input.Component
             format="text"

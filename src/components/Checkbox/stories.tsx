@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Checkbox from './index'
 
-storiesOf('Components|Checkbox', module).add('all', () => {
+storiesOf('Components/Checkbox', module).add('all', () => {
     return (
         <Checkbox.Component
             onClick={action('onClick')}

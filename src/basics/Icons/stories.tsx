@@ -5,7 +5,7 @@ import styled from '~/modules/theme'
 
 import * as IconFiles from '../../lib/iconFiles'
 
-Storybook.storiesOf('basics|Icons', module).add('index', () => {
+Storybook.storiesOf('Basics/Icons', module).add('index', () => {
     const iconElements = Object.keys(IconFiles.icons).map(
         compose(
             renderIcon(Knobs.color('カラー', '#888')),
