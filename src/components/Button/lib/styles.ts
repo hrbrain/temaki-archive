@@ -1,24 +1,60 @@
 import { RequiredThemeProps } from '~/modules/theme'
 
-export const createCSSFromColorType = (
-    base: string,
-    hovered: string,
-    activated: string,
-    text: string,
-    border: string | null = null
-) => {
+type CreateCSSFromColorType = {
+    base: string
+    hovered: string
+    activated: string
+    text: string
+    border?: string | null
+}
+
+export const createCSSFromColorType = ({
+    base,
+    hovered,
+    activated,
+    text,
+    border = null
+}: CreateCSSFromColorType) => {
     return `
         color: ${text};
         border: 1px solid ${border || base};
         background-color: ${base};
         &:hover {
             background-color: ${hovered};
-            border-color: ${border || hovered};
+            border-color: ${border || base};
             /* box-shadow */
         }
         &:active {
             background-color: ${activated};
-            border-color: ${border || activated};
+            border-color: ${activated};
+            box-shadow: none;
+            outline: none;
+        }
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    `
+}
+
+export const createCSSFromColorTypeSecondary = ({
+    base,
+    hovered,
+    text,
+    border = null
+}: CreateCSSFromColorType) => {
+    return `
+        color: ${text};
+        border: 1px solid ${border || base};
+        background-color: ${base};
+        &:hover {
+            background-color: ${border};
+            border-color: ${hovered};
+            /* box-shadow */
+        }
+        &:active {
+            background-color: ${hovered};
+            border-color: ${hovered};
             box-shadow: none;
             outline: none;
         }

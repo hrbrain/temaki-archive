@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Modal from './index'
 
-storiesOf('Components|Modal', module).add('all', () => {
+storiesOf('Components/Modal', module).add('all', () => {
     return (
         <div className="m-10">
             <Modal.Component

@@ -12,6 +12,7 @@ export type RequiredThemeColors = {
             600: string
             700: string
             800: string
+            900: string
         }
         grayScale: {
             100: string
@@ -183,7 +184,8 @@ export const defaultTheme: RequiredThemeProps = {
                 500: 'rgb(107,183,134)',
                 600: 'rgb(8,135,54)',
                 700: 'rgb(6,108,43)',
-                800: 'rgb(6,108,43)'
+                800: 'rgb(6,108,43)',
+                900: 'rgb(6,95,38)'
             },
             grayScale: {
                 100: 'rgb(255,255,255)',

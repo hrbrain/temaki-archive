@@ -6,7 +6,7 @@ import {
     RequiredThemeTextSizeSP
 } from '~/modules/theme'
 
-storiesOf('Basics|Typography', module).add('Body', () => {
+storiesOf('Basics/Typography', module).add('Body', () => {
     return (
         <>
             <DeviceSection name="PC" theme={defaultTheme.typography.pc} />

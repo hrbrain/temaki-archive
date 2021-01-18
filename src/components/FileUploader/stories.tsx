@@ -5,7 +5,7 @@ import * as React from 'react'
 
 import * as FileUploader from './index'
 
-storiesOf('components|FileUploader', module).add('all', () => {
+storiesOf('Components/FileUploader', module).add('all', () => {
     return (
         <div className="m-16">
             <div>

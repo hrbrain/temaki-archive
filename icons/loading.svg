@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(245, 245, 245); display: block;" width="24px" height="24px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
 <circle cx="86" cy="50" fill="#f5f5f5" r="9.65676">
   <animate attributeName="r" values="6.6;6.6;11;6.6;6.6" times="0;0.1;0.2;0.3;1" dur="1.1627906976744184s" repeatCount="indefinite" begin="-1.017441860465116s"></animate>
   <animate attributeName="fill" values="#f5f5f5;#f5f5f5;#000000;#f5f5f5;#f5f5f5" repeatCount="indefinite" times="0;0.1;0.2;0.3;1" dur="1.1627906976744184s" begin="-1.017441860465116s"></animate>

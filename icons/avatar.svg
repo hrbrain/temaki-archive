@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title></title>
-    <desc>Created with Sketch.</desc>
-    <g id="basics/icon/common/avatar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="@icon/common/avatar">
-            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-            <g id="Group-7" transform="translate(2.000000, 2.000000)" fill-rule="nonzero">
-                <path d="M20,10 C20,15.523 15.523,20 10,20 C4.477,20 0,15.523 0,10 C0,4.477 4.477,0 10,0 C15.523,0 20,4.477 20,10" id="Fill-1" fill="#EAEAEA"></path>
-                <path d="M14,7 C14,9.209 12.209,11 10,11 C7.791,11 6,9.209 6,7 C6,4.791 7.791,3 10,3 C12.209,3 14,4.791 14,7" id="Fill-3" fill="#999999"></path>
-                <path d="M10.0553796,10.5 C7.21040639,10.5 4.7654674,12.2168 3.602386,14.7026667 C3.40751074,15.1197333 3.49697854,15.6221333 3.81834276,15.9442667 C5.39071362,17.5229333 7.52714297,18.5 9.88312835,18.5 C12.3712587,18.5 14.6166948,17.4141333 16.209633,15.6776 C16.5176284,15.3410667 16.5911566,14.8354667 16.3793133,14.4269333 C15.1663562,12.0898667 12.7944311,10.5 10.0553796,10.5" id="Fill-5" fill="#999999"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><rect width="24" height="24" rx="2" fill="#EAEAEA"/><path d="M4.58319 22.8C4.25192 22.8 3.98439 22.6147 3.95112 22.2851C3.81911 20.9769 3.85321 17.7069 4.05342 17.4121C5.78037 14.87 8.6952 13.2 12.0001 13.2C15.305 13.2 18.2198 14.87 19.9467 17.4121C20.147 17.7069 20.1811 20.9769 20.049 22.2851C20.0158 22.6147 19.7479 22.8 19.4166 22.8C16.6208 22.8 15.1138 22.8 12.0001 22.8C8.92702 22.8 6.89974 22.8 4.58319 22.8Z" fill="#ADADAD"/><path d="M16.8001 8.39997C16.8001 11.0509 14.651 13.2 12.0001 13.2C9.34912 13.2 7.20009 11.0509 7.20009 8.39997C7.20009 5.74901 9.34912 3.59998 12.0001 3.59998C14.6511 3.59998 16.8001 5.74901 16.8001 8.39997Z" fill="#ADADAD"/></g><defs><clipPath id="clip0"><rect width="24" height="24" fill="white" transform="translate(0.000244141)"/></clipPath></defs></svg>

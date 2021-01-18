@@ -16,6 +16,7 @@ export declare const Component: React.NamedExoticComponent<Props>;
 export declare type Item = {
     text: string;
     value: Value;
+    remarks?: string;
 };
 export declare type Value = string;
 export {};

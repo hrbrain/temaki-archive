@@ -5,7 +5,7 @@ import * as React from 'react'
 import * as RadioButton from './index'
 import * as Knobs from '@storybook/addon-knobs'
 
-storiesOf('Components|RadioButton', module).add('all', () => {
+storiesOf('Components/RadioButton', module).add('all', () => {
     return (
         <RadioButton.Component
             onClick={action('onClick')}

@@ -12,7 +12,7 @@ const testKnobDate = (label: string, defaultValue: Date) => {
     return new Date(stringTimestamp)
 }
 
-storiesOf('Components|Datepicker', module)
+storiesOf('Components/Datepicker', module)
     .add('Standard', () => (
         <Datepicker.Component
             date={testKnobDate(name, defaultDate)}

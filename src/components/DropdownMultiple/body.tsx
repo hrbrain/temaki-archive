@@ -50,13 +50,13 @@ export const Component = React.memo<Props>(props => {
         <>
             <Body
                 data-test="body"
-                isMenuVisible={isMenuVisible}
                 isError={isError}
                 diff={diff}
                 width={width}
+                isMenuVisible={isMenuVisible}
                 onClick={onClick}
             >
-                {props.isMenuVisible ? (
+                {isMenuVisible ? (
                     <SelectorInput>
                         {showTextBySelected({
                             items,
@@ -127,7 +127,12 @@ const renderText = (
     const item = items.find(item => item.value === value)
 
     if (!item) {
-        throw new Error(`Items don't have the value`)
+        console.warn(
+            `${JSON.stringify(
+                items
+            )} don't have the ${value}. This error has occured in temaki DropdownMultiple`
+        )
+        return null
     }
     const onClick = (index: number) => () => {
         onClickRemove && onClickRemove(index)
@@ -167,10 +172,10 @@ type BodyType = {
 const Body = styled.div<BodyType>`
     min-height: 40px;
     position: relative;
-    ${props => (props.width ? `width: ${props.width};` : '')}
+    ${props => (props.width ? `width: ${props.width}` : '')};
     display: flex;
     align-items: center;
-    padding: 0px 12px;
+    padding: 0 12px;
     border: 1px solid
         ${props => {
             if (props.isError) {
@@ -191,7 +196,7 @@ const Body = styled.div<BodyType>`
 `
 
 const Text = styled.div`
-    padding: 4px 4px 4px 0;
+    padding: 6px 4px 6px 0;
     width: calc(100% - 28px);
 `
 
@@ -204,7 +209,6 @@ const Remove = styled.div`
     width: 16px;
     height: 16px;
     margin-left: 8px;
-}
     &:before {
         content: '';
         display: block;
@@ -238,6 +242,7 @@ const Remove = styled.div`
         left: 3px;
     }
 `
+
 const InnerText = styled.div`
     display: inline-flex;
     justify-content: center;
@@ -245,7 +250,7 @@ const InnerText = styled.div`
     background: ${props => props.theme.colors.primary.N95};
     color: ${props => props.theme.colors.primary.default};
     padding: 6.5px 8px;
-    margin: 4px 8px 4px 0px;
+    margin: 2px 4px 2px 0;
     border-radius: 20px;
     font-weight: bold;
     line-height: 1;
