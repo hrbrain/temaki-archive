@@ -28,7 +28,6 @@
         "@babel/preset-env": "^7.8.3",
         "@babel/preset-react": "^7.7.4",
         "@babel/preset-typescript": "^7.7.7",
-        "@babel/runtime-corejs3": "^7.7.7",
         "@storybook/addon-a11y": "^6.1.11",
         "@storybook/addon-actions": "^6.1.11",
         "@storybook/addon-backgrounds": "^6.1.11",
