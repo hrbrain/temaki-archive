@@ -14,7 +14,7 @@ const testKnobDate = (label: string, defaultValue: Date) => {
     return new Date(stringTimestamp)
 }
 
-storiesOf('Components|DateRangePicker', module)
+storiesOf('Components/DateRangePicker', module)
     .add('Standard', () => (
         <DatepickerRange.Component
             startDate={testKnobDate(

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Textarea from './index'
 
-storiesOf('Components|Textarea', module).add('all', () => {
+storiesOf('Components/Textarea', module).add('all', () => {
     return (
         <Textarea.Component
             value={text('value', '')}

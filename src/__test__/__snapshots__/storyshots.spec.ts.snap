@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Basics|Colors all 1`] = `
+exports[`Storyshots Basics/Colors all 1`] = `
 <div
   className="container p-4"
 >
@@ -1391,7 +1391,698 @@ exports[`Storyshots Basics|Colors all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Basics|Typography Body 1`] = `
+exports[`Storyshots Basics/Icons index 1`] = `
+.c0 {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.c0 #fill {
+  fill: #888;
+}
+
+<div
+  className="flex flex-wrap w-64"
+>
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+  <div
+    className="c0"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+    fill="#888"
+  />
+</div>
+`;
+
+exports[`Storyshots Basics/Typography Body 1`] = `
 Array [
   <section
     className="container p-4 undefined"
@@ -1714,7 +2405,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Components|Badge all 1`] = `
+exports[`Storyshots Components/Badge all 1`] = `
 .c0 {
   width: 20px;
   height: 20px;
@@ -1734,7 +2425,7 @@ exports[`Storyshots Components|Badge all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Button Box 1`] = `
+exports[`Storyshots Components/Button Box 1`] = `
 .c0 {
   position: relative;
   overflow: hidden;
@@ -1830,7 +2521,7 @@ exports[`Storyshots Components|Button Box 1`] = `
 </button>
 `;
 
-exports[`Storyshots Components|Button Circle 1`] = `
+exports[`Storyshots Components/Button Circle 1`] = `
 .c0 {
   position: relative;
   overflow: hidden;
@@ -1919,7 +2610,7 @@ exports[`Storyshots Components|Button Circle 1`] = `
 />
 `;
 
-exports[`Storyshots Components|Button Text 1`] = `
+exports[`Storyshots Components/Button Text 1`] = `
 .c0 {
   background: transparent;
   display: -webkit-box;
@@ -2002,7 +2693,7 @@ exports[`Storyshots Components|Button Text 1`] = `
 </button>
 `;
 
-exports[`Storyshots Components|Checkbox all 1`] = `
+exports[`Storyshots Components/Checkbox all 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -2080,7 +2771,7 @@ exports[`Storyshots Components|Checkbox all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Datepicker Null 1`] = `
+exports[`Storyshots Components/Datepicker Null 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -3244,7 +3935,7 @@ exports[`Storyshots Components|Datepicker Null 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Datepicker Standard 1`] = `
+exports[`Storyshots Components/Datepicker Standard 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -4408,7 +5099,7 @@ exports[`Storyshots Components|Datepicker Standard 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|DropdownMultiple Input 1`] = `
+exports[`Storyshots Components/DropdownMultiple Input 1`] = `
 .c5 {
   height: 24px;
   width: 24px;
@@ -4557,7 +5248,7 @@ exports[`Storyshots Components|DropdownMultiple Input 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
+exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
 .c5 {
   height: 24px;
   width: 24px;
@@ -4706,7 +5397,7 @@ exports[`Storyshots Components|DropdownMultiple Multi 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
+exports[`Storyshots Components/DropdownSingle Borderless 1`] = `
 .c3 {
   height: 24px;
   width: 24px;
@@ -4823,7 +5514,7 @@ exports[`Storyshots Components|DropdownSingle Borderless 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|DropdownSingle Default 1`] = `
+exports[`Storyshots Components/DropdownSingle Default 1`] = `
 .c4 {
   height: 24px;
   width: 24px;
@@ -4956,7 +5647,7 @@ exports[`Storyshots Components|DropdownSingle Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|DropdownSingle Disabled 1`] = `
+exports[`Storyshots Components/DropdownSingle Disabled 1`] = `
 .c4 {
   height: 24px;
   width: 24px;
@@ -5089,7 +5780,7 @@ exports[`Storyshots Components|DropdownSingle Disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|DropdownSingle Input 1`] = `
+exports[`Storyshots Components/DropdownSingle Input 1`] = `
 .c4 {
   height: 24px;
   width: 24px;
@@ -5221,7 +5912,7 @@ exports[`Storyshots Components|DropdownSingle Input 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
+exports[`Storyshots Components/DropdownSingle ItemList 1`] = `
 .c0 {
   background: rgb(255,255,255);
   border-radius: 6px;
@@ -5242,7 +5933,298 @@ exports[`Storyshots Components|DropdownSingle ItemList 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Input Number 1`] = `
+exports[`Storyshots Components/FileUploader all 1`] = `
+.c4 {
+  height: 24px;
+  width: 24px;
+}
+
+.c4 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c9 {
+  height: 24px;
+  width: 24px;
+}
+
+.c9 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c9 #fill {
+  fill: rgb(224,85,72);
+}
+
+.c0 {
+  position: relative;
+  width: 400px;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+}
+
+.c1 {
+  cursor: pointer;
+  text-align: center;
+  height: 40px;
+  padding: 0 44px 0 16px;
+  border-radius: 6px;
+  border: 1px dashed rgb(51,51,51);
+}
+
+.c1.attach {
+  border: 1px solid rgb(51,51,51);
+}
+
+.c3 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 40px;
+}
+
+.c5 {
+  margin-top: 7px;
+}
+
+.c6 {
+  max-width: 262px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.c2 {
+  display: none;
+}
+
+.c8 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  right: 24px;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+<div
+  className="m-16"
+>
+  <div>
+    <div
+      className="c0"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={0}
+      width="400px"
+    >
+      <div
+        className="c1"
+      >
+        <input
+          autoComplete="off"
+          className="c2"
+          multiple={true}
+          onChange={[Function]}
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          tabIndex={-1}
+          type="file"
+        />
+        <div
+          className="c3"
+        >
+          <div
+            className="c4 c5"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+          <span
+            className="c6"
+          >
+            ファイルを選択またはドラッグ&ドロップ
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-8"
+  >
+    <div
+      className="c7"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragEnter={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDrop={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      tabIndex={0}
+    >
+      <div
+        className="c1"
+      >
+        <input
+          autoComplete="off"
+          className="c2"
+          multiple={true}
+          onChange={[Function]}
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          tabIndex={-1}
+          type="file"
+        />
+        <div
+          className="c3"
+        >
+          <div
+            className="c4 c5"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+          <span
+            className="c6"
+          >
+            hoge.png
+          </span>
+          <div
+            className="c8"
+            onClick={[Function]}
+          >
+            <div
+              className="c9"
+              color="rgb(224, 85, 72)"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": undefined,
+                }
+              }
+              size="24px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon Standard 1`] = `
+.c0 {
+  height: 24px;
+  width: 24px;
+}
+
+.c0 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c0 #fill {
+  fill: #333;
+}
+
+<div
+  className="c0"
+  color="#333"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": undefined,
+    }
+  }
+  size="24px"
+/>
+`;
+
+exports[`Storyshots Components/Illustration SVG as Element 1`] = `
+.c0 {
+  height: 276px;
+  width: 401px;
+}
+
+.c0 svg {
+  height: 276px;
+  width: 401px;
+}
+
+<div
+  className="c0"
+  size={
+    Object {
+      "height": "276px",
+      "width": "401px",
+    }
+  }
+>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": undefined,
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Illustration SVG as string 1`] = `
+.c0 {
+  height: 276px;
+  width: 401px;
+}
+
+.c0 svg {
+  height: 276px;
+  width: 401px;
+}
+
+<div
+  className="c0"
+  size={
+    Object {
+      "height": "276px",
+      "width": "401px",
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Components/Input Number 1`] = `
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -5312,7 +6294,7 @@ exports[`Storyshots Components|Input Number 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
+exports[`Storyshots Components/Input NumberWithDecimalPlace 1`] = `
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -5382,7 +6364,7 @@ exports[`Storyshots Components|Input NumberWithDecimalPlace 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Input Text 1`] = `
+exports[`Storyshots Components/Input Text 1`] = `
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -5451,7 +6433,61 @@ exports[`Storyshots Components|Input Text 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
+exports[`Storyshots Components/Loading all 1`] = `
+.c0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: rgb(255,255,255);
+  color: rgb(51,51,51);
+}
+
+.c1 {
+  width: 100px;
+}
+
+.c2 {
+  margin-top: 12px;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="Loading"
+    className="c1"
+  />
+  <div
+    className="c2"
+  >
+    読み込み中…
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/MeatballKebabMenu all 1`] = `
 .c2 {
   height: 24px;
   width: 24px;
@@ -5607,7 +6643,7 @@ exports[`Storyshots Components|MeatballKebabMenu all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Modal all 1`] = `
+exports[`Storyshots Components/Modal all 1`] = `
 .c8 {
   position: relative;
   overflow: hidden;
@@ -5868,7 +6904,7 @@ exports[`Storyshots Components|Modal all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|RadioButton all 1`] = `
+exports[`Storyshots Components/RadioButton all 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -5948,7 +6984,7 @@ exports[`Storyshots Components|RadioButton all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|SegmentedControl molecule 1`] = `
+exports[`Storyshots Components/SegmentedControl molecule 1`] = `
 .c0 {
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -6069,7 +7105,7 @@ exports[`Storyshots Components|SegmentedControl molecule 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|StepNumber Default 1`] = `
+exports[`Storyshots Components/StepNumber Default 1`] = `
 .c2 {
   height: 24px;
   width: 24px;
@@ -6179,7 +7215,7 @@ exports[`Storyshots Components|StepNumber Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Switch all 1`] = `
+exports[`Storyshots Components/Switch all 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6257,7 +7293,7 @@ exports[`Storyshots Components|Switch all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Text Standard 1`] = `
+exports[`Storyshots Components/Text Standard 1`] = `
 .c0 {
   color: #333;
 }
@@ -6269,7 +7305,7 @@ exports[`Storyshots Components|Text Standard 1`] = `
 </p>
 `;
 
-exports[`Storyshots Components|Textarea all 1`] = `
+exports[`Storyshots Components/Textarea all 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6334,7 +7370,7 @@ exports[`Storyshots Components|Textarea all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Toast buttonless(info) 1`] = `
+exports[`Storyshots Components/Toast buttonless(info) 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -6425,7 +7461,7 @@ exports[`Storyshots Components|Toast buttonless(info) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Toast buttonless(progress) 1`] = `
+exports[`Storyshots Components/Toast buttonless(progress) 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -6516,7 +7552,7 @@ exports[`Storyshots Components|Toast buttonless(progress) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
+exports[`Storyshots Components/Toast buttonless(warning) 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -6607,7 +7643,7 @@ exports[`Storyshots Components|Toast buttonless(warning) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Toast default(info) 1`] = `
+exports[`Storyshots Components/Toast default(info) 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -6717,7 +7753,7 @@ exports[`Storyshots Components|Toast default(info) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|Toast default(warning) 1`] = `
+exports[`Storyshots Components/Toast default(warning) 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -6827,7 +7863,7 @@ exports[`Storyshots Components|Toast default(warning) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components|ToolTip all 1`] = `
+exports[`Storyshots Components/ToolTip all 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6878,1041 +7914,5 @@ exports[`Storyshots Components|ToolTip all 1`] = `
   >
     テキスト要素
   </span>
-</div>
-`;
-
-exports[`Storyshots basics|Icons index 1`] = `
-.c0 {
-  margin-top: 12px;
-  margin-left: 12px;
-}
-
-.c0 #fill {
-  fill: #888;
-}
-
-<div
-  className="flex flex-wrap w-64"
->
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-</div>
-`;
-
-exports[`Storyshots components|FileUploader all 1`] = `
-.c4 {
-  height: 24px;
-  width: 24px;
-}
-
-.c4 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c9 {
-  height: 24px;
-  width: 24px;
-}
-
-.c9 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c9 #fill {
-  fill: rgb(224,85,72);
-}
-
-.c0 {
-  position: relative;
-  width: 400px;
-}
-
-.c7 {
-  position: relative;
-  width: 100%;
-}
-
-.c1 {
-  cursor: pointer;
-  text-align: center;
-  height: 40px;
-  padding: 0 44px 0 16px;
-  border-radius: 6px;
-  border: 1px dashed rgb(51,51,51);
-}
-
-.c1.attach {
-  border: 1px solid rgb(51,51,51);
-}
-
-.c3 {
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  line-height: 40px;
-}
-
-.c5 {
-  margin-top: 7px;
-}
-
-.c6 {
-  max-width: 262px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 14px;
-  margin-left: 4px;
-}
-
-.c2 {
-  display: none;
-}
-
-.c8 {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 50%;
-  right: 24px;
-  cursor: pointer;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-<div
-  className="m-16"
->
-  <div>
-    <div
-      className="c0"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragEnter={[Function]}
-      onDragLeave={[Function]}
-      onDragOver={[Function]}
-      onDrop={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={0}
-      width="400px"
-    >
-      <div
-        className="c1"
-      >
-        <input
-          autoComplete="off"
-          className="c2"
-          multiple={true}
-          onChange={[Function]}
-          onClick={[Function]}
-          style={
-            Object {
-              "display": "none",
-            }
-          }
-          tabIndex={-1}
-          type="file"
-        />
-        <div
-          className="c3"
-        >
-          <div
-            className="c4 c5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
-            }
-            size="24px"
-          />
-          <span
-            className="c6"
-          >
-            ファイルを選択またはドラッグ&ドロップ
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="mt-8"
-  >
-    <div
-      className="c7"
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragEnter={[Function]}
-      onDragLeave={[Function]}
-      onDragOver={[Function]}
-      onDrop={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      tabIndex={0}
-    >
-      <div
-        className="c1"
-      >
-        <input
-          autoComplete="off"
-          className="c2"
-          multiple={true}
-          onChange={[Function]}
-          onClick={[Function]}
-          style={
-            Object {
-              "display": "none",
-            }
-          }
-          tabIndex={-1}
-          type="file"
-        />
-        <div
-          className="c3"
-        >
-          <div
-            className="c4 c5"
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": undefined,
-              }
-            }
-            size="24px"
-          />
-          <span
-            className="c6"
-          >
-            hoge.png
-          </span>
-          <div
-            className="c8"
-            onClick={[Function]}
-          >
-            <div
-              className="c9"
-              color="rgb(224, 85, 72)"
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": undefined,
-                }
-              }
-              size="24px"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots components|Icon Standard 1`] = `
-.c0 {
-  height: 24px;
-  width: 24px;
-}
-
-.c0 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c0 #fill {
-  fill: #333;
-}
-
-<div
-  className="c0"
-  color="#333"
-  dangerouslySetInnerHTML={
-    Object {
-      "__html": undefined,
-    }
-  }
-  size="24px"
-/>
-`;
-
-exports[`Storyshots components|Illustration SVG as Element 1`] = `
-.c0 {
-  height: 276px;
-  width: 401px;
-}
-
-.c0 svg {
-  height: 276px;
-  width: 401px;
-}
-
-<div
-  className="c0"
-  size={
-    Object {
-      "height": "276px",
-      "width": "401px",
-    }
-  }
->
-  <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-  />
-</div>
-`;
-
-exports[`Storyshots components|Illustration SVG as string 1`] = `
-.c0 {
-  height: 276px;
-  width: 401px;
-}
-
-.c0 svg {
-  height: 276px;
-  width: 401px;
-}
-
-<div
-  className="c0"
-  size={
-    Object {
-      "height": "276px",
-      "width": "401px",
-    }
-  }
-/>
-`;
-
-exports[`Storyshots components|Loading all 1`] = `
-.c0 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgb(255,255,255);
-  color: rgb(51,51,51);
-}
-
-.c1 {
-  width: 100px;
-}
-
-.c2 {
-  margin-top: 12px;
-}
-
-<div
-  className="c0"
->
-  <img
-    alt="Loading"
-    className="c1"
-  />
-  <div
-    className="c2"
-  >
-    読み込み中…
-  </div>
 </div>
 `;

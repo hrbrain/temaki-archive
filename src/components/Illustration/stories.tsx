@@ -13,7 +13,7 @@ const SVGComponent = () => (
     ></div>
 )
 
-Storybook.storiesOf('components|Illustration', module)
+Storybook.storiesOf('Components/Illustration', module)
     .add('SVG as string', () => (
         <Illustration.Component
             svg={IllustrationFiles.illustrations.Sample}

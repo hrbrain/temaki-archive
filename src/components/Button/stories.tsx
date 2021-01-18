@@ -35,7 +35,7 @@ const handleClick = async () => {
     action('onClick')
 }
 
-storiesOf('Components|Button', module)
+storiesOf('Components/Button', module)
     .add('Box', () => (
         <Button.Component
             variant="box"

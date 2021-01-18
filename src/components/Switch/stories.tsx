@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Switch from './index'
 
-storiesOf('Components|Switch', module).add('all', () => {
+storiesOf('Components/Switch', module).add('all', () => {
     return (
         <div className="m-10">
             <Switch.Component
