@@ -34,17 +34,19 @@ export const Component = React.memo<Props>(props => {
         items,
         values,
         placeholder,
-        searchValue,
-        onKeydown,
-        onChangeSearchValue,
+        // TODO: filter実装
+        // searchValue,
+        // onKeydown,
+        // onChangeSearchValue,
         onClickIcon,
         onClickRemove,
         onClick
     } = props
-    const inputRef = React.useRef<HTMLInputElement | null>(null)
-    React.useEffect(() => {
-        if (inputRef.current && isMenuVisible) inputRef.current.focus()
-    }, [isMenuVisible])
+    // TODO: filter実装
+    // const inputRef = React.useRef<HTMLInputElement | null>(null)
+    // React.useEffect(() => {
+    //     if (inputRef.current && isMenuVisible) inputRef.current.focus()
+    // }, [isMenuVisible])
 
     return (
         <>
@@ -64,7 +66,8 @@ export const Component = React.memo<Props>(props => {
                         onClickRemove
                     })}
                 </SelectedItems>
-                {props.isMenuVisible && (
+                {/* TODO: filter実装 */}
+                {/* {props.isMenuVisible && (
                     <SelectorInput>
                         <Input
                             data-test="input"
@@ -75,7 +78,7 @@ export const Component = React.memo<Props>(props => {
                             onKeyDown={onKeydown}
                         />
                     </SelectorInput>
-                )}
+                )} */}
             </Body>
             <IconWrap onClick={onClickIcon}>
                 <DropdownIcon
@@ -115,20 +118,23 @@ const renderItem = (
     value: Menu.Value,
     index: number,
     items: Menu.Item[],
-    onClickRemove?: (value: Menu.Value) => void
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _onClickRemove?: (value: Menu.Value) => void
 ) => {
     const item = findItem(items, value)
 
     if (!item) {
         throw new Error(`Items don't have the value`)
     }
-    const onClick = (value: Menu.Value) => () => {
-        onClickRemove && onClickRemove(value)
-    }
+    // TODO: 選択済みアイテム削除の仕様検討
+    // const onClick = (value: Menu.Value) => () => {
+    //     onClickRemove && onClickRemove(value)
+    // }
     return (
         <InnerText key={`${value}-${index}`}>
             {item.label}
-            {onClickRemove && <Remove onClick={onClick(item.value)} />}
+            {/* TODO: 選択済みアイテム削除の仕様検討 */}
+            {/* {onClickRemove && <Remove onClick={onClick(item.value)} />} */}
         </InnerText>
     )
 }
@@ -209,49 +215,49 @@ const SelectedItems = styled.div`
     overflow-y: scroll;
 `
 
-const Remove = styled.div`
-    display: block;
-    cursor: pointer;
-    background: ${props => props.theme.colors.grayScale.S0};
-    border-radius: 50%;
-    position: relative;
-    width: 16px;
-    height: 16px;
-    margin-left: 8px;
+// const Remove = styled.div`
+//     display: block;
+//     cursor: pointer;
+//     background: ${props => props.theme.colors.grayScale.S0};
+//     border-radius: 50%;
+//     position: relative;
+//     width: 16px;
+//     height: 16px;
+//     margin-left: 8px;
 
-    &:before {
-        content: '';
-        display: block;
-        border-top: solid 1px
-            ${props => props.theme.colors.utilities.red.default};
-        border-right: transparent;
-        border-left: transparent;
-        border-bottom: transparent;
-        transform: rotate(45deg);
-        border-width: 2px;
-        border-radius: 2px;
-        width: 10px;
-        position: absolute;
-        top: 7px;
-        left: 3px;
-    }
-    &:after {
-        content: '';
-        display: block;
-        border-top: solid 1px
-            ${props => props.theme.colors.utilities.red.default};
-        border-right: transparent;
-        border-left: transparent;
-        border-bottom: transparent;
-        transform: rotate(135deg);
-        border-width: 2px;
-        border-radius: 2px;
-        width: 10px;
-        position: absolute;
-        top: 7px;
-        left: 3px;
-    }
-`
+//     &:before {
+//         content: '';
+//         display: block;
+//         border-top: solid 1px
+//             ${props => props.theme.colors.utilities.red.default};
+//         border-right: transparent;
+//         border-left: transparent;
+//         border-bottom: transparent;
+//         transform: rotate(45deg);
+//         border-width: 2px;
+//         border-radius: 2px;
+//         width: 10px;
+//         position: absolute;
+//         top: 7px;
+//         left: 3px;
+//     }
+//     &:after {
+//         content: '';
+//         display: block;
+//         border-top: solid 1px
+//             ${props => props.theme.colors.utilities.red.default};
+//         border-right: transparent;
+//         border-left: transparent;
+//         border-bottom: transparent;
+//         transform: rotate(135deg);
+//         border-width: 2px;
+//         border-radius: 2px;
+//         width: 10px;
+//         position: absolute;
+//         top: 7px;
+//         left: 3px;
+//     }
+// `
 const InnerText = styled.div`
     display: inline-flex;
     justify-content: center;
@@ -265,22 +271,22 @@ const InnerText = styled.div`
     line-height: 1;
 `
 
-const SelectorInput = styled.div`
-    margin: 4px;
-    width: calc(100% - 28px);
-    transition: border-color 0.15s;
-    outline: 0;
-    &.focused {
-        border-color: ${props =>
-            props.theme.colors.utilities.highlightGreen.default};
-    }
-`
+// const SelectorInput = styled.div`
+//     margin: 4px;
+//     width: calc(100% - 28px);
+//     transition: border-color 0.15s;
+//     outline: 0;
+//     &.focused {
+//         border-color: ${props =>
+//             props.theme.colors.utilities.highlightGreen.default};
+//     }
+// `
 
-const Input = styled.input`
-    width: 100%;
-    border: none;
-    background: none;
-    &:focus {
-        outline: 0;
-    }
-`
+// const Input = styled.input`
+//     width: 100%;
+//     border: none;
+//     background: none;
+//     &:focus {
+//         outline: 0;
+//     }
+// `
