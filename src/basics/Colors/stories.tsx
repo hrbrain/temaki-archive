@@ -19,7 +19,7 @@ const renderColorsEachKeys = (obj: { [key: string]: string }) => {
         .map((key, index) => <Square key={index} color={obj[key]} name={key} />)
 }
 
-storiesOf('Basics|Colors', module).add('all', () => (
+storiesOf('Basics/Colors', module).add('all', () => (
     <div className="container p-4">
         <h1 className="text-xl mt-8">Main</h1>
         <h2 className="text-l mt-4">Gray Scale</h2>

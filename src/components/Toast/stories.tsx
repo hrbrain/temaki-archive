@@ -4,7 +4,7 @@ import * as React from 'react'
 import * as Toast from './index'
 import * as Actions from '@storybook/addon-actions'
 
-storiesOf(`Components|Toast`, module)
+storiesOf(`Components/Toast`, module)
     .add('default(info)', () => (
         <div className="m-10">
             <Toast.Component

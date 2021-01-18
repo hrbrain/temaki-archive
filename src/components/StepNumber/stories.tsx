@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs'
 import { storiesOf } from '@storybook/react'
 import * as StepNumber from '.'
 
-storiesOf('Components|StepNumber', module).add('Default', () => (
+storiesOf('Components/StepNumber', module).add('Default', () => (
     <>
         <StepNumber.Component
             defaultValue={Number(text('defaultValue', '1'))}

@@ -5,7 +5,7 @@ import * as ClickOutside from '../../modules/ClickOutside'
 import { text, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
-storiesOf('Components|MeatballKebabMenu', module).add('all', () => {
+storiesOf('Components/MeatballKebabMenu', module).add('all', () => {
     return (
         <div className="flex items-center justify-center w-screen h-screen">
             <div>
