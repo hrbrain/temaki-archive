@@ -1394,11 +1394,27 @@ exports[`Storyshots Basics/Colors all 1`] = `
 exports[`Storyshots Basics/Icons index 1`] = `
 .c0 {
   margin-top: 12px;
-  margin-left: 12px;
+  margin-left: 4px;
+  width: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.c0 #fill {
+.c1 #fill {
   fill: #888;
+}
+
+.c2 {
+  font-size: 9px;
 }
 
 <div
@@ -1406,679 +1422,1354 @@ exports[`Storyshots Basics/Icons index 1`] = `
 >
   <div
     className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
-  <div
-    className="c0"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-    fill="#888"
-  />
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      AddIcon
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      AnalyzeIcon
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      ArrowDown
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Attachment
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Avatar
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      BlackBoard
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Calendar
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      CheckBoxAll
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      CheckBoxOn
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      CheckBoxOff
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      ChevronUp
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      ChevronDown
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      CheckBoxDisabled
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      ChevronLeft
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      ChevronRight
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Close
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Company
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Copy
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Delete
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Display
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Download
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Drag
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Dragdrop
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      DropdownOff
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      DropdownOn
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Edit
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Event
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Excel
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      FilterApply
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Filters
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      GlobalMenu
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Group
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Hamburger
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Home
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Index
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Information
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Help
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Key
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Like
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Link
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      List
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Lock
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      MenuH
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      MenuV
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      MoveDown
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      MoveUp
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Notifiacation
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Phone
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Pin
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      RadioDisabled
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      RadioOff
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      RadioOn
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Redo
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Refresh
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Remove
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Search
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Settings
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Share
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      SingleCheck
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Sort
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      SortList
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      SortUpDown
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      SortItems
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Subtract
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Staff
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Tag
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Text
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Time
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Transition
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      TreeToggle
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Undo
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Union
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Url
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Warning
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Loading
+    </p>
+  </div>
 </div>
 `;
 
