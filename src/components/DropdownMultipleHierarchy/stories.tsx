@@ -69,80 +69,72 @@ storiesOf('Components/DropdownMultipleHierarchy', module).add('default', () => (
     </div>
 ))
 
-storiesOf('Components/DropdownMultipleHierarchy', module).add(
-    '多部署・5階層',
-    () => {
-        const [values, setValues] = React.useState<string[]>([])
-        const onChange = React.useCallback((values: string[]) => {
-            setValues(values)
-        }, [])
-        const items = React.useMemo(() => {
-            let arr: DropdownMultipleHierarchy.Item[] = []
-            for (let i = 1; i < 20; i++) {
-                arr.push(generateItem(i.toString()))
+storiesOf('Components/DropdownMultipleHierarchy', module).add('多部署', () => {
+    const [values, setValues] = React.useState<string[]>([])
+    const onChange = React.useCallback((values: string[]) => {
+        setValues(values)
+    }, [])
+    const items = React.useMemo(() => {
+        let arr: DropdownMultipleHierarchy.Item[] = []
+        const ran = Math.floor(Math.random() * Math.floor(40)) as number
+        for (let i = 1; i < ran + 1; i++) {
+            const val = `部署${i}`
+            const item = {
+                label: val,
+                value: val,
+                children: getChildren(val)
             }
-            return arr
-        }, [])
-
-        return (
-            <div className="ml-20 mt-10">
-                <DropdownMultipleHierarchy.Component
-                    values={values}
-                    items={items}
-                    placeholder={text('placeholder', '選択してください')}
-                    onClickRemove={action('onClickRemove')}
-                    isError={boolean('isError', false)}
-                    errorMessage={text('ErrorMessage', '')}
-                    width={text('width', '250px')}
-                    onChange={onChange}
-                    diff={boolean('diff', false)}
-                />
-            </div>
-        )
-    }
-)
-
-const generateItem = (rootNum: string): DropdownMultipleHierarchy.Item => ({
-    label: `部署${rootNum}`,
-    value: `value${rootNum}`,
-    children: [
-        {
-            label: `部署${rootNum}-1`,
-            value: `value${rootNum}-1`,
-            children: [
-                {
-                    label: `部署${rootNum}-1-1`,
-                    value: `value${rootNum}-1-1`,
-                    children: [
-                        {
-                            label: `部署${rootNum}-1-1-1`,
-                            value: `value${rootNum}-1-1-1`,
-                            children: [
-                                {
-                                    label: `部署${rootNum}-1-1-1-1`,
-                                    value: `value${rootNum}-1-1-1-1`
-                                },
-                                {
-                                    label: `部署${rootNum}-1-1-1-2`,
-                                    value: `value${rootNum}-1-1-1-2`
-                                }
-                            ]
-                        },
-                        {
-                            label: `部署${rootNum}-1-1-2`,
-                            value: `value${rootNum}-1-1-2`
-                        }
-                    ]
-                },
-                {
-                    label: `部署${rootNum}-1-2`,
-                    value: `value${rootNum}-1-2`
-                }
-            ]
-        },
-        {
-            label: `部署${rootNum}-2`,
-            value: `value${rootNum}-2`
+            arr.push(item)
         }
-    ]
+        return arr
+    }, [])
+    const count = React.useMemo(() => {
+        let c = 0
+        c += items.length
+        for (const item of items) {
+            c += getChildrenCount(item)
+        }
+        return c
+    }, [items])
+
+    return (
+        <div className="ml-20 mt-10">
+            <p>部署数: {count}</p>
+            <DropdownMultipleHierarchy.Component
+                values={values}
+                items={items}
+                placeholder={text('placeholder', '選択してください')}
+                onClickRemove={action('onClickRemove')}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '250px')}
+                onChange={onChange}
+                diff={boolean('diff', false)}
+            />
+        </div>
+    )
 })
+
+const getChildren = (parentValue: string): DropdownMultipleHierarchy.Item[] => {
+    const ran = Math.floor(Math.random() * Math.floor(10)) as number
+    return [...Array(ran + 1)].map((_v, i) => {
+        const val = `${parentValue}-${i}`
+        const hasChildren =
+            val.length < Math.floor(Math.random() * Math.floor(15))
+        return {
+            label: val,
+            value: val,
+            children: hasChildren ? getChildren(val) : undefined
+        }
+    })
+}
+
+const getChildrenCount = (item: DropdownMultipleHierarchy.Item) => {
+    if (item.children === undefined) return 0
+    let count = 0
+    count += item.children.length
+    for (const child of item.children) {
+        count += getChildrenCount(child)
+    }
+    return count
+}
