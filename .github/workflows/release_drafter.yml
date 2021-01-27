@@ -1,0 +1,23 @@
+name: Release Drafter
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  draft_new_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get npm version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: Draft new release
+        uses: release-drafter/release-drafter@v5
+        with:
+          version: ${{ steps.package-version.outputs.current-version}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
