@@ -33,7 +33,6 @@
   assigneesFromCodeOwners: true,
   assigneesSampleSize: 1,
   ignoreDeps: [
-      "hrb-temaki",
       // NodeはGAEにあわせて12系最新固定
       "@types/node",
   ],
