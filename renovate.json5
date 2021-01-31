@@ -1,6 +1,7 @@
 // https://docs.renovatebot.com/
 {
   extends: [
+      // default
       // https://github.com/renovatebot/renovate/blob/master/lib/config/presets/internal/config.ts
       ':separateMajorReleases',
       ':combinePatchMinorReleases',
@@ -13,6 +14,8 @@
       ':pinVersions',
       ':renovatePrefix',
       ':disablePeerDependencies',
+      // https://docs.renovatebot.com/presets-helpers/
+      'helpers:disableTypesNodeMajor',
 
       // 以下オリジナル
       ':rebaseStalePrs',
@@ -23,9 +26,6 @@
 
       // https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
       ':semanticCommitType(build)',
-
-      // https://docs.renovatebot.com/presets-helpers/
-      'helpers:disableTypesNodeMajor',
   ],
   timezone: 'Asia/Tokyo',
   schedule: ['every weekend'],
