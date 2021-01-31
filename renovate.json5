@@ -16,7 +16,6 @@
 
       // 以下オリジナル
       ':rebaseStalePrs',
-      ':automergeDisabled',
       ':label(dependencies)',
       ':enableVulnerabilityAlerts',
       ':semanticCommits',
