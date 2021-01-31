@@ -27,9 +27,6 @@
 
       // https://docs.renovatebot.com/presets-helpers/
       'helpers:disableTypesNodeMajor',
-
-      // https://docs.renovatebot.com/presets-group/#groupmonorepos
-      'group:monorepos',
   ],
   timezone: 'Asia/Tokyo',
   schedule: ['every weekend'],
