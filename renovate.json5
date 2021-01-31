@@ -18,7 +18,6 @@
       'helpers:disableTypesNodeMajor',
 
       // 以下オリジナル
-      ':rebaseStalePrs',
       ':label(dependencies)',
       ':enableVulnerabilityAlerts',
       ':semanticCommits',
