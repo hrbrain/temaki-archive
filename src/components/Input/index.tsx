@@ -39,8 +39,8 @@ type Props = {
       }
     | {
           format: typeof NUMBER
-          value: NumberValue
-          onChange: (value: NumberValue) => void
+          value: NumberValue | StringValue
+          onChange: (value: NumberValue | StringValue) => void
           type?: typeof NUMBER
       }
 )
@@ -63,7 +63,7 @@ export const Component = React.memo<Props>(({ children: _, ...props }) => {
                     {...props}
                     onChange={changeValue}
                     /* Propsの型でUnionしてるので format=NUMBER のときは必ずnumberのはず */
-                    value={value as number}
+                    value={value}
                     Presenter={Presenter.Presenter}
                     decimalPlace={props.decimalPlace}
                 />

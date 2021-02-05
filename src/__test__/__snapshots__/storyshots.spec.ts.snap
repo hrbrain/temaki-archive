@@ -6979,7 +6979,7 @@ exports[`Storyshots Components/Input Number 1`] = `
     onKeyDown={[Function]}
     onKeyUp={[Function]}
     placeholder="Enter your age"
-    value="0"
+    value=""
   />
   
 </div>

@@ -23,7 +23,7 @@ storiesOf('Components/Input', module)
         <Input.Component
             format="number"
             unit={text('単位', '')}
-            value={number('Value', 0)}
+            value={text('value', '')}
             placeholder={text('Placeholder', 'Enter your age')}
             onChange={action('onChange')}
             onBlur={action('onBlur')}
