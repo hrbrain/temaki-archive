@@ -1,4 +1,5 @@
 import React from 'react'
+import * as ReactRouterDom from "react-router-dom";
 import { defaultTheme, ThemeProvider } from '../src/modules/theme'
 
 export const parameters = {
@@ -8,8 +9,10 @@ export const parameters = {
 }
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={defaultTheme}>
-      <Story/>
-    </ThemeProvider>
+    <ReactRouterDom.BrowserRouter>
+      <ThemeProvider theme={defaultTheme}>
+        <Story/>
+      </ThemeProvider>
+    </ReactRouterDom.BrowserRouter>
   )
 ]
