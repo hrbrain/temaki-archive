@@ -21,7 +21,9 @@
     "dependencies": {
         "moment": "^2.24.0",
         "react-dates": "^21.4.0",
-        "react-dropzone": "^10.2.1"
+        "react-dropzone": "^10.2.1",
+        "react-router": "^5.0.0",
+        "react-router-dom": "^5.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.7.7",
@@ -41,6 +43,8 @@
         "@types/react": "^16.8.23",
         "@types/react-dates": "^17.1.5",
         "@types/react-dom": "^16.8.3",
+        "@types/react-router": "^5.0.0",
+        "@types/react-router-dom": "^5.0.0",
         "@types/react-test-renderer": "^16.8.2",
         "@types/react-textarea-autosize": "^4.3.4",
         "@types/storybook__addon-actions": "^3.4.3",
@@ -86,9 +90,13 @@
     "peerDependencies": {
         "@types/react": "^16.8.6",
         "@types/react-dom": "^16.8.3",
+        "@types/react-router": "^5.0.0",
+        "@types/react-router-dom": "^5.0.0",
         "@types/styled-components": "^5.1.2",
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
+        "react-router": "^5.0.0",
+        "react-router-dom": "^5.0.0",
         "styled-components": "^5.1.1"
     }
 }
