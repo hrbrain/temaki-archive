@@ -33,7 +33,7 @@ const renderItem = (
 
     return (
         <Item
-            data-test={`item${key}`}
+            data-test={`default-item${key}`}
             selected={selectedIndex === key}
             onClick={handleClick}
             key={key}

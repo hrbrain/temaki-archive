@@ -13,7 +13,7 @@ export const Component = (props: Container.LinkProps) => {
         <div className={props.className}>
             {props.items.map((item, index) => (
                 <Item
-                    data-test={`item${index}`}
+                    data-test={`link-item${index}`}
                     to={item.to}
                     key={index}
                     exact

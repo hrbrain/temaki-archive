@@ -10,7 +10,7 @@ import * as Link from './presenters/Link'
 
 type Types = {
     /**
-     * divにonClickする
+     * divにonClickで処理をする
      */
     default: 'default'
 
@@ -29,21 +29,25 @@ export type CommonProps = {
     itemsWidth?: string
 }
 
+export type DefaultComponentItem = {
+    text: string
+}
+
+export type LinkComponentItem = {
+    text: string
+    to: string
+}
+
 export type DefaultProps = CommonProps & {
     type?: Types['default']
-    items: {
-        text: string
-    }[]
+    items: DefaultComponentItem[]
     selectedIndex: number
     onClickTab: (index: number) => void
 }
 
 export type LinkProps = CommonProps & {
     type?: Types['link']
-    items: {
-        text: string
-        to: string
-    }[]
+    items: LinkComponentItem[]
 }
 
 type Props = DefaultProps | LinkProps
