@@ -88,6 +88,7 @@ export const commonStyle = css<{
     font-size: 14px;
     height: 40px;
     line-height: 40px;
+    text-decoration: none;
     border: 1px solid ${props => props.theme.colors.primary.default};
     border-right: 0;
     border-collapse: collapse;
