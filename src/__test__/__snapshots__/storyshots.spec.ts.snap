@@ -7675,12 +7675,12 @@ exports[`Storyshots Components/RadioButton all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/SegmentedControl molecule 1`] = `
+exports[`Storyshots Components/SegmentedControl Default 1`] = `
 .c0 {
+  color: rgb(51,51,51);
+  background: rgb(255,255,255);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  background: rgb(51,51,51);
-  color: rgb(255,255,255);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7691,6 +7691,8 @@ exports[`Storyshots Components/SegmentedControl molecule 1`] = `
   font-size: 14px;
   height: 40px;
   line-height: 40px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 1px solid rgb(51,51,51);
   border-right: 0;
   border-collapse: collapse;
@@ -7708,6 +7710,8 @@ exports[`Storyshots Components/SegmentedControl molecule 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  background: rgb(51,51,51);
+  color: rgb(255,255,255);
 }
 
 .c0:first-child {
@@ -7722,10 +7726,10 @@ exports[`Storyshots Components/SegmentedControl molecule 1`] = `
 }
 
 .c1 {
+  color: rgb(51,51,51);
+  background: rgb(255,255,255);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  background: rgb(255,255,255);
-  color: rgb(51,51,51);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -7736,6 +7740,8 @@ exports[`Storyshots Components/SegmentedControl molecule 1`] = `
   font-size: 14px;
   height: 40px;
   line-height: 40px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 1px solid rgb(51,51,51);
   border-right: 0;
   border-collapse: collapse;
@@ -7771,7 +7777,7 @@ exports[`Storyshots Components/SegmentedControl molecule 1`] = `
 >
   <div
     className="c0"
-    data-test="item0"
+    data-test="default-item0"
     onClick={[Function]}
     selected={true}
   >
@@ -7779,7 +7785,7 @@ exports[`Storyshots Components/SegmentedControl molecule 1`] = `
   </div>
   <div
     className="c1"
-    data-test="item1"
+    data-test="default-item1"
     onClick={[Function]}
     selected={false}
   >
@@ -7787,12 +7793,101 @@ exports[`Storyshots Components/SegmentedControl molecule 1`] = `
   </div>
   <div
     className="c1"
-    data-test="item2"
+    data-test="default-item2"
     onClick={[Function]}
     selected={false}
   >
     最後のタブ
   </div>
+</div>
+`;
+
+exports[`Storyshots Components/SegmentedControl Link 1`] = `
+.c0 {
+  color: rgb(51,51,51);
+  background: rgb(255,255,255);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 1px solid rgb(51,51,51);
+  border-right: 0;
+  border-collapse: collapse;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  width: 200px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.c0:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-right: 1px solid rgb(51,51,51);
+}
+
+.c0.selected {
+  background: rgb(51,51,51);
+  color: rgb(255,255,255);
+}
+
+<div
+  className="m-10"
+>
+  <a
+    aria-current={null}
+    className="c0"
+    data-test="link-item0"
+    href="/first"
+    itemWidth="200px"
+    onClick={[Function]}
+  >
+    最初のタブ
+  </a>
+  <a
+    aria-current={null}
+    className="c0"
+    data-test="link-item1"
+    href="/middle"
+    itemWidth="200px"
+    onClick={[Function]}
+  >
+    真ん中のタブ
+  </a>
+  <a
+    aria-current={null}
+    className="c0"
+    data-test="link-item2"
+    href="/last"
+    itemWidth="200px"
+    onClick={[Function]}
+  >
+    最後のタブ
+  </a>
 </div>
 `;
 

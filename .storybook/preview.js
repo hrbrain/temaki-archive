@@ -9,10 +9,10 @@ export const parameters = {
 }
 export const decorators = [
   (Story) => (
-    <ReactRouterDom.BrowserRouter>
+    <ReactRouterDom.MemoryRouter>
       <ThemeProvider theme={defaultTheme}>
         <Story/>
       </ThemeProvider>
-    </ReactRouterDom.BrowserRouter>
+    </ReactRouterDom.MemoryRouter>
   )
 ]

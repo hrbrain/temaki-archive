@@ -32,15 +32,15 @@ storiesOf('Components/SegmentedControl', module)
         const data = [
             {
                 text: text('text1', '最初のタブ'),
-                to: '?path=/story/components-segmentedcontrol--link'
+                to: text('to1', '/first')
             },
             {
                 text: text('text2', '真ん中のタブ'),
-                to: '1'
+                to: text('to2', '/middle')
             },
             {
                 text: text('text3', '最後のタブ'),
-                to: '2'
+                to: text('to3', '/last')
             }
         ]
 
