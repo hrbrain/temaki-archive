@@ -6,10 +6,10 @@
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "start": "start-storybook -p 6006",
         "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
         "build:declaration": "tsc --emitDeclarationOnly",
         "docs:build": "build-storybook -c .storybook",
+        "start": "start-storybook -p 6006",
         "test": "jest",
         "type-check": "tsc --noEmit"
     },
@@ -21,9 +21,7 @@
     "dependencies": {
         "moment": "^2.24.0",
         "react-dates": "^21.4.0",
-        "react-dropzone": "^10.2.1",
-        "react-router": "^5.0.0",
-        "react-router-dom": "^5.0.0"
+        "react-dropzone": "^10.2.1"
     },
     "devDependencies": {
         "@babel/core": "^7.7.7",
@@ -77,6 +75,8 @@
         "raw-loader": "^4.0.2",
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
+        "react-router": "^5.0.0",
+        "react-router-dom": "^5.0.0",
         "react-textarea-autosize": "^7.1.0",
         "styled-components": "^5.1.1",
         "ts-jest": "^24.0.1",
