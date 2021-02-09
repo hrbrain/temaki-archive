@@ -90,7 +90,7 @@ export declare const Toast: import("react").NamedExoticComponent<({
 } & {
     type: "buttonless";
 })>;
-export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").Props>;
+export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").DefaultProps | import("./components/SegmentedControl").LinkProps>;
 export declare const Tooltip: import("react").NamedExoticComponent<{
     text: string;
     direction?: "left" | "right" | "top" | "bottom" | undefined;

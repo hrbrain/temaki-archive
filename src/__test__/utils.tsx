@@ -1,6 +1,13 @@
 import { mount, ReactWrapper, shallow, ShallowWrapper } from 'enzyme'
 import * as React from 'react'
+import * as ReactRouter from 'react-router'
 import { defaultTheme, ThemeProvider } from '~/modules/theme'
+
+type WithRouterProps = React.ComponentPropsWithoutRef<typeof ReactRouter.Router>
+export const WithRouter: React.FC<WithRouterProps> = props => {
+    const { children, ...restProps } = props
+    return <ReactRouter.Router {...restProps}>{children}</ReactRouter.Router>
+}
 
 // 推論で型エラーがでるので、型定義してキャストする
 type ShallowWithTheme = (tree: React.ReactElement) => ShallowWrapper

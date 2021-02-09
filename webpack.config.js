@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports
 const path = require('path')
 
 const env = process.env.NODE_ENV === 'production' ? 'production' : 'development'
@@ -57,7 +58,7 @@ module.exports = {
                 test: /\.gif$/,
                 use: [
                     {
-                        loader: 'url-loader',
+                        loader: 'url-loader'
                     }
                 ]
             }
@@ -75,6 +76,12 @@ module.exports = {
             commonjs2: 'styled-components',
             amd: 'StyledComponents',
             root: 'StyledComponents'
+        },
+        'react-router-dom': {
+            root: 'ReactRouterDom',
+            commonjs2: 'react-router-dom',
+            commonjs: 'react-router-dom',
+            amd: 'react-router-dom'
         }
     },
     cache: true,
