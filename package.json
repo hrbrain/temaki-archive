@@ -6,10 +6,10 @@
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "start": "start-storybook -p 6006",
         "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
         "build:declaration": "tsc --emitDeclarationOnly",
         "docs:build": "build-storybook -c .storybook",
+        "start": "start-storybook -p 6006",
         "test": "jest",
         "type-check": "tsc --noEmit"
     },
@@ -41,6 +41,8 @@
         "@types/react": "^16.8.23",
         "@types/react-dates": "^17.1.5",
         "@types/react-dom": "^16.8.3",
+        "@types/react-router": "^5.0.0",
+        "@types/react-router-dom": "^5.0.0",
         "@types/react-test-renderer": "^16.8.2",
         "@types/react-textarea-autosize": "^4.3.4",
         "@types/storybook__addon-actions": "^3.4.3",
@@ -64,6 +66,7 @@
         "eslint-plugin-prettier": "^3.1.0",
         "eslint-plugin-react": "^7.14.2",
         "file-loader": "^6.1.0",
+        "history": "^5.0.0",
         "husky": "^3.0.0",
         "jest": "^24.8.0",
         "jest-cli": "^24.8.0",
@@ -73,6 +76,8 @@
         "raw-loader": "^4.0.2",
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
+        "react-router": "^5.0.0",
+        "react-router-dom": "^5.0.0",
         "react-textarea-autosize": "^7.1.0",
         "styled-components": "^5.1.1",
         "ts-jest": "^24.0.1",
@@ -86,9 +91,13 @@
     "peerDependencies": {
         "@types/react": "^16.8.6",
         "@types/react-dom": "^16.8.3",
+        "@types/react-router": "^5.0.0",
+        "@types/react-router-dom": "^5.0.0",
         "@types/styled-components": "^5.1.2",
         "react": "^16.8.0",
         "react-dom": "^16.8.0",
+        "react-router": "^5.0.0",
+        "react-router-dom": "^5.0.0",
         "styled-components": "^5.1.1"
     }
 }
