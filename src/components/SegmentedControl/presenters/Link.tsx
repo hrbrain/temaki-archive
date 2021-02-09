@@ -9,16 +9,17 @@ import * as Container from '../container'
 //------------------------------------------------------------------------------
 
 export const Component = (props: Container.LinkProps) => {
+    const { className, items, itemsWidth, ...restProps } = props
     return (
-        <div className={props.className}>
-            {props.items.map((item, index) => (
+        <div className={className}>
+            {items.map((item, index) => (
                 <Item
                     data-test={`link-item${index}`}
                     to={item.to}
                     key={index}
-                    exact
                     activeClassName="selected"
-                    itemWidth={props.itemsWidth}
+                    itemWidth={itemsWidth}
+                    {...restProps}
                 >
                     {item.text}
                 </Item>

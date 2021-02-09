@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as ReactRouterDom from 'react-router-dom';
 declare type Types = {
     /**
      * divにonClickで処理をする
@@ -29,7 +30,7 @@ export declare type DefaultProps = CommonProps & {
 export declare type LinkProps = CommonProps & {
     type?: Types['link'];
     items: LinkComponentItem[];
-};
+} & Omit<React.ComponentProps<ReactRouterDom.NavLink>, 'to' | 'activeClassName'>;
 declare type Props = DefaultProps | LinkProps;
 export declare const Component: React.NamedExoticComponent<Props>;
 export declare const commonStyle: import("styled-components").FlattenInterpolation<import("styled-components").ThemedStyledProps<{

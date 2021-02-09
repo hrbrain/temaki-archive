@@ -1,4 +1,6 @@
 import * as React from 'react'
+import * as ReactRouterDom from 'react-router-dom'
+
 import { css } from '~/modules/theme'
 
 import * as Default from './presenters/Default'
@@ -48,7 +50,7 @@ export type DefaultProps = CommonProps & {
 export type LinkProps = CommonProps & {
     type?: Types['link']
     items: LinkComponentItem[]
-}
+} & Omit<React.ComponentProps<ReactRouterDom.NavLink>, 'to' | 'activeClassName'>
 
 type Props = DefaultProps | LinkProps
 
