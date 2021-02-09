@@ -7865,7 +7865,6 @@ exports[`Storyshots Components/SegmentedControl Link 1`] = `
     href="/first"
     itemWidth="200px"
     onClick={[Function]}
-    type="link"
   >
     最初のタブ
   </a>
@@ -7876,7 +7875,6 @@ exports[`Storyshots Components/SegmentedControl Link 1`] = `
     href="/middle"
     itemWidth="200px"
     onClick={[Function]}
-    type="link"
   >
     真ん中のタブ
   </a>
@@ -7887,7 +7885,6 @@ exports[`Storyshots Components/SegmentedControl Link 1`] = `
     href="/last"
     itemWidth="200px"
     onClick={[Function]}
-    type="link"
   >
     最後のタブ
   </a>

@@ -9,7 +9,9 @@ import * as Container from '../container'
 //------------------------------------------------------------------------------
 
 export const Component = (props: Container.LinkProps) => {
-    const { className, items, itemsWidth, ...restProps } = props
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { className, items, itemsWidth, type, ...restProps } = props
+
     return (
         <div className={className}>
             {items.map((item, index) => (
