@@ -28,15 +28,15 @@ const renderItem = (
     selectedIndex: number,
     onClickTab: (index: number) => void,
     itemWidth?: string
-) => (item: Container.DefaultProps['items'][number], key: number) => {
-    const handleClick = React.useCallback(() => onClickTab(key), [])
+) => (item: Container.DefaultProps['items'][number], index: number) => {
+    const handleClick = React.useCallback(() => onClickTab(index), [])
 
     return (
         <Item
-            data-test={`default-item${key}`}
-            selected={selectedIndex === key}
+            data-test={`default-item${index}`}
+            selected={selectedIndex === index}
             onClick={handleClick}
-            key={key}
+            key={`${item.text}-${index}`}
             itemWidth={itemWidth}
         >
             {item.text}

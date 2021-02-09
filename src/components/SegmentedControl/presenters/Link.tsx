@@ -16,7 +16,7 @@ export const Component = (props: Container.LinkProps) => {
                 <Item
                     data-test={`link-item${index}`}
                     to={item.to}
-                    key={index}
+                    key={`${item.text}-${item.to}-${index}`}
                     activeClassName="selected"
                     itemWidth={itemsWidth}
                     {...restProps}
