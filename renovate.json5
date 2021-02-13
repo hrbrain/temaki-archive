@@ -25,6 +25,9 @@
 
       // https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
       ':semanticCommitType(build)',
+
+      // https://docs.renovatebot.com/presets-group/#groupmonorepos
+      'group:monorepos',
   ],
   timezone: 'Asia/Tokyo',
   schedule: ['every weekend'],
