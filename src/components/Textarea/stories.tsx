@@ -1,10 +1,14 @@
 import { action } from '@storybook/addon-actions'
 import { text, number, boolean } from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Textarea from './index'
 
-storiesOf('Components/Textarea', module).add('all', () => {
+// eslint-disable-next-line import/no-default-export
+export default {
+    title: 'Components/Textarea'
+}
+
+export const All = () => {
     return (
         <Textarea.Component
             value={text('value', '')}
@@ -18,4 +22,8 @@ storiesOf('Components/Textarea', module).add('all', () => {
             onBlur={action('onBlur')}
         />
     )
-})
+}
+
+All.story = {
+    name: 'all'
+}

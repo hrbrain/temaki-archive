@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Datepicker from './index'
 import * as Knobs from '@storybook/addon-knobs'
@@ -12,32 +11,37 @@ const testKnobDate = (label: string, defaultValue: Date) => {
     return new Date(stringTimestamp)
 }
 
-storiesOf('Components/Datepicker', module)
-    .add('Standard', () => (
-        <Datepicker.Component
-            date={testKnobDate(name, defaultDate)}
-            placeholderText={Knobs.text('placeholderText', '')}
-            displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
-            monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
-            onChange={Actions.action('onChange')}
-            width={Knobs.text('width', '100%')}
-            selectedColor={Knobs.text('selectedColor', '')}
-            defaultHoverColor={Knobs.text('defaultHoverColor', '')}
-            errored={Knobs.boolean('Error', false)}
-            errorMessage={Knobs.text('ErrorMessage', '')}
-        />
-    ))
-    .add('Null', () => (
-        <Datepicker.Component
-            date={null}
-            placeholderText={Knobs.text('placeholderText', '')}
-            displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
-            monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
-            onChange={Actions.action('onChange')}
-            width={Knobs.text('width', '100%')}
-            selectedColor={Knobs.text('selectedColor', '')}
-            defaultHoverColor={Knobs.text('defaultHoverColor', '')}
-            errored={Knobs.boolean('Error', false)}
-            errorMessage={Knobs.text('ErrorMessage', '')}
-        />
-    ))
+// eslint-disable-next-line import/no-default-export
+export default {
+    title: 'Components/Datepicker'
+}
+
+export const Standard = () => (
+    <Datepicker.Component
+        date={testKnobDate(name, defaultDate)}
+        placeholderText={Knobs.text('placeholderText', '')}
+        displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
+        monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
+        onChange={Actions.action('onChange')}
+        width={Knobs.text('width', '100%')}
+        selectedColor={Knobs.text('selectedColor', '')}
+        defaultHoverColor={Knobs.text('defaultHoverColor', '')}
+        errored={Knobs.boolean('Error', false)}
+        errorMessage={Knobs.text('ErrorMessage', '')}
+    />
+)
+
+export const Null = () => (
+    <Datepicker.Component
+        date={null}
+        placeholderText={Knobs.text('placeholderText', '')}
+        displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
+        monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
+        onChange={Actions.action('onChange')}
+        width={Knobs.text('width', '100%')}
+        selectedColor={Knobs.text('selectedColor', '')}
+        defaultHoverColor={Knobs.text('defaultHoverColor', '')}
+        errored={Knobs.boolean('Error', false)}
+        errorMessage={Knobs.text('ErrorMessage', '')}
+    />
+)

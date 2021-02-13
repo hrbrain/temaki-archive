@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Basics/Colors all 1`] = `
+exports[`Storyshots Basics/Colors All 1`] = `
 <div
   className="container p-4"
 >
@@ -1391,7 +1391,7 @@ exports[`Storyshots Basics/Colors all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Basics/Icons index 1`] = `
+exports[`Storyshots Basics/Icons Index 1`] = `
 .c0 {
   margin-top: 12px;
   margin-left: 4px;
@@ -3096,7 +3096,7 @@ Array [
 ]
 `;
 
-exports[`Storyshots Components/Badge all 1`] = `
+exports[`Storyshots Components/Badge All 1`] = `
 .c0 {
   width: 20px;
   height: 20px;
@@ -3384,7 +3384,7 @@ exports[`Storyshots Components/Button Text 1`] = `
 </button>
 `;
 
-exports[`Storyshots Components/Checkbox all 1`] = `
+exports[`Storyshots Components/Checkbox All 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -6836,85 +6836,6 @@ exports[`Storyshots Components/FileUploader all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Icon Standard 1`] = `
-.c0 {
-  height: 24px;
-  width: 24px;
-}
-
-.c0 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c0 #fill {
-  fill: #333;
-}
-
-<div
-  className="c0"
-  color="#333"
-  dangerouslySetInnerHTML={
-    Object {
-      "__html": undefined,
-    }
-  }
-  size="24px"
-/>
-`;
-
-exports[`Storyshots Components/Illustration SVG as Element 1`] = `
-.c0 {
-  height: 276px;
-  width: 401px;
-}
-
-.c0 svg {
-  height: 276px;
-  width: 401px;
-}
-
-<div
-  className="c0"
-  size={
-    Object {
-      "height": "276px",
-      "width": "401px",
-    }
-  }
->
-  <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-  />
-</div>
-`;
-
-exports[`Storyshots Components/Illustration SVG as string 1`] = `
-.c0 {
-  height: 276px;
-  width: 401px;
-}
-
-.c0 svg {
-  height: 276px;
-  width: 401px;
-}
-
-<div
-  className="c0"
-  size={
-    Object {
-      "height": "276px",
-      "width": "401px",
-    }
-  }
-/>
-`;
-
 exports[`Storyshots Components/Input Number 1`] = `
 .c0 {
   position: relative;
@@ -7178,7 +7099,7 @@ exports[`Storyshots Components/Loading all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/MeatballKebabMenu all 1`] = `
+exports[`Storyshots Components/MeatballKebabMenu All 1`] = `
 .c2 {
   height: 24px;
   width: 24px;
@@ -7334,7 +7255,7 @@ exports[`Storyshots Components/MeatballKebabMenu all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Modal all 1`] = `
+exports[`Storyshots Components/Modal All 1`] = `
 .c8 {
   position: relative;
   overflow: hidden;
@@ -7595,7 +7516,7 @@ exports[`Storyshots Components/Modal all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/RadioButton all 1`] = `
+exports[`Storyshots Components/RadioButton All 1`] = `
 .c1 {
   height: 24px;
   width: 24px;
@@ -8156,500 +8077,7 @@ exports[`Storyshots Components/Textarea all 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Toast buttonless(info) 1`] = `
-.c1 {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 #fill {
-  fill: white;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.16);
-  background-color: rgb(114,206,92);
-}
-
-.c2 {
-  top: 0;
-}
-
-.c3 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: rgb(255,255,255);
-}
-
-.c4 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: rgb(255,255,255);
-  line-height: normal;
-  font-weight: normal;
-  white-space: pre-wrap;
-  padding: 4px 0 0 4px;
-}
-
-<div
-  className="m-10"
->
-  <div
-    className="c0"
-    data-test="info-buttonless-toast"
-  >
-    <div
-      className="c1 c2"
-      color="white"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": undefined,
-        }
-      }
-      size="24px"
-    />
-    <div>
-      <div
-        className="c3"
-      >
-        ラベル
-      </div>
-      <div
-        className="c4"
-      >
-        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/Toast buttonless(progress) 1`] = `
-.c1 {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 #fill {
-  fill: white;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.16);
-  background-color: rgb(245,245,245);
-}
-
-.c2 {
-  top: 0;
-}
-
-.c3 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: #333;
-}
-
-.c4 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: #333;
-  line-height: normal;
-  font-weight: normal;
-  white-space: pre-wrap;
-  padding: 4px 0 0 4px;
-}
-
-<div
-  className="m-10"
->
-  <div
-    className="c0"
-    data-test="progress-buttonless-toast"
-  >
-    <div
-      className="c1 c2"
-      color="white"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": undefined,
-        }
-      }
-      size="24px"
-    />
-    <div>
-      <div
-        className="c3"
-      >
-        ラベル
-      </div>
-      <div
-        className="c4"
-      >
-        状態が入ります状態が入ります
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/Toast buttonless(warning) 1`] = `
-.c1 {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 #fill {
-  fill: white;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.16);
-  background-color: rgb(224,85,72);
-}
-
-.c2 {
-  top: 0;
-}
-
-.c3 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: rgb(255,255,255);
-}
-
-.c4 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: rgb(255,255,255);
-  line-height: normal;
-  font-weight: normal;
-  white-space: pre-wrap;
-  padding: 4px 0 0 4px;
-}
-
-<div
-  className="m-10"
->
-  <div
-    className="c0"
-    data-test="warning-buttonless-toast"
-  >
-    <div
-      className="c1 c2"
-      color="white"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": undefined,
-        }
-      }
-      size="24px"
-    />
-    <div>
-      <div
-        className="c3"
-      >
-        ラベル
-      </div>
-      <div
-        className="c4"
-      >
-        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/Toast default(info) 1`] = `
-.c1 {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 #fill {
-  fill: white;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.16);
-  background-color: rgb(114,206,92);
-}
-
-.c2 {
-  top: 0;
-}
-
-.c5 {
-  cursor: pointer;
-}
-
-.c3 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: rgb(255,255,255);
-}
-
-.c4 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: rgb(255,255,255);
-  line-height: normal;
-  font-weight: normal;
-  white-space: pre-wrap;
-  padding: 4px 0 0 4px;
-}
-
-<div
-  className="m-10"
->
-  <div
-    className="c0"
-    data-test="info-default-toast"
-  >
-    <div
-      className="c1 c2"
-      color="white"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": undefined,
-        }
-      }
-      size="24px"
-    />
-    <div>
-      <div
-        className="c3"
-      >
-        ラベル
-      </div>
-      <div
-        className="c4"
-      >
-        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
-      </div>
-    </div>
-    <span
-      className="c5"
-      onClick={[Function]}
-    >
-      <div
-        className="c1 c2"
-        color="white"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
-        }
-        size="24px"
-      />
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/Toast default(warning) 1`] = `
-.c1 {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c1 #fill {
-  fill: white;
-}
-
-.c0 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
-  padding: 12px;
-  border-radius: 6px;
-  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.16);
-  background-color: rgb(224,85,72);
-}
-
-.c2 {
-  top: 0;
-}
-
-.c5 {
-  cursor: pointer;
-}
-
-.c3 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: rgb(255,255,255);
-}
-
-.c4 {
-  max-width: 290px;
-  word-break: break-all;
-  line-height: 24px;
-  font-size: 14px;
-  padding-left: 4px;
-  font-weight: bold;
-  color: rgb(255,255,255);
-  line-height: normal;
-  font-weight: normal;
-  white-space: pre-wrap;
-  padding: 4px 0 0 4px;
-}
-
-<div
-  className="m-10"
->
-  <div
-    className="c0"
-    data-test="warning-default-toast"
-  >
-    <div
-      className="c1 c2"
-      color="white"
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": undefined,
-        }
-      }
-      size="24px"
-    />
-    <div>
-      <div
-        className="c3"
-      >
-        ラベル
-      </div>
-      <div
-        className="c4"
-      >
-        メールアドレスまたはパスワードに誤りがあります。もう一度入力してください。
-      </div>
-    </div>
-    <span
-      className="c5"
-      onClick={[Function]}
-    >
-      <div
-        className="c1 c2"
-        color="white"
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": undefined,
-          }
-        }
-        size="24px"
-      />
-    </span>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Components/ToolTip all 1`] = `
+exports[`Storyshots Components/ToolTip All 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;

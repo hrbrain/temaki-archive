@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 
 import { action } from '@storybook/addon-actions'
@@ -35,38 +34,40 @@ const handleClick = async () => {
     action('onClick')
 }
 
-storiesOf('Components/Button', module)
-    .add('Box', () => (
-        <Button.Component
-            variant="box"
-            type="submit"
-            colorType={select('ColorType', boxOptions, boxOptions.Primary)}
-            onClick={handleClick}
-        >
-            Confirm
-        </Button.Component>
-    ))
-    .add('Circle', () => (
-        <Button.Component
-            variant="circle"
-            type="reset"
-            colorType={select(
-                'ColorType',
-                circleOptions,
-                circleOptions.Primary
-            )}
-            svg={IconFiles.icons.ArrowDown}
-            onClick={action('onClick')}
-        />
-    ))
-    .add('Text', () => (
-        <Button.Component
-            variant="text"
-            type="button"
-            colorType={select('ColorType', textOptions, textOptions.Primary)}
-            svg={IconFiles.icons.ArrowDown}
-            onClick={action('onClick')}
-        >
-            {text('text', 'Show filters')}
-        </Button.Component>
-    ))
+// eslint-disable-next-line import/no-default-export
+export default {
+    title: 'Components/Button'
+}
+
+export const Box = () => (
+    <Button.Component
+        variant="box"
+        type="submit"
+        colorType={select('ColorType', boxOptions, boxOptions.Primary)}
+        onClick={handleClick}
+    >
+        Confirm
+    </Button.Component>
+)
+
+export const Circle = () => (
+    <Button.Component
+        variant="circle"
+        type="reset"
+        colorType={select('ColorType', circleOptions, circleOptions.Primary)}
+        svg={IconFiles.icons.ArrowDown}
+        onClick={action('onClick')}
+    />
+)
+
+export const Text = () => (
+    <Button.Component
+        variant="text"
+        type="button"
+        colorType={select('ColorType', textOptions, textOptions.Primary)}
+        svg={IconFiles.icons.ArrowDown}
+        onClick={action('onClick')}
+    >
+        {text('text', 'Show filters')}
+    </Button.Component>
+)

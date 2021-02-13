@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import {
     defaultTheme,
@@ -6,7 +5,12 @@ import {
     RequiredThemeTextSizeSP
 } from '~/modules/theme'
 
-storiesOf('Basics/Typography', module).add('Body', () => {
+// eslint-disable-next-line import/no-default-export
+export default {
+    title: 'Basics/Typography'
+}
+
+export const Body = () => {
     return (
         <>
             <DeviceSection name="PC" theme={defaultTheme.typography.pc} />
@@ -17,7 +21,7 @@ storiesOf('Basics/Typography', module).add('Body', () => {
             />
         </>
     )
-})
+}
 
 const DeviceSection: React.FC<{
     name: string

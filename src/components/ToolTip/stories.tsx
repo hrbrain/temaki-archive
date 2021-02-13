@@ -1,9 +1,13 @@
 import { text, select } from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as ToolTip from './index'
 
-storiesOf('Components/ToolTip', module).add('all', () => {
+// eslint-disable-next-line import/no-default-export
+export default {
+    title: 'Components/ToolTip'
+}
+
+export const All = () => {
     return (
         <ToolTip.Component
             text={text('Component', 'テキスト要素')}
@@ -19,4 +23,4 @@ storiesOf('Components/ToolTip', module).add('all', () => {
             )}
         />
     )
-})
+}

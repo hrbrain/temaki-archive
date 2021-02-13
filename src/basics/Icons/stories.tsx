@@ -1,11 +1,15 @@
 import * as Knobs from '@storybook/addon-knobs'
-import * as Storybook from '@storybook/react'
 import * as React from 'react'
 import styled from '~/modules/theme'
 
 import * as IconFiles from '../../lib/iconFiles'
 
-Storybook.storiesOf('Basics/Icons', module).add('index', () => {
+// eslint-disable-next-line import/no-default-export
+export default {
+    title: 'Basics/Icons'
+}
+
+export const Index = () => {
     const iconElements = Object.keys(IconFiles.icons).map(
         compose(
             renderIcon(Knobs.color('カラー', '#888')),
@@ -14,7 +18,7 @@ Storybook.storiesOf('Basics/Icons', module).add('index', () => {
     )
 
     return <div className="flex flex-wrap w-64">{iconElements}</div>
-})
+}
 
 const compose = (...functions: ((arg: any) => any)[]) => (arg: any) =>
     functions.reduceRight((p, f) => f(p), arg)
