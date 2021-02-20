@@ -40,7 +40,6 @@ const itemOptions = items.reduce(
     {}
 )
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/DropdownMultiple'
 }

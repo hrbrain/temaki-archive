@@ -3,7 +3,6 @@ import * as React from 'react'
 
 import * as Loading from './index'
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/Loading'
 }

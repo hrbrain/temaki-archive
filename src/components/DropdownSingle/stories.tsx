@@ -4,7 +4,6 @@ import * as React from 'react'
 import * as DropdownSingle from './index'
 import * as ItemList from './ItemList'
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/DropdownSingle'
 }

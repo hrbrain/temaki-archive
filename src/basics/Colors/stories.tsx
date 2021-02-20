@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { defaultTheme } from '~/modules/theme'
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Basics/Colors'
 }

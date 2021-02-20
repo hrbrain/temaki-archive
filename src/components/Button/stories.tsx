@@ -34,7 +34,6 @@ const handleClick = async () => {
     action('onClick')
 }
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/Button'
 }

@@ -3,7 +3,6 @@ import { action } from '@storybook/addon-actions'
 import { text } from '@storybook/addon-knobs'
 import * as StepNumber from '.'
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/StepNumber'
 }

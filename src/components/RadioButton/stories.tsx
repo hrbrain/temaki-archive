@@ -4,7 +4,6 @@ import * as React from 'react'
 import * as RadioButton from './index'
 import * as Knobs from '@storybook/addon-knobs'
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/RadioButton'
 }

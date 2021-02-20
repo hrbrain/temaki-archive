@@ -4,7 +4,6 @@ import * as ClickOutside from '../../modules/ClickOutside'
 import { text, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/MeatballKebabMenu'
 }

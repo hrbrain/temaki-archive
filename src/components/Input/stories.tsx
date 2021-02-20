@@ -4,7 +4,6 @@ import * as React from 'react'
 
 import * as Input from './index'
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/Input'
 }

@@ -13,7 +13,6 @@ const testKnobDate = (label: string, defaultValue: Date) => {
     return new Date(stringTimestamp)
 }
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Components/DateRangePicker'
 }

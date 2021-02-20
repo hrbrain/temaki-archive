@@ -4,7 +4,6 @@ import styled from '~/modules/theme'
 
 import * as IconFiles from '../../lib/iconFiles'
 
-// eslint-disable-next-line import/no-default-export
 export default {
     title: 'Basics/Icons'
 }
