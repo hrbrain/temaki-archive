@@ -112,17 +112,15 @@ const Wrap = styled.div`
     background: ${props => props.theme.colors.grayScale.S0};
     border-radius: 6px;
     box-shadow: ${props => props.theme.shadows.dropShadow.L5};
-    max-height: 204px;
+    max-height: 240px;
     overflow-y: auto;
-    padding-bottom: 12px;
     & > ${StyledItem} {
-        margin-left: 15px;
+        margin-left: 12px;
     }
 `
 
 const ItemWrap = styled.ul`
     margin-left: 25px;
-    margin-top: 12px;
 `
 
 const Li = styled.li`
@@ -135,6 +133,7 @@ const Li = styled.li`
         color: ${props => props.theme.colors.primary.default};
     }
     white-space: nowrap;
+    padding: 4px 0;
 `
 
 const OpenIconArea = styled.div``
