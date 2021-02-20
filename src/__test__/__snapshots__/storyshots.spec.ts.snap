@@ -5485,18 +5485,16 @@ exports[`Storyshots Components/DropdownMultipleHierarchy default 1`] = `
   background: rgb(255,255,255);
   border-radius: 6px;
   box-shadow: 0 5px 11px rgba(0,0,0,0.16);
-  max-height: 204px;
+  max-height: 240px;
   overflow-y: auto;
-  padding-bottom: 12px;
 }
 
 .c8 > .c11 {
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 .c10 {
   margin-left: 25px;
-  margin-top: 12px;
 }
 
 .c12 {
@@ -5512,6 +5510,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy default 1`] = `
   display: flex;
   cursor: pointer;
   white-space: nowrap;
+  padding: 4px 0;
 }
 
 .c12:hover {
@@ -5723,7 +5722,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/DropdownMultipleHierarchy 多部署・5階層 1`] = `
+exports[`Storyshots Components/DropdownMultipleHierarchy 多部署 1`] = `
 .c5 {
   height: 24px;
   width: 24px;
@@ -5789,18 +5788,16 @@ exports[`Storyshots Components/DropdownMultipleHierarchy 多部署・5階層 1`]
   background: rgb(255,255,255);
   border-radius: 6px;
   box-shadow: 0 5px 11px rgba(0,0,0,0.16);
-  max-height: 204px;
+  max-height: 240px;
   overflow-y: auto;
-  padding-bottom: 12px;
 }
 
 .c7 > .c10 {
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 .c9 {
   margin-left: 25px;
-  margin-top: 12px;
 }
 
 .c11 {
@@ -5816,6 +5813,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy 多部署・5階層 1`]
   display: flex;
   cursor: pointer;
   white-space: nowrap;
+  padding: 4px 0;
 }
 
 .c11:hover {
@@ -5880,6 +5878,10 @@ exports[`Storyshots Components/DropdownMultipleHierarchy 多部署・5階層 1`]
 <div
   className="ml-20 mt-10"
 >
+  <p>
+    部署数: 
+    196
+  </p>
   <div
     className="c0"
     width="250px"
@@ -6691,6 +6693,375 @@ exports[`Storyshots Components/DropdownMultipleHierarchy 多部署・5階層 1`]
                   className="c15"
                 >
                   部署19
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署20
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署21
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署22
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署23
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署24
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署25
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署26
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署27
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  部署28
                 </div>
               </div>
             </li>

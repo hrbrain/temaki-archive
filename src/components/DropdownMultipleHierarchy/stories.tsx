@@ -130,6 +130,7 @@ const getChildren = (parentValue: string): DropdownMultipleHierarchy.Item[] => {
 }
 
 const getChildrenCount = (item: DropdownMultipleHierarchy.Item) => {
+    if (item === undefined) return 0
     if (item.children === undefined) return 0
     let count = 0
     count += item.children.length
