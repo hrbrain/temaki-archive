@@ -58,7 +58,7 @@ export const Component = React.memo<Props>(props => {
                 width={width}
                 onClick={onClick}
             >
-                <SelectedItems>
+                <SelectedItems data-test="selectedItems">
                     {showSelectedItems({
                         items,
                         values,

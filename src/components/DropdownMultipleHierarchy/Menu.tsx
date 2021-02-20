@@ -75,7 +75,11 @@ const Item: React.FC<ItemProps> = props => {
                         />
                     </OpenIconArea>
                 )}
-                <ClickArea onClick={handleClick} hasChildren={hasChildren}>
+                <ClickArea
+                    onClick={handleClick}
+                    hasChildren={hasChildren}
+                    data-test="item-clickArea"
+                >
                     <CheckIcon
                         svg={
                             isSelected
