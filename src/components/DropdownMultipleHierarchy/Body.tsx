@@ -188,6 +188,7 @@ const Body = styled.div<BodyType>`
     ${props => (props.width ? `width: ${props.width};` : '')}
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 0px 12px;
     border: 1px solid
         ${props => {
