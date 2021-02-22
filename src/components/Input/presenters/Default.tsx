@@ -87,6 +87,8 @@ const Outer = styled.input<OuterProps>`
         props.disabled
             ? css`
                   background: ${props.theme.colors.grayScale.S20};
+                  border: solid 1px
+                      ${props => props.theme.colors.main.grayScale[400]};
                   cursor: not-allowed;
               `
             : ''}
