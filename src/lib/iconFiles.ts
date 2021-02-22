@@ -23,6 +23,7 @@ import Download from '~/../icons/download.svg'
 import Drag from '~/../icons/drag.svg'
 import Dragdrop from '~/../icons/dragdrop.svg'
 import DropdownOff from '~/../icons/dropdown-off.svg'
+import DropdownOffDisabled from '~/../icons/dropdown-off-disabled.svg'
 import DropdownOn from '~/../icons/dropdown-on.svg'
 import Edit from '~/../icons/edit.svg'
 import Event from '~/../icons/event.svg'
@@ -101,6 +102,7 @@ export const icons = {
     Drag,
     Dragdrop,
     DropdownOff,
+    DropdownOffDisabled,
     DropdownOn,
     Edit,
     Event,
