@@ -1,0 +1,41 @@
+// https://docs.renovatebot.com/
+{
+  extends: [
+      // default
+      // https://github.com/renovatebot/renovate/blob/master/lib/config/presets/internal/config.ts
+      ':separateMajorReleases',
+      ':combinePatchMinorReleases',
+      ':ignoreUnstable',
+      ':prImmediately',
+      ':semanticPrefixFixDepsChoreOthers',
+      ':automergeDisabled',
+      ':ignoreModulesAndTests',
+      ':autodetectPinVersions',
+      ':pinVersions',
+      ':renovatePrefix',
+      ':disablePeerDependencies',
+      // https://docs.renovatebot.com/presets-helpers/
+      'helpers:disableTypesNodeMajor',
+
+      // 以下オリジナル
+      ':label(dependencies)',
+      ':enableVulnerabilityAlerts',
+      ':semanticCommits',
+      ':noUnscheduledUpdates',
+
+      // https://github.com/angular/angular/blob/master/CONTRIBUTING.md#type
+      ':semanticCommitType(build)',
+
+      // https://docs.renovatebot.com/presets-group/#groupmonorepos
+      'group:monorepos',
+  ],
+  timezone: 'Asia/Tokyo',
+  schedule: ['every weekend'],
+  assigneesFromCodeOwners: true,
+  assigneesSampleSize: 1,
+  ignoreDeps: [
+      // NodeはGAEにあわせて12系最新固定
+      "@types/node",
+  ],
+  rebaseWhen: "conflicted"
+}

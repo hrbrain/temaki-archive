@@ -20,6 +20,7 @@ type Props = {
     onClickRemove?: (index: number) => void
     width?: string
     placeholder?: string
+    disabled?: boolean
     isError?: boolean
     diff?: boolean
     defaultExpanded?: boolean
@@ -90,6 +91,8 @@ export const Component = React.memo<Props>(props => {
         [props.values, searchValue, props.onChange]
     )
 
+    const noop = () => {}
+
     return (
         <Wrap className={props.className} width={props.width}>
             <Inner>
@@ -98,18 +101,19 @@ export const Component = React.memo<Props>(props => {
                     inactive={!isMenuVisible}
                 >
                     <Body.Component
-                        onClick={clickBody}
+                        onClick={!props.disabled ? clickBody : noop}
                         items={props.items}
                         values={props.values}
                         placeholder={props.placeholder}
                         isMenuVisible={isMenuVisible}
                         diff={props.diff}
+                        disabled={props.disabled}
                         isError={props.isError}
                         onChangeSearchValue={changeSearchValue}
                         onClickRemove={props.onClickRemove}
                         searchValue={searchValue}
                         onKeydown={keyDownInInput}
-                        onClickIcon={clickIcon}
+                        onClickIcon={!props.disabled ? clickIcon : noop}
                     />
                     {filteredItems.length ? (
                         <StyledItemList
@@ -154,7 +158,6 @@ const StyledItemList = styled(ItemList.Component)<{ isVisible?: boolean }>`
     margin-top: 4px;
     transform-origin: top;
     transition: 0.2s;
-
     ${props =>
         props.isVisible
             ? `

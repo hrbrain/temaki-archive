@@ -11,6 +11,7 @@ storiesOf('Components/Input', module)
             format="text"
             value={text('Value', '')}
             placeholder={text('Placeholder', 'Enter your name')}
+            disabled={boolean('disabled', false)}
             onChange={action('onChange')}
             onBlur={action('onBlur')}
             errored={boolean('Error', false)}
@@ -25,6 +26,7 @@ storiesOf('Components/Input', module)
             unit={text('単位', '')}
             value={text('value', '')}
             placeholder={text('Placeholder', 'Enter your age')}
+            disabled={boolean('disabled', false)}
             onChange={action('onChange')}
             onBlur={action('onBlur')}
             errored={boolean('Error', false)}
