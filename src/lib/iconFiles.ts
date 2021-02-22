@@ -5,6 +5,7 @@ import Attachment from '~/../icons/attachment.svg'
 import Avatar from '~/../icons/avatar.svg'
 import BlackBoard from '~/../icons/blackbaord.svg'
 import Calendar from '~/../icons/calendar.svg'
+import CheckFilled from '~/../icons/check-filled.svg'
 import CheckBoxAll from '~/../icons/checkBox-all.svg'
 import CheckBoxOff from '~/../icons/checkbox-off.svg'
 import CheckBoxOn from '~/../icons/checkbox-on.svg'
@@ -83,6 +84,7 @@ export const icons = {
     Avatar,
     BlackBoard,
     Calendar,
+    CheckFilled,
     CheckBoxAll,
     CheckBoxOn,
     CheckBoxOff,

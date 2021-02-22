@@ -1561,6 +1561,24 @@ exports[`Storyshots Basics/Icons index 1`] = `
     <p
       className="c2"
     >
+      CheckFilled
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       CheckBoxAll
     </p>
   </div>
