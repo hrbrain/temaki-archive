@@ -110,6 +110,7 @@ export declare const icons: {
     Avatar: string;
     BlackBoard: string;
     Calendar: string;
+    CalendarDisabled: string;
     CheckFilled: string;
     CheckBoxAll: string;
     CheckBoxOn: string;
@@ -265,6 +266,7 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     placeholderText?: string | undefined;
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
+    disabled?: boolean | undefined;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;

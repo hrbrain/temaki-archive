@@ -1561,6 +1561,24 @@ exports[`Storyshots Basics/Icons index 1`] = `
     <p
       className="c2"
     >
+      CalendarDisabled
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       CheckFilled
     </p>
   </div>
@@ -3554,10 +3572,22 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
   transition: all 0.15s;
 }
 
+.c0 .SingleDatePickerInput__disabled {
+  font-style: normal;
+  cursor: not-allow;
+  border: 1px solid rgb(214,214,214);
+  background: rgb(214,214,214);
+}
+
 .c0 .SingleDatePickerInput_calendarIcon {
   border: none;
   outline: none;
   padding: 0 4px 0 0;
+  cursor: pointer;
+}
+
+.c0 .SingleDatePickerInput_calendarIcon_svg {
+  cursor: pointer;
 }
 
 .c0 .SingleDatePicker {
@@ -4086,13 +4116,17 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
 }
 
 .c0 .DayPickerNavigation_button__disabled {
-  cursor: default;
-  border: 1px solid #f2f2f2;
+  cursor: not-allowed;
+  font-style: normal;
+  color: rgb(153,153,153);
+  border: 1px solid rgb(214,214,214);
+  background: rgb(214,214,214);
 }
 
 .c0 .DayPickerNavigation_button__disabled:focus,
 .c0 .DayPickerNavigation_button__disabled:hover {
-  border: 1px solid #f2f2f2;
+  cursor: not-allowed;
+  border: 1px solid rgb(214,214,214);
 }
 
 .c0 .DayPickerNavigation_button__disabled:active {
@@ -4362,8 +4396,11 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
 }
 
 .c0 .DateInput_input__disabled {
-  background: #f2f2f2;
-  font-style: italic;
+  cursor: not-allowed;
+  font-style: normal;
+  color: rgb(153,153,153);
+  border: 1px solid rgb(214,214,214);
+  background: rgb(214,214,214);
 }
 
 .c0 .DateInput_input__focused {
@@ -4586,6 +4623,7 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
 
 <div
   className="c0"
+  disabled={false}
   width="100%"
 >
   <div
@@ -4718,10 +4756,22 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
   transition: all 0.15s;
 }
 
+.c0 .SingleDatePickerInput__disabled {
+  font-style: normal;
+  cursor: not-allow;
+  border: 1px solid rgb(214,214,214);
+  background: rgb(214,214,214);
+}
+
 .c0 .SingleDatePickerInput_calendarIcon {
   border: none;
   outline: none;
   padding: 0 4px 0 0;
+  cursor: pointer;
+}
+
+.c0 .SingleDatePickerInput_calendarIcon_svg {
+  cursor: pointer;
 }
 
 .c0 .SingleDatePicker {
@@ -5250,13 +5300,17 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
 }
 
 .c0 .DayPickerNavigation_button__disabled {
-  cursor: default;
-  border: 1px solid #f2f2f2;
+  cursor: not-allowed;
+  font-style: normal;
+  color: rgb(153,153,153);
+  border: 1px solid rgb(214,214,214);
+  background: rgb(214,214,214);
 }
 
 .c0 .DayPickerNavigation_button__disabled:focus,
 .c0 .DayPickerNavigation_button__disabled:hover {
-  border: 1px solid #f2f2f2;
+  cursor: not-allowed;
+  border: 1px solid rgb(214,214,214);
 }
 
 .c0 .DayPickerNavigation_button__disabled:active {
@@ -5526,8 +5580,11 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
 }
 
 .c0 .DateInput_input__disabled {
-  background: #f2f2f2;
-  font-style: italic;
+  cursor: not-allowed;
+  font-style: normal;
+  color: rgb(153,153,153);
+  border: 1px solid rgb(214,214,214);
+  background: rgb(214,214,214);
 }
 
 .c0 .DateInput_input__focused {
@@ -5750,6 +5807,7 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
 
 <div
   className="c0"
+  disabled={false}
   width="100%"
 >
   <div

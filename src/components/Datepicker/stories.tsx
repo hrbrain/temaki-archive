@@ -23,6 +23,7 @@ storiesOf('Components/Datepicker', module)
             width={Knobs.text('width', '100%')}
             selectedColor={Knobs.text('selectedColor', '')}
             defaultHoverColor={Knobs.text('defaultHoverColor', '')}
+            disabled={Knobs.boolean('disabled', false)}
             errored={Knobs.boolean('Error', false)}
             errorMessage={Knobs.text('ErrorMessage', '')}
         />
@@ -37,6 +38,7 @@ storiesOf('Components/Datepicker', module)
             width={Knobs.text('width', '100%')}
             selectedColor={Knobs.text('selectedColor', '')}
             defaultHoverColor={Knobs.text('defaultHoverColor', '')}
+            disabled={Knobs.boolean('disabled', false)}
             errored={Knobs.boolean('Error', false)}
             errorMessage={Knobs.text('ErrorMessage', '')}
         />

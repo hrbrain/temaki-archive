@@ -24,6 +24,7 @@ type Props = {
     placeholderText?: string
     selectedColor?: string
     defaultHoverColor?: string
+    disabled?: boolean
 }
 
 export const Component = React.memo<Props>(props => {
@@ -54,8 +55,15 @@ export const Component = React.memo<Props>(props => {
     )
 
     const calendarIconRender = React.useMemo(() => {
-        return <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
-    }, [])
+        return !props.disabled ? (
+            <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
+        ) : (
+            <Icon.Component
+                svg={IconFiles.icons.CalendarDisabled}
+                size="24px"
+            />
+        )
+    }, [props.disabled])
 
     const ChevronLeftIconRender = React.useMemo(() => {
         return <Icon.Component svg={IconFiles.icons.ChevronLeft} size="24px" />
@@ -74,6 +82,7 @@ export const Component = React.memo<Props>(props => {
             width={props.width}
             defaultHoverColor={props.defaultHoverColor}
             selectedColor={props.selectedColor}
+            disabled={props.disabled}
             errored={props.errored}
         >
             <ReactDates.SingleDatePicker
@@ -90,6 +99,7 @@ export const Component = React.memo<Props>(props => {
                 navPrev={ChevronLeftIconRender}
                 navNext={ChevronRightIconRender}
                 enableOutsideDays={true}
+                disabled={props.disabled}
                 isOutsideRange={allowAllDays}
             />
             <ErrorMessage.Component
@@ -105,6 +115,7 @@ export const Component = React.memo<Props>(props => {
  */
 type OuterProps = {
     width: string
+    disabled?: boolean
     errored?: boolean
     selectedRangeColor?: string
     selectedColor?: string
@@ -165,6 +176,10 @@ const Outer = styled.div<OuterProps>`
         .SingleDatePickerInput__rtl {
         }
         .SingleDatePickerInput__disabled {
+            font-style: normal;
+            cursor: not-allow;
+            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            background: ${props => props.theme.colors.main.grayScale[400]};
         }
         .SingleDatePickerInput__block {
         }
@@ -187,8 +202,10 @@ const Outer = styled.div<OuterProps>`
             border: none;
             outline: none;
             padding: 0 4px 0 0;
+            cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
         }
         .SingleDatePickerInput_calendarIcon_svg {
+            cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
         }
         .SingleDatePicker {
             position: relative;
@@ -617,12 +634,16 @@ const Outer = styled.div<OuterProps>`
             background: #f2f2f2;
         }
         .DayPickerNavigation_button__disabled {
-            cursor: default;
-            border: 1px solid #f2f2f2;
+            cursor: not-allowed;
+            font-style: normal;
+            color: ${props => props.theme.colors.grayScale.S50};
+            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            background: ${props => props.theme.colors.main.grayScale[400]};
         }
         .DayPickerNavigation_button__disabled:focus,
         .DayPickerNavigation_button__disabled:hover {
-            border: 1px solid #f2f2f2;
+            cursor: not-allowed;
+            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
         }
         .DayPickerNavigation_button__disabled:active {
             background: 0 0;
@@ -842,8 +863,11 @@ const Outer = styled.div<OuterProps>`
             user-select: none;
         }
         .DateInput_input__disabled {
-            background: #f2f2f2;
-            font-style: italic;
+            cursor: not-allowed;
+            font-style: normal;
+            color: ${props => props.theme.colors.grayScale.S50};
+            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            background: ${props => props.theme.colors.main.grayScale[400]};
         }
         .DateInput_input__focused {
             outline: none;

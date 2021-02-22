@@ -15,6 +15,7 @@ declare type Props = {
     placeholderText?: string;
     selectedColor?: string;
     defaultHoverColor?: string;
+    disabled?: boolean;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};
