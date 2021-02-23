@@ -203,6 +203,7 @@ const Outer = styled.div<OuterProps>`
             outline: none;
             padding: 0 4px 0 0;
             cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+            background: ${props => (props.disabled ? '#d6d6d6' : '#fff')};
         }
         .SingleDatePickerInput_calendarIcon_svg {
             cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
