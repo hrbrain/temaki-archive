@@ -34,6 +34,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
     diff?: boolean | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
@@ -52,6 +53,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
     diff?: boolean | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
@@ -128,6 +130,7 @@ export declare const icons: {
     Drag: string;
     Dragdrop: string;
     DropdownOff: string;
+    DropdownOffDisabled: string;
     DropdownOn: string;
     Edit: string;
     Event: string;
@@ -228,6 +231,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     onClickRemove?: ((index: number) => void) | undefined;
     width?: string | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     isError?: boolean | undefined;
     diff?: boolean | undefined;
     defaultExpanded?: boolean | undefined;
@@ -263,9 +267,9 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     placeholderText?: string | undefined;
+    disabled?: boolean | undefined;
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
-    disabled?: boolean | undefined;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;

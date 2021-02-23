@@ -13,9 +13,9 @@ declare type Props = {
     errored?: boolean;
     errorMessage?: string;
     placeholderText?: string;
+    disabled?: boolean;
     selectedColor?: string;
     defaultHoverColor?: string;
-    disabled?: boolean;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
 export {};

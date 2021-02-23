@@ -22,9 +22,9 @@ type Props = {
     errored?: boolean
     errorMessage?: string
     placeholderText?: string
+    disabled?: boolean
     selectedColor?: string
     defaultHoverColor?: string
-    disabled?: boolean
 }
 
 export const Component = React.memo<Props>(props => {
@@ -89,6 +89,7 @@ export const Component = React.memo<Props>(props => {
                 id={'date'}
                 date={conversionToMomentType(props.date)}
                 focused={focused}
+                disabled={props.disabled}
                 placeholder={props.placeholderText}
                 customInputIcon={calendarIconRender}
                 displayFormat={props.displayFormat || 'YYYY年M月D日'}
@@ -99,7 +100,6 @@ export const Component = React.memo<Props>(props => {
                 navPrev={ChevronLeftIconRender}
                 navNext={ChevronRightIconRender}
                 enableOutsideDays={true}
-                disabled={props.disabled}
                 isOutsideRange={allowAllDays}
             />
             <ErrorMessage.Component
@@ -178,7 +178,8 @@ const Outer = styled.div<OuterProps>`
         .SingleDatePickerInput__disabled {
             font-style: normal;
             cursor: not-allow;
-            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            border: 1px solid ${props =>
+                props.theme.colors.main.grayScale[400]};
             background: ${props => props.theme.colors.main.grayScale[400]};
         }
         .SingleDatePickerInput__block {
@@ -202,7 +203,11 @@ const Outer = styled.div<OuterProps>`
             border: none;
             outline: none;
             padding: 0 4px 0 0;
+<<<<<<< HEAD
             cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+=======
+            background: none;
+>>>>>>> master
         }
         .SingleDatePickerInput_calendarIcon_svg {
             cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
@@ -637,13 +642,15 @@ const Outer = styled.div<OuterProps>`
             cursor: not-allowed;
             font-style: normal;
             color: ${props => props.theme.colors.grayScale.S50};
-            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            border: 1px solid ${props =>
+                props.theme.colors.main.grayScale[400]};
             background: ${props => props.theme.colors.main.grayScale[400]};
         }
         .DayPickerNavigation_button__disabled:focus,
         .DayPickerNavigation_button__disabled:hover {
             cursor: not-allowed;
-            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            border: 1px solid ${props =>
+                props.theme.colors.main.grayScale[400]};
         }
         .DayPickerNavigation_button__disabled:active {
             background: 0 0;
@@ -863,11 +870,18 @@ const Outer = styled.div<OuterProps>`
             user-select: none;
         }
         .DateInput_input__disabled {
+<<<<<<< HEAD
             cursor: not-allowed;
             font-style: normal;
             color: ${props => props.theme.colors.grayScale.S50};
-            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            border: 1px solid ${props =>
+                props.theme.colors.main.grayScale[400]};
             background: ${props => props.theme.colors.main.grayScale[400]};
+=======
+            background: #f2f2f2;
+            font-style: italic;
+            cursor: not-allowed;
+>>>>>>> master
         }
         .DateInput_input__focused {
             outline: none;
