@@ -110,7 +110,6 @@ export declare const icons: {
     Avatar: string;
     BlackBoard: string;
     Calendar: string;
-    CalendarDisabled: string;
     CheckFilled: string;
     CheckBoxAll: string;
     CheckBoxOn: string;

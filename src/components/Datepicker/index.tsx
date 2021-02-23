@@ -55,11 +55,11 @@ export const Component = React.memo<Props>(props => {
     )
 
     const calendarIconRender = React.useMemo(() => {
-        return !props.disabled ? (
-            <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
-        ) : (
+        const color = props.disabled ? 'rgb(153,153,153)' : '#333'
+        return (
             <Icon.Component
-                svg={IconFiles.icons.CalendarDisabled}
+                color={color}
+                svg={IconFiles.icons.Calendar}
                 size="24px"
             />
         )
