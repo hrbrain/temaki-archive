@@ -6955,7 +6955,7 @@ exports[`Storyshots Components/Input Number 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Input NumberWithDecimalPlace 1`] = `
+exports[`Storyshots Components/Input Number With Decimal Place 1`] = `
 .c0 {
   position: relative;
   display: -webkit-inline-box;
@@ -7013,6 +7013,7 @@ exports[`Storyshots Components/Input NumberWithDecimalPlace 1`] = `
 >
   <input
     className="c1"
+    disabled={false}
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
