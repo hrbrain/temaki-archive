@@ -1,8 +1,11 @@
 import { number } from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Badge from './index'
 
-storiesOf('Components/Badge', module).add('all', () => {
+export default {
+    title: 'Components/Badge'
+}
+
+export const All = () => {
     return <Badge.Component count={number('Count', 10)} />
-})
+}

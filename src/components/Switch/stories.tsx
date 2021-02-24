@@ -1,10 +1,13 @@
 import { action } from '@storybook/addon-actions'
 import { boolean, text } from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Switch from './index'
 
-storiesOf('Components/Switch', module).add('all', () => {
+export default {
+    title: 'Components/Switch'
+}
+
+export const All = () => {
     return (
         <div className="m-10">
             <Switch.Component
@@ -17,4 +20,8 @@ storiesOf('Components/Switch', module).add('all', () => {
             />
         </div>
     )
-})
+}
+
+All.story = {
+    name: 'all'
+}

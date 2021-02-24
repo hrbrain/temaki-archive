@@ -1,5 +1,4 @@
 import { text } from '@storybook/addon-knobs'
-import * as Storybook from '@storybook/react'
 import * as React from 'react'
 
 import * as IllustrationFiles from '~/lib/illustrationFiles'
@@ -13,22 +12,30 @@ const SVGComponent = () => (
     ></div>
 )
 
-Storybook.storiesOf('Components/Illustration', module)
-    .add('SVG as string', () => (
-        <Illustration.Component
-            svg={IllustrationFiles.illustrations.Sample}
-            size={{
-                width: text('Size Width', '401px'),
-                height: text('Size Height', '276px')
-            }}
-        />
-    ))
-    .add('SVG as Element', () => (
-        <Illustration.Component
-            svg={<SVGComponent />}
-            size={{
-                width: text('Size Width', '401px'),
-                height: text('Size Height', '276px')
-            }}
-        />
-    ))
+export const SvgAsString = () => (
+    <Illustration.Component
+        svg={IllustrationFiles.illustrations.Sample}
+        size={{
+            width: text('Size Width', '401px'),
+            height: text('Size Height', '276px')
+        }}
+    />
+)
+
+SvgAsString.story = {
+    name: 'SVG as string'
+}
+
+export const SvgAsElement = () => (
+    <Illustration.Component
+        svg={<SVGComponent />}
+        size={{
+            width: text('Size Width', '401px'),
+            height: text('Size Height', '276px')
+        }}
+    />
+)
+
+SvgAsElement.story = {
+    name: 'SVG as Element'
+}

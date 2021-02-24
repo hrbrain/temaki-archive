@@ -1,10 +1,13 @@
 import * as Actions from '@storybook/addon-actions'
 import * as Knobs from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Modal from './index'
 
-storiesOf('Components/Modal', module).add('all', () => {
+export default {
+    title: 'Components/Modal'
+}
+
+export const All = () => {
     return (
         <div className="m-10">
             <Modal.Component
@@ -23,4 +26,4 @@ storiesOf('Components/Modal', module).add('all', () => {
             </Modal.Component>
         </div>
     )
-})
+}

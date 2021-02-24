@@ -1,10 +1,13 @@
 import * as React from 'react'
 import { action } from '@storybook/addon-actions'
 import { text } from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
 import * as StepNumber from '.'
 
-storiesOf('Components/StepNumber', module).add('Default', () => (
+export default {
+    title: 'Components/StepNumber'
+}
+
+export const Default = () => (
     <>
         <StepNumber.Component
             defaultValue={Number(text('defaultValue', '1'))}
@@ -16,4 +19,4 @@ storiesOf('Components/StepNumber', module).add('Default', () => (
             onChangeValue={action('onChangeValue')}
         />
     </>
-))
+)
