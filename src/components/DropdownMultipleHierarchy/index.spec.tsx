@@ -3,8 +3,6 @@ import * as React from 'react'
 import { act } from 'react-dom/test-utils'
 import { mountWithTheme } from '~/__test__/utils'
 import * as DropdownMultipleHierarchy from '.'
-// import * as ItemList from './itemList'
-// import * as Theme from '~/modules/theme'
 import 'jest-styled-components'
 
 /***
