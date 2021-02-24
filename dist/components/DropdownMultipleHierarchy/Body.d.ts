@@ -8,6 +8,7 @@ declare type Props = {
     values: Menu.Value[];
     onClick: (e: React.MouseEvent) => void;
     placeholder?: string;
+    disabled?: boolean;
     isError?: boolean;
     diff?: boolean;
     width?: string;

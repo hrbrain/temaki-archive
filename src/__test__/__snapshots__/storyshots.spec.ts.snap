@@ -6160,6 +6160,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy Default 1`] = `
   transform: translateY(-50%);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .c6.visible {
@@ -6199,6 +6200,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy Default 1`] = `
   width: calc(100% - 28px);
   max-height: 110px;
   overflow-y: scroll;
+  color: rgb(51,51,51);
 }
 
 .c7 {
@@ -6308,11 +6310,13 @@ exports[`Storyshots Components/DropdownMultipleHierarchy Default 1`] = `
         <div
           className="c2"
           data-test="body"
+          disabled={false}
           onClick={[Function]}
         >
           <div
             className="c3"
             data-test="selectedItems"
+            disabled={false}
           >
             選択してください
           </div>

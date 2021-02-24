@@ -7,6 +7,7 @@ export declare type Props = {
     onChange: (value: Menu.Value[]) => void;
     width?: string;
     placeholder?: string;
+    disabled?: boolean;
     isError?: boolean;
     diff?: boolean;
     defaultExpanded?: boolean;

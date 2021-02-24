@@ -38,6 +38,34 @@ export const Default = () => {
                 values={values}
                 items={items}
                 placeholder={text('placeholder', '選択してください')}
+                disabled={boolean('disabled', false)}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '250px')}
+                onChange={onChange}
+                diff={boolean('diff', false)}
+            />
+        </div>
+    )
+}
+
+export const WithInitialValue = () => {
+    const [values, setValues] = React.useState<string[]>([
+        '部署-1',
+        '部署-1-1',
+        '部署-1-1-1-1'
+    ])
+    const onChange = React.useCallback((values: string[]) => {
+        setValues(values)
+    }, [])
+
+    return (
+        <div className="ml-20 mt-10">
+            <DropdownMultipleHierarchy.Component
+                values={values}
+                items={items}
+                placeholder={text('placeholder', '選択してください')}
+                disabled={boolean('disabled', false)}
                 isError={boolean('isError', false)}
                 errorMessage={text('ErrorMessage', '')}
                 width={text('width', '250px')}
