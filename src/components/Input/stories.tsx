@@ -13,6 +13,7 @@ export const Text = () => (
         format="text"
         value={text('Value', '')}
         placeholder={text('Placeholder', 'Enter your name')}
+        disabled={boolean('disabled', false)}
         onChange={action('onChange')}
         onBlur={action('onBlur')}
         errored={boolean('Error', false)}
@@ -28,6 +29,7 @@ export const Number = () => (
         unit={text('単位', '')}
         value={number('Value', 0)}
         placeholder={text('Placeholder', 'Enter your age')}
+        disabled={boolean('disabled', false)}
         onChange={action('onChange')}
         onBlur={action('onBlur')}
         errored={boolean('Error', false)}
@@ -43,6 +45,7 @@ export const NumberWithDecimalPlace = () => (
         unit={text('単位', '')}
         value={number('Value', 0)}
         placeholder={text('Placeholder', 'Enter your age')}
+        disabled={boolean('disabled', false)}
         onChange={action('onChange')}
         onBlur={action('onBlur')}
         errored={boolean('Error', false)}
@@ -52,7 +55,3 @@ export const NumberWithDecimalPlace = () => (
         decimalPlace={number('小数点第', 0)}
     />
 )
-
-NumberWithDecimalPlace.story = {
-    name: 'NumberWithDecimalPlace'
-}

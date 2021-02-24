@@ -6,6 +6,7 @@ export declare const icons: {
     Avatar: string;
     BlackBoard: string;
     Calendar: string;
+    CheckFilled: string;
     CheckBoxAll: string;
     CheckBoxOn: string;
     CheckBoxOff: string;
@@ -23,6 +24,7 @@ export declare const icons: {
     Drag: string;
     Dragdrop: string;
     DropdownOff: string;
+    DropdownOffDisabled: string;
     DropdownOn: string;
     Edit: string;
     Event: string;

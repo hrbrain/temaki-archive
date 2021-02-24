@@ -28,6 +28,7 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
                     placeholder="placeholder"
                     items={items}
                     values={[]}
+                    disabled={false}
                     defaultExpanded={true}
                     isError={false}
                     width="250px"
@@ -61,12 +62,31 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
         )
     })
 
+    it('disabledがtrue時に灰色になる', () => {
+        wrapper = mountWithTheme(
+            <DropdownMultiple.Component
+                placeholder="placeholder"
+                items={items}
+                values={[]}
+                disabled={true}
+                isError={false}
+                width="250px"
+                onChange={mockOnChange}
+            />
+        )
+        expect(wrapper.find('div[data-test="body"]')).toHaveStyleRule(
+            'background-color',
+            'rgb(214,214,214)'
+        )
+    })
+
     it('エラー時にborderが赤になっている', () => {
         wrapper = mountWithTheme(
             <DropdownMultiple.Component
                 placeholder="placeholder"
                 items={items}
                 values={[]}
+                disabled={false}
                 isError={true}
                 width="250px"
                 onChange={mockOnChange}
@@ -84,6 +104,7 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
                 placeholder="placeholder"
                 items={items}
                 values={[]}
+                disabled={false}
                 isError={true}
                 width="250px"
                 onChange={mockOnChange}
@@ -98,6 +119,7 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
                 placeholder="placeholder"
                 items={items}
                 values={['1', '2']}
+                disabled={false}
                 isError={true}
                 width="250px"
                 onChange={mockOnChange}
@@ -126,6 +148,29 @@ describe('Dropdown(Multi)コンポーネントのテスト', () => {
                     placeholder="placeholder"
                     items={items}
                     values={[]}
+                    isError={false}
+                    width="250px"
+                    diff={true}
+                    onChange={mockOnChange}
+                />
+            )
+
+            const el = wrapper.find('div[data-test="body"]')
+            expect(el).toHaveStyleRule(
+                'background-color',
+                Theme.defaultTheme.colors.utilities.paleYellow.replace(/ /g, '')
+            )
+        })
+    })
+
+    it('Diffの時に色が変わるか', () => {
+        act(() => {
+            wrapper = mountWithTheme(
+                <DropdownMultiple.Component
+                    placeholder="placeholder"
+                    items={items}
+                    values={[]}
+                    disabled={true}
                     isError={false}
                     width="250px"
                     diff

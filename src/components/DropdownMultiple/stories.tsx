@@ -54,6 +54,7 @@ export const Multi = () => (
             })}
             onClickRemove={action('onClickRemove')}
             isError={boolean('isError', false)}
+            disabled={boolean('disabled', false)}
             errorMessage={text('ErrorMessage', '')}
             width={text('width', '250px')}
             onChange={action('onChange')}
@@ -85,6 +86,7 @@ export const Input = () => (
             values={[]}
             onClickRemove={action('onClickRemove')}
             isError={boolean('isError', false)}
+            disabled={boolean('disabled', false)}
             errorMessage={text('ErrorMessage', '')}
             width={text('width', '250px')}
             onChange={action('onChange')}

@@ -1561,6 +1561,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      CheckFilled
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       CheckBoxAll
     </p>
   </div>
@@ -1850,6 +1868,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
       className="c2"
     >
       DropdownOff
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      DropdownOffDisabled
     </p>
   </div>
   <div
@@ -3540,6 +3576,7 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
   border: none;
   outline: none;
   padding: 0 4px 0 0;
+  background: none;
 }
 
 .c0 .SingleDatePicker {
@@ -4346,6 +4383,7 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
 .c0 .DateInput_input__disabled {
   background: #f2f2f2;
   font-style: italic;
+  cursor: not-allowed;
 }
 
 .c0 .DateInput_input__focused {
@@ -4704,6 +4742,7 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
   border: none;
   outline: none;
   padding: 0 4px 0 0;
+  background: none;
 }
 
 .c0 .SingleDatePicker {
@@ -5510,6 +5549,7 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
 .c0 .DateInput_input__disabled {
   background: #f2f2f2;
   font-style: italic;
+  cursor: not-allowed;
 }
 
 .c0 .DateInput_input__focused {
@@ -5814,6 +5854,7 @@ exports[`Storyshots Components/DropdownMultiple Input 1`] = `
   transform: translateY(-50%);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .c6.visible {
@@ -5834,7 +5875,7 @@ exports[`Storyshots Components/DropdownMultiple Input 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0 12px;
-  border: 1px solid rgb(234,234,234);
+  border: 1px solid rgb(214,214,214);
   border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5848,6 +5889,7 @@ exports[`Storyshots Components/DropdownMultiple Input 1`] = `
 .c3 {
   padding: 6px 4px 6px 0;
   width: calc(100% - 28px);
+  color: rgb(51,51,51);
 }
 
 .c7 {
@@ -5902,11 +5944,13 @@ exports[`Storyshots Components/DropdownMultiple Input 1`] = `
         <div
           className="c2"
           data-test="body"
+          disabled={false}
           onClick={[Function]}
         >
           <div
             className="c3"
             data-test="text"
+            disabled={false}
           >
             選択してください
           </div>
@@ -5963,6 +6007,7 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
   transform: translateY(-50%);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .c6.visible {
@@ -5983,7 +6028,7 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0 12px;
-  border: 1px solid rgb(234,234,234);
+  border: 1px solid rgb(214,214,214);
   border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5997,6 +6042,7 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
 .c3 {
   padding: 6px 4px 6px 0;
   width: calc(100% - 28px);
+  color: rgb(51,51,51);
 }
 
 .c7 {
@@ -6051,11 +6097,13 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
         <div
           className="c2"
           data-test="body"
+          disabled={false}
           onClick={[Function]}
         >
           <div
             className="c3"
             data-test="text"
+            disabled={false}
           >
             選択してください
           </div>
@@ -6894,6 +6942,7 @@ exports[`Storyshots Components/Input Number 1`] = `
 >
   <input
     className="c1"
+    disabled={false}
     format="number"
     onBlur={[Function]}
     onChange={[Function]}
@@ -7034,6 +7083,7 @@ exports[`Storyshots Components/Input Text 1`] = `
 >
   <input
     className="c1"
+    disabled={false}
     format="text"
     onBlur={[Function]}
     onChange={[Function]}
