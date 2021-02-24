@@ -1,6 +1,5 @@
 import * as React from 'react'
 import * as DropdownMultipleHierarchy from './'
-import { action } from '@storybook/addon-actions'
 import { boolean, text } from '@storybook/addon-knobs'
 
 export default {
@@ -39,7 +38,6 @@ export const Default = () => {
                 values={values}
                 items={items}
                 placeholder={text('placeholder', '選択してください')}
-                onClickRemove={action('onClickRemove')}
                 isError={boolean('isError', false)}
                 errorMessage={text('ErrorMessage', '')}
                 width={text('width', '250px')}

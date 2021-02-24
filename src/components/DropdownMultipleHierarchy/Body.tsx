@@ -13,7 +13,6 @@ type Props = {
     items: Menu.Item[]
     values: Menu.Value[]
     onClick: (e: React.MouseEvent) => void
-    onClickRemove?: (value: Menu.Value) => void
     placeholder?: string
     isError?: boolean
     diff?: boolean
@@ -39,7 +38,6 @@ export const Component = React.memo<Props>(props => {
         // onKeydown,
         // onChangeSearchValue,
         onClickIcon,
-        onClickRemove,
         onClick
     } = props
     // TODO: filter実装
@@ -62,8 +60,7 @@ export const Component = React.memo<Props>(props => {
                     {showSelectedItems({
                         items,
                         values,
-                        placeholder,
-                        onClickRemove
+                        placeholder
                     })}
                 </SelectedItems>
                 {/* TODO: filter実装 */}
@@ -94,8 +91,7 @@ export const Component = React.memo<Props>(props => {
 const showSelectedItems = ({
     items,
     values,
-    placeholder,
-    onClickRemove
+    placeholder
 }: {
     items: Menu.Item[]
     values: Menu.Value[]
@@ -108,35 +104,19 @@ const showSelectedItems = ({
     return (
         <>
             {values.map((value, index) => {
-                return renderItem(value, index, items, onClickRemove)
+                return renderItem(value, index, items)
             })}
         </>
     )
 }
 
-const renderItem = (
-    value: Menu.Value,
-    index: number,
-    items: Menu.Item[],
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    _onClickRemove?: (value: Menu.Value) => void
-) => {
+const renderItem = (value: Menu.Value, index: number, items: Menu.Item[]) => {
     const item = findItem(items, value)
 
     if (!item) {
         throw new Error(`Items don't have the value`)
     }
-    // TODO: 選択済みアイテム削除の仕様検討
-    // const onClick = (value: Menu.Value) => () => {
-    //     onClickRemove && onClickRemove(value)
-    // }
-    return (
-        <InnerText key={`${value}-${index}`}>
-            {item.label}
-            {/* TODO: 選択済みアイテム削除の仕様検討 */}
-            {/* {onClickRemove && <Remove onClick={onClick(item.value)} />} */}
-        </InnerText>
-    )
+    return <InnerText key={`${value}-${index}`}>{item.label}</InnerText>
 }
 
 const findItem = (
@@ -216,49 +196,6 @@ const SelectedItems = styled.div`
     overflow-y: scroll;
 `
 
-// const Remove = styled.div`
-//     display: block;
-//     cursor: pointer;
-//     background: ${props => props.theme.colors.grayScale.S0};
-//     border-radius: 50%;
-//     position: relative;
-//     width: 16px;
-//     height: 16px;
-//     margin-left: 8px;
-
-//     &:before {
-//         content: '';
-//         display: block;
-//         border-top: solid 1px
-//             ${props => props.theme.colors.utilities.red.default};
-//         border-right: transparent;
-//         border-left: transparent;
-//         border-bottom: transparent;
-//         transform: rotate(45deg);
-//         border-width: 2px;
-//         border-radius: 2px;
-//         width: 10px;
-//         position: absolute;
-//         top: 7px;
-//         left: 3px;
-//     }
-//     &:after {
-//         content: '';
-//         display: block;
-//         border-top: solid 1px
-//             ${props => props.theme.colors.utilities.red.default};
-//         border-right: transparent;
-//         border-left: transparent;
-//         border-bottom: transparent;
-//         transform: rotate(135deg);
-//         border-width: 2px;
-//         border-radius: 2px;
-//         width: 10px;
-//         position: absolute;
-//         top: 7px;
-//         left: 3px;
-//     }
-// `
 const InnerText = styled.div`
     display: inline-flex;
     justify-content: center;

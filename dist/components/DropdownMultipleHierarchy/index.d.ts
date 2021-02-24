@@ -5,7 +5,6 @@ export declare type Props = {
     items: Menu.Item[];
     values: Menu.Value[];
     onChange: (value: Menu.Value[]) => void;
-    onClickRemove?: (value: Menu.Value) => void;
     width?: string;
     placeholder?: string;
     isError?: boolean;

@@ -12,7 +12,6 @@ export type Props = {
     items: Menu.Item[]
     values: Menu.Value[]
     onChange: (value: Menu.Value[]) => void
-    onClickRemove?: (value: Menu.Value) => void
     width?: string
     placeholder?: string
     isError?: boolean
@@ -105,7 +104,6 @@ export const Component = React.memo<Props>(props => {
                         diff={props.diff}
                         isError={props.isError}
                         onChangeSearchValue={changeSearchValue}
-                        onClickRemove={props.onClickRemove}
                         searchValue={searchValue}
                         onKeydown={keyDownInInput}
                         onClickIcon={clickIcon}
