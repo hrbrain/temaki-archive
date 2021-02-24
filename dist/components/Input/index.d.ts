@@ -17,6 +17,7 @@ declare type Props = {
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     diff?: boolean;
     placeholder?: string;
+    disabled?: boolean;
     errored?: boolean;
     errorMessage?: string;
     onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void;

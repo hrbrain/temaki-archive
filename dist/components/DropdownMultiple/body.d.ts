@@ -9,6 +9,7 @@ declare type Props = {
     onClick: (e: React.MouseEvent) => void;
     onClickRemove?: (index: number) => void;
     placeholder?: string;
+    disabled?: boolean;
     isError?: boolean;
     diff?: boolean;
     width?: string;

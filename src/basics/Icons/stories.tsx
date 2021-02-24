@@ -9,7 +9,7 @@ Storybook.storiesOf('Basics/Icons', module).add('index', () => {
     const iconElements = Object.keys(IconFiles.icons).map(
         compose(
             renderIcon(Knobs.color('カラー', '#888')),
-            toSvgRaw(IconFiles.icons)
+            toSvgRawWithName(IconFiles.icons)
         )
     )
 
@@ -19,20 +19,39 @@ Storybook.storiesOf('Basics/Icons', module).add('index', () => {
 const compose = (...functions: ((arg: any) => any)[]) => (arg: any) =>
     functions.reduceRight((p, f) => f(p), arg)
 
-const toSvgRaw = (iconMap: { [key: string]: string }) => (key: string) =>
-    iconMap[key]
+const toSvgRawWithName = (iconMap: { [key: string]: string }) => (
+    key: string
+) => ({
+    html: iconMap[key],
+    name: key
+})
 
-const renderIcon = (fill?: string) => (html: string): React.ReactElement => (
-    <Icon dangerouslySetInnerHTML={{ __html: html }} fill={fill} />
+const renderIcon = (fill?: string) => (params: {
+    html: string
+    name: string
+}): React.ReactElement => (
+    <Wrapper>
+        <Icon dangerouslySetInnerHTML={{ __html: params.html }} fill={fill} />
+        <Name>{params.name}</Name>
+    </Wrapper>
 )
 
+const Wrapper = styled.div`
+    margin-top: 12px;
+    margin-left: 4px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
 type IconProps = {
     fill?: string
 }
 const Icon = styled.div<IconProps>`
-    margin-top: 12px;
-    margin-left: 12px;
     & #fill {
         fill: ${props => props.fill};
     }
+`
+const Name = styled.p`
+    font-size: 9px;
 `

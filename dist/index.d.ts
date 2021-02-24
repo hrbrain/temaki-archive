@@ -34,6 +34,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
     diff?: boolean | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
@@ -52,6 +53,7 @@ export declare const Input: import("react").NamedExoticComponent<({
     onChangeNative?: ((e: import("react").ChangeEvent<HTMLInputElement>) => void) | undefined;
     diff?: boolean | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     onKeyUp?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
@@ -88,7 +90,7 @@ export declare const Toast: import("react").NamedExoticComponent<({
 } & {
     type: "buttonless";
 })>;
-export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").Props>;
+export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").DefaultProps | import("./components/SegmentedControl").LinkProps>;
 export declare const Tooltip: import("react").NamedExoticComponent<{
     text: string;
     direction?: "left" | "right" | "top" | "bottom" | undefined;
@@ -110,6 +112,7 @@ export declare const icons: {
     Avatar: string;
     BlackBoard: string;
     Calendar: string;
+    CheckFilled: string;
     CheckBoxAll: string;
     CheckBoxOn: string;
     CheckBoxOff: string;
@@ -127,6 +130,7 @@ export declare const icons: {
     Drag: string;
     Dragdrop: string;
     DropdownOff: string;
+    DropdownOffDisabled: string;
     DropdownOn: string;
     Edit: string;
     Event: string;
@@ -227,6 +231,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     onClickRemove?: ((index: number) => void) | undefined;
     width?: string | undefined;
     placeholder?: string | undefined;
+    disabled?: boolean | undefined;
     isError?: boolean | undefined;
     diff?: boolean | undefined;
     defaultExpanded?: boolean | undefined;
@@ -262,6 +267,7 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
     placeholderText?: string | undefined;
+    disabled?: boolean | undefined;
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
 }>;

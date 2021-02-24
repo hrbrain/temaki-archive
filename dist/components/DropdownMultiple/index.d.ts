@@ -11,6 +11,7 @@ declare type Props = {
     onClickRemove?: (index: number) => void;
     width?: string;
     placeholder?: string;
+    disabled?: boolean;
     isError?: boolean;
     diff?: boolean;
     defaultExpanded?: boolean;
