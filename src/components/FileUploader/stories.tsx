@@ -1,11 +1,14 @@
-import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import * as Knobs from '@storybook/addon-knobs'
 import * as React from 'react'
 
 import * as FileUploader from './index'
 
-storiesOf('Components/FileUploader', module).add('all', () => {
+export default {
+    title: 'Components/FileUploader'
+}
+
+export const All = () => {
     return (
         <div className="m-16">
             <div>
@@ -27,4 +30,8 @@ storiesOf('Components/FileUploader', module).add('all', () => {
             </div>
         </div>
     )
-})
+}
+
+All.story = {
+    name: 'all'
+}

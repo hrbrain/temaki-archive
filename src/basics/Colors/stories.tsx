@@ -1,6 +1,9 @@
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import { defaultTheme } from '~/modules/theme'
+
+export default {
+    title: 'Basics/Colors'
+}
 
 type SquareProps = {
     color: string
@@ -19,7 +22,7 @@ const renderColorsEachKeys = (obj: { [key: string]: string }) => {
         .map((key, index) => <Square key={index} color={obj[key]} name={key} />)
 }
 
-storiesOf('Basics/Colors', module).add('all', () => (
+export const All = () => (
     <div className="container p-4">
         <h1 className="text-xl mt-8">Main</h1>
         <h2 className="text-l mt-4">Gray Scale</h2>
@@ -58,4 +61,4 @@ storiesOf('Basics/Colors', module).add('all', () => (
             {renderColorsEachKeys(defaultTheme.colors.utilities.highlightGreen)}
         </div>
     </div>
-))
+)

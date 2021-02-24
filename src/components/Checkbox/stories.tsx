@@ -1,10 +1,13 @@
 import { action } from '@storybook/addon-actions'
 import { boolean, text } from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
 import * as React from 'react'
 import * as Checkbox from './index'
 
-storiesOf('Components/Checkbox', module).add('all', () => {
+export default {
+    title: 'Components/Checkbox'
+}
+
+export const All = () => {
     return (
         <Checkbox.Component
             onClick={action('onClick')}
@@ -14,4 +17,4 @@ storiesOf('Components/Checkbox', module).add('all', () => {
             text={text('Component', 'Checkbox')}
         />
     )
-})
+}
