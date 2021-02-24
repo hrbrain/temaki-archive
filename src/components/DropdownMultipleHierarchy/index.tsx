@@ -171,9 +171,10 @@ const Inner = styled.div`
 `
 
 const StyledMenu = styled(Menu.Component)<{ isVisible?: boolean }>`
-    width: 100%;
+    min-width: 100%;
+    max-width: calc(24px + 28px + 420px);
     position: absolute;
-    right: 0;
+    left: 0;
     margin-top: 4px;
     transform-origin: top;
     transition: 0.2s;
