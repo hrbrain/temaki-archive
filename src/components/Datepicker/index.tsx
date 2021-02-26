@@ -177,6 +177,7 @@ const Outer = styled.div<OuterProps>`
         }
         .SingleDatePickerInput__disabled {
             font-style: normal;
+            color: ${props => props.theme.colors.main.grayScale[400]};
             cursor: not-allow;
             border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
             background: ${props => props.theme.colors.main.grayScale[400]};
@@ -203,7 +204,10 @@ const Outer = styled.div<OuterProps>`
             outline: none;
             padding: 0 4px 0 0;
             cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-            background: ${props => (props.disabled ? '#d6d6d6' : '#fff')};
+            background: ${props =>
+                props.disabled
+                    ? props.theme.colors.main.grayScale[400]
+                    : props.theme.colors.main.grayScale[100]};
         }
         .SingleDatePickerInput_calendarIcon_svg {
             cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
@@ -835,7 +839,7 @@ const Outer = styled.div<OuterProps>`
         }
         .DateInput__disabled {
             background: #f2f2f2;
-            color: #dbdbdb;
+            color: #f2f2f2;
         }
         .DateInput_input {
             text-align: left;
