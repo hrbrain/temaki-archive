@@ -60,13 +60,14 @@ export const Component = React.memo<Props>(props => {
             if (props.values.includes(item.value)) {
                 const newValues = removeValueWithChildren(props.values, item)
                 props.onChange(newValues)
-            } else {
-                const newValues = deduplicate([
-                    ...props.values,
-                    ...getValueArrWithChildren(item)
-                ])
-                props.onChange(newValues)
+                return
             }
+
+            const newValues = deduplicate([
+                ...props.values,
+                ...getValueArrWithChildren(item)
+            ])
+            props.onChange(newValues)
         },
         [props.values, props.onChange]
     )
@@ -139,9 +140,10 @@ const getValueArrWithChildren = (item: Menu.Item) => {
     for (const child of item.children) {
         if (child.children === undefined) {
             resultArr.push(child.value)
-        } else {
-            resultArr = resultArr.concat(getValueArrWithChildren(child))
+            continue
         }
+
+        resultArr = resultArr.concat(getValueArrWithChildren(child))
     }
     return resultArr
 }
@@ -155,9 +157,10 @@ const removeValueWithChildren = (values: Menu.Value[], item: Menu.Item) => {
     for (const child of item.children) {
         if (child.children === undefined) {
             resultArr = resultArr.filter(value => value !== child.value)
-        } else {
-            resultArr = removeValueWithChildren(resultArr, child)
+            continue
         }
+
+        resultArr = removeValueWithChildren(resultArr, child)
     }
     return resultArr
 }
