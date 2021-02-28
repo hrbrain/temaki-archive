@@ -6387,6 +6387,283 @@ exports[`Storyshots Components/DropdownMultipleHierarchy Default 1`] = `
 </div>
 `;
 
+exports[`Storyshots Components/DropdownMultipleHierarchy With Initial Value 1`] = `
+.c6 {
+  height: 24px;
+  width: 24px;
+}
+
+.c6 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c5 {
+  cursor: pointer;
+}
+
+.c7 {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.c7.visible {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.c2 {
+  min-height: 40px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0px 12px;
+  border: 1px solid rgb(234,234,234);
+  border-radius: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.c3 {
+  padding: 4px 4px 4px 0;
+  width: calc(100% - 28px);
+  max-height: 110px;
+  overflow-y: scroll;
+  color: rgb(51,51,51);
+}
+
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgb(245,245,245);
+  color: rgb(51,51,51);
+  padding: 6.5px 8px;
+  margin: 4px 8px 4px 0px;
+  border-radius: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.c8 {
+  display: block;
+  background: rgb(255,255,255);
+  border-radius: 6px;
+  box-shadow: 0 5px 11px rgba(0,0,0,0.16);
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.c8 > .c11 {
+  margin-left: 12px;
+}
+
+.c10 {
+  margin-left: 25px;
+}
+
+.c12 {
+  list-style-type: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 4px 0;
+}
+
+.c12:hover {
+  color: rgb(51,51,51);
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.c13 {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.c15 #fill {
+  fill: rgb(8,135,54);
+}
+
+.c15 #fill .disabled {
+  fill: rgb(214,214,214);
+}
+
+.c16 {
+  padding-left: 4px;
+  padding-right: 10px;
+}
+
+.c0 {
+  width: 250px;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c9 {
+  min-width: 100%;
+  max-width: calc(24px + 28px + 420px);
+  position: absolute;
+  left: 0;
+  margin-top: 4px;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  visibility: hidden;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+}
+
+<div
+  className="ml-20 mt-10"
+>
+  <div
+    className="c0"
+    width="250px"
+  >
+    <div
+      className="c1"
+    >
+      <div>
+        <div
+          className="c2"
+          data-test="body"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <div
+            className="c3"
+            data-test="selectedItems"
+            disabled={false}
+          >
+            <div
+              className="c4"
+            >
+              部署-1
+            </div>
+          </div>
+        </div>
+        <div
+          className="c5"
+          onClick={[Function]}
+        >
+          <div
+            className="c6 c7"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+        </div>
+        <div
+          className="c8 c9"
+        >
+          <ul
+            className="c10 c11 "
+          >
+            <li
+              className="c12"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c6 c13"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c14"
+                data-test="item-clickArea"
+                onClick={[Function]}
+              >
+                <div
+                  className="c6 c15"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c16"
+                >
+                  部署-1
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Components/DropdownSingle Borderless 1`] = `
 .c3 {
   height: 24px;

@@ -119,6 +119,8 @@ const findItem = (
     value: Menu.Value
 ): Menu.Item | undefined => {
     for (const item of items) {
+        if (item === undefined) continue
+
         if (item.value === value) {
             return item
         }

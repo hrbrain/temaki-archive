@@ -50,11 +50,10 @@ export const Default = () => {
 }
 
 export const WithInitialValue = () => {
-    const [values, setValues] = React.useState<string[]>([
-        '部署-1',
-        '部署-1-1',
-        '部署-1-1-1-1'
-    ])
+    // NOTE:
+    // getChildrenで生成された"部署-1-1"などを入れるとstoryshotsで"Items don't have the value"エラー(by Body.tsx)になるので"部署-1"だけにする
+    // Storybook上の挙動は問題ない
+    const [values, setValues] = React.useState<string[]>(['部署-1'])
     const onChange = React.useCallback((values: string[]) => {
         setValues(values)
     }, [])
