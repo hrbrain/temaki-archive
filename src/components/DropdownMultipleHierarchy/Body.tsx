@@ -27,44 +27,31 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(props => {
-    const {
-        isMenuVisible,
-        disabled,
-        isError,
-        diff,
-        width,
-        items,
-        values,
-        placeholder,
-        // TODO: filter実装
-        // searchValue,
-        // onKeydown,
-        // onChangeSearchValue,
-        onClickIcon,
-        onClick
-    } = props
     // TODO: filter実装
     // const inputRef = React.useRef<HTMLInputElement | null>(null)
     // React.useEffect(() => {
-    //     if (inputRef.current && isMenuVisible) inputRef.current.focus()
-    // }, [isMenuVisible])
+    //     if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
+    // }, [props.isMenuVisible])
 
     return (
         <>
             <Body
                 data-test="body"
-                disabled={disabled}
-                isMenuVisible={isMenuVisible}
-                isError={isError}
-                diff={diff}
-                width={width}
-                onClick={onClick}
+                disabled={props.disabled}
+                isMenuVisible={props.isMenuVisible}
+                isError={props.isError}
+                diff={props.diff}
+                width={props.width}
+                onClick={props.onClick}
             >
-                <SelectedItems data-test="selectedItems" disabled={disabled}>
+                <SelectedItems
+                    data-test="selectedItems"
+                    disabled={props.disabled}
+                >
                     {showSelectedItems({
-                        items,
-                        values,
-                        placeholder
+                        items: props.items,
+                        values: props.values,
+                        placeholder: props.placeholder
                     })}
                 </SelectedItems>
                 {/* TODO: filter実装 */}
@@ -73,20 +60,20 @@ export const Component = React.memo<Props>(props => {
                         <Input
                             data-test="input"
                             type="text"
-                            value={searchValue}
-                            onChange={onChangeSearchValue}
+                            value={props.searchValue}
+                            onChange={props.onChangeSearchValue}
                             ref={inputRef}
-                            onKeyDown={onKeydown}
+                            onKeyDown={props.onKeydown}
                         />
                     </SelectorInput>
                 )} */}
             </Body>
-            <IconWrap onClick={onClickIcon}>
+            <IconWrap onClick={props.onClickIcon}>
                 <DropdownIcon
-                    className={isMenuVisible ? 'visible' : ''}
-                    disabled={disabled}
+                    className={props.isMenuVisible ? 'visible' : ''}
+                    disabled={props.disabled}
                     svg={
-                        disabled
+                        props.disabled
                             ? IconFiles.icons.DropdownOffDisabled
                             : IconFiles.icons.DropdownOff
                     }
