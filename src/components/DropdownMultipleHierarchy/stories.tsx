@@ -7,7 +7,7 @@ export default {
 }
 
 const getChildren = (parentValue: string): DropdownMultipleHierarchy.Item[] => {
-    return [...Array(2)].map((_v, i) => {
+    return [...Array(2)].map((_, i) => {
         const val = `${parentValue}-${i + 1}`
         const hasChildren = val.length < 20
         return {
