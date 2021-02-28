@@ -48,11 +48,11 @@ export const Component = React.memo<Props>(props => {
                     data-test="selectedItems"
                     disabled={props.disabled}
                 >
-                    {showSelectedItems({
-                        items: props.items,
-                        values: props.values,
-                        placeholder: props.placeholder
-                    })}
+                    {showSelectedItems(
+                        props.items,
+                        props.values,
+                        props.placeholder
+                    )}
                 </SelectedItems>
                 {/* TODO: filter実装 */}
                 {/* {props.isMenuVisible && (
@@ -84,16 +84,11 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-const showSelectedItems = ({
-    items,
-    values,
-    placeholder
-}: {
-    items: Menu.Item[]
-    values: Menu.Value[]
+const showSelectedItems = (
+    items: Menu.Item[],
+    values: Menu.Value[],
     placeholder?: string
-    onClickRemove?: (value: Menu.Value) => void
-}): React.ReactElement | string => {
+): React.ReactElement | string => {
     if (values.length <= 0) {
         return placeholder || ''
     }
