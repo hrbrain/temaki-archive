@@ -33,6 +33,14 @@ export const Component = React.memo<Props>(props => {
     //     if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
     // }, [props.isMenuVisible])
 
+    const svg = React.useMemo(
+        () =>
+            props.disabled
+                ? IconFiles.icons.DropdownOffDisabled
+                : IconFiles.icons.DropdownOff,
+        [props.disabled]
+    )
+
     return (
         <>
             <Body
@@ -72,11 +80,7 @@ export const Component = React.memo<Props>(props => {
                 <DropdownIcon
                     className={props.isMenuVisible ? 'visible' : ''}
                     disabled={props.disabled}
-                    svg={
-                        props.disabled
-                            ? IconFiles.icons.DropdownOffDisabled
-                            : IconFiles.icons.DropdownOff
-                    }
+                    svg={svg}
                     size="24px"
                 />
             </IconWrap>
