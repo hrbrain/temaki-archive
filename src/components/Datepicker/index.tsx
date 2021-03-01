@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import styled, { withTheme, RequiredThemeProps } from '~/modules/theme'
 import * as ReactDates from 'react-dates'
 import 'react-dates/initialize'
 // 日本時間で固定
@@ -25,88 +25,109 @@ type Props = {
     disabled?: boolean
     selectedColor?: string
     defaultHoverColor?: string
+    theme: RequiredThemeProps
 }
 
-export const Component = React.memo<Props>(props => {
-    const [focused, setFocused] = React.useState<boolean>(false)
+export const Component = withTheme(
+    React.memo<Props>(props => {
+        const [focused, setFocused] = React.useState<boolean>(false)
 
-    const conversionToMomentType = React.useCallback(
-        (date: Date | null) => {
-            return date ? Moment(date) : null
-        },
-        [props.date]
-    )
+        const conversionToMomentType = React.useCallback(
+            (date: Date | null) => {
+                return date ? Moment(date) : null
+            },
+            [props.date]
+        )
 
-    const toggleFocus = React.useCallback(() => {
-        setFocused(!focused)
-    }, [focused])
+        const toggleFocus = React.useCallback(() => {
+            setFocused(!focused)
+        }, [focused])
 
-    const handleOnDateChange = React.useCallback(
-        (date: null | Moment.Moment) => {
-            if (!date) {
-                return props.onChange(null)
-            }
+        const handleOnDateChange = React.useCallback(
+            (date: null | Moment.Moment) => {
+                if (!date) {
+                    return props.onChange(null)
+                }
 
-            // 必ず12時が帰ってくるので9時にして返す（UTC上での0時）
-            date.hour(9)
-            return props.onChange(date.toDate())
-        },
-        [props.date, props.onChange]
-    )
+                // 必ず12時が帰ってくるので9時にして返す（UTC上での0時）
+                date.hour(9)
+                return props.onChange(date.toDate())
+            },
+            [props.date, props.onChange]
+        )
 
-    const calendarIconRender = React.useMemo(() => {
-        return <Icon.Component svg={IconFiles.icons.Calendar} size="24px" />
-    }, [])
+        const calendarIconRender = React.useMemo(() => {
+            const color = props.disabled
+                ? props.theme.colors.grayScale.S50
+                : props.theme.colors.text.default
+            return (
+                <Icon.Component
+                    color={color}
+                    svg={IconFiles.icons.Calendar}
+                    size="24px"
+                />
+            )
+        }, [props.disabled])
 
-    const ChevronLeftIconRender = React.useMemo(() => {
-        return <Icon.Component svg={IconFiles.icons.ChevronLeft} size="24px" />
-    }, [])
+        const ChevronLeftIconRender = React.useMemo(() => {
+            return (
+                <Icon.Component svg={IconFiles.icons.ChevronLeft} size="24px" />
+            )
+        }, [])
 
-    const ChevronRightIconRender = React.useMemo(() => {
-        return <Icon.Component svg={IconFiles.icons.ChevronRight} size="24px" />
-    }, [])
+        const ChevronRightIconRender = React.useMemo(() => {
+            return (
+                <Icon.Component
+                    svg={IconFiles.icons.ChevronRight}
+                    size="24px"
+                />
+            )
+        }, [])
 
-    const allowAllDays = React.useCallback(() => {
-        return false
-    }, [])
+        const allowAllDays = React.useCallback(() => {
+            return false
+        }, [])
 
-    return (
-        <Outer
-            width={props.width}
-            defaultHoverColor={props.defaultHoverColor}
-            selectedColor={props.selectedColor}
-            errored={props.errored}
-        >
-            <ReactDates.SingleDatePicker
-                id={'date'}
-                date={conversionToMomentType(props.date)}
-                focused={focused}
+        return (
+            <Outer
+                width={props.width}
+                defaultHoverColor={props.defaultHoverColor}
+                selectedColor={props.selectedColor}
                 disabled={props.disabled}
-                placeholder={props.placeholderText}
-                customInputIcon={calendarIconRender}
-                displayFormat={props.displayFormat || 'YYYY年M月D日'}
-                numberOfMonths={1}
-                monthFormat={props.monthFormat || 'YYYY[年]M[月]'}
-                onDateChange={handleOnDateChange}
-                onFocusChange={toggleFocus}
-                navPrev={ChevronLeftIconRender}
-                navNext={ChevronRightIconRender}
-                enableOutsideDays={true}
-                isOutsideRange={allowAllDays}
-            />
-            <ErrorMessage.Component
-                message={props.errorMessage}
                 errored={props.errored}
-            />
-        </Outer>
-    )
-})
+            >
+                <ReactDates.SingleDatePicker
+                    id={'date'}
+                    date={conversionToMomentType(props.date)}
+                    focused={focused}
+                    disabled={props.disabled}
+                    placeholder={props.placeholderText}
+                    customInputIcon={calendarIconRender}
+                    displayFormat={props.displayFormat || 'YYYY年M月D日'}
+                    numberOfMonths={1}
+                    monthFormat={props.monthFormat || 'YYYY[年]M[月]'}
+                    onDateChange={handleOnDateChange}
+                    onFocusChange={toggleFocus}
+                    navPrev={ChevronLeftIconRender}
+                    navNext={ChevronRightIconRender}
+                    enableOutsideDays={true}
+                    isOutsideRange={allowAllDays}
+                />
+                <ErrorMessage.Component
+                    message={props.errorMessage}
+                    errored={props.errored}
+                />
+            </Outer>
+        )
+    })
+)
 
 /**
  * Styles
  */
 type OuterProps = {
     width: string
+    disabled?: boolean
     errored?: boolean
     selectedRangeColor?: string
     selectedColor?: string
@@ -167,6 +188,11 @@ const Outer = styled.div<OuterProps>`
         .SingleDatePickerInput__rtl {
         }
         .SingleDatePickerInput__disabled {
+            font-style: normal;
+            color: ${props => props.theme.colors.main.grayScale[400]};
+            cursor: not-allow;
+            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            background: ${props => props.theme.colors.main.grayScale[400]};
         }
         .SingleDatePickerInput__block {
         }
@@ -189,9 +215,14 @@ const Outer = styled.div<OuterProps>`
             border: none;
             outline: none;
             padding: 0 4px 0 0;
-            background: none;
+            cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+            background: ${props =>
+                props.disabled
+                    ? props.theme.colors.main.grayScale[400]
+                    : props.theme.colors.main.grayScale[100]};
         }
         .SingleDatePickerInput_calendarIcon_svg {
+            cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
         }
         .SingleDatePicker {
             position: relative;
@@ -620,12 +651,16 @@ const Outer = styled.div<OuterProps>`
             background: #f2f2f2;
         }
         .DayPickerNavigation_button__disabled {
-            cursor: default;
-            border: 1px solid #f2f2f2;
+            cursor: not-allowed;
+            font-style: normal;
+            color: ${props => props.theme.colors.grayScale.S50};
+            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            background: ${props => props.theme.colors.main.grayScale[400]};
         }
         .DayPickerNavigation_button__disabled:focus,
         .DayPickerNavigation_button__disabled:hover {
-            border: 1px solid #f2f2f2;
+            cursor: not-allowed;
+            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
         }
         .DayPickerNavigation_button__disabled:active {
             background: 0 0;
@@ -816,7 +851,7 @@ const Outer = styled.div<OuterProps>`
         }
         .DateInput__disabled {
             background: #f2f2f2;
-            color: #dbdbdb;
+            color: #f2f2f2;
         }
         .DateInput_input {
             text-align: left;
@@ -828,6 +863,9 @@ const Outer = styled.div<OuterProps>`
             height: 100%;
             width: 112px;
             font-size: 14px;
+        }
+        .DateInput_input::placeholder {
+            color: ${props => props.theme.colors.grayScale.S50};
         }
         .DateInput_input__small {
             font-size: 14px;
@@ -845,9 +883,14 @@ const Outer = styled.div<OuterProps>`
             user-select: none;
         }
         .DateInput_input__disabled {
-            background: #f2f2f2;
-            font-style: italic;
             cursor: not-allowed;
+            font-style: normal;
+            color: ${props => props.theme.colors.grayScale.S50};
+            border: 1px solid ${props => props.theme.colors.main.grayScale[400]};
+            background: ${props => props.theme.colors.main.grayScale[400]};
+        }
+        .DateInput_input__disabled::placeholder {
+            color: ${props => props.theme.colors.grayScale.S50};
         }
         .DateInput_input__focused {
             outline: none;
