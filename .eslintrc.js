@@ -91,5 +91,13 @@ module.exports = {
         'import/default': 'off',
         'import/no-unresolved': 'off',
         'no-undef': 'off'
-    }
+    },
+    overrides: [
+        {
+          "files": ["*stories.tsx"],
+          "rules": {
+            "import/no-default-export": "off"
+          }
+        }
+      ]
 }

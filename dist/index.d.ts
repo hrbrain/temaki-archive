@@ -62,8 +62,8 @@ export declare const Input: import("react").NamedExoticComponent<({
     decimalPlace?: number | null | undefined;
 } & {
     format: "number";
-    value: number;
-    onChange: (value: number) => void;
+    value: import("react").ReactText;
+    onChange: (value: import("react").ReactText) => void;
     type?: "number" | undefined;
 })>;
 export declare const Button: import("react").FunctionComponent<_Button.Props>;

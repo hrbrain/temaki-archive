@@ -30,8 +30,8 @@ declare type Props = {
     onChange: (value: StringValue) => void;
 } | {
     format: typeof NUMBER;
-    value: NumberValue;
-    onChange: (value: NumberValue) => void;
+    value: NumberValue | StringValue;
+    onChange: (value: NumberValue | StringValue) => void;
     type?: typeof NUMBER;
 });
 export declare const Component: React.NamedExoticComponent<Props>;
