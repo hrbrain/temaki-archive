@@ -18,9 +18,17 @@ declare type Props = {
     disabled?: boolean;
     selectedColor?: string;
     defaultHoverColor?: string;
+<<<<<<< HEAD
     theme: RequiredThemeProps;
 };
 export declare const Component: React.ForwardRefExoticComponent<Pick<Props, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor"> & {
     theme?: RequiredThemeProps | undefined;
 }>;
+=======
+    isOutsideRange?: (day: any) => boolean;
+};
+export declare const isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
+export declare const isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
+export declare const Component: React.NamedExoticComponent<Props>;
+>>>>>>> 9292782 (feature: Datepickerコンポーネントで範囲外の日時をクリックできないように追加)
 export {};

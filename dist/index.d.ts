@@ -270,9 +270,13 @@ export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<
     disabled?: boolean | undefined;
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
+<<<<<<< HEAD
     theme: _RequiredThemeProps;
 }, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor"> & {
     theme?: _RequiredThemeProps | undefined;
+=======
+    isOutsideRange?: ((day: any) => boolean) | undefined;
+>>>>>>> 9292782 (feature: Datepickerコンポーネントで範囲外の日時をクリックできないように追加)
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;

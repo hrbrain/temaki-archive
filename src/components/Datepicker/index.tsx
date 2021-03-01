@@ -26,6 +26,15 @@ type Props = {
     selectedColor?: string
     defaultHoverColor?: string
     theme: RequiredThemeProps
+    isOutsideRange?: (day: any) => boolean
+}
+
+export const isInclusivelyBeforeDay = (date: Date) => (day: any) => {
+    return ReactDates.isInclusivelyBeforeDay(day, Moment(date))
+}
+
+export const isInclusivelyAfterDay = (date: Date) => (day: any) => {
+    return ReactDates.isInclusivelyAfterDay(day, Moment(date))
 }
 
 export const Component = withTheme(
@@ -84,7 +93,10 @@ export const Component = withTheme(
             )
         }, [])
 
-        const allowAllDays = React.useCallback(() => {
+        const allowAllDays = React.useCallback((day: any) => {
+            if (props.isOutsideRange) {
+                return props.isOutsideRange(day)
+            }
             return false
         }, [])
 
