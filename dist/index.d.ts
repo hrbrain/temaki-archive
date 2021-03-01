@@ -258,7 +258,7 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     errorMessage?: string | undefined;
     borderColorType?: "primary" | "grayScaleS100" | undefined;
 }>;
-export declare const DatePicker: import("react").NamedExoticComponent<{
+export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;
     date: Date | null;
@@ -270,6 +270,9 @@ export declare const DatePicker: import("react").NamedExoticComponent<{
     disabled?: boolean | undefined;
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
+    theme: _RequiredThemeProps;
+}, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor"> & {
+    theme?: _RequiredThemeProps | undefined;
 }>;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;

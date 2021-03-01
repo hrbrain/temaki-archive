@@ -102,7 +102,7 @@ const Outer = styled.input<OuterProps>`
     &::placeholder {
         color: ${props =>
             !props.disabled
-                ? props.theme.colors.grayScale.S20
+                ? props.theme.colors.main.grayScale[400]
                 : props.theme.colors.grayScale.S40};
     }
 `
