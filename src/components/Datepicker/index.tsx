@@ -58,7 +58,7 @@ export const Component = withTheme(
 
         const calendarIconRender = React.useMemo(() => {
             const color = props.disabled
-                ? props.theme.colors.grayScale.S40
+                ? props.theme.colors.grayScale.S50
                 : props.theme.colors.text.default
             return (
                 <Icon.Component
