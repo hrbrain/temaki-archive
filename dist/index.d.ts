@@ -278,6 +278,8 @@ export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<
     isOutsideRange?: ((day: any) => boolean) | undefined;
 >>>>>>> 9292782 (feature: Datepickerコンポーネントで範囲外の日時をクリックできないように追加)
 }>;
+export declare const isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
+export declare const isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;
