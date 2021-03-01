@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import styled, { withTheme, RequiredThemeProps } from '~/modules/theme'
 import * as ReactDates from 'react-dates'
 import 'react-dates/initialize'
 // 日本時間で固定
@@ -25,90 +25,100 @@ type Props = {
     disabled?: boolean
     selectedColor?: string
     defaultHoverColor?: string
+    theme: RequiredThemeProps
 }
 
-export const Component = React.memo<Props>(props => {
-    const [focused, setFocused] = React.useState<boolean>(false)
+export const Component = withTheme(
+    React.memo<Props>(props => {
+        const [focused, setFocused] = React.useState<boolean>(false)
 
-    const conversionToMomentType = React.useCallback(
-        (date: Date | null) => {
-            return date ? Moment(date) : null
-        },
-        [props.date]
-    )
-
-    const toggleFocus = React.useCallback(() => {
-        setFocused(!focused)
-    }, [focused])
-
-    const handleOnDateChange = React.useCallback(
-        (date: null | Moment.Moment) => {
-            if (!date) {
-                return props.onChange(null)
-            }
-
-            // 必ず12時が帰ってくるので9時にして返す（UTC上での0時）
-            date.hour(9)
-            return props.onChange(date.toDate())
-        },
-        [props.date, props.onChange]
-    )
-
-    const calendarIconRender = React.useMemo(() => {
-        const color = props.disabled ? 'rgb(153,153,153)' : '#333'
-        return (
-            <Icon.Component
-                color={color}
-                svg={IconFiles.icons.Calendar}
-                size="24px"
-            />
+        const conversionToMomentType = React.useCallback(
+            (date: Date | null) => {
+                return date ? Moment(date) : null
+            },
+            [props.date]
         )
-    }, [props.disabled])
 
-    const ChevronLeftIconRender = React.useMemo(() => {
-        return <Icon.Component svg={IconFiles.icons.ChevronLeft} size="24px" />
-    }, [])
+        const toggleFocus = React.useCallback(() => {
+            setFocused(!focused)
+        }, [focused])
 
-    const ChevronRightIconRender = React.useMemo(() => {
-        return <Icon.Component svg={IconFiles.icons.ChevronRight} size="24px" />
-    }, [])
+        const handleOnDateChange = React.useCallback(
+            (date: null | Moment.Moment) => {
+                if (!date) {
+                    return props.onChange(null)
+                }
 
-    const allowAllDays = React.useCallback(() => {
-        return false
-    }, [])
+                // 必ず12時が帰ってくるので9時にして返す（UTC上での0時）
+                date.hour(9)
+                return props.onChange(date.toDate())
+            },
+            [props.date, props.onChange]
+        )
 
-    return (
-        <Outer
-            width={props.width}
-            defaultHoverColor={props.defaultHoverColor}
-            selectedColor={props.selectedColor}
-            disabled={props.disabled}
-            errored={props.errored}
-        >
-            <ReactDates.SingleDatePicker
-                id={'date'}
-                date={conversionToMomentType(props.date)}
-                focused={focused}
+        const calendarIconRender = React.useMemo(() => {
+            const color = props.disabled ? 'rgb(153,153,153)' : '#333'
+            return (
+                <Icon.Component
+                    color={color}
+                    svg={IconFiles.icons.Calendar}
+                    size="24px"
+                />
+            )
+        }, [props.disabled])
+
+        const ChevronLeftIconRender = React.useMemo(() => {
+            return (
+                <Icon.Component svg={IconFiles.icons.ChevronLeft} size="24px" />
+            )
+        }, [])
+
+        const ChevronRightIconRender = React.useMemo(() => {
+            return (
+                <Icon.Component
+                    svg={IconFiles.icons.ChevronRight}
+                    size="24px"
+                />
+            )
+        }, [])
+
+        const allowAllDays = React.useCallback(() => {
+            return false
+        }, [])
+
+        return (
+            <Outer
+                width={props.width}
+                defaultHoverColor={props.defaultHoverColor}
+                selectedColor={props.selectedColor}
                 disabled={props.disabled}
-                placeholder={props.placeholderText}
-                customInputIcon={calendarIconRender}
-                displayFormat={props.displayFormat || 'YYYY年M月D日'}
-                numberOfMonths={1}
-                monthFormat={props.monthFormat || 'YYYY[年]M[月]'}
-                onDateChange={handleOnDateChange}
-                onFocusChange={toggleFocus}
-                navPrev={ChevronLeftIconRender}
-                navNext={ChevronRightIconRender}
-                enableOutsideDays={true}
-                isOutsideRange={allowAllDays}
-            />
-            <ErrorMessage.Component
-                message={props.errorMessage}
                 errored={props.errored}
-            />
-        </Outer>
-    )
-})
+            >
+                <ReactDates.SingleDatePicker
+                    id={'date'}
+                    date={conversionToMomentType(props.date)}
+                    focused={focused}
+                    disabled={props.disabled}
+                    placeholder={props.placeholderText}
+                    customInputIcon={calendarIconRender}
+                    displayFormat={props.displayFormat || 'YYYY年M月D日'}
+                    numberOfMonths={1}
+                    monthFormat={props.monthFormat || 'YYYY[年]M[月]'}
+                    onDateChange={handleOnDateChange}
+                    onFocusChange={toggleFocus}
+                    navPrev={ChevronLeftIconRender}
+                    navNext={ChevronRightIconRender}
+                    enableOutsideDays={true}
+                    isOutsideRange={allowAllDays}
+                />
+                <ErrorMessage.Component
+                    message={props.errorMessage}
+                    errored={props.errored}
+                />
+            </Outer>
+        )
+    })
+)
 
 /**
  * Styles
