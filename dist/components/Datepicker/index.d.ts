@@ -1,4 +1,6 @@
+/// <reference types="styled-components" />
 import * as React from 'react';
+import { RequiredThemeProps } from '~/modules/theme';
 import 'react-dates/initialize';
 import 'moment/locale/ja';
 /**
@@ -16,6 +18,9 @@ declare type Props = {
     disabled?: boolean;
     selectedColor?: string;
     defaultHoverColor?: string;
+    theme: RequiredThemeProps;
 };
-export declare const Component: React.NamedExoticComponent<Props>;
+export declare const Component: React.ForwardRefExoticComponent<Pick<Props, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor"> & {
+    theme?: RequiredThemeProps | undefined;
+}>;
 export {};
