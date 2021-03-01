@@ -44,7 +44,6 @@ export const Null = () => (
         disabled={Knobs.boolean('disabled', false)}
         errored={Knobs.boolean('Error', false)}
         errorMessage={Knobs.text('ErrorMessage', '')}
-        isOutsideRange={Datepicker.isInclusivelyBeforeDay(defaultDate)}
     />
 )
 
