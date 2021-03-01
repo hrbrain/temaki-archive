@@ -4,7 +4,7 @@ import * as Knobs from '@storybook/addon-knobs'
 import * as Actions from '@storybook/addon-actions'
 
 const name = 'date'
-const defaultDate = new Date()
+const defaultDate = new Date('2019/12/25')
 
 const testKnobDate = (label: string, defaultValue: Date) => {
     const stringTimestamp = Knobs.date(label, defaultValue)
