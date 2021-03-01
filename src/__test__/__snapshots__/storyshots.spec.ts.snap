@@ -3578,6 +3578,7 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
 
 .c0 .SingleDatePickerInput__disabled {
   font-style: normal;
+  color: rgb(214,214,214);
   cursor: not-allow;
   border: 1px solid rgb(214,214,214);
   background: rgb(214,214,214);
@@ -3588,7 +3589,7 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
   outline: none;
   padding: 0 4px 0 0;
   cursor: pointer;
-  background: #fff;
+  background: rgb(255,255,255);
 }
 
 .c0 .SingleDatePickerInput_calendarIcon_svg {
@@ -4361,7 +4362,23 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
 
 .c0 .DateInput__disabled {
   background: #f2f2f2;
-  color: #dbdbdb;
+  color: #f2f2f2;
+}
+
+.c0 .DateInput__disabled::-webkit-input-placeholder {
+  color: blue;
+}
+
+.c0 .DateInput__disabled::-moz-placeholder {
+  color: blue;
+}
+
+.c0 .DateInput__disabled:-ms-input-placeholder {
+  color: blue;
+}
+
+.c0 .DateInput__disabled::placeholder {
+  color: blue;
 }
 
 .c0 .DateInput_input {
@@ -4374,6 +4391,22 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
   height: 100%;
   width: 112px;
   font-size: 14px;
+}
+
+.c0 .DateInput_input::-webkit-input-placeholder {
+  color: rgb(153,153,153);
+}
+
+.c0 .DateInput_input::-moz-placeholder {
+  color: rgb(153,153,153);
+}
+
+.c0 .DateInput_input:-ms-input-placeholder {
+  color: rgb(153,153,153);
+}
+
+.c0 .DateInput_input::placeholder {
+  color: rgb(153,153,153);
 }
 
 .c0 .DateInput_input__small {
@@ -4406,6 +4439,48 @@ exports[`Storyshots Components/Datepicker Null 1`] = `
   color: rgb(153,153,153);
   border: 1px solid rgb(214,214,214);
   background: rgb(214,214,214);
+}
+
+.c0 .DateInput_input__focused {
+  outline: none;
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
+}
+
+.c0 .DateInput_input__focused {
+  outline: none;
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
+}
+
+.c0 .DateInput_input__focused {
+  outline: none;
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
 }
 
 .c0 .DateInput_input__focused {
@@ -4768,6 +4843,7 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
 
 .c0 .SingleDatePickerInput__disabled {
   font-style: normal;
+  color: rgb(214,214,214);
   cursor: not-allow;
   border: 1px solid rgb(214,214,214);
   background: rgb(214,214,214);
@@ -4778,7 +4854,7 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
   outline: none;
   padding: 0 4px 0 0;
   cursor: pointer;
-  background: #fff;
+  background: rgb(255,255,255);
 }
 
 .c0 .SingleDatePickerInput_calendarIcon_svg {
@@ -5551,7 +5627,23 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
 
 .c0 .DateInput__disabled {
   background: #f2f2f2;
-  color: #dbdbdb;
+  color: #f2f2f2;
+}
+
+.c0 .DateInput__disabled::-webkit-input-placeholder {
+  color: blue;
+}
+
+.c0 .DateInput__disabled::-moz-placeholder {
+  color: blue;
+}
+
+.c0 .DateInput__disabled:-ms-input-placeholder {
+  color: blue;
+}
+
+.c0 .DateInput__disabled::placeholder {
+  color: blue;
 }
 
 .c0 .DateInput_input {
@@ -5564,6 +5656,22 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
   height: 100%;
   width: 112px;
   font-size: 14px;
+}
+
+.c0 .DateInput_input::-webkit-input-placeholder {
+  color: rgb(153,153,153);
+}
+
+.c0 .DateInput_input::-moz-placeholder {
+  color: rgb(153,153,153);
+}
+
+.c0 .DateInput_input:-ms-input-placeholder {
+  color: rgb(153,153,153);
+}
+
+.c0 .DateInput_input::placeholder {
+  color: rgb(153,153,153);
 }
 
 .c0 .DateInput_input__small {
@@ -5596,6 +5704,48 @@ exports[`Storyshots Components/Datepicker Standard 1`] = `
   color: rgb(153,153,153);
   border: 1px solid rgb(214,214,214);
   background: rgb(214,214,214);
+}
+
+.c0 .DateInput_input__focused {
+  outline: none;
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
+}
+
+.c0 .DateInput_input__focused {
+  outline: none;
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
+}
+
+.c0 .DateInput_input__focused {
+  outline: none;
+  border-color: default:rgb(114,206,92);
+  -n20: rgb(142,216,125);
+  -n40: rgb(170,226,157);
+  -n60: rgb(199,235,190);
+  -n80: rgb(227,245,222);
+  -n90: rgb(240,250,238);
+  -n95: rgb(248,252,247);
+  -p20: rgb(68,123,55);
+  -p40: rgb(91,164,73);
+  -p60: rgb(114,206,92);
 }
 
 .c0 .DateInput_input__focused {

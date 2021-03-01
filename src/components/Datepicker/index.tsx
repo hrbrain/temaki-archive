@@ -852,6 +852,9 @@ const Outer = styled.div<OuterProps>`
             width: 112px;
             font-size: 14px;
         }
+        .DateInput_input::placeholder {
+            color: ${props => props.theme.colors.grayScale.S50};
+        }
         .DateInput_input__small {
             font-size: 14px;
             line-height: 18px;
