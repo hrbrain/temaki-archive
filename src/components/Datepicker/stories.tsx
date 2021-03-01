@@ -62,6 +62,5 @@ export const isOutsideRange = () => (
         errored={Knobs.boolean('Error', false)}
         errorMessage={Knobs.text('ErrorMessage', '')}
         isOutsideRange={Datepicker.isInclusivelyBeforeDay(defaultDate)}
-        limitDays={Knobs.number('limitDays', 1)}
     />
 )
