@@ -878,7 +878,7 @@ const Outer = styled.div<OuterProps>`
             background: ${props => props.theme.colors.main.grayScale[400]};
         }
         .DateInput_input__disabled::placeholder {
-            color: ${props => props.theme.colors.grayScale.S40};
+            color: ${props => props.theme.colors.grayScale.S50};
         }
         .DateInput_input__focused {
             outline: none;
