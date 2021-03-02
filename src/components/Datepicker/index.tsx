@@ -29,12 +29,17 @@ type Props = {
     isOutsideRange?: (day: any) => boolean
 }
 
-export const isInclusivelyBeforeDay = (date: Date) => (day: any) => {
+const isInclusivelyBeforeDay = (date: Date) => (day: any) => {
     return ReactDates.isInclusivelyBeforeDay(day, Moment(date))
 }
 
-export const isInclusivelyAfterDay = (date: Date) => (day: any) => {
+const isInclusivelyAfterDay = (date: Date) => (day: any) => {
     return ReactDates.isInclusivelyAfterDay(day, Moment(date))
+}
+
+export const Util = {
+    isInclusivelyAfterDay,
+    isInclusivelyBeforeDay
 }
 
 export const Component = withTheme(

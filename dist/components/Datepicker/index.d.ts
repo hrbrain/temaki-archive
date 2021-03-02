@@ -27,8 +27,10 @@ export declare const Component: React.ForwardRefExoticComponent<Pick<Props, "wid
 =======
     isOutsideRange?: (day: any) => boolean;
 };
-export declare const isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
-export declare const isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
+export declare const Util: {
+    isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
+    isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
+};
 export declare const Component: React.NamedExoticComponent<Props>;
 >>>>>>> 9292782 (feature: Datepickerコンポーネントで範囲外の日時をクリックできないように追加)
 export {};

@@ -5,6 +5,7 @@ import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
+import * as _DatePicker from './components/Datepicker/index';
 export declare const Text: import("react").FunctionComponent<{}>;
 export declare const Icon: (props: {
     svg: string;
@@ -258,6 +259,7 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     errorMessage?: string | undefined;
     borderColorType?: "primary" | "grayScaleS100" | undefined;
 }>;
+<<<<<<< HEAD
 export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;
@@ -280,6 +282,13 @@ export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<
 }>;
 export declare const isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
 export declare const isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
+=======
+export declare const DatePicker: typeof _DatePicker;
+export declare const DatePickerUtil: {
+    isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
+    isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
+};
+>>>>>>> 71b3e3f (chore: DatePickerを経由してisInclusivelyBeforeDay,AfterDayを呼び出せるようにした)
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;

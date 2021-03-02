@@ -27,11 +27,7 @@ import {
     RequiredThemeProps as _RequiredThemeProps
 } from './modules/theme'
 
-import {
-    Component as _DatePicker,
-    isInclusivelyAfterDay as _isInclusivelyAfterDay,
-    isInclusivelyBeforeDay as _isInclusivelyBeforeDay
-} from './components/Datepicker/index'
+import * as _DatePicker from './components/Datepicker/index'
 import * as _DateRangePicker from './components/DateRangePicker/index'
 
 import * as _StepNumber from './components/StepNumber/index'
@@ -61,8 +57,7 @@ export const MeatballMenu = _MeatballMenu.Component
 export type MeatballMenuItem = _MeatballMenu.Item
 export const FileUploader = _FileUploader.Component
 export const DatePicker = _DatePicker
-export const isInclusivelyAfterDay = _isInclusivelyAfterDay
-export const isInclusivelyBeforeDay = _isInclusivelyBeforeDay
+export const DatePickerUtil = _DatePicker.Util
 export const DateRangePicker = _DateRangePicker.Component
 export const Modal = _Modal.Component
 export const StepNumber = _StepNumber.Component
