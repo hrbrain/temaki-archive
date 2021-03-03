@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Props
- */
 declare type Props = {
     onChange?: (file: File | null) => void;
     fileName: string | null;

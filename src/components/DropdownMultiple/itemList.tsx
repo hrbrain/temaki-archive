@@ -45,9 +45,9 @@ const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
     )
 }
 
-/**
- * ItemComponent
- */
+//------------------------------------------------------------------------------
+// ItemComponent
+//------------------------------------------------------------------------------
 
 export type Item = {
     text: string

@@ -13,9 +13,9 @@ const styled = Theme.default
 
 const iconSize = '24px'
 
-/**
- * Props
- */
+//------------------------------------------------------------------------------
+// Props
+//------------------------------------------------------------------------------
 type Props = {
     onChange?: (file: File | null) => void
     fileName: string | null

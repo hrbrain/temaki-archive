@@ -7,9 +7,6 @@ declare type Props = {
     isVisible?: boolean;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
-/**
- * ItemComponent
- */
 export declare type Item = {
     text: string;
     value: Value;

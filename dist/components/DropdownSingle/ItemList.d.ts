@@ -8,9 +8,6 @@ declare type Props = {
     onBlurSearchValue?: () => void;
 };
 export declare const Component: React.MemoExoticComponent<(props: Props) => JSX.Element>;
-/**
- * ItemComponent
- */
 export declare type Item = {
     value: Value;
     text: string;

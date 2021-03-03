@@ -102,9 +102,9 @@ const selectMeatOrKebab = (type: 'meatball' | 'kebab') => {
     }
 }
 
-/**
- * style
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 const Wrap = styled.div`
     position: relative;
     cursor: pointer;
