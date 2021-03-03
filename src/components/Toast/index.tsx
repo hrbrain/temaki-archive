@@ -2,9 +2,9 @@ import * as React from 'react'
 import * as Buttonless from './presentors/Buttonless'
 import * as Default from './presentors/Default'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 const DEFAULT = 'default' as const
 const BUTTONLESS = 'buttonless' as const
 

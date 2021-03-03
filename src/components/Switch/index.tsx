@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void

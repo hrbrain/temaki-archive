@@ -81,9 +81,9 @@ const useBlurNumberValueFromFocusEvent = (
         [onChange, onBlur, value]
     )
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     value: number

@@ -3,9 +3,9 @@ import styled from '~/modules/theme'
 import TextareaAutosize from 'react-textarea-autosize'
 import * as FormErrorMessage from '~/components/lib/FormErrorMessage'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     value?: string

@@ -13,9 +13,9 @@ export type StringValue = string
 const TEXT = 'text' as const
 const NUMBER = 'number' as const
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     type?: string

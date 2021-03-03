@@ -7,9 +7,9 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ItemList from '../ItemList'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value

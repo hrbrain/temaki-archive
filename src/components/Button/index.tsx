@@ -63,9 +63,9 @@ const useIsLoadingByAsyncClick = (
     return [isLoading, handleClick]
 }
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 export type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>

@@ -27,9 +27,9 @@ const useChangeStringValueFromChangeEvent = (
         [onChange, onChangeNative]
     )
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     value?: Input.StringValue

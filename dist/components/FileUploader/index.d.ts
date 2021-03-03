@@ -12,9 +12,6 @@ declare type Props = {
     errorMessage?: string;
     borderColorType?: BorderColorType;
 };
-/**
- * Component
- */
 export declare const Component: React.NamedExoticComponent<Props>;
 /**
  * Styles

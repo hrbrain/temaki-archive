@@ -6,9 +6,9 @@ import * as Icon from '~/components/Icon'
 import * as ItemList from './itemList'
 import * as Theme from '../../modules/theme'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     items: ItemList.Item[]

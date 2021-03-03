@@ -27,9 +27,9 @@ type Props = {
     borderColorType?: BorderColorType
 }
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 export const Component = React.memo<Props>(props => {
     const onDrop = React.useCallback(

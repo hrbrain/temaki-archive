@@ -9,9 +9,9 @@ import * as Icon from '~/components/Icon'
 import * as IconFiles from '~/lib/iconFiles'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     displayFormat?: string

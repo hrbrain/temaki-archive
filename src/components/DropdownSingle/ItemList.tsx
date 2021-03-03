@@ -4,9 +4,9 @@ import styled, { defaultTheme } from '~/modules/theme'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     items: Item[]

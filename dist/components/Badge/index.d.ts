@@ -1,7 +1,4 @@
 /// <reference types="react" />
-/**
- * Component
- */
 declare type Props = {
     count: number;
 };

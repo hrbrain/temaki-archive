@@ -11,9 +11,6 @@ export declare const buttonShapeType: {
     circle: "circle";
     text: "text";
 };
-/**
- * Component
- */
 export declare type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>;
     type?: 'submit' | 'reset' | 'button';

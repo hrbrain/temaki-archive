@@ -6,9 +6,6 @@ export declare type NumberValue = number;
 export declare type StringValue = string;
 declare const TEXT: "text";
 declare const NUMBER: "number";
-/**
- * Component
- */
 declare type Props = {
     type?: string;
     name?: string;

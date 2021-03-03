@@ -5,9 +5,9 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ClickOutside from '../../modules/ClickOutside'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     type: 'meatball' | 'kebab'

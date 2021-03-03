@@ -6,9 +6,9 @@ import * as Styles from '../lib/styles'
 
 import * as Icon from '~/components/Icon'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     svg: string | undefined
