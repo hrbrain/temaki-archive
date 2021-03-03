@@ -22,6 +22,7 @@ describe('DatePicker', () => {
         )
         expect(wrapper.exists()).toBe(true)
     })
+
     it('dateがnullの場合、DatePickerコンポーネントが定義されている', () => {
         wrapper = mountWithTheme(
             <DatePicker.Component
@@ -35,21 +36,23 @@ describe('DatePicker', () => {
 
     describe('isInclusivelyBeforeDay', () => {
         it('過去の日付を渡す', () => {
-            const result = DatePicker.Util.isInclusivelyBeforeDay(
+            const result = DatePicker.Utils.isInclusivelyBeforeDay(
                 new Date(today)
             )(Moment(new Date(pastDay)))
 
             expect(result).toBeTruthy()
         })
+
         it('現在の日付を渡す', () => {
-            const result = DatePicker.Util.isInclusivelyBeforeDay(
+            const result = DatePicker.Utils.isInclusivelyBeforeDay(
                 new Date(today)
             )(Moment(new Date(today)))
 
             expect(result).toBeTruthy()
         })
+
         it('未来の日付を渡す', () => {
-            const result = DatePicker.Util.isInclusivelyBeforeDay(
+            const result = DatePicker.Utils.isInclusivelyBeforeDay(
                 new Date(today)
             )(Moment(new Date(futureDay)))
 
@@ -59,21 +62,23 @@ describe('DatePicker', () => {
 
     describe('isInclusivelyAfterDay', () => {
         it('過去の日付を渡す', () => {
-            const result = DatePicker.Util.isInclusivelyAfterDay(
+            const result = DatePicker.Utils.isInclusivelyAfterDay(
                 new Date(today)
             )(Moment(new Date(pastDay)))
 
             expect(result).toBeFalsy()
         })
+
         it('現在の日付を渡す', () => {
-            const result = DatePicker.Util.isInclusivelyAfterDay(
+            const result = DatePicker.Utils.isInclusivelyAfterDay(
                 new Date(today)
             )(Moment(new Date(today)))
 
             expect(result).toBeTruthy()
         })
+
         it('未来の日付を渡す', () => {
-            const result = DatePicker.Util.isInclusivelyAfterDay(
+            const result = DatePicker.Utils.isInclusivelyAfterDay(
                 new Date(today)
             )(Moment(new Date(futureDay)))
 

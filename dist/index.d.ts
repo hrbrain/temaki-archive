@@ -259,36 +259,11 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     errorMessage?: string | undefined;
     borderColorType?: "primary" | "grayScaleS100" | undefined;
 }>;
-<<<<<<< HEAD
-export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<{
-    displayFormat?: string | undefined;
-    monthFormat?: string | undefined;
-    date: Date | null;
-    onChange: (date: Date | null) => void;
-    width: string;
-    errored?: boolean | undefined;
-    errorMessage?: string | undefined;
-    placeholderText?: string | undefined;
-    disabled?: boolean | undefined;
-    selectedColor?: string | undefined;
-    defaultHoverColor?: string | undefined;
-<<<<<<< HEAD
-    theme: _RequiredThemeProps;
-}, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor"> & {
-    theme?: _RequiredThemeProps | undefined;
-=======
-    isOutsideRange?: ((day: any) => boolean) | undefined;
->>>>>>> 9292782 (feature: Datepickerコンポーネントで範囲外の日時をクリックできないように追加)
-}>;
-export declare const isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
-export declare const isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
-=======
 export declare const DatePicker: typeof _DatePicker;
 export declare const DatePickerUtil: {
     isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
     isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
 };
->>>>>>> 71b3e3f (chore: DatePickerを経由してisInclusivelyBeforeDay,AfterDayを呼び出せるようにした)
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;

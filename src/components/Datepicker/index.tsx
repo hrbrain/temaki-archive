@@ -37,7 +37,7 @@ const isInclusivelyAfterDay = (date: Date) => (day: any) => {
     return ReactDates.isInclusivelyAfterDay(day, Moment(date))
 }
 
-export const Util = {
+export const Utils = {
     isInclusivelyAfterDay,
     isInclusivelyBeforeDay
 }
