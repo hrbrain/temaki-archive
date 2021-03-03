@@ -71,8 +71,8 @@ const useBlurNumberValueFromFocusEvent = (
             if (onChange) {
                 const numberValue = Number(value)
                 const isNullableValue = value === '' || isNaN(numberValue)
-                if (isNullableValue) onChange('')
-                if (value.toString().endsWith('.')) onChange(numberValue)
+                if (isNullableValue) return onChange('')
+                if (value.toString().endsWith('.')) return onChange(numberValue)
             }
         },
         [onChange, onBlur, value]
