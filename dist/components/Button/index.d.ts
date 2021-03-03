@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Utils
- */
 export declare type ColorTypeProp = 'primary' | 'primary ghost' | 'secondary' | 'secondary ghost' | 'destructive' | 'destructive ghost' | 'disabled' | 'grayScaleS100' | 'default';
 export declare type BoxColorTypeProp = ColorTypeProp;
 export declare type CircleColorTypeProp = Extract<ColorTypeProp, 'primary' | 'secondary' | 'default'>;

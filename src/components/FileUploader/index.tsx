@@ -6,9 +6,9 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
-/**
- * Utils
- */
+//------------------------------------------------------------------------------
+// Utils
+//------------------------------------------------------------------------------
 const styled = Theme.default
 
 const iconSize = '24px'

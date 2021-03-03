@@ -3,9 +3,9 @@ import { ContainerType } from '~/types/utils'
 
 import * as Input from '../index'
 
-/**
- * Utils
- */
+//------------------------------------------------------------------------------
+// Utils
+//------------------------------------------------------------------------------
 
 const useChangeStringValueFromChangeEvent = (
     onChange: ((value: Input.StringValue) => void) | undefined,

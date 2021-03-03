@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Utils
- */
 export declare type NumberValue = number;
 export declare type StringValue = string;
 declare const TEXT: "text";
