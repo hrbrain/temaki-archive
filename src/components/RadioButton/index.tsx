@@ -64,9 +64,9 @@ export const Component = withTheme(
     })
 )
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer = styled.div<{ disabled?: boolean }>`
     display: inline-flex;

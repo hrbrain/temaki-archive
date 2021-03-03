@@ -7,9 +7,6 @@ declare type Props = {
     dataTest: string | undefined;
 } & OuterProps;
 export declare const Component: React.FC<Props>;
-/**
- * Styles
- */
 declare type OuterProps = {
     height?: string;
     width?: string;

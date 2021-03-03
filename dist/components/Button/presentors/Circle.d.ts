@@ -10,9 +10,6 @@ declare type Props = {
     dataTest: string | undefined;
 } & OuterProps;
 export declare const Component: ({ svg, ...props }: Props) => JSX.Element;
-/**
- * Styles
- */
 declare type OuterProps = {
     colorType: Index.CircleColorTypeProp;
 };

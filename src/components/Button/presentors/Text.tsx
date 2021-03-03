@@ -83,9 +83,9 @@ function selectIconColor(theme: RequiredThemeProps, colorType?: string) {
     }
 }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer = styled.button`
     background: transparent;

@@ -86,9 +86,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const ItemList = styled.ul<{ isVisible?: boolean }>`
     display: block;

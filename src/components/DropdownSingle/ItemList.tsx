@@ -90,9 +90,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const ItemList = styled.ul`
     background: ${props => props.theme.colors.grayScale.S0};

@@ -55,9 +55,9 @@ const renderIcon = (svg?: string, colorType?: string) => (
     return <Icon.Component svg={svg} size="24px" color={color} />
 }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 type OuterProps = {
     colorType: Index.CircleColorTypeProp

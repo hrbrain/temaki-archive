@@ -139,9 +139,9 @@ export const Component = React.memo<Props>(props => {
 
 Component.displayName = 'DropdownMultiple'
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Wrap = styled.div<{ width?: string }>`
     width: ${props => props.width || '100%'};

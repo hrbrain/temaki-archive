@@ -109,9 +109,9 @@ function renderRemoveButton(onClick: (e: React.MouseEvent) => void) {
     )
 }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 type BorderColorType = 'primary' | 'grayScaleS100'
 const getBorderColor = (
     theme: Theme.RequiredThemeProps,

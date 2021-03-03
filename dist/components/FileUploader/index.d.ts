@@ -13,8 +13,5 @@ declare type Props = {
     borderColorType?: BorderColorType;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
-/**
- * Styles
- */
 declare type BorderColorType = 'primary' | 'grayScaleS100';
 export {};

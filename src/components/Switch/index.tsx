@@ -38,9 +38,9 @@ export const Component = React.memo<Props>(({ onClick, checked, text }) => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer = styled.div`
     display: inline-flex;

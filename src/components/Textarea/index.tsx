@@ -63,9 +63,9 @@ export const Component = React.memo<Props>(props => {
 
 Component.displayName = 'Textarea'
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer = styled.div`
     display: inline-flex;

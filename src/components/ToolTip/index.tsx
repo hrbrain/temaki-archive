@@ -21,9 +21,9 @@ Component.displayName = 'Tooltip'
 
 export { Component }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer: any = styled.div`
     display: inline-flex;
