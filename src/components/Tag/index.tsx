@@ -9,8 +9,6 @@ export type ColorTypeProp = 'primary' | 'secondary' | 'destructive'
 type Props = {
     text: string
     colorType?: ColorTypeProp
-    height?: string
-    width?: string
     className?: string
 } & OuterProps
 
@@ -19,8 +17,6 @@ export const Component = React.memo<Props>(props => {
         <Outer
             colorType={props.colorType || 'primary'}
             className={props.className}
-            width={props.width}
-            height={props.height}
         >
             {props.text}
         </Outer>
@@ -31,10 +27,7 @@ export const Component = React.memo<Props>(props => {
 // Styles
 //------------------------------------------------------------------------------
 type OuterProps = {
-    height?: string
-    width?: string
-    colorType: ColorTypeProp
-    textLength?: number
+    colorType?: ColorTypeProp
 }
 const Outer = styled.div<OuterProps>`
     font-size: 12px;
@@ -42,6 +35,7 @@ const Outer = styled.div<OuterProps>`
     border-radius: 16px;
     padding: 4.5px 8px;
     font-weight: bold;
+    display: inline-block;
     ${props => {
         switch (props.colorType) {
             case 'primary':

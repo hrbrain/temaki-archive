@@ -7,24 +7,14 @@ export default {
 }
 
 export const Primary = () => {
-    return <Tag.Component text={text('Text', 'Tag')} width={'48px'} />
+    return <Tag.Component text={text('Text', 'Tag')} />
 }
 
 export const Secondary = () => {
-    return (
-        <Tag.Component
-            text={text('Text', 'Tag')}
-            colorType={'secondary'}
-            width={'48px'}
-        />
-    )
+    return <Tag.Component text={text('Text', 'Tag')} colorType={'secondary'} />
 }
 export const Destructive = () => {
     return (
-        <Tag.Component
-            text={text('Text', 'Tag')}
-            colorType={'destructive'}
-            width={'48px'}
-        />
+        <Tag.Component text={text('Text', 'Tag')} colorType={'destructive'} />
     )
 }

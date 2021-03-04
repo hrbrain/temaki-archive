@@ -5,7 +5,6 @@ import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
-import * as _Tag from './components/Tag/index';
 export declare const Text: import("react").FunctionComponent<{}>;
 export declare const Icon: (props: {
     svg: string;
@@ -352,12 +351,7 @@ export declare const Loading: import("react").NamedExoticComponent<{
 export declare const Tag: import("react").NamedExoticComponent<{
     text: string;
     colorType?: "primary" | "secondary" | "destructive" | undefined;
-    height?: string | undefined;
-    width?: string | undefined;
     className?: string | undefined;
 } & {
-    height?: string | undefined;
-    width?: string | undefined;
-    colorType: _Tag.ColorTypeProp;
-    textLength?: number | undefined;
+    colorType?: "primary" | "secondary" | "destructive" | undefined;
 }>;
