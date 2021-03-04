@@ -3498,24 +3498,6 @@ exports[`Storyshots Components/Checkbox All 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Chip Default 1`] = `
-.c0 {
-  font-size: 12px;
-  box-sizing: border-box;
-  border-radius: 16px;
-  padding: 4.5px 8px;
-  width: 48px;
-  font-weight: bold;
-}
-
-<div
-  className="c0"
-  width="48px"
->
-  Chip
-</div>
-`;
-
 exports[`Storyshots Components/Chip Destructive 1`] = `
 .c0 {
   font-size: 12px;

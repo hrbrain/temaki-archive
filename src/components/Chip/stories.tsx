@@ -6,16 +6,6 @@ export default {
     title: 'Components/Chip'
 }
 
-export const Default = () => {
-    return (
-        <Chip.Component
-            text={text('Text', 'Chip')}
-            colorType={'default'}
-            width={'48px'}
-        />
-    )
-}
-
 export const Primary = () => {
     return (
         <Chip.Component
