@@ -12,5 +12,6 @@ declare type OuterProps = {
     height?: string;
     width?: string;
     colorType: ColorTypeProp;
+    textLength?: number;
 };
 export {};

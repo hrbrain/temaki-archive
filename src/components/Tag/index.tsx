@@ -14,7 +14,7 @@ type Props = {
     className?: string
 } & OuterProps
 
-export const Component = React.memo<Props>(({ ...props }) => {
+export const Component = React.memo<Props>(props => {
     return (
         <Outer
             colorType={props.colorType || 'primary'}
@@ -34,13 +34,13 @@ type OuterProps = {
     height?: string
     width?: string
     colorType: ColorTypeProp
+    textLength?: number
 }
 const Outer = styled.div<OuterProps>`
     font-size: 12px;
     box-sizing: border-box;
     border-radius: 16px;
     padding: 4.5px 8px;
-    width: ${props => props.width};
     font-weight: bold;
     ${props => {
         switch (props.colorType) {

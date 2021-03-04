@@ -359,4 +359,5 @@ export declare const Tag: import("react").NamedExoticComponent<{
     height?: string | undefined;
     width?: string | undefined;
     colorType: _Tag.ColorTypeProp;
+    textLength?: number | undefined;
 }>;
