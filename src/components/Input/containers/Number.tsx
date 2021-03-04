@@ -69,14 +69,14 @@ const useBlurNumberValueFromFocusEvent = (
             }
             // 値がnullableな場合valueを空文字へ、`.`で終わる場合はvalueを数字のvalueへする
             if (onChange) {
-                const numberValue = Number(value)
-                const isNullableValue = value === '' || isNaN(numberValue)
-                if (isNullableValue) {
-                    onChange('')
+                const val = Number(value)
+                if (value === '') return onChange('')
+                if (value.toString().endsWith('.')) {
+                    onChange(val)
                     return
                 }
-                if (value.toString().endsWith('.')) {
-                    onChange(numberValue)
+                if (isNaN(val)) {
+                    onChange('')
                     return
                 }
             }
