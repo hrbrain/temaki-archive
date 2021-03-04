@@ -26,8 +26,7 @@ export declare const Checkbox: import("react").NamedExoticComponent<{
     disabled?: boolean | undefined;
     indeterminate?: boolean | undefined;
 }>;
-export declare const Input: import("react").NamedExoticComponent<({
-    type?: string | undefined;
+export declare const Input: (props: {
     name?: string | undefined;
     unit?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
@@ -41,12 +40,11 @@ export declare const Input: import("react").NamedExoticComponent<({
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     className?: string | undefined;
     decimalPlace?: number | null | undefined;
-} & {
     format: "text";
-    value: string;
-    onChange: (value: string) => void;
-}) | ({
+    value: string | null;
+    onChange: (arg: string) => void;
     type?: string | undefined;
+} | {
     name?: string | undefined;
     unit?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
@@ -60,12 +58,11 @@ export declare const Input: import("react").NamedExoticComponent<({
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     className?: string | undefined;
     decimalPlace?: number | null | undefined;
-} & {
     format: "number";
-    value: import("react").ReactText;
-    onChange: (value: import("react").ReactText) => void;
-    type?: "number" | undefined;
-})>;
+    value: number | null;
+    onChange: (arg: number) => void;
+    type?: string | undefined;
+}) => JSX.Element;
 export declare const Button: import("react").FunctionComponent<_Button.Props>;
 export declare const buttonShapeType: {
     box: "box";

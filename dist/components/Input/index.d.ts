@@ -9,8 +9,11 @@ declare const NUMBER: "number";
 /**
  * Component
  */
-declare type Props = {
-    type?: string;
+declare type TextOrNumberProps<T> = T extends {
+    format: infer InferFormat;
+    value: infer InferValue;
+    onChange: (arg: infer InferArg) => void;
+} ? {
     name?: string;
     unit?: string;
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
@@ -24,15 +27,22 @@ declare type Props = {
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     className?: string;
     decimalPlace?: number | null;
-} & ({
+    format: InferFormat;
+    value: InferValue;
+    onChange: (arg: InferArg) => void;
+    type?: string;
+} : never;
+declare type TextProps = TextOrNumberProps<{
     format: typeof TEXT;
-    value: StringValue;
+    value: StringValue | null;
     onChange: (value: StringValue) => void;
-} | {
+}>;
+declare type NumberProps = TextOrNumberProps<{
     format: typeof NUMBER;
-    value: NumberValue | StringValue;
-    onChange: (value: NumberValue | StringValue) => void;
+    value: NumberValue | null;
+    onChange: (value: NumberValue) => void;
     type?: typeof NUMBER;
-});
-export declare const Component: React.NamedExoticComponent<Props>;
+}>;
+declare type Props = TextProps | NumberProps;
+export declare const Component: (props: Props) => JSX.Element;
 export {};
