@@ -2,7 +2,7 @@ import * as React from 'react';
 /**
  * Component
  */
-export declare type ColorTypeProp = 'primary' | 'secondary' | 'destructive' | 'default';
+export declare type ColorTypeProp = 'primary' | 'secondary' | 'destructive';
 declare type Props = {
     text: string;
     colorType: ColorTypeProp;

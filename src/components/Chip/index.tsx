@@ -4,7 +4,7 @@ import styled from '~/modules/theme'
 /**
  * Component
  */
-export type ColorTypeProp = 'primary' | 'secondary' | 'destructive' | 'default'
+export type ColorTypeProp = 'primary' | 'secondary' | 'destructive'
 
 type Props = {
     text: string
