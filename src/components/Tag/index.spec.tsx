@@ -1,32 +1,32 @@
 import * as Enzyme from 'enzyme'
 import { mountWithTheme } from '../../__test__/utils'
-import * as Chip from '../Chip'
+import * as Tag from './'
 import * as React from 'react'
 
-describe('Chip', () => {
+describe('Tag', () => {
     let wrapper: Enzyme.ReactWrapper
 
     it('should be defined colorType primary', () => {
         wrapper = mountWithTheme(
-            <Chip.Component text={'チップ'} colorType={'primary'} />
+            <Tag.Component text={'タグ'} colorType={'primary'} />
         )
         expect(wrapper.exists()).toBe(true)
-        expect(wrapper.text()).toEqual('チップ')
+        expect(wrapper.text()).toEqual('タグ')
     })
 
     it('should be defined colorType secondary', () => {
         wrapper = mountWithTheme(
-            <Chip.Component text={'チップ'} colorType={'secondary'} />
+            <Tag.Component text={'タグ'} colorType={'secondary'} />
         )
         expect(wrapper.exists()).toBe(true)
-        expect(wrapper.text()).toEqual('チップ')
+        expect(wrapper.text()).toEqual('タグ')
     })
 
     it('should be defined colorType destructive', () => {
         wrapper = mountWithTheme(
-            <Chip.Component text={'チップ'} colorType={'destructive'} />
+            <Tag.Component text={'タグ'} colorType={'destructive'} />
         )
         expect(wrapper.exists()).toBe(true)
-        expect(wrapper.text()).toEqual('チップ')
+        expect(wrapper.text()).toEqual('タグ')
     })
 })

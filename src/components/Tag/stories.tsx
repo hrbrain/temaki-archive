@@ -1,15 +1,15 @@
 import { text } from '@storybook/addon-knobs'
 import * as React from 'react'
-import * as Chip from './index'
+import * as Tag from './index'
 
 export default {
-    title: 'Components/Chip'
+    title: 'Components/Tag'
 }
 
 export const Primary = () => {
     return (
-        <Chip.Component
-            text={text('Text', 'Chip')}
+        <Tag.Component
+            text={text('Text', 'Tag')}
             colorType={'primary'}
             width={'48px'}
         />
@@ -18,8 +18,8 @@ export const Primary = () => {
 
 export const Secondary = () => {
     return (
-        <Chip.Component
-            text={text('Text', 'Chip')}
+        <Tag.Component
+            text={text('Text', 'Tag')}
             colorType={'secondary'}
             width={'48px'}
         />
@@ -27,8 +27,8 @@ export const Secondary = () => {
 }
 export const Destructive = () => {
     return (
-        <Chip.Component
-            text={text('Text', 'Chip')}
+        <Tag.Component
+            text={text('Text', 'Tag')}
             colorType={'destructive'}
             width={'48px'}
         />

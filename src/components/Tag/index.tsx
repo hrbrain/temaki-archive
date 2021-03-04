@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 export type ColorTypeProp = 'primary' | 'secondary' | 'destructive'
 
 type Props = {
@@ -27,9 +27,9 @@ export const Component = React.memo<Props>(({ ...props }) => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 type OuterProps = {
     height?: string
     width?: string
