@@ -8699,8 +8699,8 @@ exports[`Storyshots Components/Tag Destructive 1`] = `
   box-sizing: border-box;
   border-radius: 16px;
   padding: 4.5px 8px;
-  width: 48px;
   font-weight: bold;
+  display: inline-block;
   color: rgb(224,85,72);
   background: rgb(253,246,246);
   border: 1px solid rgb(253,246,246);
@@ -8708,7 +8708,6 @@ exports[`Storyshots Components/Tag Destructive 1`] = `
 
 <div
   className="c0"
-  width="48px"
 >
   Tag
 </div>
@@ -8720,8 +8719,8 @@ exports[`Storyshots Components/Tag Primary 1`] = `
   box-sizing: border-box;
   border-radius: 16px;
   padding: 4.5px 8px;
-  width: 48px;
   font-weight: bold;
+  display: inline-block;
   color: rgb(8,135,54);
   background: rgb(242,249,245);
   border: 1px solid rgb(242,249,245);
@@ -8729,7 +8728,6 @@ exports[`Storyshots Components/Tag Primary 1`] = `
 
 <div
   className="c0"
-  width="48px"
 >
   Tag
 </div>
@@ -8741,8 +8739,8 @@ exports[`Storyshots Components/Tag Secondary 1`] = `
   box-sizing: border-box;
   border-radius: 16px;
   padding: 4.5px 8px;
-  width: 48px;
   font-weight: bold;
+  display: inline-block;
   color: rgb(51,51,51);
   background: rgb(245,245,245);
   border: 1px solid rgb(245,245,245);
@@ -8750,7 +8748,6 @@ exports[`Storyshots Components/Tag Secondary 1`] = `
 
 <div
   className="c0"
-  width="48px"
 >
   Tag
 </div>
