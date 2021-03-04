@@ -61,7 +61,7 @@ type Props = TextProps | NumberProps
 const nonNullValue = (value: null | number | string) =>
     value || null === null ? Number(value) : ''
 
-export const Component = (props: Props) => {
+export const Component = React.memo<Props>(props => {
     const propsValue = nonNullValue(props.value)
     const [value, setValue] = React.useState<string | number>(propsValue)
     const changeValue = React.useCallback(
@@ -102,4 +102,4 @@ export const Component = (props: Props) => {
                 />
             )
     }
-}
+})

@@ -44,5 +44,5 @@ declare type NumberProps = TextOrNumberProps<{
     type?: typeof NUMBER;
 }>;
 declare type Props = TextProps | NumberProps;
-export declare const Component: (props: Props) => JSX.Element;
+export declare const Component: React.NamedExoticComponent<Props>;
 export {};

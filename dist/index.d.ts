@@ -26,7 +26,7 @@ export declare const Checkbox: import("react").NamedExoticComponent<{
     disabled?: boolean | undefined;
     indeterminate?: boolean | undefined;
 }>;
-export declare const Input: (props: {
+export declare const Input: import("react").NamedExoticComponent<{
     name?: string | undefined;
     unit?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
@@ -62,7 +62,7 @@ export declare const Input: (props: {
     value: number | null;
     onChange: (arg: number) => void;
     type?: string | undefined;
-}) => JSX.Element;
+}>;
 export declare const Button: import("react").FunctionComponent<_Button.Props>;
 export declare const buttonShapeType: {
     box: "box";
