@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as Index from '~/components/Button';
 /**
  * Component
  */
@@ -7,6 +6,8 @@ export declare type ColorTypeProp = 'primary' | 'secondary' | 'destructive' | 'd
 declare type Props = {
     text: string;
     colorType: ColorTypeProp;
+    height?: string;
+    width?: string;
     className?: string;
 } & OuterProps;
 export declare const Component: React.NamedExoticComponent<Props>;
@@ -16,6 +17,6 @@ export declare const Component: React.NamedExoticComponent<Props>;
 declare type OuterProps = {
     height?: string;
     width?: string;
-    colorType: Index.BoxColorTypeProp;
+    colorType: ColorTypeProp;
 };
 export {};

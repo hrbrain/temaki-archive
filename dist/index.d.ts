@@ -352,9 +352,11 @@ export declare const Loading: import("react").NamedExoticComponent<{
 export declare const Chip: import("react").NamedExoticComponent<{
     text: string;
     colorType: _Chip.ColorTypeProp;
+    height?: string | undefined;
+    width?: string | undefined;
     className?: string | undefined;
 } & {
     height?: string | undefined;
     width?: string | undefined;
-    colorType: _Button.ColorTypeProp;
+    colorType: _Chip.ColorTypeProp;
 }>;

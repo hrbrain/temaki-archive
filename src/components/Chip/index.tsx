@@ -1,7 +1,5 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
-import * as Index from '~/components/Button'
-import { css } from 'styled-components'
 
 /**
  * Component
@@ -11,16 +9,18 @@ export type ColorTypeProp = 'primary' | 'secondary' | 'destructive' | 'default'
 type Props = {
     text: string
     colorType: ColorTypeProp
+    height?: string
+    width?: string
     className?: string
 } & OuterProps
 
 export const Component = React.memo<Props>(({ ...props }) => {
     return (
         <Outer
-            height={props.height}
-            width={props.width}
             colorType={props.colorType}
             className={props.className}
+            width={props.width}
+            height={props.height}
         >
             {props.text}
         </Outer>
@@ -33,30 +33,31 @@ export const Component = React.memo<Props>(({ ...props }) => {
 type OuterProps = {
     height?: string
     width?: string
-    colorType: Index.BoxColorTypeProp
+    colorType: ColorTypeProp
 }
 const Outer = styled.div<OuterProps>`
     font-size: 12px;
     box-sizing: border-box;
     border-radius: 16px;
-    margin: 4.5px 8px;
-    width: ${props => props};
+    padding: 4.5px 8px;
+    width: ${props => props.width};
+    font-weight: bold;
     ${props => {
         switch (props.colorType) {
             case 'primary':
-                return css`
-                    color: ${props.theme.colors.primary.default};
-                    background: ${props.theme.colors.primary.N20};
-                    border: 1px solid ${props.theme.colors.primary.N20};
+                return `
+                    color: ${props.theme.colors.main.primary['600']};
+                    background: ${props.theme.colors.main.primary['100']};
+                    border: 1px solid ${props.theme.colors.main.primary['100']};
                 `
             case 'secondary':
-                return css`
-                    color: ${props.theme.colors.grayScale.S60};
-                    background: ${props.theme.colors.grayScale.S20};
-                    border: 1px solid ${props.theme.colors.grayScale.S20};
+                return `
+                    color: ${props.theme.colors.main.grayScale['600']};
+                    background: ${props.theme.colors.main.grayScale['200']};
+                    border: 1px solid ${props.theme.colors.main.grayScale['200']};
                 `
             case 'destructive':
-                return css`
+                return `
                     color: ${props.theme.colors.utilities.red.default};
                     background: ${props.theme.colors.utilities.red.N95};
                     border: 1px solid ${props.theme.colors.utilities.red.N95};
