@@ -17,7 +17,7 @@ const NUMBER = 'number' as const
  * Component
  */
 
-type TextOrNumberProps<T> = T extends {
+type CommonProps<T> = T extends {
     format: infer InferFormat
     value: infer InferValue
     onChange: (arg: infer InferArg) => void
@@ -43,13 +43,13 @@ type TextOrNumberProps<T> = T extends {
       }
     : never
 
-type TextProps = TextOrNumberProps<{
+type TextProps = CommonProps<{
     format: typeof TEXT
     value: StringValue | null
     onChange: (value: StringValue) => void
 }>
 
-type NumberProps = TextOrNumberProps<{
+type NumberProps = CommonProps<{
     format: typeof NUMBER
     value: NumberValue | null
     onChange: (value: NumberValue) => void
