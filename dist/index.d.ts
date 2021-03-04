@@ -351,7 +351,7 @@ export declare const Loading: import("react").NamedExoticComponent<{
 }>;
 export declare const Tag: import("react").NamedExoticComponent<{
     text: string;
-    colorType: _Tag.ColorTypeProp;
+    colorType?: "primary" | "secondary" | "destructive" | undefined;
     height?: string | undefined;
     width?: string | undefined;
     className?: string | undefined;

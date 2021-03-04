@@ -8,7 +8,7 @@ export type ColorTypeProp = 'primary' | 'secondary' | 'destructive'
 
 type Props = {
     text: string
-    colorType: ColorTypeProp
+    colorType?: ColorTypeProp
     height?: string
     width?: string
     className?: string
@@ -17,7 +17,7 @@ type Props = {
 export const Component = React.memo<Props>(({ ...props }) => {
     return (
         <Outer
-            colorType={props.colorType}
+            colorType={props.colorType || 'primary'}
             className={props.className}
             width={props.width}
             height={props.height}

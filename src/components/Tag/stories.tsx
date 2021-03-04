@@ -7,13 +7,7 @@ export default {
 }
 
 export const Primary = () => {
-    return (
-        <Tag.Component
-            text={text('Text', 'Tag')}
-            colorType={'primary'}
-            width={'48px'}
-        />
-    )
+    return <Tag.Component text={text('Text', 'Tag')} width={'48px'} />
 }
 
 export const Secondary = () => {

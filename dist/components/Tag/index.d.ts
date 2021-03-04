@@ -2,7 +2,7 @@ import * as React from 'react';
 export declare type ColorTypeProp = 'primary' | 'secondary' | 'destructive';
 declare type Props = {
     text: string;
-    colorType: ColorTypeProp;
+    colorType?: ColorTypeProp;
     height?: string;
     width?: string;
     className?: string;
