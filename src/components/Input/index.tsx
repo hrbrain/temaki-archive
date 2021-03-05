@@ -51,7 +51,7 @@ type TextProps = CommonProps<{
 
 type NumberProps = CommonProps<{
     format: typeof NUMBER
-    value: NumberValue | null
+    value: NumberValue | StringValue | null
     onChange: (value: NumberValue) => void
     type?: typeof NUMBER
 }>
@@ -69,7 +69,7 @@ const removeNullValue = (value: null | number | string) => {
 
 export const Component = React.memo<Props>(props => {
     const primitiveValue = removeNullValue(props.value)
-    const [value, setValue] = React.useState<string | number>(primitiveValue)
+    const [value, setValue] = React.useState(primitiveValue)
     const changeValue = React.useCallback(
         (value: string | number) => {
             props.onChange(value as never)

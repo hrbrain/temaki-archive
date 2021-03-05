@@ -39,7 +39,7 @@ declare type TextProps = CommonProps<{
 }>;
 declare type NumberProps = CommonProps<{
     format: typeof NUMBER;
-    value: NumberValue | null;
+    value: NumberValue | StringValue | null;
     onChange: (value: NumberValue) => void;
     type?: typeof NUMBER;
 }>;

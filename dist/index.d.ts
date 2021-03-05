@@ -59,7 +59,7 @@ export declare const Input: import("react").NamedExoticComponent<{
     className?: string | undefined;
     decimalPlace?: number | null | undefined;
     format: "number";
-    value: number | null;
+    value: string | number | null;
     onChange: (arg: number) => void;
     type?: string | undefined;
 }>;
