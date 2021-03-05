@@ -1,5 +1,6 @@
 /// <reference types="react" />
 /// <reference types="styled-components" />
+/// <reference types="moment" />
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
@@ -261,8 +262,8 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
 }>;
 export declare const DatePicker: typeof _DatePicker;
 export declare const DatePickerUtil: {
-    isInclusivelyAfterDay: (date: Date) => (day: any) => boolean;
-    isInclusivelyBeforeDay: (date: Date) => (day: any) => boolean;
+    isInclusivelyAfterDay: (date: Date) => (day: import("moment").Moment) => boolean;
+    isInclusivelyBeforeDay: (date: Date) => (day: import("moment").Moment) => boolean;
 };
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;

@@ -26,14 +26,14 @@ type Props = {
     selectedColor?: string
     defaultHoverColor?: string
     theme: RequiredThemeProps
-    isOutsideRange?: (day: any) => boolean
+    isOutsideRange?: (day: Moment.Moment) => boolean
 }
 
-const isInclusivelyBeforeDay = (date: Date) => (day: any) => {
+const isInclusivelyBeforeDay = (date: Date) => (day: Moment.Moment) => {
     return ReactDates.isInclusivelyBeforeDay(day, Moment(date))
 }
 
-const isInclusivelyAfterDay = (date: Date) => (day: any) => {
+const isInclusivelyAfterDay = (date: Date) => (day: Moment.Moment) => {
     return ReactDates.isInclusivelyAfterDay(day, Moment(date))
 }
 
