@@ -6,7 +6,6 @@ import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
-import * as _DatePicker from './components/Datepicker/index';
 export declare const Text: import("react").FunctionComponent<{}>;
 export declare const Icon: (props: {
     svg: string;
@@ -260,7 +259,23 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     errorMessage?: string | undefined;
     borderColorType?: "primary" | "grayScaleS100" | undefined;
 }>;
-export declare const DatePicker: typeof _DatePicker;
+export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<{
+    displayFormat?: string | undefined;
+    monthFormat?: string | undefined;
+    date: Date | null;
+    onChange: (date: Date | null) => void;
+    width: string;
+    errored?: boolean | undefined;
+    errorMessage?: string | undefined;
+    placeholderText?: string | undefined;
+    disabled?: boolean | undefined;
+    selectedColor?: string | undefined;
+    defaultHoverColor?: string | undefined;
+    theme: _RequiredThemeProps;
+    isOutsideRange?: ((day: import("moment").Moment) => boolean) | undefined;
+}, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor" | "isOutsideRange"> & {
+    theme?: _RequiredThemeProps | undefined;
+}>;
 export declare const DatePickerUtil: {
     isInclusivelyAfterDay: (date: Date) => (day: import("moment").Moment) => boolean;
     isInclusivelyBeforeDay: (date: Date) => (day: import("moment").Moment) => boolean;
