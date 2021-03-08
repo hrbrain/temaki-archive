@@ -355,3 +355,10 @@ export declare const Loading: import("react").NamedExoticComponent<{
     text?: string | undefined;
     className?: string | undefined;
 }>;
+export declare const Tag: import("react").NamedExoticComponent<{
+    text: string;
+    colorType?: "primary" | "secondary" | "destructive" | undefined;
+    className?: string | undefined;
+} & {
+    colorType?: "primary" | "secondary" | "destructive" | undefined;
+}>;
