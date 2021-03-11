@@ -4,7 +4,14 @@ import ArrowDown from '~/../icons/arrow-down.svg'
 import Attachment from '~/../icons/attachment.svg'
 import Avatar from '~/../icons/avatar.svg'
 import BlackBoard from '~/../icons/blackbaord.svg'
+import BulkCheck from '~/../icons/bulk-check.svg'
 import Calendar from '~/../icons/calendar.svg'
+import CalendarCheck from '~/../icons/calendar-check.svg'
+import CalendarCreate from '~/../icons/calendar-create.svg'
+import ChartBar from '~/../icons/chart-bar.svg'
+import ChartLine from '~/../icons/chart-line.svg'
+import ChartPie from '~/../icons/chart-pie.svg'
+import Chat from '~/../icons/chat.svg'
 import CheckFilled from '~/../icons/check-filled.svg'
 import CheckBoxAll from '~/../icons/checkBox-all.svg'
 import CheckBoxOff from '~/../icons/checkbox-off.svg'
@@ -83,7 +90,14 @@ export const icons = {
     Attachment,
     Avatar,
     BlackBoard,
+    BulkCheck,
     Calendar,
+    CalendarCheck,
+    CalendarCreate,
+    ChartBar,
+    ChartLine,
+    ChartPie,
+    Chat,
     CheckFilled,
     CheckBoxAll,
     CheckBoxOn,
