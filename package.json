@@ -1,6 +1,6 @@
 {
     "name": "hrb-temaki",
-    "version": "0.11.23",
+    "version": "0.11.24",
     "private": true,
     "license": "Apache-2.0",
     "main": "./dist/index.js",
