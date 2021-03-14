@@ -1,9 +1,6 @@
 /// <reference types="styled-components" />
 import * as React from 'react';
 import { RequiredThemeProps } from '~/modules/theme';
-/**
- * Component
- */
 declare type Props = {
     text: string;
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void;

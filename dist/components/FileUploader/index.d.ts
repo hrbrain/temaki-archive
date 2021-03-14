@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Props
- */
 declare type Props = {
     onChange?: (file: File | null) => void;
     fileName: string | null;
@@ -12,12 +9,6 @@ declare type Props = {
     errorMessage?: string;
     borderColorType?: BorderColorType;
 };
-/**
- * Component
- */
 export declare const Component: React.NamedExoticComponent<Props>;
-/**
- * Styles
- */
 declare type BorderColorType = 'primary' | 'grayScaleS100';
 export {};

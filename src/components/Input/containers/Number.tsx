@@ -3,9 +3,9 @@ import { ContainerType } from '~/types/utils'
 
 import * as Input from '../index'
 
-/**
- * Utils
- */
+//------------------------------------------------------------------------------
+// Utils
+//------------------------------------------------------------------------------
 
 const useChangeNumberValueFromChangeEvent = (
     onChange: ((value: Input.NumberValue) => void) | undefined,
@@ -81,9 +81,9 @@ const useBlurNumberValueFromFocusEvent = (
         [onChange, onBlur, value]
     )
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     value: number

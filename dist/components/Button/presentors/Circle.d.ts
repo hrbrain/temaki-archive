@@ -1,8 +1,5 @@
 import * as React from 'react';
 import * as Index from '../index';
-/**
- * Component
- */
 declare type Props = {
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
     svg: string | undefined;
@@ -13,9 +10,6 @@ declare type Props = {
     dataTest: string | undefined;
 } & OuterProps;
 export declare const Component: ({ svg, ...props }: Props) => JSX.Element;
-/**
- * Styles
- */
 declare type OuterProps = {
     colorType: Index.CircleColorTypeProp;
 };

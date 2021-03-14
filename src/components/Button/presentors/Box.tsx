@@ -4,9 +4,9 @@ import styled from '~/modules/theme'
 import * as Index from '../index'
 import * as Styles from '../lib/styles'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void
@@ -31,9 +31,9 @@ export const Component: React.FC<Props> = ({ children, ...props }) => {
     )
 }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 type OuterProps = {
     height?: string

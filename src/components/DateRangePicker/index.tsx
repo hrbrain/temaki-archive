@@ -9,9 +9,9 @@ import * as Icon from '~/components/Icon'
 import * as IconFiles from '~/lib/iconFiles'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     displayFormat?: string
@@ -120,9 +120,9 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 type OuterProps = {
     width: string

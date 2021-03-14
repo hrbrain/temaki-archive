@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     text: string
@@ -21,9 +21,9 @@ Component.displayName = 'Tooltip'
 
 export { Component }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer: any = styled.div`
     display: inline-flex;

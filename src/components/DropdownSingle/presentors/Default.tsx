@@ -118,9 +118,9 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Wrap = styled.div<{ width?: string }>`
     width: ${props => props.width || '100%'};

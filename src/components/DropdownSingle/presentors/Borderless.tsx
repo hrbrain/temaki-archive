@@ -7,9 +7,9 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ItemList from '../ItemList'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 type Props = {
     items: ItemList.Item[]
     value: ItemList.Value
@@ -60,9 +60,9 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Wrap = styled.div<{ width?: string }>`
     position: relative;

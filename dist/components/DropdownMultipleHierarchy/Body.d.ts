@@ -1,8 +1,5 @@
 import * as React from 'react';
 import * as Menu from './Menu';
-/**
- * Component
- */
 declare type Props = {
     items: Menu.Item[];
     values: Menu.Value[];

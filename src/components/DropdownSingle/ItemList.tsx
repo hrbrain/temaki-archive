@@ -4,9 +4,9 @@ import styled, { defaultTheme } from '~/modules/theme'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     items: Item[]
@@ -44,9 +44,9 @@ const renderItem = (
     )
 }
 
-/**
- * ItemComponent
- */
+//------------------------------------------------------------------------------
+// ItemComponent
+//------------------------------------------------------------------------------
 
 export type Item = {
     value: Value
@@ -90,9 +90,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const ItemList = styled.ul`
     background: ${props => props.theme.colors.grayScale.S0};

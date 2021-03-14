@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from '~/modules/theme'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void
@@ -38,9 +38,9 @@ export const Component = React.memo<Props>(({ onClick, checked, text }) => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer = styled.div`
     display: inline-flex;

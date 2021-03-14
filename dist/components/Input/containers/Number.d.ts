@@ -1,9 +1,6 @@
 import * as React from 'react';
 import { ContainerType } from '~/types/utils';
 import * as Input from '../index';
-/**
- * Component
- */
 declare type Props = {
     value: number;
     onChange?: (value: Input.NumberValue) => void;

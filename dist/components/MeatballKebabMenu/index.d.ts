@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Component
- */
 declare type Props = {
     type: 'meatball' | 'kebab';
     position: 'top' | 'left' | 'right' | 'bottom';

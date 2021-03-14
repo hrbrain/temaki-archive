@@ -6,9 +6,9 @@ import * as TextPresentor from './presentors/Text'
 import LoadingGif from '../../../images/loading-sping.gif'
 import styled from '~/modules/theme'
 
-/**
- * Utils
- */
+//------------------------------------------------------------------------------
+// Utils
+//------------------------------------------------------------------------------
 
 export type ColorTypeProp =
     | 'primary'
@@ -63,9 +63,9 @@ const useIsLoadingByAsyncClick = (
     return [isLoading, handleClick]
 }
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 export type Props = {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void | Promise<void>
