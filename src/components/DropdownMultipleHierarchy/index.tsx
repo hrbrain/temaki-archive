@@ -1,8 +1,9 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import styled, { css } from '~/modules/theme'
 
 import * as Body from './Body'
 import * as Menu from './Menu'
+import * as SearchMenu from './SearchMenu'
 
 import * as ClickOutside from '~/modules/ClickOutside'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
@@ -55,7 +56,8 @@ export const Component = React.memo<Props>(props => {
         [isMenuVisible]
     )
 
-    const changeValue = React.useCallback(
+    // 通常のセレクトの場合、子要素も全て追加/削除される
+    const changeValueByMenu = React.useCallback(
         (item: Menu.Item) => {
             if (props.values.includes(item.value)) {
                 const newValues = removeValueWithChildren(props.values, item)
@@ -72,13 +74,24 @@ export const Component = React.memo<Props>(props => {
         [props.values, props.onChange]
     )
 
-    // TODO: filter実装
-    // const filteredItems = React.useMemo(() => {
-    //     const items = props.items.filter(item =>
-    //         item.label.includes(searchValue)
-    //     )
-    //     return items
-    // }, [searchValue, props.items])
+    // 検索結果をセレクトした場合、選ばれた要素のみ追加/削除される
+    const changeValueBySearchMenu = React.useCallback(
+        (changedValue: SearchMenu.Value) => {
+            if (props.values.includes(changedValue)) {
+                const newValues = props.values.filter(v => v !== changedValue)
+                props.onChange(newValues)
+                return
+            }
+
+            const newValues = [...props.values, changedValue]
+            props.onChange(newValues)
+        },
+        [props.values, props.onChange]
+    )
+
+    const filteredItems = React.useMemo<SearchMenu.Item[]>(() => {
+        return searchItems(props.items, searchValue, [], false)
+    }, [searchValue, props.items])
 
     const keyDownInInput = React.useCallback(
         (e: React.KeyboardEvent) => {
@@ -90,6 +103,7 @@ export const Component = React.memo<Props>(props => {
         [props.values, searchValue, props.onChange]
     )
 
+    const isSearching = searchValue !== ''
     const noop = () => {}
 
     return (
@@ -113,12 +127,22 @@ export const Component = React.memo<Props>(props => {
                         onKeydown={keyDownInInput}
                         onClickIcon={!props.disabled ? clickIcon : noop}
                     />
-                    <StyledMenu
-                        isVisible={isMenuVisible}
-                        items={props.items}
-                        selectedValues={props.values}
-                        onClickItem={changeValue}
-                    />
+                    {isSearching ? (
+                        <StyledSearchMenu
+                            isVisible={isMenuVisible}
+                            items={filteredItems}
+                            selectedValues={props.values}
+                            onClickItem={changeValueBySearchMenu}
+                            searchValue={searchValue}
+                        />
+                    ) : (
+                        <StyledMenu
+                            isVisible={isMenuVisible}
+                            items={props.items}
+                            selectedValues={props.values}
+                            onClickItem={changeValueByMenu}
+                        />
+                    )}
                 </ClickOutside.Component>
             </Inner>
             <ErrorMessage.Component
@@ -165,6 +189,45 @@ const removeValueWithChildren = (values: Menu.Value[], item: Menu.Item) => {
     return resultArr
 }
 
+const searchItems = (
+    items: Menu.Item[],
+    searchValue: string,
+    parents: string[],
+    // ↓親階層がすでに検索に引っかかっているかどうか
+    hasSearchValueInParents: boolean
+): SearchMenu.Item[] => {
+    let resultArr: SearchMenu.Item[] = []
+    const isRoot = parents.length === 0
+
+    for (const item of items) {
+        const hasSearchValue =
+            hasSearchValueInParents || item.label.indexOf(searchValue) > -1
+
+        if (hasSearchValue) {
+            const hierarchy = isRoot ? '' : parents.join(' > ')
+            resultArr.push({
+                label: item.label,
+                value: item.value,
+                hierarchy: hierarchy
+            })
+        }
+
+        if (item.children !== undefined) {
+            const newParents = [...parents, item.label]
+            resultArr = resultArr.concat(
+                searchItems(
+                    item.children,
+                    searchValue,
+                    newParents,
+                    hasSearchValue
+                )
+            )
+        }
+    }
+
+    return resultArr
+}
+
 Component.displayName = 'DropdownMultipleHierarchy'
 
 const Wrap = styled.div<{ width?: string }>`
@@ -175,7 +238,7 @@ const Inner = styled.div`
     position: relative;
 `
 
-const StyledMenu = styled(Menu.Component)<{ isVisible?: boolean }>`
+const staticMenuStyle = css`
     min-width: 100%;
     max-width: calc(24px + 28px + 420px);
     position: absolute;
@@ -183,6 +246,25 @@ const StyledMenu = styled(Menu.Component)<{ isVisible?: boolean }>`
     margin-top: 4px;
     transform-origin: top;
     transition: 0.2s;
+`
+
+const StyledMenu = styled(Menu.Component)<{ isVisible?: boolean }>`
+    ${staticMenuStyle}
+
+    ${props =>
+        props.isVisible
+            ? `
+        visibility: visible;
+        transform: scaleY(1);
+    `
+            : `
+        visibility: hidden;
+        transform: scaleY(0);
+    `}
+`
+
+const StyledSearchMenu = styled(SearchMenu.Component)<{ isVisible?: boolean }>`
+    ${staticMenuStyle}
 
     ${props =>
         props.isVisible
