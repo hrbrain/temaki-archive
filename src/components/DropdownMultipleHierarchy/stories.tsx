@@ -74,3 +74,109 @@ export const WithInitialValue = () => {
         </div>
     )
 }
+
+const itemsForSearch = [
+    {
+        label: '全社',
+        value: '全社',
+        children: [
+            {
+                label: '部署1',
+                value: '部署1',
+                children: [
+                    {
+                        label: '0',
+                        value: '0',
+                        children: [
+                            {
+                                label: '田中チーム',
+                                value: '田中チーム'
+                            },
+                            {
+                                label: '田村チーム',
+                                value: '田村チーム'
+                            },
+                            {
+                                label: '山田チーム',
+                                value: '山田チーム'
+                            }
+                        ]
+                    },
+                    {
+                        label: '1',
+                        value: '1',
+                        children: [
+                            {
+                                label: '山中チーム',
+                                value: '山中チーム'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        label: '全社2',
+        value: '全社2',
+        children: [
+            {
+                label: '部署2',
+                value: '部署2',
+                children: [
+                    {
+                        label: '0',
+                        value: '0',
+                        children: [
+                            {
+                                label: '高橋チーム',
+                                value: '高橋チーム'
+                            },
+                            {
+                                label: '高村チーム',
+                                value: '高村チーム'
+                            },
+                            {
+                                label: '村田チーム',
+                                value: '村田チーム'
+                            }
+                        ]
+                    },
+                    {
+                        label: '1',
+                        value: '1',
+                        children: [
+                            {
+                                label: '中村チーム',
+                                value: '中村チーム'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+export const WithItemsForSearch = () => {
+    const [values, setValues] = React.useState<string[]>([])
+    const onChange = React.useCallback((values: string[]) => {
+        setValues(values)
+    }, [])
+
+    return (
+        <div className="ml-20 mt-10">
+            <DropdownMultipleHierarchy.Component
+                values={values}
+                items={itemsForSearch}
+                placeholder={text('placeholder', '選択してください')}
+                disabled={boolean('disabled', false)}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '250px')}
+                onChange={onChange}
+                diff={boolean('diff', false)}
+            />
+        </div>
+    )
+}
