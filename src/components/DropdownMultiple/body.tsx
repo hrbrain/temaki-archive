@@ -213,7 +213,7 @@ const Body = styled.div<BodyType>`
             if (props.isMenuVisible) {
                 return props.theme.colors.utilities.highlightGreen.default
             }
-            return props.theme.colors.main.grayScale[400]
+            return props.theme.colors.grayScale.S10
         }};
     border-radius: 6px;
     user-select: none;
