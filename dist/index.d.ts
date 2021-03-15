@@ -110,6 +110,7 @@ export declare const icons: {
     ArrowDown: string;
     Attachment: string;
     Avatar: string;
+    Average: string;
     BlackBoard: string;
     BulkCheck: string;
     Calendar: string;
@@ -170,8 +171,10 @@ export declare const icons: {
     Refresh: string;
     Remove: string;
     Search: string;
+    Section: string;
     Settings: string;
     Share: string;
+    Sheet: string;
     SingleCheck: string;
     Sort: string;
     SortList: string;
@@ -181,7 +184,9 @@ export declare const icons: {
     Staff: string;
     Tag: string;
     Text: string;
+    Textarea: string;
     Time: string;
+    Total: string;
     Transition: string;
     TreeToggle: string;
     Undo: string;
