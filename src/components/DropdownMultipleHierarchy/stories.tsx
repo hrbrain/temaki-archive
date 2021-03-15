@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as DropdownMultipleHierarchy from './'
-import { boolean, text } from '@storybook/addon-knobs'
+import { boolean, text, object as knobsObject } from '@storybook/addon-knobs'
 import { dummyItems } from './dummyItems'
 
 export default {
@@ -203,3 +203,49 @@ export const リアルな組織図サンプル = () => {
         </div>
     )
 }
+
+export const Custom = () => {
+    const [values, setValues] = React.useState<string[]>([])
+    const onChange = React.useCallback((values: string[]) => {
+        setValues(values)
+    }, [])
+
+    return (
+        <div className="ml-20 mt-10">
+            <DropdownMultipleHierarchy.Component
+                values={values}
+                items={knobsObject('items', customSample)}
+                placeholder={text('placeholder', '選択してください')}
+                disabled={boolean('disabled', false)}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '250px')}
+                onChange={onChange}
+                diff={boolean('diff', false)}
+            />
+        </div>
+    )
+}
+
+const customSample = [
+    {
+        label: '部署1',
+        value: 'value1',
+        children: [
+            {
+                label: '部署1-1',
+                value: 'value1-1',
+                children: [
+                    {
+                        label: '部署1-1-1',
+                        value: 'value1-1-1'
+                    }
+                ]
+            },
+            {
+                label: '部署1-2',
+                value: 'value1-2'
+            }
+        ]
+    }
+]
