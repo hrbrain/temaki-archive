@@ -3,9 +3,9 @@ import styled from '~/modules/theme'
 import TextareaAutosize from 'react-textarea-autosize'
 import * as FormErrorMessage from '~/components/lib/FormErrorMessage'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     value?: string
@@ -63,9 +63,9 @@ export const Component = React.memo<Props>(props => {
 
 Component.displayName = 'Textarea'
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer = styled.div`
     display: inline-flex;

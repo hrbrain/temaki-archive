@@ -6,9 +6,9 @@ import * as Icon from '~/components/Icon'
 import * as Menu from './Menu'
 import * as Theme from '../../modules/theme'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     items: Menu.Item[]
@@ -131,9 +131,9 @@ const findItem = (
     return undefined
 }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 const IconWrap = styled.div`
     cursor: pointer;
 `

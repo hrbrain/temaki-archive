@@ -6,16 +6,16 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
-/**
- * Utils
- */
+//------------------------------------------------------------------------------
+// Utils
+//------------------------------------------------------------------------------
 const styled = Theme.default
 
 const iconSize = '24px'
 
-/**
- * Props
- */
+//------------------------------------------------------------------------------
+// Props
+//------------------------------------------------------------------------------
 type Props = {
     onChange?: (file: File | null) => void
     fileName: string | null
@@ -27,9 +27,9 @@ type Props = {
     borderColorType?: BorderColorType
 }
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 export const Component = React.memo<Props>(props => {
     const onDrop = React.useCallback(
@@ -109,9 +109,9 @@ function renderRemoveButton(onClick: (e: React.MouseEvent) => void) {
     )
 }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 type BorderColorType = 'primary' | 'grayScaleS100'
 const getBorderColor = (
     theme: Theme.RequiredThemeProps,

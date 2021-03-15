@@ -1543,7 +1543,133 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      BulkCheck
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       Calendar
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      CalendarCheck
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      CalendarCreate
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      ChartBar
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      ChartLine
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      ChartPie
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Chat
     </p>
   </div>
   <div

@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Component
- */
 declare type Props = {
     items: Item[];
     value: Value;
@@ -11,9 +8,6 @@ declare type Props = {
     onBlurSearchValue?: () => void;
 };
 export declare const Component: React.MemoExoticComponent<(props: Props) => JSX.Element>;
-/**
- * ItemComponent
- */
 export declare type Item = {
     value: Value;
     text: string;

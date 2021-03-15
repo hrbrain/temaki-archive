@@ -4,18 +4,18 @@ import * as NumberContainer from './containers/Number'
 import * as TextContainer from './containers/Text'
 import * as Presenter from './presenters/Default'
 
-/**
- * Utils
- */
+//------------------------------------------------------------------------------
+// Utils
+//------------------------------------------------------------------------------
 export type NumberValue = number
 export type StringValue = string
 
 const TEXT = 'text' as const
 const NUMBER = 'number' as const
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type CommonProps<T> = T extends {
     format: infer InferFormat

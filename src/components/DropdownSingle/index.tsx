@@ -4,9 +4,9 @@ import * as ItemList from './ItemList'
 import * as Default from './presentors/Default'
 import * as Borderless from './presentors/Borderless'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 export type Item = ItemList.Item
 

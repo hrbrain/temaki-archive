@@ -1,8 +1,5 @@
 import * as React from 'react';
 import * as Index from '../index';
-/**
- * Component
- */
 declare type Props = {
     svg: string | undefined;
     colorType: Index.TextColorTypeProp | undefined;

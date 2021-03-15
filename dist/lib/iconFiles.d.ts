@@ -5,7 +5,14 @@ export declare const icons: {
     Attachment: string;
     Avatar: string;
     BlackBoard: string;
+    BulkCheck: string;
     Calendar: string;
+    CalendarCheck: string;
+    CalendarCreate: string;
+    ChartBar: string;
+    ChartLine: string;
+    ChartPie: string;
+    Chat: string;
     CheckFilled: string;
     CheckBoxAll: string;
     CheckBoxOn: string;

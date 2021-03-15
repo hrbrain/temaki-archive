@@ -1,17 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title></title>
-    <desc>Created with Sketch.</desc>
-    <g id="basics/icon/common/chevron-up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g>
-            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-            <g id="outline" transform="translate(4.000000, 8.000000)" stroke="#333333" stroke-width="1.5">
-                <polyline id="Stroke-1" points="0 8 8 0 16 8"></polyline>
-            </g>
-            <g id="fill" transform="translate(3.000000, 6.000000)" fill="#333333" fill-rule="nonzero">
-                <polygon id="Stroke-1" points="9 3.06066017 1.53033009 10.5303301 0.469669914 9.46966991 9 0.939339828 17.5303301 9.46966991 16.4696699 10.5303301"></polygon>
-            </g>
-        </g>
-    </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="fill" fill-rule="evenodd" clip-rule="evenodd" d="M5.46967 15.5303C5.76256 15.8232 6.23744 15.8232 6.53033 15.5303L12 10.0607L17.4697 15.5303C17.7626 15.8232 18.2374 15.8232 18.5303 15.5303C18.8232 15.2374 18.8232 14.7626 18.5303 14.4697L12.5303 8.46967C12.2374 8.17678 11.7626 8.17678 11.4697 8.46967L5.46967 14.4697C5.17678 14.7626 5.17678 15.2374 5.46967 15.5303Z" fill="#088736"/>
 </svg>
