@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as DropdownMultipleHierarchy from './'
 import { boolean, text } from '@storybook/addon-knobs'
+import { dummyItems } from './dummyItems'
 
 export default {
     title: 'Components/DropdownMultipleHierarchy'
@@ -168,6 +169,29 @@ export const WithItemsForSearch = () => {
             <DropdownMultipleHierarchy.Component
                 values={values}
                 items={itemsForSearch}
+                placeholder={text('placeholder', '選択してください')}
+                disabled={boolean('disabled', false)}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '250px')}
+                onChange={onChange}
+                diff={boolean('diff', false)}
+            />
+        </div>
+    )
+}
+
+export const リアルな組織図サンプル = () => {
+    const [values, setValues] = React.useState<string[]>([])
+    const onChange = React.useCallback((values: string[]) => {
+        setValues(values)
+    }, [])
+
+    return (
+        <div className="ml-20 mt-10">
+            <DropdownMultipleHierarchy.Component
+                values={values}
+                items={dummyItems}
                 placeholder={text('placeholder', '選択してください')}
                 disabled={boolean('disabled', false)}
                 isError={boolean('isError', false)}
