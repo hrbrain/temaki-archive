@@ -6115,7 +6115,7 @@ exports[`Storyshots Components/DropdownMultiple Input 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0 12px;
-  border: 1px solid rgb(214,214,214);
+  border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6268,7 +6268,7 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0 12px;
-  border: 1px solid rgb(214,214,214);
+  border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
