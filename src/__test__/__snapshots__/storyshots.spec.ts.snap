@@ -1525,6 +1525,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      Average
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       BlackBoard
     </p>
   </div>
@@ -2605,6 +2623,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      Section
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       Settings
     </p>
   </div>
@@ -2624,6 +2660,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
       className="c2"
     >
       Share
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Sheet
     </p>
   </div>
   <div
@@ -2803,7 +2857,43 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      Textarea
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       Time
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Total
     </p>
   </div>
   <div
