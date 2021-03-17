@@ -56,8 +56,10 @@ const useChangeNumberValueFromChangeEvent = (
         [onChange, onChangeNative, decimalPlace]
     )
 const useBlurNumberValueFromFocusEvent = (
-    value: number,
-    onChange: ((value: Input.NumberValue) => void) | undefined,
+    value: number | string,
+    onChange:
+        | ((value: Input.NumberValue | Input.StringValue) => void)
+        | undefined,
     onBlur: ((e: React.FocusEvent<HTMLInputElement>) => void) | undefined
 ) =>
     React.useCallback(
@@ -65,15 +67,16 @@ const useBlurNumberValueFromFocusEvent = (
             if (onBlur) {
                 onBlur(e)
             }
-            // 値が . で終わる、または、- で始まる場合適切な値に書き換える
+            // 値がnullableな場合valueを空文字へ、`.`で終わる場合はvalueを数字のvalueへする
             if (onChange) {
-                const val = Number(value)
-                if (value.toString().endsWith('.')) {
-                    onChange(val)
+                const numberValue = Number(value)
+                const isNullableValue = value === '' || isNaN(numberValue)
+                if (isNullableValue) {
+                    onChange('')
                     return
                 }
-                if (isNaN(val)) {
-                    onChange(0)
+                if (value.toString().endsWith('.')) {
+                    onChange(numberValue)
                     return
                 }
             }
@@ -86,8 +89,8 @@ const useBlurNumberValueFromFocusEvent = (
 //------------------------------------------------------------------------------
 
 type Props = {
-    value: number
-    onChange?: (value: Input.NumberValue) => void
+    value: number | string
+    onChange?: (value: Input.NumberValue | Input.StringValue) => void
     onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
     onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
     decimalPlace?: number | null

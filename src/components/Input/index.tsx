@@ -17,36 +17,59 @@ const NUMBER = 'number' as const
 // Component
 //------------------------------------------------------------------------------
 
-type Props = {
-    type?: string
-    name?: string
-    unit?: string
-    onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
-    onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
-    diff?: boolean
-    placeholder?: string
-    disabled?: boolean
-    errored?: boolean
-    errorMessage?: string
-    onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
-    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
-    className?: string
-    decimalPlace?: number | null
-} & (
-    | {
-          format: typeof TEXT
-          value: StringValue
-          onChange: (value: StringValue) => void
+type CommonProps<T> = T extends {
+    format: infer InferFormat
+    value: infer InferValue
+    onChange: (arg: infer InferArg) => void
+}
+    ? {
+          name?: string
+          unit?: string
+          onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void
+          onChangeNative?: (e: React.ChangeEvent<HTMLInputElement>) => void
+          diff?: boolean
+          placeholder?: string
+          disabled?: boolean
+          errored?: boolean
+          errorMessage?: string
+          onKeyUp?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+          onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
+          className?: string
+          decimalPlace?: number | null
+          format: InferFormat
+          value: InferValue
+          onChange: (arg: InferArg) => void
+          type?: string
       }
-    | {
-          format: typeof NUMBER
-          value: NumberValue
-          onChange: (value: NumberValue) => void
-          type?: typeof NUMBER
-      }
-)
-export const Component = React.memo<Props>(({ children: _, ...props }) => {
-    const [value, setValue] = React.useState(props.value)
+    : never
+
+type TextProps = CommonProps<{
+    format: typeof TEXT
+    value: StringValue | null
+    onChange: (value: StringValue) => void
+}>
+
+type NumberProps = CommonProps<{
+    format: typeof NUMBER
+    value: NumberValue | StringValue | null
+    onChange: (value: NumberValue) => void
+    type?: typeof NUMBER
+}>
+
+type Props = TextProps | NumberProps
+
+const removeNullValue = (value: null | number | string) => {
+    switch (value) {
+        case null:
+            return ''
+        default:
+            return value
+    }
+}
+
+export const Component = React.memo<Props>(props => {
+    const primitiveValue = removeNullValue(props.value)
+    const [value, setValue] = React.useState(primitiveValue)
     const changeValue = React.useCallback(
         (value: string | number) => {
             props.onChange(value as never)
@@ -55,7 +78,11 @@ export const Component = React.memo<Props>(({ children: _, ...props }) => {
         [props.onChange]
     )
 
-    React.useLayoutEffect(() => setValue(props.value), [props.value])
+    React.useLayoutEffect(() => {
+        /** なぜか初期表示でprops.valueがnullになって渡ってくる。*/
+        if (props.value === null) return
+        setValue(props.value)
+    }, [props.value])
 
     switch (props.format) {
         case NUMBER:
@@ -63,8 +90,8 @@ export const Component = React.memo<Props>(({ children: _, ...props }) => {
                 <NumberContainer.Container
                     {...props}
                     onChange={changeValue}
-                    /* Propsの型でUnionしてるので format=NUMBER のときは必ずnumberのはず */
-                    value={value as number}
+                    /* valueはsetStateで両方の型が入る可能性があって推論は両方の型になる */
+                    value={value}
                     Presenter={Presenter.Presenter}
                     decimalPlace={props.decimalPlace}
                 />
@@ -73,8 +100,9 @@ export const Component = React.memo<Props>(({ children: _, ...props }) => {
             return (
                 <TextContainer.Container
                     {...props}
+                    type={props.type}
                     onChange={changeValue}
-                    /* Propsの型でUnionしてるので format=STRING のときは必ずstringのはず */
+                    /* valueはsetStateで両方の型が入る可能性があって推論は両方の型になる */
                     value={value as string}
                     Presenter={Presenter.Presenter}
                 />
