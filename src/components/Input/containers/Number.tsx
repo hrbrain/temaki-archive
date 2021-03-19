@@ -8,7 +8,9 @@ import * as Input from '../index'
 //------------------------------------------------------------------------------
 
 const useChangeNumberValueFromChangeEvent = (
-    onChange: ((value: Input.NumberValue) => void) | undefined,
+    onChange:
+        | ((value: Input.NumberValue | Input.StringValue) => void)
+        | undefined,
     onChangeNative:
         | ((e: React.ChangeEvent<HTMLInputElement>) => void)
         | undefined,
@@ -34,23 +36,17 @@ const useChangeNumberValueFromChangeEvent = (
                     onChange(tgtValue as any)
                     return
                 }
-
                 const num = Number(tgtValue)
-                if (isNaN(num)) {
+                if (isNaN(num) && !tgtValue.endsWith('.')) {
                     return
                 }
-
                 if (decimalPlace && decimalPlace > 0) {
-                    if (tgtValue.endsWith('.')) {
-                        onChange(tgtValue.replace(/[^0-9.-]/g, '') as any)
-                        return
-                    }
-
+                    if (isNaN(num)) onChange(tgtValue)
                     onChange(Number(num.toFixed(decimalPlace)))
                     return
+                } else {
+                    onChange(tgtValue)
                 }
-
-                onChange(num)
             }
         },
         [onChange, onChangeNative, decimalPlace]
@@ -69,14 +65,13 @@ const useBlurNumberValueFromFocusEvent = (
             }
             // 値がnullableな場合valueを空文字へ、`.`で終わる場合はvalueを数字のvalueへする
             if (onChange) {
+                if (value.toString().endsWith('.')) {
+                    onChange(value)
+                }
                 const numberValue = Number(value)
                 const isNullableValue = value === '' || isNaN(numberValue)
                 if (isNullableValue) {
                     onChange('')
-                    return
-                }
-                if (value.toString().endsWith('.')) {
-                    onChange(numberValue)
                     return
                 }
             }
