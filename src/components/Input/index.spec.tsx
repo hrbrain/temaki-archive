@@ -138,7 +138,7 @@ describe('Input format of number', () => {
         const inputEl = wrapper.find('input')
         act(() => {
             inputEl.simulate('change', { target: { value: '200' } })
-            expect(mockOnChange).toHaveBeenCalledWith(200)
+            expect(mockOnChange).toHaveBeenCalledWith('200')
             expect(mockOnChangeNative).toHaveBeenCalled()
         })
     })
