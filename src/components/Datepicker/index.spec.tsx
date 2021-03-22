@@ -34,7 +34,7 @@ describe('DatePicker', () => {
         expect(wrapper.exists()).toBe(true)
     })
 
-    describe('isInclusivelyBeforeDay', () => {
+    describe('Utils#isInclusivelyBeforeDay', () => {
         it('過去の日付を渡す', () => {
             const result = DatePicker.Utils.isInclusivelyBeforeDay(
                 new Date(today)
@@ -60,7 +60,7 @@ describe('DatePicker', () => {
         })
     })
 
-    describe('isInclusivelyAfterDay', () => {
+    describe('Utils#isInclusivelyAfterDay', () => {
         it('過去の日付を渡す', () => {
             const result = DatePicker.Utils.isInclusivelyAfterDay(
                 new Date(today)

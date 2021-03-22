@@ -9,6 +9,8 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
+export * from './utils'
+
 /**
  * Component
  */
@@ -27,19 +29,6 @@ type Props = {
     defaultHoverColor?: string
     theme: RequiredThemeProps
     isOutsideRange?: (day: Moment.Moment) => boolean
-}
-
-const isInclusivelyBeforeDay = (date: Date) => (day: Moment.Moment) => {
-    return ReactDates.isInclusivelyBeforeDay(day, Moment(date))
-}
-
-const isInclusivelyAfterDay = (date: Date) => (day: Moment.Moment) => {
-    return ReactDates.isInclusivelyAfterDay(day, Moment(date))
-}
-
-export const Utils = {
-    isInclusivelyAfterDay,
-    isInclusivelyBeforeDay
 }
 
 export const Component = withTheme(

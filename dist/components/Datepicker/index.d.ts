@@ -4,6 +4,7 @@ import { RequiredThemeProps } from '~/modules/theme';
 import 'react-dates/initialize';
 import 'moment/locale/ja';
 import * as Moment from 'moment';
+export * from './utils';
 /**
  * Component
  */
@@ -22,11 +23,6 @@ declare type Props = {
     theme: RequiredThemeProps;
     isOutsideRange?: (day: Moment.Moment) => boolean;
 };
-export declare const Utils: {
-    isInclusivelyAfterDay: (date: Date) => (day: Moment.Moment) => boolean;
-    isInclusivelyBeforeDay: (date: Date) => (day: Moment.Moment) => boolean;
-};
 export declare const Component: React.ForwardRefExoticComponent<Pick<Props, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor" | "isOutsideRange"> & {
     theme?: RequiredThemeProps | undefined;
 }>;
-export {};
