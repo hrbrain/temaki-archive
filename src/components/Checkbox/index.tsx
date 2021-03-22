@@ -4,9 +4,9 @@ import styled from '~/modules/theme'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     text?: string
@@ -56,9 +56,9 @@ export const Component = React.memo<Props>(
     }
 )
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Outer = styled.div`
     display: inline-flex;

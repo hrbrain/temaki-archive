@@ -43,9 +43,9 @@ export const Component = React.memo<Props>(props => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 type OuterType = {
     variant: Variant
     highlightGreen: string

@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Component
- */
 declare type Props = {
     onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
     checked: boolean;

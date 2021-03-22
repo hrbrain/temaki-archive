@@ -1,8 +1,5 @@
 import * as React from 'react';
 import * as ItemList from './ItemList';
-/**
- * Component
- */
 export declare type Item = ItemList.Item;
 declare type Props = {
     items: ItemList.Item[];

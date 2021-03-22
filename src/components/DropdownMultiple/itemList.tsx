@@ -4,9 +4,9 @@ import styled from '~/modules/theme'
 import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     items: Item[]
@@ -45,9 +45,9 @@ const renderItem = (selected: Value[], onClickItem: (value: Value) => void) => (
     )
 }
 
-/**
- * ItemComponent
- */
+//------------------------------------------------------------------------------
+// ItemComponent
+//------------------------------------------------------------------------------
 
 export type Item = {
     text: string
@@ -86,9 +86,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
     )
 })
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const ItemList = styled.ul<{ isVisible?: boolean }>`
     display: block;

@@ -7,9 +7,9 @@ import * as ItemList from './itemList'
 import * as ClickOutside from '~/modules/ClickOutside'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 export type Item = ItemList.Item
 
@@ -139,9 +139,9 @@ export const Component = React.memo<Props>(props => {
 
 Component.displayName = 'DropdownMultiple'
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 
 const Wrap = styled.div<{ width?: string }>`
     width: ${props => props.width || '100%'};

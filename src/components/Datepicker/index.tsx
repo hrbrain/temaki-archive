@@ -11,9 +11,9 @@ import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
 export * from './utils'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     displayFormat?: string
@@ -128,9 +128,9 @@ export const Component = withTheme(
     })
 )
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 type OuterProps = {
     width: string
     disabled?: boolean

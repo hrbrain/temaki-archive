@@ -3,8 +3,16 @@ import AnalyzeIcon from '~/../icons/analyze.svg'
 import ArrowDown from '~/../icons/arrow-down.svg'
 import Attachment from '~/../icons/attachment.svg'
 import Avatar from '~/../icons/avatar.svg'
+import Average from '~/../icons/average.svg'
 import BlackBoard from '~/../icons/blackbaord.svg'
+import BulkCheck from '~/../icons/bulk-check.svg'
 import Calendar from '~/../icons/calendar.svg'
+import CalendarCheck from '~/../icons/calendar-check.svg'
+import CalendarCreate from '~/../icons/calendar-create.svg'
+import ChartBar from '~/../icons/chart-bar.svg'
+import ChartLine from '~/../icons/chart-line.svg'
+import ChartPie from '~/../icons/chart-pie.svg'
+import Chat from '~/../icons/chat.svg'
 import CheckFilled from '~/../icons/check-filled.svg'
 import CheckBoxAll from '~/../icons/checkBox-all.svg'
 import CheckBoxOff from '~/../icons/checkbox-off.svg'
@@ -56,8 +64,10 @@ import Redo from '~/../icons/redo.svg'
 import Refresh from '~/../icons/refresh.svg'
 import Remove from '~/../icons/remove.svg'
 import Search from '~/../icons/search.svg'
+import Section from '~/../icons/section.svg'
 import Settings from '~/../icons/settings.svg'
 import Share from '~/../icons/share.svg'
+import Sheet from '~/../icons/sheet.svg'
 import SingleCheck from '~/../icons/single-check.svg'
 import SortList from '~/../icons/sort-list.svg'
 import SortUpDown from '~/../icons/sort-updown.svg'
@@ -67,7 +77,9 @@ import Subtract from '~/../icons/subtract.svg'
 import Staff from '~/../icons/staff.svg'
 import Tag from '~/../icons/tag.svg'
 import Text from '~/../icons/text.svg'
+import Textarea from '~/../icons/textarea.svg'
 import Time from '~/../icons/time.svg'
+import Total from '~/../icons/time.svg'
 import Transition from '~/../icons/transition.svg'
 import TreeToggle from '~/../icons/tree-toggle.svg'
 import Undo from '~/../icons/undo.svg'
@@ -82,8 +94,16 @@ export const icons = {
     ArrowDown,
     Attachment,
     Avatar,
+    Average,
     BlackBoard,
+    BulkCheck,
     Calendar,
+    CalendarCheck,
+    CalendarCreate,
+    ChartBar,
+    ChartLine,
+    ChartPie,
+    Chat,
     CheckFilled,
     CheckBoxAll,
     CheckBoxOn,
@@ -135,8 +155,10 @@ export const icons = {
     Refresh,
     Remove,
     Search,
+    Section,
     Settings,
     Share,
+    Sheet,
     SingleCheck,
     Sort,
     SortList,
@@ -146,7 +168,9 @@ export const icons = {
     Staff,
     Tag,
     Text,
+    Textarea,
     Time,
+    Total,
     Transition,
     TreeToggle,
     Undo,

@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Component
- */
 declare const DEFAULT: "default";
 declare const BUTTONLESS: "buttonless";
 declare type Variant = 'warning' | 'info' | 'progress';

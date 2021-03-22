@@ -6,9 +6,9 @@ import * as Icon from '~/components/Icon'
 import * as ItemList from './itemList'
 import * as Theme from '../../modules/theme'
 
-/**
- * Component
- */
+//------------------------------------------------------------------------------
+// Component
+//------------------------------------------------------------------------------
 
 type Props = {
     items: ItemList.Item[]
@@ -156,9 +156,9 @@ const renderText = (
     )
 }
 
-/**
- * Styles
- */
+//------------------------------------------------------------------------------
+// Styles
+//------------------------------------------------------------------------------
 const IconWrap = styled.div`
     cursor: pointer;
 `
@@ -213,7 +213,7 @@ const Body = styled.div<BodyType>`
             if (props.isMenuVisible) {
                 return props.theme.colors.utilities.highlightGreen.default
             }
-            return props.theme.colors.main.grayScale[400]
+            return props.theme.colors.grayScale.S10
         }};
     border-radius: 6px;
     user-select: none;

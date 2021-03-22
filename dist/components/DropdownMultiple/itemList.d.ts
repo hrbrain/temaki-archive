@@ -1,7 +1,4 @@
 import * as React from 'react';
-/**
- * Component
- */
 declare type Props = {
     items: Item[];
     values: Value[];
@@ -10,9 +7,6 @@ declare type Props = {
     isVisible?: boolean;
 };
 export declare const Component: React.NamedExoticComponent<Props>;
-/**
- * ItemComponent
- */
 export declare type Item = {
     text: string;
     value: Value;

@@ -5,9 +5,6 @@ import 'react-dates/initialize';
 import 'moment/locale/ja';
 import * as Moment from 'moment';
 export * from './utils';
-/**
- * Component
- */
 declare type Props = {
     displayFormat?: string;
     monthFormat?: string;
