@@ -6376,7 +6376,7 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/DropdownMultipleHierarchy Custom 1`] = `
+exports[`Storyshots Components/DropdownMultipleHierarchy Default 1`] = `
 .c5 {
   height: 24px;
   width: 24px;
@@ -6627,22 +6627,22 @@ exports[`Storyshots Components/DropdownMultipleHierarchy Custom 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1`] = `
+exports[`Storyshots Components/DropdownMultipleHierarchy With Initial Value 1`] = `
+.c6 {
+  height: 24px;
+  width: 24px;
+}
+
+.c6 svg {
+  height: 24px;
+  width: 24px;
+}
+
 .c5 {
-  height: 24px;
-  width: 24px;
-}
-
-.c5 svg {
-  height: 24px;
-  width: 24px;
-}
-
-.c4 {
   cursor: pointer;
 }
 
-.c6 {
+.c7 {
   position: absolute;
   right: 12px;
   top: 50%;
@@ -6654,7 +6654,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
   cursor: pointer;
 }
 
-.c6.visible {
+.c7.visible {
   -webkit-transform: translateY(-50%) rotate(180deg);
   -ms-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(180deg);
@@ -6694,7 +6694,29 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
   color: rgb(51,51,51);
 }
 
-.c7 {
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgb(245,245,245);
+  color: rgb(51,51,51);
+  padding: 6.5px 8px;
+  margin: 4px 8px 4px 0px;
+  border-radius: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.c8 {
   display: block;
   background: rgb(255,255,255);
   border-radius: 6px;
@@ -6703,15 +6725,15 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
   overflow-y: auto;
 }
 
-.c7 > .c10 {
+.c8 > .c11 {
   margin-left: 12px;
 }
 
-.c9 {
+.c10 {
   margin-left: 25px;
 }
 
-.c11 {
+.c12 {
   list-style-type: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6727,11 +6749,11 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
   padding: 4px 0;
 }
 
-.c11:hover {
+.c12:hover {
   color: rgb(51,51,51);
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6743,21 +6765,21 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
   margin-left: 6px;
 }
 
-.c12 {
+.c13 {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
-.c14 #fill {
+.c15 #fill {
   fill: rgb(8,135,54);
 }
 
-.c14 #fill .disabled {
+.c15 #fill .disabled {
   fill: rgb(214,214,214);
 }
 
-.c15 {
+.c16 {
   padding-left: 4px;
   padding-right: 10px;
 }
@@ -6770,7 +6792,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
   position: relative;
 }
 
-.c8 {
+.c9 {
   min-width: 100%;
   max-width: calc(24px + 28px + 420px);
   position: absolute;
@@ -6809,15 +6831,24 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
             data-test="selectedItems"
             disabled={false}
           >
-            選択してください
+            <div
+              className="c4"
+            >
+              部署1
+            </div>
+            <div
+              className="c4"
+            >
+              部署1-1
+            </div>
           </div>
         </div>
         <div
-          className="c4"
+          className="c5"
           onClick={[Function]}
         >
           <div
-            className="c5 c6"
+            className="c6 c7"
             dangerouslySetInnerHTML={
               Object {
                 "__html": undefined,
@@ -6827,20 +6858,20 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
           />
         </div>
         <div
-          className="c7 c8"
+          className="c8 c9"
         >
           <ul
-            className="c9 c10 "
+            className="c10 c11 "
           >
             <li
-              className="c11"
+              className="c12"
             >
               <div
                 className=""
                 onClick={[Function]}
               >
                 <div
-                  className="c5 c12"
+                  className="c6 c13"
                   dangerouslySetInnerHTML={
                     Object {
                       "__html": undefined,
@@ -6850,12 +6881,12 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
                 />
               </div>
               <div
-                className="c13"
+                className="c14"
                 data-test="item-clickArea"
                 onClick={[Function]}
               >
                 <div
-                  className="c5 c14"
+                  className="c6 c15"
                   dangerouslySetInnerHTML={
                     Object {
                       "__html": undefined,
@@ -6864,51 +6895,9 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
                   size="24px"
                 />
                 <div
-                  className="c15"
+                  className="c16"
                 >
-                  全社
-                </div>
-              </div>
-            </li>
-          </ul>
-          <ul
-            className="c9 c10 "
-          >
-            <li
-              className="c11"
-            >
-              <div
-                className=""
-                onClick={[Function]}
-              >
-                <div
-                  className="c5 c12"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": undefined,
-                    }
-                  }
-                  size="24px"
-                />
-              </div>
-              <div
-                className="c13"
-                data-test="item-clickArea"
-                onClick={[Function]}
-              >
-                <div
-                  className="c5 c14"
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": undefined,
-                    }
-                  }
-                  size="24px"
-                />
-                <div
-                  className="c15"
-                >
-                  全社2
+                  部署1
                 </div>
               </div>
             </li>
@@ -6920,7 +6909,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Items For Search 1
 </div>
 `;
 
-exports[`Storyshots Components/DropdownMultipleHierarchy リアルな組織図サンプル 1`] = `
+exports[`Storyshots Components/DropdownMultipleHierarchy 組織図サンプル 1`] = `
 .c5 {
   height: 24px;
   width: 24px;

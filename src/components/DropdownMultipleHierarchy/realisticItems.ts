@@ -5,7 +5,7 @@ const lv = (str: string) => ({
     value: str
 })
 
-export const dummyItems: Item[] = [
+export const realisticItems: Item[] = [
     {
         ...lv('ダミーHLDGS'),
         children: [
