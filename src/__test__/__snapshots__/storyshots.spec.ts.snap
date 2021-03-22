@@ -6217,7 +6217,7 @@ exports[`Storyshots Components/DropdownMultiple Input 1`] = `
 }
 
 .c3 {
-  padding: 6px 4px 6px 0;
+  padding: 5px 4px 5px 0;
   width: calc(100% - 28px);
   color: rgb(51,51,51);
 }
@@ -6370,7 +6370,7 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
 }
 
 .c3 {
-  padding: 6px 4px 6px 0;
+  padding: 5px 4px 5px 0;
   width: calc(100% - 28px);
   color: rgb(51,51,51);
 }
