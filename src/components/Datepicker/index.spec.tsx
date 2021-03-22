@@ -35,7 +35,7 @@ describe('DatePicker', () => {
     })
 
     describe('Utils#isInclusivelyBeforeDay', () => {
-        it('過去の日付を渡す', () => {
+        it('過去の日付を渡すとtrueが返ってくる', () => {
             const result = DatePicker.Utils.isInclusivelyBeforeDay(
                 new Date(today)
             )(Moment(new Date(pastDay)))
@@ -43,7 +43,7 @@ describe('DatePicker', () => {
             expect(result).toBeTruthy()
         })
 
-        it('現在の日付を渡す', () => {
+        it('現在の日付を渡すとtrueが返ってくる', () => {
             const result = DatePicker.Utils.isInclusivelyBeforeDay(
                 new Date(today)
             )(Moment(new Date(today)))
@@ -51,7 +51,7 @@ describe('DatePicker', () => {
             expect(result).toBeTruthy()
         })
 
-        it('未来の日付を渡す', () => {
+        it('未来の日付を渡すとfalseが返ってくる', () => {
             const result = DatePicker.Utils.isInclusivelyBeforeDay(
                 new Date(today)
             )(Moment(new Date(futureDay)))
@@ -61,7 +61,7 @@ describe('DatePicker', () => {
     })
 
     describe('Utils#isInclusivelyAfterDay', () => {
-        it('過去の日付を渡す', () => {
+        it('過去の日付を渡すとfalseが返ってくる', () => {
             const result = DatePicker.Utils.isInclusivelyAfterDay(
                 new Date(today)
             )(Moment(new Date(pastDay)))
@@ -69,7 +69,7 @@ describe('DatePicker', () => {
             expect(result).toBeFalsy()
         })
 
-        it('現在の日付を渡す', () => {
+        it('現在の日付を渡すとtrueが返ってくる', () => {
             const result = DatePicker.Utils.isInclusivelyAfterDay(
                 new Date(today)
             )(Moment(new Date(today)))
@@ -77,7 +77,7 @@ describe('DatePicker', () => {
             expect(result).toBeTruthy()
         })
 
-        it('未来の日付を渡す', () => {
+        it('未来の日付を渡すとtrueが返ってくる', () => {
             const result = DatePicker.Utils.isInclusivelyAfterDay(
                 new Date(today)
             )(Moment(new Date(futureDay)))
