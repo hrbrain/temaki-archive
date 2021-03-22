@@ -99,7 +99,7 @@ const Wrap = styled.div`
     max-height: 240px;
     overflow-y: auto;
     & > ${StyledItem} {
-        margin-left: 16px;
+        margin-left: 12px;
     }
 `
 
@@ -115,7 +115,6 @@ const Li = styled.li`
     align-items: center;
     white-space: nowrap;
     padding: 4px 0;
-    margin-left: 6px;
     cursor: pointer;
     &:hover {
         color: ${props => props.theme.colors.primary.default};
@@ -135,7 +134,7 @@ const TextArea = styled.div`
     display: flex;
     flex-direction: column;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 4px;
 `
 
 const Hierarchy = styled.p`
