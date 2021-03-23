@@ -26,6 +26,7 @@ export declare const icons: {
     Close: string;
     Company: string;
     Copy: string;
+    Detail: string;
     Delete: string;
     Display: string;
     Download: string;

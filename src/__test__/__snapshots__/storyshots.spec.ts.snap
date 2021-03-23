@@ -1921,6 +1921,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      Detail
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       Delete
     </p>
   </div>
