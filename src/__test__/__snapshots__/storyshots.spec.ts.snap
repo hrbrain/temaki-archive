@@ -1525,6 +1525,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      Average
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       BlackBoard
     </p>
   </div>
@@ -2605,6 +2623,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      Section
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       Settings
     </p>
   </div>
@@ -2624,6 +2660,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
       className="c2"
     >
       Share
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Sheet
     </p>
   </div>
   <div
@@ -2803,7 +2857,43 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      Textarea
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       Time
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
+      Total
     </p>
   </div>
   <div
@@ -6115,7 +6205,7 @@ exports[`Storyshots Components/DropdownMultiple Input 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0 12px;
-  border: 1px solid rgb(214,214,214);
+  border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6127,7 +6217,7 @@ exports[`Storyshots Components/DropdownMultiple Input 1`] = `
 }
 
 .c3 {
-  padding: 6px 4px 6px 0;
+  padding: 5px 4px 5px 0;
   width: calc(100% - 28px);
   color: rgb(51,51,51);
 }
@@ -6268,7 +6358,7 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 0 12px;
-  border: 1px solid rgb(214,214,214);
+  border: 1px solid rgb(234,234,234);
   border-radius: 6px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6280,7 +6370,7 @@ exports[`Storyshots Components/DropdownMultiple Multi 1`] = `
 }
 
 .c3 {
-  padding: 6px 4px 6px 0;
+  padding: 5px 4px 5px 0;
   width: calc(100% - 28px);
   color: rgb(51,51,51);
 }

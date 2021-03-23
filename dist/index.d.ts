@@ -26,8 +26,7 @@ export declare const Checkbox: import("react").NamedExoticComponent<{
     disabled?: boolean | undefined;
     indeterminate?: boolean | undefined;
 }>;
-export declare const Input: import("react").NamedExoticComponent<({
-    type?: string | undefined;
+export declare const Input: import("react").NamedExoticComponent<{
     name?: string | undefined;
     unit?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
@@ -41,12 +40,11 @@ export declare const Input: import("react").NamedExoticComponent<({
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     className?: string | undefined;
     decimalPlace?: number | null | undefined;
-} & {
     format: "text";
-    value: string;
-    onChange: (value: string) => void;
-}) | ({
+    value: string | null;
+    onChange: (arg: string) => void;
     type?: string | undefined;
+} | {
     name?: string | undefined;
     unit?: string | undefined;
     onBlur?: ((e: import("react").FocusEvent<HTMLInputElement>) => void) | undefined;
@@ -60,12 +58,11 @@ export declare const Input: import("react").NamedExoticComponent<({
     onKeyDown?: ((e: import("react").KeyboardEvent<HTMLInputElement>) => void) | undefined;
     className?: string | undefined;
     decimalPlace?: number | null | undefined;
-} & {
     format: "number";
-    value: number;
-    onChange: (value: number) => void;
-    type?: "number" | undefined;
-})>;
+    value: string | number | null;
+    onChange: (arg: number) => void;
+    type?: string | undefined;
+}>;
 export declare const Button: import("react").FunctionComponent<_Button.Props>;
 export declare const buttonShapeType: {
     box: "box";
@@ -110,6 +107,7 @@ export declare const icons: {
     ArrowDown: string;
     Attachment: string;
     Avatar: string;
+    Average: string;
     BlackBoard: string;
     BulkCheck: string;
     Calendar: string;
@@ -170,8 +168,10 @@ export declare const icons: {
     Refresh: string;
     Remove: string;
     Search: string;
+    Section: string;
     Settings: string;
     Share: string;
+    Sheet: string;
     SingleCheck: string;
     Sort: string;
     SortList: string;
@@ -181,7 +181,9 @@ export declare const icons: {
     Staff: string;
     Tag: string;
     Text: string;
+    Textarea: string;
     Time: string;
+    Total: string;
     Transition: string;
     TreeToggle: string;
     Undo: string;

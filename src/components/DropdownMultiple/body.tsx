@@ -213,7 +213,7 @@ const Body = styled.div<BodyType>`
             if (props.isMenuVisible) {
                 return props.theme.colors.utilities.highlightGreen.default
             }
-            return props.theme.colors.main.grayScale[400]
+            return props.theme.colors.grayScale.S10
         }};
     border-radius: 6px;
     user-select: none;
@@ -228,7 +228,7 @@ const Body = styled.div<BodyType>`
 
 type TextType = { disabled?: boolean }
 const Text = styled.div<TextType>`
-    padding: 6px 4px 6px 0;
+    padding: 5px 4px 5px 0;
     width: calc(100% - 28px);
     color: ${props =>
         props.disabled
@@ -289,7 +289,7 @@ const InnerText = styled.div<InterTextType>`
         props.disabled
             ? props.theme.colors.grayScale.S50
             : props.theme.colors.primary.default};
-    padding: 6.5px 8px;
+    padding: 4px 8px;
     margin: 2px 4px 2px 0;
     border-radius: 20px;
     font-weight: bold;
