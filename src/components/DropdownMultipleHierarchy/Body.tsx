@@ -205,6 +205,7 @@ const Body = styled.div<BodyType>`
 type SelectedItemsType = { disabled?: boolean }
 const SelectedItems = styled.div<SelectedItemsType>`
     padding: 4px 4px 4px 0;
+    word-break: break-word;
     width: calc(100% - 28px);
     max-height: 110px;
     overflow-y: scroll;
