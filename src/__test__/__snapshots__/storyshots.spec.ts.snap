@@ -6527,6 +6527,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy Default 1`] = `
 
 .c3 {
   padding: 4px 4px 4px 0;
+  word-break: break-word;
   width: calc(100% - 28px);
   max-height: 110px;
   overflow-y: scroll;
@@ -6598,6 +6599,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy Default 1`] = `
 
 .c15 {
   padding-left: 4px;
+  word-break: break-word;
   padding-right: 10px;
 }
 
@@ -6778,6 +6780,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Initial Value 1`] 
 
 .c3 {
   padding: 4px 4px 4px 0;
+  word-break: break-word;
   width: calc(100% - 28px);
   max-height: 110px;
   overflow-y: scroll;
@@ -6871,6 +6874,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Initial Value 1`] 
 
 .c16 {
   padding-left: 4px;
+  word-break: break-word;
   padding-right: 10px;
 }
 
@@ -7193,6 +7197,7 @@ exports[`Storyshots Components/DropdownSingle Default 1`] = `
 
 .c3 {
   padding-right: 4px;
+  word-break: break-word;
   width: calc(100% - 28px);
 }
 
@@ -7326,6 +7331,7 @@ exports[`Storyshots Components/DropdownSingle Disabled 1`] = `
 
 .c3 {
   padding-right: 4px;
+  word-break: break-word;
   width: calc(100% - 28px);
 }
 
@@ -7459,6 +7465,7 @@ exports[`Storyshots Components/DropdownSingle Input 1`] = `
 
 .c3 {
   padding-right: 4px;
+  word-break: break-word;
   width: calc(100% - 28px);
 }
 
