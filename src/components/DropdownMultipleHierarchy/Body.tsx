@@ -27,11 +27,10 @@ type Props = {
 }
 
 export const Component = React.memo<Props>(props => {
-    // TODO: filter実装
-    // const inputRef = React.useRef<HTMLInputElement | null>(null)
-    // React.useEffect(() => {
-    //     if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
-    // }, [props.isMenuVisible])
+    const inputRef = React.useRef<HTMLInputElement | null>(null)
+    React.useEffect(() => {
+        if (inputRef.current && props.isMenuVisible) inputRef.current.focus()
+    }, [props.isMenuVisible])
 
     const svg = props.disabled
         ? IconFiles.icons.DropdownOffDisabled
@@ -58,8 +57,7 @@ export const Component = React.memo<Props>(props => {
                         props.placeholder
                     )}
                 </SelectedItems>
-                {/* TODO: filter実装 */}
-                {/* {props.isMenuVisible && (
+                {props.isMenuVisible && (
                     <SelectorInput>
                         <Input
                             data-test="input"
@@ -70,7 +68,7 @@ export const Component = React.memo<Props>(props => {
                             onKeyDown={props.onKeydown}
                         />
                     </SelectorInput>
-                )} */}
+                )}
             </Body>
             <IconWrap onClick={props.onClickIcon}>
                 <DropdownIcon
@@ -232,22 +230,22 @@ const InnerText = styled.div<InterTextType>`
     line-height: 1;
 `
 
-// const SelectorInput = styled.div`
-//     margin: 4px;
-//     width: calc(100% - 28px);
-//     transition: border-color 0.15s;
-//     outline: 0;
-//     &.focused {
-//         border-color: ${props =>
-//             props.theme.colors.utilities.highlightGreen.default};
-//     }
-// `
+const SelectorInput = styled.div`
+    margin: 4px;
+    width: calc(100% - 28px);
+    transition: border-color 0.15s;
+    outline: 0;
+    &.focused {
+        border-color: ${props =>
+            props.theme.colors.utilities.highlightGreen.default};
+    }
+`
 
-// const Input = styled.input`
-//     width: 100%;
-//     border: none;
-//     background: none;
-//     &:focus {
-//         outline: 0;
-//     }
-// `
+const Input = styled.input`
+    width: 100%;
+    border: none;
+    background: none;
+    &:focus {
+        outline: 0;
+    }
+`

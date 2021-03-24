@@ -1,28 +1,32 @@
 import * as React from 'react'
 import * as DropdownMultipleHierarchy from './'
-import { boolean, text } from '@storybook/addon-knobs'
+import { boolean, text, object as knobsObject } from '@storybook/addon-knobs'
+import { realisticItems } from './realisticItems'
 
 export default {
     title: 'Components/DropdownMultipleHierarchy'
 }
 
-const getChildren = (parentValue: string): DropdownMultipleHierarchy.Item[] => {
-    return [...Array(2)].map((_, i) => {
-        const val = `${parentValue}-${i + 1}`
-        const hasChildren = val.length < 20
-        return {
-            label: val,
-            value: val,
-            children: hasChildren ? getChildren(val) : undefined
-        }
-    })
-}
-
-const items = [
+const defaultItems = [
     {
-        label: '部署-1',
-        value: '部署-1',
-        children: getChildren('部署-1')
+        label: '部署1',
+        value: 'value1',
+        children: [
+            {
+                label: '部署1-1',
+                value: 'value1-1',
+                children: [
+                    {
+                        label: '部署1-1-1',
+                        value: 'value1-1-1'
+                    }
+                ]
+            },
+            {
+                label: '部署1-2',
+                value: 'value1-2'
+            }
+        ]
     }
 ]
 
@@ -36,7 +40,7 @@ export const Default = () => {
         <div className="ml-20 mt-10">
             <DropdownMultipleHierarchy.Component
                 values={values}
-                items={items}
+                items={knobsObject('items', defaultItems)}
                 placeholder={text('placeholder', '選択してください')}
                 disabled={boolean('disabled', false)}
                 isError={boolean('isError', false)}
@@ -50,10 +54,7 @@ export const Default = () => {
 }
 
 export const WithInitialValue = () => {
-    // NOTE:
-    // getChildrenで生成された"部署-1-1"などを入れるとstoryshotsで"Items don't have the value"エラー(by Body.tsx)になるので"部署-1"だけにする
-    // Storybook上の挙動は問題ない
-    const [values, setValues] = React.useState<string[]>(['部署-1'])
+    const [values, setValues] = React.useState<string[]>(['value1', 'value1-1'])
     const onChange = React.useCallback((values: string[]) => {
         setValues(values)
     }, [])
@@ -62,7 +63,30 @@ export const WithInitialValue = () => {
         <div className="ml-20 mt-10">
             <DropdownMultipleHierarchy.Component
                 values={values}
-                items={items}
+                items={knobsObject('items', defaultItems)}
+                placeholder={text('placeholder', '選択してください')}
+                disabled={boolean('disabled', false)}
+                isError={boolean('isError', false)}
+                errorMessage={text('ErrorMessage', '')}
+                width={text('width', '250px')}
+                onChange={onChange}
+                diff={boolean('diff', false)}
+            />
+        </div>
+    )
+}
+
+export const 組織図サンプル = () => {
+    const [values, setValues] = React.useState<string[]>([])
+    const onChange = React.useCallback((values: string[]) => {
+        setValues(values)
+    }, [])
+
+    return (
+        <div className="ml-20 mt-10">
+            <DropdownMultipleHierarchy.Component
+                values={values}
+                items={knobsObject('items', realisticItems)}
                 placeholder={text('placeholder', '選択してください')}
                 disabled={boolean('disabled', false)}
                 isError={boolean('isError', false)}
