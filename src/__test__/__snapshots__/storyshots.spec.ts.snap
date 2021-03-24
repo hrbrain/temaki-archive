@@ -6723,7 +6723,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy Default 1`] = `
                 <div
                   className="c15"
                 >
-                  部署-1
+                  部署1
                 </div>
               </div>
             </li>
@@ -6942,7 +6942,12 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Initial Value 1`] 
             <div
               className="c4"
             >
-              部署-1
+              部署1
+            </div>
+            <div
+              className="c4"
+            >
+              部署1-1
             </div>
           </div>
         </div>
@@ -7000,7 +7005,298 @@ exports[`Storyshots Components/DropdownMultipleHierarchy With Initial Value 1`] 
                 <div
                   className="c16"
                 >
-                  部署-1
+                  部署1
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/DropdownMultipleHierarchy 組織図サンプル 1`] = `
+.c5 {
+  height: 24px;
+  width: 24px;
+}
+
+.c5 svg {
+  height: 24px;
+  width: 24px;
+}
+
+.c4 {
+  cursor: pointer;
+}
+
+.c6 {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.c6.visible {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.c2 {
+  min-height: 40px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0px 12px;
+  border: 1px solid rgb(234,234,234);
+  border-radius: 6px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.c3 {
+  padding: 4px 4px 4px 0;
+  width: calc(100% - 28px);
+  max-height: 110px;
+  overflow-y: scroll;
+  color: rgb(51,51,51);
+}
+
+.c7 {
+  display: block;
+  background: rgb(255,255,255);
+  border-radius: 6px;
+  box-shadow: 0 5px 11px rgba(0,0,0,0.16);
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.c7 > .c10 {
+  margin-left: 12px;
+}
+
+.c9 {
+  margin-left: 25px;
+}
+
+.c11 {
+  list-style-type: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 4px 0;
+}
+
+.c11:hover {
+  color: rgb(51,51,51);
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.c12 {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.c14 #fill {
+  fill: rgb(8,135,54);
+}
+
+.c14 #fill .disabled {
+  fill: rgb(214,214,214);
+}
+
+.c15 {
+  padding-left: 4px;
+  padding-right: 10px;
+}
+
+.c0 {
+  width: 250px;
+}
+
+.c1 {
+  position: relative;
+}
+
+.c8 {
+  min-width: 100%;
+  max-width: calc(24px + 28px + 420px);
+  position: absolute;
+  left: 0;
+  margin-top: 4px;
+  -webkit-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  visibility: hidden;
+  -webkit-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  transform: scaleY(0);
+}
+
+<div
+  className="ml-20 mt-10"
+>
+  <div
+    className="c0"
+    width="250px"
+  >
+    <div
+      className="c1"
+    >
+      <div>
+        <div
+          className="c2"
+          data-test="body"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <div
+            className="c3"
+            data-test="selectedItems"
+            disabled={false}
+          >
+            選択してください
+          </div>
+        </div>
+        <div
+          className="c4"
+          onClick={[Function]}
+        >
+          <div
+            className="c5 c6"
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": undefined,
+              }
+            }
+            size="24px"
+          />
+        </div>
+        <div
+          className="c7 c8"
+        >
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className=""
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c12"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+              </div>
+              <div
+                className="c13"
+                data-test="item-clickArea"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  ダミーHLDGS
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul
+            className="c9 c10 "
+          >
+            <li
+              className="c11"
+            >
+              <div
+                className="c16"
+                data-test="item-clickArea"
+                onClick={[Function]}
+              >
+                <div
+                  className="c5 c14"
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": undefined,
+                    }
+                  }
+                  size="24px"
+                />
+                <div
+                  className="c15"
+                >
+                  監査役
                 </div>
               </div>
             </li>
