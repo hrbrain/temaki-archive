@@ -3,6 +3,7 @@
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
+import { Item as _DropdownMultipleHierarchyItem } from './components/DropdownMultipleHierarchy/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
 export declare const Text: import("react").FunctionComponent<{}>;
@@ -248,6 +249,8 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     errorMessage?: string | undefined;
 }>;
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
+export declare const DropdownMultipleHierarchy: import("react").NamedExoticComponent<import("./components/DropdownMultipleHierarchy").Props>;
+export declare type DropdownMultipleHierarchyItem = _DropdownMultipleHierarchyItem;
 export declare const MeatballMenu: import("react").NamedExoticComponent<{
     type: "meatball" | "kebab";
     position: "left" | "right" | "top" | "bottom";
