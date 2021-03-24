@@ -1921,6 +1921,24 @@ exports[`Storyshots Basics/Icons Index 1`] = `
     <p
       className="c2"
     >
+      Detail
+    </p>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+      fill="#888"
+    />
+    <p
+      className="c2"
+    >
       Delete
     </p>
   </div>
@@ -8851,6 +8869,10 @@ exports[`Storyshots Components/SegmentedControl Default 1`] = `
   border-right: 1px solid rgb(51,51,51);
 }
 
+.c0:hover {
+  background: rgb(0,0,0);
+}
+
 .c1 {
   color: rgb(51,51,51);
   background: rgb(255,255,255);
@@ -8896,6 +8918,10 @@ exports[`Storyshots Components/SegmentedControl Default 1`] = `
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-right: 1px solid rgb(51,51,51);
+}
+
+.c1:hover {
+  background: rgb(0,0,0);
 }
 
 <div
@@ -8974,6 +9000,10 @@ exports[`Storyshots Components/SegmentedControl Link 1`] = `
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   border-right: 1px solid rgb(51,51,51);
+}
+
+.c0:hover {
+  background: rgb(0,0,0);
 }
 
 .c0.selected {

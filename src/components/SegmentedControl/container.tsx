@@ -114,6 +114,10 @@ export const commonStyle = css<{
         border-bottom-right-radius: 6px;
         border-right: 1px solid ${props => props.theme.colors.primary.default};
     }
+
+    &:hover {
+        background: ${props => props.theme.colors.primary.P95};
+    }
 `
 
 export const selectedStyle = css`
