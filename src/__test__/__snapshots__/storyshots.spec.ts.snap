@@ -7064,6 +7064,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy 組織図サンプル 1
 
 .c3 {
   padding: 4px 4px 4px 0;
+  word-break: break-word;
   width: calc(100% - 28px);
   max-height: 110px;
   overflow-y: scroll;
@@ -7147,6 +7148,7 @@ exports[`Storyshots Components/DropdownMultipleHierarchy 組織図サンプル 1
 
 .c15 {
   padding-left: 4px;
+  word-break: break-word;
   padding-right: 10px;
 }
 
