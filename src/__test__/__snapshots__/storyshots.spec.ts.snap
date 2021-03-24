@@ -7371,6 +7371,7 @@ exports[`Storyshots Components/DropdownSingle Borderless 1`] = `
 
 .c2 {
   padding-right: 4px;
+  word-break: break-word;
   width: 100%;
   max-width: 210px;
 }
