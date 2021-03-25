@@ -9,6 +9,8 @@ import * as IconFiles from '~/lib/iconFiles'
 import * as Icon from '~/components/Icon'
 import * as ErrorMessage from '~/components/lib/FormErrorMessage'
 
+export * from './utils'
+
 //------------------------------------------------------------------------------
 // Component
 //------------------------------------------------------------------------------
@@ -26,6 +28,7 @@ type Props = {
     selectedColor?: string
     defaultHoverColor?: string
     theme: RequiredThemeProps
+    isOutsideRange?: (day: Moment.Moment) => boolean
 }
 
 export const Component = withTheme(
@@ -84,7 +87,10 @@ export const Component = withTheme(
             )
         }, [])
 
-        const allowAllDays = React.useCallback(() => {
+        const allowAllDays = React.useCallback((day: any) => {
+            if (props.isOutsideRange) {
+                return props.isOutsideRange(day)
+            }
             return false
         }, [])
 

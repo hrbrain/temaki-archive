@@ -64,6 +64,7 @@ export const MeatballMenu = _MeatballMenu.Component
 export type MeatballMenuItem = _MeatballMenu.Item
 export const FileUploader = _FileUploader.Component
 export const DatePicker = _DatePicker.Component
+export const DatePickerUtil = _DatePicker.Utils
 export const DateRangePicker = _DateRangePicker.Component
 export const Modal = _Modal.Component
 export const StepNumber = _StepNumber.Component

@@ -1,5 +1,6 @@
 /// <reference types="react" />
 /// <reference types="styled-components" />
+/// <reference types="moment" />
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
@@ -284,9 +285,14 @@ export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
     theme: _RequiredThemeProps;
-}, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor"> & {
+    isOutsideRange?: ((day: import("moment").Moment) => boolean) | undefined;
+}, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor" | "isOutsideRange"> & {
     theme?: _RequiredThemeProps | undefined;
 }>;
+export declare const DatePickerUtil: {
+    isInclusivelyAfterDay: (date: Date) => (day: import("moment").Moment) => boolean;
+    isInclusivelyBeforeDay: (date: Date) => (day: import("moment").Moment) => boolean;
+};
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;
