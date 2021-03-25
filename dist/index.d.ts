@@ -105,11 +105,13 @@ export declare const RadioButton: import("react").ForwardRefExoticComponent<Pick
 }>;
 export declare const icons: {
     AddIcon: string;
+    After: string;
     AnalyzeIcon: string;
     ArrowDown: string;
     Attachment: string;
     Avatar: string;
     Average: string;
+    Before: string;
     BlackBoard: string;
     BulkCheck: string;
     Calendar: string;
@@ -168,6 +170,7 @@ export declare const icons: {
     RadioOff: string;
     RadioOn: string;
     Redo: string;
+    Redraft: string;
     Refresh: string;
     Remove: string;
     Search: string;
