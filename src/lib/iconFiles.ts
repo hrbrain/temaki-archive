@@ -25,6 +25,7 @@ import ChevronUp from '~/../icons/chevron-up.svg'
 import Close from '~/../icons/close.svg'
 import Company from '~/../icons/company.svg'
 import Copy from '~/../icons/copy.svg'
+import Detail from '~/../icons/detail.svg'
 import Delete from '~/../icons/delete.svg'
 import Display from '~/../icons/display.svg'
 import Download from '~/../icons/download.svg'
@@ -116,6 +117,7 @@ export const icons = {
     Close,
     Company,
     Copy,
+    Detail,
     Delete,
     Display,
     Download,

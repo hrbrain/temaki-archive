@@ -18,6 +18,10 @@ import {
     Component as _DropdownMultiple,
     Item as _DropdownMultipleItem
 } from './components/DropdownMultiple/index'
+import {
+    Component as _DropdownMultipleHierarchy,
+    Item as _DropdownMultipleHierarchyItem
+} from './components/DropdownMultipleHierarchy/index'
 import * as _FileUploader from './components/FileUploader/index'
 import { icons as _icons } from './lib/iconFiles'
 import * as _MeatballMenu from './components/MeatballKebabMenu'
@@ -54,6 +58,8 @@ export const DropdownSingle = _DropdownSingle
 export type DropdownSingleItem = _DropdownSingleItem
 export const DropdownMultiple = _DropdownMultiple
 export type DropdownMultipleItem = _DropdownMultipleItem
+export const DropdownMultipleHierarchy = _DropdownMultipleHierarchy
+export type DropdownMultipleHierarchyItem = _DropdownMultipleHierarchyItem
 export const MeatballMenu = _MeatballMenu.Component
 export type MeatballMenuItem = _MeatballMenu.Item
 export const FileUploader = _FileUploader.Component
