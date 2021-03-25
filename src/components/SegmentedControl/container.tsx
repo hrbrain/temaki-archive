@@ -116,7 +116,11 @@ export const commonStyle = css<{
     }
 
     &:hover {
-        background: ${props => props.theme.colors.primary.P95};
+        background: ${props => props.theme.colors.primary.N95};
+    }
+
+    &:active {
+        background: ${props => props.theme.colors.primary.N80};
     }
 `
 

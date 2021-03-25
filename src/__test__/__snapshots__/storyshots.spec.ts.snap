@@ -10093,7 +10093,11 @@ exports[`Storyshots Components/SegmentedControl Default 1`] = `
 }
 
 .c0:hover {
-  background: rgb(0,0,0);
+  background: rgb(245,245,245);
+}
+
+.c0:active {
+  background: rgb(214,214,214);
 }
 
 .c1 {
@@ -10144,7 +10148,11 @@ exports[`Storyshots Components/SegmentedControl Default 1`] = `
 }
 
 .c1:hover {
-  background: rgb(0,0,0);
+  background: rgb(245,245,245);
+}
+
+.c1:active {
+  background: rgb(214,214,214);
 }
 
 <div
@@ -10226,7 +10234,11 @@ exports[`Storyshots Components/SegmentedControl Link 1`] = `
 }
 
 .c0:hover {
-  background: rgb(0,0,0);
+  background: rgb(245,245,245);
+}
+
+.c0:active {
+  background: rgb(214,214,214);
 }
 
 .c0.selected {
