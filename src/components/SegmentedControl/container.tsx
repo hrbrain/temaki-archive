@@ -127,4 +127,11 @@ export const commonStyle = css<{
 export const selectedStyle = css`
     background: ${props => props.theme.colors.primary.default};
     color: ${props => props.theme.colors.grayScale.S0};
+    &:hover {
+        background: ${props => props.theme.colors.primary.default};
+    }
+    &:active {
+        background: ${props => props.theme.colors.primary.default};
+    }
+    cursor: auto;
 `
