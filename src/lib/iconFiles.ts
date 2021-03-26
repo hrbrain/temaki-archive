@@ -1,9 +1,11 @@
 import AddIcon from '~/../icons/add.svg'
+import After from '~/../icons/after.svg'
 import AnalyzeIcon from '~/../icons/analyze.svg'
 import ArrowDown from '~/../icons/arrow-down.svg'
 import Attachment from '~/../icons/attachment.svg'
 import Avatar from '~/../icons/avatar.svg'
 import Average from '~/../icons/average.svg'
+import Before from '~/../icons/before.svg'
 import BlackBoard from '~/../icons/blackbaord.svg'
 import BulkCheck from '~/../icons/bulk-check.svg'
 import Calendar from '~/../icons/calendar.svg'
@@ -61,6 +63,7 @@ import Pin from '~/../icons/pin.svg'
 import RadioDisabled from '~/../icons/radio-disabled.svg'
 import RadioOff from '~/../icons/radio-off.svg'
 import RadioOn from '~/../icons/radio-on.svg'
+import Redraft from '~/../icons/redraft.svg'
 import Redo from '~/../icons/redo.svg'
 import Refresh from '~/../icons/refresh.svg'
 import Remove from '~/../icons/remove.svg'
@@ -91,11 +94,13 @@ import Loading from '~/../icons/loading.svg'
 
 export const icons = {
     AddIcon,
+    After,
     AnalyzeIcon,
     ArrowDown,
     Attachment,
     Avatar,
     Average,
+    Before,
     BlackBoard,
     BulkCheck,
     Calendar,
@@ -154,6 +159,7 @@ export const icons = {
     RadioOff,
     RadioOn,
     Redo,
+    Redraft,
     Refresh,
     Remove,
     Search,
