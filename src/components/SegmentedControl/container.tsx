@@ -114,9 +114,24 @@ export const commonStyle = css<{
         border-bottom-right-radius: 6px;
         border-right: 1px solid ${props => props.theme.colors.primary.default};
     }
+
+    &:hover {
+        background: ${props => props.theme.colors.primary.N95};
+    }
+
+    &:active {
+        background: ${props => props.theme.colors.primary.N80};
+    }
 `
 
 export const selectedStyle = css`
     background: ${props => props.theme.colors.primary.default};
     color: ${props => props.theme.colors.grayScale.S0};
+    &:hover {
+        background: ${props => props.theme.colors.primary.default};
+    }
+    &:active {
+        background: ${props => props.theme.colors.primary.default};
+    }
+    cursor: auto;
 `

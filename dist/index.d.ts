@@ -1,8 +1,10 @@
 /// <reference types="react" />
 /// <reference types="styled-components" />
+/// <reference types="moment" />
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
+import { Item as _DropdownMultipleHierarchyItem } from './components/DropdownMultipleHierarchy/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
 export declare const Text: import("react").FunctionComponent<{}>;
@@ -103,11 +105,13 @@ export declare const RadioButton: import("react").ForwardRefExoticComponent<Pick
 }>;
 export declare const icons: {
     AddIcon: string;
+    After: string;
     AnalyzeIcon: string;
     ArrowDown: string;
     Attachment: string;
     Avatar: string;
     Average: string;
+    Before: string;
     BlackBoard: string;
     BulkCheck: string;
     Calendar: string;
@@ -129,6 +133,7 @@ export declare const icons: {
     Close: string;
     Company: string;
     Copy: string;
+    Detail: string;
     Delete: string;
     Display: string;
     Download: string;
@@ -165,6 +170,7 @@ export declare const icons: {
     RadioOff: string;
     RadioOn: string;
     Redo: string;
+    Redraft: string;
     Refresh: string;
     Remove: string;
     Search: string;
@@ -248,6 +254,8 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     errorMessage?: string | undefined;
 }>;
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
+export declare const DropdownMultipleHierarchy: import("react").NamedExoticComponent<import("./components/DropdownMultipleHierarchy").Props>;
+export declare type DropdownMultipleHierarchyItem = _DropdownMultipleHierarchyItem;
 export declare const MeatballMenu: import("react").NamedExoticComponent<{
     type: "meatball" | "kebab";
     position: "left" | "right" | "top" | "bottom";
@@ -280,9 +288,14 @@ export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
     theme: _RequiredThemeProps;
-}, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor"> & {
+    isOutsideRange?: ((day: import("moment").Moment) => boolean) | undefined;
+}, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor" | "isOutsideRange"> & {
     theme?: _RequiredThemeProps | undefined;
 }>;
+export declare const DatePickerUtil: {
+    isInclusivelyAfterDay: (date: Date) => (day: import("moment").Moment) => boolean;
+    isInclusivelyBeforeDay: (date: Date) => (day: import("moment").Moment) => boolean;
+};
 export declare const DateRangePicker: import("react").NamedExoticComponent<{
     displayFormat?: string | undefined;
     monthFormat?: string | undefined;

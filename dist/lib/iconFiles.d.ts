@@ -1,10 +1,12 @@
 export declare const icons: {
     AddIcon: string;
+    After: string;
     AnalyzeIcon: string;
     ArrowDown: string;
     Attachment: string;
     Avatar: string;
     Average: string;
+    Before: string;
     BlackBoard: string;
     BulkCheck: string;
     Calendar: string;
@@ -26,6 +28,7 @@ export declare const icons: {
     Close: string;
     Company: string;
     Copy: string;
+    Detail: string;
     Delete: string;
     Display: string;
     Download: string;
@@ -62,6 +65,7 @@ export declare const icons: {
     RadioOff: string;
     RadioOn: string;
     Redo: string;
+    Redraft: string;
     Refresh: string;
     Remove: string;
     Search: string;

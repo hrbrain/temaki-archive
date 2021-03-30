@@ -46,3 +46,20 @@ export const Null = () => (
         errorMessage={Knobs.text('ErrorMessage', '')}
     />
 )
+
+export const isOutsideRange = () => (
+    <Datepicker.Component
+        date={testKnobDate(name, defaultDate)}
+        placeholderText={Knobs.text('placeholderText', '')}
+        displayFormat={Knobs.text('displayFormat', 'YYYY年M月D日')}
+        monthFormat={Knobs.text('monthFormat', 'YYYY[年]M[月]')}
+        onChange={Actions.action('onChange')}
+        width={Knobs.text('width', '100%')}
+        selectedColor={Knobs.text('selectedColor', '')}
+        defaultHoverColor={Knobs.text('defaultHoverColor', '')}
+        disabled={Knobs.boolean('disabled', false)}
+        errored={Knobs.boolean('Error', false)}
+        errorMessage={Knobs.text('ErrorMessage', '')}
+        isOutsideRange={Datepicker.Utils.isInclusivelyBeforeDay(defaultDate)}
+    />
+)

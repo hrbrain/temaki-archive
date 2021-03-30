@@ -294,6 +294,7 @@ const InnerText = styled.div<InterTextType>`
     border-radius: 20px;
     font-weight: bold;
     line-height: 1;
+    word-break: break-word;
 `
 
 const SelectorInput = styled.div`
