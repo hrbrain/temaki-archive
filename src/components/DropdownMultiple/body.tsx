@@ -229,6 +229,7 @@ const Body = styled.div<BodyType>`
 type TextType = { disabled?: boolean }
 const Text = styled.div<TextType>`
     padding: 5px 4px 5px 0;
+    word-break: break-word;
     width: calc(100% - 28px);
     color: ${props =>
         props.disabled
