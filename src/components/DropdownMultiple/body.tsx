@@ -245,6 +245,7 @@ const Remove = styled.div`
     position: relative;
     width: 16px;
     height: 16px;
+    flex-shrink: 0;
     margin-left: 8px;
     &:before {
         content: '';
