@@ -129,6 +129,7 @@ const CheckIcon = styled(Icon.Component)`
 
 const Text = styled.div`
     padding-left: 4px;
+    word-break: break-word;
 `
 
 const RemarksText = styled.div`

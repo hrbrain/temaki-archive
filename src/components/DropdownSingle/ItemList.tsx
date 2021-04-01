@@ -120,6 +120,7 @@ const StyledItem = styled.li`
 
 const Text = styled.div<{ disabled?: boolean }>`
     padding-left: 4px;
+    word-break: break-word;
     ${props =>
         props.disabled &&
         `color: ${props.theme.colors.grayScale.S20};

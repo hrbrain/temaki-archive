@@ -208,11 +208,13 @@ const StyledItemList = styled(ItemList.Component)<{ isVisible: boolean }>`
 
 const Text = styled.div`
     padding-right: 4px;
+    word-break: break-word;
     width: calc(100% - 28px);
 `
 
 const SelectorInput = styled.div`
     padding-right: 4px;
+    word-break: break-word;
     width: calc(100% - 28px);
     transition: border-color 0.15s;
     outline: 0;

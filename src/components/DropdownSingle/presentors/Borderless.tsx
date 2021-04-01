@@ -111,6 +111,7 @@ const Body = styled.div<{ width?: string; diff?: boolean }>`
 
 const Text = styled.div`
     padding-right: 4px;
+    word-break: break-word;
     width: 100%;
     max-width: 210px;
 `
