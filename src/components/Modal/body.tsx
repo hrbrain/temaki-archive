@@ -94,6 +94,7 @@ const IconWrap = styled.div`
 `
 
 const Body = styled.div`
+    color: ${props => props.theme.colors.main.grayScale[600]};
     padding: 24px;
 `
 

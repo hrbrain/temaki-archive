@@ -9942,6 +9942,7 @@ exports[`Storyshots Components/Modal All 1`] = `
 }
 
 .c6 {
+  color: rgb(51,51,51);
   padding: 24px;
 }
 
