@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from '~/modules/theme'
+import styled, { ThemeConsumer } from '~/modules/theme'
 
 import * as Icon from '~/components/Icon'
 import * as Button from '~/components/Button'
@@ -19,10 +19,15 @@ export const Component: React.FC<Props> = props => {
                 <Head>
                     <Title>{props.title}</Title>
                     <IconWrap onClick={props.onClose} data-test="closeIcon">
-                        <Icon.Component
-                            svg={IconFiles.icons.Close}
-                            size="24px"
-                        />
+                        <ThemeConsumer>
+                            {theme => (
+                                <Icon.Component
+                                    svg={IconFiles.icons.Close}
+                                    size="24px"
+                                    color={theme.colors.grayScale.S100}
+                                />
+                            )}
+                        </ThemeConsumer>
                     </IconWrap>
                 </Head>
                 <Body>{props.children}</Body>
@@ -94,6 +99,7 @@ const IconWrap = styled.div`
 `
 
 const Body = styled.div`
+    color: ${props => props.theme.colors.main.grayScale[600]};
     padding: 24px;
 `
 

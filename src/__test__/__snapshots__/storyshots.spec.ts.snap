@@ -9863,6 +9863,10 @@ exports[`Storyshots Components/Modal All 1`] = `
   width: 24px;
 }
 
+.c5 #fill {
+  fill: rgb(51,51,51);
+}
+
 .c0 {
   position: fixed;
   z-index: 600;
@@ -9942,6 +9946,7 @@ exports[`Storyshots Components/Modal All 1`] = `
 }
 
 .c6 {
+  color: rgb(51,51,51);
   padding: 24px;
 }
 
@@ -9995,6 +10000,7 @@ exports[`Storyshots Components/Modal All 1`] = `
           >
             <div
               className="c5"
+              color="rgb(51, 51, 51)"
               dangerouslySetInnerHTML={
                 Object {
                   "__html": undefined,
