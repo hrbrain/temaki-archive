@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as Icon from '~/components/Icon';
 declare type Props = {
     items: Item[];
     value: Value;
@@ -12,7 +13,7 @@ export declare type Item = {
     value: Value;
     text: string;
     textColor?: string;
-    icon?: string;
+    icon?: Omit<Icon.Props, 'size'>;
     remarks?: string;
     disabled?: boolean;
 };

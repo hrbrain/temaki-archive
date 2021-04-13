@@ -5,7 +5,7 @@ import styled from '~/modules/theme'
 // Component
 //------------------------------------------------------------------------------
 
-type Props = {
+export type Props = {
     svg: string
     size: string
     color?: string

@@ -8708,7 +8708,11 @@ exports[`Storyshots Components/DropdownSingle Borderless 1`] = `
           className="c2"
           data-test="text"
         >
-          20
+          <span
+            className=""
+          >
+            20
+          </span>
         </div>
         <div
           className="c3 c4"
@@ -8835,9 +8839,7 @@ exports[`Storyshots Components/DropdownSingle Default 1`] = `
           <div
             className="c3"
             data-test="text"
-          >
-            
-          </div>
+          />
           <div
             className=""
             onClick={[Function]}
@@ -8969,9 +8971,7 @@ exports[`Storyshots Components/DropdownSingle Disabled 1`] = `
           <div
             className="c3"
             data-test="text"
-          >
-            
-          </div>
+          />
           <div
             className=""
             onClick={[Function]}
@@ -9102,9 +9102,7 @@ exports[`Storyshots Components/DropdownSingle Input 1`] = `
           <div
             className="c3"
             data-test="text"
-          >
-            
-          </div>
+          />
           <div
             className=""
             onClick={[Function]}

@@ -4,6 +4,7 @@ import styled from '~/modules/theme'
 import * as ItemList from './ItemList'
 import * as Default from './presentors/Default'
 import * as Borderless from './presentors/Borderless'
+import * as Icon from '~/components/Icon'
 
 //------------------------------------------------------------------------------
 // Component
@@ -132,7 +133,11 @@ const maybeShowIconBySelected = (
 ): JSX.Element | null => {
     const text = items.find(item => item.value === selected)
     if (text && text.icon) {
-        return <SelectedItemIcon src={text.icon} />
+        return (
+            <IconWrap>
+                <Icon.Component {...text.icon} size="24px" />
+            </IconWrap>
+        )
     }
     return null
 }
@@ -148,11 +153,12 @@ const showTextBySelected = (
     return null
 }
 
-const SelectedItemIcon = styled.img`
-    height: 22px;
-    padding-right: 4px;
+const ColorText = styled.span`
+    display: inline-block;
+    padding-top: 1px;
+    ${props => props.color && `color: ${props.color};`}
 `
 
-const ColorText = styled.span`
-    ${props => props.color && `color: ${props.color};`}
+const IconWrap = styled.div`
+    padding-right: 4px;
 `

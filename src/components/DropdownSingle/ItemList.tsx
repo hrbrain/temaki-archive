@@ -52,7 +52,7 @@ export type Item = {
     value: Value
     text: string
     textColor?: string
-    icon?: string
+    icon?: Omit<Icon.Props, 'size'>
     remarks?: string
     disabled?: boolean
 }
@@ -87,7 +87,9 @@ const ItemComponent = React.memo<ItemProps>(props => {
                     <ColorText color={props.item.textColor}>
                         {props.item.text}
                     </ColorText>
-                    {props.item.icon && <ItemIcon src={props.item.icon} />}
+                    {props.item.icon && (
+                        <Icon.Component {...props.item.icon} size="24px" />
+                    )}
                 </ItemText>
                 {props.item.remarks && (
                     <RemarksText>{props.item.remarks}</RemarksText>
@@ -141,15 +143,14 @@ const ItemText = styled.div`
     width: 100%;
 `
 
-const ItemIcon = styled.img``
-
 const RemarksText = styled.div`
     font-size: 12px;
     word-wrap: anywhere;
 `
 
 const ColorText = styled.span`
-    line-height: 22px;
+    display: inline-block;
+    padding-top: 1px;
     &:not(:hover) {
         ${props => props.color && `color: ${props.color};`}
     }
