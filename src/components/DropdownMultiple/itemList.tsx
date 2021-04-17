@@ -82,13 +82,18 @@ const ItemComponent = React.memo<ItemProps>(props => {
                 size="24px"
             />
             <Text>
-                <Highlighter
-                    highlightClassName="highlight"
-                    searchWords={[props.searchValue]}
-                    autoEscape
-                    highlightStyle={highlightStyle}
-                    textToHighlight={props.item.text}
-                />
+                {/* NOTE: searchValueが空の時にHighlighterを出すとtestが落ちる */}
+                {props.searchValue === '' ? (
+                    props.item.text
+                ) : (
+                    <Highlighter
+                        highlightClassName="highlight"
+                        searchWords={[props.searchValue]}
+                        autoEscape
+                        highlightStyle={highlightStyle}
+                        textToHighlight={props.item.text}
+                    />
+                )}
                 {props.item.remarks && (
                     <RemarksText>{props.item.remarks}</RemarksText>
                 )}
