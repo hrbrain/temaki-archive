@@ -224,7 +224,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
     onChangeNative={[MockFunction]}
     value={145}
   >
-    <Component
+    <Container
       Presenter={[Function]}
       format="number"
       onBlur={[MockFunction]}
@@ -232,7 +232,7 @@ exports[`Input format of number should match previous snapshot 1`] = `
       onChangeNative={[MockFunction]}
       value={145}
     >
-      <Component
+      <Presenter
         format="number"
         onBlur={[Function]}
         onChange={[Function]}
@@ -259,8 +259,8 @@ exports[`Input format of number should match previous snapshot 1`] = `
             <FormErrorMessage />
           </div>
         </styled.div>
-      </Component>
-    </Component>
+      </Presenter>
+    </Container>
   </Memo()>
 </ThemeProvider>
 `;
@@ -531,7 +531,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
     onChangeNative={[MockFunction]}
     value="Testing Value"
   >
-    <Component
+    <Container
       Presenter={[Function]}
       format="text"
       onBlur={[MockFunction]}
@@ -539,7 +539,7 @@ exports[`Input format of text should match previous snapshot 1`] = `
       onChangeNative={[MockFunction]}
       value="Testing Value"
     >
-      <Component
+      <Presenter
         format="text"
         onBlur={[MockFunction]}
         onChange={[Function]}
@@ -566,8 +566,8 @@ exports[`Input format of text should match previous snapshot 1`] = `
             <FormErrorMessage />
           </div>
         </styled.div>
-      </Component>
-    </Component>
+      </Presenter>
+    </Container>
   </Memo()>
 </ThemeProvider>
 `;
