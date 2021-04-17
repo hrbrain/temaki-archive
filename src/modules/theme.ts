@@ -334,7 +334,7 @@ export const defaultTheme: RequiredThemeProps = {
     }
 }
 
-const casted = styledComponents as styledComponents.ThemedStyledComponentsModule<
+const casted = (styledComponents as unknown) as styledComponents.ThemedStyledComponentsModule<
     RequiredThemeProps
 >
 

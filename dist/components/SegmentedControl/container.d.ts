@@ -34,7 +34,7 @@ export declare type LinkProps = CommonProps & {
 declare type Props = DefaultProps | LinkProps;
 export declare const Component: React.NamedExoticComponent<Props>;
 export declare const commonStyle: import("styled-components").FlattenInterpolation<import("styled-components").ThemedStyledProps<{
-    itemWidth?: string | undefined;
-}, import("../../modules/theme").RequiredThemeProps>>;
-export declare const selectedStyle: import("styled-components").FlattenInterpolation<import("styled-components").ThemeProps<import("../../modules/theme").RequiredThemeProps>>;
+    itemWidth?: CommonProps['itemsWidth'];
+}, import("~/modules/theme").RequiredThemeProps>>;
+export declare const selectedStyle: import("styled-components").FlattenInterpolation<import("styled-components").ThemeProps<import("~/modules/theme").RequiredThemeProps>>;
 export {};

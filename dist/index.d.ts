@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="styled-components" />
 /// <reference types="moment" />
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
@@ -7,7 +6,8 @@ import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/ind
 import { Item as _DropdownMultipleHierarchyItem } from './components/DropdownMultipleHierarchy/index';
 import * as _MeatballMenu from './components/MeatballKebabMenu';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
-export declare const Text: import("react").FunctionComponent<{}>;
+import * as _Tag from './components/Tag/index';
+export declare const Text: import("react").FC<{}>;
 export declare const Icon: (props: {
     svg: string;
     size: string;
@@ -15,7 +15,7 @@ export declare const Icon: (props: {
     className?: string | undefined;
 }) => JSX.Element;
 export declare const Illustration: (props: {
-    svg: string | import("react").ReactElement<any, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)> | null) | (new (props: any) => import("react").Component<any, any, any>)>;
+    svg: string | import("react").ReactElement<any, string | import("react").JSXElementConstructor<any>>;
     size?: {
         width?: string | undefined;
         height?: string | undefined;
@@ -65,42 +65,35 @@ export declare const Input: import("react").NamedExoticComponent<{
     onChange: (arg: number) => void;
     type?: string | undefined;
 }>;
-export declare const Button: import("react").FunctionComponent<_Button.Props>;
+export declare const Button: import("react").FC<_Button.Props>;
 export declare const buttonShapeType: {
     box: "box";
     circle: "circle";
     text: "text";
 };
-export declare const Toast: import("react").NamedExoticComponent<({
+export declare const Toast: import("react").NamedExoticComponent<{
     label: string;
     text?: string | undefined;
     color?: string | undefined;
     icon?: string | undefined;
     variant: "progress" | "warning" | "info";
-} & {
+} & ({
     type: "default";
     onClickClose: () => void;
-}) | ({
-    label: string;
-    text?: string | undefined;
-    color?: string | undefined;
-    icon?: string | undefined;
-    variant: "progress" | "warning" | "info";
-} & {
+} | {
     type: "buttonless";
 })>;
-export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl").DefaultProps | import("./components/SegmentedControl").LinkProps>;
+export declare const SegmentedControl: import("react").NamedExoticComponent<import("./components/SegmentedControl/container").DefaultProps | import("./components/SegmentedControl/container").LinkProps>;
 export declare const Tooltip: import("react").NamedExoticComponent<{
     text: string;
     direction?: "left" | "right" | "top" | "bottom" | undefined;
 }>;
-export declare const RadioButton: import("react").ForwardRefExoticComponent<Pick<{
+export declare const RadioButton: import("react").ForwardRefExoticComponent<{
     text: string;
     onClick: (e: import("react").MouseEvent<HTMLDivElement, MouseEvent>) => void;
     disabled?: boolean | undefined;
     checked?: boolean | undefined;
-    theme: _RequiredThemeProps;
-}, "text" | "onClick" | "disabled" | "checked"> & {
+} & {
     theme?: _RequiredThemeProps | undefined;
 }>;
 export declare const icons: {
@@ -254,7 +247,7 @@ export declare const DropdownMultiple: import("react").NamedExoticComponent<{
     errorMessage?: string | undefined;
 }>;
 export declare type DropdownMultipleItem = _DropdownMultipleItem;
-export declare const DropdownMultipleHierarchy: import("react").NamedExoticComponent<import("./components/DropdownMultipleHierarchy").Props>;
+export declare const DropdownMultipleHierarchy: import("react").NamedExoticComponent<import("./components/DropdownMultipleHierarchy/index").Props>;
 export declare type DropdownMultipleHierarchyItem = _DropdownMultipleHierarchyItem;
 export declare const MeatballMenu: import("react").NamedExoticComponent<{
     type: "meatball" | "kebab";
@@ -273,23 +266,22 @@ export declare const FileUploader: import("react").NamedExoticComponent<{
     className?: string | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
-    borderColorType?: "primary" | "grayScaleS100" | undefined;
+    borderColorType?: ("primary" | "grayScaleS100") | undefined;
 }>;
-export declare const DatePicker: import("react").ForwardRefExoticComponent<Pick<{
-    displayFormat?: string | undefined;
-    monthFormat?: string | undefined;
-    date: Date | null;
-    onChange: (date: Date | null) => void;
+export declare const DatePicker: import("react").ForwardRefExoticComponent<{
     width: string;
+    onChange: (date: Date | null) => void;
+    disabled?: boolean | undefined;
     errored?: boolean | undefined;
     errorMessage?: string | undefined;
+    date: Date | null;
+    displayFormat?: string | undefined;
+    monthFormat?: string | undefined;
     placeholderText?: string | undefined;
-    disabled?: boolean | undefined;
     selectedColor?: string | undefined;
     defaultHoverColor?: string | undefined;
-    theme: _RequiredThemeProps;
     isOutsideRange?: ((day: import("moment").Moment) => boolean) | undefined;
-}, "width" | "onChange" | "disabled" | "date" | "errored" | "errorMessage" | "displayFormat" | "monthFormat" | "placeholderText" | "selectedColor" | "defaultHoverColor" | "isOutsideRange"> & {
+} & {
     theme?: _RequiredThemeProps | undefined;
 }>;
 export declare const DatePickerUtil: {
@@ -312,57 +304,24 @@ export declare const DateRangePicker: import("react").NamedExoticComponent<{
     selectedHoverColor?: string | undefined;
     defaultHoverColor?: string | undefined;
 }>;
-export declare const Modal: import("react").FunctionComponent<{
+export declare const Modal: import("react").FC<{
     isOpen: boolean;
     title: string;
-    buttons?: (({
-        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        type?: "button" | "submit" | "reset" | undefined;
-        className?: string | undefined;
-        dataTest?: string | undefined;
-    } & {
-        variant: "box";
-        colorType?: "disabled" | "default" | "primary" | "primary ghost" | "secondary" | "secondary ghost" | "destructive" | "destructive ghost" | "grayScaleS100" | undefined;
-        height?: string | undefined;
-        width?: string | undefined;
-    } & {
+    buttons?: (_Button.Props & {
         text: string;
-    }) | ({
-        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        type?: "button" | "submit" | "reset" | undefined;
-        className?: string | undefined;
-        dataTest?: string | undefined;
-    } & {
-        variant: "circle";
-        colorType?: "default" | "primary" | "secondary" | undefined;
-        svg?: string | undefined;
-    } & {
-        text: string;
-    }) | ({
-        onClick?: ((e: import("react").MouseEvent<HTMLButtonElement, MouseEvent>) => void | Promise<void>) | undefined;
-        type?: "button" | "submit" | "reset" | undefined;
-        className?: string | undefined;
-        dataTest?: string | undefined;
-    } & {
-        variant: "text";
-        colorType?: "default" | "primary" | "destructive" | "grayScaleS100" | undefined;
-        svg?: string | undefined;
-    } & {
-        text: string;
-    }))[] | undefined;
+    })[] | undefined;
     onClose: () => void;
 }>;
-export declare const StepNumber: import("react").ForwardRefExoticComponent<Pick<{
+export declare const StepNumber: import("react").ForwardRefExoticComponent<{
+    className?: string | undefined;
+    max: number;
+    min: number;
     defaultValue: number;
     step: number;
-    min: number;
-    max: number;
     unit: string;
     rate: number;
     onChangeValue: (value: number) => void;
-    theme: _RequiredThemeProps;
-    className?: string | undefined;
-}, "className" | "max" | "min" | "defaultValue" | "step" | "unit" | "rate" | "onChangeValue"> & {
+} & {
     theme?: _RequiredThemeProps | undefined;
 }>;
 export declare const Loading: import("react").NamedExoticComponent<{
@@ -372,8 +331,8 @@ export declare const Loading: import("react").NamedExoticComponent<{
 }>;
 export declare const Tag: import("react").NamedExoticComponent<{
     text: string;
-    colorType?: "primary" | "secondary" | "destructive" | undefined;
+    colorType?: _Tag.ColorTypeProp | undefined;
     className?: string | undefined;
 } & {
-    colorType?: "primary" | "secondary" | "destructive" | undefined;
+    colorType?: _Tag.ColorTypeProp | undefined;
 }>;
