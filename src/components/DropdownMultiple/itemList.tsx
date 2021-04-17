@@ -101,6 +101,7 @@ const ItemComponent = React.memo<ItemProps>(props => {
 // Styles
 //------------------------------------------------------------------------------
 
+// TODO: ハイライトのスタイル共通化
 const highlightStyle: React.CSSProperties = {
     backgroundColor: '#FFFFE9',
     fontWeight: 'bold'

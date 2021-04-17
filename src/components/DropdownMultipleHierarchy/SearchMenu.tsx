@@ -84,6 +84,7 @@ const Item: React.FC<ItemProps> = props => {
     )
 }
 
+// TODO: ハイライトのスタイル共通化
 const highlightStyle: React.CSSProperties = {
     backgroundColor: '#FFFFE9',
     fontWeight: 'bold'
