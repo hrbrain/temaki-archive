@@ -20,7 +20,7 @@ type Props = {
     onClickMenuItem: (value: ItemList.Value) => void
     isError?: boolean
     isMenuVisible: boolean
-    maybeShowIconBySelected: (
+    showIconBySelected: (
         items: ItemList.Item[],
         selected: ItemList.Value
     ) => JSX.Element | null
@@ -63,10 +63,7 @@ export const Component = React.memo<Props>(props => {
                         disabled={props.disabled}
                         diff={props.diff}
                     >
-                        {props.maybeShowIconBySelected(
-                            props.items,
-                            props.value
-                        )}
+                        {props.showIconBySelected(props.items, props.value)}
                         {props.isMenuVisible ? (
                             <SelectorInput>
                                 {props.showTextBySelected(

@@ -90,7 +90,7 @@ export const Component = React.memo<Props>(props => {
                     onClickOutside={closeMenu}
                     onClickMenuItem={handleOnChange}
                     isMenuVisible={isMenuVisible}
-                    maybeShowIconBySelected={maybeShowIconBySelected}
+                    showIconBySelected={showIconBySelected}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
                     diff={props.diff}
@@ -110,7 +110,7 @@ export const Component = React.memo<Props>(props => {
                     onClickMenuItem={handleOnChange}
                     onClickOutside={closeMenu}
                     isMenuVisible={isMenuVisible}
-                    maybeShowIconBySelected={maybeShowIconBySelected}
+                    showIconBySelected={showIconBySelected}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
                     diff={props.diff}
@@ -127,17 +127,13 @@ export const Component = React.memo<Props>(props => {
 
 Component.displayName = 'DropdownSingle'
 
-const maybeShowIconBySelected = (
+const showIconBySelected = (
     items: ItemList.Item[],
     selected: ItemList.Value
 ): JSX.Element | null => {
-    const text = items.find(item => item.value === selected)
-    if (text && text.icon) {
-        return (
-            <IconWrap>
-                <Icon.Component {...text.icon} size="24px" />
-            </IconWrap>
-        )
+    const selectedItem = items.find(item => item.value === selected)
+    if (selectedItem && selectedItem.icon) {
+        return <SelectedItemIcon {...selectedItem.icon} />
     }
     return null
 }
@@ -152,6 +148,18 @@ const showTextBySelected = (
     }
     return null
 }
+
+//------------------------------------------------------------------------------
+// SelectedItemIcon
+//------------------------------------------------------------------------------
+
+type SelectedItemIconProps = Omit<Icon.Props, 'size'>
+
+const SelectedItemIcon = (props: SelectedItemIconProps) => (
+    <IconWrap>
+        <Icon.Component {...props} size="24px" />
+    </IconWrap>
+)
 
 const ColorText = styled.span`
     display: inline-block;
