@@ -166,6 +166,7 @@ export declare const icons: {
     Notifiacation: string;
     Phone: string;
     Pin: string;
+    Print: string;
     RadioDisabled: string;
     RadioOff: string;
     RadioOn: string;
