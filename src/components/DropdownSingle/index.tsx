@@ -1,4 +1,5 @@
 import * as React from 'react'
+import styled from '~/modules/theme'
 
 import * as ItemList from './ItemList'
 import * as Default from './presentors/Default'
@@ -88,6 +89,7 @@ export const Component = React.memo<Props>(props => {
                     onClickOutside={closeMenu}
                     onClickMenuItem={handleOnChange}
                     isMenuVisible={isMenuVisible}
+                    maybeShowIconBySelected={maybeShowIconBySelected}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
                     diff={props.diff}
@@ -107,6 +109,7 @@ export const Component = React.memo<Props>(props => {
                     onClickMenuItem={handleOnChange}
                     onClickOutside={closeMenu}
                     isMenuVisible={isMenuVisible}
+                    maybeShowIconBySelected={maybeShowIconBySelected}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
                     diff={props.diff}
@@ -123,13 +126,33 @@ export const Component = React.memo<Props>(props => {
 
 Component.displayName = 'DropdownSingle'
 
+const maybeShowIconBySelected = (
+    items: ItemList.Item[],
+    selected: ItemList.Value
+): JSX.Element | null => {
+    const text = items.find(item => item.value === selected)
+    if (text && text.icon) {
+        return <SelectedItemIcon src={text.icon} />
+    }
+    return null
+}
+
 const showTextBySelected = (
     items: ItemList.Item[],
     selected: ItemList.Value
-): string => {
+) => {
     const text = items.find(item => item.value === selected)
     if (text && text.text) {
-        return text.text
+        return <ColorText color={text.textColor}>{text.text}</ColorText>
     }
-    return ''
+    return null
 }
+
+const SelectedItemIcon = styled.img`
+    height: 22px;
+    padding-right: 4px;
+`
+
+const ColorText = styled.span`
+    ${props => props.color && `color: ${props.color};`}
+`
