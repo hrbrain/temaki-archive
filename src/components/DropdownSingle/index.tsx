@@ -142,9 +142,13 @@ const showTextBySelected = (
     items: ItemList.Item[],
     selected: ItemList.Value
 ) => {
-    const text = items.find(item => item.value === selected)
-    if (text && text.text) {
-        return <ColorText color={text.textColor}>{text.text}</ColorText>
+    const selectedItem = items.find(item => item.value === selected)
+    if (selectedItem && selectedItem.text) {
+        return (
+            <ColorText color={selectedItem.textColor}>
+                {selectedItem.text}
+            </ColorText>
+        )
     }
     return null
 }
