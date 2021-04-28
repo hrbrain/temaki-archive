@@ -32,7 +32,7 @@ const Wrap = styled.div<{ visible?: boolean }>`
     opacity: 0;
     transition: all 0.3s;
     background-color: ${props => props.theme.colors.grayScale.S0};
-    color: ${props => props.theme.colors.primary.default};
+    color: ${props => props.theme.colors.main.grayScale['600']};
 
     ${props =>
         props.visible &&
