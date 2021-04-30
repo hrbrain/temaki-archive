@@ -3162,12 +3162,13 @@
     "@types/react" "*"
     "@types/reactcss" "*"
 
-"@types/react-dates@^17.1.5":
-  version "17.1.12"
-  resolved "https://registry.yarnpkg.com/@types/react-dates/-/react-dates-17.1.12.tgz#e680c5e67829ce21b81f1e217e287198a573a05a"
-  integrity sha512-YD2lSO+/dwv+Z8CtFWyeUOaSoBHrhxbmLH1Zk/lJ0/H0yzZ146lKyFLJ6kySnqYrVM/TlClTIKaz8ETCLHbsBg==
+"@types/react-dates@21.8.2":
+  version "21.8.2"
+  resolved "https://registry.yarnpkg.com/@types/react-dates/-/react-dates-21.8.2.tgz#6b65b8e2ea2559be2e3d25bd3ca910430579f6bd"
+  integrity sha512-0BtpLI+zg7GESgoUd/3aknk35nOKQYEfqkGjy9cNxM7utB2tE0zOvh4npY8FSB8BkEranJkpmsuogeyMFIU/hw==
   dependencies:
     "@types/react" "*"
+    "@types/react-outside-click-handler" "*"
     moment "^2.26.0"
 
 "@types/react-dom@^16.8.3":
@@ -3188,6 +3189,13 @@
   version "0.62.14"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.62.14.tgz#13ce7dab136bb124b6f394fe7510442557b16d29"
   integrity sha512-ItBgiEQks2Mid6GsiLBx75grNH0glaKemTK9V7G+vSnvP+Zk3x1Wr+aTy4dJxRPPMg14DAJyYePLZwj2cigXbw==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-outside-click-handler@*":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@types/react-outside-click-handler/-/react-outside-click-handler-1.3.0.tgz#ccf0014032fc6ec286210f8a05d26a5c1f94cc96"
+  integrity sha512-BxQpd5GsbA9rjqLcM4lYp70VnvahgjMUeJ4OKi0A7QOsDLD2yUPswOVixtDpmvCu0PkRTfvMoStIR3gKC/L3XQ==
   dependencies:
     "@types/react" "*"
 
