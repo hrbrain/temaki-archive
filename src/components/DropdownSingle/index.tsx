@@ -1,8 +1,10 @@
 import * as React from 'react'
+import styled from '~/modules/theme'
 
 import * as ItemList from './ItemList'
 import * as Default from './presentors/Default'
 import * as Borderless from './presentors/Borderless'
+import * as Icon from '~/components/Icon'
 
 //------------------------------------------------------------------------------
 // Component
@@ -88,6 +90,7 @@ export const Component = React.memo<Props>(props => {
                     onClickOutside={closeMenu}
                     onClickMenuItem={handleOnChange}
                     isMenuVisible={isMenuVisible}
+                    showIconBySelected={showIconBySelected}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
                     diff={props.diff}
@@ -107,6 +110,7 @@ export const Component = React.memo<Props>(props => {
                     onClickMenuItem={handleOnChange}
                     onClickOutside={closeMenu}
                     isMenuVisible={isMenuVisible}
+                    showIconBySelected={showIconBySelected}
                     showTextBySelected={showTextBySelected}
                     width={props.width}
                     diff={props.diff}
@@ -123,13 +127,50 @@ export const Component = React.memo<Props>(props => {
 
 Component.displayName = 'DropdownSingle'
 
+const showIconBySelected = (
+    items: ItemList.Item[],
+    selected: ItemList.Value
+): JSX.Element | null => {
+    const selectedItem = items.find(item => item.value === selected)
+    if (selectedItem && selectedItem.icon) {
+        return <SelectedItemIcon {...selectedItem.icon} />
+    }
+    return null
+}
+
 const showTextBySelected = (
     items: ItemList.Item[],
     selected: ItemList.Value
-): string => {
-    const text = items.find(item => item.value === selected)
-    if (text && text.text) {
-        return text.text
+) => {
+    const selectedItem = items.find(item => item.value === selected)
+    if (selectedItem && selectedItem.text) {
+        return (
+            <ColorText color={selectedItem.textColor}>
+                {selectedItem.text}
+            </ColorText>
+        )
     }
-    return ''
+    return null
 }
+
+//------------------------------------------------------------------------------
+// SelectedItemIcon
+//------------------------------------------------------------------------------
+
+type SelectedItemIconProps = Omit<Icon.Props, 'size'>
+
+const SelectedItemIcon = (props: SelectedItemIconProps) => (
+    <IconWrap>
+        <Icon.Component {...props} size="24px" />
+    </IconWrap>
+)
+
+const ColorText = styled.span`
+    display: inline-block;
+    padding-top: 1px;
+    ${props => props.color && `color: ${props.color};`}
+`
+
+const IconWrap = styled.div`
+    padding-right: 4px;
+`

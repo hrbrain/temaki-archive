@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions'
 import * as React from 'react'
 import * as DropdownSingle from './index'
 import * as ItemList from './ItemList'
+import { icons } from '../../lib/iconFiles'
 
 export default {
     title: 'Components/DropdownSingle'
@@ -211,6 +212,103 @@ export const Borderless = () => {
         </div>
     )
 }
+
+export const Color = () => (
+    <div className="ml-20 mt-10">
+        <DropdownSingle.Component
+            type={'default'}
+            placeholder={text('placeholder', '選択してください')}
+            items={[
+                { value: '', text: '' },
+                {
+                    value: '1',
+                    text: 'りんご',
+                    textColor: 'red',
+                    remarks: 'りんごを新しい項目として登録します。'
+                },
+                {
+                    value: '2',
+                    text: 'バナナ',
+                    textColor: 'gold',
+                    remarks: 'バナナの説明ですよ'
+                },
+                {
+                    value: '3',
+                    text: 'メロン',
+                    textColor: 'green',
+                    remarks: 'メロン説明ですよ'
+                },
+                {
+                    value: '4',
+                    text: 'ぶどう',
+                    textColor: 'purple'
+                }
+            ]}
+            value={select(
+                'selected',
+                {
+                    未選択時: '',
+                    りんご: '1',
+                    バナナ: '2',
+                    メロン: '3',
+                    ぶどう: '4'
+                },
+                ''
+            )}
+            disabled={boolean('disabled', false)}
+            isError={boolean('isError', false)}
+            errorMessage={text('ErrorMessage', '')}
+            width={text('width', '200px')}
+            onChange={action('onChange')}
+            onClickBody={action('onClickBody')}
+            diff={boolean('Diff', false)}
+        />
+    </div>
+)
+
+export const Icon = () => (
+    <div className="ml-20 mt-10">
+        <DropdownSingle.Component
+            type={'default'}
+            placeholder={text('placeholder', '選択してください')}
+            items={[
+                { value: '', text: '' },
+                {
+                    value: '1',
+                    text: 'Word',
+                    icon: { svg: icons.Textarea, color: '#333' }
+                },
+                {
+                    value: '2',
+                    text: 'Excel',
+                    icon: { svg: icons.Excel, color: '#333' }
+                },
+                {
+                    value: '3',
+                    text: 'PowerPoint',
+                    icon: { svg: icons.ChartPie, color: '#333' }
+                }
+            ]}
+            value={select(
+                'selected',
+                {
+                    未選択時: '',
+                    Word: '1',
+                    Excel: '2',
+                    PowerPoint: '3'
+                },
+                ''
+            )}
+            disabled={boolean('disabled', false)}
+            isError={boolean('isError', false)}
+            errorMessage={text('ErrorMessage', '')}
+            width={text('width', '200px')}
+            onChange={action('onChange')}
+            onClickBody={action('onClickBody')}
+            diff={boolean('Diff', false)}
+        />
+    </div>
+)
 
 export const _ItemList = () => {
     return (

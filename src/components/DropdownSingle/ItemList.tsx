@@ -51,6 +51,8 @@ const renderItem = (
 export type Item = {
     value: Value
     text: string
+    textColor?: string
+    icon?: Omit<Icon.Props, 'size'>
     remarks?: string
     disabled?: boolean
 }
@@ -81,7 +83,14 @@ const ItemComponent = React.memo<ItemProps>(props => {
                 }
             />
             <Text disabled={props.item.disabled}>
-                {props.item.text}
+                <ItemText>
+                    <ColorText color={props.item.textColor}>
+                        {props.item.text}
+                    </ColorText>
+                    {props.item.icon && (
+                        <Icon.Component {...props.item.icon} size="24px" />
+                    )}
+                </ItemText>
                 {props.item.remarks && (
                     <RemarksText>{props.item.remarks}</RemarksText>
                 )}
@@ -119,6 +128,7 @@ const StyledItem = styled.li`
 `
 
 const Text = styled.div<{ disabled?: boolean }>`
+    width: 100%;
     padding-left: 4px;
     word-break: break-word;
     ${props =>
@@ -127,7 +137,21 @@ const Text = styled.div<{ disabled?: boolean }>`
         cursor: not-allowed;`}
 `
 
+const ItemText = styled.div`
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+`
+
 const RemarksText = styled.div`
     font-size: 12px;
     word-wrap: anywhere;
+`
+
+const ColorText = styled.span`
+    display: inline-block;
+    padding-top: 1px;
+    &:not(:hover) {
+        ${props => props.color && `color: ${props.color};`}
+    }
 `

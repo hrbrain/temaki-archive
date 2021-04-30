@@ -1,6 +1,7 @@
 /// <reference types="react" />
 /// <reference types="styled-components" />
 /// <reference types="moment" />
+import * as _Icon from './components/Icon/index';
 import * as _Button from './components/Button/index';
 import { Item as _DropdownSingleItem } from './components/DropdownSingle/index';
 import { Item as _DropdownMultipleItem } from './components/DropdownMultiple/index';
@@ -8,12 +9,7 @@ import { Item as _DropdownMultipleHierarchyItem } from './components/DropdownMul
 import * as _MeatballMenu from './components/MeatballKebabMenu';
 import { RequiredThemeProps as _RequiredThemeProps } from './modules/theme';
 export declare const Text: import("react").FunctionComponent<{}>;
-export declare const Icon: (props: {
-    svg: string;
-    size: string;
-    color?: string | undefined;
-    className?: string | undefined;
-}) => JSX.Element;
+export declare const Icon: (props: _Icon.Props) => JSX.Element;
 export declare const Illustration: (props: {
     svg: string | import("react").ReactElement<any, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)> | null) | (new (props: any) => import("react").Component<any, any, any>)>;
     size?: {

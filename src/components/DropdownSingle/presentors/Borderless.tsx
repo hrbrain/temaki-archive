@@ -19,10 +19,14 @@ type Props = {
     onClickMenuItem: (index: string) => void
     isError?: boolean
     isMenuVisible?: boolean
+    showIconBySelected: (
+        items: ItemList.Item[],
+        selected: ItemList.Value
+    ) => JSX.Element | null
     showTextBySelected: (
         items: ItemList.Item[],
         selected: ItemList.Value
-    ) => string
+    ) => JSX.Element | null
     width?: string
     diff?: boolean
     className?: string
@@ -40,6 +44,7 @@ export const Component = React.memo<Props>(props => {
                     onClick={props.onClick}
                     diff={props.diff}
                 >
+                    {props.showIconBySelected(props.items, props.value)}
                     <Text data-test="text">
                         {props.showTextBySelected(props.items, props.value)}
                     </Text>

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as Icon from '~/components/Icon';
 declare type Props = {
     items: Item[];
     value: Value;
@@ -11,6 +12,8 @@ export declare const Component: React.MemoExoticComponent<(props: Props) => JSX.
 export declare type Item = {
     value: Value;
     text: string;
+    textColor?: string;
+    icon?: Omit<Icon.Props, 'size'>;
     remarks?: string;
     disabled?: boolean;
 };

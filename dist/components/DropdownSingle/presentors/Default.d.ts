@@ -9,7 +9,8 @@ declare type Props = {
     onClickMenuItem: (value: ItemList.Value) => void;
     isError?: boolean;
     isMenuVisible: boolean;
-    showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value) => string;
+    showIconBySelected: (items: ItemList.Item[], selected: ItemList.Value) => JSX.Element | null;
+    showTextBySelected: (items: ItemList.Item[], selected: ItemList.Value) => JSX.Element | null;
     width?: string;
     diff?: boolean;
     className?: string;
