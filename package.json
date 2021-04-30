@@ -58,7 +58,7 @@
         "babel-plugin-require-context-hook": "^1.0.0",
         "enzyme": "^3.10.0",
         "enzyme-adapter-react-16": "^1.14.0",
-        "enzyme-to-json": "^3.3.5",
+        "enzyme-to-json": "3.6.2",
         "eslint": "^6.0.1",
         "eslint-config-prettier": "^6.0.0",
         "eslint-loader": "^2.2.1",
