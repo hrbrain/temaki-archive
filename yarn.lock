@@ -3162,10 +3162,10 @@
     "@types/react" "*"
     "@types/reactcss" "*"
 
-"@types/react-dates@^17.1.5":
-  version "17.1.12"
-  resolved "https://registry.yarnpkg.com/@types/react-dates/-/react-dates-17.1.12.tgz#e680c5e67829ce21b81f1e217e287198a573a05a"
-  integrity sha512-YD2lSO+/dwv+Z8CtFWyeUOaSoBHrhxbmLH1Zk/lJ0/H0yzZ146lKyFLJ6kySnqYrVM/TlClTIKaz8ETCLHbsBg==
+"@types/react-dates@17.1.15":
+  version "17.1.15"
+  resolved "https://registry.yarnpkg.com/@types/react-dates/-/react-dates-17.1.15.tgz#e23424ae409ccfc313e20d45a2a387ff55b5c1f2"
+  integrity sha512-TUiO5SsnNL6rJtDxiRlpbTl7G5Kk/Tq5hHqzfaBzPlcEj0G9NhhAujgX3ZTTxFnD7N61J3rK45bhWFYtGivj8g==
   dependencies:
     "@types/react" "*"
     moment "^2.26.0"
