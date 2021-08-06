@@ -13,8 +13,15 @@ const useChangeNumberValueFromChangeEvent = (
         | ((e: React.ChangeEvent<HTMLInputElement>) => void)
         | undefined,
     decimalPlace?: number | null
-) =>
-    React.useCallback(
+) => {
+    // .0はnumber型で出力できないので例外扱い
+    // console.log(4.0) -> 4
+    const [
+        exceptionDenominationValue,
+        setExceptionDenominationValue
+    ] = React.useState<string | undefined>(undefined)
+
+    const changeValue = React.useCallback(
         (e: React.ChangeEvent<HTMLInputElement>) => {
             e.persist()
             if (onChangeNative) {
@@ -35,6 +42,34 @@ const useChangeNumberValueFromChangeEvent = (
                     return
                 }
 
+                if (decimalPlace) {
+                    const floatingPointIndex = tgtValue.indexOf('.')
+                    let isException = false
+                    for (let i = 0; i <= tgtValue.length - 1; i++) {
+                        if (i <= floatingPointIndex) {
+                            continue
+                        }
+                        const char = tgtValue[i]
+                        if (char === '0') {
+                            isException = true
+                            break
+                        }
+                    }
+
+                    if (isException) {
+                        setExceptionDenominationValue(
+                            tgtValue
+                                .substring(
+                                    0,
+                                    floatingPointIndex + 1 + decimalPlace
+                                )
+                                .replace(/[^0-9.-]/g, '')
+                        )
+                    } else {
+                        setExceptionDenominationValue(undefined)
+                    }
+                }
+
                 const num = Number(tgtValue)
                 if (isNaN(num)) {
                     return
@@ -49,12 +84,17 @@ const useChangeNumberValueFromChangeEvent = (
                     onChange(Number(num.toFixed(decimalPlace)))
                     return
                 }
-
                 onChange(num)
             }
         },
         [onChange, onChangeNative, decimalPlace]
     )
+
+    return {
+        changeValue,
+        exceptionDenominationValue
+    }
+}
 const useBlurNumberValueFromFocusEvent = (
     value: number | string,
     onChange:
@@ -108,19 +148,18 @@ export const Container: ContainerType<Props, InjectProps> = ({
     onBlur,
     ...props
 }) => {
-    const changeValue = useChangeNumberValueFromChangeEvent(
+    const changeEvent = useChangeNumberValueFromChangeEvent(
         onChange,
         onChangeNative,
         decimalPlace
     )
 
     const blurValue = useBlurNumberValueFromFocusEvent(value, onChange, onBlur)
-
     return (
         // @ts-ignore 型推論がうまくいってない
         <Presenter
-            value={value.toString()}
-            onChange={changeValue}
+            value={changeEvent.exceptionDenominationValue || value.toString()}
+            onChange={changeEvent.changeValue}
             onBlur={blurValue}
             {...props}
         />
