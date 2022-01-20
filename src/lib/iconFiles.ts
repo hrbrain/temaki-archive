@@ -11,6 +11,7 @@ import BulkCheck from '~/../icons/bulk-check.svg'
 import Calendar from '~/../icons/calendar.svg'
 import CalendarCheck from '~/../icons/calendar-check.svg'
 import CalendarCreate from '~/../icons/calendar-create.svg'
+import Caution from '~/../icons/caution.svg'
 import ChartBar from '~/../icons/chart-bar.svg'
 import ChartLine from '~/../icons/chart-line.svg'
 import ChartPie from '~/../icons/chart-pie.svg'
@@ -107,6 +108,7 @@ export const icons = {
     Calendar,
     CalendarCheck,
     CalendarCreate,
+    Caution,
     ChartBar,
     ChartLine,
     ChartPie,
