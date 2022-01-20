@@ -113,6 +113,7 @@ export declare const icons: {
     Calendar: string;
     CalendarCheck: string;
     CalendarCreate: string;
+    Caution: string;
     ChartBar: string;
     ChartLine: string;
     ChartPie: string;
